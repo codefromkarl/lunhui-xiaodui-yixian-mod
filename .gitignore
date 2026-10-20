@@ -23,3 +23,5 @@ mod/*/TestResults/
 .env.*
 !.env.example
 .DS_Store
+# Unused upstream website extraction scripts are local research caches
+/data/sources/**/*.js
