@@ -15,7 +15,7 @@ namespace YixianSect
         public static string Rank(int rank)
         {
             var lines=new List<string>();
-            if(rank==1)lines.Add("入宗赠送两个炼气包，共 8 张宗门牌。\n仅首回合起手 3 张；主动摸牌耗 1 行动力、不耗斗气；出牌 0 行动力，仅按单卡灵气费用消耗斗气，无额外基础费。\n连云看自己上一张打出的卡；剑意整张消耗、逐段生效；再次行动每次额外摸 1 张，手牌最多 10 张。");
+            if(rank==1)lines.Add("入宗赠送两个炼气包，共8张牌。\n"+RulesFor(SwordRules.Lineage));
             if(rank==2)lines.Add("突破筑基时，从两个筑基卡组中免费选一个；另一包可购买。此后突破不再赠包。");
             lines.Add(rank==1?"本境界自动获得的卡组（每包 4 张）：":"本境界新增可购卡组（每包 4 张；低阶未拥有包持续出售）：");
             foreach(var pack in SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==SwordRules.Lineage && SwordRules.Int(p,"rank")==rank))
@@ -30,7 +30,7 @@ namespace YixianSect
             if(sect==SwordRules.Lineage)return Rank(rank);
             var packs=SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==sect && (int)p["rank"]==rank);
             var lines=new List<string>();
-            if(rank==1)lines.Add("入宗赠送两个炼气包，共8张牌；仅首回合起手3张，主动摸牌1行动力。出牌0行动力，单卡灵气费用×4斗气，无基础费。");
+            if(rank==1)lines.Add("入宗赠送两个炼气包，共8张牌。\n"+RulesFor(sect));
             else if(rank==2)lines.Add("突破筑基从两个筑基包中免费选一，另一包可购买；后续境界不再赠包。");
             lines.Add(SectRegistry.Summary(sect));
             lines.Add(rank==1?"本境界赠送卡组（每包4张）：":"本境界新增可购卡组（每包4张）：");
@@ -40,6 +40,9 @@ namespace YixianSect
             return string.Join("\n",lines);
         }
         public static string SectForCode(string code)=>SectRegistry.Sects.Values.Where(s=>(string)s["code"]==code).Select(s=>(string)s["id"]).FirstOrDefault();
+        public static string RulesFor(string sect)=>SectRegistry.Sects.TryGetValue(sect,out var row)?SwordRules.Text(row,"rulesDescription"):"";
+        public static string CardSummary(JObject card)=>SwordRules.Text(card,"summary");
+        public static string CardDetail(JObject card)=>SwordRules.Text(card,"description");
         public static string PackDetail(JObject pack) => SwordRules.Text(pack,"description");
         public static string PackSummary(JObject pack) => "4 张 · "+SwordRules.Text(pack,"role");
     }
@@ -83,8 +86,8 @@ namespace YixianSect
     {
         private static bool Prefix(StableId abilityId,ref string __result)
         {
-            if(SectRegistry.Fates.TryGetValue(abilityId.Value,out var fate)){__result=(string)fate["description"]+"\n本局购买一次，不占手牌；境界成长按能力说明生效。";return false;}
-            if(SectRegistry.Cards.TryGetValue(abilityId.Value,out var card)){__result=SwordRules.Text(card,"description");return false;}
+            if(SectRegistry.Fates.TryGetValue(abilityId.Value,out var fate)){__result=(string)fate["description"]+"\n独立被动，本局限购一次，不占手牌。";return false;}
+            if(SectRegistry.Cards.TryGetValue(abilityId.Value,out var card)){__result=SectDescriptions.CardDetail(card);return false;}
             var pack=SectRegistry.FindPack(abilityId);
             if(pack==null)return true;
             __result=SectDescriptions.PackDetail(pack);return false;
@@ -94,14 +97,13 @@ namespace YixianSect
     internal static class SectCardSummary
     {
         private static bool Prefix(CardTableCard card,ref string __result)
-        {if(card==null||!SectRegistry.Cards.TryGetValue(card.AbilityId.Value,out var row))return true;__result=SingleLine(SwordRules.Text(row,"description"));return false;}
-        private static string SingleLine(string text)=>text.Split('\n')[0];
+        {if(card==null||!SectRegistry.Cards.TryGetValue(card.AbilityId.Value,out var row))return true;__result=SectDescriptions.CardSummary(row);return false;}
     }
     [HarmonyPatch(typeof(CardTableContentNarrator),"CardDetail")]
     internal static class SectCardDetail
     {
         private static bool Prefix(CardTableCard card,ref string __result)
-        {if(card==null||!SectRegistry.Cards.TryGetValue(card.AbilityId.Value,out var row))return true;__result=SwordRules.Text(row,"description");return false;}
+        {if(card==null||!SectRegistry.Cards.TryGetValue(card.AbilityId.Value,out var row))return true;__result=SectDescriptions.CardDetail(row);return false;}
     }
 }
 
@@ -139,7 +141,7 @@ namespace YixianSect
                 pack.Detail=SectDescriptions.PackSummary(row);
                 pack.RecipeLine=SwordRules.Text(row,"role");
                 foreach(var card in pack.Cards)
-                    if(SectRegistry.Cards.TryGetValue(card.CardId,out var c))card.Detail=card.Title+"\n"+SwordRules.Text(c,"description");
+                    if(SectRegistry.Cards.TryGetValue(card.CardId,out var c))card.Detail=card.Title+"\n"+SectDescriptions.CardDetail(c);
                 pack.CardDetails=SectDescriptions.PackDetail(row);
             }
         }
@@ -179,6 +181,7 @@ namespace YixianSect
         private static bool Prefix(RuntimeAbilityDefinition ability,ref string __result)
         {
             if(ability!=null && SectRegistry.Fates.TryGetValue(ability.StableId.Value,out var fate)){__result=((string)fate["description"]).Split('\n')[0];return false;}
+            if(ability!=null && SectRegistry.Cards.TryGetValue(ability.StableId.Value,out var card)){__result=SectDescriptions.CardSummary(card);return false;}
             var pack=ability==null?null:SectRegistry.FindPack(ability.StableId);
             if(pack==null)return true;
             __result=SectDescriptions.PackSummary(pack);return false;

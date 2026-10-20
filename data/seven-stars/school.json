@@ -1693,8 +1693,8 @@
       "fields": {
         "polarity": 20,
         "maximumStacks": 9999,
-        "defaultDurationRounds": 1,
-        "ending": 10,
+        "defaultDurationRounds": 0,
+        "ending": 30,
         "reapply": 10,
         "stackDecay": 20,
         "uniquePerTarget": true,
@@ -1721,8 +1721,8 @@
       "fields": {
         "polarity": 20,
         "maximumStacks": 9999,
-        "defaultDurationRounds": 1,
-        "ending": 10,
+        "defaultDurationRounds": 0,
+        "ending": 30,
         "reapply": 10,
         "stackDecay": 20,
         "uniquePerTarget": true,
@@ -1796,7 +1796,8 @@
             "perStack": true,
             "isDirectDamage": true,
             "removesSelfAfter": false,
-            "damageKind": 40
+            "damageKind": 40,
+            "basis": 10
           }
         ]
       }

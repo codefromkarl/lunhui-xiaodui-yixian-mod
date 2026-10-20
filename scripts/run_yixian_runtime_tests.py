@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run explicit in-game Mono suites using isolated memory runs, never user saves."""
+"""Run isolated Mono tests; preserve progress and logs on failure, timeout or process exit."""
 import argparse
 import json
 import os
@@ -25,29 +25,22 @@ def game_running():
     return False
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    group = parser.add_mutually_exclusive_group()
-    group.add_argument('--include-fates', action='store_true', help='run the independent fate suite in the same launch')
-    group.add_argument('--schools-only', action='store_true', help='rerun only new-school command loops and isolation checks')
-    args = parser.parse_args()
-    if game_running():
-        print('游戏仍在运行。请先从主菜单正常退出；不会强行关闭当前游戏。', file=sys.stderr)
-        return 2
-    if not (MOD / 'plugins/YixianSect.dll').is_file():
-        print('未找到已安装的 YixianSect.dll。', file=sys.stderr)
-        return 2
-    results = MOD / 'TestResults'
-    suites = ['runtime', 'fates'] if args.include_fates else ['runtime']
-    prior = {suite: set(results.glob(suite + '-*.json')) for suite in suites}
-    out = ROOT / 'logs/yixian-runtime-tests' / ('run-' + time.strftime('%Y%m%d-%H%M%S'))
-    out.mkdir(parents=True, exist_ok=False)
-    flags = ['-yixian-schools-selftest' if args.schools_only else '-yixian-selftest', '-modverbose'] + (['-yixian-fates-selftest'] if args.include_fates else [])
-    with (out / 'launch.log').open('w') as log:
-        subprocess.run([str(STEAM / 'ubuntu12_32/steam'), '-applaunch', '5241190', *flags], env={**os.environ, 'DISPLAY': os.environ.get('DISPLAY', ':0')}, stdout=log, stderr=subprocess.STDOUT, check=True)
-    reports = {}
-    deadline = time.monotonic() + 120
-    while time.monotonic() < deadline:
+def collect_diagnostics(out):
+    persistent = STEAM / 'steamapps/compatdata/5241190/pfx/drive_c/users/steamuser/AppData/LocalLow/yuyuyi/轮回小队'
+    for source, name in [(persistent / 'Player.log', 'Player.log'),
+                         (persistent / 'ModLogs/latest.log', 'ModLogs.log')]:
+        if source.is_file():
+            shutil.copy2(source, out / name)
+
+
+def wait_for_reports(results, suites, prior, out, timeout=120):
+    """A disappearing observed game is an early exit, not proof of a native crash."""
+    reports = {}; progress = {}; observed_game = False
+    started = time.monotonic()
+    outcome = 'timeout'
+    while time.monotonic() - started < timeout:
+        running = game_running()
+        observed_game |= running
         for suite in suites:
             if suite in reports:
                 continue
@@ -58,6 +51,8 @@ def main():
                 report = json.loads(files[-1].read_text())
             except (OSError, json.JSONDecodeError):
                 continue
+            progress[suite] = report
+            (out / (suite + '-progress.json')).write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
             if report.get('status') not in ('passed', 'failed'):
                 continue
             reports[suite] = report
@@ -72,16 +67,57 @@ def main():
                 if case.get('status') == 'failed':
                     print(case.get('error', case.get('warnings_and_errors', '')))
         if len(reports) == len(suites):
-            persistent = STEAM / 'steamapps/compatdata/5241190/pfx/drive_c/users/steamuser/AppData/LocalLow/yuyuyi/轮回小队'
-            for source, name in [(persistent / 'Player.log', 'Player.log'), (persistent / 'ModLogs/latest.log', 'ModLogs.log')]:
-                if source.is_file(): shutil.copy2(source, out / name)
-            print('Evidence:', out.relative_to(ROOT))
-            print('测试局未接入存档；游戏保持运行。请通过游戏菜单正常退出。')
-            return 0 if all(report['status'] == 'passed' for report in reports.values()) else 1
+            # Full reports do not make an already exited process healthy.
+            if not running:
+                outcome = 'process_exited'; code = 4
+            else:
+                outcome = 'passed' if all(r['status'] == 'passed' for r in reports.values()) else 'assertion_failed'
+                code = 0 if outcome == 'passed' else 1
+            break
+        if observed_game and not running:
+            outcome = 'process_exited'; code = 4
+            print('游戏进程在取得全部报告前退出；保留最后用例和日志，需据日志判断原因。', file=sys.stderr)
+            break
         time.sleep(.5)
-    print('120秒内未取得全部报告；游戏未被强行关闭。检查日志或在游戏内确认代码许可。', file=sys.stderr)
-    print('Evidence:', out.relative_to(ROOT))
-    return 3
+    else:
+        code = 3
+        print(f'{timeout}秒内未取得全部报告；检查最后用例、日志或游戏内代码许可。', file=sys.stderr)
+    watchdog = dict(outcome=outcome, elapsed_seconds=round(time.monotonic() - started, 2),
+                    game_observed=observed_game, game_running_at_finish=game_running(),
+                    completed_suites=list(reports),
+                    active_cases={suite: report.get('activeCase') for suite, report in progress.items()})
+    (out / 'watchdog.json').write_text(json.dumps(watchdog, ensure_ascii=False, indent=2) + '\n')
+    return code
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--include-fates', action='store_true', help='run independent fate suite in the same launch')
+    group.add_argument('--schools-only', action='store_true', help='run only new-school loops and isolation checks')
+    args = parser.parse_args()
+    if game_running():
+        print('游戏仍在运行。请先从主菜单正常退出；不会强行关闭当前游戏。', file=sys.stderr)
+        return 2
+    if not (MOD / 'plugins/YixianSect.dll').is_file():
+        print('未找到已安装的 YixianSect.dll。', file=sys.stderr)
+        return 2
+    results = MOD / 'TestResults'
+    suites = ['runtime', 'fates'] if args.include_fates else ['runtime']
+    prior = {suite: set(results.glob(suite + '-*.json')) for suite in suites}
+    out = ROOT / 'logs/yixian-runtime-tests' / ('run-' + time.strftime('%Y%m%d-%H%M%S'))
+    out.mkdir(parents=True, exist_ok=False)
+    flags = ['-yixian-schools-selftest' if args.schools_only else '-yixian-selftest', '-modverbose'] + (['-yixian-fates-selftest'] if args.include_fates else [])
+    try:
+        with (out / 'launch.log').open('w') as log:
+            subprocess.run([str(STEAM / 'ubuntu12_32/steam'), '-applaunch', '5241190', *flags],
+                           env={**os.environ, 'DISPLAY': os.environ.get('DISPLAY', ':0')},
+                           stdout=log, stderr=subprocess.STDOUT, check=True)
+        return wait_for_reports(results, suites, prior, out)
+    finally:
+        collect_diagnostics(out)
+        print('Evidence:', out.relative_to(ROOT))
+        print('测试局未接入存档；不会强退游戏。如仍在运行，请通过游戏菜单正常退出。')
 
 
 if __name__ == '__main__':

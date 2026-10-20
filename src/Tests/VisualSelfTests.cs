@@ -52,6 +52,8 @@ namespace YixianSect
                 {
                     entries[i].Clicked();
                     Require(label.text==wanted.Cards[i].Detail&&label.text.Contains("消耗"),"actual preview click lost full description");
+                    var actual= wanted.Cards[i].Title+"\n"+(string)SectRegistry.Cards[wanted.Cards[i].CardId]["description"];
+                    Require(label.text==actual,"actual prefab re-appended source/adaptation text");
                 }
                 entries[0].Clicked();Capture(camera,texture,root,Path.Combine(directory,"card-pack-preview.png"));
                 result["pack_preview"]="card-pack-preview.png";result["preview_clicks_checked"]=4;

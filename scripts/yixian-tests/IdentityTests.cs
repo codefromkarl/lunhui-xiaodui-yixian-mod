@@ -24,6 +24,9 @@ partial class Program
         }
         var writes = new Dictionary<string, string>(); var owners = new Dictionary<string, string>(); var added = new HashSet<string>();
         void Apply(JObject op) => Method(loader, "ApplyOperation").Invoke(null, new object[] { catalog, op, SectRegistry.Package, writes, sink, owners, added });
+        foreach (var op in operations.Where(o => (string)o["kind"] == "statuses"))
+            foreach (var effect in (op["fields"]["timedEffects"] as JArray ?? new JArray()).OfType<JObject>())
+                Check(Enum.IsDefined(typeof(BuffAmountBasis), (byte)((int?)effect["basis"] ?? 0)), "timed effect basis must be explicit and native-valid: " + op["id"]);
         foreach (var op in operations) Apply(op);
         Check(lines.Count == 0, "native loader must emit no diagnostics for canonical declarations: " + string.Join("; ", lines));
         var probe = (JObject)operations.First(o => (string)o["kind"] == "abilities").DeepClone();

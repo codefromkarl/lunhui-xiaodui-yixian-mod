@@ -70,10 +70,10 @@ namespace YixianSect
         public static string Name(string id) => id == Rhyme ? "剑韵修炼" : id == CloudGuard ? "云之道" : id == FormationGuard ? "剑阵守护" : id == CloudSea ? "云海连绵" : "";
         public static string Describe(string id, int rank)
         {
-            if (id == Rhyme) return "每回合开始获得 " + (2 * rank) + " 剑意，首回合生效一次。\n随境界自动成长：炼气2／筑基4／金丹6／元婴8／化神10。剑意进入原有剑意池，整张攻击剑招消费一次、各段生效。";
-            if (id == CloudGuard) return "每主动打出一张云剑，额外获得 " + (3 * rank) + " 护盾。\n随境界自动成长：炼气3／筑基6／金丹9／元婴12／化神15。按整张牌触发一次，不按攻击段数或目标数重复；自动重复结算不触发。";
-            if (id == FormationGuard) return "每回合成功打出第一张牌后，本回合结束时护盾不自然衰减（保留100%）。\n任何牌均可触发，不限剑阵；敌人伤害、技能支付仍消耗护盾。整回合未打牌则沿用原生保留率。";
-            if (id == CloudSea) return "所有云剑无需前置即可触发连云效果；打出其他牌不打断实际云剑计数。\n不限次数，不增加虚拟云剑次数，不赠未购买的卡牌。连云减费可将斗气费用降至0。";
+            if (id == Rhyme) return "每回合开始获得 " + (2 * rank) + " 剑意，首回合生效。\n随境界成长：筑基4／金丹6／元婴8／化神10。";
+            if (id == CloudGuard) return "每主动打出一张云剑，获得 " + (3 * rank) + " 护盾；重施不触发。\n随境界成长：筑基6／金丹9／元婴12／化神15。";
+            if (id == FormationGuard) return "每回合首张牌成功打出后，本回合护盾不自然衰减；伤害与技能支付仍消耗护盾。";
+            if (id == CloudSea) return "所有云剑无前置触发连云；其他牌不打断云剑计数，不额外增加计数。";
             return "";
         }
     }
@@ -100,7 +100,7 @@ namespace YixianSect
         {
             if (FateRules.Required(abilityId.Value) == 0) return;
             int rank = operation != null && operation.TryGetValue("step", out var step) ? step.IntValue + 1 : FateRules.Required(abilityId.Value);
-            __result = FateRules.Describe(abilityId.Value, rank) + "\n本局购买一次，突破后自动成长；无需主动释放，不占手牌。";
+            __result = FateRules.Describe(abilityId.Value, rank) + "\n独立被动，本局限购一次，不占手牌。";
         }
     }
     [HarmonyPatch(typeof(RunUIPresentationMapper), "BuildAbilityFunctionalOneLiner")]

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,40 @@ using Newtonsoft.Json.Linq;
 
 namespace YixianSect
 {
+    // Opening draws happen before BattleStart. Discard only this newly initialized
+    // actor's school state so last battle's consumed cards cannot shrink the pool.
+    public static class OriginalOpeningState
+    {
+        public static ModStateSnapshot Fresh(ModStateSnapshot state, string school, StableId actor)
+        {
+            if (school != FiveElementRules.Lineage && school != SevenStarRules.Lineage) return state;
+            string prefix = SectRegistry.StateKey(school, actor, "");
+            string draw = "cards." + actor.Value + ".drawPending";
+            return new ModStateSnapshot(state.Entries.Where(e => e.PackageId != SectRegistry.Package
+                || (!e.Key.StartsWith(prefix, StringComparison.Ordinal) && e.Key != draw)).ToArray());
+        }
+    }
+
+    [HarmonyPatch(typeof(BattleAuthorityService), "InitializeCardTablesOrThrow")]
+    internal static class OriginalFreshCardTable
+    {
+        private static void Prefix(BattleAuthorityService __instance, PlayerSlotId? __0)
+        {
+            var field = AccessTools.Field(typeof(BattleAuthorityService), "modState");
+            var state = (ModStateSnapshot)field.GetValue(__instance);
+            var players = (IDictionary)AccessTools.Field(typeof(BattleAuthorityService), "players").GetValue(__instance);
+            foreach (DictionaryEntry entry in players)
+            {
+                if (__0.HasValue && !entry.Key.Equals(__0.Value)) continue;
+                var player = (PlayerRunState)AccessTools.Property(entry.Value.GetType(), "RunPlayer").GetValue(entry.Value);
+                var actor = (CombatantState)AccessTools.Property(entry.Value.GetType(), "Combatant").GetValue(entry.Value);
+                foreach (string school in new[] { FiveElementRules.Lineage, SevenStarRules.Lineage })
+                    if (SectRegistry.Rank(player, school) > 0) state = OriginalOpeningState.Fresh(state, school, actor.RuntimeId);
+            }
+            field.SetValue(__instance, state);
+        }
+    }
+
     [HarmonyPatch(typeof(BattleAuthorityService), "CardDrawPool")]
     internal static class OriginalConsumedCards
     {

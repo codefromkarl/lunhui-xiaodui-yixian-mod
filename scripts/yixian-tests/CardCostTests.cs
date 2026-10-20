@@ -17,7 +17,7 @@ partial class Program
             int expected = 4 * ((int?)card["rules"]?["cost"] ?? 0);
             Check(SectCardRules.Cost(card, owner, actor, ModStateSnapshot.Empty) == expected,
                 "single-card qi cost: " + card["name"]);
-            Check(System.Text.RegularExpressions.Regex.IsMatch((string)card["description"], @"消耗：[^\n]*，\s*"+expected+@"\s*斗气"),
+            Check(((string)card["description"]).Split('\n').Last() == "消耗："+expected+"斗气。",
                 "displayed qi tier: " + card["name"]);
         }
         Check(SwordRules.ResourceCost(Card(1), 0, 0, false) == 0, "probe cloud has no lingqi fee");

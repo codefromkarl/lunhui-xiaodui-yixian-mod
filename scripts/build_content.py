@@ -5,6 +5,7 @@ import json
 from school_content import compile_school
 from card_costs import cost_text, refresh_sword_costs
 from identity_ids import SWORD
+from presentation_copy import compact_sword, rules_for
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -25,9 +26,10 @@ def main():
     sword = ROOT / 'data/sword'
     manifest = cost_text(read(sword / 'manifest.json'))
     table = cost_text(read(sword / 'cardtable.json'))
-    table['sects'] = [dict(id=SWORD, name='云灵剑宗', code='yixian_sword', statePrefix='sword', summary='剑意／连云／加攻见状态图标')]
+    table['sects'] = [dict(id=SWORD, name='云灵剑宗', code='yixian_sword', statePrefix='sword', summary='云剑连云、剑意爆发、灵剑回气', rulesDescription=rules_for('sword'))]
     content = {name: cost_text(read(sword / (name + '.json'))) for name in ('abilities', 'lineages', 'statuses', 'fates', 'fate-statuses')}
     refresh_sword_costs(table, content['abilities'])
+    compact_sword(table, content)
     import copy
     maximum_status = copy.deepcopy(content['statuses']['operations'][0])
     maximum_status['id'] = 'yixian.sect.status.maximum_adjustment'
@@ -60,7 +62,7 @@ def main():
     write(MOD / 'mod.json', manifest)
     lines = ['# 弈仙门派当前卡包与规则', '', '三个门派各五境界48张牌、12个四张包、4个独立仙命。', '']
     for sect in table['sects']:
-        lines.extend(['## ' + sect['name'], '', sect['summary'], ''])
+        lines.extend(['## ' + sect['name'], '', sect['summary'], '', sect['rulesDescription'], ''])
         for fate in table['fates']:
             if fate['sect'] == sect['id']:
                 lines.extend(['### 仙命 · ' + fate['name'] + f'（{fate["price"]}奖励点）', '', fate['description'], ''])

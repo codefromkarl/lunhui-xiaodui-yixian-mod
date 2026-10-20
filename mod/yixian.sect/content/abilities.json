@@ -4835,7 +4835,7 @@
       "kind": "abilities",
       "id": "yixian.sect.pack.yixian_five_sword_flame",
       "fields": {
-        "displayName": "元婴·水木潜行",
+        "displayName": "元婴·金火破限",
         "iconKey": "icon.yixian.sect.pack.yixian_five_sword_flame",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
@@ -4874,7 +4874,7 @@
       "kind": "abilities",
       "id": "yixian.sect.pack.yixian_five_forest_sea",
       "fields": {
-        "displayName": "元婴·金火破限",
+        "displayName": "元婴·水木潜行",
         "iconKey": "icon.yixian.sect.pack.yixian_five_forest_sea",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,

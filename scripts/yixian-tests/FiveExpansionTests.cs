@@ -61,7 +61,7 @@ partial class Program
             Check((string)card["originalText"] == (string)original["original"] && (string)card["sourceUrl"] == (string)original["url"], "five exact first-level text and URL " + sid);
             Check((int)card["rules"]["cost"] == (int)costs[sid]["cost"], "five image-proven original qi cost " + sid);
             Check(SectCardRules.PrintedCost(card) == 4 * (int)costs[sid]["cost"], "five zero-base qi conversion " + sid);
-            Check(((string)card["description"]).Contains("原作1级：") && ((string)card["description"]).Contains("无基础费") && ((string)card["description"]).Contains("适配说明："), "five complete original/adaptation detail " + sid);
+            Check(((string)card["description"]).Contains("消耗：") && !((string)card["description"]).Contains("适配说明：") && !string.IsNullOrWhiteSpace((string)card["summary"]), "five player copy separates effects from source evidence " + sid);
             foreach (string invented in new[] { "edgeGain", "flameGain", "growthGain", "wardGain", "converge" }) Check(card["rules"][invented] == null, "five removes invented rule " + invented + "/" + sid);
         }
         Check((int)CardByOriginal(19)["rules"]["cost"] == 2, "five waves has two original qi fee");

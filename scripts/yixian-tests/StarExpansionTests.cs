@@ -32,6 +32,11 @@ partial class Program
         var internalStatus=JObject.Parse(File.ReadAllText(Mod+"/content/statuses.json"))["operations"].OfType<JObject>().Single(o=>(string)o["id"]==SevenStarRules.StatusPrefix+"internal");
         var internalTick=internalStatus["fields"]["timedEffects"][0];
         Check(internalTick["damageType"]==null && (int)internalTick["damageKind"]==40 && (bool)internalTick["isDirectDamage"],"native timed internal injury uses damageKind True plus direct shield bypass");
+        foreach(string key in new[]{"weak","flaw"})
+        {
+            var negative=JObject.Parse(File.ReadAllText(Mod+"/content/statuses.json"))["operations"].OfType<JObject>().Single(o=>(string)o["id"]==SevenStarRules.StatusPrefix+key)["fields"];
+            Check((int)negative["ending"]==30 && (int)negative["stackDecay"]==20 && (int)negative["defaultDurationRounds"]==0,"original weaken/flaw lose one stack rather than expire all "+key);
+        }
         var original = JArray.Parse(File.ReadAllText("data/sources/original-correction/heptastar-pavilion-cards.json")).OfType<JObject>().ToDictionary(c => (string)c["id"]);
         var costs = JObject.Parse(File.ReadAllText("data/sources/original-correction/original-costs.json"))["cards"];
         foreach (var card in cards)

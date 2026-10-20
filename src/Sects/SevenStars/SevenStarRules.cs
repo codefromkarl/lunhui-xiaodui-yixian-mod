@@ -197,7 +197,7 @@ namespace YixianSect
                 if (Number(r, "positionAttack") > 0) t.Attack(Number(r, "positionAttack") * 3);
                 t.S(Number(r, "positionDefense") * 3); t.Qi(Number(r, "positionQi") * 4);
                 if (Flag(r, "positionAgain")) t.T.Draw();
-                if (Number(r, "positionWeak") > 0) t.Debuff("weak", Number(r, "positionWeak"), 1);
+                if (Number(r, "positionWeak") > 0) t.Debuff("weak", Number(r, "positionWeak"));
                 if (Flag(r, "positionSkip")) t.Debuff("skip", 1, 1);
                 if (Number(r, "positionAgainStars") > 0 && t.Get("star") >= Number(r, "positionAgainStars")) t.T.Draw();
                 if (Number(r, "positionMaxHeal") > 0)
@@ -213,7 +213,7 @@ namespace YixianSect
                 if (Flag(r, "postAgain")) t.T.Draw();
                 if (Number(r, "postGuard") > 0) t.Guard(Number(r, "postGuard"));
             }
-            if (Number(r, "weakChance") > 0 && t.Chance(Number(r, "weakChance"))) t.Debuff("weak", 1, 1);
+            if (Number(r, "weakChance") > 0 && t.Chance(Number(r, "weakChance"))) t.Debuff("weak", 1);
             if (Number(r, "internal") > 0) t.Debuff("internal", Number(r, "internal"));
             if (Flag(r, "triggerInternal")) t.T.DirectDamage(t.Stacks("internal") * 3, t.Target);
             if (Number(r, "shieldPerOmen") > 0) t.S(t.Get("omen") * Number(r, "shieldPerOmen") * 3);

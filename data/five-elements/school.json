@@ -34,7 +34,8 @@
         "originalRule": 1,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "炼气"
     },
     {
       "key": "yixian_five_water",
@@ -65,7 +66,8 @@
         "originalRule": 3,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "炼气"
     },
     {
       "key": "yixian_five_wood",
@@ -93,7 +95,8 @@
         "originalRule": 6,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "炼气"
     },
     {
       "key": "yixian_five_fire",
@@ -122,7 +125,8 @@
         "originalRule": 9,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "炼气"
     },
     {
       "key": "yixian_five_earth",
@@ -153,7 +157,8 @@
         "originalRule": 11,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "炼气"
     },
     {
       "key": "yixian_five_qi",
@@ -181,7 +186,8 @@
         "originalRule": 2,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "炼气"
     },
     {
       "key": "yixian_five_link",
@@ -212,7 +218,8 @@
         "originalRule": 4,
         "cost": 1
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "炼气"
     },
     {
       "key": "yixian_five_return",
@@ -240,7 +247,8 @@
         "originalRule": 7,
         "cost": 2
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "炼气"
     },
     {
       "key": "yixian_five_metal_edge",
@@ -268,7 +276,8 @@
         "originalRule": 15,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "筑基"
     },
     {
       "key": "yixian_five_metal_pierce",
@@ -295,7 +304,8 @@
         "originalRule": 16,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "筑基"
     },
     {
       "key": "yixian_five_fire_ember",
@@ -324,7 +334,8 @@
         "originalRule": 17,
         "cost": 1
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "筑基"
     },
     {
       "key": "yixian_five_water_spring",
@@ -355,7 +366,8 @@
         "originalRule": 18,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "筑基"
     },
     {
       "key": "yixian_five_wood_root",
@@ -381,7 +393,8 @@
         "freeWhenElement": true,
         "originalRule": 19
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "筑基"
     },
     {
       "key": "yixian_five_earth_ridge",
@@ -409,7 +422,8 @@
         "originalRule": 21,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "筑基"
     },
     {
       "key": "yixian_five_cycle_breath",
@@ -438,7 +452,8 @@
         "originalRule": 23,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "筑基"
     },
     {
       "key": "yixian_five_fire_burst",
@@ -464,7 +479,8 @@
         "originalRule": 94,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "筑基"
     },
     {
       "key": "yixian_five_metal_ring",
@@ -493,7 +509,8 @@
         "originalRule": 25,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "金丹"
     },
     {
       "key": "yixian_five_metal_break",
@@ -521,7 +538,8 @@
         "originalRule": 26,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "金丹"
     },
     {
       "key": "yixian_five_fire_furnace",
@@ -551,7 +569,8 @@
         "originalRule": 28,
         "cost": 1
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "金丹"
     },
     {
       "key": "yixian_five_water_mirror",
@@ -580,7 +599,8 @@
         "originalRule": 29,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "金丹"
     },
     {
       "key": "yixian_five_wood_bloom",
@@ -607,7 +627,8 @@
         "originalRule": 31,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "金丹"
     },
     {
       "key": "yixian_five_earth_vessel",
@@ -634,7 +655,8 @@
         "originalRule": 32,
         "cost": 1
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "金丹"
     },
     {
       "key": "yixian_five_fire_chain",
@@ -661,7 +683,8 @@
         "originalRule": 36,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "金丹"
     },
     {
       "key": "yixian_five_return_seed",
@@ -689,7 +712,8 @@
         "originalRule": 59,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "金丹"
     },
     {
       "key": "yixian_five_water_sea",
@@ -719,7 +743,8 @@
         "originalRule": 20,
         "cost": 1
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "元婴"
     },
     {
       "key": "yixian_five_wood_forest",
@@ -748,7 +773,8 @@
         "originalRule": 27,
         "cost": 1
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "元婴"
     },
     {
       "key": "yixian_five_wood_spirit",
@@ -780,7 +806,8 @@
         "originalRule": 30,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "元婴"
     },
     {
       "key": "yixian_five_metal_cycle",
@@ -808,7 +835,8 @@
         "originalRule": 33,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "元婴"
     },
     {
       "key": "yixian_five_metal_storm",
@@ -837,7 +865,8 @@
         "originalRule": 34,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "元婴"
     },
     {
       "key": "yixian_five_metal_sunder",
@@ -863,7 +892,8 @@
         "originalRule": 35,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "元婴"
     },
     {
       "key": "yixian_five_fire_sun",
@@ -889,7 +919,8 @@
         "originalRule": 38,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "元婴"
     },
     {
       "key": "yixian_five_fire_inferno",
@@ -919,7 +950,8 @@
         "originalRule": 39,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "元婴"
     },
     {
       "key": "yixian_five_fire_cycle",
@@ -947,7 +979,8 @@
         "originalRule": 40,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "元婴"
     },
     {
       "key": "yixian_five_earth_mountain",
@@ -978,7 +1011,8 @@
         "originalRule": 61,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "元婴"
     },
     {
       "key": "yixian_five_earth_cycle",
@@ -1007,7 +1041,8 @@
         "originalRule": 66,
         "cost": 1
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "元婴"
     },
     {
       "key": "yixian_five_return_circle",
@@ -1035,7 +1070,8 @@
         "originalRule": 96,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "元婴"
     },
     {
       "key": "yixian_five_metal_divine",
@@ -1063,7 +1099,8 @@
         "originalRule": 42,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "化神"
     },
     {
       "key": "yixian_five_water_divine",
@@ -1092,7 +1129,8 @@
         "originalRule": 43,
         "cost": 1
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "化神"
     },
     {
       "key": "yixian_five_water_origin",
@@ -1120,7 +1158,8 @@
         "originalRule": 53,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "化神"
     },
     {
       "key": "yixian_five_metal_heaven",
@@ -1149,7 +1188,8 @@
         "originalRule": 56,
         "cost": 2
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "化神"
     },
     {
       "key": "yixian_five_wood_divine",
@@ -1176,7 +1216,8 @@
         "originalRule": 57,
         "cost": 2
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "化神"
     },
     {
       "key": "yixian_five_wood_origin",
@@ -1209,7 +1250,8 @@
         "originalRule": 97,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "化神"
     },
     {
       "key": "yixian_five_cycle_divine",
@@ -1238,7 +1280,8 @@
         "originalRule": 99,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "化神"
     },
     {
       "key": "yixian_five_earth_divine",
@@ -1269,7 +1312,8 @@
         "originalRule": 100,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "化神"
     },
     {
       "key": "yixian_five_fire_divine",
@@ -1299,7 +1343,8 @@
         "originalRule": 112,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "化神"
     },
     {
       "key": "yixian_five_fire_heaven",
@@ -1327,7 +1372,8 @@
         "originalRule": 113,
         "cost": 0
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "化神"
     },
     {
       "key": "yixian_five_earth_origin",
@@ -1362,7 +1408,8 @@
         "specialDamageAttr": 20,
         "specialDamageBp": 4000
       },
-      "targetEnemy": true
+      "targetEnemy": true,
+      "realm": "化神"
     },
     {
       "key": "yixian_five_return_origin",
@@ -1391,7 +1438,8 @@
         "originalRule": 116,
         "cost": 0
       },
-      "targetEnemy": false
+      "targetEnemy": false,
+      "realm": "化神"
     }
   ],
   "packs": [
@@ -1481,7 +1529,7 @@
     },
     {
       "key": "yixian_five_sword_flame",
-      "name": "元婴·水木潜行",
+      "name": "元婴·金火破限",
       "rank": 4,
       "index": 84,
       "price": 105,
@@ -1495,7 +1543,7 @@
     },
     {
       "key": "yixian_five_forest_sea",
-      "name": "元婴·金火破限",
+      "name": "元婴·水木潜行",
       "rank": 4,
       "index": 85,
       "price": 105,

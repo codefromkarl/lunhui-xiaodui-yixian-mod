@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render original, code-drawn prototype card art; does not edit borrowed sword art."""
+"""Prepare Mod status glyphs and preview sheets; never paint over sourced card/fate art."""
 import json
 import os
 import math
@@ -81,7 +81,7 @@ def main():
         sheet=Image.new('RGBA',(128*8,128*((len(icon_outputs)+7)//8)), '#171c21')
         for i,icon in enumerate(icon_outputs):sheet.paste(icon,((i%8)*128,(i//8)*128),icon)
         sheet.save(ROOT/'logs/sect-expansion-icons.png')
-    print(f'Rendered {len(outputs)} original school cards and {len(icon_outputs)} state/fate icons')
+    print(f'Previewed {len(outputs)} school card faces; rendered {len(icon_outputs)} Mod state/fate icons')
 
 if __name__ == '__main__':
     main()

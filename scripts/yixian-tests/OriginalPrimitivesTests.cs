@@ -56,6 +56,24 @@ partial class Program
         Check(requests.Select(r=>(string)r["kind"]).SequenceEqual(new[]{"maximum","heal","nonAttack","loss"}),"life operations preserve source order in authoritative plan");
         Check(plan.Effects.All(e=>e.Kind!=ModBattleEffectKind.Damage&&e.Kind!=ModBattleEffectKind.Heal),"life/max queue is not falsely emitted as normal damage or pre-cap healing");
         Check(actor.CurrentHealth==300&&actor.CurrentMaximumHealth==300,"planning does not change input snapshot");
+        var stale = new ModStateSnapshot(new[]
+        {
+            new ModStateEntry(SectRegistry.Package, "five.test.actor.consumed.old", ModValueKind.Integer, 1),
+            new ModStateEntry(SectRegistry.Package, "five.test.actor.persistentCount", ModValueKind.Integer, 2),
+            new ModStateEntry(SectRegistry.Package, "cards.test.actor.drawPending", ModValueKind.Integer, 1),
+            new ModStateEntry(SectRegistry.Package, "five.test.actor2.persistentCount", ModValueKind.Integer, 2),
+            new ModStateEntry(SectRegistry.Package, "star.test.actor.omen", ModValueKind.Integer, 3),
+            new ModStateEntry(SectRegistry.Package, "sword.test.actor.intent", ModValueKind.Integer, 4),
+            new ModStateEntry(SectRegistry.Package, OriginalHealthRules.PendingKey, ModValueKind.Text, 0, "[]"),
+            new ModStateEntry("other.package", "five.test.actor.consumed.old", ModValueKind.Integer, 1)
+        });
+        var fresh = OriginalOpeningState.Fresh(stale, FiveElementRules.Lineage, ActorId);
+        Check(fresh.Entries.Count == 5 && !fresh.Entries.Any(e => e.PackageId == SectRegistry.Package &&
+            (e.Key.StartsWith("five.test.actor.") || e.Key == "cards.test.actor.drawPending")), "new card table clears only its owner's school state before opening draw");
+        Check(fresh.Entries.Any(e => e.Key == "five.test.actor2.persistentCount") && fresh.Entries.Any(e => e.Key == "star.test.actor.omen")
+            && fresh.Entries.Any(e => e.Key == "sword.test.actor.intent") && fresh.Entries.Any(e => e.PackageId == "other.package")
+            && fresh.Entries.Any(e => e.Key == OriginalHealthRules.PendingKey), "opening reset preserves other actors, schools, packages and life queue");
+        Check(stale.Entries.Count == 8 && ReferenceEquals(stale, OriginalOpeningState.Fresh(stale, SwordRules.Lineage, ActorId)), "opening reset does not mutate source or change sword's lifecycle");
         Console.WriteLine("PASS original life primitives: exact temporary maximum/current health, life loss versus shielded nonattack damage, guards, command queue and preview isolation");
     }
 }

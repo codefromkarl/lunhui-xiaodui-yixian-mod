@@ -35,12 +35,14 @@ def main():
     refresh_sword_costs(old_table, old_abilities)
     for name in ('cards', 'packs'):
         current = [row for row in table[name] if row.get('sect', SWORD) == SWORD]
-        assert current == old_table[name], f'sword {name} changed'
+        # Presentation is intentionally rewritten; every gameplay and provenance field stays exact.
+        def without_copy(row): return {k: v for k, v in row.items() if k not in ('description', 'summary')}
+        assert [without_copy(row) for row in current] == [without_copy(row) for row in old_table[name]], f'sword {name} gameplay changed'
     asset_references = []
     def gameplay(row):
         result = dict(row, fields=dict(row['fields']))
         if row['kind'] in ('abilities', 'lineages'): result.pop('id')
-        for key in ('iconKey', 'sourceContentId'): result['fields'].pop(key, None)
+        for key in ('iconKey', 'sourceContentId', 'flavour'): result['fields'].pop(key, None)
         return result
     for name in ('abilities', 'lineages', 'statuses', 'fates', 'fate-statuses'):
         old = (old_abilities if name == 'abilities' else cost_text(read(baseline / 'content' / (name + '.json'))))['operations']
@@ -101,7 +103,7 @@ def main():
             values = {v['key']: v.get('intValue') for v in rank['operation']['values']}
             assert values['energyCost'] == cost * 4 and values['apCost'] == 0 and values['energyPool'] == 40, f'card payment declaration mismatch: {card["key"]}'
         fee_line = next(line for line in card['description'].splitlines() if line.startswith('消耗：'))
-        assert re.search(rf'，{cost * 4}\s*斗气', fee_line), f'card displayed cost mismatch: {card["key"]}'
+        assert fee_line == f'消耗：{cost * 4}斗气。', f'card displayed cost mismatch: {card["key"]}'
     print(f'PASS contracts: namespaced identities; sword rules retained except approved fee/copy correction; original fate icons and other assets retained; {len(table["sects"])} schools, {len(by_key)} cards, {len(table["packs"])} complete packs; version {manifest["version"]}')
 
 if __name__ == '__main__': main()

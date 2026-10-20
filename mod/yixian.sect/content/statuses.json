@@ -7,7 +7,7 @@
       "copyFrom": "status.element.fire",
       "fields": {
         "displayName": "剑意",
-        "flavour": "下一张攻击剑招消耗；整张牌的每段攻击均受加成。",
+        "flavour": "下一张攻击剑招整张消耗一次；每点剑意使每段伤害+3。",
         "iconKey": "icon.yixian.sect.status.intent",
         "category": 20,
         "maximumStacks": 9999,
@@ -439,7 +439,7 @@
       "copyFrom": "status.element.fire",
       "fields": {
         "displayName": "锋锐",
-        "flavour": "攻击击伤时触发并清空，每层额外扣3生命；未击伤不触发。",
+        "flavour": "本派攻击击伤时清空，每层额外扣3生命；未击伤不消耗。",
         "iconKey": "icon.yixian.sect.status.five.sharp",
         "category": 20,
         "maximumStacks": 9999,
@@ -475,7 +475,7 @@
       "copyFrom": "status.element.fire",
       "fields": {
         "displayName": "加攻",
-        "flavour": "每层使自身每次攻击多3攻；本场保持。",
+        "flavour": "本派每次攻击每层伤害+3，本场保持。",
         "iconKey": "icon.yixian.sect.status.five.attack",
         "category": 20,
         "maximumStacks": 9999,
@@ -511,7 +511,7 @@
       "copyFrom": "status.element.fire",
       "fields": {
         "displayName": "水势",
-        "flavour": "自身回合结束时，每层向对方造成3伤害；本场保持。",
+        "flavour": "自身回合结束时，每层造成3点非攻击伤害，可被护盾抵消，本场保持。",
         "iconKey": "icon.yixian.sect.status.five.waterForce",
         "category": 20,
         "maximumStacks": 9999,
@@ -1015,7 +1015,7 @@
       "copyFrom": "status.element.fire",
       "fields": {
         "displayName": "卦象",
-        "flavour": "每次独立随机判定可消耗1点取最优，不推进RNG；随机多次则逐次消耗。",
+        "flavour": "每次随机判定自动消耗1点取最优结果，多次随机逐次消耗。",
         "iconKey": "icon.yixian.sect.status.star.omen",
         "category": 20,
         "maximumStacks": 9999,
@@ -1123,7 +1123,7 @@
       "copyFrom": "status.element.fire",
       "fields": {
         "displayName": "星弈连",
-        "flavour": "接下来此数量星弈牌：原星位加1星力，否则该格变星位并疗5×3生命。",
+        "flavour": "之后指定次数的星弈牌：当前格是星位则获得1星力，否则变为星位并恢复15生命。",
         "iconKey": "icon.yixian.sect.status.star.astralLinks",
         "category": 20,
         "maximumStacks": 9999,
@@ -1519,11 +1519,11 @@
       "copyFrom": "status.element.fire",
       "fields": {
         "displayName": "虚弱",
-        "flavour": "下一张攻击剑招消耗；整张牌的每段攻击均受加成。",
+        "flavour": "物理攻击伤害减少40%，不按层数重复放大。每个目标回合结束时减少1层。",
         "iconKey": "icon.yixian.sect.status.star.weak",
         "category": 20,
         "maximumStacks": 9999,
-        "defaultDurationRounds": 1,
+        "defaultDurationRounds": 0,
         "hardControl": false,
         "rule": {
           "handlerKey": "",
@@ -1531,7 +1531,7 @@
           "values": []
         },
         "polarity": 20,
-        "ending": 10,
+        "ending": 30,
         "stackDecay": 20,
         "reapply": 10,
         "display": 10,
@@ -1567,11 +1567,11 @@
       "copyFrom": "status.element.fire",
       "fields": {
         "displayName": "破绽",
-        "flavour": "下一张攻击剑招消耗；整张牌的每段攻击均受加成。",
+        "flavour": "受到的物理攻击伤害增加40%，不按层数重复放大。每个目标回合结束时减少1层。",
         "iconKey": "icon.yixian.sect.status.star.flaw",
         "category": 20,
         "maximumStacks": 9999,
-        "defaultDurationRounds": 1,
+        "defaultDurationRounds": 0,
         "hardControl": false,
         "rule": {
           "handlerKey": "",
@@ -1579,7 +1579,7 @@
           "values": []
         },
         "polarity": 20,
-        "ending": 10,
+        "ending": 30,
         "stackDecay": 20,
         "reapply": 10,
         "display": 10,
@@ -1615,7 +1615,7 @@
       "copyFrom": "status.element.fire",
       "fields": {
         "displayName": "减攻",
-        "flavour": "下一张攻击剑招消耗；整张牌的每段攻击均受加成。",
+        "flavour": "每层物理攻击伤害−3。",
         "iconKey": "icon.yixian.sect.status.star.decrease",
         "category": 20,
         "maximumStacks": 9999,
@@ -1663,7 +1663,7 @@
       "copyFrom": "status.element.fire",
       "fields": {
         "displayName": "内伤",
-        "flavour": "下一张攻击剑招消耗；整张牌的每段攻击均受加成。",
+        "flavour": "每层在自身行动阶段开始时直接失去3生命。",
         "iconKey": "icon.yixian.sect.status.star.internal",
         "category": 20,
         "maximumStacks": 9999,
@@ -1700,7 +1700,8 @@
             "perStack": true,
             "isDirectDamage": true,
             "removesSelfAfter": false,
-            "damageKind": 40
+            "damageKind": 40,
+            "basis": 10
           }
         ],
         "mutualCancelBuffId": ""
@@ -1713,7 +1714,7 @@
       "copyFrom": "status.element.fire",
       "fields": {
         "displayName": "外伤",
-        "flavour": "下一张攻击剑招消耗；整张牌的每段攻击均受加成。",
+        "flavour": "每层使受到的物理攻击伤害增加3。",
         "iconKey": "icon.yixian.sect.status.star.external",
         "category": 20,
         "maximumStacks": 9999,
@@ -1761,7 +1762,7 @@
       "copyFrom": "status.element.fire",
       "fields": {
         "displayName": "星弈·断",
-        "flavour": "下一张攻击剑招消耗；整张牌的每段攻击均受加成。",
+        "flavour": "下一张攻击剑招整张消耗一次；每点剑意使每段伤害+3。",
         "iconKey": "icon.yixian.sect.status.star.skip",
         "category": 20,
         "maximumStacks": 1,

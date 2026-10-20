@@ -11,6 +11,7 @@ namespace YixianSect
     public sealed partial class RuntimeSelfTests
     {
         private static StableId SchoolCard(string key) => new StableId(SectRegistry.CardPrefix + key);
+        private static StableId SchoolSource(string school,int source)=>new StableId(SectRegistry.Cards.Single(p=>SectRegistry.Owner(p.Value)==school&&(string)p.Value["sourceId"]==source.ToString()).Key);
         private static ModStateSnapshot SchoolState(Fixture fixture) => (ModStateSnapshot)AccessTools.Field(typeof(BattleAuthorityService), "modState").GetValue(fixture.B);
         private static int SchoolValue(Fixture fixture, string school, string key) => SectRegistry.Read(SchoolState(fixture), SectRegistry.StateKey(school, fixture.Actor.RuntimeId, key));
         private static void RequireFiveStatuses(Fixture fixture, int mask)
@@ -20,11 +21,12 @@ namespace YixianSect
                 Require(fixture.Actor.Statuses.Any(s => s.StatusId.Value == "yixian.sect.status.five." + keys[i] && s.StackCount == 1) == ((mask & (1 << i)) != 0), "five status mismatch: " + keys[i]);
             Require(!fixture.Actor.Statuses.Any(s => s.StatusId.Value == "yixian.sect.status.five.elements"), "legacy count-only badge remains");
         }
-        private Fixture SchoolFixture(string school, bool visual = false,int rank=1)
+        private Fixture SchoolFixture(string school, bool visual = false,int rank=1,StableId required=default)
         {
             var fixture = New(rank,school: school, buyCurrent: true);
             Require(fixture.P.ActiveCardPackIds.Count >= 2 && SectProgression.Owned(fixture.P).All(id => SectRegistry.Owner(SectRegistry.FindPack(id)) == school), "wrong starter pool");
             Require(fixture.P.SetActiveCardPacks(fixture.P.ActiveCardPackIds.Reverse().ToArray()).IsSuccess, "school active selection failed");
+            if(!required.IsEmpty)Require(fixture.P.SetActiveCardPacks(TestCardPool.ForCards(fixture.P,new[]{required})).IsSuccess,"source card pack enabled before battle");
             fixture.StartBattle(); Require(fixture.Table.Hand.Count == 3, "school opening hand");
             Require(fixture.Table.Hand.All(h => SectRegistry.Cards.TryGetValue(h.CardId.Value, out var card) && SectRegistry.Owner(card) == school), "foreign card drawn");
             var snapshot = RunAuthoritySnapshotProjector.Create(fixture.A,Slot); var player = snapshot.Players.First(p => p.Slot == Slot);
@@ -36,54 +38,26 @@ namespace YixianSect
         }
         private JObject FiveElementLoop()
         {
-            var school = FiveElementRules.Lineage; var f = SchoolFixture(school, true);
-            var metal = SchoolCard("yixian_five_metal"); var water = SchoolCard("yixian_five_water");
-            f.Prepare(metal, water); f.Play(metal); int qi = f.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting);
-            f.Play(water);
-            Require(SchoolValue(f, school, "elements") == 2 && SchoolValue(f, school, "last") == 2, "five element sequence did not commit");
-            Require(f.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting) >= qi, "linked qi not restored");
-            RequireFiveStatuses(f, 3);
-            MemoryRoundTrip(f, school, "elements", 2);
-            foreach (var card in SectRegistry.Cards.Where(c => SectRegistry.Owner(c.Value) == school && (int)c.Value["rank"]==1))
-            {
-                var single = SchoolFixture(school); var id = new StableId(card.Key); single.Prepare(id);
-                int shieldBefore = single.Actor.Shield; var first = single.Play(id);
-                int firstShield = single.Actor.Shield - shieldBefore;
-                int element = (int?)card.Value["element"] ?? 0;
-                if (element == 0) continue;
-                RequireFiveStatuses(single, 1 << (element - 1));
-                single.Prepare(id); int shield = single.Actor.Shield;
-                int energy = single.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting); var second = single.Play(id);
-                Require(SchoolValue(single, school, "elements") == 1, "same element counted twice");
-                RequireFiveStatuses(single, 1 << (element - 1));
-                if (element == 1 || element == 4)
-                    Require(second.Targets.Sum(t => t.ResolvedDamage) > first.Targets.Sum(t => t.ResolvedDamage), "same element damage bonus missing");
-                else if (element == 2)
-                    Require(single.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting) > energy - 2, "same element qi bonus missing");
-                else
-                    Require(single.Actor.Shield - shield > firstShield, "same element shield bonus missing");
-                var converge = SchoolCard("yixian_five_return"); single.Prepare(converge); single.Play(converge);
-                Require(SchoolValue(single, school, "active") == 0, "convergence did not consume mask");
-                RequireFiveStatuses(single, 0);
-            }
-            return new JObject { ["starter_cards"] = 8, ["executed_cards"] = 8, ["sequence_elements"] = 2, ["same_element_bonuses"] = 5, ["element_statuses_checked"] = true, ["memory_save_restore"] = true };
+            var school=FiveElementRules.Lineage;var f=SchoolFixture(school,true);
+            var seal=SchoolSource(school,7000001);var needle=SchoolSource(school,7000002);
+            f.Prepare(seal,needle);f.Play(seal);Require(SchoolValue(f,school,"active")==1,"metal seal did not activate metal");
+            f.Play(needle);Require(SchoolValue(f,school,"active")==1&&SchoolValue(f,school,"sharp")==2,"original metal needle effect or permanent activation incorrect");
+            RequireFiveStatuses(f,1);MemoryRoundTrip(f,school,"active",1);
+            var ordinary=SchoolFixture(school);var sprout=SchoolSource(school,7000004);ordinary.Prepare(sprout);ordinary.Play(sprout);
+            Require(SchoolValue(ordinary,school,"active")==0,"ordinary elemental card incorrectly permanently activates element");
+            return new JObject{["real_seal_activation"]=true,["sharp_gain"]=2,["ordinary_card_not_a_seal"]=true,["memory_save_restore"]=true};
         }
         private JObject SevenStarLoop()
         {
-            var school = SevenStarRules.Lineage; var f = SchoolFixture(school, true);
-            var gather = SchoolCard("yixian_star_gather"); var divine = SchoolCard("yixian_star_divine"); var spark = SchoolCard("yixian_star_spark"); var fate = SchoolCard("yixian_star_fate");
-            f.Prepare(gather, divine, spark, fate); f.Play(gather); f.Play(divine);
-            int hand = f.Table.Hand.Count; f.Play(spark);
-            Require(SchoolValue(f, school, "plays") == 3 && f.Table.Hand.Count == hand, "third-card draw not committed exactly once");
-            f.Play(fate); Require(SchoolValue(f, school, "omen") == 1, "omen not consumed");
-            Require(SectRegistry.Read(SchoolState(f), "cards." + f.Actor.RuntimeId.Value + ".drawPending") == 0, "draw request not drained");
-            f.NextRound(); Require(SchoolValue(f, school, "plays") == 0 && SchoolValue(f, school, "omen") == 1, "round reset erased resource or retained position");
-            MemoryRoundTrip(f, school, "omen", 1);
-            foreach (var card in SectRegistry.Cards.Where(c => SectRegistry.Owner(c.Value) == school && (int)c.Value["rank"]==1))
-            {
-                var single = SchoolFixture(school); single.Prepare(new StableId(card.Key)); single.Play(new StableId(card.Key));
-            }
-            return new JObject { ["starter_cards"] = 8, ["executed_cards"] = 8, ["third_card_draw"] = true, ["omen_consumed"] = true, ["memory_save_restore"] = true };
+            var school=SevenStarRules.Lineage;var f=SchoolFixture(school,true);
+            var wind=SchoolSource(school,4000001);var map=SchoolSource(school,4000008);var clamp=SchoolSource(school,4000010);var thunder=SchoolSource(school,4000004);
+            f.Prepare(wind,map,clamp,thunder);f.Play(wind);f.Play(map);f.Play(clamp);
+            Require(SchoolValue(f,school,"star")==1&&SchoolValue(f,school,"slot")==3,"original permanent star/slot3 effect");
+            Require(SchoolValue(f,school,"omen")==1,"unrelated star attack consumed omen");
+            f.Play(thunder);Require(SchoolValue(f,school,"omen")==0&&SchoolValue(f,school,"star")==1,"random attack consumes one omen but not star power");
+            f.NextRound();Require(SchoolValue(f,school,"plays")==4,"virtual eight-slot sequence incorrectly reset each host round");
+            MemoryRoundTrip(f,school,"star",1);
+            return new JObject{["star_not_spent"]=true,["original_slots_3_6"]=true,["omen_consumed_by_random"]=true,["sequence_survives_host_round"]=true,["memory_save_restore"]=true};
         }
         private void MemoryRoundTrip(Fixture f, string school, string key, int expected)
         {

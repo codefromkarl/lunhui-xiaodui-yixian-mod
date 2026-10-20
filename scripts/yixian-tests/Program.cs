@@ -254,7 +254,7 @@ partial class Program
  static int Main()
  {
   AppDomain.CurrentDomain.AssemblyResolve+=(s,e)=>{var p=Managed+"/"+new AssemblyName(e.Name).Name+".dll";return File.Exists(p)?Assembly.LoadFrom(p):null;};
-  try{CatalogTests();PatchTargets();ProgressionTests();SwordBuildTests();BattleTests();CardCostTests();SchoolTests();IdentityTests();FiveExpansionTests();StarExpansionTests();ExpansionIntegrationTests();OriginalPrimitivesTests();Console.WriteLine("PASS total checks "+checks+"; .NET 8 isolated tests, no Unity process/save changes.");return 0;}
+  try{CatalogTests();PatchTargets();ProgressionTests();SwordBuildTests();BattleTests();CardCostTests();DescriptionTests();SchoolTests();IdentityTests();FiveExpansionTests();StarExpansionTests();ExpansionIntegrationTests();OriginalPrimitivesTests();Console.WriteLine("PASS total checks "+checks+"; .NET 8 isolated tests, no Unity process/save changes.");return 0;}
   catch(Exception e){Console.Error.WriteLine(e);return 1;}
  }
 }

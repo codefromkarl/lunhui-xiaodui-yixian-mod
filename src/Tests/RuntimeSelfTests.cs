@@ -84,7 +84,12 @@ namespace YixianSect
                 Case("seven_star_real_command_loop",SevenStarLoop);
                 Case("five_full_content_and_fates",()=>ExpandedSchool(FiveElementRules.Lineage));
                 Case("star_full_content_and_fates",()=>ExpandedSchool(SevenStarRules.Lineage));
-                if(!schoolsOnly)Case("single_school_purchase_gate",SingleSchoolGate);
+                if(!schoolsOnly)
+                {
+                    Case("single_school_purchase_gate",SingleSchoolGate);
+                    Case("native_health_replay_guard_stress",NativeCrashBoundaryStress);
+                    Case("native_opening_state_reset",NativeOpeningReset);
+                }
             }
             catch(Exception ex){cases.Add(new JObject{["name"]="suite_setup",["status"]="failed",["error"]=ex.ToString()});}
             ModLog.LineWritten-=observe;
@@ -110,10 +115,11 @@ namespace YixianSect
         private static void Require(bool ok,string message){if(!ok)throw new InvalidOperationException(message);}
         private void Case(string name,Func<JObject> test)
         {
-            var sw=Stopwatch.StartNew();var row=new JObject{["name"]=name};
+            var sw=Stopwatch.StartNew();var row=new JObject{["name"]=name,["status"]="running"};
+            cases.Add(row);report["activeCase"]=name;Write();
             try{row["evidence"]=test();row["status"]="passed";}
             catch(Exception ex){row["status"]="failed";row["error"]=ex.ToString();context.Warn("[SelfTest] "+name+"："+ex.Message);}
-            row["milliseconds"]=sw.ElapsedMilliseconds;cases.Add(row);Write();
+            row["milliseconds"]=sw.ElapsedMilliseconds;report.Remove("activeCase");Write();
         }
         private sealed class Fixture
         {

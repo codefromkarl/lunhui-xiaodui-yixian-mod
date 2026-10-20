@@ -47,7 +47,7 @@ namespace YixianSect
             }
             foreach(var card in SectRegistry.Cards.Where(p=>SectRegistry.Owner(p.Value)==school))
             {
-                var f=SchoolFixture(school,rank:(int)card.Value["rank"]);var id=new StableId(card.Key);f.Prepare(id);
+                var id=new StableId(card.Key);var f=SchoolFixture(school,rank:(int)card.Value["rank"],required:id);f.Prepare(id);
                 if(f.Actor.CurrentMagic!=f.Actor.MaximumMagic)f.System(RunDeveloperCommand.SetVitals,int.MinValue,f.Actor.MaximumMagic,1000);
                 var instance=f.Table.Hand.First(h=>h.CardId==id).InstanceId;
                 f.Play(id);Require(!f.Table.Hand.Any(h=>h.InstanceId==instance),"expanded card was not consumed: "+card.Key);
@@ -56,14 +56,17 @@ namespace YixianSect
             // Active passive hooks must be present in the real loadout, not just owned in a table.
             var active=New(5,school:school);
             foreach(var pair in SectRegistry.Fates.Where(p=>SectRegistry.Owner(p.Value)==school))active.Buy(new StableId(pair.Key));
-            active.StartBattle();active.Prepare(school==FiveElementRules.Lineage?SchoolCard("yixian_five_metal"):SchoolCard("yixian_star_spark"));ToughEnemy(active.Enemy);
-            if(school==SevenStarRules.Lineage)Require(SchoolValue(active,school,"star")==5,"star practice round-start passive absent");
-            var attack=school==FiveElementRules.Lineage?SchoolCard("yixian_five_metal"):SchoolCard("yixian_star_spark");active.Play(attack);
-            if(school==SevenStarRules.Lineage)Require(SchoolValue(active,school,"omen")==3,"observatory first-card passive absent");
+            active.StartBattle();ToughEnemy(active.Enemy);
+            if(school==SevenStarRules.Lineage)
+            {
+                Require(SchoolValue(active,school,"star")==1&&SchoolValue(active,school,"omen")==3,"original stargaze/divination opening passives absent");
+                var attack=SchoolSource(school,4000003);active.Prepare(attack);active.Play(attack);
+            }
             else
             {
-                active.Prepare(attack);int hand=active.Table.Hand.Count;active.Play(attack);
-                Require(active.Table.Hand.Count==hand,"five first-link passive draw absent");
+                Require(SchoolValue(active,school,"nextActivate")==1&&(SchoolValue(active,school,"active")&2)!=0,"original five-element/water marks absent");
+                var seal=SchoolSource(school,7000001);active.Prepare(seal);active.Play(seal);
+                Require((SchoolValue(active,school,"active")&3)==3,"original first-card mark did not activate metal");
             }
             foreach(var pair in SectRegistry.Fates.Where(p=>SectRegistry.Owner(p.Value)==school))
             {

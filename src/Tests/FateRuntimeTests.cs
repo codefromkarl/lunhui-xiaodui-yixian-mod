@@ -85,10 +85,11 @@ namespace YixianSect
         private static void Require(bool ok,string message){if(!ok)throw new InvalidOperationException(message);}
         private void Case(string name,Func<JObject> test)
         {
-            var sw=Stopwatch.StartNew();var row=new JObject{["name"]=name};
+            var sw=Stopwatch.StartNew();var row=new JObject{["name"]=name,["status"]="running"};
+            cases.Add(row);report["activeCase"]=name;Write();
             try{row["evidence"]=test();row["status"]="passed";}
             catch(Exception ex){row["status"]="failed";row["error"]=ex.ToString();context.Warn("[FateTest] "+name+"："+ex.Message);}
-            row["milliseconds"]=sw.ElapsedMilliseconds;cases.Add(row);Write();
+            row["milliseconds"]=sw.ElapsedMilliseconds;report.Remove("activeCase");Write();
         }
         private sealed class Fixture
         {
