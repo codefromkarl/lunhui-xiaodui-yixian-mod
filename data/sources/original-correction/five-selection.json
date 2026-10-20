@@ -1,0 +1,826 @@
+{
+  "source": "https://sharpobject.github.io/yxp_wiki/zh/sects/five-elements-alliance.html",
+  "sourceKind": "社区资料站，不自称官方",
+  "keywordCrossCheck": "https://wiki.biligame.com/yxp/基础名词解释",
+  "selection": [
+    {
+      "key": "yixian_five_metal",
+      "sourceId": "7000001",
+      "name": "金灵印",
+      "realm": "炼气",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000001_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-0.png",
+        "grid": "row1-col1"
+      }
+    },
+    {
+      "key": "yixian_five_water",
+      "sourceId": "7000003",
+      "name": "木灵印",
+      "realm": "炼气",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000003_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-0.png",
+        "grid": "row1-col2"
+      }
+    },
+    {
+      "key": "yixian_five_wood",
+      "sourceId": "7000006",
+      "name": "水灵印",
+      "realm": "炼气",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000006_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-0.png",
+        "grid": "row1-col3"
+      }
+    },
+    {
+      "key": "yixian_five_fire",
+      "sourceId": "7000009",
+      "name": "火灵印",
+      "realm": "炼气",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000009_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-0.png",
+        "grid": "row1-col4"
+      }
+    },
+    {
+      "key": "yixian_five_earth",
+      "sourceId": "7000011",
+      "name": "土灵印",
+      "realm": "炼气",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000011_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-0.png",
+        "grid": "row2-col1"
+      }
+    },
+    {
+      "key": "yixian_five_qi",
+      "sourceId": "7000002",
+      "name": "金灵•针",
+      "realm": "炼气",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000002_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-0.png",
+        "grid": "row2-col2"
+      }
+    },
+    {
+      "key": "yixian_five_link",
+      "sourceId": "7000004",
+      "name": "木灵•芽",
+      "realm": "炼气",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000004_zh.webp",
+        "cost": 1,
+        "evidence": "logs/original-correction/five-selection-art-0.png",
+        "grid": "row2-col3"
+      }
+    },
+    {
+      "key": "yixian_five_return",
+      "sourceId": "7000007",
+      "name": "水灵•涛",
+      "realm": "炼气",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000007_zh.webp",
+        "cost": 2,
+        "evidence": "logs/original-correction/five-selection-art-0.png",
+        "grid": "row2-col4"
+      }
+    },
+    {
+      "key": "yixian_five_metal_edge",
+      "sourceId": "7000015",
+      "name": "金灵•穿心",
+      "realm": "筑基",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 无视防御适配为下一次本派攻击的首段真实伤害；同时跳过原生物理防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000015_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-0.png",
+        "grid": "row3-col1"
+      }
+    },
+    {
+      "key": "yixian_five_metal_pierce",
+      "sourceId": "7000016",
+      "name": "金灵阵",
+      "realm": "筑基",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000016_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-0.png",
+        "grid": "row3-col2"
+      }
+    },
+    {
+      "key": "yixian_five_fire_ember",
+      "sourceId": "7000017",
+      "name": "木灵•疏影",
+      "realm": "筑基",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000017_zh.webp",
+        "cost": 1,
+        "evidence": "logs/original-correction/five-selection-art-0.png",
+        "grid": "row3-col3"
+      }
+    },
+    {
+      "key": "yixian_five_water_spring",
+      "sourceId": "7000018",
+      "name": "木灵•复苏",
+      "realm": "筑基",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000018_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-0.png",
+        "grid": "row3-col4"
+      }
+    },
+    {
+      "key": "yixian_five_wood_root",
+      "sourceId": "7000019",
+      "name": "水灵•波澜",
+      "realm": "筑基",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000019_zh.webp",
+        "cost": 2,
+        "evidence": "logs/original-correction/five-selection-art-1.png",
+        "grid": "row1-col1"
+      }
+    },
+    {
+      "key": "yixian_five_earth_ridge",
+      "sourceId": "7000021",
+      "name": "火灵•聚炎",
+      "realm": "筑基",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000021_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-1.png",
+        "grid": "row1-col2"
+      }
+    },
+    {
+      "key": "yixian_five_cycle_breath",
+      "sourceId": "7000023",
+      "name": "土灵阵",
+      "realm": "筑基",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000023_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-1.png",
+        "grid": "row1-col3"
+      }
+    },
+    {
+      "key": "yixian_five_fire_burst",
+      "sourceId": "7000094",
+      "name": "镇印心法",
+      "realm": "筑基",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000094_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-1.png",
+        "grid": "row1-col4"
+      }
+    },
+    {
+      "key": "yixian_five_metal_ring",
+      "sourceId": "7000025",
+      "name": "金灵•蓄锐",
+      "realm": "金丹",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000025_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-1.png",
+        "grid": "row2-col1"
+      }
+    },
+    {
+      "key": "yixian_five_metal_break",
+      "sourceId": "7000026",
+      "name": "金灵•锋芒",
+      "realm": "金丹",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000026_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-1.png",
+        "grid": "row2-col2"
+      }
+    },
+    {
+      "key": "yixian_five_fire_furnace",
+      "sourceId": "7000028",
+      "name": "木灵•巡林",
+      "realm": "金丹",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 碎防适配为每次真实击中后追加扣减等量护盾；只扣剩余护盾，不把差额转为额外生命伤害，不预扣未命中的护盾。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000028_zh.webp",
+        "cost": 1,
+        "evidence": "logs/original-correction/five-selection-art-1.png",
+        "grid": "row2-col3"
+      }
+    },
+    {
+      "key": "yixian_five_water_mirror",
+      "sourceId": "7000029",
+      "name": "水灵阵",
+      "realm": "金丹",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000029_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-1.png",
+        "grid": "row2-col4"
+      }
+    },
+    {
+      "key": "yixian_five_wood_bloom",
+      "sourceId": "7000031",
+      "name": "火灵阵",
+      "realm": "金丹",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000031_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-1.png",
+        "grid": "row3-col1"
+      }
+    },
+    {
+      "key": "yixian_five_earth_vessel",
+      "sourceId": "7000032",
+      "name": "火灵•轰爆",
+      "realm": "金丹",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000032_zh.webp",
+        "cost": 1,
+        "evidence": "logs/original-correction/five-selection-art-1.png",
+        "grid": "row3-col2"
+      }
+    },
+    {
+      "key": "yixian_five_fire_chain",
+      "sourceId": "7000036",
+      "name": "木灵阵",
+      "realm": "金丹",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000036_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-1.png",
+        "grid": "row3-col3"
+      }
+    },
+    {
+      "key": "yixian_five_return_seed",
+      "sourceId": "7000059",
+      "name": "水灵•泉涌",
+      "realm": "金丹",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000059_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-1.png",
+        "grid": "row3-col4"
+      }
+    },
+    {
+      "key": "yixian_five_water_sea",
+      "sourceId": "7000020",
+      "name": "水灵•潜遁",
+      "realm": "元婴",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 SDK伤害查询不区分攻击/状态伤害；40%减攻适配为40%减非真实物理/法术伤害，持续本回合及下一回合。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000020_zh.webp",
+        "cost": 1,
+        "evidence": "logs/original-correction/five-selection-art-2.png",
+        "grid": "row1-col1"
+      }
+    },
+    {
+      "key": "yixian_five_wood_forest",
+      "sourceId": "7000027",
+      "name": "木灵•玫刺",
+      "realm": "元婴",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000027_zh.webp",
+        "cost": 1,
+        "evidence": "logs/original-correction/five-selection-art-2.png",
+        "grid": "row1-col2"
+      }
+    },
+    {
+      "key": "yixian_five_wood_spirit",
+      "sourceId": "7000030",
+      "name": "水灵•腾浪",
+      "realm": "元婴",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000030_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-2.png",
+        "grid": "row1-col3"
+      }
+    },
+    {
+      "key": "yixian_five_metal_cycle",
+      "sourceId": "7000033",
+      "name": "土灵•流沙",
+      "realm": "元婴",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 盾减少统计以真实击中事件为准，覆盖攻击消耗的护盾；支付/自然衰减未进入击中事件，不计入此适配。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000033_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-2.png",
+        "grid": "row1-col4"
+      }
+    },
+    {
+      "key": "yixian_five_metal_storm",
+      "sourceId": "7000034",
+      "name": "金灵•飞梭",
+      "realm": "元婴",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000034_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-2.png",
+        "grid": "row2-col1"
+      }
+    },
+    {
+      "key": "yixian_five_metal_sunder",
+      "sourceId": "7000035",
+      "name": "金灵•铁骨",
+      "realm": "元婴",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 固定减伤原5×3=15，最低为1；持续本回合及下一回合。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000035_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-2.png",
+        "grid": "row2-col2"
+      }
+    },
+    {
+      "key": "yixian_five_fire_sun",
+      "sourceId": "7000038",
+      "name": "火灵•瞬燃",
+      "realm": "元婴",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000038_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-2.png",
+        "grid": "row2-col3"
+      }
+    },
+    {
+      "key": "yixian_five_fire_inferno",
+      "sourceId": "7000039",
+      "name": "火灵•灼心",
+      "realm": "元婴",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000039_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-2.png",
+        "grid": "row2-col4"
+      }
+    },
+    {
+      "key": "yixian_five_fire_cycle",
+      "sourceId": "7000040",
+      "name": "土灵•绝壁",
+      "realm": "元婴",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 盾减少统计以真实击中事件为准，覆盖攻击消耗的护盾；支付/自然衰减未进入击中事件，不计入此适配。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000040_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-2.png",
+        "grid": "row3-col1"
+      }
+    },
+    {
+      "key": "yixian_five_earth_mountain",
+      "sourceId": "7000061",
+      "name": "木灵•暗香",
+      "realm": "元婴",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000061_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-2.png",
+        "grid": "row3-col2"
+      }
+    },
+    {
+      "key": "yixian_five_earth_cycle",
+      "sourceId": "7000066",
+      "name": "混元碎击",
+      "realm": "元婴",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 无原作八格卡组：按开战启用卡包中不同五行统计；由公共桥注入deckElements位掩码。 碎防适配为每次真实击中后追加扣减等量护盾；只扣剩余护盾，不把差额转为额外生命伤害，不预扣未命中的护盾。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000066_zh.webp",
+        "cost": 1,
+        "evidence": "logs/original-correction/five-selection-art-2.png",
+        "grid": "row3-col3"
+      }
+    },
+    {
+      "key": "yixian_five_return_circle",
+      "sourceId": "7000096",
+      "name": "土灵•遁地",
+      "realm": "元婴",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000096_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-2.png",
+        "grid": "row3-col4"
+      }
+    },
+    {
+      "key": "yixian_five_metal_divine",
+      "sourceId": "7000042",
+      "name": "金灵•巨鼎落",
+      "realm": "化神",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000042_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-3.png",
+        "grid": "row1-col1"
+      }
+    },
+    {
+      "key": "yixian_five_water_divine",
+      "sourceId": "7000043",
+      "name": "木灵•柳纷飞",
+      "realm": "化神",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000043_zh.webp",
+        "cost": 1,
+        "evidence": "logs/original-correction/five-selection-art-3.png",
+        "grid": "row1-col2"
+      }
+    },
+    {
+      "key": "yixian_five_water_origin",
+      "sourceId": "7000053",
+      "name": "土灵•合八荒",
+      "realm": "化神",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 盾减少统计以真实击中事件为准，覆盖攻击消耗的护盾；支付/自然衰减未进入击中事件，不计入此适配。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000053_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-3.png",
+        "grid": "row1-col3"
+      }
+    },
+    {
+      "key": "yixian_five_metal_heaven",
+      "sourceId": "7000056",
+      "name": "火灵•烈燎原",
+      "realm": "化神",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000056_zh.webp",
+        "cost": 2,
+        "evidence": "logs/original-correction/five-selection-art-3.png",
+        "grid": "row1-col4"
+      }
+    },
+    {
+      "key": "yixian_five_wood_divine",
+      "sourceId": "7000057",
+      "name": "水灵•纳百川",
+      "realm": "化神",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000057_zh.webp",
+        "cost": 2,
+        "evidence": "logs/original-correction/five-selection-art-3.png",
+        "grid": "row2-col1"
+      }
+    },
+    {
+      "key": "yixian_five_wood_origin",
+      "sourceId": "7000097",
+      "name": "木灵•春风拂",
+      "realm": "化神",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 春风养护按每次实际击中触发，未命中/闪避时不触发养护。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000097_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-3.png",
+        "grid": "row2-col2"
+      }
+    },
+    {
+      "key": "yixian_five_cycle_divine",
+      "sourceId": "7000099",
+      "name": "金灵•回锋刃",
+      "realm": "化神",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000099_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-3.png",
+        "grid": "row2-col3"
+      }
+    },
+    {
+      "key": "yixian_five_earth_divine",
+      "sourceId": "7000100",
+      "name": "水灵•乘风浪",
+      "realm": "化神",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 保留每10身法再动的累计机制；每累计10身法额外摸1张，余数留存本场。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000100_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-3.png",
+        "grid": "row2-col4"
+      }
+    },
+    {
+      "key": "yixian_five_fire_divine",
+      "sourceId": "7000112",
+      "name": "木灵•散枝叶",
+      "realm": "化神",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000112_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-3.png",
+        "grid": "row3-col1"
+      }
+    },
+    {
+      "key": "yixian_five_fire_heaven",
+      "sourceId": "7000113",
+      "name": "火灵•燃烬灭",
+      "realm": "化神",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000113_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-3.png",
+        "grid": "row3-col2"
+      }
+    },
+    {
+      "key": "yixian_five_earth_origin",
+      "sourceId": "7000115",
+      "name": "水灵•雨纷纷",
+      "realm": "化神",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000115_zh.webp",
+        "cost": 1,
+        "evidence": "logs/original-correction/five-selection-art-3.png",
+        "grid": "row3-col3"
+      }
+    },
+    {
+      "key": "yixian_five_return_origin",
+      "sourceId": "7000116",
+      "name": "金灵•浪淘沙",
+      "realm": "化神",
+      "reason": "保留该行原作核心机制；不用原创层数替换",
+      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000116_zh.webp",
+        "cost": 0,
+        "evidence": "logs/original-correction/five-selection-art-3.png",
+        "grid": "row3-col4"
+      }
+    }
+  ],
+  "fates": [
+    {
+      "key": "gentle_rain",
+      "name": "五行印记",
+      "rank": 2,
+      "price": 40,
+      "description": "战斗开始时获得效果：下1次使用五行牌时，先激活其所属五行。\n轮回适配：保留原义，不占手牌。\n本局购买一次，无需主动释放，不占手牌。",
+      "sourceId": "3000001:五行印记",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000001.html",
+      "originalText": "战斗开始时获得效果：下1次使用五行牌时，先激活其所属五行。",
+      "adaptation": "保留原义，不占手牌。",
+      "sourceIconUrl": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_82.webp"
+    },
+    {
+      "key": "forged_edge",
+      "name": "百草生息",
+      "rank": 2,
+      "price": 40,
+      "description": "战斗中每次使用不含五行的牌时激活木灵；战斗中每次激活木灵时加2生命上限。\n轮回适配：每次主动激活木灵增加6点本场上限；不直接治疗。\n本局购买一次，无需主动释放，不占手牌。",
+      "sourceId": "3000006:百草生息",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000006.html",
+      "originalText": "战斗中每次使用不含五行的牌时激活木灵；战斗中每次激活木灵时加2生命上限。",
+      "adaptation": "每次主动激活木灵增加6点本场上限；不直接治疗。",
+      "sourceIconUrl": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_200.webp"
+    },
+    {
+      "key": "heaven_cycle",
+      "name": "水灵印记",
+      "rank": 3,
+      "price": 40,
+      "description": "战斗开始时激活水灵并加1灵气。\n轮回适配：1灵气适配4斗气；固定资源回报不额外叠属性。\n本局购买一次，无需主动释放，不占手牌。",
+      "sourceId": "3000003:水灵印记",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000003.html",
+      "originalText": "战斗开始时激活水灵并加1灵气。",
+      "adaptation": "1灵气适配4斗气；固定资源回报不额外叠属性。",
+      "sourceIconUrl": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_99.webp"
+    },
+    {
+      "key": "endless_cycle",
+      "name": "五行爆炎",
+      "rank": 3,
+      "price": 40,
+      "description": "生命上限减4；战斗中每次激活任意五行时，减对方3生命及上限。\n轮回适配：局外扣4上限适配为每场开战自身扣12点本场上限；每次激活使对方减9生命及上限，不省略代价。\n本局购买一次，无需主动释放，不占手牌。",
+      "sourceId": "3000005:五行爆炎",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000005.html",
+      "originalText": "生命上限减4；战斗中每次激活任意五行时，减对方3生命及上限。",
+      "adaptation": "局外扣4上限适配为每场开战自身扣12点本场上限；每次激活使对方减9生命及上限，不省略代价。",
+      "sourceIconUrl": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_138.webp"
+    }
+  ],
+  "excluded": [
+    {
+      "sourceId": "7000010",
+      "name": "火灵•窜",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000013",
+      "name": "土灵•碎",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000060",
+      "name": "五行刺",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000014",
+      "name": "浑天印",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000022",
+      "name": "火灵•赤焰",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000024",
+      "name": "土灵•群山",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000037",
+      "name": "水灵•汹涌",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000109",
+      "name": "五行璞玉",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000012",
+      "name": "土灵•扬尘",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000062",
+      "name": "土灵•断崖",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000067",
+      "name": "五行流转",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000095",
+      "name": "五行灵击",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000110",
+      "name": "双生印",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000111",
+      "name": "五行阵旗",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000058",
+      "name": "混元无极阵",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000073",
+      "name": "五行天髓诀",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000098",
+      "name": "火灵•焚脉诀",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000101",
+      "name": "混元化灵",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    },
+    {
+      "sourceId": "7000114",
+      "name": "土灵•逐尘步",
+      "reason": "受限于48张与境界名额；优先选择无需固定八格、邻位、炼化或局外置换的原作机制"
+    }
+  ]
+}

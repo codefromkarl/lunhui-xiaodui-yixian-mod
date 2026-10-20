@@ -1,0 +1,1498 @@
+[
+  {
+    "id": "4000001",
+    "name": "巽卦",
+    "realm": "炼气",
+    "original": "灵气\n+\n1\n卦象\n+1",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000001.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n1\n卦象\n+1"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n2\n卦象\n+1"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n2\n卦象\n+2"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000001_zh.webp"
+  },
+  {
+    "id": "4000002",
+    "name": "坤卦",
+    "realm": "炼气",
+    "original": "防\n+\n2\n卦象\n+2",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000002.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "防\n+\n2\n卦象\n+2"
+      },
+      {
+        "level": "等级 2",
+        "text": "防\n+\n2\n卦象\n+3"
+      },
+      {
+        "level": "等级 3",
+        "text": "防\n+\n2\n卦象\n+4"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000002_zh.webp"
+  },
+  {
+    "id": "4000003",
+    "name": "震卦",
+    "realm": "炼气",
+    "original": "4\n攻\n卦象\n+1",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000003.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "4\n攻\n卦象\n+1"
+      },
+      {
+        "level": "等级 2",
+        "text": "7\n攻\n卦象\n+1"
+      },
+      {
+        "level": "等级 3",
+        "text": "10\n攻\n卦象\n+1"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000003_zh.webp"
+  },
+  {
+    "id": "4000004",
+    "name": "掌心雷",
+    "realm": "炼气",
+    "original": "2\n～\n10\n攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000004.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "2\n～\n10\n攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "5\n～\n13\n攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "8\n～\n16\n攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000004_zh.webp"
+  },
+  {
+    "id": "4000005",
+    "name": "白鹤亮翅",
+    "realm": "炼气",
+    "original": "1\n～\n8\n攻\n灵气\n+\n1",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000005.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "1\n～\n8\n攻\n灵气\n+\n1"
+      },
+      {
+        "level": "等级 2",
+        "text": "1\n～\n8\n攻\n灵气\n+\n2"
+      },
+      {
+        "level": "等级 3",
+        "text": "1\n～\n8\n攻\n灵气\n+\n3"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000005_zh.webp"
+  },
+  {
+    "id": "4000006",
+    "name": "野马分鬃",
+    "realm": "炼气",
+    "original": "3\n攻×2\n防\n+\n1\n～\n10",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000006.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "3\n攻×2\n防\n+\n1\n～\n10"
+      },
+      {
+        "level": "等级 2",
+        "text": "4\n攻×2\n防\n+\n1\n～\n12"
+      },
+      {
+        "level": "等级 3",
+        "text": "5\n攻×2\n防\n+\n1\n～\n14"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000006_zh.webp"
+  },
+  {
+    "id": "4000008",
+    "name": "星罗棋布",
+    "realm": "炼气",
+    "original": "灵气\n+\n1\n防\n+\n2\n星力\n+1",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000008.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n1\n防\n+\n2\n星力\n+1"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n2\n防\n+\n3\n星力\n+1"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n2\n防\n+\n4\n星力\n+2"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000008_zh.webp"
+  },
+  {
+    "id": "4000010",
+    "name": "星弈•夹",
+    "realm": "炼气",
+    "original": "6\n攻\n星位\n：追加5攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000010.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "6\n攻\n星位\n：追加5攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "7\n攻\n星位\n：追加7攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "8\n攻\n星位\n：追加9攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000010_zh.webp"
+  },
+  {
+    "id": "4000011",
+    "name": "星弈•挡",
+    "realm": "炼气",
+    "original": "6\n攻\n星位\n：\n防\n+2",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000011.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "6\n攻\n星位\n：\n防\n+2"
+      },
+      {
+        "level": "等级 2",
+        "text": "8\n攻\n星位\n：\n防\n+4"
+      },
+      {
+        "level": "等级 3",
+        "text": "10\n攻\n星位\n：\n防\n+6"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000011_zh.webp"
+  },
+  {
+    "id": "4000013",
+    "name": "藕断丝连",
+    "realm": "炼气",
+    "original": "6\n攻\n后招\n：生命+2",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000013.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "6\n攻\n后招\n：生命+2"
+      },
+      {
+        "level": "等级 2",
+        "text": "9\n攻\n后招\n：生命+4"
+      },
+      {
+        "level": "等级 3",
+        "text": "12\n攻\n后招\n：生命+6"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000013_zh.webp"
+  },
+  {
+    "id": "4000023",
+    "name": "斗转星移",
+    "realm": "炼气",
+    "original": "5\n攻\n后1格\n成为星位",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000023.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "5\n攻\n后1格\n成为星位"
+      },
+      {
+        "level": "等级 2",
+        "text": "8\n攻\n后1格\n成为星位"
+      },
+      {
+        "level": "等级 3",
+        "text": "8\n攻\n后2格\n成为星位"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000023_zh.webp"
+  },
+  {
+    "id": "4000061",
+    "name": "揽雀尾",
+    "realm": "炼气",
+    "original": "9\n攻\n10%概率追加5攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000061.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "9\n攻\n10%概率追加5攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "10\n攻\n10%概率追加7攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "11\n攻\n10%概率追加9攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000061_zh.webp"
+  },
+  {
+    "id": "4000009",
+    "name": "星弈•立",
+    "realm": "筑基",
+    "original": "7\n攻\n星位\n：\n灵气\n+1",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000009.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "7\n攻\n星位\n：\n灵气\n+1"
+      },
+      {
+        "level": "等级 2",
+        "text": "8\n攻\n星位\n：\n灵气\n+2"
+      },
+      {
+        "level": "等级 3",
+        "text": "9\n攻\n星位\n：\n灵气\n+3"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000009_zh.webp"
+  },
+  {
+    "id": "4000015",
+    "name": "坎卦",
+    "realm": "筑基",
+    "original": "卦象\n+2\n后1格\n成为星位",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000015.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "卦象\n+2\n后1格\n成为星位"
+      },
+      {
+        "level": "等级 2",
+        "text": "卦象\n+3\n后1格\n成为星位"
+      },
+      {
+        "level": "等级 3",
+        "text": "卦象\n+4\n后1格\n成为星位"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000015_zh.webp"
+  },
+  {
+    "id": "4000016",
+    "name": "艮卦",
+    "realm": "筑基",
+    "original": "卦象\n+2\n生命及上限+2",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000016.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "卦象\n+2\n生命及上限+2"
+      },
+      {
+        "level": "等级 2",
+        "text": "卦象\n+3\n生命及上限+3"
+      },
+      {
+        "level": "等级 3",
+        "text": "卦象\n+4\n生命及上限+4"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000016_zh.webp"
+  },
+  {
+    "id": "4000018",
+    "name": "气贯长虹",
+    "realm": "筑基",
+    "original": "灵气\n+\n2\n后招\n：生命+6",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000018.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n后招\n：生命+6"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n3\n后招\n：生命+9"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n4\n后招\n：生命+12"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000018_zh.webp"
+  },
+  {
+    "id": "4000019",
+    "name": "斩草除根",
+    "realm": "筑基",
+    "original": "5\n攻×2\n对方减3～13生命上限",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000019.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "5\n攻×2\n对方减3～13生命上限"
+      },
+      {
+        "level": "等级 2",
+        "text": "7\n攻×2\n对方减6～17生命上限"
+      },
+      {
+        "level": "等级 3",
+        "text": "9\n攻×2\n对方减9～21生命上限"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000019_zh.webp"
+  },
+  {
+    "id": "4000020",
+    "name": "金鸡独立",
+    "realm": "筑基",
+    "original": "11\n攻\n11%概率施加1层\n虚弱",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000020.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "11\n攻\n11%概率施加1层\n虚弱"
+      },
+      {
+        "level": "等级 2",
+        "text": "15\n攻\n11%概率施加1层\n虚弱"
+      },
+      {
+        "level": "等级 3",
+        "text": "15\n攻\n11%概率施加2层\n虚弱"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000020_zh.webp"
+  },
+  {
+    "id": "4000021",
+    "name": "落花有意",
+    "realm": "筑基",
+    "original": "灵气\n+\n1\n防\n+\n1\n施加1层\n内伤",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000021.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n1\n防\n+\n1\n施加1层\n内伤"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n2\n防\n+\n2\n施加1层\n内伤"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n3\n防\n+\n3\n施加1层\n内伤"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000021_zh.webp"
+  },
+  {
+    "id": "4000024",
+    "name": "飞星刺",
+    "realm": "筑基",
+    "original": "5\n攻\n星力\n+1",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000024.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "5\n攻\n星力\n+1"
+      },
+      {
+        "level": "等级 2",
+        "text": "5\n攻\n星力\n+2"
+      },
+      {
+        "level": "等级 3",
+        "text": "5\n攻\n星力\n+3"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000024_zh.webp"
+  },
+  {
+    "id": "4000027",
+    "name": "静气心法",
+    "realm": "筑基",
+    "original": "持续\n：每加1点灵气时加2生命",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000027.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "持续\n：每加1点灵气时加2生命"
+      },
+      {
+        "level": "等级 2",
+        "text": "持续\n：每加1点灵气时加3生命"
+      },
+      {
+        "level": "等级 3",
+        "text": "持续\n：每加1点灵气时加4生命"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000027_zh.webp"
+  },
+  {
+    "id": "4000028",
+    "name": "星弈•点",
+    "realm": "筑基",
+    "original": "6\n攻\n星位\n：对方减1\n灵气",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000028.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "6\n攻\n星位\n：对方减1\n灵气"
+      },
+      {
+        "level": "等级 2",
+        "text": "10\n攻\n星位\n：对方减1\n灵气"
+      },
+      {
+        "level": "等级 3",
+        "text": "14\n攻\n星位\n：对方减1\n灵气"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000028_zh.webp"
+  },
+  {
+    "id": "4000030",
+    "name": "落雷术",
+    "realm": "筑基",
+    "original": "6\n～\n16\n攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000030.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "6\n～\n16\n攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "9\n～\n20\n攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "12\n～\n24\n攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000030_zh.webp"
+  },
+  {
+    "id": "4000090",
+    "name": "望星诀",
+    "realm": "筑基",
+    "original": "灵气\n+\n2\n防\n+\n2\n后2格\n成为星位",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000090.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n防\n+\n2\n后2格\n成为星位"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n2\n防\n+\n4\n后3格\n成为星位"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n2\n防\n+\n6\n后4格\n成为星位"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000090_zh.webp"
+  },
+  {
+    "id": "4000102",
+    "name": "雷震金莲",
+    "realm": "筑基",
+    "original": "1\n～\n11\n攻\n1%概率追加5攻\n获得2层\n辟邪",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000102.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "1\n～\n11\n攻\n1%概率追加5攻\n获得2层\n辟邪"
+      },
+      {
+        "level": "等级 2",
+        "text": "1\n～\n13\n攻\n1%概率追加7攻\n获得2层\n辟邪"
+      },
+      {
+        "level": "等级 3",
+        "text": "1\n～\n15\n攻\n1%概率追加9攻\n获得2层\n辟邪"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000102_zh.webp"
+  },
+  {
+    "id": "4000017",
+    "name": "气疗术",
+    "realm": "金丹",
+    "original": "生命上限+8\n生命+8～18",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000017.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "生命上限+8\n生命+8～18"
+      },
+      {
+        "level": "等级 2",
+        "text": "生命上限+12\n生命+12～22"
+      },
+      {
+        "level": "等级 3",
+        "text": "生命上限+16\n生命+16～26"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000017_zh.webp"
+  },
+  {
+    "id": "4000022",
+    "name": "流水无情",
+    "realm": "金丹",
+    "original": "6\n攻\n若对方有\n负面状态\n，施加2层\n内伤",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000022.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "6\n攻\n若对方有\n负面状态\n，施加2层\n内伤"
+      },
+      {
+        "level": "等级 2",
+        "text": "6\n攻\n若对方有\n负面状态\n，施加3层\n内伤"
+      },
+      {
+        "level": "等级 3",
+        "text": "6\n攻\n若对方有\n负面状态\n，施加4层\n内伤"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000022_zh.webp"
+  },
+  {
+    "id": "4000025",
+    "name": "兑卦",
+    "realm": "金丹",
+    "original": "卦象\n+2\n双方加2\n灵气",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000025.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "卦象\n+2\n双方加2\n灵气"
+      },
+      {
+        "level": "等级 2",
+        "text": "卦象\n+3\n双方加3\n灵气"
+      },
+      {
+        "level": "等级 3",
+        "text": "卦象\n+4\n双方加4\n灵气"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000025_zh.webp"
+  },
+  {
+    "id": "4000029",
+    "name": "星弈•打",
+    "realm": "金丹",
+    "original": "5\n攻×2\n星位\n：追加5攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000029.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "5\n攻×2\n星位\n：追加5攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "6\n攻×2\n星位\n：追加7攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "7\n攻×2\n星位\n：追加9攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000029_zh.webp"
+  },
+  {
+    "id": "4000031",
+    "name": "白蛇吐信",
+    "realm": "金丹",
+    "original": "10%概率施加2层\n破绽\n6\n攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000031.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "10%概率施加2层\n破绽\n6\n攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "10%概率施加3层\n破绽\n6\n攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "10%概率施加4层\n破绽\n6\n攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000031_zh.webp"
+  },
+  {
+    "id": "4000032",
+    "name": "众星拱月",
+    "realm": "金丹",
+    "original": "星力\n+2\n后2格\n成为星位",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000032.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "星力\n+2\n后2格\n成为星位"
+      },
+      {
+        "level": "等级 2",
+        "text": "星力\n+3\n后2格\n成为星位"
+      },
+      {
+        "level": "等级 3",
+        "text": "星力\n+4\n后2格\n成为星位"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000032_zh.webp"
+  },
+  {
+    "id": "4000033",
+    "name": "海底捞月",
+    "realm": "金丹",
+    "original": "后招\n：12攻，并\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000033.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "后招\n：12攻，并\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "后招\n：18攻，并\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "后招\n：24攻，并\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000033_zh.webp"
+  },
+  {
+    "id": "4000040",
+    "name": "两仪阵",
+    "realm": "金丹",
+    "original": "灵气\n+\n2\n每点\n卦象\n加1\n防\n和1生命",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000040.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n每点\n卦象\n加1\n防\n和1生命"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n3\n每点\n卦象\n加2\n防\n和1生命"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n4\n每点\n卦象\n加2\n防\n和2生命"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000040_zh.webp"
+  },
+  {
+    "id": "4000042",
+    "name": "枯木逢春",
+    "realm": "金丹",
+    "original": "10\n攻\n每加过5点生命多1攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000042.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "10\n攻\n每加过5点生命多1攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "10\n攻\n每加过4点生命多1攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "10\n攻\n每加过3点生命多1攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000042_zh.webp"
+  },
+  {
+    "id": "4000043",
+    "name": "螳螂捕蝉",
+    "realm": "金丹",
+    "original": "2\n攻×2\n生命+4\n后招\n：追加7攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000043.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "2\n攻×2\n生命+4\n后招\n：追加7攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "3\n攻×2\n生命+6\n后招\n：追加10攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "4\n攻×2\n生命+8\n后招\n：追加13攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000043_zh.webp"
+  },
+  {
+    "id": "4000068",
+    "name": "御雷卦诀",
+    "realm": "金丹",
+    "original": "1\n～\n9\n攻\n返还本场战斗中触发过的\n卦象\n（最多3点）",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000068.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "1\n～\n9\n攻\n返还本场战斗中触发过的\n卦象\n（最多3点）"
+      },
+      {
+        "level": "等级 2",
+        "text": "1\n～\n10\n攻\n返还本场战斗中触发过的\n卦象\n（最多4点）"
+      },
+      {
+        "level": "等级 3",
+        "text": "1\n～\n11\n攻\n返还本场战斗中触发过的\n卦象\n（最多5点）"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000068_zh.webp"
+  },
+  {
+    "id": "4000091",
+    "name": "犀牛望月",
+    "realm": "金丹",
+    "original": "1\n～\n7\n攻\n生命及上限+1～7\n返还此牌触发的\n卦象",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000091.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "1\n～\n7\n攻\n生命及上限+1～7\n返还此牌触发的\n卦象"
+      },
+      {
+        "level": "等级 2",
+        "text": "1\n～\n9\n攻\n生命及上限+1～9\n返还此牌触发的\n卦象"
+      },
+      {
+        "level": "等级 3",
+        "text": "1\n～\n11\n攻\n生命及上限+1～11\n返还此牌触发的\n卦象"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000091_zh.webp"
+  },
+  {
+    "id": "4000103",
+    "name": "神龙摆尾",
+    "realm": "金丹",
+    "original": "生命+7\n先机\n：\n跳至\n自身上1张牌\n后招\n：本回合每加过2生命就加1\n防",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000103.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "生命+7\n先机\n：\n跳至\n自身上1张牌\n后招\n：本回合每加过2生命就加1\n防"
+      },
+      {
+        "level": "等级 2",
+        "text": "生命+11\n先机\n：\n跳至\n自身上1张牌\n后招\n：本回合每加过2生命就加1\n防"
+      },
+      {
+        "level": "等级 3",
+        "text": "生命+15\n先机\n：\n跳至\n自身上1张牌\n后招\n：本回合每加过2生命就加1\n防"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000103_zh.webp"
+  },
+  {
+    "id": "4000014",
+    "name": "六爻绝阵",
+    "realm": "元婴",
+    "original": "持续\n：每加1点\n卦象\n时，向对方造成3\n伤害",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000014.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "持续\n：每加1点\n卦象\n时，向对方造成3\n伤害"
+      },
+      {
+        "level": "等级 2",
+        "text": "持续\n：每加1点\n卦象\n时，向对方造成4\n伤害"
+      },
+      {
+        "level": "等级 3",
+        "text": "持续\n：每加1点\n卦象\n时，向对方造成5\n伤害"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000014_zh.webp"
+  },
+  {
+    "id": "4000034",
+    "name": "离卦",
+    "realm": "元婴",
+    "original": "卦象\n+3\n对方减3生命及上限",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000034.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "卦象\n+3\n对方减3生命及上限"
+      },
+      {
+        "level": "等级 2",
+        "text": "卦象\n+4\n对方减4生命及上限"
+      },
+      {
+        "level": "等级 3",
+        "text": "卦象\n+5\n对方减5生命及上限"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000034_zh.webp"
+  },
+  {
+    "id": "4000035",
+    "name": "蜻蜓点水",
+    "realm": "元婴",
+    "original": "5\n攻\n10%概率\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000035.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "5\n攻\n10%概率\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "9\n攻\n10%概率\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "13\n攻\n10%概率\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000035_zh.webp"
+  },
+  {
+    "id": "4000036",
+    "name": "金蝉脱壳",
+    "realm": "元婴",
+    "original": "防\n+\n9\n生命+9\n后招\n：获得1层\n护体",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000036.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "防\n+\n9\n生命+9\n后招\n：获得1层\n护体"
+      },
+      {
+        "level": "等级 2",
+        "text": "防\n+\n12\n生命+12\n后招\n：获得1层\n护体"
+      },
+      {
+        "level": "等级 3",
+        "text": "防\n+\n15\n生命+15\n后招\n：获得1层\n护体"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000036_zh.webp"
+  },
+  {
+    "id": "4000037",
+    "name": "反震心法",
+    "realm": "元婴",
+    "original": "生命及上限+4\n持续\n：每次受到攻击后，向对方造成2\n伤害",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000037.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "生命及上限+4\n持续\n：每次受到攻击后，向对方造成2\n伤害"
+      },
+      {
+        "level": "等级 2",
+        "text": "生命及上限+6\n持续\n：每次受到攻击后，向对方造成3\n伤害"
+      },
+      {
+        "level": "等级 3",
+        "text": "生命及上限+8\n持续\n：每次受到攻击后，向对方造成4\n伤害"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000037_zh.webp"
+  },
+  {
+    "id": "4000038",
+    "name": "星弈•飞",
+    "realm": "元婴",
+    "original": "2\n攻×2\n星位\n：\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000038.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "2\n攻×2\n星位\n：\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "4\n攻×2\n星位\n：\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "6\n攻×2\n星位\n：\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000038_zh.webp"
+  },
+  {
+    "id": "4000039",
+    "name": "星弈•虎",
+    "realm": "元婴",
+    "original": "1\n攻×3\n星位\n：令对方\n虚弱\n1回合",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000039.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "1\n攻×3\n星位\n：令对方\n虚弱\n1回合"
+      },
+      {
+        "level": "等级 2",
+        "text": "1\n攻×3\n星位\n：令对方\n虚弱\n2回合"
+      },
+      {
+        "level": "等级 3",
+        "text": "1\n攻×3\n星位\n：令对方\n虚弱\n3回合"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000039_zh.webp"
+  },
+  {
+    "id": "4000059",
+    "name": "杯弓蛇影",
+    "realm": "元婴",
+    "original": "施加2层\n内伤\n令对方的\n内伤\n立刻生效一次",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000059.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "施加2层\n内伤\n令对方的\n内伤\n立刻生效一次"
+      },
+      {
+        "level": "等级 2",
+        "text": "施加3层\n内伤\n令对方的\n内伤\n立刻生效一次"
+      },
+      {
+        "level": "等级 3",
+        "text": "施加4层\n内伤\n令对方的\n内伤\n立刻生效一次"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000059_zh.webp"
+  },
+  {
+    "id": "4000062",
+    "name": "星轨推衍",
+    "realm": "元婴",
+    "original": "防\n+\n6\n耗尽\n卦象\n，每点加1\n星力\n、1\n灵气\n和1生命",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000062.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "防\n+\n6\n耗尽\n卦象\n，每点加1\n星力\n、1\n灵气\n和1生命"
+      },
+      {
+        "level": "等级 2",
+        "text": "防\n+\n12\n耗尽\n卦象\n，每点加1\n星力\n、1\n灵气\n和1生命"
+      },
+      {
+        "level": "等级 3",
+        "text": "防\n+\n18\n耗尽\n卦象\n，每点加1\n星力\n、1\n灵气\n和2生命"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000062_zh.webp"
+  },
+  {
+    "id": "4000063",
+    "name": "轰雷掣电",
+    "realm": "元婴",
+    "original": "重复2次：\n1\n～\n10\n攻\n有\n卦象\n生效时加1\n灵气",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000063.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "重复2次：\n1\n～\n10\n攻\n有\n卦象\n生效时加1\n灵气"
+      },
+      {
+        "level": "等级 2",
+        "text": "重复2次：\n1\n～\n13\n攻\n有\n卦象\n生效时加1\n灵气"
+      },
+      {
+        "level": "等级 3",
+        "text": "重复2次：\n1\n～\n16\n攻\n有\n卦象\n生效时加1\n灵气"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000063_zh.webp"
+  },
+  {
+    "id": "4000092",
+    "name": "伤魂咒阵",
+    "realm": "元婴",
+    "original": "灵气\n+\n2\n持续\n3次：攻击或受到攻击时，向对方施加1层\n内伤",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000092.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n持续\n3次：攻击或受到攻击时，向对方施加1层\n内伤"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n2\n持续\n4次：攻击或受到攻击时，向对方施加1层\n内伤"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n2\n持续\n5次：攻击或受到攻击时，向对方施加1层\n内伤"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000092_zh.webp"
+  },
+  {
+    "id": "4000093",
+    "name": "星弈•长",
+    "realm": "元婴",
+    "original": "2\n攻\n星力\n+1\n星位\n：生命及上限+4（每有1\n星力\n多加2）",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000093.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "2\n攻\n星力\n+1\n星位\n：生命及上限+4（每有1\n星力\n多加2）"
+      },
+      {
+        "level": "等级 2",
+        "text": "2\n攻\n星力\n+1\n星位\n：生命及上限+6（每有1\n星力\n多加3）"
+      },
+      {
+        "level": "等级 3",
+        "text": "2\n攻\n星力\n+1\n星位\n：生命及上限+8（每有1\n星力\n多加4）"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000093_zh.webp"
+  },
+  {
+    "id": "4000104",
+    "name": "星弈•连",
+    "realm": "元婴",
+    "original": "1\n攻\n灵气\n+\n2\n下2次使用星弈牌时，若其所在格是\n星位\n则加1\n星力\n，否则\n成为星位\n并加5生命",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000104.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "1\n攻\n灵气\n+\n2\n下2次使用星弈牌时，若其所在格是\n星位\n则加1\n星力\n，否则\n成为星位\n并加5生命"
+      },
+      {
+        "level": "等级 2",
+        "text": "1\n攻\n灵气\n+\n3\n下3次使用星弈牌时，若其所在格是\n星位\n则加1\n星力\n，否则\n成为星位\n并加5生命"
+      },
+      {
+        "level": "等级 3",
+        "text": "1\n攻\n灵气\n+\n4\n下4次使用星弈牌时，若其所在格是\n星位\n则加1\n星力\n，否则\n成为星位\n并加5生命"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000104_zh.webp"
+  },
+  {
+    "id": "4000105",
+    "name": "拨草寻蛇",
+    "realm": "元婴",
+    "original": "施加1层\n蛇影\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000105.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "施加1层\n蛇影\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "施加1层\n内伤\n施加1层\n蛇影\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "施加2层\n内伤\n施加1层\n蛇影\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000105_zh.webp"
+  },
+  {
+    "id": "4000026",
+    "name": "乾卦",
+    "realm": "化神",
+    "original": "灵气\n+\n1\n卦象\n+1\n卦象\n≥3则\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000026.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n1\n卦象\n+1\n卦象\n≥3则\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n2\n卦象\n+2\n卦象\n≥3则\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n3\n卦象\n+3\n卦象\n≥3则\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000026_zh.webp"
+  },
+  {
+    "id": "4000041",
+    "name": "梅开二度",
+    "realm": "化神",
+    "original": "生命+2\n下1张牌连续生效两次",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000041.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "生命+2\n下1张牌连续生效两次"
+      },
+      {
+        "level": "等级 2",
+        "text": "生命+8\n下1张牌连续生效两次"
+      },
+      {
+        "level": "等级 3",
+        "text": "生命+14\n下1张牌连续生效两次"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000041_zh.webp"
+  },
+  {
+    "id": "4000044",
+    "name": "星弈•断",
+    "realm": "化神",
+    "original": "16\n攻\n星位\n：对方\n跳过\n下1张牌",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000044.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "16\n攻\n星位\n：对方\n跳过\n下1张牌"
+      },
+      {
+        "level": "等级 2",
+        "text": "22\n攻\n星位\n：对方\n跳过\n下1张牌"
+      },
+      {
+        "level": "等级 3",
+        "text": "28\n攻\n星位\n：对方\n跳过\n下1张牌"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000044_zh.webp"
+  },
+  {
+    "id": "4000045",
+    "name": "天元心法",
+    "realm": "化神",
+    "original": "星力\n+1\n(此牌在第一格时多加1点)\n持续\n：全部格子都是\n星位",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000045.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "星力\n+1\n(此牌在第一格时多加1点)\n持续\n：全部格子都是\n星位"
+      },
+      {
+        "level": "等级 2",
+        "text": "星力\n+2\n(此牌在第一格时多加1点)\n持续\n：全部格子都是\n星位"
+      },
+      {
+        "level": "等级 3",
+        "text": "星力\n+3\n(此牌在第一格时多加1点)\n持续\n：全部格子都是\n星位"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000045_zh.webp"
+  },
+  {
+    "id": "4000046",
+    "name": "五雷轰顶",
+    "realm": "化神",
+    "original": "重复5次：\n30%概率8攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000046.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "重复5次：\n30%概率8攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "重复5次：\n30%概率10攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "重复5次：\n30%概率12攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000046_zh.webp"
+  },
+  {
+    "id": "4000060",
+    "name": "气吞山河",
+    "realm": "化神",
+    "original": "生命上限+12\n再次行动\n后招\n：生命+24",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000060.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "生命上限+12\n再次行动\n后招\n：生命+24"
+      },
+      {
+        "level": "等级 2",
+        "text": "生命上限+16\n再次行动\n后招\n：生命+31"
+      },
+      {
+        "level": "等级 3",
+        "text": "生命上限+20\n再次行动\n后招\n：生命+38"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000060_zh.webp"
+  },
+  {
+    "id": "4000066",
+    "name": "黄雀在后",
+    "realm": "化神",
+    "original": "反转自身\n出牌方向\n持续\n：使用含“后招”的牌后追加7攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000066.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "反转自身\n出牌方向\n持续\n：使用含“后招”的牌后追加7攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "反转自身\n出牌方向\n持续\n：使用含“后招”的牌后追加10攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "反转自身\n出牌方向\n持续\n：使用含“后招”的牌后追加13攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000066_zh.webp"
+  },
+  {
+    "id": "4000067",
+    "name": "紫气东来",
+    "realm": "化神",
+    "original": "灵气\n+\n2\n灵气\n、\n卦象\n、\n星力\n中最高者加3（相同时取靠前者）",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000067.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n灵气\n、\n卦象\n、\n星力\n中最高者加3（相同时取靠前者）"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n2\n灵气\n、\n卦象\n、\n星力\n中最高者加5（相同时取靠前者）"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n2\n灵气\n、\n卦象\n、\n星力\n中最高者加7（相同时取靠前者）"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000067_zh.webp"
+  },
+  {
+    "id": "4000094",
+    "name": "星弈•劫争",
+    "realm": "化神",
+    "original": "1\n攻\n灵气\n+\n1\n自身\n灵气\n＞对方则施加1层\n破绽\n星位\n：若\n星力\n≥2则\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000094.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "1\n攻\n灵气\n+\n1\n自身\n灵气\n＞对方则施加1层\n破绽\n星位\n：若\n星力\n≥2则\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "6\n攻\n灵气\n+\n1\n自身\n灵气\n＞对方则施加1层\n破绽\n星位\n：若\n星力\n≥2则\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "6\n攻\n灵气\n+\n2\n自身\n灵气\n＞对方则施加1层\n破绽\n星位\n：若\n星力\n≥2则\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000094_zh.webp"
+  },
+  {
+    "id": "4000095",
+    "name": "灵蛇绕柱",
+    "realm": "化神",
+    "original": "施加1层\n内伤\n防\n+\n1\n（对方每有1层\n负面状态\n多1，合计最多为5）\n防\n≥5则\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000095.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "施加1层\n内伤\n防\n+\n1\n（对方每有1层\n负面状态\n多1，合计最多为5）\n防\n≥5则\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "施加2层\n内伤\n防\n+\n2\n（对方每有1层\n负面状态\n多1，合计最多为10）\n防\n≥5则\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "施加3层\n内伤\n防\n+\n3\n（对方每有1层\n负面状态\n多1，合计最多为15）\n防\n≥5则\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000095_zh.webp"
+  },
+  {
+    "id": "4000096",
+    "name": "折枝点穴",
+    "realm": "化神",
+    "original": "每次攻击时施加1\n内伤\n，持续2回合\n2\n攻\n10%概率追加2攻×2\n10%概率施加1\n减攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000096.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "每次攻击时施加1\n内伤\n，持续2回合\n2\n攻\n10%概率追加2攻×2\n10%概率施加1\n减攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "每次攻击时施加1\n内伤\n，持续2回合\n2\n攻×2\n10%概率追加2攻×2\n10%概率施加1\n减攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "每次攻击时施加1\n内伤\n，持续2回合\n2\n攻×3\n10%概率追加2攻×2\n10%概率施加1\n减攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000096_zh.webp"
+  },
+  {
+    "id": "4000097",
+    "name": "弯弓射虎",
+    "realm": "化神",
+    "original": "先机\n：生命及上限+12\n后招\n：\n8\n攻（每加过4生命多1攻）\n10%概率\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000097.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "先机\n：生命及上限+12\n后招\n：\n8\n攻（每加过4生命多1攻）\n10%概率\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "先机\n：生命及上限+20\n后招\n：\n8\n攻（每加过4生命多1攻）\n10%概率\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "先机\n：生命及上限+28\n后招\n：\n8\n攻（每加过4生命多1攻）\n10%概率\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000097_zh.webp"
+  },
+  {
+    "id": "4000106",
+    "name": "灵元外放",
+    "realm": "化神",
+    "original": "4回合内自身加生命超过上限部分向对方造成等量\n伤害\n灵气\n+\n2\n生命+4（每有1点\n灵气\n多加1）",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000106.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "4回合内自身加生命超过上限部分向对方造成等量\n伤害\n灵气\n+\n2\n生命+4（每有1点\n灵气\n多加1）"
+      },
+      {
+        "level": "等级 2",
+        "text": "5回合内自身加生命超过上限部分向对方造成等量\n伤害\n灵气\n+\n3\n生命+6（每有1点\n灵气\n多加1）"
+      },
+      {
+        "level": "等级 3",
+        "text": "6回合内自身加生命超过上限部分向对方造成等量\n伤害\n灵气\n+\n4\n生命+8（每有1点\n灵气\n多加1）"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000106_zh.webp"
+  },
+  {
+    "id": "4000107",
+    "name": "星弈•尖",
+    "realm": "化神",
+    "original": "5\n攻×2\n奇数格\n：\n星力\n+3\n偶数格\n：将最多2\n星力\n转为\n护体",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000107.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "5\n攻×2\n奇数格\n：\n星力\n+3\n偶数格\n：将最多2\n星力\n转为\n护体"
+      },
+      {
+        "level": "等级 2",
+        "text": "5\n攻×3\n奇数格\n：\n星力\n+3\n偶数格\n：将最多2\n星力\n转为\n护体"
+      },
+      {
+        "level": "等级 3",
+        "text": "5\n攻×4\n奇数格\n：\n星力\n+3\n偶数格\n：将最多2\n星力\n转为\n护体"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000107_zh.webp"
+  },
+  {
+    "id": "4000108",
+    "name": "风雷涌动",
+    "realm": "化神",
+    "original": "灵气\n+\n1\n防\n+\n1\n~\n11\n（与其他“雷”牌\n相邻\n时，此牌的\n防\n改为\n攻\n）\n10%概率\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000108.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n1\n防\n+\n1\n~\n11\n（与其他“雷”牌\n相邻\n时，此牌的\n防\n改为\n攻\n）\n10%概率\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n1\n防\n+\n1\n~\n16\n（与其他“雷”牌\n相邻\n时，此牌的\n防\n改为\n攻\n）\n10%概率\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n1\n防\n+\n1\n~\n21\n（与其他“雷”牌\n相邻\n时，此牌的\n防\n改为\n攻\n）\n10%概率\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000108_zh.webp"
+  },
+  {
+    "id": "4000109",
+    "name": "魂咒卦诀",
+    "realm": "化神",
+    "original": "卦象\n+2（对方有\n负面状态\n时多加2）\n奇数格\n：施加1层\n内伤\n偶数格\n：施加1层\n外伤",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000109.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "卦象\n+2（对方有\n负面状态\n时多加2）\n奇数格\n：施加1层\n内伤\n偶数格\n：施加1层\n外伤"
+      },
+      {
+        "level": "等级 2",
+        "text": "卦象\n+3（对方有\n负面状态\n时多加2）\n奇数格\n：施加2层\n内伤\n偶数格\n：施加1层\n外伤"
+      },
+      {
+        "level": "等级 3",
+        "text": "卦象\n+4（对方有\n负面状态\n时多加2）\n奇数格\n：施加3层\n内伤\n偶数格\n：施加2层\n外伤"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000109_zh.webp"
+  }
+]

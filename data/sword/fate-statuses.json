@@ -1,0 +1,40 @@
+{
+  "operations": [
+    {
+      "op": "add",
+      "kind": "statuses",
+      "id": "yixian.sect.status.fate_guard",
+      "copyFrom": "status.element.fire",
+      "fields": {
+        "displayName": "剑阵守护",
+        "flavour": "本回合已打出卡牌：回合结束护盾不自然衰减；受击和技能支付仍消耗护盾。下回合需重新打牌触发。",
+        "iconKey": "icon.yixian.sect.status.fate_guard",
+        "category": 20,
+        "maximumStacks": 1,
+        "defaultDurationRounds": 0,
+        "hardControl": false,
+        "rule": {
+          "handlerKey": "",
+          "targetKind": 0,
+          "values": []
+        },
+        "polarity": 0,
+        "ending": 40,
+        "stackDecay": 10,
+        "reapply": 20,
+        "display": 10,
+        "dispellable": false,
+        "queuesActionSkip": false,
+        "uniquePerTarget": true,
+        "mentalNegative": false,
+        "removedByDamage": false,
+        "immunityFamily": 0,
+        "baseChanceBp": 10000,
+        "exclusions": [],
+        "modifiers": [],
+        "timedEffects": [],
+        "mutualCancelBuffId": ""
+      }
+    }
+  ]
+}

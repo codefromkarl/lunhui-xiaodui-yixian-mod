@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <GameManaged Condition="'$(GameManaged)' == '' and '$(GAME_MANAGED)' != ''">$(GAME_MANAGED)</GameManaged>
+    <GameManaged Condition="'$(GameManaged)' == '' and '$(OS)' != 'Windows_NT'">$(HOME)/.local/share/Steam/steamapps/common/轮回小队 Demo/ReincarnationSquad_Data/Managed</GameManaged>
+  </PropertyGroup>
+</Project>

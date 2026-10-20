@@ -1,0 +1,2536 @@
+{
+  "operations": [
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_1",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_1",
+        "displayName": "云剑·探云",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_2",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_2",
+        "displayName": "云剑·飞刺",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_3",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_3",
+        "displayName": "云剑·厚土",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_5",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_5",
+        "displayName": "护身灵气",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_9",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_9",
+        "displayName": "震雷剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_10",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_10",
+        "displayName": "剑劈",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_12",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_12",
+        "displayName": "剑挡",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_21",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_21",
+        "displayName": "飞牙剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_14",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_14",
+        "displayName": "云剑·无锋",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_15",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_15",
+        "displayName": "云剑·极意",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_16",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_16",
+        "displayName": "云剑·回守",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_17",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_17",
+        "displayName": "凝意诀",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_22",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_22",
+        "displayName": "狂剑·一式",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_slash",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_slash",
+        "displayName": "引气剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_33",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_33",
+        "displayName": "灵犀剑阵",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_88",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_88",
+        "displayName": "御灵心法",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_26",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_26",
+        "displayName": "云剑·柔心",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_27",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_27",
+        "displayName": "云剑·点星",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_29",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_29",
+        "displayName": "巨鹏灵剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_31",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_31",
+        "displayName": "云舞诀",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_32",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_32",
+        "displayName": "三峰剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_46",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_46",
+        "displayName": "镜花剑阵",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_63",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_63",
+        "displayName": "云剑·汇灵",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_102",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_102",
+        "displayName": "狂剑·赤霄",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_34",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_34",
+        "displayName": "聚灵心法",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_35",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_35",
+        "displayName": "狂剑·二式",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_36",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_36",
+        "displayName": "巨鲲灵剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 8
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_38",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_38",
+        "displayName": "灵感剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_39",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_39",
+        "displayName": "云剑·闪风",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_moon",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_moon",
+        "displayName": "云剑·月影",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_41",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_41",
+        "displayName": "水月剑阵",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_59",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_59",
+        "displayName": "白鹭灵剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_65",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_65",
+        "displayName": "百鸟灵剑诀",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_91",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_91",
+        "displayName": "云剑·裂空",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_103",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_103",
+        "displayName": "巨象灵剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_104",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_104",
+        "displayName": "云剑·灵海",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_25",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_25",
+        "displayName": "御空剑阵",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_42",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_42",
+        "displayName": "云剑·游龙",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_43",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_43",
+        "displayName": "飞灵闪影剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_44",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_44",
+        "displayName": "剑意激荡",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_45",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_45",
+        "displayName": "万法归灵剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_60",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_60",
+        "displayName": "云剑·凌波",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_64",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_64",
+        "displayName": "连环剑阵",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_94",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_94",
+        "displayName": "迅影飞剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_98",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_98",
+        "displayName": "云剑·追风",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_106",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_106",
+        "displayName": "云剑·月华",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_107",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_107",
+        "displayName": "剑影流光",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 10,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_108",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_108",
+        "displayName": "千刃剑阵",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.pack.yixian_sword",
+      "fields": {
+        "iconKey": "icon.yixian.sect.pack.yixian_sword",
+        "displayName": "炼气·云剑入门",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "获得云灵剑宗时自动赠送。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                },
+                {
+                  "key": "cardTablePackKey",
+                  "stringValue": "yixian_sword"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.pack.yixian_sword_qi",
+      "fields": {
+        "iconKey": "icon.yixian.sect.pack.yixian_sword_qi",
+        "displayName": "炼气·剑意入门",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "获得云灵剑宗时自动赠送。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                },
+                {
+                  "key": "cardTablePackKey",
+                  "stringValue": "yixian_sword_qi"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.pack.yixian_sword_cloud2",
+      "fields": {
+        "iconKey": "icon.yixian.sect.pack.yixian_sword_cloud2",
+        "displayName": "筑基·云剑灵气",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 40,
+        "flavour": "突破筑基时可从两个筑基包中免费选一；另一包可购买。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 1
+                },
+                {
+                  "key": "cardTablePackKey",
+                  "stringValue": "yixian_sword_cloud2"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.pack.yixian_sword_intent2",
+      "fields": {
+        "iconKey": "icon.yixian.sect.pack.yixian_sword_intent2",
+        "displayName": "筑基·蓄意剑阵",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 45,
+        "flavour": "突破筑基时可从两个筑基包中免费选一；另一包可购买。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 1
+                },
+                {
+                  "key": "cardTablePackKey",
+                  "stringValue": "yixian_sword_intent2"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.pack.yixian_sword_cloud3",
+      "fields": {
+        "iconKey": "icon.yixian.sect.pack.yixian_sword_cloud3",
+        "displayName": "金丹·云剑续势",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 70,
+        "flavour": "达到金丹后购买；本境界不赠送。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                },
+                {
+                  "key": "cardTablePackKey",
+                  "stringValue": "yixian_sword_cloud3"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.pack.yixian_sword_intent3",
+      "fields": {
+        "iconKey": "icon.yixian.sect.pack.yixian_sword_intent3",
+        "displayName": "金丹·多段攻守",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 65,
+        "flavour": "达到金丹后购买；本境界不赠送。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                },
+                {
+                  "key": "cardTablePackKey",
+                  "stringValue": "yixian_sword_intent3"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.pack.yixian_sword_cloud4",
+      "fields": {
+        "iconKey": "icon.yixian.sect.pack.yixian_sword_cloud4",
+        "displayName": "元婴·云剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 105,
+        "flavour": "达到元婴后购买；本境界不赠送。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                },
+                {
+                  "key": "cardTablePackKey",
+                  "stringValue": "yixian_sword_cloud4"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.pack.yixian_sword_intent4",
+      "fields": {
+        "iconKey": "icon.yixian.sect.pack.yixian_sword_intent4",
+        "displayName": "元婴·剑意剑阵",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 105,
+        "flavour": "达到元婴后购买；本境界不赠送。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                },
+                {
+                  "key": "cardTablePackKey",
+                  "stringValue": "yixian_sword_intent4"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.pack.yixian_sword_spirit4",
+      "fields": {
+        "iconKey": "icon.yixian.sect.pack.yixian_sword_spirit4",
+        "displayName": "元婴·灵剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 105,
+        "flavour": "达到元婴后购买；本境界不赠送。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                },
+                {
+                  "key": "cardTablePackKey",
+                  "stringValue": "yixian_sword_spirit4"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.pack.yixian_sword_cloud5",
+      "fields": {
+        "iconKey": "icon.yixian.sect.pack.yixian_sword_cloud5",
+        "displayName": "化神·云剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 150,
+        "flavour": "达到化神后购买；本境界不赠送。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                },
+                {
+                  "key": "cardTablePackKey",
+                  "stringValue": "yixian_sword_cloud5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.pack.yixian_sword_intent5",
+      "fields": {
+        "iconKey": "icon.yixian.sect.pack.yixian_sword_intent5",
+        "displayName": "化神·剑意剑阵",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 150,
+        "flavour": "达到化神后购买；本境界不赠送。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                },
+                {
+                  "key": "cardTablePackKey",
+                  "stringValue": "yixian_sword_intent5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.pack.yixian_sword_spirit5",
+      "fields": {
+        "iconKey": "icon.yixian.sect.pack.yixian_sword_spirit5",
+        "displayName": "化神·灵剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 150,
+        "flavour": "达到化神后购买；本境界不赠送。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                },
+                {
+                  "key": "cardTablePackKey",
+                  "stringValue": "yixian_sword_spirit5"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

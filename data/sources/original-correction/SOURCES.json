@@ -1,0 +1,26 @@
+{
+  "retrievedAt": "2026-10-20T17:37:17.946893+08:00",
+  "sourceKind": "community reference with original card-face assets; not an official publisher claim",
+  "baseline": "individual card page level 1 text; card-face cost inspected separately",
+  "cardPools": [
+    {
+      "school": "heptastar-pavilion",
+      "count": 68,
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/sects/heptastar-pavilion.html",
+      "data": "heptastar-pavilion-cards.json"
+    },
+    {
+      "school": "five-elements-alliance",
+      "count": 67,
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/sects/five-elements-alliance.html",
+      "data": "five-elements-alliance-cards.json"
+    }
+  ],
+  "costs": "original-costs.json",
+  "knownDiscrepancies": [
+    {
+      "sourceId": "4000104",
+      "note": "星弈·连网页正文与卡图的攻/灵气数值有版本差异，以归档网页1级文本为本轮效果基线，费用以卡面快照为证据；不标作最新游戏版本。"
+    }
+  ]
+}

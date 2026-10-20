@@ -1,0 +1,966 @@
+{
+  "operations": [
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.fate.sword.sword_rhyme",
+      "fields": {
+        "displayName": "剑韵修炼",
+        "iconKey": "icon.yixian.sect.fate.sword.sword_rhyme",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 40,
+        "flavour": "每回合开始获得当前境界阶数×2剑意，首回合一次。炼气2／筑基4／金丹6／元婴8／化神10。\n本局购买一次，随境界自动成长；不占手牌，无需主动释放。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 1
+                }
+              ]
+            }
+          },
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.fate.sword.cloud_way",
+      "fields": {
+        "displayName": "云之道",
+        "iconKey": "icon.yixian.sect.fate.sword.cloud_way",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 40,
+        "flavour": "每主动打出一张云剑，获得当前境界阶数×3护盾。炼气3／筑基6／金丹9／元婴12／化神15。按整张一次，不按段数、目标数或自动重复触发。\n本局购买一次，随境界自动成长；不占手牌，无需主动释放。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 1
+                }
+              ]
+            }
+          },
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.fate.sword.formation_guard",
+      "fields": {
+        "displayName": "剑阵守护",
+        "iconKey": "icon.yixian.sect.fate.sword.formation_guard",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 40,
+        "flavour": "每回合成功打出第一张牌后，本回合结束护盾不自然衰减。任何牌可触发；敌人伤害和技能支付仍耗盾，无牌回合恢复原规则。\n本局购买一次，随境界自动成长；不占手牌，无需主动释放。",
+        "referencedStatusIds": [
+          "yixian.sect.status.fate_guard"
+        ],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.fate.sword.cloud_sea",
+      "fields": {
+        "displayName": "云海连绵",
+        "iconKey": "icon.yixian.sect.fate.sword.cloud_sea",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 40,
+        "flavour": "所有云剑无需前置即可触发连云；其他牌不断实际云剑计数。不限次数、不赠未购牌；连云减费可将斗气费用降至0。\n本局购买一次，随境界自动成长；不占手牌，无需主动释放。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.fate.five.gentle_rain",
+      "fields": {
+        "displayName": "五行印记",
+        "iconKey": "icon.yixian.sect.fate.five.gentle_rain",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 40,
+        "flavour": "战斗开始时获得效果：下1次使用五行牌时，先激活其所属五行。\n轮回适配：保留原义，不占手牌。\n本局购买一次，无需主动释放，不占手牌。\n本局购买一次，不占手牌，无需主动释放；效果是否随境界变化以本条说明为准。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 1
+                }
+              ]
+            }
+          },
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.fate.five.forged_edge",
+      "fields": {
+        "displayName": "百草生息",
+        "iconKey": "icon.yixian.sect.fate.five.forged_edge",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 40,
+        "flavour": "战斗中每次使用不含五行的牌时激活木灵；战斗中每次激活木灵时加2生命上限。\n轮回适配：每次主动激活木灵增加6点本场上限；不直接治疗。\n本局购买一次，无需主动释放，不占手牌。\n本局购买一次，不占手牌，无需主动释放；效果是否随境界变化以本条说明为准。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 1
+                }
+              ]
+            }
+          },
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.fate.five.heaven_cycle",
+      "fields": {
+        "displayName": "水灵印记",
+        "iconKey": "icon.yixian.sect.fate.five.heaven_cycle",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 40,
+        "flavour": "战斗开始时激活水灵并加1灵气。\n轮回适配：1灵气适配4斗气；固定资源回报不额外叠属性。\n本局购买一次，无需主动释放，不占手牌。\n本局购买一次，不占手牌，无需主动释放；效果是否随境界变化以本条说明为准。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.fate.five.endless_cycle",
+      "fields": {
+        "displayName": "五行爆炎",
+        "iconKey": "icon.yixian.sect.fate.five.endless_cycle",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 40,
+        "flavour": "生命上限减4；战斗中每次激活任意五行时，减对方3生命及上限。\n轮回适配：局外扣4上限适配为每场开战自身扣12点本场上限；每次激活使对方减9生命及上限，不省略代价。\n本局购买一次，无需主动释放，不占手牌。\n本局购买一次，不占手牌，无需主动释放；效果是否随境界变化以本条说明为准。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.fate.star.astral_practice",
+      "fields": {
+        "displayName": "卜卦",
+        "iconKey": "icon.yixian.sect.fate.star.astral_practice",
+        "sourceContentId": "yixian.sect.lineage.star",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 40,
+        "flavour": "开局卦象：筑基1／金丹1／元婴2／化神3；原作局外命元不可映射，局外项不移植。\n本局购买一次，不占手牌，无需主动释放；效果是否随境界变化以本条说明为准。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 1
+                }
+              ]
+            }
+          },
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.fate.star.observatory",
+      "fields": {
+        "displayName": "观星",
+        "iconKey": "icon.yixian.sect.fate.star.observatory",
+        "sourceContentId": "yixian.sect.lineage.star",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 40,
+        "flavour": "战斗开始获得1星力，各境界相同；原作局外命元得失不移植，不冒充战斗生命。\n本局购买一次，不占手牌，无需主动释放；效果是否随境界变化以本条说明为准。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 1
+                }
+              ]
+            }
+          },
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.fate.star.seven_pivots",
+      "fields": {
+        "displayName": "后发制人",
+        "iconKey": "icon.yixian.sect.fate.star.seven_pivots",
+        "sourceContentId": "yixian.sect.lineage.star",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 40,
+        "flavour": "含后招的本门牌本场首次使用获得境界数值防、生命及上限（原作筑基2／金丹3／元婴4／化神5，攻防生命统一×3）。本Mod金丹开放。\n本局购买一次，不占手牌，无需主动释放；效果是否随境界变化以本条说明为准。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.fate.star.destiny_cycle",
+      "fields": {
+        "displayName": "妙手回春",
+        "iconKey": "icon.yixian.sect.fate.star.destiny_cycle",
+        "sourceContentId": "yixian.sect.lineage.star",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 40,
+        "flavour": "开局及每次本门治疗前增加临时生命上限；原作筑基3／金丹4／元婴5／化神6，统一×3。本Mod金丹开放；不覆盖其他血统治疗。\n本局购买一次，不占手牌，无需主动释放；效果是否随境界变化以本条说明为准。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

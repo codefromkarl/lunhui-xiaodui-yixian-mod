@@ -1,0 +1,580 @@
+{
+  "operations": [
+    {
+      "op": "add",
+      "kind": "lineages",
+      "id": "yixian.sect.lineage.sword",
+      "copyFrom": "lineage.BL01",
+      "fields": {
+        "iconKey": "icon.lineage.yixian_sword",
+        "displayName": "云灵剑宗",
+        "lineageCode": "yixian_sword",
+        "energyPoolKind": 40,
+        "flavour": "云剑衔接，剑意蓄发，剑阵攻守。\n\n入宗赠送两个炼气卡组（共 8 张）；突破筑基从两个筑基卡组中免费选一。金丹及以后不赠送，未拥有的专属包可在商店购买，每包 4 张；元婴起每境界分云剑、剑意剑阵、灵剑三包。\n\n【连云】自己上一张打出的卡也是云剑时触发。抽牌、移动、普通攻击不打断；其它卡打断。\n【剑意】下一张攻击剑招整张消耗一次，各段 +3 伤害／点；无需装备剑类武器。\n【摸牌与出牌】仅首回合起手 3 张；主动摸牌耗 1 行动力、不耗气。出牌 0 行动力，仅按单卡灵气费用消耗斗气，无额外基础费。\n【再动】每次满足条件额外摸 1 张，不返还行动力；手牌最多 10 张。\n\n1 灵气＝4 斗气。攻击以能量为主，部分多段取反应、狂剑取筋肉；护盾取能量，治疗取体质，回气取能量。具体公式见卡包和单卡详情。\n\n【仙命能力】剑韵修炼、云之道筑基开放，随境界自动成长；剑阵守护、云海连绵金丹开放，购买后完整生效。详情见能力货架。购买云海连绵后，云剑无前置连云，其他牌不打断计数。",
+        "rankTitles": [
+          "炼气",
+          "筑基",
+          "金丹",
+          "元婴",
+          "化神"
+        ],
+        "steps": [
+          {
+            "rank": "D",
+            "price": 15,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 3
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 16
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 0
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          },
+          {
+            "rank": "C",
+            "price": 55,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 1
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 5
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 24
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 200
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          },
+          {
+            "rank": "B",
+            "price": 130,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 8
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 32
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 400
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          },
+          {
+            "rank": "A",
+            "price": 240,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 12
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 40
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 600
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          },
+          {
+            "rank": "S",
+            "price": 380,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 16
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 48
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 800
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "lineages",
+      "id": "yixian.sect.lineage.five",
+      "copyFrom": "lineage.BL01",
+      "fields": {
+        "iconKey": "icon.lineage.yixian_five",
+        "displayName": "五行道盟",
+        "lineageCode": "yixian_five",
+        "energyPoolKind": 40,
+        "flavour": "原作五行道盟48张选牌、12包、4个真实角色仙命。灵印主动激活；普通五行牌只按已激活/同属性/相生触发元素效果，不自动永久激活。锋锐、加攻、水势与五灵阵各依原义结算。\n五境界48张牌、12个四张包；入宗双赠包，筑基二选一，之后购包。四个仙命独立购买，不占手牌。每人最多一个弈仙门派，可搭配原生血统。\n首回合3张；主动摸牌1行动力；出牌0行动力，仅有灵气费用的牌消耗斗气，1灵气＝4斗气，无基础费。采用原作牌表，数值和环境适配逐牌注明；旧原创槽位仅保留为内部身份。",
+        "rankTitles": [
+          "炼气",
+          "筑基",
+          "金丹",
+          "元婴",
+          "化神"
+        ],
+        "steps": [
+          {
+            "rank": "D",
+            "price": 15,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 3
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 16
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 0
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          },
+          {
+            "rank": "C",
+            "price": 55,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 1
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 5
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 24
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 200
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          },
+          {
+            "rank": "B",
+            "price": 130,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 8
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 32
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 400
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          },
+          {
+            "rank": "A",
+            "price": 240,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 12
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 40
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 600
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          },
+          {
+            "rank": "S",
+            "price": 380,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 16
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 48
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 800
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "lineages",
+      "id": "yixian.sect.lineage.star",
+      "copyFrom": "lineage.BL01",
+      "fields": {
+        "iconKey": "icon.lineage.yixian_star",
+        "displayName": "七星阁",
+        "lineageCode": "yixian_star",
+        "energyPoolKind": 40,
+        "flavour": "按1级原牌移植：星力常驻强化星位攻击，卦象逐次令随机取最优；8格星位与后招显式适配手动出牌。\n五境界48张牌、12个四张包；入宗双赠包，筑基二选一，之后购包。四个仙命独立购买，不占手牌。每人最多一个弈仙门派，可搭配原生血统。\n首回合3张；主动摸牌1行动力；出牌0行动力，仅有灵气费用的牌消耗斗气，1灵气＝4斗气，无基础费。采用原作牌表，数值和环境适配逐牌注明；旧原创槽位仅保留为内部身份。",
+        "rankTitles": [
+          "炼气",
+          "筑基",
+          "金丹",
+          "元婴",
+          "化神"
+        ],
+        "steps": [
+          {
+            "rank": "D",
+            "price": 15,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 3
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 16
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 0
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          },
+          {
+            "rank": "C",
+            "price": 55,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 1
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 5
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 24
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 200
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          },
+          {
+            "rank": "B",
+            "price": 130,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 8
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 32
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 400
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          },
+          {
+            "rank": "A",
+            "price": 240,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 12
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 40
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 600
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          },
+          {
+            "rank": "S",
+            "price": 380,
+            "passive": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_star"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyFlat",
+                  "intValue": 16
+                },
+                {
+                  "key": "maximumMagic",
+                  "intValue": 48
+                },
+                {
+                  "key": "maximumHealthBp",
+                  "intValue": 800
+                }
+              ]
+            },
+            "active": {
+              "handlerKey": "",
+              "targetKind": 0
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

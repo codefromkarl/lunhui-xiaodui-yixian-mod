@@ -1,0 +1,112 @@
+{
+  "operations": [
+    {
+      "op": "add",
+      "kind": "statuses",
+      "id": "yixian.sect.status.intent",
+      "copyFrom": "status.element.fire",
+      "fields": {
+        "displayName": "剑意",
+        "flavour": "下一张攻击剑招消耗；整张牌的每段攻击均受加成。",
+        "iconKey": "icon.yixian.sect.status.intent",
+        "category": 20,
+        "maximumStacks": 9999,
+        "defaultDurationRounds": 0,
+        "hardControl": false,
+        "rule": {
+          "handlerKey": "",
+          "targetKind": 0,
+          "values": []
+        },
+        "polarity": 0,
+        "ending": 40,
+        "stackDecay": 10,
+        "reapply": 20,
+        "display": 10,
+        "dispellable": false,
+        "queuesActionSkip": false,
+        "uniquePerTarget": true,
+        "mentalNegative": false,
+        "removedByDamage": false,
+        "immunityFamily": 0,
+        "baseChanceBp": 10000,
+        "exclusions": [],
+        "modifiers": [],
+        "timedEffects": [],
+        "mutualCancelBuffId": ""
+      }
+    },
+    {
+      "op": "add",
+      "kind": "statuses",
+      "id": "yixian.sect.status.cloud",
+      "copyFrom": "status.element.fire",
+      "fields": {
+        "displayName": "连云",
+        "flavour": "自己连续打出的云剑次数；打出其它卡重置。",
+        "iconKey": "icon.yixian.sect.status.cloud",
+        "category": 20,
+        "maximumStacks": 9999,
+        "defaultDurationRounds": 0,
+        "hardControl": false,
+        "rule": {
+          "handlerKey": "",
+          "targetKind": 0,
+          "values": []
+        },
+        "polarity": 0,
+        "ending": 40,
+        "stackDecay": 10,
+        "reapply": 20,
+        "display": 10,
+        "dispellable": false,
+        "queuesActionSkip": false,
+        "uniquePerTarget": true,
+        "mentalNegative": false,
+        "removedByDamage": false,
+        "immunityFamily": 0,
+        "baseChanceBp": 10000,
+        "exclusions": [],
+        "modifiers": [],
+        "timedEffects": [],
+        "mutualCancelBuffId": ""
+      }
+    },
+    {
+      "op": "add",
+      "kind": "statuses",
+      "id": "yixian.sect.status.power",
+      "copyFrom": "status.element.fire",
+      "fields": {
+        "displayName": "剑招加攻",
+        "flavour": "本场剑宗攻击牌每段增加层数 ×3 点伤害。",
+        "iconKey": "icon.yixian.sect.status.power",
+        "category": 20,
+        "maximumStacks": 9999,
+        "defaultDurationRounds": 0,
+        "hardControl": false,
+        "rule": {
+          "handlerKey": "",
+          "targetKind": 0,
+          "values": []
+        },
+        "polarity": 0,
+        "ending": 40,
+        "stackDecay": 10,
+        "reapply": 20,
+        "display": 10,
+        "dispellable": false,
+        "queuesActionSkip": false,
+        "uniquePerTarget": true,
+        "mentalNegative": false,
+        "removedByDamage": false,
+        "immunityFamily": 0,
+        "baseChanceBp": 10000,
+        "exclusions": [],
+        "modifiers": [],
+        "timedEffects": [],
+        "mutualCancelBuffId": ""
+      }
+    }
+  ]
+}

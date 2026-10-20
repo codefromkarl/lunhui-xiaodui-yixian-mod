@@ -1,0 +1,300 @@
+{
+  "id": "yixian.sect",
+  "version": "0.3.2",
+  "apiVersion": 1,
+  "name": "弈仙门派·云灵剑宗",
+  "author": "你",
+  "description": "云灵剑宗：五境界、12 个四张卡包，共 48 张宗门牌。元婴起每境界分云剑、剑意剑阵、灵剑三包。入宗赠送两个炼气包；筑基二选一赠送，后续只购买。\n\n攻击、护盾、治疗和回气按有效属性成长；卡包详情含每张牌的公式、费用和条件。\n首回合起手 3 张，主动摸牌耗 1 行动力；出牌耗基础 2 斗气及灵气附加费用，再次行动改为额外摸牌。\n\n更新须退出游戏重进并确认代码许可。单机验收；联机须所有人使用完全相同版本。\n\n【仙命能力】筑基可购剑韵修炼（40点）、云之道（40点）；金丹可购剑阵守护（40点）、云海连绵（40点）。剑意每回合+境界×2，云剑每张+境界×3护盾；首张牌后本轮保盾，全部云剑解锁连云。均为独立被动，不占手牌。",
+  "content": [
+    "content/lineages.json",
+    "content/abilities.json",
+    "content/statuses.json",
+    "content/fates.json",
+    "content/fate-statuses.json"
+  ],
+  "assets": {
+    "icon.lineage.yixian_sword": {
+      "kind": "icon",
+      "file": "icons/lineage.yixian_sword.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_1": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_1.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_2": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_2.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_3": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_3.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_5": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_5.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_9": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_9.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_10": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_10.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_12": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_12.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_21": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_21.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_14": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_14.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_15": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_15.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_16": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_16.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_17": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_17.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_22": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_22.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_slash": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_slash.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_33": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_33.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_88": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_88.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_26": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_26.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_27": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_27.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_29": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_29.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_31": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_31.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_32": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_32.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_46": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_46.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_63": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_63.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_102": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_102.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_34": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_34.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_35": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_35.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_36": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_36.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_38": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_38.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_39": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_39.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_moon": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_moon.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_41": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_41.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_59": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_59.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_65": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_65.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_91": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_91.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_103": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_103.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_104": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_104.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_25": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_25.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_42": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_42.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_43": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_43.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_44": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_44.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_45": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_45.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_60": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_60.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_64": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_64.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_94": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_94.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_98": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_98.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_106": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_106.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_107": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_107.png"
+    },
+    "icon.ability.lineage.BL08.card.yixian_sword_108": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_108.png"
+    },
+    "icon.ability.lineage.BL08.shelf.40": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_1.png"
+    },
+    "icon.ability.lineage.BL08.shelf.41": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_9.png"
+    },
+    "icon.ability.lineage.BL08.shelf.42": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_14.png"
+    },
+    "icon.ability.lineage.BL08.shelf.43": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_17.png"
+    },
+    "icon.ability.lineage.BL08.shelf.44": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_26.png"
+    },
+    "icon.ability.lineage.BL08.shelf.45": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_31.png"
+    },
+    "icon.ability.lineage.BL08.shelf.46": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_39.png"
+    },
+    "icon.ability.lineage.BL08.shelf.47": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_34.png"
+    },
+    "icon.ability.lineage.BL08.shelf.51": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_36.png"
+    },
+    "icon.ability.lineage.BL08.shelf.48": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_42.png"
+    },
+    "icon.ability.lineage.BL08.shelf.49": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_25.png"
+    },
+    "icon.ability.lineage.BL08.shelf.52": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_43.png"
+    },
+    "icon.yixian.sect.status.intent": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_10.png"
+    },
+    "icon.yixian.sect.status.cloud": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_1.png"
+    },
+    "icon.yixian.sect.status.power": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_moon.png"
+    },
+    "icon.ability.lineage.yixian.sword.fate.sword_rhyme": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_10.png"
+    },
+    "icon.ability.lineage.yixian.sword.fate.cloud_way": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_3.png"
+    },
+    "icon.ability.lineage.yixian.sword.fate.formation_guard": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_46.png"
+    },
+    "icon.ability.lineage.yixian.sword.fate.cloud_sea": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_1.png"
+    },
+    "icon.yixian.sect.status.fate_guard": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_46.png"
+    }
+  },
+  "tables": {
+    "cardtable": "content/cardtable.json"
+  },
+  "code": {
+    "assembly": "plugins/YixianSect.dll",
+    "entry": "YixianSect.Entry"
+  }
+}

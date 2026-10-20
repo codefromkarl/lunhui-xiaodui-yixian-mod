@@ -1,0 +1,2501 @@
+{
+  "notice": "Artwork remains owned by the original rights holders and is not distributed in this repository. Fetch only for permitted local use.",
+  "assets": [
+    {
+      "name": "云剑·探云",
+      "sourceId": "1000001",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000001_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000001.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_1.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·飞刺",
+      "sourceId": "1000002",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000002_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000002.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_2.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·厚土",
+      "sourceId": "1000003",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000003_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000003.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_3.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "护身灵气",
+      "sourceId": "1000005",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000005_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000005.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_5.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "震雷剑",
+      "sourceId": "1000009",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000009_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000009.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_9.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "剑劈",
+      "sourceId": "1000010",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000010_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000010.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_10.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "剑挡",
+      "sourceId": "1000012",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000012_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000012.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_12.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "飞牙剑",
+      "sourceId": "1000021",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000021_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000021.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_21.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·无锋",
+      "sourceId": "1000014",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000014_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000014.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_14.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·极意",
+      "sourceId": "1000015",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000015_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000015.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_15.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·回守",
+      "sourceId": "1000016",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000016_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000016.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_16.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "凝意诀",
+      "sourceId": "1000017",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000017_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000017.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_17.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "狂剑·一式",
+      "sourceId": "1000022",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000022_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000022.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_22.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "引气剑",
+      "sourceId": "1000024",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000024_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000024.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_slash.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "灵犀剑阵",
+      "sourceId": "1000033",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000033_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000033.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_33.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "御灵心法",
+      "sourceId": "1000088",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000088_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000088.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_88.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·柔心",
+      "sourceId": "1000026",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000026_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000026.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_26.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·点星",
+      "sourceId": "1000027",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000027_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000027.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_27.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "巨鹏灵剑",
+      "sourceId": "1000029",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000029_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000029.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_29.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云舞诀",
+      "sourceId": "1000031",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000031_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000031.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_31.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "三峰剑",
+      "sourceId": "1000032",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000032_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000032.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_32.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "镜花剑阵",
+      "sourceId": "1000046",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000046_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000046.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_46.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·汇灵",
+      "sourceId": "1000063",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000063_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000063.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_63.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "狂剑·赤霄",
+      "sourceId": "1000102",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000102_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000102.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_102.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "聚灵心法",
+      "sourceId": "1000034",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000034_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000034.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_34.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "狂剑·二式",
+      "sourceId": "1000035",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000035_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000035.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_35.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "巨鲲灵剑",
+      "sourceId": "1000036",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000036_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000036.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_36.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "灵感剑",
+      "sourceId": "1000038",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000038_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000038.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_38.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·闪风",
+      "sourceId": "1000039",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000039_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000039.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_39.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·月影",
+      "sourceId": "1000040",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000040_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000040.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_moon.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "水月剑阵",
+      "sourceId": "1000041",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000041_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000041.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_41.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "白鹭灵剑",
+      "sourceId": "1000059",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000059_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000059.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_59.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "百鸟灵剑诀",
+      "sourceId": "1000065",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000065_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000065.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_65.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·裂空",
+      "sourceId": "1000091",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000091_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000091.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_91.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "巨象灵剑",
+      "sourceId": "1000103",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000103_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000103.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_103.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·灵海",
+      "sourceId": "1000104",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000104_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000104.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_104.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "御空剑阵",
+      "sourceId": "1000025",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000025_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000025.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_25.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·游龙",
+      "sourceId": "1000042",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000042_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000042.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_42.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "飞灵闪影剑",
+      "sourceId": "1000043",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000043_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000043.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_43.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "剑意激荡",
+      "sourceId": "1000044",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000044_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000044.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_44.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "万法归灵剑",
+      "sourceId": "1000045",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000045_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000045.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_45.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·凌波",
+      "sourceId": "1000060",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000060_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000060.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_60.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "连环剑阵",
+      "sourceId": "1000064",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000064_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000064.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_64.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "迅影飞剑",
+      "sourceId": "1000094",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000094_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000094.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_94.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·追风",
+      "sourceId": "1000098",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000098_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000098.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_98.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云剑·月华",
+      "sourceId": "1000106",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000106_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000106.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_106.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "剑影流光",
+      "sourceId": "1000107",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000107_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000107.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_107.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "千刃剑阵",
+      "sourceId": "1000108",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000108_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000108.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_108.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "金灵印",
+      "sourceId": "7000001",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000001_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000001.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_metal.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000001.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000001.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "木灵印",
+      "sourceId": "7000003",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000003_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000003.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_water.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000003.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000003.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "水灵印",
+      "sourceId": "7000006",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000006_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000006.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_wood.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000006.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000006.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "火灵印",
+      "sourceId": "7000009",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000009_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000009.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_fire.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000009.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000009.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "土灵印",
+      "sourceId": "7000011",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000011_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000011.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_earth.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000011.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000011.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "金灵·针",
+      "sourceId": "7000002",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000002_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000002.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_qi.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000002.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000002.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "木灵·芽",
+      "sourceId": "7000004",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000004_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000004.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_link.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000004.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000004.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "水灵·涛",
+      "sourceId": "7000007",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000007_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000007.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_return.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000007.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000007.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "金灵·穿心",
+      "sourceId": "7000015",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000015_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000015.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_metal_edge.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000015.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000015.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "金灵阵",
+      "sourceId": "7000016",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000016_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000016.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_metal_pierce.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000016.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000016.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "木灵·疏影",
+      "sourceId": "7000017",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000017_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000017.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_fire_ember.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000017.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000017.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "木灵·复苏",
+      "sourceId": "7000018",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000018_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000018.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_water_spring.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000018.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000018.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "水灵·波澜",
+      "sourceId": "7000019",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000019_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000019.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_wood_root.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000019.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000019.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "火灵·聚炎",
+      "sourceId": "7000021",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000021_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000021.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_earth_ridge.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000021.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000021.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "土灵阵",
+      "sourceId": "7000023",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000023_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000023.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_cycle_breath.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000023.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000023.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "镇印心法",
+      "sourceId": "7000094",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000094_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000094.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_fire_burst.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000094.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000094.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "金灵·蓄锐",
+      "sourceId": "7000025",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000025_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000025.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_metal_ring.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000025.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000025.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "金灵·锋芒",
+      "sourceId": "7000026",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000026_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000026.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_metal_break.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000026.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000026.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "木灵·巡林",
+      "sourceId": "7000028",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000028_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000028.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_fire_furnace.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000028.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000028.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "水灵阵",
+      "sourceId": "7000029",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000029_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000029.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_water_mirror.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000029.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000029.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "火灵阵",
+      "sourceId": "7000031",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000031_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000031.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_wood_bloom.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000031.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000031.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "火灵·轰爆",
+      "sourceId": "7000032",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000032_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000032.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_earth_vessel.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000032.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000032.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "木灵阵",
+      "sourceId": "7000036",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000036_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000036.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_fire_chain.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000036.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000036.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "水灵·泉涌",
+      "sourceId": "7000059",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000059_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000059.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_return_seed.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000059.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000059.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "水灵·潜遁",
+      "sourceId": "7000020",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000020_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000020.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_water_sea.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000020.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000020.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "木灵·玫刺",
+      "sourceId": "7000027",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000027_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000027.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_wood_forest.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000027.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000027.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "水灵·腾浪",
+      "sourceId": "7000030",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000030_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000030.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_wood_spirit.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000030.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000030.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "土灵·流沙",
+      "sourceId": "7000033",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000033_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000033.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_metal_cycle.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000033.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000033.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "金灵·飞梭",
+      "sourceId": "7000034",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000034_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000034.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_metal_storm.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000034.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000034.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "金灵·铁骨",
+      "sourceId": "7000035",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000035_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000035.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_metal_sunder.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000035.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000035.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "火灵·瞬燃",
+      "sourceId": "7000038",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000038_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000038.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_fire_sun.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000038.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000038.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "火灵·灼心",
+      "sourceId": "7000039",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000039_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000039.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_fire_inferno.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000039.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000039.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "土灵·绝壁",
+      "sourceId": "7000040",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000040_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000040.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_fire_cycle.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000040.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000040.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "木灵·暗香",
+      "sourceId": "7000061",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000061_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000061.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_earth_mountain.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000061.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000061.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "混元碎击",
+      "sourceId": "7000066",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000066_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000066.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_earth_cycle.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000066.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000066.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "土灵·遁地",
+      "sourceId": "7000096",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000096_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000096.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_return_circle.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000096.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000096.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "金灵·巨鼎落",
+      "sourceId": "7000042",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000042_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000042.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_metal_divine.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000042.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000042.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "木灵·柳纷飞",
+      "sourceId": "7000043",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000043_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000043.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_water_divine.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000043.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000043.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "土灵·合八荒",
+      "sourceId": "7000053",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000053_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000053.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_water_origin.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000053.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000053.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "火灵·烈燎原",
+      "sourceId": "7000056",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000056_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000056.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_metal_heaven.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000056.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000056.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "水灵·纳百川",
+      "sourceId": "7000057",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000057_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000057.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_wood_divine.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000057.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000057.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "木灵·春风拂",
+      "sourceId": "7000097",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000097_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000097.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_wood_origin.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000097.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000097.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "金灵·回锋刃",
+      "sourceId": "7000099",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000099_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000099.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_cycle_divine.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000099.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000099.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "水灵·乘风浪",
+      "sourceId": "7000100",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000100_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000100.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_earth_divine.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000100.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000100.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "木灵·散枝叶",
+      "sourceId": "7000112",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000112_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000112.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_fire_divine.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000112.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000112.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "火灵·燃烬灭",
+      "sourceId": "7000113",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000113_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000113.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_fire_heaven.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000113.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000113.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "水灵·雨纷纷",
+      "sourceId": "7000115",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000115_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000115.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_earth_origin.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000115.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000115.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "金灵·浪淘沙",
+      "sourceId": "7000116",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000116_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000116.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_five_return_origin.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/7000116.webp",
+          "format": "raw"
+        },
+        {
+          "path": "data/sources/five-elements/images/7000116.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "巽卦",
+      "sourceId": "4000001",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000001_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000001.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_gather.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000001.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "坤卦",
+      "sourceId": "4000002",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000002_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000002.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_divine.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000002.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "震卦",
+      "sourceId": "4000003",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000003_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000003.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_spark.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000003.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "掌心雷",
+      "sourceId": "4000004",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000004_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000004.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_guard.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000004.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "星罗棋布",
+      "sourceId": "4000008",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000008_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000008.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_fall.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000008.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "星弈·夹",
+      "sourceId": "4000010",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000010_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000010.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_fate.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000010.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "星弈·挡",
+      "sourceId": "4000011",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000011_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000011.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_observe.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000011.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "斗转星移",
+      "sourceId": "4000023",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000023_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000023.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_shift.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000023.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "星弈·立",
+      "sourceId": "4000009",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000009_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000009.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_spring.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000009.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "坎卦",
+      "sourceId": "4000015",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000015_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000015.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_curtain.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000015.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "气贯长虹",
+      "sourceId": "4000018",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000018_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000018.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_polish.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000018.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "金鸡独立",
+      "sourceId": "4000020",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000020_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000020.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_ferry.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000020.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "落花有意",
+      "sourceId": "4000021",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000021_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000021.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_coins.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000021.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "飞星刺",
+      "sourceId": "4000024",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000024_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000024.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_wheel.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000024.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "落雷术",
+      "sourceId": "4000030",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000030_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000030.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_align.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000030.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "望星诀",
+      "sourceId": "4000090",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000090_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000090.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_reveal.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000090.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "兑卦",
+      "sourceId": "4000025",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000025_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000025.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_spear.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000025.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "星弈·打",
+      "sourceId": "4000029",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000029_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000029.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_needles.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000029.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "众星拱月",
+      "sourceId": "4000032",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000032_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000032.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_temper.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000032.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "海底捞月",
+      "sourceId": "4000033",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000033_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000033.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_shelter.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000033.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "两仪阵",
+      "sourceId": "4000040",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000040_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000040.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_compass.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000040.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "螳螂捕蝉",
+      "sourceId": "4000043",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000043_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000043.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_orbit.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000043.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "御雷卦诀",
+      "sourceId": "4000068",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000068_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000068.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_auspice.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000068.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "白蛇吐信",
+      "sourceId": "4000031",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000031_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000031.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_judgment.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000031.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "六爻绝阵",
+      "sourceId": "4000014",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000014_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000014.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_comet.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000014.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "离卦",
+      "sourceId": "4000034",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000034_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000034.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_chain.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000034.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "蜻蜓点水",
+      "sourceId": "4000035",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000035_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000035.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_beacon.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000035.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "金蝉脱壳",
+      "sourceId": "4000036",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000036_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000036.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_refuge.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000036.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "星弈·飞",
+      "sourceId": "4000038",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000038_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000038.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_mirror.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000038.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "星弈·虎",
+      "sourceId": "4000039",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000039_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000039.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_fortune.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000039.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "杯弓蛇影",
+      "sourceId": "4000059",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000059_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000059.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_inscribe.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000059.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "星轨推衍",
+      "sourceId": "4000062",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000062_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000062.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_dissolve.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000062.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "轰雷掣电",
+      "sourceId": "4000063",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000063_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000063.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_pivot.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000063.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "伤魂咒阵",
+      "sourceId": "4000092",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000092_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000092.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_arc.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000092.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "星弈·长",
+      "sourceId": "4000093",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000093_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000093.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_circulation.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000093.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "星弈·连",
+      "sourceId": "4000104",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000104_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000104.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_rest.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000104.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "乾卦",
+      "sourceId": "4000026",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000026_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000026.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_nova.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000026.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "梅开二度",
+      "sourceId": "4000041",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000041_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000041.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_storm.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000041.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "星弈·断",
+      "sourceId": "4000044",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000044_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000044.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_forge.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000044.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "天元心法",
+      "sourceId": "4000045",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000045_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000045.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_sanctuary.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000045.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "五雷轰顶",
+      "sourceId": "4000046",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000046_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000046.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_oracle.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000046.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "气吞山河",
+      "sourceId": "4000060",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000060_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000060.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_destiny.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000060.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "紫气东来",
+      "sourceId": "4000067",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000067_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000067.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_decree.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000067.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "星弈·劫争",
+      "sourceId": "4000094",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000094_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000094.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_renew.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000094.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "灵蛇绕柱",
+      "sourceId": "4000095",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000095_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000095.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_zenith.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000095.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "折枝点穴",
+      "sourceId": "4000096",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000096_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000096.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_heavens.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000096.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "星弈·尖",
+      "sourceId": "4000107",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000107_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000107.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_luminary.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000107.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "魂咒卦诀",
+      "sourceId": "4000109",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000109_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000109.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_horizon.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000109.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "剑韵修炼",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_16.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/fates/Icon_Talent_16.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云之道",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_69.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/fates/Icon_Talent_69.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "剑阵守护",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_57.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/fates/Icon_Talent_57.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "云海连绵",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_14.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/fates/Icon_Talent_14.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "五行印记",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_82.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/fates/yixian_five_gentle_rain.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/fate-images/Icon_Talent_82.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "百草生息",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_200.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/fates/yixian_five_forged_edge.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/fate-images/Icon_Talent_200.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "水灵印记",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_99.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/fates/yixian_five_heaven_cycle.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/fate-images/Icon_Talent_99.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "五行爆炎",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_138.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/fates/yixian_five_endless_cycle.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/fate-images/Icon_Talent_138.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "卜卦",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_30.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/fates/yixian_star_astral_practice.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/fate-images/Icon_Talent_30.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "观星",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_31.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/fates/yixian_star_observatory.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/fate-images/Icon_Talent_31.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "后发制人",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_71.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/fates/yixian_star_seven_pivots.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/fate-images/Icon_Talent_71.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "妙手回春",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/fates/Icon_Talent_120.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/fates/yixian_star_destiny_cycle.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/fate-images/Icon_Talent_120.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "门派徽章 sword",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/sects/sect_badge_1.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/lineage.yixian_sword.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "门派徽章 star",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/sects/sect_badge_2.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/lineage.yixian_star.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "门派徽章 five",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/sects/sect_badge_3.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/lineage.yixian_five.png",
+          "format": "png"
+        }
+      ]
+    },
+    {
+      "name": "门派徽章 forge",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/sects/sect_badge_4.webp",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/lineage.yixian_forge.png",
+          "format": "png"
+        }
+      ]
+    }
+  ]
+}

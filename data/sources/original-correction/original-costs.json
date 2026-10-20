@@ -1,0 +1,677 @@
+{
+  "basis": "逐张查看该站1级原卡图左上灵气角标；无角标为0。网页正文与卡面可能不同版本，费用仅证明本快照图片所示值，不称最新游戏版本。",
+  "cards": {
+    "4000001": {
+      "name": "巽卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000001_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-0.png",
+      "grid": "row1-col1"
+    },
+    "4000002": {
+      "name": "坤卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000002_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-0.png",
+      "grid": "row1-col2"
+    },
+    "4000003": {
+      "name": "震卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000003_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-0.png",
+      "grid": "row1-col3"
+    },
+    "4000004": {
+      "name": "掌心雷",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000004_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-0.png",
+      "grid": "row1-col4"
+    },
+    "4000008": {
+      "name": "星罗棋布",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000008_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-0.png",
+      "grid": "row2-col1"
+    },
+    "4000010": {
+      "name": "星弈•夹",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000010_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-0.png",
+      "grid": "row2-col2"
+    },
+    "4000011": {
+      "name": "星弈•挡",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000011_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-0.png",
+      "grid": "row2-col3"
+    },
+    "4000023": {
+      "name": "斗转星移",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000023_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-0.png",
+      "grid": "row2-col4"
+    },
+    "4000009": {
+      "name": "星弈•立",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000009_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-0.png",
+      "grid": "row3-col1"
+    },
+    "4000015": {
+      "name": "坎卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000015_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-0.png",
+      "grid": "row3-col2"
+    },
+    "4000018": {
+      "name": "气贯长虹",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000018_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-0.png",
+      "grid": "row3-col3"
+    },
+    "4000020": {
+      "name": "金鸡独立",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000020_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-0.png",
+      "grid": "row3-col4"
+    },
+    "4000021": {
+      "name": "落花有意",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000021_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-1.png",
+      "grid": "row1-col1"
+    },
+    "4000024": {
+      "name": "飞星刺",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000024_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-1.png",
+      "grid": "row1-col2"
+    },
+    "4000030": {
+      "name": "落雷术",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000030_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-1.png",
+      "grid": "row1-col3"
+    },
+    "4000090": {
+      "name": "望星诀",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000090_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-1.png",
+      "grid": "row1-col4"
+    },
+    "4000025": {
+      "name": "兑卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000025_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-1.png",
+      "grid": "row2-col1"
+    },
+    "4000029": {
+      "name": "星弈•打",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000029_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-1.png",
+      "grid": "row2-col2"
+    },
+    "4000032": {
+      "name": "众星拱月",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000032_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-1.png",
+      "grid": "row2-col3"
+    },
+    "4000033": {
+      "name": "海底捞月",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000033_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-1.png",
+      "grid": "row2-col4"
+    },
+    "4000040": {
+      "name": "两仪阵",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000040_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-1.png",
+      "grid": "row3-col1"
+    },
+    "4000043": {
+      "name": "螳螂捕蝉",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000043_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-1.png",
+      "grid": "row3-col2"
+    },
+    "4000068": {
+      "name": "御雷卦诀",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000068_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-1.png",
+      "grid": "row3-col3"
+    },
+    "4000031": {
+      "name": "白蛇吐信",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000031_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-1.png",
+      "grid": "row3-col4"
+    },
+    "4000014": {
+      "name": "六爻绝阵",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000014_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-2.png",
+      "grid": "row1-col1"
+    },
+    "4000034": {
+      "name": "离卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000034_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-2.png",
+      "grid": "row1-col2"
+    },
+    "4000035": {
+      "name": "蜻蜓点水",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000035_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-2.png",
+      "grid": "row1-col3"
+    },
+    "4000036": {
+      "name": "金蝉脱壳",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000036_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-2.png",
+      "grid": "row1-col4"
+    },
+    "4000038": {
+      "name": "星弈•飞",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000038_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-2.png",
+      "grid": "row2-col1"
+    },
+    "4000039": {
+      "name": "星弈•虎",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000039_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-2.png",
+      "grid": "row2-col2"
+    },
+    "4000059": {
+      "name": "杯弓蛇影",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000059_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-2.png",
+      "grid": "row2-col3"
+    },
+    "4000062": {
+      "name": "星轨推衍",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000062_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-2.png",
+      "grid": "row2-col4"
+    },
+    "4000063": {
+      "name": "轰雷掣电",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000063_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-2.png",
+      "grid": "row3-col1"
+    },
+    "4000092": {
+      "name": "伤魂咒阵",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000092_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-2.png",
+      "grid": "row3-col2"
+    },
+    "4000093": {
+      "name": "星弈•长",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000093_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-2.png",
+      "grid": "row3-col3"
+    },
+    "4000104": {
+      "name": "星弈•连",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000104_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-2.png",
+      "grid": "row3-col4"
+    },
+    "4000026": {
+      "name": "乾卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000026_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-3.png",
+      "grid": "row1-col1"
+    },
+    "4000041": {
+      "name": "梅开二度",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000041_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-3.png",
+      "grid": "row1-col2"
+    },
+    "4000044": {
+      "name": "星弈•断",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000044_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-3.png",
+      "grid": "row1-col3"
+    },
+    "4000045": {
+      "name": "天元心法",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000045_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-3.png",
+      "grid": "row1-col4"
+    },
+    "4000046": {
+      "name": "五雷轰顶",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000046_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-3.png",
+      "grid": "row2-col1"
+    },
+    "4000060": {
+      "name": "气吞山河",
+      "cost": 2,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000060_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-3.png",
+      "grid": "row2-col2"
+    },
+    "4000067": {
+      "name": "紫气东来",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000067_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-3.png",
+      "grid": "row2-col3"
+    },
+    "4000094": {
+      "name": "星弈•劫争",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000094_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-3.png",
+      "grid": "row2-col4"
+    },
+    "4000095": {
+      "name": "灵蛇绕柱",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000095_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-3.png",
+      "grid": "row3-col1"
+    },
+    "4000096": {
+      "name": "折枝点穴",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000096_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-3.png",
+      "grid": "row3-col2"
+    },
+    "4000107": {
+      "name": "星弈•尖",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000107_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-3.png",
+      "grid": "row3-col3"
+    },
+    "4000109": {
+      "name": "魂咒卦诀",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000109_zh.webp",
+      "evidence": "logs/original-correction/star-selection-art-3.png",
+      "grid": "row3-col4"
+    },
+    "7000001": {
+      "name": "金灵印",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000001_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-0.png",
+      "grid": "row1-col1"
+    },
+    "7000003": {
+      "name": "木灵印",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000003_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-0.png",
+      "grid": "row1-col2"
+    },
+    "7000006": {
+      "name": "水灵印",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000006_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-0.png",
+      "grid": "row1-col3"
+    },
+    "7000009": {
+      "name": "火灵印",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000009_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-0.png",
+      "grid": "row1-col4"
+    },
+    "7000011": {
+      "name": "土灵印",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000011_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-0.png",
+      "grid": "row2-col1"
+    },
+    "7000002": {
+      "name": "金灵•针",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000002_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-0.png",
+      "grid": "row2-col2"
+    },
+    "7000004": {
+      "name": "木灵•芽",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000004_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-0.png",
+      "grid": "row2-col3"
+    },
+    "7000007": {
+      "name": "水灵•涛",
+      "cost": 2,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000007_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-0.png",
+      "grid": "row2-col4"
+    },
+    "7000015": {
+      "name": "金灵•穿心",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000015_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-0.png",
+      "grid": "row3-col1"
+    },
+    "7000016": {
+      "name": "金灵阵",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000016_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-0.png",
+      "grid": "row3-col2"
+    },
+    "7000017": {
+      "name": "木灵•疏影",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000017_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-0.png",
+      "grid": "row3-col3"
+    },
+    "7000018": {
+      "name": "木灵•复苏",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000018_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-0.png",
+      "grid": "row3-col4"
+    },
+    "7000019": {
+      "name": "水灵•波澜",
+      "cost": 2,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000019_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-1.png",
+      "grid": "row1-col1"
+    },
+    "7000021": {
+      "name": "火灵•聚炎",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000021_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-1.png",
+      "grid": "row1-col2"
+    },
+    "7000023": {
+      "name": "土灵阵",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000023_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-1.png",
+      "grid": "row1-col3"
+    },
+    "7000094": {
+      "name": "镇印心法",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000094_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-1.png",
+      "grid": "row1-col4"
+    },
+    "7000025": {
+      "name": "金灵•蓄锐",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000025_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-1.png",
+      "grid": "row2-col1"
+    },
+    "7000026": {
+      "name": "金灵•锋芒",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000026_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-1.png",
+      "grid": "row2-col2"
+    },
+    "7000028": {
+      "name": "木灵•巡林",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000028_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-1.png",
+      "grid": "row2-col3"
+    },
+    "7000029": {
+      "name": "水灵阵",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000029_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-1.png",
+      "grid": "row2-col4"
+    },
+    "7000031": {
+      "name": "火灵阵",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000031_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-1.png",
+      "grid": "row3-col1"
+    },
+    "7000032": {
+      "name": "火灵•轰爆",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000032_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-1.png",
+      "grid": "row3-col2"
+    },
+    "7000036": {
+      "name": "木灵阵",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000036_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-1.png",
+      "grid": "row3-col3"
+    },
+    "7000059": {
+      "name": "水灵•泉涌",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000059_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-1.png",
+      "grid": "row3-col4"
+    },
+    "7000020": {
+      "name": "水灵•潜遁",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000020_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-2.png",
+      "grid": "row1-col1"
+    },
+    "7000027": {
+      "name": "木灵•玫刺",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000027_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-2.png",
+      "grid": "row1-col2"
+    },
+    "7000030": {
+      "name": "水灵•腾浪",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000030_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-2.png",
+      "grid": "row1-col3"
+    },
+    "7000033": {
+      "name": "土灵•流沙",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000033_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-2.png",
+      "grid": "row1-col4"
+    },
+    "7000034": {
+      "name": "金灵•飞梭",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000034_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-2.png",
+      "grid": "row2-col1"
+    },
+    "7000035": {
+      "name": "金灵•铁骨",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000035_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-2.png",
+      "grid": "row2-col2"
+    },
+    "7000038": {
+      "name": "火灵•瞬燃",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000038_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-2.png",
+      "grid": "row2-col3"
+    },
+    "7000039": {
+      "name": "火灵•灼心",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000039_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-2.png",
+      "grid": "row2-col4"
+    },
+    "7000040": {
+      "name": "土灵•绝壁",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000040_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-2.png",
+      "grid": "row3-col1"
+    },
+    "7000061": {
+      "name": "木灵•暗香",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000061_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-2.png",
+      "grid": "row3-col2"
+    },
+    "7000066": {
+      "name": "混元碎击",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000066_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-2.png",
+      "grid": "row3-col3"
+    },
+    "7000096": {
+      "name": "土灵•遁地",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000096_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-2.png",
+      "grid": "row3-col4"
+    },
+    "7000042": {
+      "name": "金灵•巨鼎落",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000042_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-3.png",
+      "grid": "row1-col1"
+    },
+    "7000043": {
+      "name": "木灵•柳纷飞",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000043_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-3.png",
+      "grid": "row1-col2"
+    },
+    "7000053": {
+      "name": "土灵•合八荒",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000053_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-3.png",
+      "grid": "row1-col3"
+    },
+    "7000056": {
+      "name": "火灵•烈燎原",
+      "cost": 2,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000056_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-3.png",
+      "grid": "row1-col4"
+    },
+    "7000057": {
+      "name": "水灵•纳百川",
+      "cost": 2,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000057_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-3.png",
+      "grid": "row2-col1"
+    },
+    "7000097": {
+      "name": "木灵•春风拂",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000097_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-3.png",
+      "grid": "row2-col2"
+    },
+    "7000099": {
+      "name": "金灵•回锋刃",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000099_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-3.png",
+      "grid": "row2-col3"
+    },
+    "7000100": {
+      "name": "水灵•乘风浪",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000100_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-3.png",
+      "grid": "row2-col4"
+    },
+    "7000112": {
+      "name": "木灵•散枝叶",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000112_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-3.png",
+      "grid": "row3-col1"
+    },
+    "7000113": {
+      "name": "火灵•燃烬灭",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000113_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-3.png",
+      "grid": "row3-col2"
+    },
+    "7000115": {
+      "name": "水灵•雨纷纷",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000115_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-3.png",
+      "grid": "row3-col3"
+    },
+    "7000116": {
+      "name": "金灵•浪淘沙",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000116_zh.webp",
+      "evidence": "logs/original-correction/five-selection-art-3.png",
+      "grid": "row3-col4"
+    }
+  }
+}

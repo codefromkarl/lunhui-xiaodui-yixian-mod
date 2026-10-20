@@ -1,0 +1,670 @@
+{
+  "status": "implemented-awaiting-unified-build-and-native-verification",
+  "basis": "1级原牌；旧48内部key仅是v0.6迁移冻结槽位，旧原创内容被替换，不代表同源",
+  "source": "https://sharpobject.github.io/yxp_wiki/zh/sects/heptastar-pavilion.html",
+  "selection": [
+    {
+      "key": "yixian_star_gather",
+      "replacesPrototype": "引星诀",
+      "sourceId": "4000001",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000001.html",
+      "name": "巽卦",
+      "realm": "炼气",
+      "originalText": "灵气\n+\n1\n卦象\n+1",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_divine",
+      "replacesPrototype": "卜卦",
+      "sourceId": "4000002",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000002.html",
+      "name": "坤卦",
+      "realm": "炼气",
+      "originalText": "防\n+\n2\n卦象\n+2",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_spark",
+      "replacesPrototype": "星芒",
+      "sourceId": "4000003",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000003.html",
+      "name": "震卦",
+      "realm": "炼气",
+      "originalText": "4\n攻\n卦象\n+1",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_guard",
+      "replacesPrototype": "星垣",
+      "sourceId": "4000004",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000004.html",
+      "name": "掌心雷",
+      "realm": "炼气",
+      "originalText": "2\n～\n10\n攻",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_fall",
+      "replacesPrototype": "落星",
+      "sourceId": "4000008",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000008.html",
+      "name": "星罗棋布",
+      "realm": "炼气",
+      "originalText": "灵气\n+\n1\n防\n+\n2\n星力\n+1",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_fate",
+      "replacesPrototype": "斗转",
+      "sourceId": "4000010",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000010.html",
+      "name": "星弈•夹",
+      "realm": "炼气",
+      "originalText": "6\n攻\n星位\n：追加5攻",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_observe",
+      "replacesPrototype": "观星",
+      "sourceId": "4000011",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000011.html",
+      "name": "星弈•挡",
+      "realm": "炼气",
+      "originalText": "6\n攻\n星位\n：\n防\n+2",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_shift",
+      "replacesPrototype": "移星",
+      "sourceId": "4000023",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000023.html",
+      "name": "斗转星移",
+      "realm": "炼气",
+      "originalText": "5\n攻\n后1格\n成为星位",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_spring",
+      "replacesPrototype": "星泉",
+      "sourceId": "4000009",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000009.html",
+      "name": "星弈•立",
+      "realm": "筑基",
+      "originalText": "7\n攻\n星位\n：\n灵气\n+1",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_curtain",
+      "replacesPrototype": "星幕",
+      "sourceId": "4000015",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000015.html",
+      "name": "坎卦",
+      "realm": "筑基",
+      "originalText": "卦象\n+2\n后1格\n成为星位",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_polish",
+      "replacesPrototype": "砺星",
+      "sourceId": "4000018",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000018.html",
+      "name": "气贯长虹",
+      "realm": "筑基",
+      "originalText": "灵气\n+\n2\n后招\n：生命+6",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_ferry",
+      "replacesPrototype": "星渡",
+      "sourceId": "4000020",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000020.html",
+      "name": "金鸡独立",
+      "realm": "筑基",
+      "originalText": "11\n攻\n11%概率施加1层\n虚弱",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_coins",
+      "replacesPrototype": "问天钱",
+      "sourceId": "4000021",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000021.html",
+      "name": "落花有意",
+      "realm": "筑基",
+      "originalText": "灵气\n+\n1\n防\n+\n1\n施加1层\n内伤",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_wheel",
+      "replacesPrototype": "转轮",
+      "sourceId": "4000024",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000024.html",
+      "name": "飞星刺",
+      "realm": "筑基",
+      "originalText": "5\n攻\n星力\n+1",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_align",
+      "replacesPrototype": "借位",
+      "sourceId": "4000030",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000030.html",
+      "name": "落雷术",
+      "realm": "筑基",
+      "originalText": "6\n～\n16\n攻",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_reveal",
+      "replacesPrototype": "卦中星",
+      "sourceId": "4000090",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000090.html",
+      "name": "望星诀",
+      "realm": "筑基",
+      "originalText": "灵气\n+\n2\n防\n+\n2\n后2格\n成为星位",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_spear",
+      "replacesPrototype": "贯星枪",
+      "sourceId": "4000025",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000025.html",
+      "name": "兑卦",
+      "realm": "金丹",
+      "originalText": "卦象\n+2\n双方加2\n灵气",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_needles",
+      "replacesPrototype": "星雨针",
+      "sourceId": "4000029",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000029.html",
+      "name": "星弈•打",
+      "realm": "金丹",
+      "originalText": "5\n攻×2\n星位\n：追加5攻",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_temper",
+      "replacesPrototype": "炼星炉",
+      "sourceId": "4000032",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000032.html",
+      "name": "众星拱月",
+      "realm": "金丹",
+      "originalText": "星力\n+2\n后2格\n成为星位",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_shelter",
+      "replacesPrototype": "星庐",
+      "sourceId": "4000033",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000033.html",
+      "name": "海底捞月",
+      "realm": "金丹",
+      "originalText": "后招\n：12攻，并\n再次行动",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_compass",
+      "replacesPrototype": "定星盘",
+      "sourceId": "4000040",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000040.html",
+      "name": "两仪阵",
+      "realm": "金丹",
+      "originalText": "灵气\n+\n2\n每点\n卦象\n加1\n防\n和1生命",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_orbit",
+      "replacesPrototype": "小周天",
+      "sourceId": "4000043",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000043.html",
+      "name": "螳螂捕蝉",
+      "realm": "金丹",
+      "originalText": "2\n攻×2\n生命+4\n后招\n：追加7攻",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_auspice",
+      "replacesPrototype": "吉星照",
+      "sourceId": "4000068",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000068.html",
+      "name": "御雷卦诀",
+      "realm": "金丹",
+      "originalText": "1\n～\n9\n攻\n返还本场战斗中触发过的\n卦象\n（最多3点）",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_judgment",
+      "replacesPrototype": "天机判",
+      "sourceId": "4000031",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000031.html",
+      "name": "白蛇吐信",
+      "realm": "金丹",
+      "originalText": "10%概率施加2层\n破绽\n6\n攻",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_comet",
+      "replacesPrototype": "彗星袭",
+      "sourceId": "4000014",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000014.html",
+      "name": "六爻绝阵",
+      "realm": "元婴",
+      "originalText": "持续\n：每加1点\n卦象\n时，向对方造成3\n伤害",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_chain",
+      "replacesPrototype": "连珠坠",
+      "sourceId": "4000034",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000034.html",
+      "name": "离卦",
+      "realm": "元婴",
+      "originalText": "卦象\n+3\n对方减3生命及上限",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_beacon",
+      "replacesPrototype": "燃星灯",
+      "sourceId": "4000035",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000035.html",
+      "name": "蜻蜓点水",
+      "realm": "元婴",
+      "originalText": "5\n攻\n10%概率\n再次行动",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_refuge",
+      "replacesPrototype": "天河渡",
+      "sourceId": "4000036",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000036.html",
+      "name": "金蝉脱壳",
+      "realm": "元婴",
+      "originalText": "防\n+\n9\n生命+9\n后招\n：获得1层\n护体",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_mirror",
+      "replacesPrototype": "玄镜",
+      "sourceId": "4000038",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000038.html",
+      "name": "星弈•飞",
+      "realm": "元婴",
+      "originalText": "2\n攻×2\n星位\n：\n再次行动",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_fortune",
+      "replacesPrototype": "双曜卦",
+      "sourceId": "4000039",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000039.html",
+      "name": "星弈•虎",
+      "realm": "元婴",
+      "originalText": "1\n攻×3\n星位\n：令对方\n虚弱\n1回合",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_inscribe",
+      "replacesPrototype": "刻命",
+      "sourceId": "4000059",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000059.html",
+      "name": "杯弓蛇影",
+      "realm": "元婴",
+      "originalText": "施加2层\n内伤\n令对方的\n内伤\n立刻生效一次",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_dissolve",
+      "replacesPrototype": "解卦",
+      "sourceId": "4000062",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000062.html",
+      "name": "星轨推衍",
+      "realm": "元婴",
+      "originalText": "防\n+\n6\n耗尽\n卦象\n，每点加1\n星力\n、1\n灵气\n和1生命",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_pivot",
+      "replacesPrototype": "天枢移位",
+      "sourceId": "4000063",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000063.html",
+      "name": "轰雷掣电",
+      "realm": "元婴",
+      "originalText": "重复2次：\n1\n～\n10\n攻\n有\n卦象\n生效时加1\n灵气",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_arc",
+      "replacesPrototype": "天璇弧",
+      "sourceId": "4000092",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000092.html",
+      "name": "伤魂咒阵",
+      "realm": "元婴",
+      "originalText": "灵气\n+\n2\n持续\n3次：攻击或受到攻击时，向对方施加1层\n内伤",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_circulation",
+      "replacesPrototype": "大周天",
+      "sourceId": "4000093",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000093.html",
+      "name": "星弈•长",
+      "realm": "元婴",
+      "originalText": "2\n攻\n星力\n+1\n星位\n：生命及上限+4（每有1\n星力\n多加2）",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_rest",
+      "replacesPrototype": "星息归元",
+      "sourceId": "4000104",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000104.html",
+      "name": "星弈•连",
+      "realm": "元婴",
+      "originalText": "1\n攻\n灵气\n+\n2\n下2次使用星弈牌时，若其所在格是\n星位\n则加1\n星力\n，否则\n成为星位\n并加5生命",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_nova",
+      "replacesPrototype": "群星归寂",
+      "sourceId": "4000026",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000026.html",
+      "name": "乾卦",
+      "realm": "化神",
+      "originalText": "灵气\n+\n1\n卦象\n+1\n卦象\n≥3则\n再次行动",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_storm",
+      "replacesPrototype": "万曜流光",
+      "sourceId": "4000041",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000041.html",
+      "name": "梅开二度",
+      "realm": "化神",
+      "originalText": "生命+2\n下1张牌连续生效两次",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_forge",
+      "replacesPrototype": "铸天星",
+      "sourceId": "4000044",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000044.html",
+      "name": "星弈•断",
+      "realm": "化神",
+      "originalText": "16\n攻\n星位\n：对方\n跳过\n下1张牌",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_sanctuary",
+      "replacesPrototype": "星海不灭",
+      "sourceId": "4000045",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000045.html",
+      "name": "天元心法",
+      "realm": "化神",
+      "originalText": "星力\n+1\n(此牌在第一格时多加1点)\n持续\n：全部格子都是\n星位",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_oracle",
+      "replacesPrototype": "太一问命",
+      "sourceId": "4000046",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000046.html",
+      "name": "五雷轰顶",
+      "realm": "化神",
+      "originalText": "重复5次：\n30%概率8攻",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_destiny",
+      "replacesPrototype": "命轨重绘",
+      "sourceId": "4000060",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000060.html",
+      "name": "气吞山河",
+      "realm": "化神",
+      "originalText": "生命上限+12\n再次行动\n后招\n：生命+24",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_decree",
+      "replacesPrototype": "敕星令",
+      "sourceId": "4000067",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000067.html",
+      "name": "紫气东来",
+      "realm": "化神",
+      "originalText": "灵气\n+\n2\n灵气\n、\n卦象\n、\n星力\n中最高者加3（相同时取靠前者）",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_renew",
+      "replacesPrototype": "逆命回澜",
+      "sourceId": "4000094",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000094.html",
+      "name": "星弈•劫争",
+      "realm": "化神",
+      "originalText": "1\n攻\n灵气\n+\n1\n自身\n灵气\n＞对方则施加1层\n破绽\n星位\n：若\n星力\n≥2则\n再次行动",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_zenith",
+      "replacesPrototype": "七曜同辉",
+      "sourceId": "4000095",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000095.html",
+      "name": "灵蛇绕柱",
+      "realm": "化神",
+      "originalText": "施加1层\n内伤\n防\n+\n1\n（对方每有1层\n负面状态\n多1，合计最多为5）\n防\n≥5则\n再次行动",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_heavens",
+      "replacesPrototype": "众星拱极",
+      "sourceId": "4000096",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000096.html",
+      "name": "折枝点穴",
+      "realm": "化神",
+      "originalText": "每次攻击时施加1\n内伤\n，持续2回合\n2\n攻\n10%概率追加2攻×2\n10%概率施加1\n减攻",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_luminary",
+      "replacesPrototype": "三光会元",
+      "sourceId": "4000107",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000107.html",
+      "name": "星弈•尖",
+      "realm": "化神",
+      "originalText": "5\n攻×2\n奇数格\n：\n星力\n+3\n偶数格\n：将最多2\n星力\n转为\n护体",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    },
+    {
+      "key": "yixian_star_horizon",
+      "replacesPrototype": "天外天",
+      "sourceId": "4000109",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000109.html",
+      "name": "魂咒卦诀",
+      "realm": "化神",
+      "originalText": "卦象\n+2（对方有\n负面状态\n时多加2）\n奇数格\n：施加1层\n内伤\n偶数格\n：施加1层\n外伤",
+      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+    }
+  ],
+  "excluded": [
+    {
+      "id": "4000005",
+      "name": "白鹤亮翅",
+      "realm": "炼气",
+      "original": "1\n～\n8\n攻\n灵气\n+\n1",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000005.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000006",
+      "name": "野马分鬃",
+      "realm": "炼气",
+      "original": "3\n攻×2\n防\n+\n1\n～\n10",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000006.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000013",
+      "name": "藕断丝连",
+      "realm": "炼气",
+      "original": "6\n攻\n后招\n：生命+2",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000013.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000061",
+      "name": "揽雀尾",
+      "realm": "炼气",
+      "original": "9\n攻\n10%概率追加5攻",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000061.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000016",
+      "name": "艮卦",
+      "realm": "筑基",
+      "original": "卦象\n+2\n生命及上限+2",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000016.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000019",
+      "name": "斩草除根",
+      "realm": "筑基",
+      "original": "5\n攻×2\n对方减3～13生命上限",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000019.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000027",
+      "name": "静气心法",
+      "realm": "筑基",
+      "original": "持续\n：每加1点灵气时加2生命",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000027.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000028",
+      "name": "星弈•点",
+      "realm": "筑基",
+      "original": "6\n攻\n星位\n：对方减1\n灵气",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000028.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000102",
+      "name": "雷震金莲",
+      "realm": "筑基",
+      "original": "1\n～\n11\n攻\n1%概率追加5攻\n获得2层\n辟邪",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000102.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000017",
+      "name": "气疗术",
+      "realm": "金丹",
+      "original": "生命上限+8\n生命+8～18",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000017.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000022",
+      "name": "流水无情",
+      "realm": "金丹",
+      "original": "6\n攻\n若对方有\n负面状态\n，施加2层\n内伤",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000022.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000042",
+      "name": "枯木逢春",
+      "realm": "金丹",
+      "original": "10\n攻\n每加过5点生命多1攻",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000042.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000091",
+      "name": "犀牛望月",
+      "realm": "金丹",
+      "original": "1\n～\n7\n攻\n生命及上限+1～7\n返还此牌触发的\n卦象",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000091.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000103",
+      "name": "神龙摆尾",
+      "realm": "金丹",
+      "original": "生命+7\n先机\n：\n跳至\n自身上1张牌\n后招\n：本回合每加过2生命就加1\n防",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000103.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000037",
+      "name": "反震心法",
+      "realm": "元婴",
+      "original": "生命及上限+4\n持续\n：每次受到攻击后，向对方造成2\n伤害",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000037.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000105",
+      "name": "拨草寻蛇",
+      "realm": "元婴",
+      "original": "施加1层\n蛇影\n再次行动",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000105.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000066",
+      "name": "黄雀在后",
+      "realm": "化神",
+      "original": "反转自身\n出牌方向\n持续\n：使用含“后招”的牌后追加7攻",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000066.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000097",
+      "name": "弯弓射虎",
+      "realm": "化神",
+      "original": "先机\n：生命及上限+12\n后招\n：\n8\n攻（每加过4生命多1攻）\n10%概率\n再次行动",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000097.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000106",
+      "name": "灵元外放",
+      "realm": "化神",
+      "original": "4回合内自身加生命超过上限部分向对方造成等量\n伤害\n灵气\n+\n2\n生命+4（每有1点\n灵气\n多加1）",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000106.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000108",
+      "name": "风雷涌动",
+      "realm": "化神",
+      "original": "灵气\n+\n1\n防\n+\n1\n~\n11\n（与其他“雷”牌\n相邻\n时，此牌的\n防\n改为\n攻\n）\n10%概率\n再次行动",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000108.html",
+      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    }
+  ],
+  "mechanics": {
+    "star": "星位攻击每点+1攻，常驻",
+    "omen": "每次独立随机取最优，逐次消耗",
+    "post": "同名原牌本场第2次及以后",
+    "positions": "8格循环，默认3/6"
+  },
+  "costBasis": "费用已逐sourceId对齐original-costs.json的归档卡面；效果以归档网页1级正文为准。",
+  "identity": "yixian.sect.*；旧版本ID存档不兼容，不使用legacyIds或save migration。",
+  "versionDiscrepancies": {
+    "4000104": "星弈·连：卡面4攻+1灵气，归档网页正文1攻+2灵气，采用网页效果。"
+  },
+  "crossChecks": [
+    {
+      "url": "https://github.com/sharpobject/yisim/blob/master/gamestate_full.js",
+      "finding": "星力只在星位攻结算；卦象逐次trigger；六爻非攻伤仍先扣护盾。模拟器仅作机制交叉核对，不标作官方代码。"
+    },
+    {
+      "url": "https://github.com/sharpobject/yisim/blob/master/card_actions.js",
+      "finding": "星弈夹/打追加的是另一次攻击；灵蛇检查当前总防，星弈长先加星再按当前星计算生命及上限。"
+    }
+  ]
+}

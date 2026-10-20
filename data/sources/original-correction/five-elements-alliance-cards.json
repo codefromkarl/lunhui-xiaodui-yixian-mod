@@ -1,0 +1,1468 @@
+[
+  {
+    "id": "7000001",
+    "name": "金灵印",
+    "realm": "炼气",
+    "original": "6\n攻\n激活金灵",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000001.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "6\n攻\n激活金灵"
+      },
+      {
+        "level": "等级 2",
+        "text": "9\n攻\n激活金灵"
+      },
+      {
+        "level": "等级 3",
+        "text": "12\n攻\n激活金灵"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000001_zh.webp"
+  },
+  {
+    "id": "7000002",
+    "name": "金灵•针",
+    "realm": "炼气",
+    "original": "6\n攻\n金灵\n：\n锋锐\n+2",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000002.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "6\n攻\n金灵\n：\n锋锐\n+2"
+      },
+      {
+        "level": "等级 2",
+        "text": "7\n攻\n金灵\n：\n锋锐\n+4"
+      },
+      {
+        "level": "等级 3",
+        "text": "8\n攻\n金灵\n：\n锋锐\n+6"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000002_zh.webp"
+  },
+  {
+    "id": "7000003",
+    "name": "木灵印",
+    "realm": "炼气",
+    "original": "灵气\n+\n1\n生命+4\n激活木灵",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000003.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n1\n生命+4\n激活木灵"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n2\n生命+4\n激活木灵"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n3\n生命+4\n激活木灵"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000003_zh.webp"
+  },
+  {
+    "id": "7000004",
+    "name": "木灵•芽",
+    "realm": "炼气",
+    "original": "3\n攻×2\n木灵\n：生命+5",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000004.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "3\n攻×2\n木灵\n：生命+5"
+      },
+      {
+        "level": "等级 2",
+        "text": "3\n攻×3\n木灵\n：生命+5"
+      },
+      {
+        "level": "等级 3",
+        "text": "3\n攻×4\n木灵\n：生命+5"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000004_zh.webp"
+  },
+  {
+    "id": "7000006",
+    "name": "水灵印",
+    "realm": "炼气",
+    "original": "灵气\n+\n2\n激活水灵",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000006.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n激活水灵"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n3\n激活水灵"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n4\n激活水灵"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000006_zh.webp"
+  },
+  {
+    "id": "7000007",
+    "name": "水灵•涛",
+    "realm": "炼气",
+    "original": "10\n攻\n水灵\n：获得1层\n水势",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000007.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "10\n攻\n水灵\n：获得1层\n水势"
+      },
+      {
+        "level": "等级 2",
+        "text": "13\n攻\n水灵\n：获得1层\n水势"
+      },
+      {
+        "level": "等级 3",
+        "text": "16\n攻\n水灵\n：获得1层\n水势"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000007_zh.webp"
+  },
+  {
+    "id": "7000009",
+    "name": "火灵印",
+    "realm": "炼气",
+    "original": "灵气\n+\n1\n对方减3生命及上限\n激活火灵",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000009.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n1\n对方减3生命及上限\n激活火灵"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n2\n对方减3生命及上限\n激活火灵"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n3\n对方减3生命及上限\n激活火灵"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000009_zh.webp"
+  },
+  {
+    "id": "7000010",
+    "name": "火灵•窜",
+    "realm": "炼气",
+    "original": "9\n攻\n火灵\n：追加2攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000010.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "9\n攻\n火灵\n：追加2攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "11\n攻\n火灵\n：追加3攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "13\n攻\n火灵\n：追加4攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000010_zh.webp"
+  },
+  {
+    "id": "7000011",
+    "name": "土灵印",
+    "realm": "炼气",
+    "original": "3\n攻\n防\n+\n4\n激活土灵",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000011.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "3\n攻\n防\n+\n4\n激活土灵"
+      },
+      {
+        "level": "等级 2",
+        "text": "5\n攻\n防\n+\n6\n激活土灵"
+      },
+      {
+        "level": "等级 3",
+        "text": "7\n攻\n防\n+\n8\n激活土灵"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000011_zh.webp"
+  },
+  {
+    "id": "7000013",
+    "name": "土灵•碎",
+    "realm": "炼气",
+    "original": "6\n攻\n土灵\n：若自身或对方防>0则多3攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000013.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "6\n攻\n土灵\n：若自身或对方防>0则多3攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "7\n攻\n土灵\n：若自身或对方防>0则多5攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "8\n攻\n土灵\n：若自身或对方防>0则多7攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000013_zh.webp"
+  },
+  {
+    "id": "7000060",
+    "name": "五行刺",
+    "realm": "炼气",
+    "original": "5\n攻\n若已激活任意\n五行\n则多3攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000060.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "5\n攻\n若已激活任意\n五行\n则多3攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "5\n攻\n若已激活任意\n五行\n则多6攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "5\n攻\n若已激活任意\n五行\n则多9攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000060_zh.webp"
+  },
+  {
+    "id": "7000014",
+    "name": "浑天印",
+    "realm": "筑基",
+    "original": "5\n攻\n灵气\n+\n1\n下1次使用\n五行\n牌时，\n激活\n其所属\n五行",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000014.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "5\n攻\n灵气\n+\n1\n下1次使用\n五行\n牌时，\n激活\n其所属\n五行"
+      },
+      {
+        "level": "等级 2",
+        "text": "9\n攻\n灵气\n+\n1\n下1次使用\n五行\n牌时，\n激活\n其所属\n五行"
+      },
+      {
+        "level": "等级 3",
+        "text": "13\n攻\n灵气\n+\n1\n下1次使用\n五行\n牌时，\n激活\n其所属\n五行"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000014_zh.webp"
+  },
+  {
+    "id": "7000015",
+    "name": "金灵•穿心",
+    "realm": "筑基",
+    "original": "7\n攻\n金灵\n：下1次攻击\n无视防御",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000015.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "7\n攻\n金灵\n：下1次攻击\n无视防御"
+      },
+      {
+        "level": "等级 2",
+        "text": "10\n攻\n金灵\n：下2次攻击\n无视防御"
+      },
+      {
+        "level": "等级 3",
+        "text": "13\n攻\n金灵\n：下3次攻击\n无视防御"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000015_zh.webp"
+  },
+  {
+    "id": "7000016",
+    "name": "金灵阵",
+    "realm": "筑基",
+    "original": "锋锐\n+4\n持续\n：每次使用“金灵”牌时加1\n锋锐",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000016.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "锋锐\n+4\n持续\n：每次使用“金灵”牌时加1\n锋锐"
+      },
+      {
+        "level": "等级 2",
+        "text": "锋锐\n+4\n持续\n：每次使用“金灵”牌时加2\n锋锐"
+      },
+      {
+        "level": "等级 3",
+        "text": "锋锐\n+4\n持续\n：每次使用“金灵”牌时加3\n锋锐"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000016_zh.webp"
+  },
+  {
+    "id": "7000017",
+    "name": "木灵•疏影",
+    "realm": "筑基",
+    "original": "3\n攻×2\n木灵\n：获得1层\n加攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000017.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "3\n攻×2\n木灵\n：获得1层\n加攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "3\n攻×3\n木灵\n：获得1层\n加攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "3\n攻×4\n木灵\n：获得1层\n加攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000017_zh.webp"
+  },
+  {
+    "id": "7000018",
+    "name": "木灵•复苏",
+    "realm": "筑基",
+    "original": "灵气\n+\n2\n木灵\n：生命+3（每有1层\n加攻\n多1生命）",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000018.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n木灵\n：生命+3（每有1层\n加攻\n多1生命）"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n3\n木灵\n：生命+4（每有1层\n加攻\n多1生命）"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n4\n木灵\n：生命+6（每有1层\n加攻\n多1生命）"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000018_zh.webp"
+  },
+  {
+    "id": "7000019",
+    "name": "水灵•波澜",
+    "realm": "筑基",
+    "original": "获得2层\n水势\n水灵\n：此牌不耗\n灵气",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000019.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "获得2层\n水势\n水灵\n：此牌不耗\n灵气"
+      },
+      {
+        "level": "等级 2",
+        "text": "获得3层\n水势\n水灵\n：此牌不耗\n灵气"
+      },
+      {
+        "level": "等级 3",
+        "text": "获得4层\n水势\n水灵\n：此牌不耗\n灵气"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000019_zh.webp"
+  },
+  {
+    "id": "7000021",
+    "name": "火灵•聚炎",
+    "realm": "筑基",
+    "original": "灵气\n+\n2\n火灵\n：对方减3生命及上限",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000021.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n火灵\n：对方减3生命及上限"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n3\n火灵\n：对方减4生命及上限"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n4\n火灵\n：对方减6生命及上限"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000021_zh.webp"
+  },
+  {
+    "id": "7000022",
+    "name": "火灵•赤焰",
+    "realm": "筑基",
+    "original": "4\n攻×2\n火灵\n：追加4攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000022.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "4\n攻×2\n火灵\n：追加4攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "5\n攻×2\n火灵\n：追加6攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "6\n攻×2\n火灵\n：追加8攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000022_zh.webp"
+  },
+  {
+    "id": "7000023",
+    "name": "土灵阵",
+    "realm": "筑基",
+    "original": "防\n+\n4\n持续\n：每次使用“土灵”牌时加2\n防",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000023.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "防\n+\n4\n持续\n：每次使用“土灵”牌时加2\n防"
+      },
+      {
+        "level": "等级 2",
+        "text": "防\n+\n6\n持续\n：每次使用“土灵”牌时加3\n防"
+      },
+      {
+        "level": "等级 3",
+        "text": "防\n+\n8\n持续\n：每次使用“土灵”牌时加4\n防"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000023_zh.webp"
+  },
+  {
+    "id": "7000024",
+    "name": "土灵•群山",
+    "realm": "筑基",
+    "original": "5\n攻\n防\n+\n2\n土灵\n：下回合再加3\n防",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000024.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "5\n攻\n防\n+\n2\n土灵\n：下回合再加3\n防"
+      },
+      {
+        "level": "等级 2",
+        "text": "6\n攻\n防\n+\n3\n土灵\n：下回合再加6\n防"
+      },
+      {
+        "level": "等级 3",
+        "text": "7\n攻\n防\n+\n4\n土灵\n：下回合再加9\n防"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000024_zh.webp"
+  },
+  {
+    "id": "7000037",
+    "name": "水灵•汹涌",
+    "realm": "筑基",
+    "original": "10\n攻\n水灵\n：每有1层\n水势\n多1攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000037.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "10\n攻\n水灵\n：每有1层\n水势\n多1攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "14\n攻\n水灵\n：每有1层\n水势\n多1攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "18\n攻\n水灵\n：每有1层\n水势\n多1攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000037_zh.webp"
+  },
+  {
+    "id": "7000094",
+    "name": "镇印心法",
+    "realm": "筑基",
+    "original": "造成6\n伤害\n持续\n：每次\n激活\n五行\n时，向对方造成2\n伤害",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000094.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "造成6\n伤害\n持续\n：每次\n激活\n五行\n时，向对方造成2\n伤害"
+      },
+      {
+        "level": "等级 2",
+        "text": "造成7\n伤害\n持续\n：每次\n激活\n五行\n时，向对方造成3\n伤害"
+      },
+      {
+        "level": "等级 3",
+        "text": "造成8\n伤害\n持续\n：每次\n激活\n五行\n时，向对方造成4\n伤害"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000094_zh.webp"
+  },
+  {
+    "id": "7000109",
+    "name": "五行璞玉",
+    "realm": "筑基",
+    "original": "置换\n：随机获得1张\n五行\n牌（优先取卡组中第一张牌的\n五行\n）",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000109.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "置换\n：随机获得1张\n五行\n牌（优先取卡组中第一张牌的\n五行\n）"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000109_zh.webp"
+  },
+  {
+    "id": "7000012",
+    "name": "土灵•扬尘",
+    "realm": "金丹",
+    "original": "8\n攻\n土灵\n：和对方每相差4点生命上限就加1\n防\n，下回合再加等量\n防",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000012.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "8\n攻\n土灵\n：和对方每相差4点生命上限就加1\n防\n，下回合再加等量\n防"
+      },
+      {
+        "level": "等级 2",
+        "text": "12\n攻\n土灵\n：和对方每相差4点生命上限就加1\n防\n，下回合再加等量\n防"
+      },
+      {
+        "level": "等级 3",
+        "text": "16\n攻\n土灵\n：和对方每相差4点生命上限就加1\n防\n，下回合再加等量\n防"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000012_zh.webp"
+  },
+  {
+    "id": "7000025",
+    "name": "金灵•蓄锐",
+    "realm": "金丹",
+    "original": "防\n+\n4\n锋锐\n+4\n金灵\n：每有4\n防\n就多加1层\n锋锐",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000025.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "防\n+\n4\n锋锐\n+4\n金灵\n：每有4\n防\n就多加1层\n锋锐"
+      },
+      {
+        "level": "等级 2",
+        "text": "防\n+\n6\n锋锐\n+6\n金灵\n：每有4\n防\n就多加1层\n锋锐"
+      },
+      {
+        "level": "等级 3",
+        "text": "防\n+\n8\n锋锐\n+8\n金灵\n：每有4\n防\n就多加1层\n锋锐"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000025_zh.webp"
+  },
+  {
+    "id": "7000026",
+    "name": "金灵•锋芒",
+    "realm": "金丹",
+    "original": "6\n攻\n金灵\n：每\n击伤\n2点生命加1层\n锋锐",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000026.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "6\n攻\n金灵\n：每\n击伤\n2点生命加1层\n锋锐"
+      },
+      {
+        "level": "等级 2",
+        "text": "9\n攻\n金灵\n：每\n击伤\n2点生命加1层\n锋锐"
+      },
+      {
+        "level": "等级 3",
+        "text": "12\n攻\n金灵\n：每\n击伤\n2点生命加1层\n锋锐"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000026_zh.webp"
+  },
+  {
+    "id": "7000028",
+    "name": "木灵•巡林",
+    "realm": "金丹",
+    "original": "1\n攻×2\n碎防\n木灵\n：若已加过生命则\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000028.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "1\n攻×2\n碎防\n木灵\n：若已加过生命则\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "2\n攻×2\n碎防\n木灵\n：若已加过生命则\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "3\n攻×2\n碎防\n木灵\n：若已加过生命则\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000028_zh.webp"
+  },
+  {
+    "id": "7000029",
+    "name": "水灵阵",
+    "realm": "金丹",
+    "original": "灵气\n+\n2\n持续\n：每次使用“水灵”牌时加1\n灵气",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000029.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n持续\n：每次使用“水灵”牌时加1\n灵气"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n3\n持续\n：每次使用“水灵”牌时加1\n灵气"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n5\n持续\n：每次使用“水灵”牌时加1\n灵气"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000029_zh.webp"
+  },
+  {
+    "id": "7000031",
+    "name": "火灵阵",
+    "realm": "金丹",
+    "original": "对方减2生命及上限\n持续\n：每次使用“火灵”牌时减对方2生命及上限",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000031.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "对方减2生命及上限\n持续\n：每次使用“火灵”牌时减对方2生命及上限"
+      },
+      {
+        "level": "等级 2",
+        "text": "对方减3生命及上限\n持续\n：每次使用“火灵”牌时减对方3生命及上限"
+      },
+      {
+        "level": "等级 3",
+        "text": "对方减4生命及上限\n持续\n：每次使用“火灵”牌时减对方4生命及上限"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000031_zh.webp"
+  },
+  {
+    "id": "7000032",
+    "name": "火灵•轰爆",
+    "realm": "金丹",
+    "original": "获得1层\n加攻\n火灵\n：对方减7生命及上限（每有1层\n加攻\n多减1点）",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000032.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "获得1层\n加攻\n火灵\n：对方减7生命及上限（每有1层\n加攻\n多减1点）"
+      },
+      {
+        "level": "等级 2",
+        "text": "获得2层\n加攻\n火灵\n：对方减7生命及上限（每有1层\n加攻\n多减1点）"
+      },
+      {
+        "level": "等级 3",
+        "text": "获得3层\n加攻\n火灵\n：对方减7生命及上限（每有1层\n加攻\n多减1点）"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000032_zh.webp"
+  },
+  {
+    "id": "7000036",
+    "name": "木灵阵",
+    "realm": "金丹",
+    "original": "生命上限+10\n持续\n：每次使用“木灵”牌时加2生命",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000036.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "生命上限+10\n持续\n：每次使用“木灵”牌时加2生命"
+      },
+      {
+        "level": "等级 2",
+        "text": "生命上限+15\n持续\n：每次使用“木灵”牌时加3生命"
+      },
+      {
+        "level": "等级 3",
+        "text": "生命上限+20\n持续\n：每次使用“木灵”牌时加4生命"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000036_zh.webp"
+  },
+  {
+    "id": "7000059",
+    "name": "水灵•泉涌",
+    "realm": "金丹",
+    "original": "灵气\n+\n2\n水灵\n：下1次攻击每\n击伤\n5点生命就获得1层\n水势",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000059.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n水灵\n：下1次攻击每\n击伤\n5点生命就获得1层\n水势"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n3\n水灵\n：下1次攻击每\n击伤\n5点生命就获得1层\n水势"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n4\n水灵\n：下1次攻击每\n击伤\n5点生命就获得1层\n水势"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000059_zh.webp"
+  },
+  {
+    "id": "7000062",
+    "name": "土灵•断崖",
+    "realm": "金丹",
+    "original": "防\n+\n10\n土灵\n：下1次\n防\n减少时，向对方造成减少值的\n伤害",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000062.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "防\n+\n10\n土灵\n：下1次\n防\n减少时，向对方造成减少值的\n伤害"
+      },
+      {
+        "level": "等级 2",
+        "text": "防\n+\n15\n土灵\n：下1次\n防\n减少时，向对方造成减少值的\n伤害"
+      },
+      {
+        "level": "等级 3",
+        "text": "防\n+\n20\n土灵\n：下1次\n防\n减少时，向对方造成减少值的\n伤害"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000062_zh.webp"
+  },
+  {
+    "id": "7000067",
+    "name": "五行流转",
+    "realm": "金丹",
+    "original": "若前一格牌\n五行相生\n后一格牌，则\n激活\n后一格牌的\n五行\n，并使用其效果（最高1级）",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000067.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "若前一格牌\n五行相生\n后一格牌，则\n激活\n后一格牌的\n五行\n，并使用其效果（最高1级）"
+      },
+      {
+        "level": "等级 2",
+        "text": "若前一格牌\n五行相生\n后一格牌，则\n激活\n后一格牌的\n五行\n，并使用其效果（最高2级）"
+      },
+      {
+        "level": "等级 3",
+        "text": "若前一格牌\n五行相生\n后一格牌，则\n激活\n后一格牌的\n五行\n，并使用其效果（最高3级）"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000067_zh.webp"
+  },
+  {
+    "id": "7000095",
+    "name": "五行灵击",
+    "realm": "金丹",
+    "original": "15\n攻（每剩余1\n灵气\n多1攻）\n卡组中每有1种不同\n五行\n此牌少耗1\n灵气",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000095.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "15\n攻（每剩余1\n灵气\n多1攻）\n卡组中每有1种不同\n五行\n此牌少耗1\n灵气"
+      },
+      {
+        "level": "等级 2",
+        "text": "19\n攻（每剩余1\n灵气\n多1攻）\n卡组中每有1种不同\n五行\n此牌少耗1\n灵气"
+      },
+      {
+        "level": "等级 3",
+        "text": "23\n攻（每剩余1\n灵气\n多1攻）\n卡组中每有1种不同\n五行\n此牌少耗1\n灵气"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000095_zh.webp"
+  },
+  {
+    "id": "7000110",
+    "name": "双生印",
+    "realm": "金丹",
+    "original": "4\n攻×2\n激活\n后2格牌所属\n五行\n，若符合\n五行相生\n顺序则再加3\n防",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000110.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "4\n攻×2\n激活\n后2格牌所属\n五行\n，若符合\n五行相生\n顺序则再加3\n防"
+      },
+      {
+        "level": "等级 2",
+        "text": "5\n攻×2\n激活\n后2格牌所属\n五行\n，若符合\n五行相生\n顺序则再加6\n防"
+      },
+      {
+        "level": "等级 3",
+        "text": "6\n攻×2\n激活\n后2格牌所属\n五行\n，若符合\n五行相生\n顺序则再加9\n防"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000110_zh.webp"
+  },
+  {
+    "id": "7000020",
+    "name": "水灵•潜遁",
+    "realm": "元婴",
+    "original": "生命及上限+2\n水灵\n：受到的攻击减少40%，持续2回合",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000020.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "生命及上限+2\n水灵\n：受到的攻击减少40%，持续2回合"
+      },
+      {
+        "level": "等级 2",
+        "text": "生命及上限+7\n水灵\n：受到的攻击减少40%，持续2回合"
+      },
+      {
+        "level": "等级 3",
+        "text": "生命及上限+12\n水灵\n：受到的攻击减少40%，持续2回合"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000020_zh.webp"
+  },
+  {
+    "id": "7000027",
+    "name": "木灵•玫刺",
+    "realm": "元婴",
+    "original": "4\n攻×3\n木灵\n：每\n击伤\n3点生命，自身加1生命",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000027.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "4\n攻×3\n木灵\n：每\n击伤\n3点生命，自身加1生命"
+      },
+      {
+        "level": "等级 2",
+        "text": "4\n攻×4\n木灵\n：每\n击伤\n3点生命，自身加1生命"
+      },
+      {
+        "level": "等级 3",
+        "text": "4\n攻×5\n木灵\n：每\n击伤\n3点生命，自身加1生命"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000027_zh.webp"
+  },
+  {
+    "id": "7000030",
+    "name": "水灵•腾浪",
+    "realm": "元婴",
+    "original": "灵气\n+\n2\n生命及上限+2\n水灵\n：每有2点灵气就获得1层\n水势",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000030.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n生命及上限+2\n水灵\n：每有2点灵气就获得1层\n水势"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n3\n生命及上限+3\n水灵\n：每有2点灵气就获得1层\n水势"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n4\n生命及上限+4\n水灵\n：每有2点灵气就获得1层\n水势"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000030_zh.webp"
+  },
+  {
+    "id": "7000033",
+    "name": "土灵•流沙",
+    "realm": "元婴",
+    "original": "9\n攻\n土灵\n：自身每减少过6防，此牌多1攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000033.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "9\n攻\n土灵\n：自身每减少过6防，此牌多1攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "9\n攻\n土灵\n：自身每减少过5防，此牌多1攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "9\n攻\n土灵\n：自身每减少过4防，此牌多1攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000033_zh.webp"
+  },
+  {
+    "id": "7000034",
+    "name": "金灵•飞梭",
+    "realm": "元婴",
+    "original": "4\n攻\n此牌攻击不触发\n锋锐\n金灵\n：\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000034.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "4\n攻\n此牌攻击不触发\n锋锐\n金灵\n：\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "8\n攻\n此牌攻击不触发\n锋锐\n金灵\n：\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "12\n攻\n此牌攻击不触发\n锋锐\n金灵\n：\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000034_zh.webp"
+  },
+  {
+    "id": "7000035",
+    "name": "金灵•铁骨",
+    "realm": "元婴",
+    "original": "金灵\n：受到的攻或伤害减5（最低减至1），持续2回合",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000035.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "金灵\n：受到的攻或伤害减5（最低减至1），持续2回合"
+      },
+      {
+        "level": "等级 2",
+        "text": "金灵\n：受到的攻或伤害减5（最低减至1），持续3回合"
+      },
+      {
+        "level": "等级 3",
+        "text": "金灵\n：受到的攻或伤害减5（最低减至1），持续4回合"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000035_zh.webp"
+  },
+  {
+    "id": "7000038",
+    "name": "火灵•瞬燃",
+    "realm": "元婴",
+    "original": "对方减4生命上限\n火灵\n：\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000038.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "对方减4生命上限\n火灵\n：\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "对方减8生命上限\n火灵\n：\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "对方减12生命上限\n火灵\n：\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000038_zh.webp"
+  },
+  {
+    "id": "7000039",
+    "name": "火灵•灼心",
+    "realm": "元婴",
+    "original": "4\n攻×2\n火灵\n：每\n击伤\n1点生命，减对方2生命上限",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000039.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "4\n攻×2\n火灵\n：每\n击伤\n1点生命，减对方2生命上限"
+      },
+      {
+        "level": "等级 2",
+        "text": "5\n攻×2\n火灵\n：每\n击伤\n1点生命，减对方2生命上限"
+      },
+      {
+        "level": "等级 3",
+        "text": "7\n攻×2\n火灵\n：每\n击伤\n1点生命，减对方2生命上限"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000039_zh.webp"
+  },
+  {
+    "id": "7000040",
+    "name": "土灵•绝壁",
+    "realm": "元婴",
+    "original": "防\n+\n12\n土灵\n：自身每减少过6\n防\n就多加1\n防",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000040.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "防\n+\n12\n土灵\n：自身每减少过6\n防\n就多加1\n防"
+      },
+      {
+        "level": "等级 2",
+        "text": "防\n+\n12\n土灵\n：自身每减少过5\n防\n就多加1\n防"
+      },
+      {
+        "level": "等级 3",
+        "text": "防\n+\n12\n土灵\n：自身每减少过4\n防\n就多加1\n防"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000040_zh.webp"
+  },
+  {
+    "id": "7000061",
+    "name": "木灵•暗香",
+    "realm": "元婴",
+    "original": "灵气\n+\n2\n生命+2\n木灵\n：每有3点\n灵气\n就获得1层\n加攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000061.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n生命+2\n木灵\n：每有3点\n灵气\n就获得1层\n加攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n3\n生命+3\n木灵\n：每有3点\n灵气\n就获得1层\n加攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n4\n生命+4\n木灵\n：每有3点\n灵气\n就获得1层\n加攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000061_zh.webp"
+  },
+  {
+    "id": "7000066",
+    "name": "混元碎击",
+    "realm": "元婴",
+    "original": "4\n攻\n碎防\n卡组中每有1种不同\n五行\n，此牌多4攻",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000066.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "4\n攻\n碎防\n卡组中每有1种不同\n五行\n，此牌多4攻"
+      },
+      {
+        "level": "等级 2",
+        "text": "7\n攻\n碎防\n卡组中每有1种不同\n五行\n，此牌多5攻"
+      },
+      {
+        "level": "等级 3",
+        "text": "10\n攻\n碎防\n卡组中每有1种不同\n五行\n，此牌多6攻"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000066_zh.webp"
+  },
+  {
+    "id": "7000096",
+    "name": "土灵•遁地",
+    "realm": "元婴",
+    "original": "防\n+\n4\n土灵\n：\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000096.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "防\n+\n4\n土灵\n：\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "防\n+\n8\n土灵\n：\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "防\n+\n12\n土灵\n：\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000096_zh.webp"
+  },
+  {
+    "id": "7000111",
+    "name": "五行阵旗",
+    "realm": "元婴",
+    "original": "使用手牌中第1张\n五行灵阵\n牌（最高1级）\n奇数格\n：自身减10生命并\n再次行动\n偶数格\n：使用手牌中第1张\n五行灵印\n牌",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000111.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "使用手牌中第1张\n五行灵阵\n牌（最高1级）\n奇数格\n：自身减10生命并\n再次行动\n偶数格\n：使用手牌中第1张\n五行灵印\n牌"
+      },
+      {
+        "level": "等级 2",
+        "text": "使用手牌中第1张\n五行灵阵\n牌（最高2级）\n奇数格\n：自身减10生命并\n再次行动\n偶数格\n：使用手牌中第1张\n五行灵印\n牌"
+      },
+      {
+        "level": "等级 3",
+        "text": "使用手牌中第1张\n五行灵阵\n牌（最高3级）\n奇数格\n：自身减10生命并\n再次行动\n偶数格\n：使用手牌中第1张\n五行灵印\n牌"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000111_zh.webp"
+  },
+  {
+    "id": "7000042",
+    "name": "金灵•巨鼎落",
+    "realm": "化神",
+    "original": "7\n攻\n金灵\n：此牌\n击伤\n对手时扣减的生命加倍",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000042.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "7\n攻\n金灵\n：此牌\n击伤\n对手时扣减的生命加倍"
+      },
+      {
+        "level": "等级 2",
+        "text": "11\n攻\n金灵\n：此牌\n击伤\n对手时扣减的生命加倍"
+      },
+      {
+        "level": "等级 3",
+        "text": "15\n攻\n金灵\n：此牌\n击伤\n对手时扣减的生命加倍"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000042_zh.webp"
+  },
+  {
+    "id": "7000043",
+    "name": "木灵•柳纷飞",
+    "realm": "化神",
+    "original": "获得1层\n加攻\n生命+3\n木灵\n：\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000043.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "获得1层\n加攻\n生命+3\n木灵\n：\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "获得2层\n加攻\n生命+3\n木灵\n：\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "获得3层\n加攻\n生命+3\n木灵\n：\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000043_zh.webp"
+  },
+  {
+    "id": "7000053",
+    "name": "土灵•合八荒",
+    "realm": "化神",
+    "original": "防\n+\n12\n土灵\n：下2次\n防\n减少时，立刻加回减少的\n防",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000053.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "防\n+\n12\n土灵\n：下2次\n防\n减少时，立刻加回减少的\n防"
+      },
+      {
+        "level": "等级 2",
+        "text": "防\n+\n12\n土灵\n：下3次\n防\n减少时，立刻加回减少的\n防"
+      },
+      {
+        "level": "等级 3",
+        "text": "防\n+\n12\n土灵\n：下4次\n防\n减少时，立刻加回减少的\n防"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000053_zh.webp"
+  },
+  {
+    "id": "7000056",
+    "name": "火灵•烈燎原",
+    "realm": "化神",
+    "original": "6\n攻×3\n火灵\n：令对方生命上限减至其当前生命减2",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000056.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "6\n攻×3\n火灵\n：令对方生命上限减至其当前生命减2"
+      },
+      {
+        "level": "等级 2",
+        "text": "8\n攻×3\n火灵\n：令对方生命上限减至其当前生命减3"
+      },
+      {
+        "level": "等级 3",
+        "text": "10\n攻×3\n火灵\n：令对方生命上限减至其当前生命减4"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000056_zh.webp"
+  },
+  {
+    "id": "7000057",
+    "name": "水灵•纳百川",
+    "realm": "化神",
+    "original": "获得3层\n水势\n水灵\n：生命及上限+6（每有1层\n水势\n多1点）",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000057.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "获得3层\n水势\n水灵\n：生命及上限+6（每有1层\n水势\n多1点）"
+      },
+      {
+        "level": "等级 2",
+        "text": "获得4层\n水势\n水灵\n：生命及上限+8（每有1层\n水势\n多1点）"
+      },
+      {
+        "level": "等级 3",
+        "text": "获得5层\n水势\n水灵\n：生命及上限+10（每有1层\n水势\n多1点）"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000057_zh.webp"
+  },
+  {
+    "id": "7000058",
+    "name": "混元无极阵",
+    "realm": "化神",
+    "original": "持续\n0\n次\n（卡组中每有1种不同\n五行\n就多1次）：激活任意\n五行\n后\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000058.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "持续\n0\n次\n（卡组中每有1种不同\n五行\n就多1次）：激活任意\n五行\n后\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "持续\n2\n次\n（卡组中每有1种不同\n五行\n就多1次）：激活任意\n五行\n后\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "持续\n4\n次\n（卡组中每有1种不同\n五行\n就多1次）：激活任意\n五行\n后\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000058_zh.webp"
+  },
+  {
+    "id": "7000073",
+    "name": "五行天髓诀",
+    "realm": "化神",
+    "original": "持续\n2\n次\n：若卡组仅含一种\n五行\n，使用该\n五行\n的牌时未攻击则\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000073.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "持续\n2\n次\n：若卡组仅含一种\n五行\n，使用该\n五行\n的牌时未攻击则\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n2\n持续\n2\n次\n：若卡组仅含一种\n五行\n，使用该\n五行\n的牌时未攻击则\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n2\n持续\n3\n次\n：若卡组仅含一种\n五行\n，使用该\n五行\n的牌时未攻击则\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000073_zh.webp"
+  },
+  {
+    "id": "7000097",
+    "name": "木灵•春风拂",
+    "realm": "化神",
+    "original": "灵气\n+\n2\n木灵\n：自身每次攻击时加2生命及上限，持续4回合\n2\n攻×2",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000097.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n木灵\n：自身每次攻击时加2生命及上限，持续4回合\n2\n攻×2"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n3\n木灵\n：自身每次攻击时加2生命及上限，持续4回合\n2\n攻×3"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n4\n木灵\n：自身每次攻击时加2生命及上限，持续4回合\n2\n攻×4"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000097_zh.webp"
+  },
+  {
+    "id": "7000098",
+    "name": "火灵•焚脉诀",
+    "realm": "化神",
+    "original": "灵气\n+\n3\n加至2层\n加攻\n，每加1层减自身4生命上限\n火灵\n：每有1层\n加攻\n，减对方2生命及上限",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000098.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n3\n加至2层\n加攻\n，每加1层减自身4生命上限\n火灵\n：每有1层\n加攻\n，减对方2生命及上限"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n3\n加至3层\n加攻\n，每加1层减自身4生命上限\n火灵\n：每有1层\n加攻\n，减对方2生命及上限"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n3\n加至4层\n加攻\n，每加1层减自身4生命上限\n火灵\n：每有1层\n加攻\n，减对方2生命及上限"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000098_zh.webp"
+  },
+  {
+    "id": "7000099",
+    "name": "金灵•回锋刃",
+    "realm": "化神",
+    "original": "6\n攻×2\n金灵\n：此牌每次攻击消耗\n锋锐\n后，返还60%的\n锋锐\n（向上取整）",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000099.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "6\n攻×2\n金灵\n：此牌每次攻击消耗\n锋锐\n后，返还60%的\n锋锐\n（向上取整）"
+      },
+      {
+        "level": "等级 2",
+        "text": "6\n攻×3\n金灵\n：此牌每次攻击消耗\n锋锐\n后，返还60%的\n锋锐\n（向上取整）"
+      },
+      {
+        "level": "等级 3",
+        "text": "6\n攻×4\n金灵\n：此牌每次攻击消耗\n锋锐\n后，返还60%的\n锋锐\n（向上取整）"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000099_zh.webp"
+  },
+  {
+    "id": "7000100",
+    "name": "水灵•乘风浪",
+    "realm": "化神",
+    "original": "水势\n+1\n生命及上限+4\n水灵\n：每有1\n水势\n或\n灵气\n加2\n身法\n（最多加12）",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000100.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "水势\n+1\n生命及上限+4\n水灵\n：每有1\n水势\n或\n灵气\n加2\n身法\n（最多加12）"
+      },
+      {
+        "level": "等级 2",
+        "text": "水势\n+2\n生命及上限+6\n水灵\n：每有1\n水势\n或\n灵气\n加2\n身法\n（最多加14）"
+      },
+      {
+        "level": "等级 3",
+        "text": "水势\n+3\n生命及上限+8\n水灵\n：每有1\n水势\n或\n灵气\n加2\n身法\n（最多加16）"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000100_zh.webp"
+  },
+  {
+    "id": "7000101",
+    "name": "混元化灵",
+    "realm": "化神",
+    "original": "灵气\n+\n2\n（卡组中每有1种\n五行\n多1）\n激活\n相邻\n牌所属\n五行\n被动\n：卡组中算作多1种\n五行",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000101.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n2\n（卡组中每有1种\n五行\n多1）\n激活\n相邻\n牌所属\n五行\n被动\n：卡组中算作多1种\n五行"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n4\n（卡组中每有1种\n五行\n多1）\n激活\n相邻\n牌所属\n五行\n被动\n：卡组中算作多1种\n五行"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n5\n（卡组中每有1种\n五行\n多1）\n激活\n相邻\n牌所属\n五行\n被动\n：卡组中算作多2种\n五行"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000101_zh.webp"
+  },
+  {
+    "id": "7000112",
+    "name": "木灵•散枝叶",
+    "realm": "化神",
+    "original": "灵气\n+\n3\n木灵\n：下3次使用牌时，吸取对方1生命（每有1层\n加攻\n多吸取1）",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000112.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n3\n木灵\n：下3次使用牌时，吸取对方1生命（每有1层\n加攻\n多吸取1）"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n4\n木灵\n：下4次使用牌时，吸取对方1生命（每有1层\n加攻\n多吸取1）"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n5\n木灵\n：下5次使用牌时，吸取对方1生命（每有1层\n加攻\n多吸取1）"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000112_zh.webp"
+  },
+  {
+    "id": "7000113",
+    "name": "火灵•燃烬灭",
+    "realm": "化神",
+    "original": "减对方9生命及上限\n火灵\n：每有1层\n加攻\n多减2\n土灵\n：每有3\n防\n多减1\n金灵\n：每有2层\n锋锐\n多减1",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000113.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "减对方9生命及上限\n火灵\n：每有1层\n加攻\n多减2\n土灵\n：每有3\n防\n多减1\n金灵\n：每有2层\n锋锐\n多减1"
+      },
+      {
+        "level": "等级 2",
+        "text": "减对方12生命及上限\n火灵\n：每有1层\n加攻\n多减3\n土灵\n：每有3\n防\n多减1\n金灵\n：每有2层\n锋锐\n多减1"
+      },
+      {
+        "level": "等级 3",
+        "text": "减对方15生命及上限\n火灵\n：每有1层\n加攻\n多减4\n土灵\n：每有3\n防\n多减1\n金灵\n：每有2层\n锋锐\n多减1"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000113_zh.webp"
+  },
+  {
+    "id": "7000114",
+    "name": "土灵•逐尘步",
+    "realm": "化神",
+    "original": "下1次攻击每\n击伤\n3生命加1\n防\n土灵\n：\n身法\n+10",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000114.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "下1次攻击每\n击伤\n3生命加1\n防\n土灵\n：\n身法\n+10"
+      },
+      {
+        "level": "等级 2",
+        "text": "防\n+\n5\n下1次攻击每\n击伤\n3生命加1\n防\n土灵\n：\n身法\n+10"
+      },
+      {
+        "level": "等级 3",
+        "text": "防\n+\n10\n下1次攻击每\n击伤\n3生命加1\n防\n土灵\n：\n身法\n+10"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000114_zh.webp"
+  },
+  {
+    "id": "7000115",
+    "name": "水灵•雨纷纷",
+    "realm": "化神",
+    "original": "水势\n+1\n生命及上限+10\n水灵\n：\n1\n攻（每有1\n水势\n多1攻）\n木灵\n：\n1\n攻（每有1\n灵气\n多1攻）",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000115.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "水势\n+1\n生命及上限+10\n水灵\n：\n1\n攻（每有1\n水势\n多1攻）\n木灵\n：\n1\n攻（每有1\n灵气\n多1攻）"
+      },
+      {
+        "level": "等级 2",
+        "text": "水势\n+2\n生命及上限+13\n水灵\n：\n1\n攻（每有1\n水势\n多1攻）\n木灵\n：\n1\n攻（每有1\n灵气\n多1攻）"
+      },
+      {
+        "level": "等级 3",
+        "text": "水势\n+3\n生命及上限+16\n水灵\n：\n1\n攻（每有1\n水势\n多1攻）\n木灵\n：\n1\n攻（每有1\n灵气\n多1攻）"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000115_zh.webp"
+  },
+  {
+    "id": "7000116",
+    "name": "金灵•浪淘沙",
+    "realm": "化神",
+    "original": "灵气\n+\n1\n锋锐\n+2\n金灵\n或\n水灵\n：\n再次行动",
+    "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/7000116.html",
+    "levels": [
+      {
+        "level": "等级 1",
+        "text": "灵气\n+\n1\n锋锐\n+2\n金灵\n或\n水灵\n：\n再次行动"
+      },
+      {
+        "level": "等级 2",
+        "text": "灵气\n+\n2\n锋锐\n+4\n金灵\n或\n水灵\n：\n再次行动"
+      },
+      {
+        "level": "等级 3",
+        "text": "灵气\n+\n3\n锋锐\n+6\n金灵\n或\n水灵\n：\n再次行动"
+      }
+    ],
+    "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/7000116_zh.webp"
+  }
+]

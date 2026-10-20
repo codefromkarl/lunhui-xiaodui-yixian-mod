@@ -1,0 +1,1159 @@
+{
+  "id": "yixian.sect",
+  "version": "0.7.0",
+  "apiVersion": 1,
+  "name": "弈仙门派",
+  "author": "你",
+  "description": "云灵剑宗、五行道盟、七星阁三大门派，涵盖五个境界，共144张卡牌、36个卡包与12项仙命。每名角色可加入一个弈仙门派，并搭配原生血统。",
+  "content": [
+    "content/lineages.json",
+    "content/abilities.json",
+    "content/statuses.json",
+    "content/fates.json",
+    "content/fate-statuses.json"
+  ],
+  "assets": {
+    "icon.lineage.yixian_sword": {
+      "kind": "icon",
+      "file": "icons/lineage.yixian_sword.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_1": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_1.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_2": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_2.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_3": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_3.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_5": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_5.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_9": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_9.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_10": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_10.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_12": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_12.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_21": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_21.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_14": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_14.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_15": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_15.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_16": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_16.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_17": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_17.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_22": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_22.png"
+    },
+    "icon.yixian.sect.card.yixian_slash": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_slash.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_33": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_33.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_88": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_88.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_26": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_26.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_27": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_27.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_29": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_29.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_31": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_31.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_32": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_32.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_46": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_46.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_63": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_63.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_102": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_102.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_34": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_34.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_35": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_35.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_36": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_36.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_38": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_38.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_39": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_39.png"
+    },
+    "icon.yixian.sect.card.yixian_moon": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_moon.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_41": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_41.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_59": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_59.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_65": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_65.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_91": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_91.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_103": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_103.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_104": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_104.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_25": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_25.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_42": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_42.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_43": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_43.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_44": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_44.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_45": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_45.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_60": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_60.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_64": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_64.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_94": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_94.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_98": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_98.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_106": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_106.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_107": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_107.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_108": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_108.png"
+    },
+    "icon.yixian.sect.pack.yixian_sword": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_1.png"
+    },
+    "icon.yixian.sect.pack.yixian_sword_qi": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_9.png"
+    },
+    "icon.yixian.sect.pack.yixian_sword_cloud2": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_14.png"
+    },
+    "icon.yixian.sect.pack.yixian_sword_intent2": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_17.png"
+    },
+    "icon.yixian.sect.pack.yixian_sword_cloud3": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_26.png"
+    },
+    "icon.yixian.sect.pack.yixian_sword_intent3": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_31.png"
+    },
+    "icon.yixian.sect.pack.yixian_sword_cloud4": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_39.png"
+    },
+    "icon.yixian.sect.pack.yixian_sword_intent4": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_34.png"
+    },
+    "icon.yixian.sect.pack.yixian_sword_spirit4": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_36.png"
+    },
+    "icon.yixian.sect.pack.yixian_sword_cloud5": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_42.png"
+    },
+    "icon.yixian.sect.pack.yixian_sword_intent5": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_25.png"
+    },
+    "icon.yixian.sect.pack.yixian_sword_spirit5": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_43.png"
+    },
+    "icon.yixian.sect.status.intent": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_10.png"
+    },
+    "icon.yixian.sect.status.cloud": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_1.png"
+    },
+    "icon.yixian.sect.status.power": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_moon.png"
+    },
+    "icon.yixian.sect.fate.sword.sword_rhyme": {
+      "kind": "icon",
+      "file": "icons/fates/Icon_Talent_16.png"
+    },
+    "icon.yixian.sect.fate.sword.cloud_way": {
+      "kind": "icon",
+      "file": "icons/fates/Icon_Talent_69.png"
+    },
+    "icon.yixian.sect.fate.sword.formation_guard": {
+      "kind": "icon",
+      "file": "icons/fates/Icon_Talent_57.png"
+    },
+    "icon.yixian.sect.fate.sword.cloud_sea": {
+      "kind": "icon",
+      "file": "icons/fates/Icon_Talent_14.png"
+    },
+    "icon.yixian.sect.status.fate_guard": {
+      "kind": "icon",
+      "file": "icons/fates/Icon_Talent_57.png"
+    },
+    "icon.yixian.sect.status.maximum_adjustment": {
+      "kind": "icon",
+      "file": "icons/lineage.yixian_star.png"
+    },
+    "icon.lineage.yixian_five": {
+      "kind": "icon",
+      "file": "icons/lineage.yixian_five.png"
+    },
+    "icon.yixian.sect.card.yixian_five_metal": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal.png"
+    },
+    "icon.yixian.sect.card.yixian_five_water": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_water.png"
+    },
+    "icon.yixian.sect.card.yixian_five_wood": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_wood.png"
+    },
+    "icon.yixian.sect.card.yixian_five_fire": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_fire.png"
+    },
+    "icon.yixian.sect.card.yixian_five_earth": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_earth.png"
+    },
+    "icon.yixian.sect.card.yixian_five_qi": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_qi.png"
+    },
+    "icon.yixian.sect.card.yixian_five_link": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_link.png"
+    },
+    "icon.yixian.sect.card.yixian_five_return": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_return.png"
+    },
+    "icon.yixian.sect.card.yixian_five_metal_edge": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_edge.png"
+    },
+    "icon.yixian.sect.card.yixian_five_metal_pierce": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_pierce.png"
+    },
+    "icon.yixian.sect.card.yixian_five_fire_ember": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_fire_ember.png"
+    },
+    "icon.yixian.sect.card.yixian_five_water_spring": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_water_spring.png"
+    },
+    "icon.yixian.sect.card.yixian_five_wood_root": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_wood_root.png"
+    },
+    "icon.yixian.sect.card.yixian_five_earth_ridge": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_earth_ridge.png"
+    },
+    "icon.yixian.sect.card.yixian_five_cycle_breath": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_cycle_breath.png"
+    },
+    "icon.yixian.sect.card.yixian_five_fire_burst": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_fire_burst.png"
+    },
+    "icon.yixian.sect.card.yixian_five_metal_ring": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_ring.png"
+    },
+    "icon.yixian.sect.card.yixian_five_metal_break": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_break.png"
+    },
+    "icon.yixian.sect.card.yixian_five_fire_furnace": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_fire_furnace.png"
+    },
+    "icon.yixian.sect.card.yixian_five_water_mirror": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_water_mirror.png"
+    },
+    "icon.yixian.sect.card.yixian_five_wood_bloom": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_wood_bloom.png"
+    },
+    "icon.yixian.sect.card.yixian_five_earth_vessel": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_earth_vessel.png"
+    },
+    "icon.yixian.sect.card.yixian_five_fire_chain": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_fire_chain.png"
+    },
+    "icon.yixian.sect.card.yixian_five_return_seed": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_return_seed.png"
+    },
+    "icon.yixian.sect.card.yixian_five_water_sea": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_water_sea.png"
+    },
+    "icon.yixian.sect.card.yixian_five_wood_forest": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_wood_forest.png"
+    },
+    "icon.yixian.sect.card.yixian_five_wood_spirit": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_wood_spirit.png"
+    },
+    "icon.yixian.sect.card.yixian_five_metal_cycle": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_cycle.png"
+    },
+    "icon.yixian.sect.card.yixian_five_metal_storm": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_storm.png"
+    },
+    "icon.yixian.sect.card.yixian_five_metal_sunder": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_sunder.png"
+    },
+    "icon.yixian.sect.card.yixian_five_fire_sun": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_fire_sun.png"
+    },
+    "icon.yixian.sect.card.yixian_five_fire_inferno": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_fire_inferno.png"
+    },
+    "icon.yixian.sect.card.yixian_five_fire_cycle": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_fire_cycle.png"
+    },
+    "icon.yixian.sect.card.yixian_five_earth_mountain": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_earth_mountain.png"
+    },
+    "icon.yixian.sect.card.yixian_five_earth_cycle": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_earth_cycle.png"
+    },
+    "icon.yixian.sect.card.yixian_five_return_circle": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_return_circle.png"
+    },
+    "icon.yixian.sect.card.yixian_five_metal_divine": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_divine.png"
+    },
+    "icon.yixian.sect.card.yixian_five_water_divine": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_water_divine.png"
+    },
+    "icon.yixian.sect.card.yixian_five_water_origin": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_water_origin.png"
+    },
+    "icon.yixian.sect.card.yixian_five_metal_heaven": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_heaven.png"
+    },
+    "icon.yixian.sect.card.yixian_five_wood_divine": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_wood_divine.png"
+    },
+    "icon.yixian.sect.card.yixian_five_wood_origin": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_wood_origin.png"
+    },
+    "icon.yixian.sect.card.yixian_five_cycle_divine": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_cycle_divine.png"
+    },
+    "icon.yixian.sect.card.yixian_five_earth_divine": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_earth_divine.png"
+    },
+    "icon.yixian.sect.card.yixian_five_fire_divine": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_fire_divine.png"
+    },
+    "icon.yixian.sect.card.yixian_five_fire_heaven": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_fire_heaven.png"
+    },
+    "icon.yixian.sect.card.yixian_five_earth_origin": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_earth_origin.png"
+    },
+    "icon.yixian.sect.card.yixian_five_return_origin": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_return_origin.png"
+    },
+    "icon.yixian.sect.pack.yixian_five_roots": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal.png"
+    },
+    "icon.yixian.sect.pack.yixian_five_cycle": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_earth.png"
+    },
+    "icon.yixian.sect.pack.yixian_five_forge": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_edge.png"
+    },
+    "icon.yixian.sect.pack.yixian_five_nurture": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_water_spring.png"
+    },
+    "icon.yixian.sect.pack.yixian_five_temper": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_ring.png"
+    },
+    "icon.yixian.sect.pack.yixian_five_cycle_seed": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_water_mirror.png"
+    },
+    "icon.yixian.sect.pack.yixian_five_sword_flame": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_storm.png"
+    },
+    "icon.yixian.sect.pack.yixian_five_forest_sea": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_water_sea.png"
+    },
+    "icon.yixian.sect.pack.yixian_five_great_cycle": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_cycle.png"
+    },
+    "icon.yixian.sect.pack.yixian_five_divine_forge": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_metal_divine.png"
+    },
+    "icon.yixian.sect.pack.yixian_five_evergreen": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_water_divine.png"
+    },
+    "icon.yixian.sect.pack.yixian_five_origin": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_five_water_origin.png"
+    },
+    "icon.yixian.sect.fate.five.gentle_rain": {
+      "kind": "icon",
+      "file": "icons/fates/yixian_five_gentle_rain.png"
+    },
+    "icon.yixian.sect.fate.five.forged_edge": {
+      "kind": "icon",
+      "file": "icons/fates/yixian_five_forged_edge.png"
+    },
+    "icon.yixian.sect.fate.five.heaven_cycle": {
+      "kind": "icon",
+      "file": "icons/fates/yixian_five_heaven_cycle.png"
+    },
+    "icon.yixian.sect.fate.five.endless_cycle": {
+      "kind": "icon",
+      "file": "icons/fates/yixian_five_endless_cycle.png"
+    },
+    "icon.yixian.sect.status.five.last": {
+      "kind": "icon",
+      "file": "icons/statuses/five_last.png"
+    },
+    "icon.yixian.sect.status.five.elements": {
+      "kind": "icon",
+      "file": "icons/statuses/five_elements.png"
+    },
+    "icon.yixian.sect.status.five.nextActivate": {
+      "kind": "icon",
+      "file": "icons/statuses/five_nextActivate.png"
+    },
+    "icon.yixian.sect.status.five.metal": {
+      "kind": "icon",
+      "file": "icons/statuses/five_metal.png"
+    },
+    "icon.yixian.sect.status.five.water": {
+      "kind": "icon",
+      "file": "icons/statuses/five_water.png"
+    },
+    "icon.yixian.sect.status.five.wood": {
+      "kind": "icon",
+      "file": "icons/statuses/five_wood.png"
+    },
+    "icon.yixian.sect.status.five.fire": {
+      "kind": "icon",
+      "file": "icons/statuses/five_fire.png"
+    },
+    "icon.yixian.sect.status.five.earth": {
+      "kind": "icon",
+      "file": "icons/statuses/five_earth.png"
+    },
+    "icon.yixian.sect.status.five.sharp": {
+      "kind": "icon",
+      "file": "icons/statuses/five_sharp.png"
+    },
+    "icon.yixian.sect.status.five.attack": {
+      "kind": "icon",
+      "file": "icons/statuses/five_attack.png"
+    },
+    "icon.yixian.sect.status.five.waterForce": {
+      "kind": "icon",
+      "file": "icons/statuses/five_waterForce.png"
+    },
+    "icon.yixian.sect.status.five.metalArray": {
+      "kind": "icon",
+      "file": "icons/statuses/five_metalArray.png"
+    },
+    "icon.yixian.sect.status.five.waterArray": {
+      "kind": "icon",
+      "file": "icons/statuses/five_waterArray.png"
+    },
+    "icon.yixian.sect.status.five.woodArray": {
+      "kind": "icon",
+      "file": "icons/statuses/five_woodArray.png"
+    },
+    "icon.yixian.sect.status.five.fireArray": {
+      "kind": "icon",
+      "file": "icons/statuses/five_fireArray.png"
+    },
+    "icon.yixian.sect.status.five.earthArray": {
+      "kind": "icon",
+      "file": "icons/statuses/five_earthArray.png"
+    },
+    "icon.yixian.sect.status.five.activationArray": {
+      "kind": "icon",
+      "file": "icons/statuses/five_activationArray.png"
+    },
+    "icon.yixian.sect.status.five.shieldReturn": {
+      "kind": "icon",
+      "file": "icons/statuses/five_shieldReturn.png"
+    },
+    "icon.yixian.sect.status.five.agility": {
+      "kind": "icon",
+      "file": "icons/statuses/five_agility.png"
+    },
+    "icon.yixian.sect.status.five.dive": {
+      "kind": "icon",
+      "file": "icons/statuses/five_dive.png"
+    },
+    "icon.yixian.sect.status.five.iron": {
+      "kind": "icon",
+      "file": "icons/statuses/five_iron.png"
+    },
+    "icon.lineage.yixian_star": {
+      "kind": "icon",
+      "file": "icons/lineage.yixian_star.png"
+    },
+    "icon.yixian.sect.card.yixian_star_gather": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_gather.png"
+    },
+    "icon.yixian.sect.card.yixian_star_divine": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_divine.png"
+    },
+    "icon.yixian.sect.card.yixian_star_spark": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_spark.png"
+    },
+    "icon.yixian.sect.card.yixian_star_guard": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_guard.png"
+    },
+    "icon.yixian.sect.card.yixian_star_fall": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_fall.png"
+    },
+    "icon.yixian.sect.card.yixian_star_fate": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_fate.png"
+    },
+    "icon.yixian.sect.card.yixian_star_observe": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_observe.png"
+    },
+    "icon.yixian.sect.card.yixian_star_shift": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_shift.png"
+    },
+    "icon.yixian.sect.card.yixian_star_spring": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_spring.png"
+    },
+    "icon.yixian.sect.card.yixian_star_curtain": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_curtain.png"
+    },
+    "icon.yixian.sect.card.yixian_star_polish": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_polish.png"
+    },
+    "icon.yixian.sect.card.yixian_star_ferry": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_ferry.png"
+    },
+    "icon.yixian.sect.card.yixian_star_coins": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_coins.png"
+    },
+    "icon.yixian.sect.card.yixian_star_wheel": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_wheel.png"
+    },
+    "icon.yixian.sect.card.yixian_star_align": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_align.png"
+    },
+    "icon.yixian.sect.card.yixian_star_reveal": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_reveal.png"
+    },
+    "icon.yixian.sect.card.yixian_star_spear": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_spear.png"
+    },
+    "icon.yixian.sect.card.yixian_star_needles": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_needles.png"
+    },
+    "icon.yixian.sect.card.yixian_star_temper": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_temper.png"
+    },
+    "icon.yixian.sect.card.yixian_star_shelter": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_shelter.png"
+    },
+    "icon.yixian.sect.card.yixian_star_compass": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_compass.png"
+    },
+    "icon.yixian.sect.card.yixian_star_orbit": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_orbit.png"
+    },
+    "icon.yixian.sect.card.yixian_star_auspice": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_auspice.png"
+    },
+    "icon.yixian.sect.card.yixian_star_judgment": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_judgment.png"
+    },
+    "icon.yixian.sect.card.yixian_star_comet": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_comet.png"
+    },
+    "icon.yixian.sect.card.yixian_star_chain": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_chain.png"
+    },
+    "icon.yixian.sect.card.yixian_star_beacon": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_beacon.png"
+    },
+    "icon.yixian.sect.card.yixian_star_refuge": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_refuge.png"
+    },
+    "icon.yixian.sect.card.yixian_star_mirror": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_mirror.png"
+    },
+    "icon.yixian.sect.card.yixian_star_fortune": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_fortune.png"
+    },
+    "icon.yixian.sect.card.yixian_star_inscribe": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_inscribe.png"
+    },
+    "icon.yixian.sect.card.yixian_star_dissolve": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_dissolve.png"
+    },
+    "icon.yixian.sect.card.yixian_star_pivot": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_pivot.png"
+    },
+    "icon.yixian.sect.card.yixian_star_arc": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_arc.png"
+    },
+    "icon.yixian.sect.card.yixian_star_circulation": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_circulation.png"
+    },
+    "icon.yixian.sect.card.yixian_star_rest": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_rest.png"
+    },
+    "icon.yixian.sect.card.yixian_star_nova": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_nova.png"
+    },
+    "icon.yixian.sect.card.yixian_star_storm": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_storm.png"
+    },
+    "icon.yixian.sect.card.yixian_star_forge": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_forge.png"
+    },
+    "icon.yixian.sect.card.yixian_star_sanctuary": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_sanctuary.png"
+    },
+    "icon.yixian.sect.card.yixian_star_oracle": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_oracle.png"
+    },
+    "icon.yixian.sect.card.yixian_star_destiny": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_destiny.png"
+    },
+    "icon.yixian.sect.card.yixian_star_decree": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_decree.png"
+    },
+    "icon.yixian.sect.card.yixian_star_renew": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_renew.png"
+    },
+    "icon.yixian.sect.card.yixian_star_zenith": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_zenith.png"
+    },
+    "icon.yixian.sect.card.yixian_star_heavens": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_heavens.png"
+    },
+    "icon.yixian.sect.card.yixian_star_luminary": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_luminary.png"
+    },
+    "icon.yixian.sect.card.yixian_star_horizon": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_horizon.png"
+    },
+    "icon.yixian.sect.pack.yixian_star_chart": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_gather.png"
+    },
+    "icon.yixian.sect.pack.yixian_star_fate": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_fall.png"
+    },
+    "icon.yixian.sect.pack.yixian_star_well": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_spring.png"
+    },
+    "icon.yixian.sect.pack.yixian_star_wheel": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_coins.png"
+    },
+    "icon.yixian.sect.pack.yixian_star_spear": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_spear.png"
+    },
+    "icon.yixian.sect.pack.yixian_star_compass": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_compass.png"
+    },
+    "icon.yixian.sect.pack.yixian_star_comet": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_comet.png"
+    },
+    "icon.yixian.sect.pack.yixian_star_mirror": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_mirror.png"
+    },
+    "icon.yixian.sect.pack.yixian_star_pivot": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_pivot.png"
+    },
+    "icon.yixian.sect.pack.yixian_star_nova": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_nova.png"
+    },
+    "icon.yixian.sect.pack.yixian_star_oracle": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_oracle.png"
+    },
+    "icon.yixian.sect.pack.yixian_star_zenith": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_zenith.png"
+    },
+    "icon.yixian.sect.fate.star.astral_practice": {
+      "kind": "icon",
+      "file": "icons/fates/yixian_star_astral_practice.png"
+    },
+    "icon.yixian.sect.fate.star.observatory": {
+      "kind": "icon",
+      "file": "icons/fates/yixian_star_observatory.png"
+    },
+    "icon.yixian.sect.fate.star.seven_pivots": {
+      "kind": "icon",
+      "file": "icons/fates/yixian_star_seven_pivots.png"
+    },
+    "icon.yixian.sect.fate.star.destiny_cycle": {
+      "kind": "icon",
+      "file": "icons/fates/yixian_star_destiny_cycle.png"
+    },
+    "icon.yixian.sect.status.star.plays": {
+      "kind": "icon",
+      "file": "icons/statuses/star_plays.png"
+    },
+    "icon.yixian.sect.status.star.slot": {
+      "kind": "icon",
+      "file": "icons/statuses/star_slot.png"
+    },
+    "icon.yixian.sect.status.star.star": {
+      "kind": "icon",
+      "file": "icons/statuses/star_star.png"
+    },
+    "icon.yixian.sect.status.star.omen": {
+      "kind": "icon",
+      "file": "icons/statuses/star_omen.png"
+    },
+    "icon.yixian.sect.status.star.hexFormation": {
+      "kind": "icon",
+      "file": "icons/statuses/star_hexFormation.png"
+    },
+    "icon.yixian.sect.status.star.repeat": {
+      "kind": "icon",
+      "file": "icons/statuses/star_repeat.png"
+    },
+    "icon.yixian.sect.status.star.astralLinks": {
+      "kind": "icon",
+      "file": "icons/statuses/star_astralLinks.png"
+    },
+    "icon.yixian.sect.status.star.soulCharges": {
+      "kind": "icon",
+      "file": "icons/statuses/star_soulCharges.png"
+    },
+    "icon.yixian.sect.status.star.injuryRounds": {
+      "kind": "icon",
+      "file": "icons/statuses/star_injuryRounds.png"
+    },
+    "icon.yixian.sect.status.star.position1": {
+      "kind": "icon",
+      "file": "icons/statuses/star_position1.png"
+    },
+    "icon.yixian.sect.status.star.position2": {
+      "kind": "icon",
+      "file": "icons/statuses/star_position2.png"
+    },
+    "icon.yixian.sect.status.star.position3": {
+      "kind": "icon",
+      "file": "icons/statuses/star_position3.png"
+    },
+    "icon.yixian.sect.status.star.position4": {
+      "kind": "icon",
+      "file": "icons/statuses/star_position4.png"
+    },
+    "icon.yixian.sect.status.star.position5": {
+      "kind": "icon",
+      "file": "icons/statuses/star_position5.png"
+    },
+    "icon.yixian.sect.status.star.position6": {
+      "kind": "icon",
+      "file": "icons/statuses/star_position6.png"
+    },
+    "icon.yixian.sect.status.star.position7": {
+      "kind": "icon",
+      "file": "icons/statuses/star_position7.png"
+    },
+    "icon.yixian.sect.status.star.position8": {
+      "kind": "icon",
+      "file": "icons/statuses/star_position8.png"
+    },
+    "icon.yixian.sect.status.star.weak": {
+      "kind": "icon",
+      "file": "icons/statuses/star_weak.png"
+    },
+    "icon.yixian.sect.status.star.flaw": {
+      "kind": "icon",
+      "file": "icons/statuses/star_flaw.png"
+    },
+    "icon.yixian.sect.status.star.decrease": {
+      "kind": "icon",
+      "file": "icons/statuses/star_decrease.png"
+    },
+    "icon.yixian.sect.status.star.internal": {
+      "kind": "icon",
+      "file": "icons/statuses/star_internal.png"
+    },
+    "icon.yixian.sect.status.star.external": {
+      "kind": "icon",
+      "file": "icons/statuses/star_external.png"
+    },
+    "icon.yixian.sect.status.star.skip": {
+      "kind": "icon",
+      "file": "icons/statuses/star_skip.png"
+    },
+    "icon.yixian.sect.status.star.guard0": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard1": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard2": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard3": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard4": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard5": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard6": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard7": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard8": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard9": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard10": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard11": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard12": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard13": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard14": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard15": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard16": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard17": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard18": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard19": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard20": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard21": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard22": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard23": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard24": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard25": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard26": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard27": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard28": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard29": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard30": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    },
+    "icon.yixian.sect.status.star.guard31": {
+      "kind": "icon",
+      "file": "icons/statuses/star_guard0.png"
+    }
+  },
+  "tables": {
+    "cardtable": "content/cardtable.json"
+  },
+  "code": {
+    "assembly": "plugins/YixianSect.dll",
+    "entry": "YixianSect.Entry"
+  },
+  "economy": {
+    "shop": [
+      {
+        "id": "yixian.sect.lineage.sword",
+        "conditions": {
+          "forbids": [
+            "yixian.sect.lineage.five",
+            "yixian.sect.lineage.star"
+          ]
+        }
+      },
+      {
+        "id": "yixian.sect.lineage.five",
+        "conditions": {
+          "forbids": [
+            "yixian.sect.lineage.sword",
+            "yixian.sect.lineage.star"
+          ]
+        }
+      },
+      {
+        "id": "yixian.sect.lineage.star",
+        "conditions": {
+          "forbids": [
+            "yixian.sect.lineage.sword",
+            "yixian.sect.lineage.five"
+          ]
+        }
+      }
+    ]
+  }
+}

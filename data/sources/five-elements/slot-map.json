@@ -1,0 +1,242 @@
+[
+  {
+    "key": "yixian_five_metal",
+    "oldName": "金灵·锋芒",
+    "sourceId": "7000001"
+  },
+  {
+    "key": "yixian_five_water",
+    "oldName": "水灵·润泽",
+    "sourceId": "7000002"
+  },
+  {
+    "key": "yixian_five_wood",
+    "oldName": "木灵·生息",
+    "sourceId": "7000003"
+  },
+  {
+    "key": "yixian_five_fire",
+    "oldName": "火灵·炽击",
+    "sourceId": "7000004"
+  },
+  {
+    "key": "yixian_five_earth",
+    "oldName": "土灵·厚载",
+    "sourceId": "7000006"
+  },
+  {
+    "key": "yixian_five_qi",
+    "oldName": "五行·引气",
+    "sourceId": "7000009"
+  },
+  {
+    "key": "yixian_five_link",
+    "oldName": "相生诀",
+    "sourceId": "7000010"
+  },
+  {
+    "key": "yixian_five_return",
+    "oldName": "五行归元",
+    "sourceId": "7000011"
+  },
+  {
+    "key": "yixian_five_metal_edge",
+    "oldName": "金灵·养锋",
+    "sourceId": "7000014"
+  },
+  {
+    "key": "yixian_five_metal_pierce",
+    "oldName": "金灵·贯虹",
+    "sourceId": "7000015"
+  },
+  {
+    "key": "yixian_five_fire_ember",
+    "oldName": "火灵·燃薪",
+    "sourceId": "7000016"
+  },
+  {
+    "key": "yixian_five_fire_burst",
+    "oldName": "火灵·爆炎",
+    "sourceId": "7000023"
+  },
+  {
+    "key": "yixian_five_water_spring",
+    "oldName": "水灵·涌泉",
+    "sourceId": "7000017"
+  },
+  {
+    "key": "yixian_five_wood_root",
+    "oldName": "木灵·扎根",
+    "sourceId": "7000018"
+  },
+  {
+    "key": "yixian_five_earth_ridge",
+    "oldName": "土灵·叠嶂",
+    "sourceId": "7000019"
+  },
+  {
+    "key": "yixian_five_cycle_breath",
+    "oldName": "五行·周流",
+    "sourceId": "7000022"
+  },
+  {
+    "key": "yixian_five_metal_ring",
+    "oldName": "金灵·回锋",
+    "sourceId": "7000025"
+  },
+  {
+    "key": "yixian_five_metal_break",
+    "oldName": "金灵·破岳",
+    "sourceId": "7000026"
+  },
+  {
+    "key": "yixian_five_fire_furnace",
+    "oldName": "火灵·熔炉",
+    "sourceId": "7000028"
+  },
+  {
+    "key": "yixian_five_fire_chain",
+    "oldName": "火灵·连烽",
+    "sourceId": "7000036"
+  },
+  {
+    "key": "yixian_five_water_mirror",
+    "oldName": "水灵·澄镜",
+    "sourceId": "7000029"
+  },
+  {
+    "key": "yixian_five_wood_bloom",
+    "oldName": "木灵·繁花",
+    "sourceId": "7000031"
+  },
+  {
+    "key": "yixian_five_earth_vessel",
+    "oldName": "土灵·承天",
+    "sourceId": "7000032"
+  },
+  {
+    "key": "yixian_five_return_seed",
+    "oldName": "五气归元",
+    "sourceId": "7000095"
+  },
+  {
+    "key": "yixian_five_metal_storm",
+    "oldName": "金灵·剑雨",
+    "sourceId": "7000034"
+  },
+  {
+    "key": "yixian_five_metal_sunder",
+    "oldName": "金灵·断界",
+    "sourceId": "7000035"
+  },
+  {
+    "key": "yixian_five_fire_sun",
+    "oldName": "火灵·焚阳",
+    "sourceId": "7000038"
+  },
+  {
+    "key": "yixian_five_fire_inferno",
+    "oldName": "火灵·燎原",
+    "sourceId": "7000039"
+  },
+  {
+    "key": "yixian_five_water_sea",
+    "oldName": "水灵·沧海",
+    "sourceId": "7000020"
+  },
+  {
+    "key": "yixian_five_wood_forest",
+    "oldName": "木灵·森罗",
+    "sourceId": "7000027"
+  },
+  {
+    "key": "yixian_five_wood_spirit",
+    "oldName": "木灵·灵根",
+    "sourceId": "7000030"
+  },
+  {
+    "key": "yixian_five_earth_mountain",
+    "oldName": "土灵·镇岳",
+    "sourceId": "7000061"
+  },
+  {
+    "key": "yixian_five_metal_cycle",
+    "oldName": "金灵·轮转",
+    "sourceId": "7000033"
+  },
+  {
+    "key": "yixian_five_fire_cycle",
+    "oldName": "火灵·传灯",
+    "sourceId": "7000040"
+  },
+  {
+    "key": "yixian_five_earth_cycle",
+    "oldName": "土灵·归藏",
+    "sourceId": "7000066"
+  },
+  {
+    "key": "yixian_five_return_circle",
+    "oldName": "周天归元",
+    "sourceId": "7000096"
+  },
+  {
+    "key": "yixian_five_metal_divine",
+    "oldName": "金灵·万刃",
+    "sourceId": "7000042"
+  },
+  {
+    "key": "yixian_five_metal_heaven",
+    "oldName": "金灵·开天",
+    "sourceId": "7000056"
+  },
+  {
+    "key": "yixian_five_fire_divine",
+    "oldName": "火灵·不熄",
+    "sourceId": "7000098"
+  },
+  {
+    "key": "yixian_five_fire_heaven",
+    "oldName": "火灵·焚天",
+    "sourceId": "7000099"
+  },
+  {
+    "key": "yixian_five_water_divine",
+    "oldName": "水灵·天河",
+    "sourceId": "7000043"
+  },
+  {
+    "key": "yixian_five_wood_divine",
+    "oldName": "木灵·长生",
+    "sourceId": "7000057"
+  },
+  {
+    "key": "yixian_five_earth_divine",
+    "oldName": "土灵·不动",
+    "sourceId": "7000097"
+  },
+  {
+    "key": "yixian_five_cycle_divine",
+    "oldName": "五行·生生不息",
+    "sourceId": "7000114"
+  },
+  {
+    "key": "yixian_five_water_origin",
+    "oldName": "水灵·万川归流",
+    "sourceId": "7000053"
+  },
+  {
+    "key": "yixian_five_wood_origin",
+    "oldName": "木灵·万象更新",
+    "sourceId": "7000058"
+  },
+  {
+    "key": "yixian_five_earth_origin",
+    "oldName": "土灵·乾坤定",
+    "sourceId": "7000100"
+  },
+  {
+    "key": "yixian_five_return_origin",
+    "oldName": "混元归一",
+    "sourceId": "7000101"
+  }
+]

@@ -1,0 +1,25 @@
+# Local builds and test output
+**/bin/
+**/obj/
+**/__pycache__/
+.venv/
+logs/
+.asset-cache/
+mod/*/TestResults/
+# Game assemblies and generated binaries are not distributed
+*.dll
+*.pdb
+*.exe
+# Third-party artwork and downloaded page caches stay local
+*.png
+*.webp
+*.jpg
+*.jpeg
+*.html
+**/preview-catalog.json
+**/cards-zh-catalog.json
+# Machine-local configuration
+.env
+.env.*
+!.env.example
+.DS_Store
