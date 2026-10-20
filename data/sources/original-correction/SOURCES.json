@@ -14,6 +14,13 @@
       "count": 67,
       "url": "https://sharpobject.github.io/yxp_wiki/zh/sects/five-elements-alliance.html",
       "data": "five-elements-alliance-cards.json"
+    },
+    {
+      "school": "cloud-spirit-sword-sect",
+      "count": 48,
+      "scope": "48 selected Mod cards; cost audit only, archived effects retained",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/sects/cloud-spirit-sword-sect.html",
+      "data": "../sword-original-cards.json"
     }
   ],
   "costs": "original-costs.json",
@@ -21,6 +28,16 @@
     {
       "sourceId": "4000104",
       "note": "星弈·连网页正文与卡图的攻/灵气数值有版本差异，以归档网页1级文本为本轮效果基线，费用以卡面快照为证据；不标作最新游戏版本。"
+    },
+    {
+      "scope": "cloud-spirit-sword-sect costs",
+      "note": "旧剑宗正文快照没有灵气角标；2026-10-20逐卡审核48张原卡图，修正17张错费。原卡费用0/1/2/3灵气对应Mod 0/4/8/12斗气。独立证据见original-costs.json中100开头的48条。"
     }
-  ]
+  ],
+  "fiveStarCostReaudit": {
+    "reviewedAt": "2026-10-20T13:53:11.532870+00:00",
+    "selectedCards": 96,
+    "mismatches": 0,
+    "basis": "48五行＋48七星原卡卡面角标逐张复核，结果与费用账本和源数据均一致；全部卡面补充RGBA像素哈希。"
+  }
 }

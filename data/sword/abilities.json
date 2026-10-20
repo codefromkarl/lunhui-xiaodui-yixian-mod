@@ -199,7 +199,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 0
+                  "intValue": 4
                 },
                 {
                   "key": "energyPool",
@@ -328,7 +328,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 0
+                  "intValue": 4
                 },
                 {
                   "key": "energyPool",
@@ -801,7 +801,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 4
+                  "intValue": 8
                 },
                 {
                   "key": "energyPool",
@@ -887,7 +887,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 4
+                  "intValue": 0
                 },
                 {
                   "key": "energyPool",
@@ -1102,7 +1102,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 4
+                  "intValue": 0
                 },
                 {
                   "key": "energyPool",
@@ -1145,7 +1145,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 8
+                  "intValue": 12
                 },
                 {
                   "key": "energyPool",
@@ -1317,7 +1317,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 4
+                  "intValue": 0
                 },
                 {
                   "key": "energyPool",
@@ -1446,7 +1446,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 4
+                  "intValue": 0
                 },
                 {
                   "key": "energyPool",
@@ -1489,7 +1489,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 4
+                  "intValue": 8
                 },
                 {
                   "key": "energyPool",
@@ -1618,7 +1618,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 4
+                  "intValue": 0
                 },
                 {
                   "key": "energyPool",
@@ -1661,7 +1661,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 4
+                  "intValue": 0
                 },
                 {
                   "key": "energyPool",
@@ -1790,7 +1790,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 4
+                  "intValue": 0
                 },
                 {
                   "key": "energyPool",
@@ -1833,7 +1833,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 4
+                  "intValue": 0
                 },
                 {
                   "key": "energyPool",
@@ -1876,7 +1876,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 4
+                  "intValue": 0
                 },
                 {
                   "key": "energyPool",
@@ -1962,7 +1962,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 4
+                  "intValue": 0
                 },
                 {
                   "key": "energyPool",
@@ -2005,7 +2005,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 0
+                  "intValue": 4
                 },
                 {
                   "key": "energyPool",
@@ -2048,7 +2048,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 4
+                  "intValue": 0
                 },
                 {
                   "key": "energyPool",

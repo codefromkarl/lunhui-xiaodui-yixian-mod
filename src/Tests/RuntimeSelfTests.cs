@@ -56,6 +56,21 @@ namespace YixianSect
             {
                 Require(RunAuthorityCatalogFactory.TryCreate(data,out worlds,out var worldError),"world catalog: "+worldError);
                 Require(BattleAuthorityCatalogFactory.TryCreate(data,out battles,out var battleError),"battle catalog: "+battleError);
+                if(Environment.GetCommandLineArgs().Contains("-yixian-visual-selftest"))
+                {
+                    report["scope"]="hand-layout-and-cost";
+                    Case("opening_hand_hud_card_tab",OpeningHandHud);
+                    Case("printed_and_discounted_card_costs",PrintedCardCosts);
+                }
+                else if(Environment.GetCommandLineArgs().Contains("-yixian-costs-selftest"))
+                {
+                    report["scope"]="original-face-costs";
+                    Case("five_original_face_costs",()=>SchoolFaceCosts(FiveElementRules.Lineage));
+                    Case("star_original_face_costs",()=>SchoolFaceCosts(SevenStarRules.Lineage));
+                    Case("water_wave_conditional_free",WaterWaveConditionalFree);
+                }
+                else
+                {
                 bool schoolsOnly=Environment.GetCommandLineArgs().Contains("-yixian-schools-selftest");
                 report["scope"]=schoolsOnly?"schools":"full";
                 if(!schoolsOnly)
@@ -67,6 +82,7 @@ namespace YixianSect
                 Case("insufficient_points_atomic_rejection",Insufficient);
                 Case("original_BL08_regression",Native);
                 Case("draw_and_card_cost",DrawAndCost);
+                Case("opening_hand_hud_card_tab",OpeningHandHud);
                 Case("printed_and_discounted_card_costs",PrintedCardCosts);
                 Case("cloud_sequence_real_damage",Cloud);
                 Case("sword_intent_multihit_real_damage",Intent);
@@ -90,6 +106,7 @@ namespace YixianSect
                     Case("native_health_replay_guard_stress",NativeCrashBoundaryStress);
                     Case("native_opening_state_reset",NativeOpeningReset);
                 }
+                }
             }
             catch(Exception ex){cases.Add(new JObject{["name"]="suite_setup",["status"]="failed",["error"]=ex.ToString()});}
             ModLog.LineWritten-=observe;
@@ -102,6 +119,7 @@ namespace YixianSect
             report["failed"]=cases.OfType<JObject>().Count(c=>(string)c["status"]=="failed");
             report["status"]=(int)report["failed"]==0?"passed":"failed";
             Write();context.Log("[SelfTest] 完成："+report["passed"]+" 通过 / "+report["failed"]+" 失败；"+path);
+            SelfTestShutdown.Complete("runtime",path);
             UnityEngine.Object.Destroy(gameObject);
         }
         private static JObject SaveInventory()
@@ -320,9 +338,9 @@ namespace YixianSect
             Require(!f.Action(CardTableRules.DrawActionId).IsSuccess&&f.Table.Hand.Count==count,"draw at zero AP should fail");
             f.Prepare(Card(1));f.System(RunDeveloperCommand.SetVitals,int.MinValue,0,0);
             f.Play(Card(1));Require(f.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting)==0,"free card blocked or charged at zero qi");
-            var paid=New(3);paid.StartBattle();ToughEnemy(paid.Enemy);paid.Prepare(Card(32));paid.System(RunDeveloperCommand.SetVitals,int.MinValue,3,0);
-            var rejected=paid.Table.Hand.First(h=>h.CardId==Card(32));long revision=paid.A.Run.Revision;
-            var fail=paid.Action(Card(32),paid.Enemy.RuntimeId,CardTableRules.EncodePlay(rejected.InstanceId));
+            var paid=New();paid.StartBattle();ToughEnemy(paid.Enemy);paid.Prepare(Card(21));paid.System(RunDeveloperCommand.SetVitals,int.MinValue,3,0);
+            var rejected=paid.Table.Hand.First(h=>h.CardId==Card(21));long revision=paid.A.Run.Revision;
+            var fail=paid.Action(Card(21),paid.Enemy.RuntimeId,CardTableRules.EncodePlay(rejected.InstanceId));
             Require(!fail.IsSuccess&&fail.ErrorCode==SessionErrorCode.InsufficientMagicPoints,"insufficient qi should reject: "+fail.ErrorCode);
             Require(paid.Table.Hand.Any(h=>h.InstanceId==rejected.InstanceId)&&paid.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting)==3&&paid.A.Run.Revision==revision,"rejected card mutated state");
             Require(f.Actor.SetVitals(f.Actor.CurrentHealth,100000).IsSuccess,"protect isolated actor");
@@ -333,7 +351,9 @@ namespace YixianSect
         private JObject PrintedCardCosts()
         {
             var rows=new JArray();
-            foreach(var item in new[]{new[]{1,0},new[]{32,4},new[]{36,8}})
+            // All nine paid sword cards, plus zero-fee controls. Values are from
+            // original card-face corners, not copied from generated declarations.
+            foreach(var item in new[]{new[]{1,0},new[]{32,0},new[]{9,4},new[]{21,4},new[]{29,8},new[]{36,12},new[]{59,4},new[]{103,8},new[]{25,4},new[]{98,4},new[]{107,4}})
             {
                 var f=New(5);var card=Card(item[0]);
                 var pack=SwordRules.Packs.Single(p=>((JArray)p["cards"]).Values<string>().Any(k=>SwordRules.CardPrefix+k==card.Value));
@@ -345,15 +365,49 @@ namespace YixianSect
                 var costs=economies.Single(e=>e.PlayerSlot==Slot).ResolvedActionCosts;
                 var preview=costs.Single(c=>c.ActionId==card);
                 Require(preview.BaseEnergyAmount+preview.SurchargeAmount==item[1],"preview cost disagrees: "+card);
+                var snapshot=RunAuthoritySnapshotProjector.Create(f.A,Slot);
+                var model=BattleUIPresentationMapper.BuildCardTable(snapshot,snapshot.Players.First(p=>p.Slot==Slot),data,battles);
+                var displayed=model.Hand.First(h=>h.CardId==card.Value).Action;
+                Require(displayed.CommandCost!=null&&displayed.CommandCost.Energy==item[1],"HUD cost badge disagrees: "+card);
+                Require(BattleUIPresentationMapper.IsCardTableCommand(displayed),"paid card routed to ability tab: "+card);
                 Require(f.A.Run.Revision==revision&&f.Table.Hand.Select(h=>h.InstanceId).SequenceEqual(hand)&&f.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting)==before,"cost preview mutated battle");
                 f.Play(card);int spent=before-f.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting);
                 Require(spent==item[1],"actual payment disagrees: "+card+" spent "+spent);
-                rows.Add(new JObject{["card"]=card.Value,["preview_qi"]=preview.BaseEnergyAmount,["actual_qi"]=spent});
+                rows.Add(new JObject{["card"]=card.Value,["original_lingqi"]=item[1]/4,["preview_qi"]=preview.BaseEnergyAmount,["hud_qi"]=displayed.CommandCost.Energy,["qi_before"]=before,["qi_after"]=f.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting),["actual_qi"]=spent});
             }
             var discounted=New(4);discounted.StartBattle();ToughEnemy(discounted.Enemy);discounted.Prepare(Card(36),Card(65));
             discounted.Play(Card(65));int qi=discounted.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting);
-            discounted.Play(Card(36));Require(qi-discounted.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting)==4,"two-lingqi spirit discount must retain one lingqi");
-            return new JObject{["tiers"]=rows,["spirit_discount_8_to_4"]=true};
+            discounted.Play(Card(36));Require(qi-discounted.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting)==8,"three-lingqi spirit discount must retain two lingqi");
+            return new JObject{["tiers"]=rows,["spirit_discount_12_to_8"]=true,["flying_fang_requires_four_qi"]=true};
+        }
+        private JObject OpeningHandHud()
+        {
+            var rows=new JArray();
+            foreach(var school in new[]{SwordRules.Lineage,FiveElementRules.Lineage,SevenStarRules.Lineage})
+            {
+                var f=New(school:school);f.StartBattle();
+                var snapshot=RunAuthoritySnapshotProjector.Create(f.A,Slot);
+                var player=snapshot.Players.First(p=>p.Slot==Slot);
+                var model=BattleUIPresentationMapper.BuildCardTable(snapshot,player,data,battles);
+                var actions=BattleUIPresentationMapper.BuildActions(snapshot,player,data,battles,model);
+                Require(model.IsVisible&&model.Hand.Count==3,"opening hand not visible as three cards: "+school);
+                foreach(var held in model.Hand)
+                {
+                    Require(BattleUIPresentationMapper.IsCardTableCommand(held.Action),"opening card classified as an ability: "+held.CardId);
+                    Require(!BattleUIPresentationMapper.IsCustomBarCommand(held.Action),"opening card allowed in custom ability bar");
+                    Require(actions.Count(a=>a.StableId==held.Action.StableId)==1,"hand instance missing or duplicated");
+                }
+                var directory=Path.Combine(Path.GetDirectoryName(path),Path.GetFileNameWithoutExtension(path),school);
+                var opening=VisualSelfTests.OpeningHandHud(model,actions,school,directory);
+                f.System(RunDeveloperCommand.SetVitals,int.MinValue,int.MinValue,10);
+                while(f.Table.Hand.Count<10)Require(f.Action(CardTableRules.DrawActionId).IsSuccess,"fill hand through native draw command");
+                var fullSnapshot=RunAuthoritySnapshotProjector.Create(f.A,Slot);var fullPlayer=fullSnapshot.Players.First(p=>p.Slot==Slot);
+                var fullModel=BattleUIPresentationMapper.BuildCardTable(fullSnapshot,fullPlayer,data,battles);
+                var fullActions=BattleUIPresentationMapper.BuildActions(fullSnapshot,fullPlayer,data,battles,fullModel);
+                opening["full_hand"]=VisualSelfTests.OpeningHandHud(fullModel,fullActions,school,Path.Combine(directory,"full-hand"));
+                rows.Add(opening);
+            }
+            return new JObject{["schools"]=rows};
         }
         private JObject Cloud()
         {

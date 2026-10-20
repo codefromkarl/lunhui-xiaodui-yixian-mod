@@ -109,6 +109,17 @@ namespace YixianSect
 
 namespace YixianSect
 {
+    // Native HUD tab splitting recognizes only BL08 ID prefixes. Canonical mod IDs
+    // must use the same card route, including exclusion from custom ability bars.
+    [HarmonyPatch(typeof(BattleUIPresentationMapper),"IsCardTableCommand")]
+    internal static class SectCardCommand
+    {
+        private static void Postfix(Reincarnation.UI.ViewModels.ActionCardViewModel action,ref bool __result)
+        {
+            if(action!=null&&SectRegistry.Cards.ContainsKey(action.CommandActionId))__result=true;
+        }
+    }
+
     [HarmonyPatch(typeof(BattleUIPresentationMapper),"BuildCardTable")]
     internal static class SectCardTablePresentation
     {

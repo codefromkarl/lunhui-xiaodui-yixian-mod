@@ -29,7 +29,7 @@ def main():
         raise RuntimeError('候选身份或 DLL 不完整。先运行 scripts/check.sh。')
     for asset in manifest['assets'].values():
         if not (source / asset['file']).is_file(): raise RuntimeError('缺少资源：' + asset['file'])
-    info = dict(version=manifest['version'], source=str(source), target=str(target), game_running=game_running(), installed=False)
+    info = dict(version=manifest['version'], source=str(source), target=str(target), game_running=game_running(args.game), installed=False)
     if not args.apply:
         print(json.dumps(info, ensure_ascii=False, indent=2)); return 0
     if info['game_running']:
@@ -49,7 +49,7 @@ def main():
     else:
         stage.mkdir()
     shutil.copytree(source, stage, dirs_exist_ok=True)
-    if game_running():
+    if game_running(args.game):
         shutil.rmtree(stage)
         print('游戏在准备期间启动；已取消安装，保留备份。', file=sys.stderr); return 2
     displaced = target.parent / ('.yixian-previous-' + stamp)

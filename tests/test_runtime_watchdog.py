@@ -27,6 +27,24 @@ class WatchdogTests(unittest.TestCase):
             with self.assertRaises(subprocess.CalledProcessError):
                 runner.game_running()
 
+    def test_other_game_install_does_not_block_target_or_mask_its_exit(self):
+        result = subprocess.CompletedProcess([], 0, stdout='/Games/Other Copy/ReincarnationSquad.exe\n')
+        with patch.object(runner.sys, 'platform', 'darwin'), patch.object(runner.subprocess, 'run', return_value=result):
+            self.assertTrue(runner.game_running())
+            self.assertFalse(runner.game_running(Path('/Games/Target Copy')))
+            self.assertTrue(runner.game_running(Path('/Games/Other Copy')))
+
+    def test_windows_process_path_is_resolved_inside_target_wine_prefix(self):
+        result = subprocess.CompletedProcess([], 0, stdout='C:\\Games\\轮回小队 Demo\\ReincarnationSquad.exe\n')
+        with patch.object(runner.sys, 'platform', 'darwin'), patch.object(runner.subprocess, 'run', return_value=result):
+            self.assertTrue(runner.game_running(Path('/Wine Prefix/drive_c/Games/轮回小队 Demo'), Path('/Wine Prefix')))
+            self.assertFalse(runner.game_running(Path('/Games/Another Copy'), Path('/Wine Prefix')))
+
+    def test_unresolvable_windows_path_still_blocks_install(self):
+        result = subprocess.CompletedProcess([], 0, stdout='C:\\Games\\轮回小队 Demo\\ReincarnationSquad.exe\n')
+        with patch.object(runner.sys, 'platform', 'darwin'), patch.object(runner.subprocess, 'run', return_value=result), patch.dict(runner.os.environ, {}, clear=True):
+            self.assertTrue(runner.game_running(Path('/Games/Target')))
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
@@ -66,11 +84,58 @@ class WatchdogTests(unittest.TestCase):
             code = runner.wait_for_reports(self.results, ['runtime'], {'runtime': set()}, self.out)
         self.assertEqual(code, 4)
 
+    def test_requested_exit_requires_matching_receipt_and_process_exit(self):
+        self.write_report('runtime-new.json', 'passed')
+        (self.results / 'quit-runtime-new.json').write_text(json.dumps(dict(status='quit_requested', reports={'runtime': 'runtime-new.json'})))
+        with patch.object(runner, 'game_running', side_effect=[True, False, False]), patch.object(runner.time, 'sleep'):
+            code = runner.wait_for_reports(self.results, ['runtime'], {'runtime': set()}, self.out, quit_after_tests=True)
+        self.assertEqual(code, 0)
+        self.assertEqual(json.loads((self.out / 'watchdog.json').read_text())['outcome'], 'passed_and_quit')
+        self.assertTrue((self.out / 'quit-receipt.json').is_file())
+
+    def test_exit_without_receipt_is_still_failure_in_quit_mode(self):
+        self.write_report('runtime-new.json', 'passed')
+        with patch.object(runner, 'game_running', return_value=False):
+            code = runner.wait_for_reports(self.results, ['runtime'], {'runtime': set()}, self.out, quit_after_tests=True)
+        self.assertEqual(code, 4)
+
+    def test_stale_exit_receipt_is_not_reused(self):
+        self.write_report('runtime-new.json', 'passed')
+        (self.results / 'quit-runtime-old.json').write_text(json.dumps(dict(status='quit_requested', reports={'runtime': 'runtime-old.json'})))
+        with patch.object(runner, 'game_running', return_value=False):
+            code = runner.wait_for_reports(self.results, ['runtime'], {'runtime': set()}, self.out, quit_after_tests=True)
+        self.assertEqual(code, 4)
+
+    def test_quit_receipt_cannot_hide_an_incomplete_suite(self):
+        self.write_report('runtime-new.json', 'passed')
+        self.write_report('fates-new.json', 'running', 'unfinished')
+        (self.results / 'quit-runtime-new.json').write_text(json.dumps(dict(status='quit_requested', reports={'runtime': 'runtime-new.json'})))
+        with patch.object(runner, 'game_running', side_effect=[True, False, False]), patch.object(runner.time, 'sleep'):
+            code = runner.wait_for_reports(self.results, ['runtime', 'fates'], {'runtime': set(), 'fates': set()}, self.out, quit_after_tests=True)
+        self.assertEqual(code, 4)
+
+    def test_clean_exit_does_not_hide_assertion_failure(self):
+        self.write_report('runtime-new.json', 'failed')
+        (self.results / 'quit-runtime-new.json').write_text(json.dumps(dict(status='quit_requested', reports={'runtime': 'runtime-new.json'})))
+        with patch.object(runner, 'game_running', return_value=False):
+            code = runner.wait_for_reports(self.results, ['runtime'], {'runtime': set()}, self.out, quit_after_tests=True)
+        self.assertEqual(code, 1)
+        self.assertEqual(json.loads((self.out / 'watchdog.json').read_text())['outcome'], 'assertion_failed_and_quit')
+
     def test_timeout_has_evidence_without_killing_process(self):
         with patch.object(runner, 'game_running', return_value=True):
             code = runner.wait_for_reports(self.results, ['runtime'], {'runtime': set()}, self.out, timeout=0)
         self.assertEqual(code, 3)
         self.assertTrue(json.loads((self.out / 'watchdog.json').read_text())['game_running_at_finish'])
+
+    def test_direct_process_probe_is_not_masked_by_another_game(self):
+        self.write_report('runtime-new.json', 'passed')
+        (self.results / 'quit-runtime-new.json').write_text(json.dumps(dict(status='quit_requested', reports={'runtime': 'runtime-new.json'})))
+        with patch.object(runner, 'game_running', return_value=True) as other_install:
+            code = runner.wait_for_reports(self.results, ['runtime'], {'runtime': set()}, self.out, quit_after_tests=True, is_running=lambda: False)
+        self.assertEqual(code, 0)
+        other_install.assert_not_called()
+        self.assertFalse(json.loads((self.out / 'watchdog.json').read_text())['game_running_at_finish'])
 
     def test_failure_logs_are_copied(self):
         steam = Path(self.temp.name) / 'steam'

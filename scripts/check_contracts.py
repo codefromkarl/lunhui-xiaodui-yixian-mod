@@ -32,6 +32,12 @@ def main():
         fields = row['fields']
         if fields['mode'] == 10:
             row['id'] = card_id(keys_by_name[fields['displayName']])
+    # The historical fixture omitted/misread card-face fees. Normalize only this
+    # approved correction from the independent original-art ledger; retain every
+    # other gameplay field and do not rewrite the fixture itself.
+    original_costs = read(ROOT / 'data/sources/original-correction/original-costs.json')['cards']
+    for card in old_table['cards']:
+        card['rules']['cost'] = original_costs[card['sourceId']]['cost']
     refresh_sword_costs(old_table, old_abilities)
     for name in ('cards', 'packs'):
         current = [row for row in table[name] if row.get('sect', SWORD) == SWORD]
@@ -93,7 +99,7 @@ def main():
             assert card['name'] in pack['description'] and card['description'] in pack['description']
     assert sorted(memberships) == sorted(by_key), 'missing, duplicate or unreferenced cards'
     assert table['playBaseCost'] == 0, 'universal base fee returned'
-    assert {4 * c['rules'].get('cost', 0) for c in table['cards'] if c.get('sect', SWORD) == SWORD} == {0, 4, 8}, 'sword printed costs lost their tiers'
+    assert {4 * c['rules']['cost'] for c in table['cards'] if c.get('sect', SWORD) == SWORD} == {0, 4, 8, 12}, 'sword original printed costs lost their tiers'
     abilities = {o['id']: o for o in read(MOD / 'content/abilities.json')['operations']}
     for card in table['cards']:
         cost = card['rules'].get('cost', 0)

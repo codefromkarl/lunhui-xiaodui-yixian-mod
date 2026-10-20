@@ -72,6 +72,7 @@ namespace YixianSect
             report["failed"]=cases.OfType<JObject>().Count(c=>(string)c["status"]=="failed");
             report["status"]=(int)report["failed"]==0?"passed":"failed";
             Write();context.Log("[FateTest] 完成："+report["passed"]+" 通过 / "+report["failed"]+" 失败；"+path);
+            SelfTestShutdown.Complete("fates",path);
             UnityEngine.Object.Destroy(gameObject);
         }
         private static JObject SaveInventory()

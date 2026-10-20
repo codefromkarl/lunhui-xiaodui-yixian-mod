@@ -1,5 +1,7 @@
 using Newtonsoft.Json.Linq;
 using Reincarnation.Domain;
+using Reincarnation.UI.Flow;
+using Reincarnation.UI.ViewModels;
 using YixianSect;
 
 partial class Program
@@ -33,6 +35,17 @@ partial class Program
         args = new object[] { native, "old native detail" };
         var detailPatch = typeof(Entry).Assembly.GetType("YixianSect.SectCardDetail");
         Check(!(bool)Method(detailPatch, "Prefix").Invoke(null, args) && (string)args[1] == SectDescriptions.CardDetail(refuge), "native scrolling card detail uses the concise actual effect");
+        var commandPatch = typeof(Entry).Assembly.GetType("YixianSect.SectCardCommand");
+        bool Classify(string id)
+        {
+            var action = id == null ? null : new ActionCardViewModel(id, id, "", "", null, 0, true, false, false, actionKind: CombatActionKind.UseAbility);
+            var result = new object[] { action, BattleUIPresentationMapper.IsCardTableCommand(action) };
+            Method(commandPatch, "Postfix").Invoke(null, result);
+            return (bool)result[1];
+        }
+        foreach (var id in SectRegistry.Cards.Keys) Check(Classify(id), "canonical card belongs to Cards tab: " + id);
+        Check(Classify(CardTableRules.DrawActionId.Value) && Classify("ability.lineage.BL08.card.fireball"), "native card classification preserved");
+        Check(!Classify(null) && !Classify("ability.other.test") && !Classify(SectRegistry.CardPrefix + "unregistered"), "null and unrelated abilities retain native classification");
         Console.WriteLine("PASS descriptions: 144 compact summaries, meaningful condition/support copy, shared school rules and native narrator routing");
     }
 }
