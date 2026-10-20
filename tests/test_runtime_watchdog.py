@@ -1,16 +1,32 @@
 """Regression tests for real failure paths, without starting or terminating a game."""
 import json
 from pathlib import Path
+import subprocess
 import sys
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import run_yixian_runtime_tests as runner
 
 
 class WatchdogTests(unittest.TestCase):
+    def test_macos_detects_wine_game_with_spaces(self):
+        result = subprocess.CompletedProcess([], 0, stdout='C:\\Program Files (x86)\\Steam\\Steam.exe\nC:\\Games\\轮回小队 Demo\\ReincarnationSquad.exe\n')
+        with patch.object(runner.sys, 'platform', 'darwin'), patch.object(runner.subprocess, 'run', return_value=result):
+            self.assertTrue(runner.game_running())
+
+    def test_macos_ignores_other_processes(self):
+        result = subprocess.CompletedProcess([], 0, stdout='C:\\Program Files (x86)\\Steam\\Steam.exe\n/usr/bin/python3\n')
+        with patch.object(runner.sys, 'platform', 'darwin'), patch.object(runner.subprocess, 'run', return_value=result):
+            self.assertFalse(runner.game_running())
+
+    def test_macos_process_detection_fails_closed(self):
+        with patch.object(runner.sys, 'platform', 'darwin'), patch.object(runner.subprocess, 'run', side_effect=subprocess.CalledProcessError(1, 'ps')):
+            with self.assertRaises(subprocess.CalledProcessError):
+                runner.game_running()
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
@@ -65,6 +81,31 @@ class WatchdogTests(unittest.TestCase):
         with patch.object(runner, 'STEAM', steam): runner.collect_diagnostics(self.out)
         self.assertEqual((self.out / 'Player.log').read_text(), 'fatal example')
         self.assertEqual((self.out / 'ModLogs.log').read_text(), 'last mod hook')
+
+    def test_explicit_macos_log_directory(self):
+        persistent = Path(self.temp.name) / 'Wine User' / 'AppData' / 'LocalLow' / '轮回小队'
+        persistent.mkdir(parents=True)
+        (persistent / 'Player.log').write_text('Wine Unity log')
+        runner.collect_diagnostics(self.out, persistent)
+        self.assertEqual((self.out / 'Player.log').read_text(), 'Wine Unity log')
+
+    def test_failed_wine_launch_does_not_wait_for_report_timeout(self):
+        process = Mock()
+        process.poll.return_value = 127
+        with patch.object(runner, 'game_running', return_value=False):
+            code = runner.wait_for_reports(self.results, ['runtime'], {'runtime': set()}, self.out, launch_process=process)
+        self.assertEqual(code, 2)
+        self.assertEqual(json.loads((self.out / 'watchdog.json').read_text())['outcome'], 'launch_failed')
+
+    def test_sikarugir_library_path_preserves_existing_fallback(self):
+        contents = Path(self.temp.name) / 'Game Wrapper.app' / 'Contents'
+        wine = contents / 'SharedSupport' / 'wine' / 'bin' / 'wine'
+        wine.parent.mkdir(parents=True)
+        wine.touch()
+        (contents / 'Frameworks').mkdir()
+        with patch.dict(runner.os.environ, {'DYLD_FALLBACK_LIBRARY_PATH': '/existing/libs'}):
+            env = runner.wine_environment(wine, Path(self.temp.name) / 'prefix')
+        self.assertEqual(env['DYLD_FALLBACK_LIBRARY_PATH'], str((contents / 'Frameworks').resolve()) + ':/existing/libs')
 
 
 if __name__ == '__main__': unittest.main()

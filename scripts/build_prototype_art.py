@@ -3,11 +3,14 @@
 import json
 import os
 import math
+import sys
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
-FONT = os.environ.get('YIXIAN_FONT', '/usr/share/fonts/opentype/noto/NotoSansCJK-Medium.ttc')
+DEFAULT_FONT = ('/System/Library/Fonts/STHeiti Medium.ttc' if sys.platform == 'darwin'
+                else '/usr/share/fonts/opentype/noto/NotoSansCJK-Medium.ttc')
+FONT = os.environ.get('YIXIAN_FONT', DEFAULT_FONT)
 COLORS = ['#d7bb78', '#79bed5', '#8fc6a2', '#e89070', '#cbb18e']
 
 def build_five_status_icons():

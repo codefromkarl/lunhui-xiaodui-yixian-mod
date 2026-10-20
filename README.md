@@ -2,11 +2,11 @@
 
 一个发布包 `yixian.sect`，三个内部门派模块。开发源已从反编译分析目录迁入本项目；本仓库是唯一开发入口，生成、构建和测试不读取旧目录。
 
-公开仓库：`codefromkarl/lunhui-xiaodui-yixian-mod`。当前 v0.7.0 已完成 Linux／Proton 下的离线与真实 Mono 验证；本仓库发布源码，不自动分发带第三方原图的安装包。覆盖范围、崩溃排查和未覆盖项见[测试状态](docs/testing-status.md)。
+公开仓库：`codefromkarl/lunhui-xiaodui-yixian-mod`。当前 v0.7.0 已完成 Linux／Proton 和 Mac／Sikarugir Wine 下的离线与真实 Mono 验证；本仓库发布源码，不自动分发带第三方原图的安装包。覆盖范围、崩溃排查和未覆盖项见[测试状态](docs/testing-status.md)。
 
 ## 首次克隆后构建
 
-需要 Python 3、.NET 8 SDK，以及你本地合法安装的《轮回小队 Demo》。仓库不包含游戏程序集与第三方原图。
+需要 Python 3.10+、.NET 8 SDK，以及你本地合法安装的《轮回小队 Demo》。仓库不包含游戏程序集与第三方原图。
 
 ```bash
 python3 -m venv .venv
@@ -19,6 +19,66 @@ bash scripts/check.sh
 ```
 
 现有自动化脚本以 Linux/Proton 为主要开发环境。Windows 可通过 `dotnet build src/YixianSect.csproj -c Release -p:GameManaged="<游戏目录>\ReincarnationSquad_Data\Managed"` 指定程序集；Windows 的自动启动与界面测试尚未验收。
+
+## Mac 开发环境与不依赖游戏的检查
+
+macOS 自带的 Python 3.9 不满足当前 Pillow 依赖要求；可使用 Homebrew 的 Python 3.12：
+
+```bash
+brew install python@3.12  # 已安装则跳过
+python3.12 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements-dev.txt
+```
+
+若尚无 .NET 8，可用微软官方脚本安装至用户目录，与其他版本并存：
+
+```bash
+mkdir -p logs/setup
+curl -fL https://dot.net/v1/dotnet-install.sh -o logs/setup/dotnet-install.sh
+bash logs/setup/dotnet-install.sh --channel 8.0 --install-dir "$HOME/.dotnet" --no-path
+export DOTNET_ROOT="$HOME/.dotnet"
+export PATH="$DOTNET_ROOT:$PATH"
+dotnet --list-sdks
+dotnet --list-runtimes
+```
+
+安装脚本参考：[微软官方说明](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-install-script)。上述环境变量只影响当前终端，不修改全局 shell 配置。
+
+没有游戏程序集时，仍可准备美术并执行完整的内容检查：
+
+```bash
+# 先阅读 THIRD_PARTY_ASSETS.md；下载用于本地开发的缺失图片
+python3 scripts/prepare_assets.py --download
+bash scripts/check.sh --content-only
+```
+
+`check.sh` 自动优先使用项目 `.venv` 的 Python；Mac 图标生成默认使用系统黑体，也可通过 `YIXIAN_FONT` 覆盖。内容模式执行图片转换、内容生成、原作来源和契约检查、Python 测试，日志保存在 `logs/`。成功仅代表这些检查通过，不代表 C# 构建或游戏实机验证通过。检查过程不安装 Mod，也不启动游戏。
+
+取得本地游戏的完整 `ReincarnationSquad_Data/Managed` 目录后，运行：
+
+```bash
+export GAME_MANAGED="/实际游戏目录/ReincarnationSquad_Data/Managed"
+bash scripts/check.sh
+```
+
+完整模式额外执行 Release 构建和两套 C# 离线测试；默认依次使用 `DOTNET_ROOT`、`$HOME/.dotnet/dotnet`、PATH 中的 dotnet。Mac 默认游戏路径为 `~/Library/Application Support/Steam/steamapps/common/轮回小队 Demo/`，CrossOver 等其他安装位置需要显式设置 `GAME_MANAGED`。缺少游戏程序集时，完整检查返回非零，不会把 C# 检查标为通过。
+
+《轮回小队 Demo》目前提供 Windows 版本。Mac 可在 Windows Steam 包装器（如 CrossOver／Sikarugir）中安装；Mac 原生 Steam 的游戏目录通常不含这个 Windows Demo。先正常退出游戏并安装 Mod，再启动游戏，在 Mod 管理界面启用包并确认代码许可；运行自测前再次正常退出游戏。
+
+Mac 安装时可显式指定游戏目录，也可从 `GAME_MANAGED` 推导；进程检测支持 Wine 的 Windows 进程名。实机启动器通过包装器内的 Windows Steam 启动，另需以下本地路径：
+
+```bash
+export YIXIAN_WINE="/Steam包装器.app/Contents/SharedSupport/wine/bin/wine"
+export WINEPREFIX="/Steam包装器.app/Contents/SharedSupport/prefix"
+export YIXIAN_PERSISTENT_DATA="$WINEPREFIX/drive_c/users/实际用户名/AppData/LocalLow/yuyuyi/轮回小队"
+python3 scripts/install.py --game "${GAME_MANAGED%/ReincarnationSquad_Data/Managed}" --apply
+python3 scripts/run_yixian_runtime_tests.py --include-fates
+```
+
+启动器也接受 `--game`、`--wine`、`--wine-prefix`、`--persistent-data` 和 `--timeout`。Sikarugir 的 `Contents/Frameworks` 动态库路径自动加入子进程环境；不修改系统动态库或全局 shell 配置。日志、逐项进度和最终报告仍写入 `logs/yixian-runtime-tests/`。离线检查通过与游戏内 Mono 验证通过分别记录；单独安装开发环境不代表实机验证通过。
+
+2026-10-20 已在 Apple M1 Pro／macOS 26.5.2／Sikarugir Wine 10.0 上完成构建、5858＋185 项 C# 离线检查、17 项 Python 检查，以及 28＋6 组真实 Mono 自测；全部通过。具体覆盖和本地证据见[测试状态](docs/testing-status.md)。本机使用 Git 忽略的 `.env.local` 保存环境变量，载入后可直接执行上述检查命令。
 
 第三方资源与代码许可证状态见[资源说明](THIRD_PARTY_ASSETS.md)。代码生成候选在 `mod/yixian.sect/`，编译后的 DLL 和本地图片不进入 Git。
 
@@ -48,7 +108,7 @@ bash scripts/check.sh
 bash scripts/check.sh
 ```
 
-运行环境：Python 3、.NET 8 SDK、游戏本地Managed程序集。`GAME_MANAGED`可覆盖构建／测试引用路径。美术在本地准备，不随Git分发。状态图标与预览生成需要Pillow和Noto字体（可用`YIXIAN_FONT`指定）；脚本不会重绘有来源的原卡图：
+运行环境：Python 3.10+、.NET 8 SDK、游戏本地Managed程序集。`GAME_MANAGED`可覆盖构建／测试引用路径。美术在本地准备，不随Git分发。状态图标与预览生成需要Pillow和中文字体（Linux默认Noto，Mac默认系统黑体，可用`YIXIAN_FONT`指定）；脚本不会重绘有来源的原卡图：
 
 ```bash
 python3 scripts/build_prototype_art.py

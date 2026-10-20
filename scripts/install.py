@@ -11,7 +11,12 @@ import time
 from run_yixian_runtime_tests import game_running
 
 ROOT = Path(__file__).resolve().parents[1]
-GAME = Path.home() / '.local/share/Steam/steamapps/common/轮回小队 Demo'
+if os.environ.get('GAME_MANAGED'):
+    GAME = Path(os.environ['GAME_MANAGED']).parent.parent
+elif sys.platform == 'darwin':
+    GAME = Path.home() / 'Library/Application Support/Steam/steamapps/common/轮回小队 Demo'
+else:
+    GAME = Path.home() / '.local/share/Steam/steamapps/common/轮回小队 Demo'
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
