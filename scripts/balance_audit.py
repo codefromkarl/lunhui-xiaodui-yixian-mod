@@ -3,6 +3,7 @@
 import argparse
 import itertools
 import json
+import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -53,16 +54,25 @@ def pool_metrics(packs, cards):
                 seal_elements=sorted(seals), represented_elements=sorted(elements))
 
 
-def audit(root=ROOT, config_path=None):
+def audit(root=ROOT, config_path=None, legacy_five=False):
     table = json.loads((root/'mod/yixian.sect/content/cardtable.json').read_text())
-    config = json.loads((config_path or root/'data/balance-refined-scenarios.json').read_text())
+    config = json.loads((config_path or root/'data/balance-star-routes-scenarios.json').read_text())
     lineages = {op['id']: op['fields'] for op in json.loads((root/'mod/yixian.sect/content/lineages.json').read_text())['operations']}
     cards = {c['key']: c for c in table['cards']}
-    rows, routes = [], []
+    rows, routes, five_deck = [], [], []
     for school in ['sword', 'five', 'star']:
         identity = 'yixian.sect.lineage.' + school
         packs = [p for p in table['packs'] if p.get('sect', 'yixian.sect.lineage.sword') == identity]
-        assert len(packs) == 12 and len({k for p in packs for k in p['cards']}) == 48
+        assert len(packs) == (10 if school=='star' else 12) and len({k for p in packs for k in p['cards']}) == (40 if school=='star' else 48)
+        if school == 'five' and not legacy_five:
+            for rank in range(1, 6):
+                count = sum(c.get('sect') == identity and c['rank'] == rank for c in table['cards'])
+                steps = lineages[identity]['steps'][:rank]
+                five_deck.append(dict(rank=rank, realm=REALMS[rank-1], deck_size=8,
+                    candidate_cards=count, unlocked_cards=8+2*(rank-1), new_unlocks=8 if rank == 1 else 2,
+                    unlock_choices=1 if rank == 1 else math.comb(count,2), deck_choices=math.comb(8+2*(rank-1),8),
+                    rank_step_cost=steps[-1]['price'], rank_total_cost=sum(s['price'] for s in steps), card_purchase_cost=0))
+            continue
         for priority in config['routes'][school].values():
             assert set(priority) == {p['key'] for p in packs}, (school, 'route is not a permutation')
         foundation = [p for p in packs if p['rank'] == 2]
@@ -100,23 +110,26 @@ def audit(root=ROOT, config_path=None):
                 r['historical_route_cost_by_foundation'] = [acquisition_cost(history.values(),gift) for history,gift in zip(histories,choices)]
                 r['foundation_seals_missing'] = sorted(set(r['represented_elements'])-set(r['seal_elements'])) if school=='five' else []
                 routes.append(r)
-    return dict(schema=1, scope='catalogue facts; printed fees ignore conditional discounts; no combat or win-rate model',
+    return dict(schema=2, five_fixed_deck=five_deck, historical_five_pack_model=legacy_five, scope='catalogue facts; printed fees ignore conditional discounts; no combat or win-rate model',
                 draw_model='uniform with replacement; 3 opening cards', rows=rows, routes=routes,
                 total_legal_pools=sum(r['legal_pool_count'] for r in rows))
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--config', type=Path, default=ROOT/'data/balance-refined-scenarios.json')
+    parser.add_argument('--config', type=Path, default=ROOT/'data/balance-star-routes-scenarios.json')
     parser.add_argument('--out', type=Path, default=ROOT/'logs/balance/catalog.json')
+    parser.add_argument('--legacy-five', action='store_true', help='historical five-pack catalogue only; not current progression legality')
     args = parser.parse_args()
-    result = audit(config_path=args.config)
+    result = audit(config_path=args.config, legacy_five=args.legacy_five)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
     print(f"Audited {len(result['rows'])} realm/school rows, {result['total_legal_pools']} legal pools, {len(result['routes'])} theme configurations")
     for row in result['rows']:
         print(row['school'], row['realm'], 'rank total', row['rank_total_cost'], 'all packs', row['all_packs_cost_after_gift'],
               'no-free pools', row['no_printed_free_pool_count'], 'no-seal pools', row['no_seal_pool_count'])
+    for row in result['five_fixed_deck']:
+        print('five', row['realm'], 'deck', row['deck_size'], 'candidates', row['candidate_cards'], 'unlocked', row['unlocked_cards'], 'card cost', row['card_purchase_cost'])
     print('Report:', args.out)
 
 

@@ -1,133 +1,168 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Linq;
 using HarmonyLib;
-using Newtonsoft.Json.Linq;
 using Reincarnation.Domain;
-using Reincarnation.UI.Flow;
 using Reincarnation.UI.Nodes;
 using Reincarnation.UI.ViewModels;
 using TMPro;
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
 
 namespace YixianSect
 {
     internal static class FiveDeckPanel
     {
-        internal sealed class Context { internal int Rank;internal IReadOnlyList<CardTablePackViewModel> All; }
-        private sealed class View { internal bool Cards;internal int Element=-1;internal Button Toggle;internal GameObject Filters;internal RectTransform Scroll;internal Vector2 OriginalOffset; }
+        private sealed class Context { internal bool Native;internal IReadOnlyList<StableId> Cards,Unlocked; }
+        private sealed class View { internal Button Edit;internal Vector2[][] Original; }
         private static readonly ConditionalWeakTable<CardTableViewModel,Context> Contexts=new ConditionalWeakTable<CardTableViewModel,Context>();
         private static readonly ConditionalWeakTable<CardTablePackPanel,View> Views=new ConditionalWeakTable<CardTablePackPanel,View>();
-        private static readonly System.Reflection.PropertyInfo PlaybackWaiting=AccessTools.Property(typeof(CardTablePackPanel).Assembly.GetTypes().Single(t=>t.Name=="BattlePlaybackAvailability"),"IsWaiting");
-        internal static T Read<T>(object o,string f)=>(T)AccessTools.Field(o.GetType(),f).GetValue(o);
-        internal static bool CardsMode(CardTablePackPanel p)=>Views.TryGetValue(p,out var v)&&v.Cards;
+        private static T Read<T>(object owner,string field)=>(T)AccessTools.Field(owner.GetType(),field).GetValue(owner);
         internal static void ConfigureModel(RunPlayerSnapshot player,CardTableViewModel model)
         {
-            var lineage=player.Lineages.FirstOrDefault(l=>l.LineageId.Value==FiveElementRules.Lineage);
-            if(lineage.Rank<=0||model==null)return;
-            Contexts.Remove(model);Contexts.Add(model,new Context{Rank=lineage.Rank,All=model.Packs});
-            foreach(var entry in model.Packs.Where(p=>FiveCardSelection.Is(new StableId(p.Id))))
-            {
-                var e=FiveCardSelection.Find(new StableId(entry.Id));var c=SectRegistry.Cards[SectRegistry.CardPrefix+(string)e["cardKey"]];
-                entry.Title=(string)c["name"];entry.CountLine=new[]{"中性","金","水","木","火","土"}[(int?)c["element"]??0]+" · "+new[]{"炼气","筑基","金丹","元婴","化神"}[(int)e["rank"]-1];
-                entry.Detail=(string)c["summary"];entry.CardDetails=(string)c["description"];
-                entry.UnlockLabel=entry.IsLocked?(lineage.Rank<(int)e["rank"]?"境界未到":(int?)c["element"]==2?"水系单卡 · "+e["price"]+"点（商店购买）":"需拥有原卡包"):"已拥有 · 可自由选入";
-            }
+            if(!player.Lineages.Any(l=>l.LineageId.Value==FiveElementRules.Lineage&&l.Rank>0))return;
+            Contexts.Remove(model);Contexts.Add(model,new Context{Native=player.Lineages.Any(l=>l.LineageId==CardTableCatalog.LineageId),Cards=FiveDeckRules.Cards(player.PurchasedShelfAbilityIds),Unlocked=FiveDeckRules.Unlocked(player.PurchasedShelfAbilityIds)});
         }
-        private static void Render(CardTablePackPanel p)=>AccessTools.Method(typeof(CardTablePackPanel),"Render").Invoke(p,null);
-        private static void Page(CardTablePackPanel p)=>AccessTools.Method(typeof(CardTablePackPanel),"SelectPage").Invoke(p,new object[]{false});
-        private static void SetMode(CardTablePackPanel p,View v,bool cards)
+        internal static bool PureFive(CardTableViewModel model)=>model!=null&&Contexts.TryGetValue(model,out var context)&&!context.Native;
+        internal static void OpenEditor(CardTablePackPanel panel)
         {
-            var model=Read<CardTableViewModel>(p,"model");var selected=Read<HashSet<string>>(p,"selected");
-            if(cards)
-            {
-                var keys=selected.SelectMany(id=>SectRegistry.FindPack(new StableId(id))?["cards"]?.Values<string>()??Enumerable.Empty<string>()).ToHashSet();
-                selected.Clear();foreach(var e in FiveCardSelection.Entries.Where(e=>keys.Contains((string)e["cardKey"])))selected.Add(FiveCardSelection.Id(e).Value);
-            }
-            else
-            {
-                selected.Clear();var packs=model.Packs.Where(x=>!FiveCardSelection.Is(new StableId(x.Id))&&!x.IsLocked).ToArray();
-                foreach(var e in packs.Where(x=>x.IsActive))selected.Add(e.Id);
-                if(selected.Count==0)foreach(var e in packs.Take(Math.Min(3,packs.Length)))selected.Add(e.Id);
-            }
-            v.Cards=cards;Page(p);
+            var model=Read<CardTableViewModel>(panel,"model");
+            if(model==null||!Contexts.TryGetValue(model,out var context)||!model.CanManage||Read<bool>(panel,"waiting")||Read<bool>(panel,"fate"))return;
+            var draft=new FiveDeckDraft(context.Unlocked,context.Cards,FiveDeckRules.Size);
+            FiveCardPicker.Open(panel.transform,"FiveDeckEditor","调整五行卡组","从已解锁的 "+context.Unlocked.Count+" 张中选择八张。免费保存，保留手牌；下次抽牌使用新卡组。","保存八张卡组",draft,Read<TMP_Text>(panel,"title").font,cards=>Save(panel,cards));
         }
-        internal static void Before(CardTablePackPanel p,out IReadOnlyList<CardTablePackViewModel> saved)
+        internal static void Save(CardTablePackPanel panel,IReadOnlyList<StableId> cards)
         {
-            saved=null;var model=Read<CardTableViewModel>(p,"model");
+            var model=Read<CardTableViewModel>(panel,"model");
+            if(model==null||!Contexts.TryGetValue(model,out var context)||!model.CanManage||Read<bool>(panel,"waiting")||Read<bool>(panel,"fate")||cards.Count!=8||cards.Distinct().Count()!=8||cards.Any(id=>!context.Unlocked.Contains(id)))return;
+            AccessTools.Field(typeof(CardTablePackPanel),"waiting").SetValue(panel,true);
+            AccessTools.Field(typeof(CardTablePackPanel),"failed").SetValue(panel,false);AccessTools.Field(typeof(CardTablePackPanel),"timedOut").SetValue(panel,false);
+            AccessTools.Field(typeof(CardTablePackPanel),"submittedAt").SetValue(panel,Time.unscaledTime);
+            AccessTools.Method(typeof(CardTablePackPanel),"Render").Invoke(panel,null);
+            var submit=Read<Action<IReadOnlyList<string>>>(panel,"submit");
+            if(submit==null){panel.Reject();return;}
+            submit(new[]{FiveDeckRules.EncodeSelection(cards).Value});
+        }
+        internal static void Render(CardTablePackPanel panel)
+        {
+            var model=Read<CardTableViewModel>(panel,"model");var packs=Read<Button>(panel,"packsTab");var fusion=Read<Button>(panel,"fusionTab");
             if(model==null||!Contexts.TryGetValue(model,out var context))
             {
-                if(Views.TryGetValue(p,out var stale)){stale.Toggle.gameObject.SetActive(false);stale.Filters.SetActive(false);stale.Scroll.offsetMax=stale.OriginalOffset;}
+                if(Views.TryGetValue(panel,out var old)){old.Edit.gameObject.SetActive(false);Restore((RectTransform)packs.transform,old.Original[0]);Restore((RectTransform)fusion.transform,old.Original[1]);}
                 return;
             }
-            if(!Views.TryGetValue(p,out var v))
+            if(!Views.TryGetValue(panel,out var view))
             {
-                v=new View{Cards=model.Packs.Any(x=>x.IsActive&&FiveCardSelection.Is(new StableId(x.Id)))};
-                Views.Add(p,v);Create(p,v);
+                view=new View{Original=new[]{Geometry((RectTransform)packs.transform),Geometry((RectTransform)fusion.transform)}};Views.Add(panel,view);
+                view.Edit=UnityEngine.Object.Instantiate(packs,packs.transform.parent,false);view.Edit.name="FiveEditDeck";view.Edit.onClick=new Button.ButtonClickedEvent();view.Edit.onClick.AddListener(()=>OpenEditor(panel));
+                view.Edit.GetComponentInChildren<TMP_Text>(true).text="调整八张";
             }
-            bool fate=Read<bool>(p,"fate");v.Toggle.gameObject.SetActive(!fate);v.Filters.SetActive(!fate&&v.Cards&&!Read<bool>(p,"showingFusion"));
-            v.Scroll.offsetMax=v.OriginalOffset+(v.Filters.activeSelf?new Vector2(0,-48):Vector2.zero);
-            saved=model.Packs;
-            model.Packs=saved.Where(x=>fate||FiveCardSelection.Is(new StableId(x.Id))==v.Cards).Where(x=>fate||!v.Cards||v.Element<0||
-                (int?)SectRegistry.Cards[SectRegistry.CardPrefix+(string)FiveCardSelection.Find(new StableId(x.Id))["cardKey"]]["element"]==v.Element).ToArray();
-        }
-        internal static void After(CardTablePackPanel p,IReadOnlyList<CardTablePackViewModel> saved)
-        {
-            var model=Read<CardTableViewModel>(p,"model");if(saved!=null)model.Packs=saved;
-            if(model==null||!Views.TryGetValue(p,out var v)||!Contexts.TryGetValue(model,out var context))return;
-            v.Toggle.GetComponentInChildren<TMP_Text>(true).text=v.Cards?"返回整包":"自由选牌";
-            v.Toggle.interactable=model.CanManage&&!Read<bool>(p,"waiting");
-            foreach(var button in v.Filters.GetComponentsInChildren<Button>(true))button.interactable=v.Toggle.interactable;
-            if(!v.Cards||Read<bool>(p,"fate")||Read<bool>(p,"showingFusion"))return;
-            var selected=Read<HashSet<string>>(p,"selected");
-            Read<TMP_Text>(p,"title").text="五行自由选牌";
-            Read<TMP_Text>(p,"summary").text="已选 "+selected.Count+" 张 · 本境界 "+FiveCardSelection.Minimum(context.Rank)+"–"+FiveCardSelection.Maximum+" 张\n可混选已购牌；筑基起开战纯水的水势结算×"+FiveCardSelection.WaterMasteryMultiplier+"。保存保留当前手牌。";
-            Read<TMP_Text>(p,"packsTabLabel").text="逐卡选择";
-        }
-        internal static bool? CanConfirm(CardTablePackPanel p)
-        {
-            var m=Read<CardTableViewModel>(p,"model");if(m==null||!Views.TryGetValue(p,out var v)||!v.Cards||Read<bool>(p,"fate"))return null;
-            if(!Contexts.TryGetValue(m,out var c))return false;
-            var selected=Read<HashSet<string>>(p,"selected");
-            return m.CanManage&&!Read<bool>(p,"waiting")&&!Read<bool>(p,"showingFusion")&&!(bool)PlaybackWaiting.GetValue(null)&&
-                selected.Count>=FiveCardSelection.Minimum(c.Rank)&&selected.Count<=FiveCardSelection.Maximum&&
-                selected.All(id=>FiveCardSelection.Is(new StableId(id))&&c.All.Any(x=>x.Id==id&&!x.IsLocked));
-        }
-        private static void Create(CardTablePackPanel p,View v)
-        {
-            var packs=Read<Button>(p,"packsTab");var fusion=Read<Button>(p,"fusionTab");
-            var toggle=UnityEngine.Object.Instantiate(packs,packs.transform.parent,false);toggle.name="FiveFreeCards";toggle.onClick=new Button.ButtonClickedEvent();
-            v.Toggle=toggle;toggle.onClick.AddListener(()=>SetMode(p,v,!v.Cards));
+            bool fate=Read<bool>(panel,"fate");view.Edit.gameObject.SetActive(!fate);view.Edit.interactable=model.CanManage&&!Read<bool>(panel,"waiting");
+            Restore((RectTransform)packs.transform,view.Original[0]);Restore((RectTransform)fusion.transform,view.Original[1]);
+            if(fate)return;
             var a=(RectTransform)packs.transform;var b=(RectTransform)fusion.transform;
-            float left=a.localPosition.x-a.rect.width*.5f,right=b.localPosition.x+b.rect.width*.5f,width=(right-left)/3;
-            var tabs=new[]{packs,toggle,fusion};
-            for(int i=0;i<3;i++){var t=(RectTransform)tabs[i].transform;t.anchorMin=new Vector2(.5f,t.anchorMin.y);t.anchorMax=new Vector2(.5f,t.anchorMax.y);t.pivot=new Vector2(.5f,t.pivot.y);t.sizeDelta=new Vector2(width-6,t.sizeDelta.y);t.anchoredPosition=new Vector2(left+width*(i+.5f),t.anchoredPosition.y);}
-            // Returning to recommendations returns to whole-pack staging first.
-            fusion.onClick.AddListener(()=>{if(v.Cards){SetMode(p,v,false);AccessTools.Method(typeof(CardTablePackPanel),"SelectPage").Invoke(p,new object[]{true});}});
-            v.Scroll=Read<RectTransform>(p,"content").GetComponentInParent<ScrollRect>().GetComponent<RectTransform>();v.OriginalOffset=v.Scroll.offsetMax;
-            var bar=new GameObject("FiveElementFilters",typeof(RectTransform));v.Filters=bar;var rect=(RectTransform)bar.transform;rect.SetParent(v.Scroll,false);rect.anchorMin=new Vector2(0,1);rect.anchorMax=Vector2.one;rect.pivot=new Vector2(.5f,0);rect.sizeDelta=new Vector2(0,42);rect.anchoredPosition=new Vector2(0,4);
-            var labels=new[]{"全","金","水","木","火","土","中","纯水推荐"};
-            for(int i=0;i<labels.Length;i++)
-            {
-                int filter=i==0?-1:i==6?0:i;var button=UnityEngine.Object.Instantiate(packs,rect,false);button.name=i==7?"FiveWaterPreset":"FiveFilter"+filter;button.onClick=new Button.ButtonClickedEvent();
-                var t=(RectTransform)button.transform;t.anchorMin=new Vector2(i<7?i*.09f:.63f,0);t.anchorMax=new Vector2(i<7?(i+1)*.09f:1,1);t.offsetMin=new Vector2(1,0);t.offsetMax=new Vector2(-1,0);button.GetComponentInChildren<TMP_Text>(true).text=labels[i];button.GetComponentInChildren<TMP_Text>(true).fontSize=16;
-                if(i<7)button.onClick.AddListener(()=>{v.Element=filter;Render(p);});
-                else button.onClick.AddListener(()=>{var m=Read<CardTableViewModel>(p,"model");var selected=Read<HashSet<string>>(p,"selected");selected.Clear();foreach(var e in m.Packs.Where(x=>!x.IsLocked&&FiveCardSelection.Is(new StableId(x.Id))&&
-                    (int?)SectRegistry.Cards[SectRegistry.CardPrefix+(string)FiveCardSelection.Find(new StableId(x.Id))["cardKey"]]["element"]==2))selected.Add(e.Id);v.Element=2;Render(p);});
-            }
+            float left=a.localPosition.x-a.rect.width*.5f,right=b.localPosition.x+b.rect.width*.5f;
+            var tabs=context.Native?new[]{packs,view.Edit,fusion}:new[]{packs,view.Edit};float width=(right-left)/tabs.Length;
+            for(int i=0;i<tabs.Length;i++){var t=(RectTransform)tabs[i].transform;t.anchorMin=new Vector2(.5f,t.anchorMin.y);t.anchorMax=new Vector2(.5f,t.anchorMax.y);t.pivot=new Vector2(.5f,t.pivot.y);t.sizeDelta=new Vector2(width-6,t.sizeDelta.y);t.anchoredPosition=new Vector2(left+width*(i+.5f),t.anchoredPosition.y);}
+            if(context.Native)return;
+            Read<TMP_Text>(panel,"title").text="五行自选卡包";
+            Read<TMP_Text>(panel,"summary").text="当前八张 · 已解锁 "+context.Unlocked.Count+" 张\n点击「调整八张」免费组牌，保存保留手牌和本场状态。";
+            fusion.gameObject.SetActive(false);Read<Button>(panel,"confirm").gameObject.SetActive(false);
         }
+        private static Vector2[] Geometry(RectTransform r)=>new[]{r.anchorMin,r.anchorMax,r.pivot,r.anchoredPosition,r.sizeDelta};
+        private static void Restore(RectTransform r,Vector2[] g){r.anchorMin=g[0];r.anchorMax=g[1];r.pivot=g[2];r.sizeDelta=g[4];r.anchoredPosition=g[3];}
     }
     [HarmonyPatch(typeof(CardTablePackPanel),"Render")]
     internal static class FiveDeckRender
-    {
-        [HarmonyPriority(Priority.First)]private static void Prefix(CardTablePackPanel __instance,out IReadOnlyList<CardTablePackViewModel> __state)=>FiveDeckPanel.Before(__instance,out __state);
-        [HarmonyPriority(Priority.Last)]private static void Postfix(CardTablePackPanel __instance,IReadOnlyList<CardTablePackViewModel> __state)=>FiveDeckPanel.After(__instance,__state);
-    }
+    {private static void Postfix(CardTablePackPanel __instance)=>FiveDeckPanel.Render(__instance);}
     [HarmonyPatch(typeof(CardTablePackPanel),"CanConfirm")]
     internal static class FiveDeckConfirm
     {
-        private static void Postfix(CardTablePackPanel __instance,ref bool __result){var value=FiveDeckPanel.CanConfirm(__instance);if(value.HasValue)__result=value.Value;}
+        private static void Postfix(CardTablePackPanel __instance,ref bool __result)
+        {
+            var model=(CardTableViewModel)AccessTools.Field(typeof(CardTablePackPanel),"model").GetValue(__instance);
+            bool fate=(bool)AccessTools.Field(typeof(CardTablePackPanel),"fate").GetValue(__instance);
+            if(FiveDeckPanel.PureFive(model)&&!fate)__result=false;
+        }
+    }
+}
+
+namespace YixianSect
+{
+    // The shipped preview has four large card slots. Page those slots rather than
+    // shrinking eight cards into unreadable thumbnails or silently hiding half.
+    [HarmonyPatch(typeof(CardTablePackPanel),"Preview")]
+    internal static class FiveDeckPreview
+    {
+        private sealed class Page
+        {
+            internal int Index;
+            internal Button Previous,Next;
+            internal UnityEngine.Vector2 Min,Max,OffsetMin,OffsetMax;
+            internal float Width;
+        }
+        private static readonly ConditionalWeakTable<CardTablePackPanel,Page> Pages = new ConditionalWeakTable<CardTablePackPanel,Page>();
+        private static T Read<T>(object owner,string field)=>(T)AccessTools.Field(owner.GetType(),field).GetValue(owner);
+        private static bool Prefix(CardTablePackPanel __instance,CardTablePackViewModel pack)
+        {
+            if(pack.Id!=FiveDeckRules.PackId.Value)
+            {
+                if(Pages.TryGetValue(__instance,out var old))
+                {
+                    old.Previous.gameObject.SetActive(false);old.Next.gameObject.SetActive(false);
+                    var rect=Read<TMP_Text>(__instance,"previewRecipes").rectTransform;
+                    rect.anchorMin=old.Min;rect.anchorMax=old.Max;rect.offsetMin=old.OffsetMin;rect.offsetMax=old.OffsetMax;
+                }
+                return true;
+            }
+            var panel=__instance;
+            if(!Pages.TryGetValue(panel,out var page))
+            {
+                page=new Page();Pages.Add(panel,page);
+                var label=Read<TMP_Text>(panel,"previewRecipes");var rect=label.rectTransform;
+                page.Min=rect.anchorMin;page.Max=rect.anchorMax;page.OffsetMin=rect.offsetMin;page.OffsetMax=rect.offsetMax;page.Width=rect.rect.width;
+                Button Create(string name,string text,float left,float right,int target)
+                {
+                    var button=UnityEngine.Object.Instantiate(Read<Button>(panel,"packsTab"),rect.parent,false);button.name=name;
+                    button.onClick=new Button.ButtonClickedEvent();button.onClick.AddListener(()=>{page.Index=target;var current=Read<CardTableViewModel>(panel,"model").Packs.First(p=>p.Id==FiveDeckRules.PackId.Value);AccessTools.Method(typeof(CardTablePackPanel),"Preview").Invoke(panel,new object[]{current});});
+                    var r=(UnityEngine.RectTransform)button.transform;r.anchorMin=page.Min;r.anchorMax=page.Max;r.offsetMin=page.OffsetMin;r.offsetMax=page.OffsetMax;
+                    float width=rect.rect.width;r.offsetMin+=new UnityEngine.Vector2(width*left,0);r.offsetMax-=new UnityEngine.Vector2(width*(1-right),0);
+                    button.GetComponentInChildren<TMP_Text>(true).text=text;return button;
+                }
+                page.Previous=Create("FiveDeckPreviousPage","上一页",0,.27f,0);page.Next=Create("FiveDeckNextPage","下一页",.73f,1,1);
+                // Keep the page counter in the existing recipe row between buttons.
+
+            }
+            var counter=Read<TMP_Text>(panel,"previewRecipes").rectTransform;counter.anchorMin=page.Min;counter.anchorMax=page.Max;counter.offsetMin=page.OffsetMin+new Vector2(page.Width*.29f,0);counter.offsetMax=page.OffsetMax-new Vector2(page.Width*.29f,0);
+            page.Previous.gameObject.SetActive(true);page.Next.gameObject.SetActive(true);
+            page.Previous.interactable=page.Index>0;page.Next.interactable=page.Index<1;
+            AccessTools.Field(typeof(CardTablePackPanel),"previewPackId").SetValue(panel,pack.Id);
+            Read<TMP_Text>(panel,"detailTitle").text=pack.Title;
+            Read<TMP_Text>(panel,"previewCount").text=pack.CountLine;
+            Read<TMP_Text>(panel,"previewRecipes").text="第"+(page.Index+1)+"/2页 · 共8张";
+            var entries=Read<CardTableListEntry[]>(panel,"previewCards");var art=Read<CardTableArtSet>(panel,"art");
+            void Show(int index)
+            {
+                AccessTools.Method(typeof(CardTablePackPanel),"ShowCard").Invoke(panel,new object[]{pack,index,true});
+                for(int i=0;i<entries.Length;i++)entries[i].SetFocused(i+page.Index*4==index);
+            }
+            for(int i=0;i<entries.Length;i++)
+            {
+                int index=i+page.Index*4;bool visible=i<4&&index<pack.Cards.Count;entries[i].gameObject.SetActive(visible);if(!visible)continue;
+                var card=pack.Cards[index];entries[i].Present(card.Title,null,art?.Find(card.ArtKey),false);
+                entries[i].Previewed=()=>Show(index);
+                entries[i].Clicked=()=>
+                {
+                    if(Read<bool>(panel,"fate")&&!Read<bool>(panel,"waiting"))
+                    {
+                        AccessTools.Field(typeof(CardTablePackPanel),"fateCardId").SetValue(panel,card.CardId);
+                        AccessTools.Method(typeof(CardTablePackPanel),"Render").Invoke(panel,null);
+                    }
+                    Show(index);
+                };
+            }
+            Show(page.Index*4);return false;
+        }
     }
 }

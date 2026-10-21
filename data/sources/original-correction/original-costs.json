@@ -1,630 +1,6 @@
 {
   "basis": "逐张查看该站1级原卡图左上灵气角标；无角标为0。网页正文与卡面可能不同版本，费用仅证明本快照图片所示值，不称最新游戏版本。",
   "cards": {
-    "4000001": {
-      "name": "巽卦",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000001_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row1-col1",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000001.html",
-      "imagePixelSha256": "f07805d6996554639fcc6a7758d6f64131e2a1674201440bea29d4fac6131b36",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000002": {
-      "name": "坤卦",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000002_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row1-col2",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000002.html",
-      "imagePixelSha256": "3db3509994946460537aeb562b56e43b95e65c0b29f5b53ed7ee565fd1d23c41",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000003": {
-      "name": "震卦",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000003_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row1-col3",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000003.html",
-      "imagePixelSha256": "b3775c00e9b59b10e7723d2f30f73a61d4e9642dd8b7b747b71d28d6212ee53c",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000004": {
-      "name": "掌心雷",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000004_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row1-col4",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000004.html",
-      "imagePixelSha256": "dfc4a092b6a87d187e23817df9fa42280b47951f7c5bc2949265e8d2ac7954f7",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000008": {
-      "name": "星罗棋布",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000008_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row1-col5",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000008.html",
-      "imagePixelSha256": "a0b8f916ce8eb8b1f2851a16d153eb11e1a63f6e805128b2cc0e4497f8d78080",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000010": {
-      "name": "星弈•夹",
-      "cost": 1,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000010_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row1-col6",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000010.html",
-      "imagePixelSha256": "6df865a5944edb9c64d85a523057776f375b8ca652a78c15205064883f45c0d0",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000011": {
-      "name": "星弈•挡",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000011_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row2-col1",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000011.html",
-      "imagePixelSha256": "fb72449a6cbce87b354aa562b9f13cf9594b62ea8d519cc03ff1afeeb07f4569",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000023": {
-      "name": "斗转星移",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000023_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row2-col2",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000023.html",
-      "imagePixelSha256": "8280c1fc2f94ab3150a715411757128593a5dbdf4acf2c66b95609d3567b995b",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000009": {
-      "name": "星弈•立",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000009_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row2-col3",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000009.html",
-      "imagePixelSha256": "a7c410b909969c5296cac2b0bb4bd94ce03814422bf36b17c44666e67e972764",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000015": {
-      "name": "坎卦",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000015_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row2-col4",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000015.html",
-      "imagePixelSha256": "face780f6c759b21cb47bd052428f36e3583cb4162442575b9c54f29d379d4ad",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000018": {
-      "name": "气贯长虹",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000018_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row2-col5",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000018.html",
-      "imagePixelSha256": "04743b24e9da912d624fb5bbf4e4f36274c7535fe077720d433046ecd984f731",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000020": {
-      "name": "金鸡独立",
-      "cost": 1,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000020_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row2-col6",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000020.html",
-      "imagePixelSha256": "39b01dff6939b0932f1766152fee88ea8aa9110dd7a71fc3ec76611592173299",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000021": {
-      "name": "落花有意",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000021_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row3-col1",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000021.html",
-      "imagePixelSha256": "1b6ba8d6f63fd48a3e7ce1690f86937b3cab72170eec44c91d5a4513124508f7",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000024": {
-      "name": "飞星刺",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000024_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row3-col2",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000024.html",
-      "imagePixelSha256": "8da896218b097694892c14d893bf29e966a15e8439afc4b5ef2f555555aab519",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000030": {
-      "name": "落雷术",
-      "cost": 1,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000030_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row3-col3",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000030.html",
-      "imagePixelSha256": "792a524222464fb16709e410512ce0e7916b4d5dfe6ffd3781d8ef7569d20f32",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000090": {
-      "name": "望星诀",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000090_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row3-col4",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000090.html",
-      "imagePixelSha256": "932dbe7b69aafc5f2eee3a6d4b8a695c5dee5ed4aacf6a15bdb2d357b0d2c89a",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000025": {
-      "name": "兑卦",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000025_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row3-col5",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000025.html",
-      "imagePixelSha256": "42888cd9c22183642f8bad6ef19f3fd054589d21f2451152097f28aa419c94bb",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000029": {
-      "name": "星弈•打",
-      "cost": 1,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000029_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row3-col6",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000029.html",
-      "imagePixelSha256": "f4dbc6ae597a8f4a5f1dfff61603a1b07ad583486b57e5e07644cdae15466356",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000032": {
-      "name": "众星拱月",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000032_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row4-col1",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000032.html",
-      "imagePixelSha256": "5350b5309b50aeb4ccc1d33e2dc8586a87e03362131a57091d280fbc214a8da5",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000033": {
-      "name": "海底捞月",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000033_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row4-col2",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000033.html",
-      "imagePixelSha256": "920c5dcf24822baa96e21abc93e7a508d3f10d990eb414c12fbaf77c2847fb3f",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000040": {
-      "name": "两仪阵",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000040_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row4-col3",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000040.html",
-      "imagePixelSha256": "a27e672ec0ef46744b179e2aa1bbc8fbffbc9827a7db8b39b1771e5e74e40522",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000043": {
-      "name": "螳螂捕蝉",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000043_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row4-col4",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000043.html",
-      "imagePixelSha256": "3d850a4720e00a7fedfdf5a4db6f5e4a701c8e817ad5152e10418afdb3cfb93f",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000068": {
-      "name": "御雷卦诀",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000068_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row4-col5",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000068.html",
-      "imagePixelSha256": "653b2c8729e0add3ee4488cd0e5802a7b134e1ad3b2e8ab0de555a15a32802fa",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000031": {
-      "name": "白蛇吐信",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000031_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-0.png",
-      "grid": "row4-col6",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000031.html",
-      "imagePixelSha256": "a26622531aa1d4ab7ef014464928cabab37257866880288833ee3467f5be45c5",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000014": {
-      "name": "六爻绝阵",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000014_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row1-col1",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000014.html",
-      "imagePixelSha256": "d3b706aaf235fd0ab5b96bc40d40768cf2e4b4d95629ce59d93ccd04310f63e3",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000034": {
-      "name": "离卦",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000034_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row1-col2",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000034.html",
-      "imagePixelSha256": "4d4e88105935e9a91d846385b815498d078127668819f3d31dae7230ebbd89eb",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000035": {
-      "name": "蜻蜓点水",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000035_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row1-col3",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000035.html",
-      "imagePixelSha256": "90147a1c6a0dbcb89b2bfb94e201306a030376c8c99d2ce9505f618ff62abb36",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000036": {
-      "name": "金蝉脱壳",
-      "cost": 1,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000036_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row1-col4",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000036.html",
-      "imagePixelSha256": "60057b191111ee888cffff3c0ef13a79910087461142e459c39498fd10b6d76c",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000038": {
-      "name": "星弈•飞",
-      "cost": 1,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000038_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row1-col5",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000038.html",
-      "imagePixelSha256": "75a32e75242c9aa9647c05000ddc23bb88117a74cd21ac9101f0f669bd44b72e",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000039": {
-      "name": "星弈•虎",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000039_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row1-col6",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000039.html",
-      "imagePixelSha256": "4c2ea308195fb15ce5695a4d99a6f20c3259113c516fb1f7e2bf5802156e2811",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000059": {
-      "name": "杯弓蛇影",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000059_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row2-col1",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000059.html",
-      "imagePixelSha256": "c92c942cf4dc462cf65c826bb87d1be4f4017722aab609fc32f6f16fc958c905",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000062": {
-      "name": "星轨推衍",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000062_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row2-col2",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000062.html",
-      "imagePixelSha256": "382e5a8fd8d39886b68f465c4b29ff6144129581b75656a23ac2dafd0c424519",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000063": {
-      "name": "轰雷掣电",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000063_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row2-col3",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000063.html",
-      "imagePixelSha256": "d72e122082cdfe47bb8601c083d82bb6e26852b9350bfc818bc14a6499f88520",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000092": {
-      "name": "伤魂咒阵",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000092_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row2-col4",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000092.html",
-      "imagePixelSha256": "74e9e3c11b5eb9a8d51f2cd5d91df475c8d8438a63ea150a4ee8d40eb63fb756",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000093": {
-      "name": "星弈•长",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000093_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row2-col5",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000093.html",
-      "imagePixelSha256": "148e9897616beb8b3330dd234320f5e62f09a86a072239a6f3d4e9b0d65d3782",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000104": {
-      "name": "星弈•连",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000104_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row2-col6",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000104.html",
-      "imagePixelSha256": "7e854b42beab505e93e31f158ec8528991c5e6ffae5dbf3a2802ffceb7cbb37f",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000026": {
-      "name": "乾卦",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000026_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row3-col1",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000026.html",
-      "imagePixelSha256": "c87c5c7656d47b0ed4c1a174b3409568be34f5de10a2409beb9e5fab604bdfc3",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000041": {
-      "name": "梅开二度",
-      "cost": 1,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000041_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row3-col2",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000041.html",
-      "imagePixelSha256": "3cc62e5f6912c4909a5ff02e8c18c7348eb09dc7f748ba0dbcdff03d5ad0fc4d",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000044": {
-      "name": "星弈•断",
-      "cost": 1,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000044_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row3-col3",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000044.html",
-      "imagePixelSha256": "eded0fd1f0d90aff90227a6d1c5e572bf5a755eb456a00050958e8a56a15b3ea",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000045": {
-      "name": "天元心法",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000045_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row3-col4",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000045.html",
-      "imagePixelSha256": "b96db803395d8d2c8c5228f8677fa0a15eecee6cd529f7389c5151a3c71afdc4",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000046": {
-      "name": "五雷轰顶",
-      "cost": 1,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000046_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row3-col5",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000046.html",
-      "imagePixelSha256": "442c47a625762b5e6410eab13391e3fb3da34594b1d439958646aa443266ac9c",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000060": {
-      "name": "气吞山河",
-      "cost": 2,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000060_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row3-col6",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000060.html",
-      "imagePixelSha256": "66b6f0f3ad59df44a5316264b6ba7eeee69f0161f6bcc33164377cf4497ce6e8",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000067": {
-      "name": "紫气东来",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000067_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row4-col1",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000067.html",
-      "imagePixelSha256": "be7fd40a372666b8ff1c55eb249a5281106a92232d88d792502141ca90705a04",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000094": {
-      "name": "星弈•劫争",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000094_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row4-col2",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000094.html",
-      "imagePixelSha256": "76d9a2d329103e3506c522566beab61ac53ba1a57c519beb27856c6c76f2bda9",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000095": {
-      "name": "灵蛇绕柱",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000095_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row4-col3",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000095.html",
-      "imagePixelSha256": "464ac561f7389bdb428cb9216f4b97091076ef2fed4a88c9a1cdbc32c06f863c",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000096": {
-      "name": "折枝点穴",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000096_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row4-col4",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000096.html",
-      "imagePixelSha256": "a8da9f2f5436c58c8aaaead449db01d373f3733fb87c4ca67e171e045ca90e37",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000107": {
-      "name": "星弈•尖",
-      "cost": 1,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000107_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row4-col5",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000107.html",
-      "imagePixelSha256": "aba544d35577e4418678275d609495d96a84164b0028621f61385e1fd0718e6b",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
-    "4000109": {
-      "name": "魂咒卦诀",
-      "cost": 0,
-      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000109_zh.webp",
-      "evidence": "logs/seven-stars-cost-audit-1.png",
-      "grid": "row4-col6",
-      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000109.html",
-      "imagePixelSha256": "ac23ac56df3958ccc17f85f4ebbf70bafef1d211b43691d55f74c8daa60471b4",
-      "imageSize": [
-        308,
-        508
-      ]
-    },
     "7000001": {
       "name": "金灵印",
       "cost": 0,
@@ -1872,6 +1248,521 @@
       ],
       "evidence": "logs/sword-cost-audit-1.png",
       "grid": "row4-col6"
+    },
+    "4000003": {
+      "name": "震卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000003_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row1-col3",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000003.html",
+      "imagePixelSha256": "b3775c00e9b59b10e7723d2f30f73a61d4e9642dd8b7b747b71d28d6212ee53c",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000004": {
+      "name": "掌心雷",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000004_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row1-col4",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000004.html",
+      "imagePixelSha256": "dfc4a092b6a87d187e23817df9fa42280b47951f7c5bc2949265e8d2ac7954f7",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000008": {
+      "name": "星罗棋布",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000008_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row1-col5",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000008.html",
+      "imagePixelSha256": "a0b8f916ce8eb8b1f2851a16d153eb11e1a63f6e805128b2cc0e4497f8d78080",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000010": {
+      "name": "星弈•夹",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000010_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row1-col6",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000010.html",
+      "imagePixelSha256": "6df865a5944edb9c64d85a523057776f375b8ca652a78c15205064883f45c0d0",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000011": {
+      "name": "星弈•挡",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000011_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row2-col1",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000011.html",
+      "imagePixelSha256": "fb72449a6cbce87b354aa562b9f13cf9594b62ea8d519cc03ff1afeeb07f4569",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000023": {
+      "name": "斗转星移",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000023_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row2-col2",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000023.html",
+      "imagePixelSha256": "8280c1fc2f94ab3150a715411757128593a5dbdf4acf2c66b95609d3567b995b",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000009": {
+      "name": "星弈•立",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000009_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row2-col3",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000009.html",
+      "imagePixelSha256": "a7c410b909969c5296cac2b0bb4bd94ce03814422bf36b17c44666e67e972764",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000015": {
+      "name": "坎卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000015_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row2-col4",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000015.html",
+      "imagePixelSha256": "face780f6c759b21cb47bd052428f36e3583cb4162442575b9c54f29d379d4ad",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000018": {
+      "name": "气贯长虹",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000018_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row2-col5",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000018.html",
+      "imagePixelSha256": "04743b24e9da912d624fb5bbf4e4f36274c7535fe077720d433046ecd984f731",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000020": {
+      "name": "金鸡独立",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000020_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row2-col6",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000020.html",
+      "imagePixelSha256": "39b01dff6939b0932f1766152fee88ea8aa9110dd7a71fc3ec76611592173299",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000024": {
+      "name": "飞星刺",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000024_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row3-col2",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000024.html",
+      "imagePixelSha256": "8da896218b097694892c14d893bf29e966a15e8439afc4b5ef2f555555aab519",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000030": {
+      "name": "落雷术",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000030_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row3-col3",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000030.html",
+      "imagePixelSha256": "792a524222464fb16709e410512ce0e7916b4d5dfe6ffd3781d8ef7569d20f32",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000090": {
+      "name": "望星诀",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000090_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row3-col4",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000090.html",
+      "imagePixelSha256": "932dbe7b69aafc5f2eee3a6d4b8a695c5dee5ed4aacf6a15bdb2d357b0d2c89a",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000029": {
+      "name": "星弈•打",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000029_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row3-col6",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000029.html",
+      "imagePixelSha256": "f4dbc6ae597a8f4a5f1dfff61603a1b07ad583486b57e5e07644cdae15466356",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000032": {
+      "name": "众星拱月",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000032_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row4-col1",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000032.html",
+      "imagePixelSha256": "5350b5309b50aeb4ccc1d33e2dc8586a87e03362131a57091d280fbc214a8da5",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000033": {
+      "name": "海底捞月",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000033_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row4-col2",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000033.html",
+      "imagePixelSha256": "920c5dcf24822baa96e21abc93e7a508d3f10d990eb414c12fbaf77c2847fb3f",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000040": {
+      "name": "两仪阵",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000040_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row4-col3",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000040.html",
+      "imagePixelSha256": "a27e672ec0ef46744b179e2aa1bbc8fbffbc9827a7db8b39b1771e5e74e40522",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000043": {
+      "name": "螳螂捕蝉",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000043_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row4-col4",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000043.html",
+      "imagePixelSha256": "3d850a4720e00a7fedfdf5a4db6f5e4a701c8e817ad5152e10418afdb3cfb93f",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000068": {
+      "name": "御雷卦诀",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000068_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row4-col5",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000068.html",
+      "imagePixelSha256": "653b2c8729e0add3ee4488cd0e5802a7b134e1ad3b2e8ab0de555a15a32802fa",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000014": {
+      "name": "六爻绝阵",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000014_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row1-col1",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000014.html",
+      "imagePixelSha256": "d3b706aaf235fd0ab5b96bc40d40768cf2e4b4d95629ce59d93ccd04310f63e3",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000036": {
+      "name": "金蝉脱壳",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000036_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row1-col4",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000036.html",
+      "imagePixelSha256": "60057b191111ee888cffff3c0ef13a79910087461142e459c39498fd10b6d76c",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000038": {
+      "name": "星弈•飞",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000038_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row1-col5",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000038.html",
+      "imagePixelSha256": "75a32e75242c9aa9647c05000ddc23bb88117a74cd21ac9101f0f669bd44b72e",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000039": {
+      "name": "星弈•虎",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000039_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row1-col6",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000039.html",
+      "imagePixelSha256": "4c2ea308195fb15ce5695a4d99a6f20c3259113c516fb1f7e2bf5802156e2811",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000062": {
+      "name": "星轨推衍",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000062_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row2-col2",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000062.html",
+      "imagePixelSha256": "382e5a8fd8d39886b68f465c4b29ff6144129581b75656a23ac2dafd0c424519",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000063": {
+      "name": "轰雷掣电",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000063_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row2-col3",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000063.html",
+      "imagePixelSha256": "d72e122082cdfe47bb8601c083d82bb6e26852b9350bfc818bc14a6499f88520",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000093": {
+      "name": "星弈•长",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000093_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row2-col5",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000093.html",
+      "imagePixelSha256": "148e9897616beb8b3330dd234320f5e62f09a86a072239a6f3d4e9b0d65d3782",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000104": {
+      "name": "星弈•连",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000104_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row2-col6",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000104.html",
+      "imagePixelSha256": "7e854b42beab505e93e31f158ec8528991c5e6ffae5dbf3a2802ffceb7cbb37f",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000026": {
+      "name": "乾卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000026_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row3-col1",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000026.html",
+      "imagePixelSha256": "c87c5c7656d47b0ed4c1a174b3409568be34f5de10a2409beb9e5fab604bdfc3",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000041": {
+      "name": "梅开二度",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000041_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row3-col2",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000041.html",
+      "imagePixelSha256": "3cc62e5f6912c4909a5ff02e8c18c7348eb09dc7f748ba0dbcdff03d5ad0fc4d",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000044": {
+      "name": "星弈•断",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000044_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row3-col3",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000044.html",
+      "imagePixelSha256": "eded0fd1f0d90aff90227a6d1c5e572bf5a755eb456a00050958e8a56a15b3ea",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000045": {
+      "name": "天元心法",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000045_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row3-col4",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000045.html",
+      "imagePixelSha256": "b96db803395d8d2c8c5228f8677fa0a15eecee6cd529f7389c5151a3c71afdc4",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000046": {
+      "name": "五雷轰顶",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000046_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row3-col5",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000046.html",
+      "imagePixelSha256": "442c47a625762b5e6410eab13391e3fb3da34594b1d439958646aa443266ac9c",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000060": {
+      "name": "气吞山河",
+      "cost": 2,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000060_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row3-col6",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000060.html",
+      "imagePixelSha256": "66b6f0f3ad59df44a5316264b6ba7eeee69f0161f6bcc33164377cf4497ce6e8",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000094": {
+      "name": "星弈•劫争",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000094_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row4-col2",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000094.html",
+      "imagePixelSha256": "76d9a2d329103e3506c522566beab61ac53ba1a57c519beb27856c6c76f2bda9",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000107": {
+      "name": "星弈•尖",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000107_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row4-col5",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000107.html",
+      "imagePixelSha256": "aba544d35577e4418678275d609495d96a84164b0028621f61385e1fd0718e6b",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000013": {
+      "name": "藕断丝连",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000013_zh.webp",
+      "evidence": "原卡左上角目视复核：藕断丝连无灵气角标；揽雀尾为1灵气。",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000013.html",
+      "imagePixelSha256": "527ce34ae1ef8af59b2b055f770586ecf8ca098d4c76770c494f3f4b4b5ec128",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000061": {
+      "name": "揽雀尾",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000061_zh.webp",
+      "evidence": "原卡左上角目视复核：藕断丝连无灵气角标；揽雀尾为1灵气。",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000061.html",
+      "imagePixelSha256": "386270dcb42fe325e4029682e65c10c5dee2fd66f39ac18c3f722f41e0b31ad0",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000027": {
+      "name": "静气心法",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000027_zh.webp",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000027.html",
+      "evidence": "2026-10-21目视审核原图左上角费用；静气无角标，气疗与枯木各1灵气。",
+      "imageSize": [
+        308,
+        508
+      ],
+      "imagePixelSha256": "fdd0729c2c69ffff2d7aabd33e7ca8ad79c44fd5c5f8c888e73a9e0a9e33247c"
+    },
+    "4000017": {
+      "name": "气疗术",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000017_zh.webp",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000017.html",
+      "evidence": "2026-10-21目视审核原图左上角费用；静气无角标，气疗与枯木各1灵气。",
+      "imageSize": [
+        308,
+        508
+      ],
+      "imagePixelSha256": "d86102905ae2aa73500e5860a49dcc0de8e5f80749a09c7ed314ffe25efb3da8"
+    },
+    "4000042": {
+      "name": "枯木逢春",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000042_zh.webp",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000042.html",
+      "evidence": "2026-10-21目视审核原图左上角费用；静气无角标，气疗与枯木各1灵气。",
+      "imageSize": [
+        308,
+        508
+      ],
+      "imagePixelSha256": "2f3452e54034279a95da696955471503e92eab6108cf037af6d01b751d54ba23"
     }
   },
   "swordAudit": {
@@ -1885,5 +1776,196 @@
     "count": 96,
     "basis": "逐张目视复核两派各48张1级原卡左上灵气角标；无角标显式登记0。13张五行付费牌，11张七星付费牌，未发现与现有声明不一致。",
     "pixelHash": "SHA-256 of decoded RGBA pixels; independent of PNG/WebP encoding"
+  },
+  "retiredCards": {
+    "4000001": {
+      "name": "巽卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000001_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row1-col1",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000001.html",
+      "imagePixelSha256": "f07805d6996554639fcc6a7758d6f64131e2a1674201440bea29d4fac6131b36",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000002": {
+      "name": "坤卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000002_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row1-col2",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000002.html",
+      "imagePixelSha256": "3db3509994946460537aeb562b56e43b95e65c0b29f5b53ed7ee565fd1d23c41",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000021": {
+      "name": "落花有意",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000021_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row3-col1",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000021.html",
+      "imagePixelSha256": "1b6ba8d6f63fd48a3e7ce1690f86937b3cab72170eec44c91d5a4513124508f7",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000025": {
+      "name": "兑卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000025_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row3-col5",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000025.html",
+      "imagePixelSha256": "42888cd9c22183642f8bad6ef19f3fd054589d21f2451152097f28aa419c94bb",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000031": {
+      "name": "白蛇吐信",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000031_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-0.png",
+      "grid": "row4-col6",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000031.html",
+      "imagePixelSha256": "a26622531aa1d4ab7ef014464928cabab37257866880288833ee3467f5be45c5",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000034": {
+      "name": "离卦",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000034_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row1-col2",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000034.html",
+      "imagePixelSha256": "4d4e88105935e9a91d846385b815498d078127668819f3d31dae7230ebbd89eb",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000035": {
+      "name": "蜻蜓点水",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000035_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row1-col3",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000035.html",
+      "imagePixelSha256": "90147a1c6a0dbcb89b2bfb94e201306a030376c8c99d2ce9505f618ff62abb36",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000059": {
+      "name": "杯弓蛇影",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000059_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row2-col1",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000059.html",
+      "imagePixelSha256": "c92c942cf4dc462cf65c826bb87d1be4f4017722aab609fc32f6f16fc958c905",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000092": {
+      "name": "伤魂咒阵",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000092_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row2-col4",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000092.html",
+      "imagePixelSha256": "74e9e3c11b5eb9a8d51f2cd5d91df475c8d8438a63ea150a4ee8d40eb63fb756",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000067": {
+      "name": "紫气东来",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000067_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row4-col1",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000067.html",
+      "imagePixelSha256": "be7fd40a372666b8ff1c55eb249a5281106a92232d88d792502141ca90705a04",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000095": {
+      "name": "灵蛇绕柱",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000095_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row4-col3",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000095.html",
+      "imagePixelSha256": "464ac561f7389bdb428cb9216f4b97091076ef2fed4a88c9a1cdbc32c06f863c",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000096": {
+      "name": "折枝点穴",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000096_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row4-col4",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000096.html",
+      "imagePixelSha256": "a8da9f2f5436c58c8aaaead449db01d373f3733fb87c4ca67e171e045ca90e37",
+      "imageSize": [
+        308,
+        508
+      ]
+    },
+    "4000109": {
+      "name": "魂咒卦诀",
+      "cost": 0,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000109_zh.webp",
+      "evidence": "logs/seven-stars-cost-audit-1.png",
+      "grid": "row4-col6",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000109.html",
+      "imagePixelSha256": "ac23ac56df3958ccc17f85f4ebbf70bafef1d211b43691d55f74c8daa60471b4",
+      "imageSize": [
+        308,
+        508
+      ]
+    }
+  },
+  "starStarterRevision": {
+    "date": "2026-10-21",
+    "removed": [
+      "4000001",
+      "4000002"
+    ],
+    "added": [
+      "4000013",
+      "4000061"
+    ],
+    "paidCards": 12,
+    "freeCards": 36,
+    "basis": "只替换炼气两张牌；旧费用证据保留在retiredCards，不改变其他牌费用。"
+  },
+  "starThreeRouteAudit": {
+    "selectedCards": 40,
+    "paidCards": 14,
+    "freeCards": 26,
+    "basis": "2026-10-21三路线选牌；3张新增卡面已目视核对费用，移出证据保存在retiredCards。"
   }
 }

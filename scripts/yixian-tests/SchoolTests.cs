@@ -17,7 +17,7 @@ partial class Program
         {
             CardTableBridge.BuildCatalog(out var catalogCards,out var catalogPacks);
             Check(catalogCards.Count==nativeCards.Count+SectRegistry.Cards.Count,"combined card catalog");
-            Check(catalogPacks.Count==nativePacks.Count+SectRegistry.Packs.Count+FiveCardSelection.Entries.Count,"combined pack catalog");
+            Check(catalogPacks.Count==nativePacks.Count+SectRegistry.Packs.Count+1,"combined pack catalog");
             foreach(int index in Enumerable.Range(40,10))Check(catalogPacks[12+index-40].ShelfIndex==index,"legacy cp ordinal "+index);
             Check(catalogPacks[22].ShelfIndex==51&&catalogPacks[23].ShelfIndex==52,"v032 new ordinals preserved");
             Check(ReferenceEquals(CardTableCatalog.Cards,nativeCards)&&ReferenceEquals(CardTableCatalog.Packs,nativePacks),"catalog planning does not mutate native statics");
@@ -39,13 +39,13 @@ partial class Program
                 Check(player.RewardPoints==points&&player.Revision==revision,"rejection atomic");
                 Check(SectRegistry.CanAcquire(player,CardTableCatalog.LineageId.Value),"native lineage still allowed");
                 Check(!SectProgression.Refresh(player),"school handles progression");
-                Check(SectProgression.Owned(player).Count==2&&player.ActiveCardPackIds.Count==2,"only own two starter packs active");
-                Check(SectProgression.Owned(player).All(id=>SectRegistry.Owner(SectRegistry.FindPack(id))==school),"no cross-school gift");
-                SectProgression.Refresh(player);Check(player.PurchasedShelfAbilityIds.Count==2,"starter idempotent");
+                Check(SectProgression.Owned(player).Count==(school==FiveElementRules.Lineage?1:2)&&player.ActiveCardPackIds.Count==(school==FiveElementRules.Lineage?1:2),"only own two starter packs active");
+                Check(SectProgression.Owned(player).All(id=>(id==FiveDeckRules.PackId?FiveElementRules.Lineage:SectRegistry.Owner(SectRegistry.FindPack(id)))==school),"no cross-school gift");
+                SectProgression.Refresh(player);Check(player.PurchasedShelfAbilityIds.Count==(school==FiveElementRules.Lineage?17:2),"starter idempotent");
                 Check(!player.TryGetLineageRank(CardTableCatalog.LineageId,out var _),"school does not impersonate owned BL08");
                 var packs=SectProgression.Owned(player);long beforeActive=player.Revision;
                 Check(SectProgression.SetActive(player,packs).IsSuccess&&player.Revision==beforeActive,"unchanged active selection is a no-op success");
-                Check(SectProgression.SetActive(player,packs.AsEnumerable().Reverse().ToArray()).IsSuccess&&player.Revision==beforeActive+1,"active selection commits once");
+                Check(SectProgression.SetActive(player,packs.AsEnumerable().Reverse().ToArray()).IsSuccess&&player.Revision==beforeActive+(school==FiveElementRules.Lineage?0:1),"active selection commits once");
                 beforeActive=player.Revision;
                 Check(!SectProgression.SetActive(player,new[]{packs[0],packs[0]}).IsSuccess&&player.Revision==beforeActive,"duplicate active pack rejected atomically");
                 var foreign= SectRegistry.Packs.FirstOrDefault(p=>SectRegistry.Owner(p)!=school);

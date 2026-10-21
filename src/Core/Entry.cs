@@ -17,7 +17,6 @@ namespace YixianSect
             {
                 var table=context.Tables?["cardtable"] as JObject ?? throw new ArgumentException("缺少 tables.cardtable。");
                 SwordRules.Configure(table);
-                FiveCardSelection.Configure(JObject.Parse(System.IO.File.ReadAllText(System.IO.Path.Combine(context.PackageDirectory,"content","five-water-pilot.json"))));
                 CardTableBridge.InjectCatalog();
                 new Harmony(context.PackageId).PatchAll(typeof(Entry).Assembly);
                 OriginalHealthRules.Register(context);
@@ -25,6 +24,7 @@ namespace YixianSect
                 FateRules.Register(context);
                 FiveElementRules.Register(context);
                 SevenStarRules.Register(context);
+                SectDrawRules.Register(context);
                 RuntimeSelfTests.InstallIfRequested(context);
                 FateRuntimeTests.InstallIfRequested(context);
                 context.Log("弈仙门派：登记 "+SectRegistry.Sects.Count+" 门派、"+SectRegistry.Cards.Count+" 张卡、"+SectRegistry.Packs.Count+" 个卡包。");

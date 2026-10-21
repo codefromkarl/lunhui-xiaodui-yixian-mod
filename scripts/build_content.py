@@ -49,10 +49,11 @@ def main():
         for name in content:
             content[name]['operations'].extend(school.get(name, {}).get('operations', []))
         manifest['assets'].update(school.get('assets', {}))
-    from water_pilot_content import compile_pilot
-    pilot=read(ROOT / 'data/five-water-pilot.json')
-    compile_pilot(table,content,manifest,pilot)
-    write(MOD / 'content/five-water-pilot.json',pilot)
+    from five_deck_content import compile_deck
+    compile_deck(table, content, manifest)
+    retired = MOD / 'content/five-water-pilot.json'
+    if retired.exists():
+        retired.unlink()  # Generated configuration for the removed runtime feature.
     # Existing sword order is not sorted/rebuilt: cp~ native ordinals must stay stable.
     table['sectLineages'] = [s['id'] for s in table['sects']]
     for name, value in content.items():
@@ -61,11 +62,11 @@ def main():
     if len(table['sects']) > 1:
         manifest['version'] = '0.7.0'
         manifest['name'] = '弈仙门派'
-        manifest['description'] = '云灵剑宗、五行道盟、七星阁三大门派，涵盖五个境界，共144张卡牌、36个卡包与12项仙命。每名角色可加入一个弈仙门派，并搭配原生血统。'
+        manifest['description'] = '云灵剑宗、五行道盟、七星阁三大门派，涵盖五个境界，共136张卡牌与12项仙命；五行突破解锁两张，战斗中从本局牌库自选八张。每名角色可加入一个弈仙门派，并搭配原生血统。'
     manifest['economy'] = dict(shop=[dict(id=s['id'], conditions=dict(forbids=[other['id'] for other in table['sects'] if other['id'] != s['id']])) for s in table['sects']])
     write(MOD / 'mod.json', manifest)
-    lines = ['# 弈仙门派当前卡包与规则', '', '三个门派各五境界48张牌、12个四张包、4个独立仙命。', '']
-    lines.extend(['五行纯水试点新增8项水系单卡购买，原混系卡包保留；已购五行牌可自由选入抽牌池。详见 [纯水试点](pure-water-pilot-results.md)。', ''])
+    lines = ['# 弈仙门派当前卡包与规则', '', '三派各五境界、4个独立仙命；剑宗48张／12个四张包，七星40张／10个四张包，五行48张／一个固定八张卡包。', '']
+    lines.extend(['五行入宗解锁八张炼气牌；突破从当前境界解锁两张，保留旧牌。战斗中从已解锁牌库免费选八张，保存保留手牌。原12组仅作资料分类，不出售或启用。详见 [五行道盟](five-elements.md)。', ''])
     for sect in table['sects']:
         lines.extend(['## ' + sect['name'], '', sect['summary'], '', sect['rulesDescription'], ''])
         for fate in table['fates']:

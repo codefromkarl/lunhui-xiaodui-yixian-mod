@@ -11,6 +11,8 @@
     <GenerateDependencyFile>false</GenerateDependencyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Reincarnation.Network" HintPath="$(GameManaged)/Reincarnation.Network.dll" Private="false" />
+    <Reference Include="Mirror" HintPath="$(GameManaged)/Mirror.dll" Private="false" />
     <Reference Include="Reincarnation.Domain" HintPath="$(GameManaged)\Reincarnation.Domain.dll" Private="false" />
     <Reference Include="Reincarnation.Config" HintPath="$(GameManaged)\Reincarnation.Config.dll" Private="false" />
     <Reference Include="Reincarnation.Runtime" HintPath="$(GameManaged)\Reincarnation.Runtime.dll" Private="false" />

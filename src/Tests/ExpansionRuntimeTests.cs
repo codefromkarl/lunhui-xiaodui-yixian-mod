@@ -13,20 +13,20 @@ namespace YixianSect
             var progress=new JArray();var cards=new JArray();var fates=new JArray();
             foreach(int rank in Enumerable.Range(1,5))
             {
-                var f=New(rank,school:school,buyCurrent:false);int gifts=rank==1?2:3;
+                var f=New(rank,school:school,buyCurrent:false);int gifts=school==FiveElementRules.Lineage?1:rank==1?2:3;
                 Require(SectProgression.Owned(f.P).Count==gifts,"only starter and foundation choice gifted: "+school+"/"+rank);
                 foreach(var pack in SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==school&&(int)p["price"]>0))
                 {
                     var id=SectRegistry.PackId(pack);if(f.P.HasPurchasedShelfAbility(id))continue;
                     int points=f.P.RewardPoints;long revision=f.A.Run.Revision;
                     var result=f.Send(RunCommand.PurchaseShelfAbility(Slot,id,revision));
-                    bool allowed=(int)pack["rank"]<=rank;
+                    bool allowed=school!=FiveElementRules.Lineage&&(int)pack["rank"]<=rank;
                     Require(result.IsSuccess==allowed,"expanded native pack gate "+pack["name"]);
                     Require(f.P.RewardPoints==points-(allowed?(int)pack["price"]:0),"expanded native pack price");
                     if(!allowed)Require(f.A.Run.Revision==revision,"locked pack mutated run");
                 }
                 var own=SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==school&&(int)p["rank"]<=rank).ToList();
-                Require(SectProgression.Owned(f.P).Count==own.Count&&f.P.ActiveCardPackIds.Count<=8,"all lower packs/active cap");
+                Require(SectProgression.Owned(f.P).Count==(school==FiveElementRules.Lineage?1:own.Count)&&f.P.ActiveCardPackIds.Count<=8,"all lower packs/active cap");
                 foreach(var pair in SectRegistry.Fates.Where(p=>SectRegistry.Owner(p.Value)==school))
                 {
                     var id=new StableId(pair.Key);int points=f.P.RewardPoints;long revision=f.A.Run.Revision;
@@ -78,9 +78,9 @@ namespace YixianSect
             var visual=New(5,school:school);visual.StartBattle();var snapshot=RunAuthoritySnapshotProjector.Create(visual.A,Slot);var player=snapshot.Players.First(p=>p.Slot==Slot);
             var model=BattleUIPresentationMapper.BuildCardTable(snapshot,player,data,battles);
             var high= SectRegistry.Packs.First(p=>SectRegistry.Owner(p)==school&&(int)p["rank"]==5);
-            VisualSelfTests.Run(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(path),System.IO.Path.GetFileNameWithoutExtension(path),school+"-high"),model,player,snapshot,data,battles,SectRegistry.PackId(high).Value,false);
-            Require(cards.Count==48&&fates.Count==4,"expanded content inventory");
-            return new JObject{["school"]=school,["progression"]=progress,["cards"]=cards,["fates"]=fates,["all_cards_executed"]=48,["hub_save_restore"]=true,["actual_passive_hooks"]=true};
+            VisualSelfTests.Run(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(path),System.IO.Path.GetFileNameWithoutExtension(path),school+"-high"),model,player,snapshot,data,battles,(school==FiveElementRules.Lineage?FiveDeckRules.PackId:SectRegistry.PackId(high)).Value,false);
+            Require(cards.Count==(school==SevenStarRules.Lineage?40:48)&&fates.Count==4,"expanded content inventory");
+            return new JObject{["school"]=school,["progression"]=progress,["cards"]=cards,["fates"]=fates,["all_cards_executed"]=cards.Count,["hub_save_restore"]=true,["actual_passive_hooks"]=true};
         }
     }
 }

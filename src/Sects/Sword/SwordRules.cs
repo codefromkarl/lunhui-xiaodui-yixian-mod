@@ -195,8 +195,19 @@ namespace YixianSect
                 t.Set("intent",intent-usedIntent);if(sword)t.Set("pierce",0);
                 t.Add("attacks",1);
                 t.Set("pending",Text(card,"key"));t.Set("spentIntent",usedIntent);
+                var selected=t.C.Action?.SelectedTarget??default;
+                var primary=targets.Contains(selected)?selected:targets.FirstOrDefault();
+                t.Set("primaryTarget",primary.Value);
                 t.Set("hitHandled",0);
                 t.Damage(targets,amount,hits,pierce);
+                var area=card["area"] as JObject;
+                var secondary=SwordTargeting.Select(SwordTargeting.For(t.C),t.Actor.RuntimeId,primary,card,linked)
+                    .Where(id=>!targets.Contains(id)).ToArray();
+                t.Set("areaTargets","");
+                if(area!=null && Text(area,"shape")=="splash")
+                    t.Set("areaTargets",string.Join("\n",secondary.Select(id=>id.Value)));
+                else foreach(var id in secondary)
+                    t.Damage(new[]{id},FixedPointMath.ScaleByBasisPointsFloor(amount,Int(area,"secondaryBp")),hits,pierce);
             }
             else if(!repeated) t.Set("pending","");
             t.Shield(shield);
@@ -244,7 +255,8 @@ namespace YixianSect
             {
                 var t=new Turn(c,p,u);var key=t.Str("pending");
                 if(key.Length==0 || t.Get("hitHandled")!=0 || !Cards.TryGetValue(CardPrefix+key,out var card)) continue;
-                var hits=c.Hits.Where(h=>h.Source==u.RuntimeId && h.HealthDamage>0 && Find(c,h.Target)?.Side!=u.Side).ToList();
+                var primary=new StableId(t.Str("primaryTarget"));
+                var hits=c.Hits.Where(h=>h.Source==u.RuntimeId && h.Target==primary && h.Direct && h.HealthDamage>0 && Find(c,h.Target)?.Side!=u.Side).ToList();
                 if(hits.Count==0) continue;
                 // Commit the guard before supplemental damage: it must not retrigger itself.
                 t.Set("hitHandled",1);
@@ -253,7 +265,15 @@ namespace YixianSect
                 {
                     // A health-hit payoff is damage, not a second attack that can miss.
                     // The SDK damage effect applies physical mitigation in the same plan transaction.
-                    case "thunder":p.Damage(u.RuntimeId,hits[0].Target,Value(r,"hitDamage",u.Attributes.GetValueOrDefault()),DamageType.Physical);break;
+                    case "thunder":
+                        int payoff=Value(r,"hitDamage",u.Attributes.GetValueOrDefault());
+                        p.Damage(u.RuntimeId,primary,payoff,DamageType.Physical);
+                        var area=card["area"] as JObject;
+                        int splash=FixedPointMath.ScaleByBasisPointsFloor(payoff,area==null?0:Int(area,"secondaryBp"));
+                        foreach(var id in t.Str("areaTargets").Split(new[]{'\n'},StringSplitOptions.RemoveEmptyEntries).Select(s=>new StableId(s)))
+                            if(splash>0 && Find(c,id) is ModCombatantSnapshot areaTarget && !areaTarget.IsDowned && areaTarget.Side!=u.Side && areaTarget.Kind!=CombatantKind.AuxiliaryTarget)
+                                p.Damage(u.RuntimeId,id,splash,DamageType.Physical);
+                        break;
                     case "returnIntent":t.Add("intent",t.Get("spentIntent"));break;
                     case "intent3":t.Add("intent",3);break;
                     case "shieldDamage":t.Shield(health);break;
@@ -271,7 +291,7 @@ namespace YixianSect
         public static void Resolved(ModBattleContext c,CodeBattlePlan p)
         {
             var u=Find(c,c.ActorId);if(!IsSect(u)) return;
-            var t=new Turn(c,p,u);t.Set("pending","");
+            var t=new Turn(c,p,u);t.Set("pending","");t.Set("primaryTarget","");t.Set("areaTargets","");
             if(!FateRules.Has(u,FateRules.CloudSea) && !Cards.ContainsKey(c.ActionId.Value) && CardTableCatalog.TryGetCard(c.ActionId,out var _)){t.Set("cloud",0);SyncView(t);}
         }
     }

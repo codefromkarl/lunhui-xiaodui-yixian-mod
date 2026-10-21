@@ -22,7 +22,7 @@ namespace YixianSect
         private static void Postfix(RunPlayerSnapshot player,CardTableViewModel __result)
         {
             if(__result==null||player==null||player.Lineages.Any(l=>l.LineageId==CardTableCatalog.LineageId))return;
-            var schools=player.Lineages.Where(l=>l.Rank>0&&SwordBuilds.RoutesFor(l.LineageId.Value).Count>0).ToArray();
+            var schools=player.Lineages.Where(l=>l.Rank>0&&l.LineageId.Value!=FiveElementRules.Lineage&&SwordBuilds.RoutesFor(l.LineageId.Value).Count>0).ToArray();
             if(schools.Length==0)return;
             var school=schools[0];
             Contexts.Remove(__result);Contexts.Add(__result,new SwordBuildContext{Rank=school.Rank,School=school.LineageId.Value});
@@ -46,7 +46,7 @@ namespace YixianSect
         private static void Postfix(CardTablePackPanel __instance)
         {
             var model=Read<CardTableViewModel>(__instance,"model");
-            if(model==null||FiveDeckPanel.CardsMode(__instance)||Read<bool>(__instance,"fate")||!SwordBuildPresentation.Contexts.TryGetValue(model,out var context))
+            if(model==null||Read<bool>(__instance,"fate")||!SwordBuildPresentation.Contexts.TryGetValue(model,out var context))
             {
                 if(Views.TryGetValue(__instance,out var previous))previous.Root.SetActive(false);
                 return;

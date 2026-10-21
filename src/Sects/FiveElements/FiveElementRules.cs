@@ -92,14 +92,12 @@ namespace YixianSect
         public static void Start(ModBattleContext context, CodeBattlePlan plan)
         {
             var deckMasks = context.Units.ToDictionary(u => u.RuntimeId, u => plan.GetInt(SectRegistry.StateKey(Lineage, u.RuntimeId, "deckElements")));
-            var mastery = context.Units.ToDictionary(u=>u.RuntimeId,u=>plan.GetInt(SectRegistry.StateKey(Lineage,u.RuntimeId,"waterMastery")));
             BattleTurn.Reset(context, plan, Lineage);
             foreach (var actor in context.Units.Where(u => !u.IsDowned && SectRegistry.Rank(u, Lineage) > 0))
             {
                 var t = new BattleTurn(context, plan, Lineage, actor);
                 foreach (var key in new[] { "dive", "iron" }) plan.ClearStatus(actor.RuntimeId, new StableId(StatusPrefix + key));
                 t.Set("deckElements", deckMasks[actor.RuntimeId]);
-                if(deckMasks[actor.RuntimeId]==2&&mastery[actor.RuntimeId]>0&&SectRegistry.Rank(actor,Lineage)>=FiveCardSelection.WaterMasteryMinimumRank)t.Set("waterMastery",1);
                 FiveFateRules.Start(t); View(t);
             }
         }
@@ -121,7 +119,6 @@ namespace YixianSect
             if (I(r, "array") > 0 || I(r, "activationArray") > 0) { t.Set("consumed." + (string)card["key"], 1); Add(t, "persistentCount", 1); }
             if (element > 0 && t.Get("nextActivate") > 0) { t.Set("nextActivate", t.Get("nextActivate") - 1); Activate(t, element); }
             if (I(r, "activate") > 0) Activate(t, I(r, "activate"));
-            if(element!=2&&t.Get("waterMastery")>0)t.Set("waterMastery",0);
             bool ready = ElementReady(t, element); int id = I(r, "originalRule");
             t.Set("pendingMetalReady", ElementReady(t, 1) ? 1 : 0); t.Set("pendingWaterReady", ElementReady(t, 2) ? 1 : 0);
             // Post-attack gains are committed at ActionResolved, after actual health-hit processing.
@@ -282,7 +279,7 @@ namespace YixianSect
             foreach (var actor in context.Units.Where(u => !u.IsDowned && SectRegistry.Rank(u, Lineage) > 0))
             {
                 var t = new BattleTurn(context, plan, Lineage, actor); if (t.Get("endTick") == context.Round) continue; t.Set("endTick", context.Round);
-                NonAttackDamage(t, t.Get("waterForce") * 3 * (t.Get("waterMastery")>0&&t.Get("deckElements")==2&&SectRegistry.Rank(actor,Lineage)>=FiveCardSelection.WaterMasteryMinimumRank?FiveCardSelection.WaterMasteryMultiplier:1)); View(t);
+                NonAttackDamage(t, t.Get("waterForce") * 3); View(t);
             }
         }
     }

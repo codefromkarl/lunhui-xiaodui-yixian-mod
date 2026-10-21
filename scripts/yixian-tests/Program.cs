@@ -33,10 +33,11 @@ partial class Program
   var e=new CombatantState(EnemyId,new StableId("enemy.test"),CombatantKind.Enemy,CombatSide.Enemy,FormationRow.Front,300,20,0,0,0,BuffCatalog.Empty);
   return (ModCombatantSnapshot)PrivateCtor(typeof(ModCombatantSnapshot),e,ModUnitLoadout.None,null,null,null,null);
  }
- static ModBattlePlan Run(Action<ModBattleContext,CodeBattlePlan> handler,StableId action=default,ModStateSnapshot state=null,int round=1,ModCombatantSnapshot actor=null,ModBattleHit[] hits=null,ModCombatantSnapshot[] extra=null)
+ static ModBattlePlan Run(Action<ModBattleContext,CodeBattlePlan> handler,StableId action=default,ModStateSnapshot state=null,int round=1,ModCombatantSnapshot actor=null,ModBattleHit[] hits=null,ModCombatantSnapshot[] extra=null,StableId target=default)
  {
   actor??=Unit();var units=new List<ModCombatantSnapshot>{actor,Enemy()};if(extra!=null)units.AddRange(extra);
-  var request=new ModActionRequest(action.Value,action,new[]{EnemyId},EnemyId,FormationRow.Front,Array.Empty<BattleEffectValue>(),false);
+  if(target.IsEmpty)target=!action.IsEmpty&&SectRegistry.Cards.TryGetValue(action.Value,out var card)&&(bool?)card["targetAlly"]==true?actor.RuntimeId:EnemyId;
+  var request=new ModActionRequest(action.Value,action,new[]{target},target,FormationRow.Front,Array.Empty<BattleEffectValue>(),false);
   var c=new ModBattleContext(ModBattleHook.ScriptedAction,1,1,round,actor.RuntimeId,action,units,state??ModStateSnapshot.Empty,new DeterministicRngState(17,3,0),actor.RuntimeId,default,hits,null,request,"test.battle");
   var p=(CodeBattlePlan)PrivateCtor(typeof(CodeBattlePlan),"yixian.sect",c);handler(c,p);
   return (ModBattlePlan)Method(typeof(CodeBattlePlan),"Build").Invoke(p,null);
@@ -51,7 +52,6 @@ partial class Program
  static void CatalogTests()
  {
   var table=JObject.Parse(File.ReadAllText(Mod+"/content/cardtable.json"));SwordRules.Configure(table);
-  FiveCardSelection.Configure(JObject.Parse(File.ReadAllText(Mod+"/content/five-water-pilot.json")));
   Check(SwordRules.Cards.Count==48 && SwordRules.Packs.Count==12,"inventory");
   var source=JArray.Parse(File.ReadAllText("data/sources/sword-original-cards.json"));
   foreach(JObject c in table["cards"].Where(c=>SectRegistry.Owner((JObject)c)==SwordRules.Lineage))
@@ -255,7 +255,7 @@ partial class Program
  static int Main(string[] args)
  {
   AppDomain.CurrentDomain.AssemblyResolve+=(s,e)=>{var p=Managed+"/"+new AssemblyName(e.Name).Name+".dll";return File.Exists(p)?Assembly.LoadFrom(p):null;};
-  try{CatalogTests();if(args.Contains("--balance-plans")){BalancePlannerAudit();return 0;}PatchTargets();ProgressionTests();SwordBuildTests();BuildAdjustmentTests();FiveSelectionTests();BattleTests();CardCostTests();DescriptionTests();SchoolTests();IdentityTests();FiveExpansionTests();StarExpansionTests();ExpansionIntegrationTests();OriginalPrimitivesTests();Console.WriteLine("PASS total checks "+checks+"; .NET 8 isolated tests, no Unity process/save changes.");return 0;}
+  try{CatalogTests();if(args.Contains("--balance-plans")){BalancePlannerAudit();return 0;}if(args.Contains("--sword-areas")){PatchTargets();BattleTests();SwordAreaTests();CardCostTests();DescriptionTests();Console.WriteLine("PASS sword area checks "+checks+"; isolated planners and snapshot projection, not game Mono/render acceptance.");return 0;}PatchTargets();ProgressionTests();SwordBuildTests();BuildAdjustmentTests();FiveDeckTests();BattleTests();SwordAreaTests();RoundDrawTests();CardCostTests();DescriptionTests();SchoolTests();IdentityTests();FiveExpansionTests();StarExpansionTests();ExpansionIntegrationTests();OriginalPrimitivesTests();Console.WriteLine("PASS total checks "+checks+"; .NET 8 isolated tests, no Unity process/save changes.");return 0;}
   catch(Exception e){Console.Error.WriteLine(e);return 1;}
  }
 }

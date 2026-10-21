@@ -15,6 +15,8 @@ def run_arm(arm,low,game,timeout):
     name='carryover-main' if arm=='carryover' else ('before-' if arm=='legacy' else 'after-')+suffix
     if low and arm=='carryover':raise ValueError('carryover currently uses the main attribute cohort')
     config=game/'Mods/yixian.sect/content/five-water-pilot.json'
+    if not config.is_file():
+        raise RuntimeError("当前五行已改为固定八张卡包；纯水试点只支持保留的旧版本测试副本。")
     original=config.read_bytes();value=json.loads(original);value['waterMasteryMultiplier']=1 if arm=='plain' else 2
     try:
         config.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n')

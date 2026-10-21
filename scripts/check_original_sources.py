@@ -41,11 +41,12 @@ def main(only=None):
         if only and folder != only: continue
         school = read(ROOT / 'data' / folder / 'school.json')
         prefix = '700' if folder == 'five-elements' else '400'
-        check_face_costs(school['cards'], costs, prefix)
-        check_face_costs(read(ROOT / 'mod/yixian.sect/content/cardtable.json')['cards'], costs, prefix)
+        expected = 40 if folder == 'seven-stars' else 48
+        check_face_costs(school['cards'], costs, prefix, expected)
+        check_face_costs(read(ROOT / 'mod/yixian.sect/content/cardtable.json')['cards'], costs, prefix, expected)
         original = {c['id']: c for c in read(SOURCES / (catalog + '-cards.json'))}
-        assert len(school['cards']) == 48
-        assert len({str(c['sourceId']) for c in school['cards']}) == 48
+        assert len(school['cards']) == expected
+        assert len({str(c['sourceId']) for c in school['cards']}) == expected
         for card in school['cards']:
             sid = str(card['sourceId']); source = original[sid]
             assert name(card['name']) == name(source['name']), card['name']
@@ -65,11 +66,11 @@ def main(only=None):
                 assert pixels == after.convert('RGBA').tobytes(), 'original artwork pixels changed: ' + card['name']
                 assert list(before.size) == costs[sid]['imageSize'] and hashlib.sha256(pixels).hexdigest() == costs[sid]['imagePixelSha256'], 'inspected original artwork changed: ' + card['name']
             count += 1
-        assert len(school['packs']) == 12
-        assert [sum(p['rank'] == r for p in school['packs']) for r in range(1, 6)] == [2, 2, 2, 3, 3]
+        assert len(school['packs']) == (10 if folder == 'seven-stars' else 12)
+        assert [sum(p['rank'] == r for p in school['packs']) for r in range(1, 6)] == ([2, 2, 2, 2, 2] if folder == 'seven-stars' else [2, 2, 2, 3, 3])
         assert len(school['fates']) == 4 and all(f.get('sourceIconUrl') for f in school['fates'])
     if only is None:
-        print(f'PASS original sources: {count} original card-face costs with pixel hashes; 96 five/star names, realms, level-1 texts, original PNG art and explicit adaptations')
+        print(f'PASS original sources: {count} original card-face costs with pixel hashes; 88 five/star names, realms, level-1 texts, original PNG art and explicit adaptations')
     else:
         print(f'PASS original sources: {count} school cards, original names/realms/text/costs/art/adaptations')
 

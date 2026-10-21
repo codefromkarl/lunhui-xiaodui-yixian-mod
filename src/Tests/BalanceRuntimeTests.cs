@@ -21,7 +21,7 @@ namespace YixianSect
             var rows=new JArray();
             string output=Path.Combine(Path.GetDirectoryName(path),"balance-"+Path.GetFileName(path));
             var result=new JObject{["schema"]=1,["scope"]="real commands, random hand, bounded endurance resource probe; not campaign/win-rate evidence",
-                ["config"]=config,["rows"]=rows,["water_mastery_multiplier"]=FiveCardSelection.WaterMasteryMultiplier};
+                ["config"]=config,["rows"]=rows,["five_deck_size"]=FiveDeckRules.Size};
             using(var hash=SHA256.Create())
                 result["content_sha256"]=BitConverter.ToString(hash.ComputeHash(File.ReadAllBytes(Path.Combine(context.PackageDirectory,"content","cardtable.json")))).Replace("-","").ToLowerInvariant();
             foreach(string schoolKey in config["schools"]?.Values<string>()??new[]{"sword","five","star"})
@@ -30,16 +30,16 @@ namespace YixianSect
                 for(int rank=1;rank<=5;rank++)
                 {
                     if(config["ranks"]!=null&&!config["ranks"].Values<int>().Contains(rank))continue;
-                    var profiles=new[]{"gifts","newest"}.Concat(((JObject)config["routes"][schoolKey]).Properties().Select(p=>p.Name)).ToArray();
+                    var profiles=schoolKey=="five" ? ((JObject)config["fiveDeckUnlocks"] ?? throw new InvalidOperationException("五行已改为固定八张；请使用包含fiveDeckUnlocks的新配置，旧混包、强制换牌与纯水结果仅作历史。" )).Properties().Select(p=>p.Name).ToArray() : new[]{"gifts","newest"}.Concat(((JObject)config["routes"][schoolKey]).Properties().Select(p=>p.Name)).ToArray();
                     foreach(string profile in profiles)
                         foreach(string policy in config["policies"].Values<string>())
                             for(int si=0;si<seeds.Length;si++)
-                                foreach(int foundation in config["foundationChoices"]?.Values<int>()??new[]{si%2})
+                                foreach(int foundation in schoolKey=="five"?new[]{0}:config["foundationChoices"]?.Values<int>()??new[]{si%2})
                                     rows.Add(BalanceBattle(config,schoolKey,school,rank,profile,policy,seeds[si],foundation,false));
                     if(config["fateSensitivityRanks"].Values<int>().Contains(rank))
-                        foreach(string profile in profiles.Skip(2))
+                        foreach(string profile in schoolKey=="five"?profiles:profiles.Skip(2))
                             for(int si=0;si<seeds.Length;si++)
-                                foreach(int foundation in config["foundationChoices"]?.Values<int>()??new[]{si%2})
+                                foreach(int foundation in schoolKey=="five"?new[]{0}:config["foundationChoices"]?.Values<int>()??new[]{si%2})
                                     rows.Add(BalanceBattle(config,schoolKey,school,rank,profile,"setup_resource",seeds[si],foundation,true));
                     File.WriteAllText(output,result.ToString());
                     context.Log("[Balance] "+schoolKey+" rank "+rank+"; rows="+rows.Count);
@@ -50,8 +50,8 @@ namespace YixianSect
             File.WriteAllText(output,result.ToString());
             Require(errors==0,"balance probe errors: "+errors+"; see "+output);
             var contract=(bool?)config["productionRecommendations"]==true?BuildAdjustmentContract():null;
-            var waterContract=(bool?)config["waterPilotContract"]==true?WaterPilotContract():null;
-            return new JObject{["water_pilot_contract"]=waterContract,["matches"]=rows.Count,["errors"]=errors,["artifact"]=output,["seed_count"]=seeds.Length,["round_budget"]=rounds,["play_cap"]=cap,["recommendation_contract"]=contract};
+            var waterContract=(bool?)config["fiveDeckContract"]==true?FiveFixedDeckContract():null;
+            return new JObject{["five_deck_contract"]=waterContract,["matches"]=rows.Count,["errors"]=errors,["artifact"]=output,["seed_count"]=seeds.Length,["round_budget"]=rounds,["play_cap"]=cap,["recommendation_contract"]=contract};
         }
 
         private JObject BalanceBattle(JObject config,string schoolKey,string school,int rank,string profile,string policy,ulong seed,int foundation,bool fates)
@@ -64,38 +64,24 @@ namespace YixianSect
                 var sect=new StableId(school);int before=f.P.RewardPoints;
                 var schoolPacks=SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==school).ToArray();
                 Require(foundation==0||foundation==1,"invalid foundation choice");
-                bool waterProfile=schoolKey=="five"&&(config["pureWaterProfiles"]?.Values<string>().Contains(profile)??false);
-                int waterCardRank=(int?)config["waterCardRankLimit"]?[profile]??rank;
-                int stagedSpend=0;bool carriedWaterPool=false;
+                bool fixedDeck=schoolKey=="five";
                 var foundationPacks=schoolPacks.Where(p=>(int)p["rank"]==2).ToArray();
                 for(int r=2;r<=rank;r++)
                 {
-                    var choice=r==2?PackId(foundationPacks[foundation]):default(StableId);
-                    Require(f.Send(RunCommand.PurchaseOrUpgradeLineage(Slot,sect,f.A.Run.Revision,choice)).IsSuccess,"balance rank purchase");
-                    if(waterProfile&&r==waterCardRank&&waterCardRank<rank)
+                    StableId choice;
+                    if(fixedDeck)
                     {
-                        int stagePoints=f.P.RewardPoints;
-                        foreach(var e in FiveCardSelection.Entries.Where(e=>(int)e["rank"]<=waterCardRank&&(int?)SectRegistry.Cards[SectRegistry.CardPrefix+(string)e["cardKey"]]["element"]==2))
-                            if(!FiveCardSelection.Owns(f.P,e))f.Buy(FiveCardSelection.Id(e));
-                        stagedSpend+=stagePoints-f.P.RewardPoints;
-                        Require(f.P.SetActiveCardPacks(FiveCardSelection.Water(f.P)).IsSuccess,"stage lower realm water pool before breakthrough");carriedWaterPool=true;
+                        var sources=config["fiveDeckUnlocks"]?[profile]?[r.ToString()]?.Values<string>().ToArray();
+                        Require(sources!=null&&sources.Length==2,"library route must name two current-realm unlock source IDs");
+                        choice=new StableId("five-learn~"+r+"~"+string.Join("~",sources));
                     }
+                    else choice=r==2?PackId(foundationPacks[foundation]):default;
+                    Require(f.Send(RunCommand.PurchaseOrUpgradeLineage(Slot,sect,f.A.Run.Revision,choice)).IsSuccess,"balance rank purchase");
                 }
-                row["rank_cost_after_entry"]=before-f.P.RewardPoints-stagedSpend;
+                row["rank_cost_after_entry"]=before-f.P.RewardPoints;
                 var eligible=schoolPacks.Where(p=>(int)p["rank"]<=rank).ToArray();
-                bool pureWater=waterProfile;
-                var pureActive=new List<StableId>();
-                int singleSpend=0;
-                if(pureWater)
-                {
-                    int initialPoints=f.P.RewardPoints;
-                    foreach(var e in FiveCardSelection.Entries.Where(e=>(int)e["rank"]<=Math.Min(rank,waterCardRank)&&(int?)SectRegistry.Cards[SectRegistry.CardPrefix+(string)e["cardKey"]]["element"]==2))
-                        if(!FiveCardSelection.Owns(f.P,e))f.Buy(FiveCardSelection.Id(e));
-                    singleSpend=initialPoints-f.P.RewardPoints+stagedSpend;pureActive=FiveCardSelection.Water(f.P).ToList();
-                    row["selection_source"]=carriedWaterPool?"lower_realm_pool_carried_through_breakthrough":"production_water_card_recommendation";
-                }
                 JObject[] wanted;
-                if(pureWater)wanted=Array.Empty<JObject>();
+                if(fixedDeck)wanted=Array.Empty<JObject>();
                 else if(profile=="gifts")wanted=eligible.Where(p=>f.P.HasPurchasedShelfAbility(PackId(p))).ToArray();
                 else if(profile=="newest")wanted=eligible.OrderByDescending(p=>(int)p["rank"]).ThenBy(p=>(int)p["index"]).Take(3).ToArray();
                 else
@@ -123,18 +109,25 @@ namespace YixianSect
                     }
                 }
                 before=f.P.RewardPoints;
-                if(!pureWater&&(config["extraPacksByRank"]?[schoolKey]?[profile]?[rank.ToString()]??config["extraPacks"]?[schoolKey]?[profile]) is JArray extra)
+                if(!fixedDeck&&(config["extraPacksByRank"]?[schoolKey]?[profile]?[rank.ToString()]??config["extraPacks"]?[schoolKey]?[profile]) is JArray extra)
                     wanted=wanted.Concat(extra.Values<string>().Select(key=>eligible.Single(p=>(string)p["key"]==key))).Distinct().ToArray();
                 foreach(var pack in wanted)if(!f.P.HasPurchasedShelfAbility(PackId(pack)))f.Buy(PackId(pack));
-                row["pack_spend"]=before-f.P.RewardPoints+singleSpend;
-                var active=pureWater?pureActive:wanted.Select(PackId).ToList();
-                foreach(var id in SectProgression.Owned(f.P))if(!pureWater&&active.Count<Math.Min(3,SectProgression.Owned(f.P).Count)&&!active.Contains(id))active.Add(id);
+                row["pack_spend"]=before-f.P.RewardPoints;
+                var active=fixedDeck?new List<StableId>{FiveDeckRules.PackId}:wanted.Select(PackId).ToList();
+                foreach(var id in SectProgression.Owned(f.P))if(!fixedDeck&&active.Count<Math.Min(3,SectProgression.Owned(f.P).Count)&&!active.Contains(id))active.Add(id);
                 // Equal sets must map a common RNG seed to an equal pool order.
-                active=active.OrderBy(id=>(int)(FiveCardSelection.Find(id)??schoolPacks.Single(p=>PackId(p)==id))["index"]).ToList();
-                if(carriedWaterPool)Require(f.P.ActiveCardPackIds.SequenceEqual(active),"breakthrough did not preserve lower realm pool");
-                else Require(f.P.SetActiveCardPacks(active).IsSuccess,"balance pack selection");
+                if(!fixedDeck)active=active.OrderBy(id=>(int)schoolPacks.Single(p=>PackId(p)==id)["index"]).ToList();
+                Require(f.P.SetActiveCardPacks(active).IsSuccess,"balance pack selection");
                 row["packs"]=new JArray(active.Select(id=>id.Value));
-                row["draw_pool"]=new JArray(FiveCardSelection.ActiveCards(f.P).Select(id=>id.Value));
+                row["draw_pool"]=new JArray(FiveDeckRules.ActiveCards(f.P).Select(id=>id.Value));
+                if(fixedDeck && config["fiveDeckSelections"]?[profile]?[rank.ToString()] is JArray deckSources)
+                {
+                    var answer=new StableId("five-deck~"+string.Join("~",deckSources.Values<string>()));
+                    // Stage the same legal choice in the hub fixture; runtime contract
+                    // below separately covers the authoritative battle command.
+                    Require(FiveDeckRules.TrySelection(answer,out var selection)&&FiveDeckRules.SetDeck(f.P,selection).IsSuccess,"configured eight-card selection invalid");
+                    row["draw_pool"]=new JArray(FiveDeckRules.Cards(f.P).Select(id=>id.Value));
+                }
                 before=f.P.RewardPoints;
                 if(fates)
                 {

@@ -50,15 +50,12 @@ namespace YixianSect
                 AccessTools.Field(typeof(CardTablePack),"<CardIds>k__BackingField").SetValue(pack,Array.AsReadOnly(((JArray)row["cards"]).Values<string>().Select(k=>new StableId(SectRegistry.CardPrefix+k)).ToArray()));
                 packs.Add(pack);
             }
-            foreach(var row in FiveCardSelection.Entries)
-            {
-                if(packs.Any(p=>p.ShelfIndex==(int)row["index"]&&p.UnlockAbilityId!=FiveCardSelection.Id(row)))throw new ArgumentException("选牌目录编号冲突。");
-                if(packs.Any(p=>p.UnlockAbilityId==FiveCardSelection.Id(row)))continue;
-                var pack=(CardTablePack)packCtor.Invoke(new object[]{(string)row["key"],(string)row["name"],(int)row["rank"],(int)row["index"],new[]{(string)row["cardKey"]}});
-                AccessTools.Field(typeof(CardTablePack),"<UnlockAbilityId>k__BackingField").SetValue(pack,FiveCardSelection.Id(row));
-                AccessTools.Field(typeof(CardTablePack),"<CardIds>k__BackingField").SetValue(pack,Array.AsReadOnly(new[]{new StableId(SectRegistry.CardPrefix+(string)row["cardKey"])}));
-                packs.Add(pack);
-            }
+            if (packs.Any(p => p.ShelfIndex == 200 && p.UnlockAbilityId != FiveDeckRules.PackId)) throw new ArgumentException("五行卡包目录编号冲突。");
+            packs.RemoveAll(p => p.UnlockAbilityId == FiveDeckRules.PackId);
+            var deck = (CardTablePack)packCtor.Invoke(new object[] { FiveDeckRules.PackKey, "五行自选卡包", 1, 200, FiveDeckRules.Candidates(1).Select(c => (string)c["key"]).ToArray() });
+            AccessTools.Field(typeof(CardTablePack), "<UnlockAbilityId>k__BackingField").SetValue(deck, FiveDeckRules.PackId);
+            AccessTools.Field(typeof(CardTablePack), "<CardIds>k__BackingField").SetValue(deck, FiveDeckRules.Candidates(1).Select(FiveDeckRules.CardId).ToArray());
+            packs.Add(deck);
             resultCards=cards.AsReadOnly();resultPacks=packs.AsReadOnly();
         }
     }
@@ -70,7 +67,7 @@ namespace YixianSect
         {
             // Do not alias TryGetLineageRank globally: the shop must distinguish owning BL08
             // from merely using its card engine, or buying BL08 after a school becomes impossible.
-            if(SectProgression.Rank(__instance)==0||(SectProgression.Native(__instance)&&!(packIds?.Any(FiveCardSelection.Is)??false)))return true;
+            if(SectProgression.Rank(__instance)==0||(SectProgression.Native(__instance)&&SectRegistry.Rank(__instance,FiveElementRules.Lineage)==0))return true;
             __result=SectProgression.SetActive(__instance,packIds);return false;
         }
     }
@@ -83,7 +80,7 @@ namespace YixianSect
     internal static class SectOwnedPacks
     {
         private static void Postfix(PlayerRunState __instance,ref List<StableId> __result)
-        {if(SectProgression.Rank(__instance)>0&&!SectProgression.Native(__instance))__result=SectProgression.Owned(__instance);else __result.RemoveAll(FiveCardSelection.Is);}
+        {if(SectProgression.Rank(__instance)>0&&!SectProgression.Native(__instance))__result=SectProgression.Owned(__instance);else __result.RemoveAll(FiveDeckRules.IsRetired);}
     }
     [HarmonyPatch(typeof(BattleAuthorityService),"CardTableRank")]
     internal static class SectCardTableRank
@@ -109,6 +106,11 @@ namespace YixianSect
             int cost;int ap;
             if(SectRegistry.Cards.TryGetValue(__1.ActionId.Value,out var card))
             {
+                if((bool?)card["rules"]?["selectedAllyHeal"]==true && __1.HasSingleTarget)
+                {
+                    if(!__instance.Battle.TryGetCombatant(__1.TargetRuntimeId,out var target) || target.Side!=actor.Side || target.Kind!=CombatantKind.Player || target.IsDowned)
+                    {__result=false;__4=SessionErrorCode.InvalidTarget;__2=default;return;}
+                }
                 var state=(ModStateSnapshot)AccessTools.Field(typeof(BattleAuthorityService),"modState").GetValue(__instance);
                 if(!SectCardRules.CanPlay(card,state,actor.RuntimeId)){__result=false;__4=SessionErrorCode.ItemUnavailable;__2=default;return;}
                 cost=SectCardRules.Cost(card, player, actor, state);ap=0;
@@ -134,7 +136,7 @@ namespace YixianSect
                 var table=tables[entry.Key];
                 var hand=(System.Collections.IList)AccessTools.Field(table.GetType(),"Hand").GetValue(table);
                 hand.Clear();
-                AccessTools.Method(typeof(BattleAuthorityService),"DrawCardTableCardsOrThrow").Invoke(__instance,new[]{entry.Value,(object)3});
+                AccessTools.Method(typeof(BattleAuthorityService),"DrawCardTableCardsOrThrow").Invoke(__instance,new[]{entry.Value,(object)SectDrawRules.OpeningHand});
             }
         }
     }
@@ -158,7 +160,7 @@ namespace YixianSect
         private static void Postfix(StableId lineageId,ref IReadOnlyList<StableId> __result)
         {
             if(lineageId!=CardTableCatalog.LineageId)return;
-            var own=new HashSet<string>(SectRegistry.Packs.Select(p=>SectRegistry.PackId(p).Value));
+            var own=new HashSet<string>(SectRegistry.Packs.Select(p=>SectRegistry.PackId(p).Value)) { FiveDeckRules.PackId.Value };
             __result=__result.Where(id=>!own.Contains(id.Value)).ToArray();
         }
     }
@@ -203,7 +205,7 @@ namespace YixianSect
     internal static class SectFreePickCount
     {
         private static void Postfix(StableId lineageId,ref int __result)
-        {if(SectRegistry.IsSect(lineageId.Value))__result=2;}
+        {if(SectRegistry.IsSect(lineageId.Value))__result=lineageId.Value==FiveElementRules.Lineage?0:2;}
     }
     [HarmonyPatch(typeof(LineageFreeAbilityPicks),"ComputeCandidates")]
     internal static class SectFoundationGift

@@ -18,6 +18,15 @@ FATE_ICONS = {
     'icon.yixian.sect.status.fate_guard': 'icons/fates/Icon_Talent_57.png',
 }
 
+# Independent acceptance of the user-approved first four area adaptations. This is
+# not a blanket exemption for original rule changes or for other cards.
+SWORD_AREAS = {
+    'yixian_sword_2': dict(shape='line', linked=True, secondaryBp=5000, maxTargets=1),
+    'yixian_sword_9': dict(shape='splash', secondaryBp=4000, maxTargets=2),
+    'yixian_sword_14': dict(shape='row', linked=True, secondaryBp=5000),
+    'yixian_sword_46': dict(shape='radius', secondaryBp=3000),
+}
+
 def read(path): return json.loads(path.read_text())
 
 def main():
@@ -39,6 +48,10 @@ def main():
     for card in old_table['cards']:
         card['rules']['cost'] = original_costs[card['sourceId']]['cost']
     refresh_sword_costs(old_table, old_abilities)
+    assert {c['key']: c['area'] for c in table['cards'] if 'area' in c} == SWORD_AREAS, 'unauthorized area adaptation'
+    for card in old_table['cards']:
+        if card['key'] in SWORD_AREAS:
+            card['area'] = SWORD_AREAS[card['key']]
     for name in ('cards', 'packs'):
         current = [row for row in table[name] if row.get('sect', SWORD) == SWORD]
         # Presentation is intentionally rewritten; every gameplay and provenance field stays exact.
@@ -110,6 +123,6 @@ def main():
             assert values['energyCost'] == cost * 4 and values['apCost'] == 0 and values['energyPool'] == 40, f'card payment declaration mismatch: {card["key"]}'
         fee_line = next(line for line in card['description'].splitlines() if line.startswith('消耗：'))
         assert fee_line == f'消耗：{cost * 4}斗气。', f'card displayed cost mismatch: {card["key"]}'
-    print(f'PASS contracts: namespaced identities; sword rules retained except approved fee/copy correction; original fate icons and other assets retained; {len(table["sects"])} schools, {len(by_key)} cards, {len(table["packs"])} complete packs; version {manifest["version"]}')
+    print(f'PASS contracts: namespaced identities; sword rules retained with four explicit area adaptations and approved fee/copy correction; original fate icons and other assets retained; {len(table["sects"])} schools, {len(by_key)} cards, {len(table["packs"])} complete packs; version {manifest["version"]}')
 
 if __name__ == '__main__': main()

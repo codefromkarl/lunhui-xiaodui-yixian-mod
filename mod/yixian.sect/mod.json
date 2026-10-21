@@ -4,7 +4,7 @@
   "apiVersion": 1,
   "name": "弈仙门派",
   "author": "你",
-  "description": "云灵剑宗、五行道盟、七星阁三大门派，涵盖五个境界，共144张卡牌、36个卡包与12项仙命。每名角色可加入一个弈仙门派，并搭配原生血统。",
+  "description": "云灵剑宗、五行道盟、七星阁三大门派，涵盖五个境界，共136张卡牌与12项仙命；五行突破解锁两张，战斗中从本局牌库自选八张。每名角色可加入一个弈仙门派，并搭配原生血统。",
   "content": [
     "content/lineages.json",
     "content/abilities.json",
@@ -641,14 +641,6 @@
       "kind": "icon",
       "file": "icons/lineage.yixian_star.png"
     },
-    "icon.yixian.sect.card.yixian_star_gather": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_gather.png"
-    },
-    "icon.yixian.sect.card.yixian_star_divine": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_divine.png"
-    },
     "icon.yixian.sect.card.yixian_star_spark": {
       "kind": "icon",
       "file": "icons/cards/yixian_star_spark.png"
@@ -669,9 +661,17 @@
       "kind": "icon",
       "file": "icons/cards/yixian_star_observe.png"
     },
+    "icon.yixian.sect.card.yixian_star_incessant": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_incessant.png"
+    },
     "icon.yixian.sect.card.yixian_star_shift": {
       "kind": "icon",
       "file": "icons/cards/yixian_star_shift.png"
+    },
+    "icon.yixian.sect.card.yixian_star_sparrow": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_sparrow.png"
     },
     "icon.yixian.sect.card.yixian_star_spring": {
       "kind": "icon",
@@ -689,13 +689,13 @@
       "kind": "icon",
       "file": "icons/cards/yixian_star_ferry.png"
     },
-    "icon.yixian.sect.card.yixian_star_coins": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_coins.png"
-    },
     "icon.yixian.sect.card.yixian_star_wheel": {
       "kind": "icon",
       "file": "icons/cards/yixian_star_wheel.png"
+    },
+    "icon.yixian.sect.card.yixian_star_calm": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_calm.png"
     },
     "icon.yixian.sect.card.yixian_star_align": {
       "kind": "icon",
@@ -705,9 +705,9 @@
       "kind": "icon",
       "file": "icons/cards/yixian_star_reveal.png"
     },
-    "icon.yixian.sect.card.yixian_star_spear": {
+    "icon.yixian.sect.card.yixian_star_qi_heal": {
       "kind": "icon",
-      "file": "icons/cards/yixian_star_spear.png"
+      "file": "icons/cards/yixian_star_qi_heal.png"
     },
     "icon.yixian.sect.card.yixian_star_needles": {
       "kind": "icon",
@@ -725,6 +725,10 @@
       "kind": "icon",
       "file": "icons/cards/yixian_star_compass.png"
     },
+    "icon.yixian.sect.card.yixian_star_rebirth": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_star_rebirth.png"
+    },
     "icon.yixian.sect.card.yixian_star_orbit": {
       "kind": "icon",
       "file": "icons/cards/yixian_star_orbit.png"
@@ -733,21 +737,9 @@
       "kind": "icon",
       "file": "icons/cards/yixian_star_auspice.png"
     },
-    "icon.yixian.sect.card.yixian_star_judgment": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_judgment.png"
-    },
     "icon.yixian.sect.card.yixian_star_comet": {
       "kind": "icon",
       "file": "icons/cards/yixian_star_comet.png"
-    },
-    "icon.yixian.sect.card.yixian_star_chain": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_chain.png"
-    },
-    "icon.yixian.sect.card.yixian_star_beacon": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_beacon.png"
     },
     "icon.yixian.sect.card.yixian_star_refuge": {
       "kind": "icon",
@@ -761,10 +753,6 @@
       "kind": "icon",
       "file": "icons/cards/yixian_star_fortune.png"
     },
-    "icon.yixian.sect.card.yixian_star_inscribe": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_inscribe.png"
-    },
     "icon.yixian.sect.card.yixian_star_dissolve": {
       "kind": "icon",
       "file": "icons/cards/yixian_star_dissolve.png"
@@ -772,10 +760,6 @@
     "icon.yixian.sect.card.yixian_star_pivot": {
       "kind": "icon",
       "file": "icons/cards/yixian_star_pivot.png"
-    },
-    "icon.yixian.sect.card.yixian_star_arc": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_arc.png"
     },
     "icon.yixian.sect.card.yixian_star_circulation": {
       "kind": "icon",
@@ -809,33 +793,17 @@
       "kind": "icon",
       "file": "icons/cards/yixian_star_destiny.png"
     },
-    "icon.yixian.sect.card.yixian_star_decree": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_decree.png"
-    },
     "icon.yixian.sect.card.yixian_star_renew": {
       "kind": "icon",
       "file": "icons/cards/yixian_star_renew.png"
-    },
-    "icon.yixian.sect.card.yixian_star_zenith": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_zenith.png"
-    },
-    "icon.yixian.sect.card.yixian_star_heavens": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_heavens.png"
     },
     "icon.yixian.sect.card.yixian_star_luminary": {
       "kind": "icon",
       "file": "icons/cards/yixian_star_luminary.png"
     },
-    "icon.yixian.sect.card.yixian_star_horizon": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_horizon.png"
-    },
     "icon.yixian.sect.pack.yixian_star_chart": {
       "kind": "icon",
-      "file": "icons/cards/yixian_star_gather.png"
+      "file": "icons/cards/yixian_star_spark.png"
     },
     "icon.yixian.sect.pack.yixian_star_fate": {
       "kind": "icon",
@@ -843,15 +811,15 @@
     },
     "icon.yixian.sect.pack.yixian_star_well": {
       "kind": "icon",
-      "file": "icons/cards/yixian_star_spring.png"
+      "file": "icons/cards/yixian_star_curtain.png"
     },
     "icon.yixian.sect.pack.yixian_star_wheel": {
       "kind": "icon",
-      "file": "icons/cards/yixian_star_coins.png"
+      "file": "icons/cards/yixian_star_spring.png"
     },
     "icon.yixian.sect.pack.yixian_star_spear": {
       "kind": "icon",
-      "file": "icons/cards/yixian_star_spear.png"
+      "file": "icons/cards/yixian_star_shelter.png"
     },
     "icon.yixian.sect.pack.yixian_star_compass": {
       "kind": "icon",
@@ -865,21 +833,13 @@
       "kind": "icon",
       "file": "icons/cards/yixian_star_mirror.png"
     },
-    "icon.yixian.sect.pack.yixian_star_pivot": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_pivot.png"
-    },
     "icon.yixian.sect.pack.yixian_star_nova": {
       "kind": "icon",
-      "file": "icons/cards/yixian_star_nova.png"
+      "file": "icons/cards/yixian_star_forge.png"
     },
     "icon.yixian.sect.pack.yixian_star_oracle": {
       "kind": "icon",
-      "file": "icons/cards/yixian_star_oracle.png"
-    },
-    "icon.yixian.sect.pack.yixian_star_zenith": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_star_zenith.png"
+      "file": "icons/cards/yixian_star_nova.png"
     },
     "icon.yixian.sect.fate.star.astral_practice": {
       "kind": "icon",
@@ -925,14 +885,6 @@
       "kind": "icon",
       "file": "icons/statuses/star_astralLinks.png"
     },
-    "icon.yixian.sect.status.star.soulCharges": {
-      "kind": "icon",
-      "file": "icons/statuses/star_soulCharges.png"
-    },
-    "icon.yixian.sect.status.star.injuryRounds": {
-      "kind": "icon",
-      "file": "icons/statuses/star_injuryRounds.png"
-    },
     "icon.yixian.sect.status.star.position1": {
       "kind": "icon",
       "file": "icons/statuses/star_position1.png"
@@ -965,6 +917,10 @@
       "kind": "icon",
       "file": "icons/statuses/star_position8.png"
     },
+    "icon.yixian.sect.status.star.calm": {
+      "kind": "icon",
+      "file": "icons/statuses/star_calm.png"
+    },
     "icon.yixian.sect.status.star.weak": {
       "kind": "icon",
       "file": "icons/statuses/star_weak.png"
@@ -972,18 +928,6 @@
     "icon.yixian.sect.status.star.flaw": {
       "kind": "icon",
       "file": "icons/statuses/star_flaw.png"
-    },
-    "icon.yixian.sect.status.star.decrease": {
-      "kind": "icon",
-      "file": "icons/statuses/star_decrease.png"
-    },
-    "icon.yixian.sect.status.star.internal": {
-      "kind": "icon",
-      "file": "icons/statuses/star_internal.png"
-    },
-    "icon.yixian.sect.status.star.external": {
-      "kind": "icon",
-      "file": "icons/statuses/star_external.png"
     },
     "icon.yixian.sect.status.star.skip": {
       "kind": "icon",

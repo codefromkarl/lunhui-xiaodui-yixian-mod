@@ -46,6 +46,6 @@ partial class Program
         foreach (var id in SectRegistry.Cards.Keys) Check(Classify(id), "canonical card belongs to Cards tab: " + id);
         Check(Classify(CardTableRules.DrawActionId.Value) && Classify("ability.lineage.BL08.card.fireball"), "native card classification preserved");
         Check(!Classify(null) && !Classify("ability.other.test") && !Classify(SectRegistry.CardPrefix + "unregistered"), "null and unrelated abilities retain native classification");
-        Console.WriteLine("PASS descriptions: 144 compact summaries, meaningful condition/support copy, shared school rules and native narrator routing");
+        Console.WriteLine("PASS descriptions: 136 compact summaries, meaningful condition/support copy, shared school rules and native narrator routing");
     }
 }

@@ -13,7 +13,7 @@ PAID = {
     '700': {7000004: 1, 7000007: 2, 7000017: 1, 7000019: 2, 7000028: 1,
             7000032: 1, 7000020: 1, 7000027: 1, 7000066: 1, 7000043: 1,
             7000056: 2, 7000057: 2, 7000115: 1},
-    '400': {4000010: 1, 4000020: 1, 4000030: 1, 4000029: 1, 4000036: 1,
+    '400': {4000017: 1, 4000042: 1, 4000061: 1, 4000010: 1, 4000020: 1, 4000030: 1, 4000029: 1, 4000036: 1,
             4000038: 1, 4000041: 1, 4000044: 1, 4000046: 1, 4000060: 2, 4000107: 1},
 }
 
@@ -25,7 +25,7 @@ class FiveStarOriginalCostsTests(unittest.TestCase):
 
     def test_every_original_face_matches_independent_transcription(self):
         for prefix, paid in PAID.items():
-            cards = check_face_costs(self.cards, self.costs, prefix)
+            cards = check_face_costs(self.cards, self.costs, prefix, 40 if prefix=='400' else 48)
             for c in cards:
                 sid = str(c['sourceId'])
                 with self.subTest(card=c['name']):
@@ -34,7 +34,7 @@ class FiveStarOriginalCostsTests(unittest.TestCase):
             self.assertEqual(sum(c['rules']['cost'] > 0 for c in cards), len(paid))
 
     def test_zero_fee_missing_fee_and_spurious_fee_are_rejected(self):
-        for sid, bad in [('7000007', 0), ('4000060', 0), ('7000001', 1), ('4000001', 1), ('7000004', None), ('4000010', None)]:
+        for sid, bad in [('7000007', 0), ('4000060', 0), ('4000061', 0), ('7000001', 1), ('4000013', 1), ('7000004', None), ('4000010', None)]:
             with self.subTest(source=sid):
                 cards = copy.deepcopy(self.cards)
                 card = next(c for c in cards if str(c.get('sourceId')) == sid)
@@ -43,4 +43,4 @@ class FiveStarOriginalCostsTests(unittest.TestCase):
                 else:
                     card['rules']['cost'] = bad
                 with self.assertRaisesRegex(AssertionError, card['name']):
-                    check_face_costs(cards, self.costs, sid[:3])
+                    check_face_costs(cards, self.costs, sid[:3], 40 if sid.startswith('400') else 48)
