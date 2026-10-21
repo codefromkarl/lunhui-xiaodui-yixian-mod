@@ -1,0 +1,3361 @@
+[
+  {
+    "id": "appearance.muyifeng",
+    "name": "牧逸风",
+    "slug": "muyifeng",
+    "group": "云灵剑宗",
+    "sourceId": "1000001",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/1000001.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/1000001-portrait.webp",
+    "token": [
+      255,
+      77,
+      89,
+      70,
+      1,
+      0,
+      0
+    ],
+    "prop": "sword",
+    "dual": false
+  },
+  {
+    "id": "appearance.yixian.yanxue",
+    "name": "炎雪",
+    "slug": "yanxue",
+    "group": "云灵剑宗",
+    "sourceId": "1000002",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/1000002.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/1000002-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      1,
+      2,
+      1,
+      0
+    ],
+    "prop": "sword",
+    "dual": true,
+    "atlasOverrides": {
+      "parts": {
+        "Pant/Left": {
+          "mask": [
+            [
+              0,
+              0
+            ],
+            [
+              210,
+              0
+            ],
+            [
+              210,
+              145
+            ],
+            [
+              0,
+              145
+            ]
+          ],
+          "componentSeed": [
+            70.5,
+            21.5
+          ]
+        },
+        "Pant/Right": {
+          "mask": [
+            [
+              0,
+              0
+            ],
+            [
+              220,
+              0
+            ],
+            [
+              220,
+              160
+            ],
+            [
+              0,
+              160
+            ]
+          ],
+          "componentSeed": [
+            107.5,
+            22.5
+          ]
+        },
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              85.5,
+              115.5
+            ],
+            "wrist": [
+              130.5,
+              55.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              115.5,
+              125.5
+            ],
+            "wrist": [
+              55.5,
+              65.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              103.5,
+              120.5
+            ],
+            "wrist": [
+              145.5,
+              55.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              111.5,
+              119.5
+            ],
+            "wrist": [
+              55.5,
+              55.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            178.5,
+            347.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            150,
+            90
+          ],
+          "neck": [
+            150.5,
+            110.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            145.5,
+            39.5
+          ],
+          "sole": [
+            84.5,
+            197.5
+          ],
+          "toe": [
+            49.5,
+            192.5
+          ],
+          "heel": [
+            166.5,
+            165.5
+          ],
+          "hip": [
+            70.5,
+            21.5
+          ],
+          "pantAnkle": [
+            108.5,
+            136.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            83.5,
+            34.5
+          ],
+          "sole": [
+            129.5,
+            195.5
+          ],
+          "toe": [
+            167.5,
+            186.5
+          ],
+          "heel": [
+            52.5,
+            164.5
+          ],
+          "hip": [
+            107.5,
+            22.5
+          ],
+          "pantAnkle": [
+            71.5,
+            151.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            43.5,
+            197.5
+          ],
+          "lowerElbow": [
+            124.5,
+            40.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            180.5,
+            226.5
+          ],
+          "lowerElbow": [
+            52.5,
+            35.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.longyao",
+    "name": "龙瑶",
+    "slug": "longyao",
+    "group": "云灵剑宗",
+    "sourceId": "1000003",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/1000003.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/1000003-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      1,
+      3,
+      1,
+      0
+    ],
+    "prop": "sword",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            68.5,
+            13.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            141.5,
+            16.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              68.5,
+              120.5
+            ],
+            "wrist": [
+              128.5,
+              31.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              105.5,
+              120.5
+            ],
+            "wrist": [
+              32.5,
+              40.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              110.5,
+              91.5
+            ],
+            "wrist": [
+              164.5,
+              26.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              87.5,
+              94.5
+            ],
+            "wrist": [
+              25.5,
+              27.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            184.5,
+            344.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            163.71,
+            -1.81
+          ],
+          "neck": [
+            144.5,
+            20.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            104.5,
+            37.5
+          ],
+          "sole": [
+            34.5,
+            203.5
+          ],
+          "toe": [
+            21.5,
+            180.5
+          ],
+          "heel": [
+            155.5,
+            144.5
+          ],
+          "hip": [
+            68.5,
+            13.5
+          ],
+          "pantAnkle": [
+            145.5,
+            160.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            69.5,
+            37.5
+          ],
+          "sole": [
+            146.5,
+            206.5
+          ],
+          "toe": [
+            160.5,
+            182.5
+          ],
+          "heel": [
+            50.5,
+            155.5
+          ],
+          "hip": [
+            141.5,
+            16.5
+          ],
+          "pantAnkle": [
+            78.5,
+            180.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            160.5,
+            105.5
+          ],
+          "lowerElbow": [
+            30.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            166.5,
+            150.5
+          ],
+          "lowerElbow": [
+            33.5,
+            30.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.linxiaoyue",
+    "name": "林小月",
+    "slug": "linxiaoyue",
+    "group": "云灵剑宗",
+    "sourceId": "1000004",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/1000004.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/1000004-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      1,
+      4,
+      1,
+      0
+    ],
+    "prop": "sword",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            46.5,
+            12.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            114.5,
+            14.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              53.5,
+              89.5
+            ],
+            "wrist": [
+              100.5,
+              23.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              87.5,
+              101.5
+            ],
+            "wrist": [
+              26.5,
+              34.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              104.5,
+              89.5
+            ],
+            "wrist": [
+              152.5,
+              26.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              95.5,
+              93.5
+            ],
+            "wrist": [
+              28.5,
+              27.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            132.5,
+            251.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            173.065,
+            -1.793
+          ],
+          "neck": [
+            170.5,
+            20.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            94.5,
+            20.5
+          ],
+          "sole": [
+            36.5,
+            147.5
+          ],
+          "toe": [
+            18.5,
+            130.5
+          ],
+          "heel": [
+            125.5,
+            110.5
+          ],
+          "hip": [
+            46.5,
+            12.5
+          ],
+          "pantAnkle": [
+            107.5,
+            198.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            54.5,
+            19.5
+          ],
+          "sole": [
+            110.5,
+            146.5
+          ],
+          "toe": [
+            131.5,
+            129.5
+          ],
+          "heel": [
+            22.5,
+            109.5
+          ],
+          "hip": [
+            114.5,
+            14.5
+          ],
+          "pantAnkle": [
+            78.5,
+            224.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            28.5,
+            152.5
+          ],
+          "lowerElbow": [
+            139.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            150.5,
+            160.5
+          ],
+          "lowerElbow": [
+            45.5,
+            35.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.lujianxin",
+    "name": "陆剑心",
+    "slug": "lujianxin",
+    "group": "云灵剑宗",
+    "sourceId": "1000005",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/1000005.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/1000005-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      1,
+      5,
+      1,
+      0
+    ],
+    "prop": "sword",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Pant/Left": {
+          "mask": [
+            [
+              0,
+              0
+            ],
+            [
+              180,
+              0
+            ],
+            [
+              180,
+              145
+            ],
+            [
+              0,
+              145
+            ]
+          ],
+          "componentSeed": [
+            70.5,
+            14.5
+          ]
+        },
+        "Pant/Right": {
+          "mask": [
+            [
+              0,
+              0
+            ],
+            [
+              185,
+              0
+            ],
+            [
+              185,
+              150
+            ],
+            [
+              0,
+              150
+            ]
+          ],
+          "componentSeed": [
+            111.5,
+            17.5
+          ]
+        },
+        "Cloth/LeftLower": {
+          "mask": [
+            [
+              0,
+              0
+            ],
+            [
+              205,
+              0
+            ],
+            [
+              205,
+              222
+            ],
+            [
+              0,
+              222
+            ]
+          ]
+        },
+        "Cloth/RightLower": {
+          "exclude": [
+            [
+              [
+                147,
+                179
+              ],
+              [
+                225,
+                160
+              ],
+              [
+                225,
+                235
+              ],
+              [
+                154,
+                235
+              ]
+            ]
+          ]
+        },
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              60.5,
+              91.5
+            ],
+            "wrist": [
+              114.5,
+              23.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              94.5,
+              102.5
+            ],
+            "wrist": [
+              28.5,
+              34.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              104.5,
+              112.5
+            ],
+            "wrist": [
+              156.5,
+              31.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              96.5,
+              116.5
+            ],
+            "wrist": [
+              27.5,
+              32.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            150.5,
+            315.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            149.21,
+            -2.168
+          ],
+          "neck": [
+            133.5,
+            20.5
+          ]
+        },
+        "sleeveLeft": {
+          "cuff": [
+            120.5,
+            210.5
+          ],
+          "lowerElbow": [
+            130.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            145.5,
+            175.5
+          ],
+          "lowerElbow": [
+            45.5,
+            30.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            103.5,
+            26.5
+          ],
+          "sole": [
+            37.5,
+            197.5
+          ],
+          "toe": [
+            19.5,
+            175.5
+          ],
+          "heel": [
+            137.5,
+            148.5
+          ],
+          "hip": [
+            70.5,
+            14.5
+          ],
+          "pantAnkle": [
+            100.5,
+            136.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            58.5,
+            26.5
+          ],
+          "sole": [
+            122.5,
+            196.5
+          ],
+          "toe": [
+            141.5,
+            174.5
+          ],
+          "heel": [
+            24.5,
+            147.5
+          ],
+          "hip": [
+            111.5,
+            17.5
+          ],
+          "pantAnkle": [
+            72.5,
+            141.5
+          ]
+        },
+        "calibrated": true
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.lichengyun",
+    "name": "黎承云",
+    "slug": "lichengyun",
+    "group": "云灵剑宗",
+    "sourceId": "1000006",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/1000006.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/1000006-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      1,
+      6,
+      1,
+      0
+    ],
+    "prop": "sword",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Pant/Left": {
+          "mask": [
+            [
+              0,
+              0
+            ],
+            [
+              145,
+              0
+            ],
+            [
+              145,
+              165
+            ],
+            [
+              0,
+              165
+            ]
+          ],
+          "componentSeed": [
+            81.5,
+            15.5
+          ]
+        },
+        "Pant/Right": {
+          "mask": [
+            [
+              0,
+              0
+            ],
+            [
+              143,
+              0
+            ],
+            [
+              143,
+              165
+            ],
+            [
+              0,
+              165
+            ]
+          ],
+          "componentSeed": [
+            66.5,
+            18.5
+          ]
+        },
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              54.5,
+              86.5
+            ],
+            "wrist": [
+              101.5,
+              22.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              92.5,
+              95.5
+            ],
+            "wrist": [
+              28.5,
+              32.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              84.5,
+              93.5
+            ],
+            "wrist": [
+              125.5,
+              26.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              79.5,
+              93.5
+            ],
+            "wrist": [
+              22.5,
+              26.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            148.5,
+            270.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            145.0,
+            -1.961
+          ],
+          "neck": [
+            124.5,
+            22.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            84.5,
+            27.5
+          ],
+          "sole": [
+            40.5,
+            206.5
+          ],
+          "toe": [
+            16.5,
+            181.5
+          ],
+          "heel": [
+            111.5,
+            154.5
+          ],
+          "hip": [
+            81.5,
+            15.5
+          ],
+          "pantAnkle": [
+            73.5,
+            156.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            47.5,
+            28.5
+          ],
+          "sole": [
+            90.5,
+            208.5
+          ],
+          "toe": [
+            115.5,
+            183.5
+          ],
+          "heel": [
+            20.5,
+            155.5
+          ],
+          "hip": [
+            66.5,
+            18.5
+          ],
+          "pantAnkle": [
+            64.5,
+            156.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            29.5,
+            190.5
+          ],
+          "lowerElbow": [
+            120.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            164.5,
+            228.5
+          ],
+          "lowerElbow": [
+            45.5,
+            30.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.tanshuyan",
+    "name": "谭舒雁",
+    "slug": "tanshuyan",
+    "group": "七星阁",
+    "sourceId": "2000001",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/2000001.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/2000001-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      2,
+      1,
+      1,
+      0
+    ],
+    "prop": "fan",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            56.5,
+            14.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            158.5,
+            16.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              60.5,
+              108.5
+            ],
+            "wrist": [
+              112.5,
+              28.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              101.5,
+              116.5
+            ],
+            "wrist": [
+              30.5,
+              39.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              101.5,
+              101.5
+            ],
+            "wrist": [
+              152.5,
+              28.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              94.5,
+              103.5
+            ],
+            "wrist": [
+              26.5,
+              29.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            127.5,
+            326.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            191.774,
+            -2.0
+          ],
+          "neck": [
+            175.5,
+            20.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            102.5,
+            26.5
+          ],
+          "sole": [
+            46.5,
+            195.5
+          ],
+          "toe": [
+            19.5,
+            173.5
+          ],
+          "heel": [
+            135.5,
+            147.5
+          ],
+          "hip": [
+            56.5,
+            14.5
+          ],
+          "pantAnkle": [
+            115.5,
+            218.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            56.5,
+            27.5
+          ],
+          "sole": [
+            108.5,
+            199.5
+          ],
+          "toe": [
+            137.5,
+            175.5
+          ],
+          "heel": [
+            23.5,
+            149.5
+          ],
+          "hip": [
+            158.5,
+            16.5
+          ],
+          "pantAnkle": [
+            53.5,
+            287.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            23.5,
+            224.5
+          ],
+          "lowerElbow": [
+            135.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            212.5,
+            205.5
+          ],
+          "lowerElbow": [
+            46.5,
+            30.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.yanchen",
+    "name": "炎尘",
+    "slug": "yanchen",
+    "group": "七星阁",
+    "sourceId": "2000002",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/2000002.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/2000002-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      2,
+      2,
+      1,
+      0
+    ],
+    "prop": "plate",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            87.5,
+            15.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            75.5,
+            17.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              62.5,
+              92.5
+            ],
+            "wrist": [
+              117.5,
+              24.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              109.5,
+              101.5
+            ],
+            "wrist": [
+              33.5,
+              34.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              113.5,
+              103.5
+            ],
+            "wrist": [
+              170.5,
+              29.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              110.5,
+              103.5
+            ],
+            "wrist": [
+              30.5,
+              29.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            178.5,
+            304.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            162.774,
+            -1.872
+          ],
+          "neck": [
+            150.5,
+            21.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            114.5,
+            28.5
+          ],
+          "sole": [
+            59.5,
+            212.5
+          ],
+          "toe": [
+            21.5,
+            187.5
+          ],
+          "heel": [
+            151.5,
+            159.5
+          ],
+          "hip": [
+            87.5,
+            15.5
+          ],
+          "pantAnkle": [
+            114.5,
+            238.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            65.5,
+            28.5
+          ],
+          "sole": [
+            119.5,
+            210.5
+          ],
+          "toe": [
+            158.5,
+            186.5
+          ],
+          "heel": [
+            27.5,
+            158.5
+          ],
+          "hip": [
+            75.5,
+            17.5
+          ],
+          "pantAnkle": [
+            56.5,
+            279.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            34.5,
+            177.5
+          ],
+          "lowerElbow": [
+            190.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            219.5,
+            218.5
+          ],
+          "lowerElbow": [
+            48.5,
+            30.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.yaoling",
+    "name": "曜灵",
+    "slug": "yaoling",
+    "group": "七星阁",
+    "sourceId": "2000003",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/2000003.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/2000003-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      2,
+      3,
+      1,
+      0
+    ],
+    "prop": "lantern",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            61.5,
+            14.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            98.5,
+            14.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              64.5,
+              95.5
+            ],
+            "wrist": [
+              120.5,
+              25.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              108.5,
+              102.5
+            ],
+            "wrist": [
+              33.5,
+              34.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              111.5,
+              91.5
+            ],
+            "wrist": [
+              167.5,
+              25.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              105.5,
+              95.5
+            ],
+            "wrist": [
+              36.5,
+              26.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            200.5,
+            322.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            167.919,
+            -1.754
+          ],
+          "neck": [
+            157.5,
+            15.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            102.5,
+            24.5
+          ],
+          "sole": [
+            41.5,
+            181.5
+          ],
+          "toe": [
+            19.5,
+            160.5
+          ],
+          "heel": [
+            135.5,
+            136.5
+          ],
+          "hip": [
+            61.5,
+            14.5
+          ],
+          "pantAnkle": [
+            94.5,
+            221.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            48.5,
+            24.5
+          ],
+          "sole": [
+            91.5,
+            184.5
+          ],
+          "toe": [
+            117.5,
+            162.5
+          ],
+          "heel": [
+            20.5,
+            137.5
+          ],
+          "hip": [
+            98.5,
+            14.5
+          ],
+          "pantAnkle": [
+            78.5,
+            241.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            30.5,
+            179.5
+          ],
+          "lowerElbow": [
+            160.5,
+            35.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            211.5,
+            170.5
+          ],
+          "lowerElbow": [
+            45.5,
+            30.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.jiangximing",
+    "name": "姜袭明",
+    "slug": "jiangximing",
+    "group": "七星阁",
+    "sourceId": "2000004",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/2000004.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/2000004-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      2,
+      4,
+      1,
+      0
+    ],
+    "prop": "ruler",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            85.5,
+            14.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            121.5,
+            18.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              60.5,
+              86.5
+            ],
+            "wrist": [
+              114.5,
+              22.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              103.5,
+              92.5
+            ],
+            "wrist": [
+              31.5,
+              31.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              98.5,
+              111.5
+            ],
+            "wrist": [
+              149.5,
+              31.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              96.5,
+              106.5
+            ],
+            "wrist": [
+              27.5,
+              29.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            130.5,
+            322.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            157.161,
+            -2.011
+          ],
+          "neck": [
+            135.5,
+            20.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            97.5,
+            27.5
+          ],
+          "sole": [
+            47.5,
+            204.5
+          ],
+          "toe": [
+            18.5,
+            180.5
+          ],
+          "heel": [
+            128.5,
+            153.5
+          ],
+          "hip": [
+            85.5,
+            14.5
+          ],
+          "pantAnkle": [
+            133.5,
+            231.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            55.5,
+            27.5
+          ],
+          "sole": [
+            104.5,
+            204.5
+          ],
+          "toe": [
+            134.5,
+            180.5
+          ],
+          "heel": [
+            23.5,
+            153.5
+          ],
+          "hip": [
+            121.5,
+            18.5
+          ],
+          "pantAnkle": [
+            65.5,
+            284.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            67.5,
+            200.5
+          ],
+          "lowerElbow": [
+            175.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            161.5,
+            145.5
+          ],
+          "lowerElbow": [
+            40.5,
+            30.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.wuce",
+    "name": "吴策",
+    "slug": "wuce",
+    "group": "七星阁",
+    "sourceId": "2000005",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/2000005.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/2000005-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      2,
+      5,
+      1,
+      0
+    ],
+    "prop": "fan",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            83.5,
+            13.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            102.5,
+            13.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              62.5,
+              113.5
+            ],
+            "wrist": [
+              116.5,
+              29.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              112.5,
+              121.5
+            ],
+            "wrist": [
+              34.5,
+              40.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              101.5,
+              99.5
+            ],
+            "wrist": [
+              153.5,
+              28.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              95.5,
+              102.5
+            ],
+            "wrist": [
+              26.5,
+              29.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            135.5,
+            314.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            161.371,
+            -2.151
+          ],
+          "neck": [
+            154.5,
+            18.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            106.5,
+            28.5
+          ],
+          "sole": [
+            51.5,
+            209.5
+          ],
+          "toe": [
+            20.5,
+            185.5
+          ],
+          "heel": [
+            140.5,
+            157.5
+          ],
+          "hip": [
+            83.5,
+            13.5
+          ],
+          "pantAnkle": [
+            96.5,
+            207.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            56.5,
+            28.5
+          ],
+          "sole": [
+            106.5,
+            209.5
+          ],
+          "toe": [
+            137.5,
+            185.5
+          ],
+          "heel": [
+            23.5,
+            157.5
+          ],
+          "hip": [
+            102.5,
+            13.5
+          ],
+          "pantAnkle": [
+            88.5,
+            234.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            38.5,
+            201.5
+          ],
+          "lowerElbow": [
+            190.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            220.5,
+            209.5
+          ],
+          "lowerElbow": [
+            45.5,
+            30.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.fengxu",
+    "name": "风绪",
+    "slug": "fengxu",
+    "group": "七星阁",
+    "sourceId": "2000006",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/2000006.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/2000006-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      2,
+      6,
+      1,
+      0
+    ],
+    "prop": "book",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            48.5,
+            14.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            115.5,
+            15.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              64.5,
+              117.5
+            ],
+            "wrist": [
+              120.5,
+              30.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              96.5,
+              118.5
+            ],
+            "wrist": [
+              29.5,
+              39.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              101.5,
+              110.5
+            ],
+            "wrist": [
+              151.5,
+              30.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              94.5,
+              110.5
+            ],
+            "wrist": [
+              26.5,
+              31.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            145.5,
+            238.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            157.629,
+            -1.793
+          ],
+          "neck": [
+            137.5,
+            20.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            84.5,
+            24.5
+          ],
+          "sole": [
+            43.5,
+            179.5
+          ],
+          "toe": [
+            16.5,
+            158.5
+          ],
+          "heel": [
+            112.5,
+            134.5
+          ],
+          "hip": [
+            48.5,
+            14.5
+          ],
+          "pantAnkle": [
+            78.5,
+            219.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            51.5,
+            24.5
+          ],
+          "sole": [
+            94.5,
+            179.5
+          ],
+          "toe": [
+            124.5,
+            159.5
+          ],
+          "heel": [
+            21.5,
+            135.5
+          ],
+          "hip": [
+            115.5,
+            15.5
+          ],
+          "pantAnkle": [
+            53.5,
+            242.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            52.5,
+            196.5
+          ],
+          "lowerElbow": [
+            165.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            192.5,
+            200.5
+          ],
+          "lowerElbow": [
+            45.5,
+            30.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.wuxingzhi",
+    "name": "吾行之",
+    "slug": "wuxingzhi",
+    "group": "五行道盟",
+    "sourceId": "3000001",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000001.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/3000001-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      3,
+      1,
+      1,
+      0
+    ],
+    "prop": "sword",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            45.5,
+            13.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            121.5,
+            14.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              65.5,
+              95.5
+            ],
+            "wrist": [
+              122.5,
+              25.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              111.5,
+              104.5
+            ],
+            "wrist": [
+              34.5,
+              35.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              108.5,
+              100.5
+            ],
+            "wrist": [
+              162.5,
+              28.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              100.5,
+              103.5
+            ],
+            "wrist": [
+              28.5,
+              30.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            176.5,
+            292.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            173.532,
+            -2.218
+          ],
+          "neck": [
+            142.5,
+            24.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            127.5,
+            26.5
+          ],
+          "sole": [
+            57.5,
+            194.5
+          ],
+          "toe": [
+            24.5,
+            171.5
+          ],
+          "heel": [
+            169.5,
+            145.5
+          ],
+          "hip": [
+            45.5,
+            13.5
+          ],
+          "pantAnkle": [
+            97.5,
+            209.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            69.5,
+            28.5
+          ],
+          "sole": [
+            134.5,
+            208.5
+          ],
+          "toe": [
+            168.5,
+            184.5
+          ],
+          "heel": [
+            29.5,
+            156.5
+          ],
+          "hip": [
+            121.5,
+            14.5
+          ],
+          "pantAnkle": [
+            73.5,
+            232.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            31.5,
+            216.5
+          ],
+          "lowerElbow": [
+            175.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            211.5,
+            234.5
+          ],
+          "lowerElbow": [
+            50.5,
+            30.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.dulingyuan",
+    "name": "杜伶鸳",
+    "slug": "dulingyuan",
+    "group": "五行道盟",
+    "sourceId": "3000002",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000002.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/3000002-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      3,
+      2,
+      1,
+      0
+    ],
+    "prop": "parasol",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            88.5,
+            14.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            85.5,
+            15.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              54.5,
+              86.5
+            ],
+            "wrist": [
+              101.5,
+              22.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              94.5,
+              86.5
+            ],
+            "wrist": [
+              29.5,
+              29.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              83.5,
+              89.5
+            ],
+            "wrist": [
+              124.5,
+              25.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              80.5,
+              92.5
+            ],
+            "wrist": [
+              22.5,
+              27.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            143.5,
+            315.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            176.339,
+            -1.994
+          ],
+          "neck": [
+            183.5,
+            21.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            97.5,
+            26.5
+          ],
+          "sole": [
+            46.5,
+            193.5
+          ],
+          "toe": [
+            18.5,
+            170.5
+          ],
+          "heel": [
+            129.5,
+            145.5
+          ],
+          "hip": [
+            88.5,
+            14.5
+          ],
+          "pantAnkle": [
+            127.5,
+            218.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            55.5,
+            26.5
+          ],
+          "sole": [
+            106.5,
+            193.5
+          ],
+          "toe": [
+            135.5,
+            171.5
+          ],
+          "heel": [
+            23.5,
+            145.5
+          ],
+          "hip": [
+            85.5,
+            15.5
+          ],
+          "pantAnkle": [
+            47.5,
+            254.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            31.5,
+            183.5
+          ],
+          "lowerElbow": [
+            166.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            194.5,
+            202.5
+          ],
+          "lowerElbow": [
+            46.5,
+            30.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.huaqinrui",
+    "name": "花沁蕊",
+    "slug": "huaqinrui",
+    "group": "五行道盟",
+    "sourceId": "3000003",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000003.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/3000003-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      3,
+      3,
+      1,
+      0
+    ],
+    "prop": "ruyi",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            65.5,
+            15.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            117.5,
+            16.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              56.5,
+              93.5
+            ],
+            "wrist": [
+              106.5,
+              24.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              92.5,
+              109.5
+            ],
+            "wrist": [
+              28.5,
+              36.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              86.5,
+              92.5
+            ],
+            "wrist": [
+              131.5,
+              26.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              86.5,
+              94.5
+            ],
+            "wrist": [
+              23.5,
+              27.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            145.5,
+            320.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            179.613,
+            -1.961
+          ],
+          "neck": [
+            165.5,
+            20.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            111.5,
+            26.5
+          ],
+          "sole": [
+            32.5,
+            193.5
+          ],
+          "toe": [
+            21.5,
+            171.5
+          ],
+          "heel": [
+            156.5,
+            141.5
+          ],
+          "hip": [
+            65.5,
+            15.5
+          ],
+          "pantAnkle": [
+            74.5,
+            224.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            63.5,
+            26.5
+          ],
+          "sole": [
+            141.5,
+            193.5
+          ],
+          "toe": [
+            154.5,
+            171.5
+          ],
+          "heel": [
+            18.5,
+            142.5
+          ],
+          "hip": [
+            117.5,
+            16.5
+          ],
+          "pantAnkle": [
+            81.5,
+            252.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            163.5,
+            89.5
+          ],
+          "lowerElbow": [
+            205.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            76.5,
+            112.5
+          ],
+          "lowerElbow": [
+            40.5,
+            30.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.muhu",
+    "name": "慕虎",
+    "slug": "muhu",
+    "group": "五行道盟",
+    "sourceId": "3000004",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000004.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/3000004-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      3,
+      4,
+      1,
+      0
+    ],
+    "prop": "ring",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            121.5,
+            14.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            135.5,
+            17.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              77.5,
+              116.5
+            ],
+            "wrist": [
+              146.5,
+              30.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              134.5,
+              128.5
+            ],
+            "wrist": [
+              40.5,
+              43.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              120.5,
+              121.5
+            ],
+            "wrist": [
+              180.5,
+              34.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              115.5,
+              127.5
+            ],
+            "wrist": [
+              32.5,
+              35.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            175.5,
+            230.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            191.774,
+            -2.162
+          ],
+          "neck": [
+            170.5,
+            28.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            139.5,
+            30.5
+          ],
+          "sole": [
+            102.5,
+            222.5
+          ],
+          "toe": [
+            26.5,
+            197.5
+          ],
+          "heel": [
+            184.5,
+            167.5
+          ],
+          "hip": [
+            121.5,
+            14.5
+          ],
+          "pantAnkle": [
+            100.5,
+            221.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            76.5,
+            30.5
+          ],
+          "sole": [
+            115.5,
+            223.5
+          ],
+          "toe": [
+            185.5,
+            199.5
+          ],
+          "heel": [
+            31.5,
+            169.5
+          ],
+          "hip": [
+            135.5,
+            17.5
+          ],
+          "pantAnkle": [
+            118.5,
+            276.5
+          ]
+        },
+        "back": {
+          "shoulderLeft": [
+            240,
+            80
+          ],
+          "shoulderRight": [
+            55,
+            90
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            35.5,
+            184.5
+          ],
+          "lowerElbow": [
+            155.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            167.5,
+            191.5
+          ],
+          "lowerElbow": [
+            38.5,
+            30.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.nangongsheng",
+    "name": "南宫生",
+    "slug": "nangongsheng",
+    "group": "五行道盟",
+    "sourceId": "3000005",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000005.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/3000005-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      3,
+      5,
+      1,
+      0
+    ],
+    "prop": "disc",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            74.5,
+            15.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            151.5,
+            16.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              71.5,
+              108.5
+            ],
+            "wrist": [
+              133.5,
+              28.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              116.5,
+              116.5
+            ],
+            "wrist": [
+              35.5,
+              39.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              114.5,
+              95.5
+            ],
+            "wrist": [
+              171.5,
+              26.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              107.5,
+              99.5
+            ],
+            "wrist": [
+              30.5,
+              27.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            167.5,
+            286.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            162.306,
+            -2.101
+          ],
+          "neck": [
+            148.5,
+            22.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            120.5,
+            25.5
+          ],
+          "sole": [
+            57.5,
+            188.5
+          ],
+          "toe": [
+            22.5,
+            167.5
+          ],
+          "heel": [
+            161.5,
+            140.5
+          ],
+          "hip": [
+            74.5,
+            15.5
+          ],
+          "pantAnkle": [
+            114.5,
+            232.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            66.5,
+            25.5
+          ],
+          "sole": [
+            128.5,
+            190.5
+          ],
+          "toe": [
+            162.5,
+            169.5
+          ],
+          "heel": [
+            24.5,
+            140.5
+          ],
+          "hip": [
+            151.5,
+            16.5
+          ],
+          "pantAnkle": [
+            119.5,
+            262.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            96.5,
+            225.5
+          ],
+          "lowerElbow": [
+            195.5,
+            30.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            132.5,
+            220.5
+          ],
+          "lowerElbow": [
+            45.5,
+            30.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  },
+  {
+    "id": "appearance.yixian.qiwangyou",
+    "name": "祁忘忧",
+    "slug": "qiwangyou",
+    "group": "五行道盟",
+    "sourceId": "3000006",
+    "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000006.html",
+    "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/3000006-portrait.webp",
+    "token": [
+      255,
+      89,
+      88,
+      3,
+      6,
+      1,
+      0
+    ],
+    "prop": "bottle",
+    "dual": false,
+    "atlasOverrides": {
+      "parts": {
+        "Body/Foot_R": {
+          "mirrorX": false
+        },
+        "Pant/Left": {
+          "componentSeed": [
+            43.5,
+            16.5
+          ]
+        },
+        "Body/Foot_L": {
+          "mirrorX": true
+        },
+        "Pant/Right": {
+          "componentSeed": [
+            86.5,
+            17.5
+          ]
+        },
+        "Hand/Grip_L": {
+          "landmarks": {
+            "grip": [
+              62.5,
+              85.5
+            ],
+            "wrist": [
+              116.5,
+              22.5
+            ]
+          }
+        },
+        "Hand/Grip_R": {
+          "landmarks": {
+            "grip": [
+              103.5,
+              87.5
+            ],
+            "wrist": [
+              31.5,
+              29.5
+            ]
+          }
+        },
+        "Hand/Open_L": {
+          "landmarks": {
+            "grip": [
+              94.5,
+              99.5
+            ],
+            "wrist": [
+              144.5,
+              28.5
+            ]
+          }
+        },
+        "Hand/Open_R": {
+          "landmarks": {
+            "grip": [
+              94.5,
+              104.5
+            ],
+            "wrist": [
+              26.5,
+              29.5
+            ]
+          }
+        }
+      },
+      "rig": {
+        "head": {
+          "neck": [
+            146.5,
+            231.5
+          ]
+        },
+        "body": {
+          "frameNeck": [
+            154.355,
+            -2.173
+          ],
+          "neck": [
+            145.5,
+            20.5
+          ]
+        },
+        "legLeft": {
+          "ankle": [
+            105.5,
+            24.5
+          ],
+          "sole": [
+            35.5,
+            179.5
+          ],
+          "toe": [
+            20.5,
+            159.5
+          ],
+          "heel": [
+            139.5,
+            134.5
+          ],
+          "hip": [
+            43.5,
+            16.5
+          ],
+          "pantAnkle": [
+            60.5,
+            262.5
+          ]
+        },
+        "legRight": {
+          "ankle": [
+            56.5,
+            24.5
+          ],
+          "sole": [
+            120.5,
+            179.5
+          ],
+          "toe": [
+            136.5,
+            159.5
+          ],
+          "heel": [
+            28.5,
+            135.5
+          ],
+          "hip": [
+            86.5,
+            17.5
+          ],
+          "pantAnkle": [
+            65.5,
+            265.5
+          ]
+        },
+        "calibrated": true,
+        "sleeveLeft": {
+          "cuff": [
+            30.5,
+            190.5
+          ],
+          "lowerElbow": [
+            160.5,
+            25.5
+          ]
+        },
+        "sleeveRight": {
+          "cuff": [
+            220.5,
+            181.5
+          ],
+          "lowerElbow": [
+            67.5,
+            35.5
+          ]
+        }
+      }
+    },
+    "calibration": {
+      "revision": 1,
+      "basis": "per-character source review; actual visible neck/collar and foot directions",
+      "sourceLayout": "atlas-layout-v1.json",
+      "coordinates": "source pixel centers"
+    }
+  }
+]

@@ -5,7 +5,7 @@
 | 文件 | 本地原始记录 |
 |---|---|
 | `characters.jpg` | `appearance-muyifeng/output/rig-repair-20261021-160208/all-characters-idle.jpg` |
-| `card-packs.png` | `logs/sect-depth-effects/mono-20261021-165042/visual/card-pack-preview.png` |
+| `card-packs.png` | `logs/sword-scaling/mono-20261021-174852/visual/card-pack-preview.png` |
 | `appearance-picker.png` | `appearance-muyifeng/output/run-20261021-170533/results/birth-choice-menu.png` |
 
-画面分别展示门派玩法 v0.7.0、外观 v0.7.1 的受测界面。游戏画面、卡图及角色设计的权利归原权利人；资源记录见[第三方资源说明](../../THIRD_PARTY_ASSETS.md)。
+画面分别展示门派玩法 v0.7.1、外观 v0.7.1 的受测界面。游戏画面、卡图及角色设计的权利归原权利人；资源记录见[第三方资源说明](../../THIRD_PARTY_ASSETS.md)。

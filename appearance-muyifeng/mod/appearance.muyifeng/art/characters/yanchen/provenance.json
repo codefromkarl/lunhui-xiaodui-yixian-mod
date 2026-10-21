@@ -1,0 +1,13 @@
+{
+  "character": "炎尘",
+  "sourceId": "2000002",
+  "referenceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/2000002.html",
+  "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/2000002-portrait.webp",
+  "referenceKind": "community reference of original default character art",
+  "generationTool": "built-in image_gen",
+  "styleReference": "approved Muyifeng pixel cutouts and Yan Xue atlas layout",
+  "generatedSource": "atlas-v1.png",
+  "prompt": "prompt-v1.txt",
+  "pixelEdits": false,
+  "metadata": "atlas.json"
+}

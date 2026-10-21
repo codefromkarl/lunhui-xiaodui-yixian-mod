@@ -1,0 +1,13 @@
+{
+  "character": "祁忘忧",
+  "sourceId": "3000006",
+  "referenceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000006.html",
+  "referenceImageUrl": "https://sharpobject.github.io/yxp_wiki/assets/characters/3000006-portrait.webp",
+  "referenceKind": "community reference of original default character art",
+  "generationTool": "built-in image_gen",
+  "styleReference": "approved Muyifeng pixel cutouts and Yan Xue atlas layout",
+  "generatedSource": "atlas-v1.png",
+  "prompt": "prompt-v1.txt",
+  "pixelEdits": false,
+  "metadata": "atlas.json"
+}

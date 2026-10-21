@@ -125,3 +125,5 @@ python3 scripts/run_yixian_runtime_tests.py --include-fates
 完整门派候选通过检查和实机后，用`python3 scripts/build_release.py --source <受测完整包> --output <更新包.zip> --source-commit <提交号>`生成无第三方原图、无游戏程序集的部署更新包。压缩包中的`UPDATE.md`说明覆盖步骤，`release-manifest.json`列出需要旧完整安装提供的图片；不把该更新包称为首次安装包。
 
 剑宗持续转化专项：`python3 scripts/run_yixian_runtime_tests.py --sword-scaling-only --quit-after-tests`，覆盖先购买能力、再正式加点、升级及保存恢复。
+
+完整整合包使用`python3 scripts/build_full_release.py --sect-source <受测门派包> --appearance-source <已发布受测外观包> --output <完整包.zip> --source-commit <门派提交> --appearance-commit <外观提交>`，包含两个完整运行包和来源索引，不包含游戏本体、用户配置或存档；外观只取已发布受测版本，不取共享开发目录。

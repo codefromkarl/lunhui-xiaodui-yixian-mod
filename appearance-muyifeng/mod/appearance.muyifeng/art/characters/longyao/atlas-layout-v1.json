@@ -1,0 +1,491 @@
+{
+  "format": "source-atlas-v1",
+  "sheets": {
+    "character": "art/characters/longyao/atlas-v1.png"
+  },
+  "parts": {
+    "Body/Head": {
+      "sheet": "character",
+      "rect": [
+        16,
+        16,
+        318,
+        408
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 600.0,
+      "alphaThreshold": 24
+    },
+    "HairBack": {
+      "sheet": "character",
+      "rect": [
+        349,
+        187,
+        287,
+        233
+      ],
+      "pivot": [
+        0.5,
+        0.95
+      ],
+      "pixelsPerUnit": 650.0,
+      "offset": [
+        0.06,
+        0.15
+      ],
+      "alphaThreshold": 24
+    },
+    "Cloth/Body": {
+      "sheet": "character",
+      "rect": [
+        660,
+        101,
+        350,
+        324
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 600.0,
+      "alphaThreshold": 24
+    },
+    "Cloth/Left": {
+      "sheet": "character",
+      "rect": [
+        1039,
+        110,
+        202,
+        298
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 600.0,
+      "alphaThreshold": 24
+    },
+    "Cloth/LeftLower": {
+      "sheet": "character",
+      "rect": [
+        79,
+        478,
+        215,
+        233
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 600.0,
+      "alphaThreshold": 24
+    },
+    "Cloth/Right": {
+      "sheet": "character",
+      "rect": [
+        360,
+        462,
+        224,
+        254
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 600.0,
+      "alphaThreshold": 24
+    },
+    "Cloth/RightLower": {
+      "sheet": "character",
+      "rect": [
+        697,
+        464,
+        246,
+        248
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 600.0,
+      "alphaThreshold": 24
+    },
+    "Hand/Grip_L": {
+      "sheet": "character",
+      "rect": [
+        1046,
+        491,
+        165,
+        175
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 2000.0,
+      "landmarks": {
+        "grip": [
+          67.863,
+          120.127
+        ],
+        "wrist": [
+          127.742,
+          31.144
+        ]
+      },
+      "alphaThreshold": 24
+    },
+    "Hand/Grip_R": {
+      "sheet": "character",
+      "rect": [
+        84,
+        773,
+        150,
+        157
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 2000.0,
+      "landmarks": {
+        "grip": [
+          104.878,
+          119.746
+        ],
+        "wrist": [
+          31.707,
+          39.915
+        ]
+      },
+      "alphaThreshold": 24
+    },
+    "Hand/Open_L": {
+      "sheet": "character",
+      "rect": [
+        383,
+        784,
+        213,
+        143
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 2000.0,
+      "landmarks": {
+        "grip": [
+          109.935,
+          91.277
+        ],
+        "wrist": [
+          164.903,
+          25.355
+        ]
+      },
+      "alphaThreshold": 24
+    },
+    "Hand/Open_R": {
+      "sheet": "character",
+      "rect": [
+        721,
+        783,
+        185,
+        145
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 2000.0,
+      "landmarks": {
+        "grip": [
+          90.71,
+          96.667
+        ],
+        "wrist": [
+          25.065,
+          26.852
+        ]
+      },
+      "alphaThreshold": 24
+    },
+    "Pant/Left": {
+      "sheet": "character",
+      "rect": [
+        1018,
+        716,
+        214,
+        221
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 850.0,
+      "alphaThreshold": 24
+    },
+    "Pant/Right": {
+      "sheet": "character",
+      "rect": [
+        48,
+        967,
+        213,
+        258
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 850.0,
+      "alphaThreshold": 24
+    },
+    "Body/Foot_R": {
+      "sheet": "character",
+      "rect": [
+        420,
+        995,
+        172,
+        209
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 850.0,
+      "alphaThreshold": 24
+    },
+    "Body/Foot_L": {
+      "sheet": "character",
+      "rect": [
+        697,
+        995,
+        182,
+        212
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 850.0,
+      "alphaThreshold": 24
+    },
+    "Weapon/Sword": {
+      "sheet": "character",
+      "rect": [
+        1061,
+        926,
+        150,
+        316
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 475,
+      "alphaThreshold": 24
+    }
+  },
+  "rig": {
+    "referenceFigure": {
+      "neck": [
+        280,
+        400
+      ],
+      "waist": [
+        294,
+        520
+      ],
+      "shoulderLeft": [
+        348,
+        432
+      ],
+      "palmLeft": [
+        390,
+        556
+      ],
+      "shoulderRight": [
+        204,
+        442
+      ],
+      "palmRight": [
+        166,
+        548
+      ],
+      "soleLeft": [
+        331,
+        704
+      ],
+      "soleRight": [
+        215,
+        704
+      ],
+      "hipLeft": [
+        309,
+        561
+      ],
+      "hipRight": [
+        255,
+        561
+      ],
+      "elbowLeft": [
+        372,
+        492
+      ],
+      "elbowRight": [
+        182,
+        492
+      ]
+    },
+    "native": {
+      "neck": [
+        0,
+        0.15625
+      ],
+      "waist": [
+        0,
+        -0.09375
+      ],
+      "shoulderLeft": [
+        0.125,
+        0.09375
+      ],
+      "shoulderRight": [
+        -0.125,
+        0.09375
+      ],
+      "restPalmLeft": [
+        0.21875,
+        -0.015625
+      ],
+      "restPalmRight": [
+        -0.15625,
+        -0.015625
+      ],
+      "palmInArm": [
+        0.03125,
+        -0.03125
+      ],
+      "restFootLeft": [
+        0.125,
+        -0.140625
+      ],
+      "restFootRight": [
+        -0.125,
+        -0.140625
+      ],
+      "groundY": -0.25
+    },
+    "body": {
+      "neck": [
+        163.71,
+        -1.81
+      ],
+      "waist": [
+        175.0,
+        142.994
+      ],
+      "shoulderLeft": [
+        265.323,
+        38.916
+      ],
+      "shoulderRight": [
+        95.968,
+        38.916
+      ]
+    },
+    "head": {
+      "neck": [
+        189.557,
+        338.828
+      ]
+    },
+    "sleeveLeft": {
+      "shoulder": [
+        47.418,
+        25.084
+      ],
+      "elbow": [
+        113.803,
+        250.842
+      ],
+      "lowerElbow": [
+        135.573,
+        15.216
+      ],
+      "cuff": [
+        94.49,
+        186.4
+      ]
+    },
+    "sleeveRight": {
+      "shoulder": [
+        164.945,
+        38.631
+      ],
+      "elbow": [
+        63.127,
+        217.3
+      ],
+      "lowerElbow": [
+        85.109,
+        43.089
+      ],
+      "cuff": [
+        184.209,
+        220.232
+      ]
+    },
+    "sword": {
+      "grip": [
+        75.0,
+        240.16
+      ],
+      "angleDegrees": 115
+    },
+    "motionScale": 1.0,
+    "legLeft": {
+      "foot": "Body/Foot_R",
+      "pant": "Pant/Left",
+      "hip": [
+        107.0,
+        26.52
+      ],
+      "pantAnkle": [
+        107.0,
+        194.48
+      ],
+      "ankle": [
+        131.37,
+        38.784
+      ],
+      "sole": [
+        104.283,
+        216.541
+      ]
+    },
+    "legRight": {
+      "foot": "Body/Foot_L",
+      "pant": "Pant/Right",
+      "hip": [
+        106.5,
+        30.959999999999997
+      ],
+      "pantAnkle": [
+        106.5,
+        227.04
+      ],
+      "ankle": [
+        93.935,
+        39.75
+      ],
+      "sole": [
+        108.613,
+        221.938
+      ]
+    }
+  }
+}
