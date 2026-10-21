@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "target": "local-player",
+  "pixelSource": "art/muyifeng-pixels.json",
+  "rendering": "one palette-grid cell per source texel; no image resizing",
+  "suppressNativeParts": ["Eye", "FaceHair", "Hair"]
+}

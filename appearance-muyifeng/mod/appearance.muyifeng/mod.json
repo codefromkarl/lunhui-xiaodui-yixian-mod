@@ -1,0 +1,9 @@
+{
+  "id": "appearance.muyifeng",
+  "version": "0.2.0",
+  "apiVersion": 1,
+  "name": "牧逸风 · 像素外观",
+  "author": "你",
+  "description": "本机玩家的牧逸风风格完整像素外观：重绘脸形、眉眼、前后发、白蓝衣袍与靴子。直接读取原尺寸像素网格，统一头身比例，保留原生骨架、武器及动作，同步队伍头像。",
+  "code": {"assembly": "plugins/MuyifengAppearance.dll"}
+}
