@@ -1538,38 +1538,6 @@
       ]
     },
     {
-      "name": "巽卦",
-      "sourceId": "4000001",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000001_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000001.html",
-      "outputs": [
-        {
-          "path": "mod/yixian.sect/icons/cards/yixian_star_gather.png",
-          "format": "png"
-        },
-        {
-          "path": "data/sources/original-correction/card-images/4000001.webp",
-          "format": "raw"
-        }
-      ]
-    },
-    {
-      "name": "坤卦",
-      "sourceId": "4000002",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000002_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000002.html",
-      "outputs": [
-        {
-          "path": "mod/yixian.sect/icons/cards/yixian_star_divine.png",
-          "format": "png"
-        },
-        {
-          "path": "data/sources/original-correction/card-images/4000002.webp",
-          "format": "raw"
-        }
-      ]
-    },
-    {
       "name": "震卦",
       "sourceId": "4000003",
       "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000003_zh.webp",
@@ -1650,6 +1618,22 @@
       ]
     },
     {
+      "name": "藕断丝连",
+      "sourceId": "4000013",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000013_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000013.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_incessant.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000013.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
       "name": "斗转星移",
       "sourceId": "4000023",
       "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000023_zh.webp",
@@ -1661,6 +1645,22 @@
         },
         {
           "path": "data/sources/original-correction/card-images/4000023.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "揽雀尾",
+      "sourceId": "4000061",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000061_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000061.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_sparrow.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000061.webp",
           "format": "raw"
         }
       ]
@@ -1730,22 +1730,6 @@
       ]
     },
     {
-      "name": "落花有意",
-      "sourceId": "4000021",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000021_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000021.html",
-      "outputs": [
-        {
-          "path": "mod/yixian.sect/icons/cards/yixian_star_coins.png",
-          "format": "png"
-        },
-        {
-          "path": "data/sources/original-correction/card-images/4000021.webp",
-          "format": "raw"
-        }
-      ]
-    },
-    {
       "name": "飞星刺",
       "sourceId": "4000024",
       "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000024_zh.webp",
@@ -1757,6 +1741,22 @@
         },
         {
           "path": "data/sources/original-correction/card-images/4000024.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
+      "name": "静气心法",
+      "sourceId": "4000027",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000027_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000027.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_calm.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000027.webp",
           "format": "raw"
         }
       ]
@@ -1794,17 +1794,17 @@
       ]
     },
     {
-      "name": "兑卦",
-      "sourceId": "4000025",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000025_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000025.html",
+      "name": "气疗术",
+      "sourceId": "4000017",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000017_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000017.html",
       "outputs": [
         {
-          "path": "mod/yixian.sect/icons/cards/yixian_star_spear.png",
+          "path": "mod/yixian.sect/icons/cards/yixian_star_qi_heal.png",
           "format": "png"
         },
         {
-          "path": "data/sources/original-correction/card-images/4000025.webp",
+          "path": "data/sources/original-correction/card-images/4000017.webp",
           "format": "raw"
         }
       ]
@@ -1874,6 +1874,22 @@
       ]
     },
     {
+      "name": "枯木逢春",
+      "sourceId": "4000042",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000042_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000042.html",
+      "outputs": [
+        {
+          "path": "mod/yixian.sect/icons/cards/yixian_star_rebirth.png",
+          "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/4000042.webp",
+          "format": "raw"
+        }
+      ]
+    },
+    {
       "name": "螳螂捕蝉",
       "sourceId": "4000043",
       "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000043_zh.webp",
@@ -1906,22 +1922,6 @@
       ]
     },
     {
-      "name": "白蛇吐信",
-      "sourceId": "4000031",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000031_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000031.html",
-      "outputs": [
-        {
-          "path": "mod/yixian.sect/icons/cards/yixian_star_judgment.png",
-          "format": "png"
-        },
-        {
-          "path": "data/sources/original-correction/card-images/4000031.webp",
-          "format": "raw"
-        }
-      ]
-    },
-    {
       "name": "六爻绝阵",
       "sourceId": "4000014",
       "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000014_zh.webp",
@@ -1933,38 +1933,6 @@
         },
         {
           "path": "data/sources/original-correction/card-images/4000014.webp",
-          "format": "raw"
-        }
-      ]
-    },
-    {
-      "name": "离卦",
-      "sourceId": "4000034",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000034_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000034.html",
-      "outputs": [
-        {
-          "path": "mod/yixian.sect/icons/cards/yixian_star_chain.png",
-          "format": "png"
-        },
-        {
-          "path": "data/sources/original-correction/card-images/4000034.webp",
-          "format": "raw"
-        }
-      ]
-    },
-    {
-      "name": "蜻蜓点水",
-      "sourceId": "4000035",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000035_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000035.html",
-      "outputs": [
-        {
-          "path": "mod/yixian.sect/icons/cards/yixian_star_beacon.png",
-          "format": "png"
-        },
-        {
-          "path": "data/sources/original-correction/card-images/4000035.webp",
           "format": "raw"
         }
       ]
@@ -2018,22 +1986,6 @@
       ]
     },
     {
-      "name": "杯弓蛇影",
-      "sourceId": "4000059",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000059_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000059.html",
-      "outputs": [
-        {
-          "path": "mod/yixian.sect/icons/cards/yixian_star_inscribe.png",
-          "format": "png"
-        },
-        {
-          "path": "data/sources/original-correction/card-images/4000059.webp",
-          "format": "raw"
-        }
-      ]
-    },
-    {
       "name": "星轨推衍",
       "sourceId": "4000062",
       "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000062_zh.webp",
@@ -2061,22 +2013,6 @@
         },
         {
           "path": "data/sources/original-correction/card-images/4000063.webp",
-          "format": "raw"
-        }
-      ]
-    },
-    {
-      "name": "伤魂咒阵",
-      "sourceId": "4000092",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000092_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000092.html",
-      "outputs": [
-        {
-          "path": "mod/yixian.sect/icons/cards/yixian_star_arc.png",
-          "format": "png"
-        },
-        {
-          "path": "data/sources/original-correction/card-images/4000092.webp",
           "format": "raw"
         }
       ]
@@ -2210,22 +2146,6 @@
       ]
     },
     {
-      "name": "紫气东来",
-      "sourceId": "4000067",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000067_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000067.html",
-      "outputs": [
-        {
-          "path": "mod/yixian.sect/icons/cards/yixian_star_decree.png",
-          "format": "png"
-        },
-        {
-          "path": "data/sources/original-correction/card-images/4000067.webp",
-          "format": "raw"
-        }
-      ]
-    },
-    {
       "name": "星弈·劫争",
       "sourceId": "4000094",
       "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000094_zh.webp",
@@ -2242,38 +2162,6 @@
       ]
     },
     {
-      "name": "灵蛇绕柱",
-      "sourceId": "4000095",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000095_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000095.html",
-      "outputs": [
-        {
-          "path": "mod/yixian.sect/icons/cards/yixian_star_zenith.png",
-          "format": "png"
-        },
-        {
-          "path": "data/sources/original-correction/card-images/4000095.webp",
-          "format": "raw"
-        }
-      ]
-    },
-    {
-      "name": "折枝点穴",
-      "sourceId": "4000096",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000096_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000096.html",
-      "outputs": [
-        {
-          "path": "mod/yixian.sect/icons/cards/yixian_star_heavens.png",
-          "format": "png"
-        },
-        {
-          "path": "data/sources/original-correction/card-images/4000096.webp",
-          "format": "raw"
-        }
-      ]
-    },
-    {
       "name": "星弈·尖",
       "sourceId": "4000107",
       "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000107_zh.webp",
@@ -2285,22 +2173,6 @@
         },
         {
           "path": "data/sources/original-correction/card-images/4000107.webp",
-          "format": "raw"
-        }
-      ]
-    },
-    {
-      "name": "魂咒卦诀",
-      "sourceId": "4000109",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000109_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000109.html",
-      "outputs": [
-        {
-          "path": "mod/yixian.sect/icons/cards/yixian_star_horizon.png",
-          "format": "png"
-        },
-        {
-          "path": "data/sources/original-correction/card-images/4000109.webp",
           "format": "raw"
         }
       ]

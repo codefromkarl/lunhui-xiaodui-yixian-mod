@@ -1155,78 +1155,6 @@
     {
       "op": "add",
       "kind": "statuses",
-      "id": "yixian.sect.status.star.soulCharges",
-      "copyFrom": "status.element.fire",
-      "fields": {
-        "displayName": "伤魂咒阵",
-        "flavour": "剩余攻击/受到攻击逐段触发内伤次数；非攻伤不触发。",
-        "iconKey": "icon.yixian.sect.status.star.soulCharges",
-        "category": 20,
-        "maximumStacks": 9999,
-        "defaultDurationRounds": 0,
-        "hardControl": false,
-        "rule": {
-          "handlerKey": "",
-          "targetKind": 0,
-          "values": []
-        },
-        "polarity": 0,
-        "ending": 40,
-        "stackDecay": 10,
-        "reapply": 20,
-        "display": 10,
-        "dispellable": false,
-        "queuesActionSkip": false,
-        "uniquePerTarget": true,
-        "mentalNegative": false,
-        "removedByDamage": false,
-        "immunityFamily": 0,
-        "baseChanceBp": 10000,
-        "exclusions": [],
-        "modifiers": [],
-        "timedEffects": [],
-        "mutualCancelBuffId": ""
-      }
-    },
-    {
-      "op": "add",
-      "kind": "statuses",
-      "id": "yixian.sect.status.star.injuryRounds",
-      "copyFrom": "status.element.fire",
-      "fields": {
-        "displayName": "折枝点穴",
-        "flavour": "本门攻击逐段附加1内伤的剩余原生大回合。",
-        "iconKey": "icon.yixian.sect.status.star.injuryRounds",
-        "category": 20,
-        "maximumStacks": 9999,
-        "defaultDurationRounds": 0,
-        "hardControl": false,
-        "rule": {
-          "handlerKey": "",
-          "targetKind": 0,
-          "values": []
-        },
-        "polarity": 0,
-        "ending": 40,
-        "stackDecay": 10,
-        "reapply": 20,
-        "display": 10,
-        "dispellable": false,
-        "queuesActionSkip": false,
-        "uniquePerTarget": true,
-        "mentalNegative": false,
-        "removedByDamage": false,
-        "immunityFamily": 0,
-        "baseChanceBp": 10000,
-        "exclusions": [],
-        "modifiers": [],
-        "timedEffects": [],
-        "mutualCancelBuffId": ""
-      }
-    },
-    {
-      "op": "add",
-      "kind": "statuses",
       "id": "yixian.sect.status.star.position1",
       "copyFrom": "status.element.fire",
       "fields": {
@@ -1515,6 +1443,42 @@
     {
       "op": "add",
       "kind": "statuses",
+      "id": "yixian.sect.status.star.calm",
+      "copyFrom": "status.element.fire",
+      "fields": {
+        "displayName": "静气心法",
+        "flavour": "本门牌每实际累计恢复4斗气，产生6治疗量；不足4的余数跨牌保留，满斗气不触发。",
+        "iconKey": "icon.yixian.sect.status.star.calm",
+        "category": 20,
+        "maximumStacks": 9999,
+        "defaultDurationRounds": 0,
+        "hardControl": false,
+        "rule": {
+          "handlerKey": "",
+          "targetKind": 0,
+          "values": []
+        },
+        "polarity": 0,
+        "ending": 40,
+        "stackDecay": 10,
+        "reapply": 20,
+        "display": 10,
+        "dispellable": false,
+        "queuesActionSkip": false,
+        "uniquePerTarget": true,
+        "mentalNegative": false,
+        "removedByDamage": false,
+        "immunityFamily": 0,
+        "baseChanceBp": 10000,
+        "exclusions": [],
+        "modifiers": [],
+        "timedEffects": [],
+        "mutualCancelBuffId": ""
+      }
+    },
+    {
+      "op": "add",
+      "kind": "statuses",
       "id": "yixian.sect.status.star.weak",
       "copyFrom": "status.element.fire",
       "fields": {
@@ -1598,153 +1562,6 @@
             "basisPoints": 4000,
             "source": 10,
             "perStack": false,
-            "category": 0,
-            "damageLayer": 0,
-            "damageTypeFilter": 10,
-            "tagFilter": 0
-          }
-        ],
-        "timedEffects": [],
-        "mutualCancelBuffId": ""
-      }
-    },
-    {
-      "op": "add",
-      "kind": "statuses",
-      "id": "yixian.sect.status.star.decrease",
-      "copyFrom": "status.element.fire",
-      "fields": {
-        "displayName": "减攻",
-        "flavour": "每层物理攻击伤害−3。",
-        "iconKey": "icon.yixian.sect.status.star.decrease",
-        "category": 20,
-        "maximumStacks": 9999,
-        "defaultDurationRounds": 0,
-        "hardControl": false,
-        "rule": {
-          "handlerKey": "",
-          "targetKind": 0,
-          "values": []
-        },
-        "polarity": 20,
-        "ending": 40,
-        "stackDecay": 10,
-        "reapply": 10,
-        "display": 10,
-        "dispellable": true,
-        "queuesActionSkip": false,
-        "uniquePerTarget": true,
-        "mentalNegative": false,
-        "removedByDamage": false,
-        "immunityFamily": 0,
-        "baseChanceBp": 10000,
-        "exclusions": [],
-        "modifiers": [
-          {
-            "primitive": 40,
-            "flatAmount": -3,
-            "basisPoints": 0,
-            "source": 10,
-            "perStack": true,
-            "category": 0,
-            "damageLayer": 0,
-            "damageTypeFilter": 10,
-            "tagFilter": 0
-          }
-        ],
-        "timedEffects": [],
-        "mutualCancelBuffId": ""
-      }
-    },
-    {
-      "op": "add",
-      "kind": "statuses",
-      "id": "yixian.sect.status.star.internal",
-      "copyFrom": "status.element.fire",
-      "fields": {
-        "displayName": "内伤",
-        "flavour": "每层在自身行动阶段开始时直接失去3生命。",
-        "iconKey": "icon.yixian.sect.status.star.internal",
-        "category": 20,
-        "maximumStacks": 9999,
-        "defaultDurationRounds": 0,
-        "hardControl": false,
-        "rule": {
-          "handlerKey": "",
-          "targetKind": 0,
-          "values": []
-        },
-        "polarity": 20,
-        "ending": 40,
-        "stackDecay": 10,
-        "reapply": 10,
-        "display": 10,
-        "dispellable": true,
-        "queuesActionSkip": false,
-        "uniquePerTarget": true,
-        "mentalNegative": false,
-        "removedByDamage": false,
-        "immunityFamily": 0,
-        "baseChanceBp": 10000,
-        "exclusions": [],
-        "modifiers": [],
-        "timedEffects": [
-          {
-            "timing": 100,
-            "primitive": 10,
-            "target": 10,
-            "flatAmount": 3,
-            "basisPoints": 0,
-            "source": 10,
-            "element": 0,
-            "perStack": true,
-            "isDirectDamage": true,
-            "removesSelfAfter": false,
-            "damageKind": 40,
-            "basis": 10
-          }
-        ],
-        "mutualCancelBuffId": ""
-      }
-    },
-    {
-      "op": "add",
-      "kind": "statuses",
-      "id": "yixian.sect.status.star.external",
-      "copyFrom": "status.element.fire",
-      "fields": {
-        "displayName": "外伤",
-        "flavour": "每层使受到的物理攻击伤害增加3。",
-        "iconKey": "icon.yixian.sect.status.star.external",
-        "category": 20,
-        "maximumStacks": 9999,
-        "defaultDurationRounds": 0,
-        "hardControl": false,
-        "rule": {
-          "handlerKey": "",
-          "targetKind": 0,
-          "values": []
-        },
-        "polarity": 20,
-        "ending": 40,
-        "stackDecay": 10,
-        "reapply": 10,
-        "display": 10,
-        "dispellable": true,
-        "queuesActionSkip": false,
-        "uniquePerTarget": true,
-        "mentalNegative": false,
-        "removedByDamage": false,
-        "immunityFamily": 0,
-        "baseChanceBp": 10000,
-        "exclusions": [],
-        "modifiers": [
-          {
-            "primitive": 50,
-            "flatAmount": 3,
-            "basisPoints": 0,
-            "source": 10,
-            "perStack": true,
             "category": 0,
             "damageLayer": 0,
             "damageTypeFilter": 10,

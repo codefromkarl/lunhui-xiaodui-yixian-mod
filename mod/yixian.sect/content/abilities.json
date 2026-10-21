@@ -54,7 +54,7 @@
         "mode": 10,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "",
+        "flavour": "造成〔15＋70%×能量〕点物理伤害。\n连云：每段追加物理伤害〔9＋40%×能量〕。\n连云：沿施法者朝主目标方向贯穿后方至多1名敌人，每段造成本段伤害的50%。\n消耗：0斗气。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -183,7 +183,7 @@
         "mode": 10,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "",
+        "flavour": "造成〔15＋80%×能量〕点物理伤害。\n击伤：追加〔18＋60%×能量〕物理伤害，每次出牌只触发一次，不递归。\n主目标击伤追加时：向其1格邻近至多2名敌人各造成追加伤害的40%；不再触发击伤。\n消耗：4斗气。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -355,7 +355,7 @@
         "mode": 10,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "",
+        "flavour": "连云：造成〔27＋110%×能量〕点物理伤害。\n未连云时不攻击，仍消耗出牌费用。\n连云：横扫主目标同阵位其他敌人，每段造成本段伤害的50%。\n消耗：0斗气。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -914,7 +914,7 @@
         "mode": 10,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "",
+        "flavour": "攻击部分另加 120%×能量，逐段计算。\n获得护盾〔9＋80%×能量〕。\n本牌护盾生效后，每有 3 护盾，伤害增加 3。\n范围：主目标1格邻接的其他敌人，各承受本段伤害的30%，独立判定命中。\n消耗：0斗气。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -4607,7 +4607,7 @@
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "获得五行道盟时自动赠送并启用。",
+        "flavour": "原卡资料分类，不出售、不启用。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -4646,7 +4646,7 @@
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "获得五行道盟时自动赠送并启用。",
+        "flavour": "原卡资料分类，不出售、不启用。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -4683,9 +4683,9 @@
         "iconKey": "icon.yixian.sect.pack.yixian_five_forge",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 40,
-        "flavour": "突破筑基时从两个筑基包中免费选一；另一包可购买。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "原卡资料分类，不出售、不启用。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -4722,9 +4722,9 @@
         "iconKey": "icon.yixian.sect.pack.yixian_five_nurture",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 45,
-        "flavour": "突破筑基时从两个筑基包中免费选一；另一包可购买。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "原卡资料分类，不出售、不启用。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -4761,9 +4761,9 @@
         "iconKey": "icon.yixian.sect.pack.yixian_five_temper",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 70,
-        "flavour": "达到金丹后购买，不赠送；低阶未拥有包持续出售。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "原卡资料分类，不出售、不启用。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -4800,9 +4800,9 @@
         "iconKey": "icon.yixian.sect.pack.yixian_five_cycle_seed",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 65,
-        "flavour": "达到金丹后购买，不赠送；低阶未拥有包持续出售。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "原卡资料分类，不出售、不启用。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -4839,9 +4839,9 @@
         "iconKey": "icon.yixian.sect.pack.yixian_five_sword_flame",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 105,
-        "flavour": "达到元婴后购买，不赠送；低阶未拥有包持续出售。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "原卡资料分类，不出售、不启用。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -4878,9 +4878,9 @@
         "iconKey": "icon.yixian.sect.pack.yixian_five_forest_sea",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 105,
-        "flavour": "达到元婴后购买，不赠送；低阶未拥有包持续出售。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "原卡资料分类，不出售、不启用。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -4917,9 +4917,9 @@
         "iconKey": "icon.yixian.sect.pack.yixian_five_great_cycle",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 105,
-        "flavour": "达到元婴后购买，不赠送；低阶未拥有包持续出售。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "原卡资料分类，不出售、不启用。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -4956,9 +4956,9 @@
         "iconKey": "icon.yixian.sect.pack.yixian_five_divine_forge",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 150,
-        "flavour": "达到化神后购买，不赠送；低阶未拥有包持续出售。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "原卡资料分类，不出售、不启用。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -4995,9 +4995,9 @@
         "iconKey": "icon.yixian.sect.pack.yixian_five_evergreen",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 150,
-        "flavour": "达到化神后购买，不赠送；低阶未拥有包持续出售。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "原卡资料分类，不出售、不启用。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -5034,9 +5034,9 @@
         "iconKey": "icon.yixian.sect.pack.yixian_five_origin",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 150,
-        "flavour": "达到化神后购买，不赠送；低阶未拥有包持续出售。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "原卡资料分类，不出售、不启用。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -5057,92 +5057,6 @@
                 {
                   "key": "cardTablePackKey",
                   "stringValue": "yixian_five_origin"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "op": "add",
-      "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_gather",
-      "fields": {
-        "displayName": "巽卦",
-        "iconKey": "icon.yixian.sect.card.yixian_star_gather",
-        "sourceContentId": "yixian.sect.lineage.star",
-        "mode": 10,
-        "acquisition": 20,
-        "purchasePrice": 0,
-        "flavour": "",
-        "referencedStatusIds": [],
-        "ranks": [
-          {
-            "rank": "D",
-            "tier": 1,
-            "operation": {
-              "handlerKey": "effect.script",
-              "targetKind": 10,
-              "values": [
-                {
-                  "key": "apCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyPool",
-                  "intValue": 40
-                },
-                {
-                  "key": "range",
-                  "intValue": 5
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "op": "add",
-      "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_divine",
-      "fields": {
-        "displayName": "坤卦",
-        "iconKey": "icon.yixian.sect.card.yixian_star_divine",
-        "sourceContentId": "yixian.sect.lineage.star",
-        "mode": 10,
-        "acquisition": 20,
-        "purchasePrice": 0,
-        "flavour": "",
-        "referencedStatusIds": [],
-        "ranks": [
-          {
-            "rank": "D",
-            "tier": 1,
-            "operation": {
-              "handlerKey": "effect.script",
-              "targetKind": 10,
-              "values": [
-                {
-                  "key": "apCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyPool",
-                  "intValue": 40
-                },
-                {
-                  "key": "range",
-                  "intValue": 5
                 }
               ]
             }
@@ -5368,6 +5282,49 @@
     {
       "op": "add",
       "kind": "abilities",
+      "id": "yixian.sect.card.yixian_star_incessant",
+      "fields": {
+        "displayName": "藕断丝连",
+        "iconKey": "icon.yixian.sect.card.yixian_star_incessant",
+        "sourceContentId": "yixian.sect.lineage.star",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
       "id": "yixian.sect.card.yixian_star_shift",
       "fields": {
         "displayName": "斗转星移",
@@ -5393,6 +5350,49 @@
                 {
                   "key": "energyCost",
                   "intValue": 0
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_star_sparrow",
+      "fields": {
+        "displayName": "揽雀尾",
+        "iconKey": "icon.yixian.sect.card.yixian_star_sparrow",
+        "sourceContentId": "yixian.sect.lineage.star",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
                 },
                 {
                   "key": "energyPool",
@@ -5583,10 +5583,10 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_coins",
+      "id": "yixian.sect.card.yixian_star_wheel",
       "fields": {
-        "displayName": "落花有意",
-        "iconKey": "icon.yixian.sect.card.yixian_star_coins",
+        "displayName": "飞星刺",
+        "iconKey": "icon.yixian.sect.card.yixian_star_wheel",
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 10,
         "acquisition": 20,
@@ -5626,10 +5626,10 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_wheel",
+      "id": "yixian.sect.card.yixian_star_calm",
       "fields": {
-        "displayName": "飞星刺",
-        "iconKey": "icon.yixian.sect.card.yixian_star_wheel",
+        "displayName": "静气心法",
+        "iconKey": "icon.yixian.sect.card.yixian_star_calm",
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 10,
         "acquisition": 20,
@@ -5642,7 +5642,7 @@
             "tier": 1,
             "operation": {
               "handlerKey": "effect.script",
-              "targetKind": 50,
+              "targetKind": 10,
               "values": [
                 {
                   "key": "apCost",
@@ -5755,10 +5755,10 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_spear",
+      "id": "yixian.sect.card.yixian_star_qi_heal",
       "fields": {
-        "displayName": "兑卦",
-        "iconKey": "icon.yixian.sect.card.yixian_star_spear",
+        "displayName": "气疗术",
+        "iconKey": "icon.yixian.sect.card.yixian_star_qi_heal",
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 10,
         "acquisition": 20,
@@ -5771,7 +5771,7 @@
             "tier": 1,
             "operation": {
               "handlerKey": "effect.script",
-              "targetKind": 10,
+              "targetKind": 20,
               "values": [
                 {
                   "key": "apCost",
@@ -5779,7 +5779,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 0
+                  "intValue": 4
                 },
                 {
                   "key": "energyPool",
@@ -5970,6 +5970,49 @@
     {
       "op": "add",
       "kind": "abilities",
+      "id": "yixian.sect.card.yixian_star_rebirth",
+      "fields": {
+        "displayName": "枯木逢春",
+        "iconKey": "icon.yixian.sect.card.yixian_star_rebirth",
+        "sourceContentId": "yixian.sect.lineage.star",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
       "id": "yixian.sect.card.yixian_star_orbit",
       "fields": {
         "displayName": "螳螂捕蝉",
@@ -6056,49 +6099,6 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_judgment",
-      "fields": {
-        "displayName": "白蛇吐信",
-        "iconKey": "icon.yixian.sect.card.yixian_star_judgment",
-        "sourceContentId": "yixian.sect.lineage.star",
-        "mode": 10,
-        "acquisition": 20,
-        "purchasePrice": 0,
-        "flavour": "",
-        "referencedStatusIds": [],
-        "ranks": [
-          {
-            "rank": "B",
-            "tier": 1,
-            "operation": {
-              "handlerKey": "effect.script",
-              "targetKind": 50,
-              "values": [
-                {
-                  "key": "apCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyPool",
-                  "intValue": 40
-                },
-                {
-                  "key": "range",
-                  "intValue": 5
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "op": "add",
-      "kind": "abilities",
       "id": "yixian.sect.card.yixian_star_comet",
       "fields": {
         "displayName": "六爻绝阵",
@@ -6116,92 +6116,6 @@
             "operation": {
               "handlerKey": "effect.script",
               "targetKind": 10,
-              "values": [
-                {
-                  "key": "apCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyPool",
-                  "intValue": 40
-                },
-                {
-                  "key": "range",
-                  "intValue": 5
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "op": "add",
-      "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_chain",
-      "fields": {
-        "displayName": "离卦",
-        "iconKey": "icon.yixian.sect.card.yixian_star_chain",
-        "sourceContentId": "yixian.sect.lineage.star",
-        "mode": 10,
-        "acquisition": 20,
-        "purchasePrice": 0,
-        "flavour": "",
-        "referencedStatusIds": [],
-        "ranks": [
-          {
-            "rank": "A",
-            "tier": 1,
-            "operation": {
-              "handlerKey": "effect.script",
-              "targetKind": 50,
-              "values": [
-                {
-                  "key": "apCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyPool",
-                  "intValue": 40
-                },
-                {
-                  "key": "range",
-                  "intValue": 5
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "op": "add",
-      "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_beacon",
-      "fields": {
-        "displayName": "蜻蜓点水",
-        "iconKey": "icon.yixian.sect.card.yixian_star_beacon",
-        "sourceContentId": "yixian.sect.lineage.star",
-        "mode": 10,
-        "acquisition": 20,
-        "purchasePrice": 0,
-        "flavour": "",
-        "referencedStatusIds": [],
-        "ranks": [
-          {
-            "rank": "A",
-            "tier": 1,
-            "operation": {
-              "handlerKey": "effect.script",
-              "targetKind": 50,
               "values": [
                 {
                   "key": "apCost",
@@ -6357,49 +6271,6 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_inscribe",
-      "fields": {
-        "displayName": "杯弓蛇影",
-        "iconKey": "icon.yixian.sect.card.yixian_star_inscribe",
-        "sourceContentId": "yixian.sect.lineage.star",
-        "mode": 10,
-        "acquisition": 20,
-        "purchasePrice": 0,
-        "flavour": "",
-        "referencedStatusIds": [],
-        "ranks": [
-          {
-            "rank": "A",
-            "tier": 1,
-            "operation": {
-              "handlerKey": "effect.script",
-              "targetKind": 50,
-              "values": [
-                {
-                  "key": "apCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyPool",
-                  "intValue": 40
-                },
-                {
-                  "key": "range",
-                  "intValue": 5
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "op": "add",
-      "kind": "abilities",
       "id": "yixian.sect.card.yixian_star_dissolve",
       "fields": {
         "displayName": "星轨推衍",
@@ -6460,49 +6331,6 @@
             "operation": {
               "handlerKey": "effect.script",
               "targetKind": 50,
-              "values": [
-                {
-                  "key": "apCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyPool",
-                  "intValue": 40
-                },
-                {
-                  "key": "range",
-                  "intValue": 5
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "op": "add",
-      "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_arc",
-      "fields": {
-        "displayName": "伤魂咒阵",
-        "iconKey": "icon.yixian.sect.card.yixian_star_arc",
-        "sourceContentId": "yixian.sect.lineage.star",
-        "mode": 10,
-        "acquisition": 20,
-        "purchasePrice": 0,
-        "flavour": "",
-        "referencedStatusIds": [],
-        "ranks": [
-          {
-            "rank": "A",
-            "tier": 1,
-            "operation": {
-              "handlerKey": "effect.script",
-              "targetKind": 10,
               "values": [
                 {
                   "key": "apCost",
@@ -6846,7 +6674,7 @@
             "tier": 1,
             "operation": {
               "handlerKey": "effect.script",
-              "targetKind": 10,
+              "targetKind": 20,
               "values": [
                 {
                   "key": "apCost",
@@ -6873,139 +6701,10 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_decree",
-      "fields": {
-        "displayName": "紫气东来",
-        "iconKey": "icon.yixian.sect.card.yixian_star_decree",
-        "sourceContentId": "yixian.sect.lineage.star",
-        "mode": 10,
-        "acquisition": 20,
-        "purchasePrice": 0,
-        "flavour": "",
-        "referencedStatusIds": [],
-        "ranks": [
-          {
-            "rank": "S",
-            "tier": 1,
-            "operation": {
-              "handlerKey": "effect.script",
-              "targetKind": 10,
-              "values": [
-                {
-                  "key": "apCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyPool",
-                  "intValue": 40
-                },
-                {
-                  "key": "range",
-                  "intValue": 5
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "op": "add",
-      "kind": "abilities",
       "id": "yixian.sect.card.yixian_star_renew",
       "fields": {
         "displayName": "星弈·劫争",
         "iconKey": "icon.yixian.sect.card.yixian_star_renew",
-        "sourceContentId": "yixian.sect.lineage.star",
-        "mode": 10,
-        "acquisition": 20,
-        "purchasePrice": 0,
-        "flavour": "",
-        "referencedStatusIds": [],
-        "ranks": [
-          {
-            "rank": "S",
-            "tier": 1,
-            "operation": {
-              "handlerKey": "effect.script",
-              "targetKind": 50,
-              "values": [
-                {
-                  "key": "apCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyPool",
-                  "intValue": 40
-                },
-                {
-                  "key": "range",
-                  "intValue": 5
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "op": "add",
-      "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_zenith",
-      "fields": {
-        "displayName": "灵蛇绕柱",
-        "iconKey": "icon.yixian.sect.card.yixian_star_zenith",
-        "sourceContentId": "yixian.sect.lineage.star",
-        "mode": 10,
-        "acquisition": 20,
-        "purchasePrice": 0,
-        "flavour": "",
-        "referencedStatusIds": [],
-        "ranks": [
-          {
-            "rank": "S",
-            "tier": 1,
-            "operation": {
-              "handlerKey": "effect.script",
-              "targetKind": 50,
-              "values": [
-                {
-                  "key": "apCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyPool",
-                  "intValue": 40
-                },
-                {
-                  "key": "range",
-                  "intValue": 5
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "op": "add",
-      "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_heavens",
-      "fields": {
-        "displayName": "折枝点穴",
-        "iconKey": "icon.yixian.sect.card.yixian_star_heavens",
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 10,
         "acquisition": 20,
@@ -7088,52 +6787,9 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.card.yixian_star_horizon",
-      "fields": {
-        "displayName": "魂咒卦诀",
-        "iconKey": "icon.yixian.sect.card.yixian_star_horizon",
-        "sourceContentId": "yixian.sect.lineage.star",
-        "mode": 10,
-        "acquisition": 20,
-        "purchasePrice": 0,
-        "flavour": "",
-        "referencedStatusIds": [],
-        "ranks": [
-          {
-            "rank": "S",
-            "tier": 1,
-            "operation": {
-              "handlerKey": "effect.script",
-              "targetKind": 50,
-              "values": [
-                {
-                  "key": "apCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyCost",
-                  "intValue": 0
-                },
-                {
-                  "key": "energyPool",
-                  "intValue": 40
-                },
-                {
-                  "key": "range",
-                  "intValue": 5
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "op": "add",
-      "kind": "abilities",
       "id": "yixian.sect.pack.yixian_star_chart",
       "fields": {
-        "displayName": "炼气·卦象入门",
+        "displayName": "炼气·初阶招式",
         "iconKey": "icon.yixian.sect.pack.yixian_star_chart",
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
@@ -7211,7 +6867,7 @@
       "kind": "abilities",
       "id": "yixian.sect.pack.yixian_star_well",
       "fields": {
-        "displayName": "筑基·卦雷相济",
+        "displayName": "筑基·卦雷周转",
         "iconKey": "icon.yixian.sect.pack.yixian_star_well",
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
@@ -7250,7 +6906,7 @@
       "kind": "abilities",
       "id": "yixian.sect.pack.yixian_star_wheel",
       "fields": {
-        "displayName": "筑基·飞星布位",
+        "displayName": "筑基·星位生息",
         "iconKey": "icon.yixian.sect.pack.yixian_star_wheel",
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
@@ -7289,7 +6945,7 @@
       "kind": "abilities",
       "id": "yixian.sect.pack.yixian_star_spear",
       "fields": {
-        "displayName": "金丹·星弈后招",
+        "displayName": "金丹·后招生息",
         "iconKey": "icon.yixian.sect.pack.yixian_star_spear",
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
@@ -7328,7 +6984,7 @@
       "kind": "abilities",
       "id": "yixian.sect.pack.yixian_star_compass",
       "fields": {
-        "displayName": "金丹·两仪御雷",
+        "displayName": "金丹·两仪星雷",
         "iconKey": "icon.yixian.sect.pack.yixian_star_compass",
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
@@ -7367,7 +7023,7 @@
       "kind": "abilities",
       "id": "yixian.sect.pack.yixian_star_comet",
       "fields": {
-        "displayName": "元婴·六爻星变",
+        "displayName": "元婴·卦雷攻守",
         "iconKey": "icon.yixian.sect.pack.yixian_star_comet",
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
@@ -7443,45 +7099,6 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.pack.yixian_star_pivot",
-      "fields": {
-        "displayName": "元婴·雷咒连星",
-        "iconKey": "icon.yixian.sect.pack.yixian_star_pivot",
-        "sourceContentId": "yixian.sect.lineage.star",
-        "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 105,
-        "flavour": "达到元婴后购买，不赠送；低阶未拥有包持续出售。",
-        "referencedStatusIds": [],
-        "ranks": [
-          {
-            "rank": "A",
-            "tier": 1,
-            "operation": {
-              "handlerKey": "passive.lineage",
-              "targetKind": 110,
-              "values": [
-                {
-                  "key": "lineageCode",
-                  "stringValue": "yixian_star"
-                },
-                {
-                  "key": "step",
-                  "intValue": 3
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "yixian_star_pivot"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    {
-      "op": "add",
-      "kind": "abilities",
       "id": "yixian.sect.pack.yixian_star_nova",
       "fields": {
         "displayName": "化神·天元星断",
@@ -7523,7 +7140,7 @@
       "kind": "abilities",
       "id": "yixian.sect.pack.yixian_star_oracle",
       "fields": {
-        "displayName": "化神·五雷紫气",
+        "displayName": "化神·五雷后招",
         "iconKey": "icon.yixian.sect.pack.yixian_star_oracle",
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
@@ -7560,19 +7177,19 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.pack.yixian_star_zenith",
+      "id": "yixian.sect.pack.five_deck",
       "fields": {
-        "displayName": "化神·星咒交织",
-        "iconKey": "icon.yixian.sect.pack.yixian_star_zenith",
-        "sourceContentId": "yixian.sect.lineage.star",
+        "displayName": "五行自选卡包",
+        "iconKey": "icon.lineage.yixian_five",
+        "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 150,
-        "flavour": "达到化神后购买，不赠送；低阶未拥有包持续出售。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "固定八张；突破解锁两张新牌，战斗中从已解锁牌库免费调整八张。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "S",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -7580,15 +7197,15 @@
               "values": [
                 {
                   "key": "lineageCode",
-                  "stringValue": "yixian_star"
+                  "stringValue": "yixian_five"
                 },
                 {
                   "key": "step",
-                  "intValue": 4
+                  "intValue": 0
                 },
                 {
                   "key": "cardTablePackKey",
-                  "stringValue": "yixian_star_zenith"
+                  "stringValue": "five_deck"
                 }
               ]
             }
@@ -7599,15 +7216,15 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_metal",
+      "id": "yixian.sect.deckcard.yixian_five_metal",
       "fields": {
-        "displayName": "选牌·金灵印",
+        "displayName": "金灵印",
         "iconKey": "icon.yixian.sect.card.yixian_five_metal",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -7624,10 +7241,6 @@
                 {
                   "key": "step",
                   "intValue": 0
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_metal"
                 }
               ]
             }
@@ -7638,15 +7251,50 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_water",
+      "id": "yixian.sect.unlockedcard.yixian_five_metal",
       "fields": {
-        "displayName": "选牌·木灵印",
+        "displayName": "金灵印",
+        "iconKey": "icon.yixian.sect.card.yixian_five_metal",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_water",
+      "fields": {
+        "displayName": "木灵印",
         "iconKey": "icon.yixian.sect.card.yixian_five_water",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -7663,10 +7311,6 @@
                 {
                   "key": "step",
                   "intValue": 0
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_water"
                 }
               ]
             }
@@ -7677,15 +7321,50 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_wood",
+      "id": "yixian.sect.unlockedcard.yixian_five_water",
       "fields": {
-        "displayName": "选牌·水灵印",
+        "displayName": "木灵印",
+        "iconKey": "icon.yixian.sect.card.yixian_five_water",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_wood",
+      "fields": {
+        "displayName": "水灵印",
         "iconKey": "icon.yixian.sect.card.yixian_five_wood",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -7702,10 +7381,6 @@
                 {
                   "key": "step",
                   "intValue": 0
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_wood"
                 }
               ]
             }
@@ -7716,15 +7391,50 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_fire",
+      "id": "yixian.sect.unlockedcard.yixian_five_wood",
       "fields": {
-        "displayName": "选牌·火灵印",
+        "displayName": "水灵印",
+        "iconKey": "icon.yixian.sect.card.yixian_five_wood",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_fire",
+      "fields": {
+        "displayName": "火灵印",
         "iconKey": "icon.yixian.sect.card.yixian_five_fire",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -7741,10 +7451,6 @@
                 {
                   "key": "step",
                   "intValue": 0
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_fire"
                 }
               ]
             }
@@ -7755,15 +7461,50 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_earth",
+      "id": "yixian.sect.unlockedcard.yixian_five_fire",
       "fields": {
-        "displayName": "选牌·土灵印",
+        "displayName": "火灵印",
+        "iconKey": "icon.yixian.sect.card.yixian_five_fire",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_earth",
+      "fields": {
+        "displayName": "土灵印",
         "iconKey": "icon.yixian.sect.card.yixian_five_earth",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -7780,10 +7521,6 @@
                 {
                   "key": "step",
                   "intValue": 0
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_earth"
                 }
               ]
             }
@@ -7794,15 +7531,50 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_qi",
+      "id": "yixian.sect.unlockedcard.yixian_five_earth",
       "fields": {
-        "displayName": "选牌·金灵·针",
+        "displayName": "土灵印",
+        "iconKey": "icon.yixian.sect.card.yixian_five_earth",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_qi",
+      "fields": {
+        "displayName": "金灵·针",
         "iconKey": "icon.yixian.sect.card.yixian_five_qi",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -7819,10 +7591,6 @@
                 {
                   "key": "step",
                   "intValue": 0
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_qi"
                 }
               ]
             }
@@ -7833,15 +7601,50 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_link",
+      "id": "yixian.sect.unlockedcard.yixian_five_qi",
       "fields": {
-        "displayName": "选牌·木灵·芽",
+        "displayName": "金灵·针",
+        "iconKey": "icon.yixian.sect.card.yixian_five_qi",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_link",
+      "fields": {
+        "displayName": "木灵·芽",
         "iconKey": "icon.yixian.sect.card.yixian_five_link",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -7858,10 +7661,6 @@
                 {
                   "key": "step",
                   "intValue": 0
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_link"
                 }
               ]
             }
@@ -7872,15 +7671,50 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_return",
+      "id": "yixian.sect.unlockedcard.yixian_five_link",
       "fields": {
-        "displayName": "选牌·水灵·涛",
+        "displayName": "木灵·芽",
+        "iconKey": "icon.yixian.sect.card.yixian_five_link",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_return",
+      "fields": {
+        "displayName": "水灵·涛",
         "iconKey": "icon.yixian.sect.card.yixian_five_return",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -7897,10 +7731,6 @@
                 {
                   "key": "step",
                   "intValue": 0
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_return"
                 }
               ]
             }
@@ -7911,19 +7741,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_metal_edge",
+      "id": "yixian.sect.unlockedcard.yixian_five_return",
       "fields": {
-        "displayName": "选牌·金灵·穿心",
+        "displayName": "水灵·涛",
+        "iconKey": "icon.yixian.sect.card.yixian_five_return",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_metal_edge",
+      "fields": {
+        "displayName": "金灵·穿心",
         "iconKey": "icon.yixian.sect.card.yixian_five_metal_edge",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "C",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -7935,11 +7800,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 1
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_metal_edge"
+                  "intValue": 0
                 }
               ]
             }
@@ -7950,19 +7811,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_metal_pierce",
+      "id": "yixian.sect.unlockedcard.yixian_five_metal_edge",
       "fields": {
-        "displayName": "选牌·金灵阵",
+        "displayName": "金灵·穿心",
+        "iconKey": "icon.yixian.sect.card.yixian_five_metal_edge",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_metal_pierce",
+      "fields": {
+        "displayName": "金灵阵",
         "iconKey": "icon.yixian.sect.card.yixian_five_metal_pierce",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "C",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -7974,11 +7870,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 1
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_metal_pierce"
+                  "intValue": 0
                 }
               ]
             }
@@ -7989,19 +7881,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_fire_ember",
+      "id": "yixian.sect.unlockedcard.yixian_five_metal_pierce",
       "fields": {
-        "displayName": "选牌·木灵·疏影",
+        "displayName": "金灵阵",
+        "iconKey": "icon.yixian.sect.card.yixian_five_metal_pierce",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_fire_ember",
+      "fields": {
+        "displayName": "木灵·疏影",
         "iconKey": "icon.yixian.sect.card.yixian_five_fire_ember",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "C",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8013,11 +7940,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 1
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_fire_ember"
+                  "intValue": 0
                 }
               ]
             }
@@ -8028,19 +7951,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_water_spring",
+      "id": "yixian.sect.unlockedcard.yixian_five_fire_ember",
       "fields": {
-        "displayName": "选牌·木灵·复苏",
+        "displayName": "木灵·疏影",
+        "iconKey": "icon.yixian.sect.card.yixian_five_fire_ember",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_water_spring",
+      "fields": {
+        "displayName": "木灵·复苏",
         "iconKey": "icon.yixian.sect.card.yixian_five_water_spring",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "C",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8052,11 +8010,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 1
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_water_spring"
+                  "intValue": 0
                 }
               ]
             }
@@ -8067,19 +8021,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_wood_root",
+      "id": "yixian.sect.unlockedcard.yixian_five_water_spring",
       "fields": {
-        "displayName": "水系单卡·水灵·波澜",
+        "displayName": "木灵·复苏",
+        "iconKey": "icon.yixian.sect.card.yixian_five_water_spring",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_wood_root",
+      "fields": {
+        "displayName": "水灵·波澜",
         "iconKey": "icon.yixian.sect.card.yixian_five_wood_root",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 15,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "C",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8091,11 +8080,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 1
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_wood_root"
+                  "intValue": 0
                 }
               ]
             }
@@ -8106,19 +8091,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_earth_ridge",
+      "id": "yixian.sect.unlockedcard.yixian_five_wood_root",
       "fields": {
-        "displayName": "选牌·火灵·聚炎",
+        "displayName": "水灵·波澜",
+        "iconKey": "icon.yixian.sect.card.yixian_five_wood_root",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_earth_ridge",
+      "fields": {
+        "displayName": "火灵·聚炎",
         "iconKey": "icon.yixian.sect.card.yixian_five_earth_ridge",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "C",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8130,11 +8150,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 1
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_earth_ridge"
+                  "intValue": 0
                 }
               ]
             }
@@ -8145,19 +8161,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_cycle_breath",
+      "id": "yixian.sect.unlockedcard.yixian_five_earth_ridge",
       "fields": {
-        "displayName": "选牌·土灵阵",
+        "displayName": "火灵·聚炎",
+        "iconKey": "icon.yixian.sect.card.yixian_five_earth_ridge",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_cycle_breath",
+      "fields": {
+        "displayName": "土灵阵",
         "iconKey": "icon.yixian.sect.card.yixian_five_cycle_breath",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "C",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8169,11 +8220,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 1
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_cycle_breath"
+                  "intValue": 0
                 }
               ]
             }
@@ -8184,19 +8231,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_fire_burst",
+      "id": "yixian.sect.unlockedcard.yixian_five_cycle_breath",
       "fields": {
-        "displayName": "选牌·镇印心法",
+        "displayName": "土灵阵",
+        "iconKey": "icon.yixian.sect.card.yixian_five_cycle_breath",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_fire_burst",
+      "fields": {
+        "displayName": "镇印心法",
         "iconKey": "icon.yixian.sect.card.yixian_five_fire_burst",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "C",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8208,11 +8290,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 1
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_fire_burst"
+                  "intValue": 0
                 }
               ]
             }
@@ -8223,19 +8301,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_metal_ring",
+      "id": "yixian.sect.unlockedcard.yixian_five_fire_burst",
       "fields": {
-        "displayName": "选牌·金灵·蓄锐",
+        "displayName": "镇印心法",
+        "iconKey": "icon.yixian.sect.card.yixian_five_fire_burst",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_metal_ring",
+      "fields": {
+        "displayName": "金灵·蓄锐",
         "iconKey": "icon.yixian.sect.card.yixian_five_metal_ring",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "B",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8247,11 +8360,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 2
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_metal_ring"
+                  "intValue": 0
                 }
               ]
             }
@@ -8262,19 +8371,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_metal_break",
+      "id": "yixian.sect.unlockedcard.yixian_five_metal_ring",
       "fields": {
-        "displayName": "选牌·金灵·锋芒",
+        "displayName": "金灵·蓄锐",
+        "iconKey": "icon.yixian.sect.card.yixian_five_metal_ring",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_metal_break",
+      "fields": {
+        "displayName": "金灵·锋芒",
         "iconKey": "icon.yixian.sect.card.yixian_five_metal_break",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "B",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8286,11 +8430,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 2
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_metal_break"
+                  "intValue": 0
                 }
               ]
             }
@@ -8301,19 +8441,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_fire_furnace",
+      "id": "yixian.sect.unlockedcard.yixian_five_metal_break",
       "fields": {
-        "displayName": "选牌·木灵·巡林",
+        "displayName": "金灵·锋芒",
+        "iconKey": "icon.yixian.sect.card.yixian_five_metal_break",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_fire_furnace",
+      "fields": {
+        "displayName": "木灵·巡林",
         "iconKey": "icon.yixian.sect.card.yixian_five_fire_furnace",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "B",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8325,11 +8500,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 2
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_fire_furnace"
+                  "intValue": 0
                 }
               ]
             }
@@ -8340,19 +8511,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_water_mirror",
+      "id": "yixian.sect.unlockedcard.yixian_five_fire_furnace",
       "fields": {
-        "displayName": "水系单卡·水灵阵",
+        "displayName": "木灵·巡林",
+        "iconKey": "icon.yixian.sect.card.yixian_five_fire_furnace",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_water_mirror",
+      "fields": {
+        "displayName": "水灵阵",
         "iconKey": "icon.yixian.sect.card.yixian_five_water_mirror",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 15,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "B",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8364,11 +8570,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 2
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_water_mirror"
+                  "intValue": 0
                 }
               ]
             }
@@ -8379,19 +8581,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_wood_bloom",
+      "id": "yixian.sect.unlockedcard.yixian_five_water_mirror",
       "fields": {
-        "displayName": "选牌·火灵阵",
+        "displayName": "水灵阵",
+        "iconKey": "icon.yixian.sect.card.yixian_five_water_mirror",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_wood_bloom",
+      "fields": {
+        "displayName": "火灵阵",
         "iconKey": "icon.yixian.sect.card.yixian_five_wood_bloom",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "B",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8403,11 +8640,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 2
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_wood_bloom"
+                  "intValue": 0
                 }
               ]
             }
@@ -8418,19 +8651,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_earth_vessel",
+      "id": "yixian.sect.unlockedcard.yixian_five_wood_bloom",
       "fields": {
-        "displayName": "选牌·火灵·轰爆",
+        "displayName": "火灵阵",
+        "iconKey": "icon.yixian.sect.card.yixian_five_wood_bloom",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_earth_vessel",
+      "fields": {
+        "displayName": "火灵·轰爆",
         "iconKey": "icon.yixian.sect.card.yixian_five_earth_vessel",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "B",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8442,11 +8710,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 2
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_earth_vessel"
+                  "intValue": 0
                 }
               ]
             }
@@ -8457,19 +8721,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_fire_chain",
+      "id": "yixian.sect.unlockedcard.yixian_five_earth_vessel",
       "fields": {
-        "displayName": "选牌·木灵阵",
+        "displayName": "火灵·轰爆",
+        "iconKey": "icon.yixian.sect.card.yixian_five_earth_vessel",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_fire_chain",
+      "fields": {
+        "displayName": "木灵阵",
         "iconKey": "icon.yixian.sect.card.yixian_five_fire_chain",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "B",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8481,11 +8780,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 2
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_fire_chain"
+                  "intValue": 0
                 }
               ]
             }
@@ -8496,19 +8791,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_return_seed",
+      "id": "yixian.sect.unlockedcard.yixian_five_fire_chain",
       "fields": {
-        "displayName": "水系单卡·水灵·泉涌",
+        "displayName": "木灵阵",
+        "iconKey": "icon.yixian.sect.card.yixian_five_fire_chain",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_return_seed",
+      "fields": {
+        "displayName": "水灵·泉涌",
         "iconKey": "icon.yixian.sect.card.yixian_five_return_seed",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 15,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "B",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8520,11 +8850,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 2
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_return_seed"
+                  "intValue": 0
                 }
               ]
             }
@@ -8535,19 +8861,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_water_sea",
+      "id": "yixian.sect.unlockedcard.yixian_five_return_seed",
       "fields": {
-        "displayName": "水系单卡·水灵·潜遁",
+        "displayName": "水灵·泉涌",
+        "iconKey": "icon.yixian.sect.card.yixian_five_return_seed",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_water_sea",
+      "fields": {
+        "displayName": "水灵·潜遁",
         "iconKey": "icon.yixian.sect.card.yixian_five_water_sea",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 25,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "A",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8559,11 +8920,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 3
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_water_sea"
+                  "intValue": 0
                 }
               ]
             }
@@ -8574,19 +8931,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_wood_forest",
+      "id": "yixian.sect.unlockedcard.yixian_five_water_sea",
       "fields": {
-        "displayName": "选牌·木灵·玫刺",
+        "displayName": "水灵·潜遁",
+        "iconKey": "icon.yixian.sect.card.yixian_five_water_sea",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_wood_forest",
+      "fields": {
+        "displayName": "木灵·玫刺",
         "iconKey": "icon.yixian.sect.card.yixian_five_wood_forest",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "A",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8598,11 +8990,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 3
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_wood_forest"
+                  "intValue": 0
                 }
               ]
             }
@@ -8613,19 +9001,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_wood_spirit",
+      "id": "yixian.sect.unlockedcard.yixian_five_wood_forest",
       "fields": {
-        "displayName": "水系单卡·水灵·腾浪",
+        "displayName": "木灵·玫刺",
+        "iconKey": "icon.yixian.sect.card.yixian_five_wood_forest",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_wood_spirit",
+      "fields": {
+        "displayName": "水灵·腾浪",
         "iconKey": "icon.yixian.sect.card.yixian_five_wood_spirit",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 25,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "A",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8637,11 +9060,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 3
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_wood_spirit"
+                  "intValue": 0
                 }
               ]
             }
@@ -8652,19 +9071,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_metal_cycle",
+      "id": "yixian.sect.unlockedcard.yixian_five_wood_spirit",
       "fields": {
-        "displayName": "选牌·土灵·流沙",
+        "displayName": "水灵·腾浪",
+        "iconKey": "icon.yixian.sect.card.yixian_five_wood_spirit",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_metal_cycle",
+      "fields": {
+        "displayName": "土灵·流沙",
         "iconKey": "icon.yixian.sect.card.yixian_five_metal_cycle",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "A",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8676,11 +9130,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 3
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_metal_cycle"
+                  "intValue": 0
                 }
               ]
             }
@@ -8691,19 +9141,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_metal_storm",
+      "id": "yixian.sect.unlockedcard.yixian_five_metal_cycle",
       "fields": {
-        "displayName": "选牌·金灵·飞梭",
+        "displayName": "土灵·流沙",
+        "iconKey": "icon.yixian.sect.card.yixian_five_metal_cycle",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_metal_storm",
+      "fields": {
+        "displayName": "金灵·飞梭",
         "iconKey": "icon.yixian.sect.card.yixian_five_metal_storm",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "A",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8715,11 +9200,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 3
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_metal_storm"
+                  "intValue": 0
                 }
               ]
             }
@@ -8730,19 +9211,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_metal_sunder",
+      "id": "yixian.sect.unlockedcard.yixian_five_metal_storm",
       "fields": {
-        "displayName": "选牌·金灵·铁骨",
+        "displayName": "金灵·飞梭",
+        "iconKey": "icon.yixian.sect.card.yixian_five_metal_storm",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_metal_sunder",
+      "fields": {
+        "displayName": "金灵·铁骨",
         "iconKey": "icon.yixian.sect.card.yixian_five_metal_sunder",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "A",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8754,11 +9270,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 3
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_metal_sunder"
+                  "intValue": 0
                 }
               ]
             }
@@ -8769,19 +9281,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_fire_sun",
+      "id": "yixian.sect.unlockedcard.yixian_five_metal_sunder",
       "fields": {
-        "displayName": "选牌·火灵·瞬燃",
+        "displayName": "金灵·铁骨",
+        "iconKey": "icon.yixian.sect.card.yixian_five_metal_sunder",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_fire_sun",
+      "fields": {
+        "displayName": "火灵·瞬燃",
         "iconKey": "icon.yixian.sect.card.yixian_five_fire_sun",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "A",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8793,11 +9340,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 3
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_fire_sun"
+                  "intValue": 0
                 }
               ]
             }
@@ -8808,19 +9351,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_fire_inferno",
+      "id": "yixian.sect.unlockedcard.yixian_five_fire_sun",
       "fields": {
-        "displayName": "选牌·火灵·灼心",
+        "displayName": "火灵·瞬燃",
+        "iconKey": "icon.yixian.sect.card.yixian_five_fire_sun",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_fire_inferno",
+      "fields": {
+        "displayName": "火灵·灼心",
         "iconKey": "icon.yixian.sect.card.yixian_five_fire_inferno",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "A",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8832,11 +9410,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 3
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_fire_inferno"
+                  "intValue": 0
                 }
               ]
             }
@@ -8847,19 +9421,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_fire_cycle",
+      "id": "yixian.sect.unlockedcard.yixian_five_fire_inferno",
       "fields": {
-        "displayName": "选牌·土灵·绝壁",
+        "displayName": "火灵·灼心",
+        "iconKey": "icon.yixian.sect.card.yixian_five_fire_inferno",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_fire_cycle",
+      "fields": {
+        "displayName": "土灵·绝壁",
         "iconKey": "icon.yixian.sect.card.yixian_five_fire_cycle",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "A",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8871,11 +9480,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 3
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_fire_cycle"
+                  "intValue": 0
                 }
               ]
             }
@@ -8886,19 +9491,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_earth_mountain",
+      "id": "yixian.sect.unlockedcard.yixian_five_fire_cycle",
       "fields": {
-        "displayName": "选牌·木灵·暗香",
+        "displayName": "土灵·绝壁",
+        "iconKey": "icon.yixian.sect.card.yixian_five_fire_cycle",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_earth_mountain",
+      "fields": {
+        "displayName": "木灵·暗香",
         "iconKey": "icon.yixian.sect.card.yixian_five_earth_mountain",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "A",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8910,11 +9550,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 3
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_earth_mountain"
+                  "intValue": 0
                 }
               ]
             }
@@ -8925,19 +9561,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_earth_cycle",
+      "id": "yixian.sect.unlockedcard.yixian_five_earth_mountain",
       "fields": {
-        "displayName": "选牌·混元碎击",
+        "displayName": "木灵·暗香",
+        "iconKey": "icon.yixian.sect.card.yixian_five_earth_mountain",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_earth_cycle",
+      "fields": {
+        "displayName": "混元碎击",
         "iconKey": "icon.yixian.sect.card.yixian_five_earth_cycle",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "A",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8949,11 +9620,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 3
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_earth_cycle"
+                  "intValue": 0
                 }
               ]
             }
@@ -8964,19 +9631,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_return_circle",
+      "id": "yixian.sect.unlockedcard.yixian_five_earth_cycle",
       "fields": {
-        "displayName": "选牌·土灵·遁地",
+        "displayName": "混元碎击",
+        "iconKey": "icon.yixian.sect.card.yixian_five_earth_cycle",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_return_circle",
+      "fields": {
+        "displayName": "土灵·遁地",
         "iconKey": "icon.yixian.sect.card.yixian_five_return_circle",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "A",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -8988,11 +9690,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 3
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_return_circle"
+                  "intValue": 0
                 }
               ]
             }
@@ -9003,19 +9701,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_metal_divine",
+      "id": "yixian.sect.unlockedcard.yixian_five_return_circle",
       "fields": {
-        "displayName": "选牌·金灵·巨鼎落",
+        "displayName": "土灵·遁地",
+        "iconKey": "icon.yixian.sect.card.yixian_five_return_circle",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_metal_divine",
+      "fields": {
+        "displayName": "金灵·巨鼎落",
         "iconKey": "icon.yixian.sect.card.yixian_five_metal_divine",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "S",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -9027,11 +9760,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 4
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_metal_divine"
+                  "intValue": 0
                 }
               ]
             }
@@ -9042,19 +9771,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_water_divine",
+      "id": "yixian.sect.unlockedcard.yixian_five_metal_divine",
       "fields": {
-        "displayName": "选牌·木灵·柳纷飞",
+        "displayName": "金灵·巨鼎落",
+        "iconKey": "icon.yixian.sect.card.yixian_five_metal_divine",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_water_divine",
+      "fields": {
+        "displayName": "木灵·柳纷飞",
         "iconKey": "icon.yixian.sect.card.yixian_five_water_divine",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "S",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -9066,11 +9830,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 4
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_water_divine"
+                  "intValue": 0
                 }
               ]
             }
@@ -9081,19 +9841,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_water_origin",
+      "id": "yixian.sect.unlockedcard.yixian_five_water_divine",
       "fields": {
-        "displayName": "选牌·土灵·合八荒",
+        "displayName": "木灵·柳纷飞",
+        "iconKey": "icon.yixian.sect.card.yixian_five_water_divine",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_water_origin",
+      "fields": {
+        "displayName": "土灵·合八荒",
         "iconKey": "icon.yixian.sect.card.yixian_five_water_origin",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "S",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -9105,11 +9900,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 4
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_water_origin"
+                  "intValue": 0
                 }
               ]
             }
@@ -9120,19 +9911,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_metal_heaven",
+      "id": "yixian.sect.unlockedcard.yixian_five_water_origin",
       "fields": {
-        "displayName": "选牌·火灵·烈燎原",
+        "displayName": "土灵·合八荒",
+        "iconKey": "icon.yixian.sect.card.yixian_five_water_origin",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_metal_heaven",
+      "fields": {
+        "displayName": "火灵·烈燎原",
         "iconKey": "icon.yixian.sect.card.yixian_five_metal_heaven",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "S",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -9144,11 +9970,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 4
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_metal_heaven"
+                  "intValue": 0
                 }
               ]
             }
@@ -9159,19 +9981,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_wood_divine",
+      "id": "yixian.sect.unlockedcard.yixian_five_metal_heaven",
       "fields": {
-        "displayName": "水系单卡·水灵·纳百川",
+        "displayName": "火灵·烈燎原",
+        "iconKey": "icon.yixian.sect.card.yixian_five_metal_heaven",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_wood_divine",
+      "fields": {
+        "displayName": "水灵·纳百川",
         "iconKey": "icon.yixian.sect.card.yixian_five_wood_divine",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 25,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "S",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -9183,11 +10040,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 4
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_wood_divine"
+                  "intValue": 0
                 }
               ]
             }
@@ -9198,19 +10051,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_wood_origin",
+      "id": "yixian.sect.unlockedcard.yixian_five_wood_divine",
       "fields": {
-        "displayName": "选牌·木灵·春风拂",
+        "displayName": "水灵·纳百川",
+        "iconKey": "icon.yixian.sect.card.yixian_five_wood_divine",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_wood_origin",
+      "fields": {
+        "displayName": "木灵·春风拂",
         "iconKey": "icon.yixian.sect.card.yixian_five_wood_origin",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "S",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -9222,11 +10110,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 4
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_wood_origin"
+                  "intValue": 0
                 }
               ]
             }
@@ -9237,19 +10121,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_cycle_divine",
+      "id": "yixian.sect.unlockedcard.yixian_five_wood_origin",
       "fields": {
-        "displayName": "选牌·金灵·回锋刃",
+        "displayName": "木灵·春风拂",
+        "iconKey": "icon.yixian.sect.card.yixian_five_wood_origin",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_cycle_divine",
+      "fields": {
+        "displayName": "金灵·回锋刃",
         "iconKey": "icon.yixian.sect.card.yixian_five_cycle_divine",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "S",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -9261,11 +10180,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 4
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_cycle_divine"
+                  "intValue": 0
                 }
               ]
             }
@@ -9276,19 +10191,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_earth_divine",
+      "id": "yixian.sect.unlockedcard.yixian_five_cycle_divine",
       "fields": {
-        "displayName": "水系单卡·水灵·乘风浪",
+        "displayName": "金灵·回锋刃",
+        "iconKey": "icon.yixian.sect.card.yixian_five_cycle_divine",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_earth_divine",
+      "fields": {
+        "displayName": "水灵·乘风浪",
         "iconKey": "icon.yixian.sect.card.yixian_five_earth_divine",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 25,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "S",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -9300,11 +10250,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 4
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_earth_divine"
+                  "intValue": 0
                 }
               ]
             }
@@ -9315,19 +10261,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_fire_divine",
+      "id": "yixian.sect.unlockedcard.yixian_five_earth_divine",
       "fields": {
-        "displayName": "选牌·木灵·散枝叶",
+        "displayName": "水灵·乘风浪",
+        "iconKey": "icon.yixian.sect.card.yixian_five_earth_divine",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_fire_divine",
+      "fields": {
+        "displayName": "木灵·散枝叶",
         "iconKey": "icon.yixian.sect.card.yixian_five_fire_divine",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "S",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -9339,11 +10320,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 4
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_fire_divine"
+                  "intValue": 0
                 }
               ]
             }
@@ -9354,19 +10331,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_fire_heaven",
+      "id": "yixian.sect.unlockedcard.yixian_five_fire_divine",
       "fields": {
-        "displayName": "选牌·火灵·燃烬灭",
+        "displayName": "木灵·散枝叶",
+        "iconKey": "icon.yixian.sect.card.yixian_five_fire_divine",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_fire_heaven",
+      "fields": {
+        "displayName": "火灵·燃烬灭",
         "iconKey": "icon.yixian.sect.card.yixian_five_fire_heaven",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "S",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -9378,11 +10390,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 4
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_fire_heaven"
+                  "intValue": 0
                 }
               ]
             }
@@ -9393,19 +10401,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_earth_origin",
+      "id": "yixian.sect.unlockedcard.yixian_five_fire_heaven",
       "fields": {
-        "displayName": "水系单卡·水灵·雨纷纷",
+        "displayName": "火灵·燃烬灭",
+        "iconKey": "icon.yixian.sect.card.yixian_five_fire_heaven",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_earth_origin",
+      "fields": {
+        "displayName": "水灵·雨纷纷",
         "iconKey": "icon.yixian.sect.card.yixian_five_earth_origin",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
-        "acquisition": 10,
-        "purchasePrice": 25,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "S",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -9417,11 +10460,7 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 4
-                },
-                {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_earth_origin"
+                  "intValue": 0
                 }
               ]
             }
@@ -9432,19 +10471,54 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.selection.yixian_five_return_origin",
+      "id": "yixian.sect.unlockedcard.yixian_five_earth_origin",
       "fields": {
-        "displayName": "选牌·金灵·浪淘沙",
+        "displayName": "水灵·雨纷纷",
+        "iconKey": "icon.yixian.sect.card.yixian_five_earth_origin",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.deckcard.yixian_five_return_origin",
+      "fields": {
+        "displayName": "金灵·浪淘沙",
         "iconKey": "icon.yixian.sect.card.yixian_five_return_origin",
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "单卡解锁；原卡包已拥有此牌则无需重复购买。购买不自动改变抽牌池。",
+        "flavour": "五行卡组选择记录，不单独出售。",
         "referencedStatusIds": [],
         "ranks": [
           {
-            "rank": "S",
+            "rank": "D",
             "tier": 1,
             "operation": {
               "handlerKey": "passive.lineage",
@@ -9456,11 +10530,42 @@
                 },
                 {
                   "key": "step",
-                  "intValue": 4
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.unlockedcard.yixian_five_return_origin",
+      "fields": {
+        "displayName": "金灵·浪淘沙",
+        "iconKey": "icon.yixian.sect.card.yixian_five_return_origin",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "五行已解锁牌库；突破时取得，不单独出售。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
                 },
                 {
-                  "key": "cardTablePackKey",
-                  "stringValue": "select_yixian_five_return_origin"
+                  "key": "step",
+                  "intValue": 0
                 }
               ]
             }

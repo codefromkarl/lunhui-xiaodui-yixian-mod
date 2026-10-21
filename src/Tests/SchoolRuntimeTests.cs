@@ -24,14 +24,14 @@ namespace YixianSect
         private Fixture SchoolFixture(string school, bool visual = false,int rank=1,StableId required=default)
         {
             var fixture = New(rank,school: school, buyCurrent: true);
-            Require(fixture.P.ActiveCardPackIds.Count >= 2 && SectProgression.Owned(fixture.P).All(id => SectRegistry.Owner(SectRegistry.FindPack(id)) == school), "wrong starter pool");
+            Require(fixture.P.ActiveCardPackIds.Count >= (school==FiveElementRules.Lineage?1:2) && SectProgression.Owned(fixture.P).All(id => (id==FiveDeckRules.PackId?FiveElementRules.Lineage:SectRegistry.Owner(SectRegistry.FindPack(id))) == school), "wrong starter pool");
             Require(fixture.P.SetActiveCardPacks(fixture.P.ActiveCardPackIds.Reverse().ToArray()).IsSuccess, "school active selection failed");
             if(!required.IsEmpty)Require(fixture.P.SetActiveCardPacks(TestCardPool.ForCards(fixture.P,new[]{required})).IsSuccess,"source card pack enabled before battle");
             fixture.StartBattle(); Require(fixture.Table.Hand.Count == 3, "school opening hand");
             Require(fixture.Table.Hand.All(h => SectRegistry.Cards.TryGetValue(h.CardId.Value, out var card) && SectRegistry.Owner(card) == school), "foreign card drawn");
             var snapshot = RunAuthoritySnapshotProjector.Create(fixture.A,Slot); var player = snapshot.Players.First(p => p.Slot == Slot);
             var model = BattleUIPresentationMapper.BuildCardTable(snapshot, player, data, battles);
-            Require(model.Packs.Count(p=>!FiveCardSelection.Is(new StableId(p.Id))) == 12 && model.Packs.Where(p=>!FiveCardSelection.Is(new StableId(p.Id))).All(p => p.Cards.Count == 4 && p.CardDetails.Contains("消耗")), "school actual pack projection/details");
+            Require(model.Packs.Count == (school==FiveElementRules.Lineage?1:school==SevenStarRules.Lineage?10:12) && model.Packs.All(p => p.Cards.Count == (school==FiveElementRules.Lineage?8:4) && p.CardDetails.Contains("消耗")), "school actual pack projection/details");
             if (visual) VisualSelfTests.Run(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(path), System.IO.Path.GetFileNameWithoutExtension(path), school), model, player, snapshot, data, battles, model.Packs[0].Id, false);
             ToughEnemy(fixture.Enemy);
             return fixture;
@@ -50,14 +50,25 @@ namespace YixianSect
         private JObject SevenStarLoop()
         {
             var school=SevenStarRules.Lineage;var f=SchoolFixture(school,true);
-            var wind=SchoolSource(school,4000001);var map=SchoolSource(school,4000008);var clamp=SchoolSource(school,4000010);var thunder=SchoolSource(school,4000004);
-            f.Prepare(wind,map,clamp,thunder);f.Play(wind);f.Play(map);f.Play(clamp);
+            var shock=SchoolSource(school,4000003);var map=SchoolSource(school,4000008);var clamp=SchoolSource(school,4000010);var thunder=SchoolSource(school,4000004);
+            f.Prepare(shock,map,clamp,thunder);f.Play(shock);f.Play(map);f.Play(clamp);
             Require(SchoolValue(f,school,"star")==1&&SchoolValue(f,school,"slot")==3,"original permanent star/slot3 effect");
             Require(SchoolValue(f,school,"omen")==1,"unrelated star attack consumed omen");
             f.Play(thunder);Require(SchoolValue(f,school,"omen")==0&&SchoolValue(f,school,"star")==1,"random attack consumes one omen but not star power");
             f.NextRound();Require(SchoolValue(f,school,"plays")==4,"virtual eight-slot sequence incorrectly reset each host round");
+            ToughEnemy(f.Enemy);
+            var incessant=SchoolSource(school,4000013);var sparrow=SchoolSource(school,4000061);
+            f.Prepare(incessant);f.System(RunDeveloperCommand.SetVitals,f.Actor.MaximumHealth-20,int.MinValue,int.MinValue);
+            int beforeHealth=f.Actor.CurrentHealth;int beforeEnemy=f.Enemy.CurrentHealth;
+            f.Play(incessant);
+            Require(f.Actor.CurrentHealth==beforeHealth&&f.Enemy.CurrentHealth<beforeEnemy,"Incessant first use must attack without healing or omen");
+            f.Prepare(incessant);f.Play(incessant);
+            Require(f.Actor.CurrentHealth>beforeHealth&&SchoolValue(f,school,"used4000013")==2,"Incessant second use must heal through native health bridge");
+            f.Prepare(sparrow);f.System(RunDeveloperCommand.SetVitals,int.MinValue,4,0);CostHandView(f,sparrow,4);
+            beforeEnemy=f.Enemy.CurrentHealth;f.Play(sparrow);
+            Require(f.Actor.CurrentMagic==0&&f.Actor.ActionPoints==0&&f.Enemy.CurrentHealth<beforeEnemy,"Sparrow must deal damage without omen and spend exactly four energy, zero AP");
             MemoryRoundTrip(f,school,"star",1);
-            return new JObject{["star_not_spent"]=true,["original_slots_3_6"]=true,["omen_consumed_by_random"]=true,["sequence_survives_host_round"]=true,["memory_save_restore"]=true};
+            return new JObject{["star_not_spent"]=true,["original_slots_3_6"]=true,["omen_consumed_by_random"]=true,["sequence_survives_host_round"]=true,["starter_attack_and_post_heal"]=true,["sparrow_zero_omen_four_energy"]=true,["memory_save_restore"]=true,["team_healing"]=SevenStarTeamHealing()};
         }
         private void MemoryRoundTrip(Fixture f, string school, string key, int expected)
         {

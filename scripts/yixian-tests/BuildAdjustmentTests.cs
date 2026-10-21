@@ -45,9 +45,9 @@ partial class Program
                     var first=config["rankPriorities"]?[schoolKey]?[route.Key]?[rank.ToString()]?.Values<string>()??Enumerable.Empty<string>();
                     var keys=first.Concat(config["routes"][schoolKey][route.Key].Values<string>()).Distinct().Where(k=>eligible.Any(p=>(string)p["key"]==k)).Take(3).ToHashSet();
                     var proposed=SwordBuilds.Recommend(route,rank,eligible.Select(SectRegistry.PackId));
-                    Check(keys.SetEquals(proposed.Selected.Select(id=>(string)SectRegistry.FindPack(id)["key"])),"test inputs match player-facing production recommendations");
+                    Check(keys.SetEquals(proposed.Selected.Select(id=>(string)SectRegistry.FindPack(id)["key"])),"sword test inputs match player-facing production recommendations");
                     Check(route.ReuseFoundationGift==(config["reuseFoundationGiftRoutes"]?[schoolKey]?.Values<string>().Contains(route.Key)??false),"gift-aware config matches production policy");
                 }
-        Console.WriteLine("PASS build adjustments: seal anchors, ownership/rank isolation, warnings, spirit bridge and production/config agreement");
+        Console.WriteLine("PASS historical five pack-proposal calculations and current sword recommendation/config agreement");
     }
 }

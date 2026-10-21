@@ -189,7 +189,7 @@ def main():
     parser.add_argument('--persistent-data', type=Path, default=os.environ.get('YIXIAN_PERSISTENT_DATA'), help='game persistent-data directory containing Player.log')
     parser.add_argument('--timeout', type=int, default=120, help='seconds to wait for fresh reports (default: 120)')
     parser.add_argument('--balance', action='store_true', help='run bounded three-school resource probes instead of the regular suite')
-    parser.add_argument('--balance-config', type=Path, default=ROOT / 'data/balance-refined-scenarios.json')
+    parser.add_argument('--balance-config', type=Path, default=ROOT / 'data/balance-star-routes-scenarios.json')
     parser.add_argument('--direct-game', action='store_true', help='macOS: launch a prepared independent copy for headless balance or cost probes')
     parser.add_argument('--headless', action='store_true', help='balance or cost probes: Unity batch mode without rendering')
     parser.add_argument('--quit-after-tests', action='store_true', help='request normal Unity shutdown after all suite reports; verify exit receipt and process exit')

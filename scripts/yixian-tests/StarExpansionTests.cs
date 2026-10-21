@@ -25,13 +25,15 @@ partial class Program
             => Run(SevenStarRules.Play, SourceId(id), state, round, actor: unit ?? actor);
         int Read(ModBattlePlan p, string key) => SchoolState(p, school, key);
         int Draw(ModBattlePlan p) => SectRegistry.Read(p.State, "cards." + ActorId.Value + ".drawPending");
-        Check(cards.Length == 48 && packs.Length == 12, "original star inventory 48/12");
-        Check(cards.Select(c => (string)c["sourceId"]).Distinct().Count() == 48, "48 distinct original sources");
-        Check(packs.SelectMany(p => p["cards"].Values<string>()).Distinct().Count() == 48, "star unique complete packs");
-        foreach (int rank in Enumerable.Range(1, 5)) Check(packs.Count(p => (int)p["rank"] == rank) == (rank < 4 ? 2 : 3), "star realm split " + rank);
-        var internalStatus=JObject.Parse(File.ReadAllText(Mod+"/content/statuses.json"))["operations"].OfType<JObject>().Single(o=>(string)o["id"]==SevenStarRules.StatusPrefix+"internal");
-        var internalTick=internalStatus["fields"]["timedEffects"][0];
-        Check(internalTick["damageType"]==null && (int)internalTick["damageKind"]==40 && (bool)internalTick["isDirectDamage"],"native timed internal injury uses damageKind True plus direct shield bypass");
+        Check(cards.Length == 40 && packs.Length == 10, "three-route star inventory 40/10");
+        Check(cards.Select(c => (string)c["sourceId"]).Distinct().Count() == 40, "40 distinct original sources");
+        Check(packs.SelectMany(p => p["cards"].Values<string>()).Distinct().Count() == 40, "star unique complete packs");
+        Check(!cards.Any(c => new[]{"4000001","4000002"}.Contains((string)c["sourceId"])), "retired resource-only starters not registered");
+        var starter=packs.Single(p=>(string)p["key"]=="yixian_star_chart");
+        Check((string)starter["name"]=="炼气·初阶招式" && (int)starter["index"]==70 && (int)starter["price"]==0, "starter retains gift pack identity and shelf");
+        Check(starter["cards"].Values<string>().Select(k=>(string)cards.Single(c=>(string)c["key"]==k)["sourceId"]).SequenceEqual(new[]{"4000003","4000004","4000013","4000061"}), "starter four-card attack lineup");
+        foreach (int rank in Enumerable.Range(1, 5)) Check(packs.Count(p => (int)p["rank"] == rank) == 2, "star realm split " + rank);
+        Check(!JObject.Parse(File.ReadAllText(Mod+"/content/statuses.json"))["operations"].Any(o=>new[]{"internal","external","decrease"}.Any(k=>(string)o["id"]==SevenStarRules.StatusPrefix+k)),"retired injury/external/decrease statuses are not registered");
         foreach(string key in new[]{"weak","flaw"})
         {
             var negative=JObject.Parse(File.ReadAllText(Mod+"/content/statuses.json"))["operations"].OfType<JObject>().Single(o=>(string)o["id"]==SevenStarRules.StatusPrefix+key)["fields"];
@@ -52,7 +54,7 @@ partial class Program
                 Check(AuthoredSkillRules.TryCreateEffects(new BattleEffectOperation(operation.HandlerKey, CombatTargetKind.EnemySingle, default, operation.Values), out var parsed, out var error) && parsed.Count == 1, "star native authored effect " + error);
         }
         Check(((JArray)Source(4000104)["sourceDiscrepancies"]).Count > 0, "star connect card image/text discrepancy explicit");
-        Check(packs.OrderBy(p => (int)p["index"]).Select(p => (int)p["index"]).SequenceEqual(new[] {70,71}.Concat(Enumerable.Range(90,10))), "frozen shelves unchanged");
+        Check(packs.OrderBy(p => (int)p["index"]).Select(p => (int)p["index"]).SequenceEqual(new[] {70,71,90,91,92,93,94,95,97,98}), "frozen shelves unchanged");
         var gather = Play(4000008);
         Check(Read(gather,"star")==1 && Effect(gather,ModBattleEffectKind.Shield)==20, "original starry stars and scaled shield");
         foreach(int i in Enumerable.Range(1,8))
@@ -86,6 +88,21 @@ partial class Program
         var random=Play(4000004);
         Check(Damage(forced)==50 && Read(forced,"omen")==0 && forced.Random.CallCount==0,"original Palm Thunder max forced with one omen");
         Check(random.Random.CallCount>0 && Damage(random)==Damage(Play(4000004)),"unforced native deterministic random");
+        var incessant=Play(4000013,unit:StarHealingUnit());var incessantPost=Play(4000013,incessant.State,unit:StarHealingUnit(),round:2);
+        Check(Damage(incessant)==38 && incessant.Operations.Count==1 && Effect(incessant,ModBattleEffectKind.Heal)==0 && StarHealth(incessant).Count==0 && incessant.Random.CallCount==0,"Incessant first use attacks without omen, healing or RNG");
+        Check(Damage(incessantPost)==38 && StarHealth(incessantPost).OfType<JObject>().Any(o=>(string)o["kind"]=="heal"&&(int)o["amount"]==11),"Incessant second source use heals six plus half constitution across rounds");
+        Check(Read(incessantPost,"omen")==0 && Read(incessantPost,"used4000013")==2,"Incessant never requires or generates omen");
+        var repeatedIncessant=Play(4000013,StarExpansionState(("repeat",1)),unit:StarHealingUnit());
+        Check(Damage(repeatedIncessant)==76 && Read(repeatedIncessant,"plays")==1 && StarHealth(repeatedIncessant).OfType<JObject>().Count(o=>(string)o["kind"]=="heal"&&(int)o["amount"]==11)==1,"Plum repeats new starter and triggers its second-use heal once without advancing twice");
+        Check(SectCardRules.PrintedCost(Source(4000013))==0 && SectCardRules.PrintedCost(Source(4000061))==4,"new starter face costs map to zero/four fighting energy");
+        var sparrow=Play(4000061);
+        Check(sparrow.Random.CallCount>0 && sparrow.Operations.Count>=1 && sparrow.Operations.Count<=2 && new[]{47,62}.Contains(Damage(sparrow)),$"Sparrow always has its base attack without omen; only the bonus is random (rng={sparrow.Random.CallCount}, attacks={sparrow.Operations.Count}, damage={Damage(sparrow)})");
+        var forcedSparrow=Play(4000061,StarExpansionState(("omen",1)));
+        Check(forcedSparrow.Operations.Count==2 && Damage(forcedSparrow)==62 && forcedSparrow.Random.CallCount==0 && Read(forcedSparrow,"omen")==0 && Read(forcedSparrow,"omenUsed")==1,"one omen guarantees exactly one unscaled fifteen-point Sparrow bonus");
+        var positionedSparrow=Play(4000061,StarExpansionState(("omen",1),("star",2),("plays",2)));
+        Check(Damage(positionedSparrow)==74 && Read(positionedSparrow,"star")==2,"Sparrow base and bonus attacks both use existing position star power");
+        var sparrowSeed=StarExpansionState(("omen",1));var sparrowBefore=JsonConvert.SerializeObject(sparrowSeed.Entries);
+        Check(Damage(Play(4000061,sparrowSeed))==Damage(Play(4000061,sparrowSeed)) && JsonConvert.SerializeObject(sparrowSeed.Entries)==sparrowBefore,"new starter preview never consumes input snapshot omen");
         var thunder=Play(4000063,StarExpansionState(("omen",1)));
         Check(thunder.Operations.Count==2 && thunder.Random.CallCount>0 && Read(thunder,"omen")==0,"repeated thunder independently consumes omen");
         var five=Play(4000046,StarExpansionState(("omen",5)));
@@ -93,7 +110,7 @@ partial class Program
         var chance=Play(4000020,StarExpansionState(("omen",1)));
         Check(chance.Effects.Any(e=>e.Kind==ModBattleEffectKind.Status&&e.Content.Value==SevenStarRules.StatusPrefix+"weak")&&Read(chance,"omen")==0,"omen ensures probability not only damage range");
         var returnOmen=Play(4000068,StarExpansionState(("omen",1)));
-        Check(Read(returnOmen,"omen")==1 && Read(returnOmen,"omenUsed")==1,"Thunder Hexagram refunds own consumed omen");
+        Check(Read(returnOmen,"omen")==3 && Read(returnOmen,"omenUsed")==1,"Thunder Hexagram refunds own consumed omen");
         var consumed=Play(4000062,StarExpansionState(("omen",3)));
         Check(Read(consumed,"omen")==0 && Read(consumed,"star")==3 && Read(consumed,"omenUsed")==0,"trajectory consumes omen but not random-trigger count");
 
@@ -108,11 +125,8 @@ partial class Program
         var persistent=Play(4000014);var again=Play(4000014,persistent.State);
         Check(Read(again,"hexFormation")==3,"persistent formation is not stackable by manual replay");
         Check(SevenStarRules.CanPlay(Source(4000014),ActorId,ModStateSnapshot.Empty) && !SevenStarRules.CanPlay(Source(4000014),ActorId,persistent.State),"persistent card admission before payment");
-        var hexGain=Play(4000001,persistent.State);
+        var hexGain=Play(4000003,persistent.State);
         Check(StarHealth(hexGain).OfType<JObject>().Any(o=>(string)o["kind"]=="nonAttack"&&(int)o["amount"]==9&&(string)o["target"]==EnemyId.Value),"hex formation non-attack primitive keeps shield interception");
-        var away=Play(4000034);
-        Check(StarHealth(away).OfType<JObject>().Any(o=>(string)o["kind"]=="maximum"&&(int)o["amount"]==-9&&(bool)o["current"]),"Li hexagram decreases life and maximum once");
-        Check(!StarHealth(away).OfType<JObject>().Any(o=>(string)o["kind"]=="loss"),"Li maximum clamp not double charged");
         var tian=Play(4000045);var tian2=Play(4000045,tian.State);
         Check(Read(tian,"positions")==255 && Read(tian,"star")==2 && Read(tian2,"star")==2,"Cosmos first slot extra star and once-only permanent positions");
         Check(Enumerable.Range(1,8).All(i=>tian.Effects.Any(e=>e.Kind==ModBattleEffectKind.Status&&e.Content.Value==SevenStarRules.StatusPrefix+"position"+i&&e.Amount==1)),"Cosmos visibly marks all 8 positions");
@@ -120,12 +134,6 @@ partial class Program
         Check(Read(life,"star")==3 && StarHealth(life).OfType<JObject>().Any(o=>(string)o["kind"]=="maximum"&&(int)o["amount"]==30),"Extend position life uses newly gained star");
         var sharp=Play(4000107,StarExpansionState(("plays",1),("star",3)));
         Check(Read(sharp,"star")==1 && sharp.Effects.Count(e=>e.Kind==ModBattleEffectKind.Status&&e.Content.Value.StartsWith(SevenStarRules.StatusPrefix+"guard"))==2,"Point explicitly converts two stars into independent guard instances");
-        var snake=Play(4000095,unit:Unit(school:school,rank:5,shield:15));
-        Check(Draw(snake)==1,"Spirit Snake checks current total defense not only newly granted defense");
-        var soul=Play(4000092);var soulHit=Run(SevenStarRules.Hits,SourceId(4000003),soul.State,actor:actor,hits:new[]{new ModBattleHit(ActorId,EnemyId,0,12,DamageType.Physical,false,false)});
-        Check(Read(soulHit,"soulCharges")==2 && soulHit.Effects.Any(e=>e.Kind==ModBattleEffectKind.Status&&e.Content.Value==SevenStarRules.StatusPrefix+"internal"),"soul formation counts shield hits");
-        var nonattack=Run(SevenStarRules.Hits,SourceId(4000003),soul.State,actor:actor,hits:new[]{new ModBattleHit(ActorId,EnemyId,9,0,DamageType.True,true,false)});
-        Check(Read(nonattack,"soulCharges")==3,"non-attack direct life loss does not trigger soul");
         var seed=StarExpansionState(("plays",2),("star",3),("omen",2),("positions",36),("initialized",1));
         string serialized=JsonConvert.SerializeObject(seed.Entries);
         var p1=Play(4000063,seed);var p2=Play(4000063,seed);
@@ -135,7 +143,9 @@ partial class Program
         var other=Unit(slot:2,school:school,rank:5);
         Check(SchoolState(Play(4000008,seed,other),school,"star",other.RuntimeId)==1,"star actor isolated");
         StarFateExpansionTests();
-        Console.WriteLine("PASS original seven-star: 48 real cards / 12 packs / source realms and costs / constant position power / independent omen RNG / second-use post / virtual slots / four sourced fates");
+        StarHealingTests();
+        StarRouteTests();
+        Console.WriteLine("PASS original seven-star: 40 real cards / 10 packs / source realms and costs / constant position power / independent omen RNG / second-use post / virtual slots / four sourced fates");
     }
     static void StarFateExpansionTests()
     {

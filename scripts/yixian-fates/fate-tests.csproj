@@ -1,5 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>disable</Nullable><EnableDefaultCompileItems>false</EnableDefaultCompileItems><ModRoot Condition="'$(ModRoot)' == ''">$(MSBuildProjectDirectory)/../../mod/yixian.sect</ModRoot></PropertyGroup>
 <ItemGroup><Compile Include="FateTests.cs" />
+<Reference Include="Reincarnation.Network" HintPath="$(GameManaged)/Reincarnation.Network.dll" />
+<Reference Include="Mirror" HintPath="$(GameManaged)/Mirror.dll" />
 <Reference Include="Reincarnation.Domain" HintPath="$(GameManaged)/Reincarnation.Domain.dll"/><Reference Include="Reincarnation.Config" HintPath="$(GameManaged)/Reincarnation.Config.dll"/><Reference Include="Reincarnation.Runtime" HintPath="$(GameManaged)/Reincarnation.Runtime.dll"/><Reference Include="Reincarnation.UI" HintPath="$(GameManaged)/Reincarnation.UI.dll"/><Reference Include="UnityEngine.CoreModule" HintPath="$(GameManaged)/UnityEngine.CoreModule.dll"/><Reference Include="Newtonsoft.Json" HintPath="$(GameManaged)/Newtonsoft.Json.dll"/><Reference Include="0Harmony" HintPath="$(GameManaged)/0Harmony.dll"/><Reference Include="YixianSect" HintPath="$(ModRoot)/plugins/YixianSect.dll"/>
 </ItemGroup></Project>

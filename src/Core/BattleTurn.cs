@@ -28,9 +28,9 @@ namespace YixianSect
         public void Add(string key, int amount) => Set(key, Get(key) + amount);
         public int Value(JObject rules, string key)
             => ((int?)rules[key] ?? 0) + FixedPointMath.ScaleByBasisPointsFloor(AttributeScaling.Read((CombatScalingAttribute)((int?)rules[key + "Attr"] ?? 40), Actor.Attributes.GetValueOrDefault()), (int?)rules[key + "Bp"] ?? 0);
-        public void Damage(int amount, int hits = 1)
+        public void Damage(int amount, int hits = 1, StableId target = default)
         {
-            var targets = Context.Action?.Targets ?? Array.Empty<StableId>();
+            var targets = target.IsEmpty ? Context.Action?.Targets ?? Array.Empty<StableId>() : new[] { target };
             if (amount <= 0 || targets.Count == 0) return;
             var values = new Dictionary<string, object> { ["effects"] = 1, ["e0.primitive"] = 10, ["e0.target"] = 10, ["e0.flat"] = amount, ["e0.damage"] = 10, ["e0.shape"] = 10 };
             for (int i = 0; i < hits; i++) Plan.Use("effect.skill", targets, values, caster: Actor.RuntimeId);

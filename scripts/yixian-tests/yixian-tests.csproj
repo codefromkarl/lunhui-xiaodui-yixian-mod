@@ -4,7 +4,9 @@
  <ModRoot Condition="'$(ModRoot)' == ''">$(MSBuildProjectDirectory)/../../mod/yixian.sect</ModRoot>
  </PropertyGroup>
  <ItemGroup>
- <Reference Include="Reincarnation.Domain" HintPath="$(GameManaged)/Reincarnation.Domain.dll" />
+ <Reference Include="Reincarnation.Network" HintPath="$(GameManaged)/Reincarnation.Network.dll" />
+<Reference Include="Mirror" HintPath="$(GameManaged)/Mirror.dll" />
+<Reference Include="Reincarnation.Domain" HintPath="$(GameManaged)/Reincarnation.Domain.dll" />
  <Reference Include="Reincarnation.Config" HintPath="$(GameManaged)/Reincarnation.Config.dll" />
  <Reference Include="Reincarnation.Runtime" HintPath="$(GameManaged)/Reincarnation.Runtime.dll" />
  <Reference Include="Reincarnation.UI" HintPath="$(GameManaged)/Reincarnation.UI.dll" />

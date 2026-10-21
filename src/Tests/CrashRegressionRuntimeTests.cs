@@ -17,7 +17,7 @@ namespace YixianSect
             {
                 var f = New(5, school: school, buyCurrent: false);
                 foreach (var pack in SectRegistry.Packs.Where(p => SectRegistry.Owner(p) == school))
-                    if (!f.P.HasPurchasedShelfAbility(PackId(pack))) f.Buy(PackId(pack));
+                    if (school!=FiveElementRules.Lineage&&!f.P.HasPurchasedShelfAbility(PackId(pack))) f.Buy(PackId(pack));
                 if (school == SwordRules.Lineage)
                     foreach (string fate in new[] { FateRules.Rhyme, FateRules.CloudGuard, FateRules.FormationGuard, FateRules.CloudSea }) f.Buy(new StableId(fate));
                 else
@@ -30,7 +30,7 @@ namespace YixianSect
                     ? new[] { Card(65), Card(25), Card(36), Card(64), Card(45) }
                     : school == FiveElementRules.Lineage
                     ? new[] { SchoolSource(school, 7000057), SchoolSource(school, 7000100), SchoolSource(school, 7000112), SchoolSource(school, 7000113) }
-                    : new[] { SchoolCard("yixian_star_storm"), SchoolCard("yixian_star_refuge"), SchoolCard("yixian_star_luminary"), SchoolCard("yixian_star_inscribe") };
+                    : new[] { SchoolCard("yixian_star_storm"), SchoolCard("yixian_star_refuge"), SchoolCard("yixian_star_luminary"), SchoolCard("yixian_star_rebirth") };
                 int played = 0;
                 for (int cycle = 0; cycle < 12; cycle++)
                     foreach (var id in sequence)

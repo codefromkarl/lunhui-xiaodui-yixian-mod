@@ -34,7 +34,7 @@ namespace YixianSect
             if (!Has(turn.Actor, Pivots)) return;
             int amount = Rank(turn.Actor) * 3;
             turn.MaxHealth(amount); turn.Shield(amount);
-            BeforeHeal(turn); turn.Heal(amount);
+            SevenStarHealing.Heal(turn, amount);
         }
     }
 }

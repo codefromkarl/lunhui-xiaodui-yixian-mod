@@ -1,27 +1,25 @@
 {
   "status": "implemented-awaiting-unified-build-and-native-verification",
-  "basis": "1级原牌；旧48内部key仅是v0.6迁移冻结槽位，旧原创内容被替换，不代表同源",
+  "basis": "40张原作一级牌；保留牌的key保持，新牌独立key；内伤支线退出，实际规则按三路线适配记录。",
   "source": "https://sharpobject.github.io/yxp_wiki/zh/sects/heptastar-pavilion.html",
   "selection": [
     {
-      "key": "yixian_star_gather",
-      "replacesPrototype": "引星诀",
-      "sourceId": "4000001",
-      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000001.html",
-      "name": "巽卦",
+      "key": "yixian_star_sparrow",
+      "sourceId": "4000061",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000061.html",
+      "name": "揽雀尾",
       "realm": "炼气",
-      "originalText": "灵气\n+\n1\n卦象\n+1",
-      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+      "originalText": "9\n攻\n10%概率追加5攻",
+      "selectionReason": "2026-10-21炼气卡位优化：直接攻击兼顾后招治疗或概率追加，替换专职产卦牌；独立新身份，不复用旧牌key。"
     },
     {
-      "key": "yixian_star_divine",
-      "replacesPrototype": "卜卦",
-      "sourceId": "4000002",
-      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000002.html",
-      "name": "坤卦",
+      "key": "yixian_star_incessant",
+      "sourceId": "4000013",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000013.html",
+      "name": "藕断丝连",
       "realm": "炼气",
-      "originalText": "防\n+\n2\n卦象\n+2",
-      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+      "originalText": "6\n攻\n后招\n：生命+2",
+      "selectionReason": "2026-10-21炼气卡位优化：直接攻击兼顾后招治疗或概率追加，替换专职产卦牌；独立新身份，不复用旧牌key。"
     },
     {
       "key": "yixian_star_spark",
@@ -124,16 +122,6 @@
       "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
     },
     {
-      "key": "yixian_star_coins",
-      "replacesPrototype": "问天钱",
-      "sourceId": "4000021",
-      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000021.html",
-      "name": "落花有意",
-      "realm": "筑基",
-      "originalText": "灵气\n+\n1\n防\n+\n1\n施加1层\n内伤",
-      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
-    },
-    {
       "key": "yixian_star_wheel",
       "replacesPrototype": "转轮",
       "sourceId": "4000024",
@@ -161,16 +149,6 @@
       "name": "望星诀",
       "realm": "筑基",
       "originalText": "灵气\n+\n2\n防\n+\n2\n后2格\n成为星位",
-      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
-    },
-    {
-      "key": "yixian_star_spear",
-      "replacesPrototype": "贯星枪",
-      "sourceId": "4000025",
-      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000025.html",
-      "name": "兑卦",
-      "realm": "金丹",
-      "originalText": "卦象\n+2\n双方加2\n灵气",
       "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
     },
     {
@@ -234,16 +212,6 @@
       "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
     },
     {
-      "key": "yixian_star_judgment",
-      "replacesPrototype": "天机判",
-      "sourceId": "4000031",
-      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000031.html",
-      "name": "白蛇吐信",
-      "realm": "金丹",
-      "originalText": "10%概率施加2层\n破绽\n6\n攻",
-      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
-    },
-    {
       "key": "yixian_star_comet",
       "replacesPrototype": "彗星袭",
       "sourceId": "4000014",
@@ -251,26 +219,6 @@
       "name": "六爻绝阵",
       "realm": "元婴",
       "originalText": "持续\n：每加1点\n卦象\n时，向对方造成3\n伤害",
-      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
-    },
-    {
-      "key": "yixian_star_chain",
-      "replacesPrototype": "连珠坠",
-      "sourceId": "4000034",
-      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000034.html",
-      "name": "离卦",
-      "realm": "元婴",
-      "originalText": "卦象\n+3\n对方减3生命及上限",
-      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
-    },
-    {
-      "key": "yixian_star_beacon",
-      "replacesPrototype": "燃星灯",
-      "sourceId": "4000035",
-      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000035.html",
-      "name": "蜻蜓点水",
-      "realm": "元婴",
-      "originalText": "5\n攻\n10%概率\n再次行动",
       "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
     },
     {
@@ -304,16 +252,6 @@
       "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
     },
     {
-      "key": "yixian_star_inscribe",
-      "replacesPrototype": "刻命",
-      "sourceId": "4000059",
-      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000059.html",
-      "name": "杯弓蛇影",
-      "realm": "元婴",
-      "originalText": "施加2层\n内伤\n令对方的\n内伤\n立刻生效一次",
-      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
-    },
-    {
       "key": "yixian_star_dissolve",
       "replacesPrototype": "解卦",
       "sourceId": "4000062",
@@ -331,16 +269,6 @@
       "name": "轰雷掣电",
       "realm": "元婴",
       "originalText": "重复2次：\n1\n～\n10\n攻\n有\n卦象\n生效时加1\n灵气",
-      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
-    },
-    {
-      "key": "yixian_star_arc",
-      "replacesPrototype": "天璇弧",
-      "sourceId": "4000092",
-      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000092.html",
-      "name": "伤魂咒阵",
-      "realm": "元婴",
-      "originalText": "灵气\n+\n2\n持续\n3次：攻击或受到攻击时，向对方施加1层\n内伤",
       "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
     },
     {
@@ -424,16 +352,6 @@
       "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
     },
     {
-      "key": "yixian_star_decree",
-      "replacesPrototype": "敕星令",
-      "sourceId": "4000067",
-      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000067.html",
-      "name": "紫气东来",
-      "realm": "化神",
-      "originalText": "灵气\n+\n2\n灵气\n、\n卦象\n、\n星力\n中最高者加3（相同时取靠前者）",
-      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
-    },
-    {
       "key": "yixian_star_renew",
       "replacesPrototype": "逆命回澜",
       "sourceId": "4000094",
@@ -441,26 +359,6 @@
       "name": "星弈•劫争",
       "realm": "化神",
       "originalText": "1\n攻\n灵气\n+\n1\n自身\n灵气\n＞对方则施加1层\n破绽\n星位\n：若\n星力\n≥2则\n再次行动",
-      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
-    },
-    {
-      "key": "yixian_star_zenith",
-      "replacesPrototype": "七曜同辉",
-      "sourceId": "4000095",
-      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000095.html",
-      "name": "灵蛇绕柱",
-      "realm": "化神",
-      "originalText": "施加1层\n内伤\n防\n+\n1\n（对方每有1层\n负面状态\n多1，合计最多为5）\n防\n≥5则\n再次行动",
-      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
-    },
-    {
-      "key": "yixian_star_heavens",
-      "replacesPrototype": "众星拱极",
-      "sourceId": "4000096",
-      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000096.html",
-      "name": "折枝点穴",
-      "realm": "化神",
-      "originalText": "每次攻击时施加1\n内伤\n，持续2回合\n2\n攻\n10%概率追加2攻×2\n10%概率施加1\n减攻",
       "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
     },
     {
@@ -474,14 +372,31 @@
       "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
     },
     {
-      "key": "yixian_star_horizon",
-      "replacesPrototype": "天外天",
-      "sourceId": "4000109",
-      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000109.html",
-      "name": "魂咒卦诀",
-      "realm": "化神",
-      "originalText": "卦象\n+2（对方有\n负面状态\n时多加2）\n奇数格\n：施加1层\n内伤\n偶数格\n：施加1层\n外伤",
-      "selectionReason": "保留1级原牌、同境界；适配手动出牌，不继承旧原创规则"
+      "key": "yixian_star_calm",
+      "sourceId": "4000027",
+      "name": "静气心法",
+      "realm": "筑基",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000027.html",
+      "originalText": "持续\n：每加1点灵气时加2生命",
+      "selectionReason": "三路线收敛：队伍治疗、回气转治疗或累计治疗量转攻击。"
+    },
+    {
+      "key": "yixian_star_qi_heal",
+      "sourceId": "4000017",
+      "name": "气疗术",
+      "realm": "金丹",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000017.html",
+      "originalText": "生命上限+8\n生命+8～18",
+      "selectionReason": "三路线收敛：队伍治疗、回气转治疗或累计治疗量转攻击。"
+    },
+    {
+      "key": "yixian_star_rebirth",
+      "sourceId": "4000042",
+      "name": "枯木逢春",
+      "realm": "金丹",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000042.html",
+      "originalText": "10\n攻\n每加过5点生命多1攻",
+      "selectionReason": "三路线收敛：队伍治疗、回气转治疗或累计治疗量转攻击。"
     }
   ],
   "excluded": [
@@ -502,22 +417,6 @@
       "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
     },
     {
-      "id": "4000013",
-      "name": "藕断丝连",
-      "realm": "炼气",
-      "original": "6\n攻\n后招\n：生命+2",
-      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000013.html",
-      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
-    },
-    {
-      "id": "4000061",
-      "name": "揽雀尾",
-      "realm": "炼气",
-      "original": "9\n攻\n10%概率追加5攻",
-      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000061.html",
-      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
-    },
-    {
       "id": "4000016",
       "name": "艮卦",
       "realm": "筑基",
@@ -531,14 +430,6 @@
       "realm": "筑基",
       "original": "5\n攻×2\n对方减3～13生命上限",
       "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000019.html",
-      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
-    },
-    {
-      "id": "4000027",
-      "name": "静气心法",
-      "realm": "筑基",
-      "original": "持续\n：每加1点灵气时加2生命",
-      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000027.html",
       "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
     },
     {
@@ -558,27 +449,11 @@
       "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
     },
     {
-      "id": "4000017",
-      "name": "气疗术",
-      "realm": "金丹",
-      "original": "生命上限+8\n生命+8～18",
-      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000017.html",
-      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
-    },
-    {
       "id": "4000022",
       "name": "流水无情",
       "realm": "金丹",
       "original": "6\n攻\n若对方有\n负面状态\n，施加2层\n内伤",
       "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000022.html",
-      "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
-    },
-    {
-      "id": "4000042",
-      "name": "枯木逢春",
-      "realm": "金丹",
-      "original": "10\n攻\n每加过5点生命多1攻",
-      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000042.html",
       "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
     },
     {
@@ -644,6 +519,305 @@
       "original": "灵气\n+\n1\n防\n+\n1\n~\n11\n（与其他“雷”牌\n相邻\n时，此牌的\n防\n改为\n攻\n）\n10%概率\n再次行动",
       "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000108.html",
       "reason": "同境界优先选择无需固定牌序/先机跳转/溢疗/蛇影等额外原生契约的原牌"
+    },
+    {
+      "id": "4000001",
+      "name": "巽卦",
+      "realm": "炼气",
+      "original": "灵气\n+\n1\n卦象\n+1",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000001.html",
+      "levels": [
+        {
+          "level": "等级 1",
+          "text": "灵气\n+\n1\n卦象\n+1"
+        },
+        {
+          "level": "等级 2",
+          "text": "灵气\n+\n2\n卦象\n+1"
+        },
+        {
+          "level": "等级 3",
+          "text": "灵气\n+\n2\n卦象\n+2"
+        }
+      ],
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000001_zh.webp",
+      "reason": "2026-10-21炼气卡位优化移出当前收录：减少纯资源铺垫，原卡及历史费用证据保留。"
+    },
+    {
+      "id": "4000002",
+      "name": "坤卦",
+      "realm": "炼气",
+      "original": "防\n+\n2\n卦象\n+2",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000002.html",
+      "levels": [
+        {
+          "level": "等级 1",
+          "text": "防\n+\n2\n卦象\n+2"
+        },
+        {
+          "level": "等级 2",
+          "text": "防\n+\n2\n卦象\n+3"
+        },
+        {
+          "level": "等级 3",
+          "text": "防\n+\n2\n卦象\n+4"
+        }
+      ],
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000002_zh.webp",
+      "reason": "2026-10-21炼气卡位优化移出当前收录：减少纯资源铺垫，原卡及历史费用证据保留。"
+    },
+    {
+      "id": "4000021",
+      "name": "落花有意",
+      "realm": "筑基",
+      "original": "灵气\n+\n1\n防\n+\n1\n施加1层\n内伤",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000021.html",
+      "levels": [
+        {
+          "level": "等级 1",
+          "text": "灵气\n+\n1\n防\n+\n1\n施加1层\n内伤"
+        },
+        {
+          "level": "等级 2",
+          "text": "灵气\n+\n2\n防\n+\n2\n施加1层\n内伤"
+        },
+        {
+          "level": "等级 3",
+          "text": "灵气\n+\n3\n防\n+\n3\n施加1层\n内伤"
+        }
+      ],
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000021_zh.webp",
+      "reason": "三路线收敛：移除内伤支线或冗余跨线过渡，不为凑48张保留。"
+    },
+    {
+      "id": "4000025",
+      "name": "兑卦",
+      "realm": "金丹",
+      "original": "卦象\n+2\n双方加2\n灵气",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000025.html",
+      "levels": [
+        {
+          "level": "等级 1",
+          "text": "卦象\n+2\n双方加2\n灵气"
+        },
+        {
+          "level": "等级 2",
+          "text": "卦象\n+3\n双方加3\n灵气"
+        },
+        {
+          "level": "等级 3",
+          "text": "卦象\n+4\n双方加4\n灵气"
+        }
+      ],
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000025_zh.webp",
+      "reason": "三路线收敛：移除内伤支线或冗余跨线过渡，不为凑48张保留。"
+    },
+    {
+      "id": "4000031",
+      "name": "白蛇吐信",
+      "realm": "金丹",
+      "original": "10%概率施加2层\n破绽\n6\n攻",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000031.html",
+      "levels": [
+        {
+          "level": "等级 1",
+          "text": "10%概率施加2层\n破绽\n6\n攻"
+        },
+        {
+          "level": "等级 2",
+          "text": "10%概率施加3层\n破绽\n6\n攻"
+        },
+        {
+          "level": "等级 3",
+          "text": "10%概率施加4层\n破绽\n6\n攻"
+        }
+      ],
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000031_zh.webp",
+      "reason": "三路线收敛：移除内伤支线或冗余跨线过渡，不为凑48张保留。"
+    },
+    {
+      "id": "4000034",
+      "name": "离卦",
+      "realm": "元婴",
+      "original": "卦象\n+3\n对方减3生命及上限",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000034.html",
+      "levels": [
+        {
+          "level": "等级 1",
+          "text": "卦象\n+3\n对方减3生命及上限"
+        },
+        {
+          "level": "等级 2",
+          "text": "卦象\n+4\n对方减4生命及上限"
+        },
+        {
+          "level": "等级 3",
+          "text": "卦象\n+5\n对方减5生命及上限"
+        }
+      ],
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000034_zh.webp",
+      "reason": "三路线收敛：移除内伤支线或冗余跨线过渡，不为凑48张保留。"
+    },
+    {
+      "id": "4000035",
+      "name": "蜻蜓点水",
+      "realm": "元婴",
+      "original": "5\n攻\n10%概率\n再次行动",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000035.html",
+      "levels": [
+        {
+          "level": "等级 1",
+          "text": "5\n攻\n10%概率\n再次行动"
+        },
+        {
+          "level": "等级 2",
+          "text": "9\n攻\n10%概率\n再次行动"
+        },
+        {
+          "level": "等级 3",
+          "text": "13\n攻\n10%概率\n再次行动"
+        }
+      ],
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000035_zh.webp",
+      "reason": "三路线收敛：移除内伤支线或冗余跨线过渡，不为凑48张保留。"
+    },
+    {
+      "id": "4000059",
+      "name": "杯弓蛇影",
+      "realm": "元婴",
+      "original": "施加2层\n内伤\n令对方的\n内伤\n立刻生效一次",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000059.html",
+      "levels": [
+        {
+          "level": "等级 1",
+          "text": "施加2层\n内伤\n令对方的\n内伤\n立刻生效一次"
+        },
+        {
+          "level": "等级 2",
+          "text": "施加3层\n内伤\n令对方的\n内伤\n立刻生效一次"
+        },
+        {
+          "level": "等级 3",
+          "text": "施加4层\n内伤\n令对方的\n内伤\n立刻生效一次"
+        }
+      ],
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000059_zh.webp",
+      "reason": "三路线收敛：移除内伤支线或冗余跨线过渡，不为凑48张保留。"
+    },
+    {
+      "id": "4000092",
+      "name": "伤魂咒阵",
+      "realm": "元婴",
+      "original": "灵气\n+\n2\n持续\n3次：攻击或受到攻击时，向对方施加1层\n内伤",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000092.html",
+      "levels": [
+        {
+          "level": "等级 1",
+          "text": "灵气\n+\n2\n持续\n3次：攻击或受到攻击时，向对方施加1层\n内伤"
+        },
+        {
+          "level": "等级 2",
+          "text": "灵气\n+\n2\n持续\n4次：攻击或受到攻击时，向对方施加1层\n内伤"
+        },
+        {
+          "level": "等级 3",
+          "text": "灵气\n+\n2\n持续\n5次：攻击或受到攻击时，向对方施加1层\n内伤"
+        }
+      ],
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000092_zh.webp",
+      "reason": "三路线收敛：移除内伤支线或冗余跨线过渡，不为凑48张保留。"
+    },
+    {
+      "id": "4000067",
+      "name": "紫气东来",
+      "realm": "化神",
+      "original": "灵气\n+\n2\n灵气\n、\n卦象\n、\n星力\n中最高者加3（相同时取靠前者）",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000067.html",
+      "levels": [
+        {
+          "level": "等级 1",
+          "text": "灵气\n+\n2\n灵气\n、\n卦象\n、\n星力\n中最高者加3（相同时取靠前者）"
+        },
+        {
+          "level": "等级 2",
+          "text": "灵气\n+\n2\n灵气\n、\n卦象\n、\n星力\n中最高者加5（相同时取靠前者）"
+        },
+        {
+          "level": "等级 3",
+          "text": "灵气\n+\n2\n灵气\n、\n卦象\n、\n星力\n中最高者加7（相同时取靠前者）"
+        }
+      ],
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000067_zh.webp",
+      "reason": "三路线收敛：移除内伤支线或冗余跨线过渡，不为凑48张保留。"
+    },
+    {
+      "id": "4000095",
+      "name": "灵蛇绕柱",
+      "realm": "化神",
+      "original": "施加1层\n内伤\n防\n+\n1\n（对方每有1层\n负面状态\n多1，合计最多为5）\n防\n≥5则\n再次行动",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000095.html",
+      "levels": [
+        {
+          "level": "等级 1",
+          "text": "施加1层\n内伤\n防\n+\n1\n（对方每有1层\n负面状态\n多1，合计最多为5）\n防\n≥5则\n再次行动"
+        },
+        {
+          "level": "等级 2",
+          "text": "施加2层\n内伤\n防\n+\n2\n（对方每有1层\n负面状态\n多1，合计最多为10）\n防\n≥5则\n再次行动"
+        },
+        {
+          "level": "等级 3",
+          "text": "施加3层\n内伤\n防\n+\n3\n（对方每有1层\n负面状态\n多1，合计最多为15）\n防\n≥5则\n再次行动"
+        }
+      ],
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000095_zh.webp",
+      "reason": "三路线收敛：移除内伤支线或冗余跨线过渡，不为凑48张保留。"
+    },
+    {
+      "id": "4000096",
+      "name": "折枝点穴",
+      "realm": "化神",
+      "original": "每次攻击时施加1\n内伤\n，持续2回合\n2\n攻\n10%概率追加2攻×2\n10%概率施加1\n减攻",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000096.html",
+      "levels": [
+        {
+          "level": "等级 1",
+          "text": "每次攻击时施加1\n内伤\n，持续2回合\n2\n攻\n10%概率追加2攻×2\n10%概率施加1\n减攻"
+        },
+        {
+          "level": "等级 2",
+          "text": "每次攻击时施加1\n内伤\n，持续2回合\n2\n攻×2\n10%概率追加2攻×2\n10%概率施加1\n减攻"
+        },
+        {
+          "level": "等级 3",
+          "text": "每次攻击时施加1\n内伤\n，持续2回合\n2\n攻×3\n10%概率追加2攻×2\n10%概率施加1\n减攻"
+        }
+      ],
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000096_zh.webp",
+      "reason": "三路线收敛：移除内伤支线或冗余跨线过渡，不为凑48张保留。"
+    },
+    {
+      "id": "4000109",
+      "name": "魂咒卦诀",
+      "realm": "化神",
+      "original": "卦象\n+2（对方有\n负面状态\n时多加2）\n奇数格\n：施加1层\n内伤\n偶数格\n：施加1层\n外伤",
+      "url": "https://sharpobject.github.io/yxp_wiki/zh/cards/4000109.html",
+      "levels": [
+        {
+          "level": "等级 1",
+          "text": "卦象\n+2（对方有\n负面状态\n时多加2）\n奇数格\n：施加1层\n内伤\n偶数格\n：施加1层\n外伤"
+        },
+        {
+          "level": "等级 2",
+          "text": "卦象\n+3（对方有\n负面状态\n时多加2）\n奇数格\n：施加2层\n内伤\n偶数格\n：施加1层\n外伤"
+        },
+        {
+          "level": "等级 3",
+          "text": "卦象\n+4（对方有\n负面状态\n时多加2）\n奇数格\n：施加3层\n内伤\n偶数格\n：施加2层\n外伤"
+        }
+      ],
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/4000109_zh.webp",
+      "reason": "三路线收敛：移除内伤支线或冗余跨线过渡，不为凑48张保留。"
     }
   ],
   "mechanics": {
@@ -666,5 +840,59 @@
       "url": "https://github.com/sharpobject/yisim/blob/master/card_actions.js",
       "finding": "星弈夹/打追加的是另一次攻击；灵蛇检查当前总防，星弈长先加星再按当前星计算生命及上限。"
     }
-  ]
+  ],
+  "starterRevision": {
+    "date": "2026-10-21",
+    "packKey": "yixian_star_chart",
+    "packName": "炼气·初阶招式",
+    "removed": [
+      {
+        "key": "yixian_star_gather",
+        "sourceId": "4000001",
+        "name": "巽卦"
+      },
+      {
+        "key": "yixian_star_divine",
+        "sourceId": "4000002",
+        "name": "坤卦"
+      }
+    ],
+    "added": [
+      {
+        "key": "yixian_star_incessant",
+        "sourceId": "4000013",
+        "name": "藕断丝连"
+      },
+      {
+        "key": "yixian_star_sparrow",
+        "sourceId": "4000061",
+        "name": "揽雀尾"
+      }
+    ],
+    "scope": "只替换巽卦、坤卦；保留震卦与掌心雷数值、其他境界、四张包、费用换算和卦象机制。"
+  },
+  "threeRouteRevision": {
+    "date": "2026-10-21",
+    "cards": 40,
+    "packs": 10,
+    "added": [
+      "4000027",
+      "4000017",
+      "4000042"
+    ],
+    "removed": [
+      "4000021",
+      "4000025",
+      "4000031",
+      "4000034",
+      "4000035",
+      "4000059",
+      "4000092",
+      "4000067",
+      "4000095",
+      "4000096",
+      "4000109"
+    ],
+    "rules": "两仪群体护盾治疗；御雷每次按境界返1/2/3；含溢出治疗量驱动枯木；内外伤退出。"
+  }
 }

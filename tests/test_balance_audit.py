@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import sys
 import unittest
+import tempfile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
 from balance_audit import acquisition_cost, audit, legal_pools, miss_probability
@@ -29,10 +30,15 @@ class BalanceAuditTests(unittest.TestCase):
 
     def test_catalogue_matrix_covers_all_schools_and_realms(self):
         result=audit()
-        self.assertEqual(len(result['rows']),15)
-        self.assertEqual(len(result['routes']),45)
-        self.assertEqual(result['total_legal_pools'],12693)
+        self.assertEqual(len(result['rows']),10)
+        self.assertEqual(len(result['routes']),30)
+        self.assertEqual(result['total_legal_pools'],5455)
         self.assertEqual({r['rank'] for r in result['rows']},set(range(1,6)))
+        self.assertEqual([r['candidate_cards'] for r in result['five_fixed_deck']],[8,8,8,12,12])
+        self.assertTrue(all(r['deck_size']==8 and r['card_purchase_cost']==0 for r in result['five_fixed_deck']))
+        self.assertEqual([r['unlocked_cards'] for r in result['five_fixed_deck']],[8,10,12,14,16])
+        self.assertEqual([r['deck_choices'] for r in result['five_fixed_deck']],[1,45,495,3003,12870])
+        self.assertFalse(any(r['school']=='five' for r in result['routes']))
 
     def test_route_history_includes_retired_packs_without_rebuying_them(self):
         routes=audit()['routes']
@@ -45,8 +51,12 @@ class BalanceAuditTests(unittest.TestCase):
 
     def test_gift_aware_selection_is_free_for_both_actual_foundation_choices(self):
         root=Path(__file__).resolve().parents[1]
-        old=audit(config_path=root/'data/balance-adjusted-scenarios.json')['routes']
-        current=audit()['routes']
+        old_config=json.loads((root/'data/balance-adjusted-scenarios.json').read_text())
+        old_config['routes']['star']=json.loads((root/'data/balance-star-routes-scenarios.json').read_text())['routes']['star']
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'old-five-current-star.json';path.write_text(json.dumps(old_config))
+            old=audit(config_path=path,legacy_five=True)['routes']
+        current=audit(legacy_five=True)['routes']
         for profile in ['water_wood','earth_cycle']:
             row=next(r for r in current if r['school']=='five' and r['rank']==2 and r['route']==profile)
             self.assertEqual(row['purchase_cost_by_foundation'],[0,0])

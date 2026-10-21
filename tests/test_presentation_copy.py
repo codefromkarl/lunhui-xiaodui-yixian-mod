@@ -39,7 +39,7 @@ class PresentationTests(unittest.TestCase):
             source = read(ROOT / 'data' / folder / (name + '.json'))
             for card in source['cards']:
                 generated = self.cards[card['key']]
-                for field in ('rules', 'sourceId', 'sourceUrl', 'originalText', 'adaptation', 'rank', 'name'):
+                for field in ('rules', 'area', 'sourceId', 'sourceUrl', 'originalText', 'adaptation', 'rank', 'name'):
                     self.assertEqual(generated.get(field), card.get(field), (card['key'], field))
             packs = {p['key']: p for p in self.table['packs']}
             for pack in source['packs']:
@@ -88,12 +88,32 @@ class PresentationTests(unittest.TestCase):
                 self.assertIn('【' + self.cards[key]['name'] + '】\n' + self.cards[key]['description'], text)
         for sect in self.table['sects']:
             self.assertIn('4斗气＝1灵气', sect['rulesDescription'])
+            for rule in ('首回合起手3张', '自动摸2张', '满10张'):
+                self.assertIn(rule, sect['rulesDescription'])
+            self.assertNotIn('攻击溅射', sect['rulesDescription'])
+            self.assertNotIn('回合护盾', sect['rulesDescription'])
         self.assertIn('金→水→木→火→土→金', next(s for s in self.table['sects'] if s['statePrefix'] == 'five')['rulesDescription'])
         self.assertIn('默认第3、6格', next(s for s in self.table['sects'] if s['statePrefix'] == 'star')['rulesDescription'])
         for fate in self.table['fates']:
             self.assertNotIn('原作', fate['description'])
             self.assertNotIn('适配', fate['description'])
             self.assertNotIn('不占手牌', fate['description'])  # Added once at the UI/content boundary.
+
+    def test_four_sword_area_descriptions_and_declarations(self):
+        cases = {
+            '云剑·飞刺': ('连云', '后方至多1名', '50%'),
+            '震雷剑': ('主目标击伤', '1格邻近至多2名', '40%', '不再触发击伤'),
+            '云剑·无锋': ('未连云时不攻击', '同阵位', '50%'),
+            '镜花剑阵': ('护盾', '1格邻接', '30%', '独立判定命中'),
+        }
+        abilities = {a['fields']['displayName']: a for a in read(ROOT / 'mod/yixian.sect/content/abilities.json')['operations']}
+        self.assertEqual({c['name'] for c in self.cards.values() if 'area' in c}, set(cases))
+        for name, phrases in cases.items():
+            card = self.by_name[name]
+            for phrase in phrases:
+                self.assertIn(phrase, card['description'])
+            self.assertEqual(abilities[name]['fields']['flavour'], card['description'])
+            self.assertEqual(abilities[name]['fields']['ranks'][0]['operation']['targetKind'], 50)
 
 
 if __name__ == '__main__':

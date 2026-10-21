@@ -18,10 +18,12 @@ def describe(card):
         return importlib.import_module('five_content').describe_card(card, formula)
     r = card['rules']; lines = []
     if r.get('originalRules'):
+        star_content = importlib.import_module('star_content')
         for key, label in [('damage','造成物理伤害'),('shield','获得护盾'),('heal','恢复生命'),('qi','恢复斗气')]:
             if r.get(key) or r.get(key+'Bp'):
-                lines.append(f'{label}〔{formula(r,key)}〕'+(f' ×{r["hits"]}段。' if key=='damage' and r.get('hits',1)>1 else '。'))
-        lines.extend(importlib.import_module('star_content').describe_effects(card))
+                if key == 'heal': lines.append(star_content.heal_text(formula(r,key), r.get('selectedAllyHeal', False)))
+                else: lines.append(f'{label}〔{formula(r,key)}〕'+(f' ×{r["hits"]}段。' if key=='damage' and r.get('hits',1)>1 else '。'))
+        lines.extend(star_content.describe_effects(card))
         lines.append(f'消耗：{printed_cost(r)}斗气。')
         return '\n'.join(lines)
     raise ValueError('缺少原作规则标记：' + card['name'])
@@ -41,8 +43,9 @@ def compile_school(school, sword):
         card['summary'] = card_summary(card)
         aid = card_id(card['key']); icon = 'icon.' + aid; r = card['rules']
         enemy = card.get('targetEnemy', bool(r.get('damage') or r.get('damageBp')))
+        target = 20 if card.get('targetAlly') else 50 if enemy else 10
         values = [dict(key=k, intValue=v) for k, v in dict(apCost=0, energyCost=printed_cost(r), energyPool=40, range=5).items()]
-        fields = dict(displayName=card['name'], iconKey=icon, sourceContentId=d['id'], mode=10, acquisition=20, purchasePrice=0, flavour='', referencedStatusIds=[], ranks=[dict(rank='DCBAS'[card['rank']-1], tier=1, operation=dict(handlerKey='effect.script', targetKind=50 if enemy else 10, values=values))])
+        fields = dict(displayName=card['name'], iconKey=icon, sourceContentId=d['id'], mode=10, acquisition=20, purchasePrice=0, flavour='', referencedStatusIds=[], ranks=[dict(rank='DCBAS'[card['rank']-1], tier=1, operation=dict(handlerKey='effect.script', targetKind=target, values=values))])
         result['abilities']['operations'].append(dict(op='add', kind='abilities', id=aid, fields=fields))
         result['assets'][icon] = dict(kind='icon', file='icons/cards/' + card['key'] + '.png')
     for pack in result['packs']:
@@ -53,6 +56,10 @@ def compile_school(school, sword):
         aid = pack_id(pack['key']); icon = 'icon.' + aid
         operation = dict(handlerKey='passive.lineage', targetKind=110, values=[dict(key='lineageCode', stringValue=d['code']), dict(key='step', intValue=rank-1), dict(key='cardTablePackKey', stringValue=pack['key'])])
         fields = dict(displayName=pack['name'], iconKey=icon, sourceContentId=d['id'], mode=20, acquisition=20 if rank == 1 else 10, purchasePrice=pack['price'], flavour=pack['acquisition'], referencedStatusIds=[], ranks=[dict(rank='DCBAS'[rank-1], tier=1, operation=operation)])
+        if d['statePrefix'] == 'five':
+            fields.update(acquisition=20, purchasePrice=0, flavour='原卡资料分类，不出售、不启用。')
+            pack['acquisition'] = '原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。'
+            pack['description'] = pack_detail(pack, by_key)
         result['abilities']['operations'].append(dict(op='add', kind='abilities', id=aid, fields=fields))
         result['assets'][icon] = result['assets']['icon.' + card_id(pack['cards'][0])]
     lineage = copy.deepcopy(sword['lineages']['operations'][0]); lineage['id'] = d['id']; f = lineage['fields']

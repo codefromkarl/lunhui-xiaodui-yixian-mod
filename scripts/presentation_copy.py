@@ -1,13 +1,15 @@
 """Player-facing copy; source evidence and gameplay rules remain in their authored data."""
 import json
 from pathlib import Path
+from sword_areas import area_description
 
 COPY = json.loads((Path(__file__).resolve().parents[1] / 'data/presentation.json').read_text())
-COMMON_RULES = '首回合起手3张；主动摸牌消耗1行动力，出牌不耗行动力。手牌上限10张，最多启用8包。\n费用以斗气显示；涉及灵气的效果按4斗气＝1灵气计算。恢复不超过上限，属性倍率向下取整。再次行动＝额外摸1张。'
+COMMON_RULES = '首回合起手3张，之后每回合开始自动摸2张，保留原手牌，满10张不再摸牌。主动摸牌消耗1行动力，出牌不耗行动力；最多启用8包。\n费用以斗气显示；涉及灵气的效果按4斗气＝1灵气计算。恢复不超过上限，属性倍率向下取整。再次行动＝额外摸1张。'
 
 
 def rules_for(school):
-    return COMMON_RULES + '\n' + COPY['schoolRules'][school]
+    common = COMMON_RULES.replace('最多启用8包。', '五行固定一个八张卡包；突破解锁两张新牌，战斗中从已解锁牌库免费调整八张。') if school == 'five' else COMMON_RULES
+    return common + '\n' + COPY['schoolRules'][school]
 
 
 def card_summary(card):
@@ -33,10 +35,17 @@ def compact_sword(table, content):
             line = line.replace('再次行动：额外摸 1 张，不耗或返还行动力；手牌最多 10 张。', '额外摸1张。')
             line = line.replace('；手牌最多 10 张', '')
             lines.append(line)
+        area = area_description(card)
+        if area:
+            lines.append(area)
         lines.append(f'消耗：{card["rules"].get("cost", 0) * 4}斗气。')
         card['description'] = '\n'.join(lines)
         card['summary'] = card_summary(card)
     by_key = {card['key']: card for card in table['cards']}
+    for ability in content['abilities']['operations']:
+        card = by_key.get(ability['id'].rsplit('.', 1)[-1])
+        if card and card.get('area'):
+            ability['fields']['flavour'] = card['description']
     for pack in table['packs']:
         pack['description'] = pack_detail(pack, by_key)
     for fate in content['fates']['operations']:

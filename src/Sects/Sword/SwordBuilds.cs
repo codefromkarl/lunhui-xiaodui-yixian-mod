@@ -46,13 +46,14 @@ namespace YixianSect
             new Route("intent","剑意／剑阵","剑挡、凝意蓄势；多段剑招兑现剑意，护盾支持剑阵攻守。","炼气蓄意，金丹多段兑现，化神剑阵收束。",49,47,45,43,41,40,42,44,46,48,51,52),
             new Route("spirit","灵剑周转","百鸟降费，飞灵、灵海回气；万法会耗尽全部斗气，宜留作终结。","元婴优先灵海续航；化神三包组装费360点，比旧方案增加35点。",52,51,46,44,42,40,41,43,45,48,47,49)
         };
+        // Historical pack-based proposals retained for explicit old-catalogue audits, not current menus.
         public static readonly IReadOnlyList<Route> FiveRoutes=new[]{
             new Route(FiveElementRules.Lineage,"metal_fire","金火兑现","保留基础印记作为启动入口；先激活金、火，再打收益牌。","印记占用三包之一，不默认追加第四包；新包仍需购买。",60,87,84,82,80,61,81,83,85,86,88,89),
             new Route(FiveElementRules.Lineage,"water_wood","水木周转","保留木、水印记；以水势、增攻和多段攻击衔接，避免只堆持续牌。","筑基沿用赠包；化神先沿用元婴三包，暂缓购买生生流转，仍可自由换包。",60,88,85,61,83,81,82,80,84,86,87,89).AtRank(2,60,61,80).AtRank(5,60,85,61).KeepFoundationGift(),
             new Route(FiveElementRules.Lineage,"earth_cycle","土灵／混元","保留土灵印与基础攻击；土灵承接护盾，混元按实际元素覆盖兑现。","筑基沿用赠包；金丹避免两包持续牌挤占输出，相生可补足未永久激活的元素。",61,89,86,83,60,81,82,80,84,85,87,88).AtRank(2,61,60,80).KeepFoundationGift()
         };
         public static IReadOnlyList<Route> RoutesFor(string school)
-            =>school==SwordRules.Lineage?Routes:school==FiveElementRules.Lineage?FiveRoutes:System.Array.Empty<Route>();
+            =>school==SwordRules.Lineage?Routes:System.Array.Empty<Route>();
         public static Proposal Recommend(Route route,int rank,IEnumerable<StableId> owned)
         {
             var eligible=SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==route.School&&(int)p["rank"]<=rank).ToDictionary(p=>(int)p["index"]);

@@ -99,10 +99,18 @@ namespace YixianSect
                 Case("shop_choice_and_pack_detail_consumption",Details);
                 Case("actual_prefab_visuals",Visual);
                 Case("real_health_hit_vs_shield",HealthHit);
+                Case("sword_four_targeted_areas",SwordAreas);
                 Case("all_cards_native_execution",AllCards);
                 }
+                Case("network_same_school_sword",()=>SameSchoolNetwork(SwordRules.Lineage));
+                Case("network_same_school_five",()=>SameSchoolNetwork(FiveElementRules.Lineage));
+                Case("network_same_school_star",()=>SameSchoolNetwork(SevenStarRules.Lineage));
+                Case("network_three_school_team",MixedSchoolTeam);
+                Case("network_eight_same_school",EightSameSchool);
+                Case("five_fixed_eight_deck",FiveFixedDeckContract);
                 Case("five_element_real_command_loop",FiveElementLoop);
                 Case("seven_star_real_command_loop",SevenStarLoop);
+                Case("sect_automatic_round_draw",AutomaticRoundDraw);
                 Case("five_full_content_and_fates",()=>ExpandedSchool(FiveElementRules.Lineage));
                 Case("star_full_content_and_fates",()=>ExpandedSchool(SevenStarRules.Lineage));
                 if(!schoolsOnly)
@@ -173,6 +181,7 @@ namespace YixianSect
             public void Upgrade(StableId lineage)
             {int rank=P.Lineages.Where(l=>l.LineageId==lineage).Select(l=>l.Rank).DefaultIfEmpty().Max()+1;
                 var answer=LineageFreeAbilityPicks.ComputeCandidates(Economy.ShelfAbilities,A.Run.Seed,Slot,lineage,rank,P.PurchasedShelfAbilityIds).FirstOrDefault();
+                if(lineage.Value==FiveElementRules.Lineage&&rank>1)answer=FiveDeckRules.EncodeUnlock(rank,FiveDeckRules.Candidates(rank).Take(2).Select(FiveDeckRules.CardId).ToArray());
                 var r=Send(RunCommand.PurchaseOrUpgradeLineage(Slot,lineage,A.Run.Revision,answer));Require(r.IsSuccess,"lineage "+lineage+": "+r.ErrorCode);}
             public void StartBattle()
             {
@@ -182,11 +191,11 @@ namespace YixianSect
             }
             public RunCommandDispatchResult Action(StableId id,StableId target=default(StableId),StableId parameter=default(StableId))
                 =>Send(RunCommand.SubmitBattleAction(Slot,CombatActionKind.UseAbility,id,target,FormationRow.None,-1,A.Run.Revision,parameter));
-            public BattleActionResultReceipt Play(StableId card)
+            public BattleActionResultReceipt Play(StableId card,StableId target=default)
             {
                 var hand=Table.Hand.FirstOrDefault(h=>h.CardId==card);Require(hand!=null,"hand missing "+card);
                 Require(Catalog.TryGetFirstAbilityAction(card,out var definition),"missing action definition");
-                var target=definition.ActionSpec.TargetKind==CombatTargetKind.Self?default(StableId):Enemy.RuntimeId;
+                if(target.IsEmpty)target=definition.ActionSpec.TargetKind==CombatTargetKind.Self?default(StableId):definition.ActionSpec.TargetKind==CombatTargetKind.AllySingle?Actor.RuntimeId:Enemy.RuntimeId;
                 var r=Action(card,target,CardTableRules.EncodePlay(hand.InstanceId));Require(r.IsSuccess,"play "+card+": "+r.ErrorCode);Require(r.HasBattleActionReceipt,"card action receipt missing");return r.BattleActionReceipt;
             }
             public void Prepare(params StableId[] wanted)
@@ -232,14 +241,14 @@ namespace YixianSect
             f.System(RunDeveloperCommand.AddRewardPoints,10000);
             var id=native?CardTableCatalog.LineageId:new StableId(school??SwordRules.Lineage);
             for(int i=0;i<rank;i++)f.Upgrade(id);
-            if(buyCurrent&&!native)foreach(var pack in SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==id.Value&&SwordRules.Int(p,"rank")==rank&&SwordRules.Int(p,"price")>0&&!f.P.HasPurchasedShelfAbility(PackId(p))))f.Buy(PackId(pack));
+            if(buyCurrent&&!native&&id.Value!=FiveElementRules.Lineage)foreach(var pack in SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==id.Value&&SwordRules.Int(p,"rank")==rank&&SwordRules.Int(p,"price")>0&&!f.P.HasPurchasedShelfAbility(PackId(p))))f.Buy(PackId(pack));
             return f;
         }
         private static StableId PackId(JObject pack)=>SectRegistry.PackId(pack);
         private static StableId Card(int n)=>new StableId(SwordRules.Cards.Single(c=>SwordRules.Text(c.Value,"sourceId")=="100"+n.ToString("D4")).Key);
         private JObject Catalog()
         {
-            Require(CardTableCatalog.Cards.Count==66+SectRegistry.Cards.Count&&CardTableCatalog.Packs.Count==12+SectRegistry.Packs.Count+FiveCardSelection.Entries.Count,"catalog counts");
+            Require(CardTableCatalog.Cards.Count==66+SectRegistry.Cards.Count&&CardTableCatalog.Packs.Count==12+SectRegistry.Packs.Count+1,"catalog counts");
             foreach(int index in Enumerable.Range(40,10))Require(CardTableCatalog.Packs[12+index-40].ShelfIndex==index,"legacy cp ordinal changed: "+index);
             Require(data.ModBattlePlanner!=null,"mod planner unavailable");
             foreach(var id in SectRegistry.Cards.Keys)Require(data.ModBattlePlanner.HasActionScript(id),"handler missing "+id);
@@ -350,8 +359,8 @@ namespace YixianSect
             Require(paid.Table.Hand.Any(h=>h.InstanceId==rejected.InstanceId)&&paid.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting)==3&&paid.A.Run.Revision==revision,"rejected card mutated state");
             Require(f.Actor.SetVitals(f.Actor.CurrentHealth,100000).IsSuccess,"protect isolated actor");
             var remaining=f.Table.Hand.Select(h=>h.InstanceId).ToArray();f.NextRound();
-            Require(f.Table.Hand.Select(h=>h.InstanceId).SequenceEqual(remaining),"later round auto-drew/reset the hand");
-            return new JObject{["initial_hand"]=3,["manual_draw_ap"]=1,["manual_draw_qi"]=0,["zero_ap_card_played"]=true,["card_qi_cost"]=0,["free_at_zero_qi"]=true,["paid_card_required_qi"]=4,["insufficient_qi_error"]=fail.ErrorCode.ToString(),["second_round_hand_unchanged"]=true,["damage"]=hp-enemy.CurrentHealth};
+            Require(f.Table.Hand.Count==Math.Min(10,remaining.Length+2)&&remaining.All(id=>f.Table.Hand.Any(h=>h.InstanceId==id)),"later round must retain hand and draw two up to cap");
+            return new JObject{["initial_hand"]=3,["manual_draw_ap"]=1,["manual_draw_qi"]=0,["zero_ap_card_played"]=true,["card_qi_cost"]=0,["free_at_zero_qi"]=true,["paid_card_required_qi"]=4,["insufficient_qi_error"]=fail.ErrorCode.ToString(),["second_round_retained_hand"]=true,["second_round_draw"]=f.Table.Hand.Count-remaining.Length,["damage"]=hp-enemy.CurrentHealth};
         }
         private JObject PrintedCardCosts()
         {

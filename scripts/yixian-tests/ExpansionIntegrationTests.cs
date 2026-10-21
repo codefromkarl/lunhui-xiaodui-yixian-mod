@@ -33,23 +33,22 @@ partial class Program
         var shelves=new List<ShelfAbilityDefinition>();
         Method(projection,"ProjectShelfAbilities").Invoke(null,new object[]{abilities,progressions,shelves});
         Check(progressions.Count==3&&progressions.All(p=>p.MaximumRank==5),"three full five-rank native lineages");
-        Check(shelves.Count==50,"thirty paid packs, eight water singles and twelve independent fates projected");
+        Check(shelves.Count==30,"eighteen sword/star paid packs and twelve independent fates projected");
         var economy=new EconomyCatalog(Array.Empty<EconomyCatalogEntry>(),progressions,shelves);
         var hub=new HubState(HubAccessKind.Full,1,new[]{new PlayerSlotId(1)});var service=new HubService(economy);
         foreach(var school in SectRegistry.Sects.Keys)
         {
             var cards=SectRegistry.Cards.Values.Where(c=>SectRegistry.Owner(c)==school).ToList();
             var packs=SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==school).ToList();
-            Check(cards.Count==48&&packs.Count==12,"equal school content volume "+school);
-            foreach(int rank in Enumerable.Range(1,5))Check(packs.Count(p=>(int)p["rank"]==rank)==(rank<4?2:3),"equal per-realm pack allocation");
+            Check(cards.Count==(school==SevenStarRules.Lineage?40:48)&&packs.Count==(school==SevenStarRules.Lineage?10:12),"equal school content volume "+school);
+            foreach(int rank in Enumerable.Range(1,5))Check(packs.Count(p=>(int)p["rank"]==rank)==(school==SevenStarRules.Lineage?2:rank<4?2:3),"equal per-realm pack allocation");
             foreach(int rank in Enumerable.Range(1,5))
             {
-                var player=Player(sect:false);Check(player.AddLineage(new StableId(school)).IsSuccess,"expanded school added");
-                ((List<LineageRankState>)typeof(PlayerRunState).GetField("lineages",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(player))[0]=new LineageRankState(new StableId(school),rank);
+                var player=SchoolPlayer(school,rank);
                 SectProgression.Refresh(player);
-                Check(SectProgression.Owned(player).Count==2,"higher ranks do not retrospectively gift packs");
+                Check(SectProgression.Owned(player).Count==(school==FiveElementRules.Lineage?1:2),"higher ranks do not retrospectively gift packs");
                 var candidates=SectProgression.GiftCandidates(new StableId(school),rank,player.Slot,player.PurchasedShelfAbilityIds);
-                Check(candidates.Count==(rank==2?2:0),"foundation-only free choice for each school");
+                Check(candidates.Count==(school!=FiveElementRules.Lineage&&rank==2?2:0),"foundation-only free choice for each school");
                 foreach(var shelf in shelves)
                 {
                     int points=player.RewardPoints;var result=service.PurchaseShelfAbility(hub,player,shelf.AbilityId);
@@ -59,9 +58,9 @@ partial class Program
                     if(expected)Check(!service.PurchaseShelfAbility(hub,player,shelf.AbilityId).IsSuccess&&player.RewardPoints==points-shelf.Price,"duplicate pack/fate rejected without charge");
                 }
                 SectProgression.Refresh(player);
-                Check(SectProgression.Owned(player).Count==packs.Count(p=>(int)p["rank"]<=rank),"all accessible lower packs remain owned");
+                Check(SectProgression.Owned(player).Count==(school==FiveElementRules.Lineage?1:packs.Count(p=>(int)p["rank"]<=rank)),"all accessible lower packs remain owned");
                 Check(player.ActiveCardPackIds.Count<=8,"expanded school active pack cap");
-                Check(SectProgression.Owned(player).All(id=>SectRegistry.Owner(SectRegistry.FindPack(id))==school),"expanded pool cannot leak other school");
+                Check(SectProgression.Owned(player).All(id=>(id==FiveDeckRules.PackId?FiveElementRules.Lineage:SectRegistry.Owner(SectRegistry.FindPack(id)))==school),"expanded pool cannot leak other school");
             }
         }
         var fates=JObject.Parse(File.ReadAllText(Mod+"/content/fates.json"))["operations"].OfType<JObject>().ToList();
@@ -69,6 +68,6 @@ partial class Program
         foreach(var fate in fates)Check((int)fate["fields"]["purchasePrice"]==40,"aligned fate price");
         CardTableBridge.BuildCatalog(out var _,out var combinedPacks);
         foreach(var pair in new[]{(60,24),(61,25),(70,26),(71,27)})Check(combinedPacks[pair.Item2].ShelfIndex==pair.Item1,"legacy new-school cp ordinal preserved "+pair.Item1);
-        Console.WriteLine("PASS expansion integration: 144 cards/36 packs/12 fates; native projection, five-rank purchase/ownership, atomic duplicates and legacy directory order");
+        Console.WriteLine("PASS expansion integration: 136 cards/34 packs/12 fates; native projection, five-rank purchase/ownership, atomic duplicates and legacy directory order");
     }
 }

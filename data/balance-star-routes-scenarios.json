@@ -1,0 +1,253 @@
+{
+  "schema": 1,
+  "seeds": [
+    91001,
+    91002,
+    91003,
+    91004
+  ],
+  "rounds": 4,
+  "maxPlaysPerRound": 24,
+  "baseAttribute": 10,
+  "policies": [
+    "hand_order",
+    "setup_resource"
+  ],
+  "routes": {
+    "sword": {
+      "cloud": [
+        "yixian_sword_cloud5",
+        "yixian_sword_cloud4",
+        "yixian_sword_cloud3",
+        "yixian_sword_cloud2",
+        "yixian_sword",
+        "yixian_sword_qi",
+        "yixian_sword_intent2",
+        "yixian_sword_intent3",
+        "yixian_sword_spirit4",
+        "yixian_sword_spirit5",
+        "yixian_sword_intent4",
+        "yixian_sword_intent5"
+      ],
+      "intent": [
+        "yixian_sword_intent5",
+        "yixian_sword_intent4",
+        "yixian_sword_intent3",
+        "yixian_sword_intent2",
+        "yixian_sword_qi",
+        "yixian_sword",
+        "yixian_sword_cloud2",
+        "yixian_sword_cloud3",
+        "yixian_sword_cloud4",
+        "yixian_sword_cloud5",
+        "yixian_sword_spirit4",
+        "yixian_sword_spirit5"
+      ],
+      "spirit": [
+        "yixian_sword_spirit5",
+        "yixian_sword_spirit4",
+        "yixian_sword_cloud4",
+        "yixian_sword_cloud3",
+        "yixian_sword_cloud2",
+        "yixian_sword",
+        "yixian_sword_qi",
+        "yixian_sword_intent2",
+        "yixian_sword_intent3",
+        "yixian_sword_cloud5",
+        "yixian_sword_intent4",
+        "yixian_sword_intent5"
+      ]
+    },
+    "five": {
+      "metal_fire": [
+        "yixian_five_roots",
+        "yixian_five_divine_forge",
+        "yixian_five_sword_flame",
+        "yixian_five_temper",
+        "yixian_five_forge",
+        "yixian_five_cycle",
+        "yixian_five_nurture",
+        "yixian_five_cycle_seed",
+        "yixian_five_forest_sea",
+        "yixian_five_great_cycle",
+        "yixian_five_evergreen",
+        "yixian_five_origin"
+      ],
+      "water_wood": [
+        "yixian_five_roots",
+        "yixian_five_evergreen",
+        "yixian_five_forest_sea",
+        "yixian_five_cycle",
+        "yixian_five_cycle_seed",
+        "yixian_five_nurture",
+        "yixian_five_temper",
+        "yixian_five_forge",
+        "yixian_five_sword_flame",
+        "yixian_five_great_cycle",
+        "yixian_five_divine_forge",
+        "yixian_five_origin"
+      ],
+      "earth_cycle": [
+        "yixian_five_cycle",
+        "yixian_five_origin",
+        "yixian_five_great_cycle",
+        "yixian_five_cycle_seed",
+        "yixian_five_roots",
+        "yixian_five_nurture",
+        "yixian_five_temper",
+        "yixian_five_forge",
+        "yixian_five_sword_flame",
+        "yixian_five_forest_sea",
+        "yixian_five_divine_forge",
+        "yixian_five_evergreen"
+      ]
+    },
+    "star": {
+      "position": [
+        "yixian_star_nova",
+        "yixian_star_mirror",
+        "yixian_star_compass",
+        "yixian_star_wheel",
+        "yixian_star_fate",
+        "yixian_star_chart",
+        "yixian_star_well",
+        "yixian_star_spear",
+        "yixian_star_comet",
+        "yixian_star_oracle"
+      ],
+      "omen_thunder": [
+        "yixian_star_oracle",
+        "yixian_star_comet",
+        "yixian_star_compass",
+        "yixian_star_well",
+        "yixian_star_chart",
+        "yixian_star_fate",
+        "yixian_star_wheel",
+        "yixian_star_spear",
+        "yixian_star_mirror",
+        "yixian_star_nova"
+      ],
+      "post": [
+        "yixian_star_spear",
+        "yixian_star_oracle",
+        "yixian_star_wheel",
+        "yixian_star_chart",
+        "yixian_star_comet",
+        "yixian_star_fate",
+        "yixian_star_well",
+        "yixian_star_compass",
+        "yixian_star_mirror",
+        "yixian_star_nova"
+      ]
+    }
+  },
+  "fateSensitivityRanks": [
+    3,
+    5
+  ],
+  "productionRecommendations": true,
+  "rankPriorities": {
+    "five": {
+      "water_wood": {
+        "2": [
+          "yixian_five_roots",
+          "yixian_five_cycle",
+          "yixian_five_forge"
+        ],
+        "5": [
+          "yixian_five_roots",
+          "yixian_five_forest_sea",
+          "yixian_five_cycle"
+        ]
+      },
+      "earth_cycle": {
+        "2": [
+          "yixian_five_cycle",
+          "yixian_five_roots",
+          "yixian_five_forge"
+        ]
+      }
+    }
+  },
+  "reuseFoundationGiftRoutes": {
+    "five": [
+      "water_wood",
+      "earth_cycle"
+    ]
+  },
+  "fiveDeckContract": true,
+  "fiveDeckUnlocks": {
+    "fixed_deck": {
+      "2": [
+        "7000015",
+        "7000016"
+      ],
+      "3": [
+        "7000025",
+        "7000026"
+      ],
+      "4": [
+        "7000020",
+        "7000027"
+      ],
+      "5": [
+        "7000042",
+        "7000043"
+      ]
+    }
+  },
+  "fiveDeckSelections": {
+    "fixed_deck": {
+      "1": [
+        "7000001",
+        "7000003",
+        "7000006",
+        "7000009",
+        "7000011",
+        "7000002",
+        "7000004",
+        "7000007"
+      ],
+      "2": [
+        "7000015",
+        "7000016",
+        "7000006",
+        "7000009",
+        "7000011",
+        "7000002",
+        "7000004",
+        "7000007"
+      ],
+      "3": [
+        "7000025",
+        "7000026",
+        "7000006",
+        "7000009",
+        "7000011",
+        "7000002",
+        "7000004",
+        "7000007"
+      ],
+      "4": [
+        "7000020",
+        "7000027",
+        "7000006",
+        "7000009",
+        "7000011",
+        "7000002",
+        "7000004",
+        "7000007"
+      ],
+      "5": [
+        "7000042",
+        "7000043",
+        "7000006",
+        "7000009",
+        "7000011",
+        "7000002",
+        "7000004",
+        "7000007"
+      ]
+    }
+  }
+}

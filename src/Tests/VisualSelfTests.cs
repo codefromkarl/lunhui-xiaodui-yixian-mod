@@ -227,7 +227,15 @@ namespace YixianSect
                     Require(label.text==actual,"actual prefab re-appended source/adaptation text");
                 }
                 entries[0].Clicked();Capture(camera,texture,root,Path.Combine(directory,"card-pack-preview.png"));
-                result["pack_preview"]="card-pack-preview.png";result["preview_clicks_checked"]=4;
+                if(wanted.Cards.Count==8)
+                {
+                    var next=panel.GetComponentsInChildren<Button>(true).Single(b=>b.name=="FiveDeckNextPage");
+                    Require(next.interactable,"eight-card preview has no second page");next.onClick.Invoke();
+                    for(int i=0;i<4;i++){entries[i].Clicked();Require(label.text==wanted.Cards[i+4].Detail,"second page preview uses wrong card");}
+                    Capture(camera,texture,root,Path.Combine(directory,"card-pack-preview-page2.png"));
+                    result["second_page"]="card-pack-preview-page2.png";
+                }
+                result["pack_preview"]="card-pack-preview.png";result["preview_clicks_checked"]=wanted.Cards.Count;
                 UnityEngine.Object.DestroyImmediate(panelObject);panelObject=null;
                 if(!foundation){result["scope"]="actual shipped pack prefab and preview callbacks; no physical mouse test";return result;}
                 var shopPrefab=Prefab<ShopWindow>();Require(shopPrefab!=null,"shop prefab missing from loaded manifest");
