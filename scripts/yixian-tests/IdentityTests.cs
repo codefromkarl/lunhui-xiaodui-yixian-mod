@@ -59,7 +59,7 @@ partial class Program
         foreach (var pack in packs.Where(p => SectRegistry.Packs.Any(row => (string)row["key"] == p.Key)))
         {
             Check(pack.UnlockAbilityId.Value == SectIds.Pack(pack.Key) && ids.Contains(pack.UnlockAbilityId.Value), "native pack unlock uses canonical key");
-            Check(pack.CardIds.Count == 4 && pack.CardIds.All(id => SectRegistry.Cards.ContainsKey(id.Value)), "native pack members use canonical IDs");
+            Check(pack.CardIds.Count == ((JArray)SectRegistry.FindPack(pack.UnlockAbilityId)["cards"]).Count && pack.CardIds.All(id => SectRegistry.Cards.ContainsKey(id.Value)), "native pack members use canonical IDs");
         }
         Console.WriteLine("PASS canonical identities: native catalog/card/pack references, original objects retained; no legacy mapping or run/profile mapper migration patches");
     }

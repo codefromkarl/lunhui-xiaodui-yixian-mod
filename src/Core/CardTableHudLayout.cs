@@ -47,8 +47,11 @@ namespace YixianSect
         private TextOverflowModes overflow;
         private GameHUDWindow hud;
         private Button[] controls;
+        private Button endTurn;
         private UiRectSnapshot[] controlRects,labelRects;
-        private UiRectSnapshot handRect;
+        private UiRectSnapshot handRect,turnGroupRect;
+        private RectTransform safeFrame;
+        private SectHandHoverFilter hoverFilter;
         private bool applying;
 
         internal void Configure(GameHUDWindow owner,TMP_Text target,Button[] buttons,bool sect)
@@ -64,11 +67,19 @@ namespace YixianSect
                 alignment=summary.alignment;overflow=summary.overflowMode;ownsLayout=true;
                 hud=owner;
                 controls=new[]{"cardDrawButton","cardPackButton","cardFateButton"}.Select(name=>(Button)AccessTools.Field(typeof(GameHUDWindow),name).GetValue(owner)).ToArray();
+                endTurn=(Button)AccessTools.Field(typeof(GameHUDWindow),"endTurnButton").GetValue(owner);
+                turnGroupRect=new UiRectSnapshot((RectTransform)endTurn.transform.parent);
+                safeFrame=owner.GetComponentsInChildren<RectTransform>(true).FirstOrDefault(r=>r.name=="SafeFrame16x9");
                 controlRects=controls.Select(b=>new UiRectSnapshot((RectTransform)b.transform)).ToArray();
                 labelRects=controls.Select(b=>new UiRectSnapshot(b.GetComponentInChildren<TMP_Text>(true).rectTransform)).ToArray();
                 handRect=new UiRectSnapshot((RectTransform)AccessTools.Field(typeof(GameHUDWindow),"cardHandContent").GetValue(owner));
+                var handArea=owner.GetComponentInChildren<CardTableHandArea>(true);
+                if(handArea!=null){
+                    hoverFilter=handArea.GetComponent<SectHandHoverFilter>()??handArea.gameObject.AddComponent<SectHandHoverFilter>();
+                    hoverFilter.Excluded=controls.Select(b=>(RectTransform)b.transform).Concat(new[]{(RectTransform)endTurn.transform}).ToArray();
+                }
             }
-            tabs=buttons;enabled=true;Apply();
+            tabs=buttons;enabled=true;if(hoverFilter!=null)hoverFilter.Active=true;Apply();
         }
         private void Restore()
         {
@@ -78,7 +89,7 @@ namespace YixianSect
             summary.fontSize=fontSize;summary.enableAutoSizing=autoSize;summary.enableWordWrapping=wrap;
             summary.raycastTarget=raycast;summary.alignment=alignment;summary.overflowMode=overflow;
             foreach(var rectState in controlRects.Concat(labelRects))rectState.Restore();
-            handRect.Restore();
+            handRect.Restore();turnGroupRect.Restore();if(hoverFilter!=null)hoverFilter.Active=false;
             ownsLayout=false;
         }
         private Rect Bounds(RectTransform item,RectTransform parent)
@@ -107,7 +118,7 @@ namespace YixianSect
                 left=Mathf.Min(left,bounds.xMin);top=Mathf.Max(top,bounds.yMax);
             }
             if(left==float.MaxValue)return;
-            var viewport=Bounds((RectTransform)canvas.rootCanvas.transform,parent);
+            var viewport=Bounds(safeFrame!=null?safeFrame:(RectTransform)canvas.rootCanvas.transform,parent);
             if(viewport.width<=0||viewport.height<=0)return;
             ApplyControls(parent,viewport);
             float right=viewport.xMax-20f;left=Mathf.Max(left,viewport.xMin+20f);
@@ -131,30 +142,84 @@ namespace YixianSect
         }
         private void ApplyControls(RectTransform space,Rect viewport)
         {
+            // The native 316-unit TurnCommit group ends flush with BottomBar at
+            // the authored 1920 reference. Its fixed left offset (1596) clips in
+            // a narrower safe frame; right anchoring preserves the reference pose.
+            var turn=turnGroupRect.Rect;var min=turn.anchorMin;var max=turn.anchorMax;var pivot=turn.pivot;var position=turn.anchoredPosition;
+            min.x=max.x=pivot.x=1;position.x=0;
+            turn.anchorMin=min;turn.anchorMax=max;turn.pivot=pivot;turn.anchoredPosition=position;
             var original=handRect.BoundsIn(space);
+            var native=controlRects.Select(r=>r.BoundsIn(space)).ToArray();
+            var fitted=native.ToArray();
+            for(int i=0;i<fitted.Length;i++){
+                var text=controls[i].GetComponentInChildren<TMP_Text>(true);
+                float height=Mathf.Max(native[i].height,Mathf.Ceil(text.GetPreferredValues(text.text,native[i].width-8,0).y+4));
+                float top=i==0?native[i].yMax:Mathf.Min(native[i].yMax,fitted[i-1].yMin-6);
+                fitted[i]=new Rect(native[i].xMin,top-height,native[i].width,height);
+            }
+            var group=Rect.MinMaxRect(fitted.Min(r=>r.xMin),fitted.Min(r=>r.yMin),fitted.Max(r=>r.xMax),fitted.Max(r=>r.yMax));
             float tabBottom=tabs.Where(b=>b!=null&&b.gameObject.activeSelf).Min(b=>Bounds((RectTransform)b.transform,space).yMin);
-            float right=viewport.xMax-20,left=right-106;
-            float top=Mathf.Min(original.yMax-14,tabBottom-16);
-            top=Mathf.Max(top,viewport.yMin+20+162);
+            var allowed=Rect.MinMaxRect(viewport.xMin+20,viewport.yMin+20,viewport.xMax-20,Mathf.Min(viewport.yMax-20,tabBottom-8));
+            Rect? blocker=endTurn!=null&&endTurn.gameObject.activeInHierarchy?Bounds((RectTransform)endTurn.transform,space):(Rect?)null;
+            var shift=NearestControlShift(group,allowed,blocker);
             for(int i=0;i<controls.Length;i++)
             {
-                UiRectSnapshot.Place((RectTransform)controls[i].transform,space,new Rect(left,top-50-i*56,106,50));
+                // Keep the native card-area placement. Only grow a row enough
+                // for its current label; never shrink text or globally dock controls.
+                var wantedControl=fitted[i];wantedControl.position+=shift;
+                if(shift.sqrMagnitude<.0001f&&Vector2.Distance(fitted[i].position,native[i].position)<.05f&&Vector2.Distance(fitted[i].size,native[i].size)<.05f)controlRects[i].Restore();
+                else UiRectSnapshot.Place((RectTransform)controls[i].transform,space,wantedControl);
+                labelRects[i].Restore();
                 var label=controls[i].GetComponentInChildren<TMP_Text>(true).rectTransform;
                 label.anchorMin=Vector2.zero;label.anchorMax=Vector2.one;label.offsetMin=new Vector2(4,2);label.offsetMax=new Vector2(-4,-2);
             }
-            float handLeft=Mathf.Max(original.xMin,viewport.xMin+20),handRight=Mathf.Min(original.xMax,left-16);
+            group.position+=shift;
+            float left=group.xMin;
+
+            float handLeft=Mathf.Max(original.xMin,viewport.xMin+20),handRight=Mathf.Min(original.xMax,viewport.xMax-20);
+            if(group.yMin<original.yMax&&group.yMax>original.yMin)handRight=Mathf.Min(handRight,left-16);
             var wanted=Rect.MinMaxRect(handLeft,original.yMin,handRight,original.yMax);
             var current=Bounds(handRect.Rect,space);
             if(Vector2.Distance(current.position,wanted.position)<.05f&&Vector2.Distance(current.size,wanted.size)<.05f)return;
-            UiRectSnapshot.Place(handRect.Rect,space,wanted);
+            if(Vector2.Distance(wanted.position,original.position)<.05f&&Vector2.Distance(wanted.size,original.size)<.05f)handRect.Restore();
+            else UiRectSnapshot.Place(handRect.Rect,space,wanted);
             // Native placement uses the available hand width. Run it once after
             // resizing so a full ten-card fan leaves the controls unobstructed.
             applying=true;
             try{AccessTools.Method(typeof(GameHUDWindow),"RenderCardTable").Invoke(hud,null);}
             finally{applying=false;}
         }
+        internal static Vector2 NearestControlShift(Rect box,Rect allowed,Rect? blocker)
+        {
+            float x=Mathf.Clamp(box.xMin,allowed.xMin,allowed.xMax-box.width);
+            float y=Mathf.Clamp(box.yMin,allowed.yMin,allowed.yMax-box.height);
+            var xs=new[]{x,allowed.xMin,allowed.xMax-box.width}.ToList();
+            var ys=new[]{y,allowed.yMin,allowed.yMax-box.height}.ToList();
+            if(blocker.HasValue){var b=blocker.Value;xs.Add(b.xMin-16-box.width);xs.Add(b.xMax+16);ys.Add(b.yMin-16-box.height);ys.Add(b.yMax+16);}
+            // Supported HUD viewports have room to the left of the fixed turn controls.
+            // Choose the least translation; a safe native box has zero cost.
+            return (from xx in xs from yy in ys
+                    let candidate=new Rect(xx,yy,box.width,box.height)
+                    where candidate.xMin>=allowed.xMin-.01f&&candidate.yMin>=allowed.yMin-.01f&&candidate.xMax<=allowed.xMax+.01f&&candidate.yMax<=allowed.yMax+.01f
+                    where !blocker.HasValue||!OverlapsWithGap(candidate,blocker.Value,16)
+                    let offset=candidate.position-box.position
+                    orderby offset.sqrMagnitude
+                    select offset).First();
+        }
+        private static bool OverlapsWithGap(Rect a,Rect b,float gap)
+            =>a.xMin<b.xMax+gap&&a.xMax>b.xMin-gap&&a.yMin<b.yMax+gap&&a.yMax>b.yMin-gap;
         private void LateUpdate(){Apply();}
         private void OnRectTransformDimensionsChange(){Apply();}
+    }
+
+    // The native transparent HandArea extends beyond the fan. When controls move
+    // inward on narrow frames it must not consume clicks intended for those buttons.
+    internal sealed class SectHandHoverFilter : MonoBehaviour,ICanvasRaycastFilter
+    {
+        internal bool Active;
+        internal RectTransform[] Excluded;
+        public bool IsRaycastLocationValid(Vector2 point,Camera eventCamera)
+            =>!Active||Excluded.All(r=>!r.gameObject.activeInHierarchy||!RectTransformUtility.RectangleContainsScreenPoint(r,point,eventCamera));
     }
 
     internal sealed class UiRectSnapshot

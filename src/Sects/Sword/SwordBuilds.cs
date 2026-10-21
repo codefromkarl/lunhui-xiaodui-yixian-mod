@@ -52,8 +52,13 @@ namespace YixianSect
             new Route(FiveElementRules.Lineage,"water_wood","水木周转","保留木、水印记；以水势、增攻和多段攻击衔接，避免只堆持续牌。","筑基沿用赠包；化神先沿用元婴三包，暂缓购买生生流转，仍可自由换包。",60,88,85,61,83,81,82,80,84,86,87,89).AtRank(2,60,61,80).AtRank(5,60,85,61).KeepFoundationGift(),
             new Route(FiveElementRules.Lineage,"earth_cycle","土灵／混元","保留土灵印与基础攻击；土灵承接护盾，混元按实际元素覆盖兑现。","筑基沿用赠包；金丹避免两包持续牌挤占输出，相生可补足未永久激活的元素。",61,89,86,83,60,81,82,80,84,85,87,88).AtRank(2,61,60,80).KeepFoundationGift()
         };
+        public static readonly IReadOnlyList<Route> StarRoutes=new[]{
+            new Route(SevenStarRules.Lineage,"thunder","卦雷经营","产卦后将保障留给雷击；两仪支援会奖励保留的卦象。","元婴六爻与返卦形成引擎；功能包会降低核心密度。",98,94,93,90,70,71,91,92,95,97),
+            new Route(SevenStarRules.Lineage,"positions","星位多段","功能牌推进格位，多段在星位兑现；高阶天元完成覆盖。","前期保留星罗启动；天元不是低阶构筑的前提。",97,95,71,91,93,70,90,92,94,98).AtRank(2,91,71,70).AtRank(3,93,91,71),
+            new Route(SevenStarRules.Lineage,"healing","后招治疗","同源第二次结算进入后招，治疗量由枯木兑现；支援与输出兼顾。","金丹获得枯木出口；多人群疗收益按实际存活人数变化。",98,92,93,90,91,70,71,94,95,97).AtRank(2,90,70,71)
+        };
         public static IReadOnlyList<Route> RoutesFor(string school)
-            =>school==SwordRules.Lineage?Routes:System.Array.Empty<Route>();
+            =>school==SwordRules.Lineage?Routes:school==SevenStarRules.Lineage?StarRoutes:System.Array.Empty<Route>();
         public static Proposal Recommend(Route route,int rank,IEnumerable<StableId> owned)
         {
             var eligible=SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==route.School&&(int)p["rank"]<=rank).ToDictionary(p=>(int)p["index"]);
@@ -78,11 +83,32 @@ namespace YixianSect
             var packs=ids.Distinct().Select(SectRegistry.FindPack).Where(p=>p!=null&&SectRegistry.Owner(p)==school).ToArray();
             var cards=packs.SelectMany(p=>((JArray)p["cards"]).Values<string>()).Select(k=>SectRegistry.Cards[SectRegistry.CardPrefix+k]).ToArray();
             if(cards.Length==0)return "尚未选择卡包";
+            if(school==SevenStarRules.Lineage)
+            {
+                int omen=cards.Count(c=>(int?)c["rules"]?["omenGain"]>0||(int?)c["rules"]?["rankRefundOmen"]>0);
+                int post=cards.Count(c=>SectDecisionHints.Post((JObject)c["rules"]));
+                int star=cards.Count(c=>(int?)c["rules"]?["starGain"]>0);
+                return "卡池 "+cards.Length+"张 · 产卦牌 "+omen+" · 产星牌 "+star+" · 后招牌 "+post+"\n统计含条件收益；仙命与战斗状态另计。";
+            }
             var seals=cards.Select(c=>(int?)c["rules"]["activate"]??0).Where(e=>e>=1&&e<=5).Distinct().OrderBy(e=>e).ToArray();
             var missing=cards.Select(c=>(int?)c["element"]??0).Where(e=>e>=1&&e<=5&&!seals.Contains(e)).Distinct().OrderBy(e=>e).ToArray();
             string Names(int[] elements)=>string.Join("、",elements.Select(e=>new[]{"","金","水","木","火","土"}[e]));
             return "卡池 "+cards.Length+" 张 · 永久印记："+(seals.Length==0?"无":Names(seals))+
                 (missing.Length==0?"":" · 缺印："+Names(missing)+"（可相生／仙命启动）");
+        }
+        public static string Diagnostics(Proposal proposal,IEnumerable<StableId> previous)
+        {
+            var cards=proposal.Selected.Select(SectRegistry.FindPack).SelectMany(p=>((JArray)p["cards"]).Values<string>()).Select(k=>SectRegistry.Cards[SectRegistry.CardPrefix+k]).ToArray();
+            int old=previous.Select(SectRegistry.FindPack).Where(p=>p!=null&&SectRegistry.Owner(p)==proposal.Route.School).Sum(p=>((JArray)p["cards"]).Count);
+            string result="当前池 "+old+" → 推荐池 "+cards.Length+"张。";
+            if(cards.Length==0)return result;
+            if(proposal.Route.School==SwordRules.Lineage)
+            {
+                int paid=cards.Count(c=>SectCardRules.PrintedCost(c)>=8),qi=Inspect(proposal.Selected).Qi;
+                result+="\n8斗气以上牌 "+paid+"张 · 含回气效果 "+qi+"张（不等于净回气）。";
+                if(proposal.Route.Key=="spirit"&&!cards.Any(c=>(string)c["rules"]?["persist"]=="spiritDiscount"))result+="\n缺灵剑减费：百鸟灵剑诀尚未进入推荐池。";
+            }
+            result+="\n缺失组件先过渡；不会自动购买或解锁。";return result;
         }
         public static Pool Inspect(IEnumerable<StableId> ids)
         {

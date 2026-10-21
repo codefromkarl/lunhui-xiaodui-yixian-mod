@@ -47,7 +47,7 @@ class PresentationTests(unittest.TestCase):
                     self.assertEqual(packs[pack['key']][field], pack[field])
 
     def test_simple_cards_and_missing_condition(self):
-        self.assertEqual(self.by_name['水灵印']['description'], '恢复斗气〔8＋20%×能量〕。\n激活水灵，本场持续生效。\n消耗：0斗气。')
+        self.assertEqual(self.by_name['水灵印']['description'], '恢复斗气〔8＋14%×能量＋6%×反应〕。\n激活水灵，本场持续生效。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。')
         self.assertEqual(self.by_name['星弈·虎']['description'], '造成物理伤害〔3＋40%×反应〕 ×3段。\n星位：对方获得1层虚弱；虚弱每个宿主回合末减1层。\n消耗：0斗气。')
         blade = self.by_name['金灵·回锋刃']['description']
         self.assertIn('金灵条件：每次攻击消耗锋锐后返还60%，向上取整，可用于下一段。', blade)

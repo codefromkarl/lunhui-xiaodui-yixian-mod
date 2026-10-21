@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Check canonical content and retained sword gameplay against historical rule fixtures."""
+import argparse
 import json
 from pathlib import Path
 import re
 from card_costs import cost_text, refresh_sword_costs
 from identity_ids import SWORD, card_id, pack_id
+from sword_retirement import RETIRED_KEYS, PACK_SIZES, PACK_ROLES, REPLACEMENT_BY_RETIRED
 
 ROOT = Path(__file__).resolve().parents[1]
 MOD = ROOT / 'mod/yixian.sect'
@@ -30,8 +32,13 @@ SWORD_AREAS = {
 def read(path): return json.loads(path.read_text())
 
 def main():
+    global MOD
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--mod-root', type=Path, default=MOD, help='validate this package instead of the shared build')
+    MOD = parser.parse_args().mod_root.resolve()
     baseline = ROOT / 'tests/fixtures/sword-v032'
     table = read(MOD / 'content/cardtable.json')
+    prices = read(ROOT / 'tests/fixtures/reward-prices.json')
     old_table = cost_text(read(baseline / 'content/cardtable.json'))
     old_abilities = cost_text(read(baseline / 'content/abilities.json'))
     # Historical fixtures check gameplay, not save compatibility. Associate their active
@@ -48,10 +55,28 @@ def main():
     for card in old_table['cards']:
         card['rules']['cost'] = original_costs[card['sourceId']]['cost']
     refresh_sword_costs(old_table, old_abilities)
+    # Explicit three-for-three replacements; all other historical gameplay stays exact.
+    additions = read(ROOT / 'tests/fixtures/sword-replacements.json')
+    added_cards = {c['key']: c for c in additions['cards']}
+    added_abilities = {o['id']: o for o in additions['abilities']}
+    old_table['cards'] = [added_cards[REPLACEMENT_BY_RETIRED[c['key']]] if c['key'] in REPLACEMENT_BY_RETIRED else c for c in old_table['cards']]
+    old_abilities['operations'] = [added_abilities[card_id(REPLACEMENT_BY_RETIRED[o['id'].rsplit('.', 1)[-1]])]
+                                 if o['id'].rsplit('.', 1)[-1] in REPLACEMENT_BY_RETIRED else o for o in old_abilities['operations']]
+    for pack in old_table['packs']:
+        pack['cards'] = [REPLACEMENT_BY_RETIRED.get(k, k) for k in pack['cards']]
+        if pack['key'] in PACK_ROLES:
+            pack['role'] = PACK_ROLES[pack['key']]
+        pack['price'] = prices['packByRank'][pack['rank'] - 1]
     assert {c['key']: c['area'] for c in table['cards'] if 'area' in c} == SWORD_AREAS, 'unauthorized area adaptation'
     for card in old_table['cards']:
         if card['key'] in SWORD_AREAS:
             card['area'] = SWORD_AREAS[card['key']]
+    # Only these exact attribute references may differ from historical gameplay.
+    scaling = read(ROOT / 'tests/fixtures/sword-scaling.json')
+    for card in old_table['cards']:
+        for key, change in scaling['attributeChanges'].get(card['key'], {}).items():
+            assert card['rules'][key] == change['before'], (card['key'], key)
+            card['rules'][key] = change['after']
     for name in ('cards', 'packs'):
         current = [row for row in table[name] if row.get('sect', SWORD) == SWORD]
         # Presentation is intentionally rewritten; every gameplay and provenance field stays exact.
@@ -65,6 +90,24 @@ def main():
         return result
     for name in ('abilities', 'lineages', 'statuses', 'fates', 'fate-statuses'):
         old = (old_abilities if name == 'abilities' else cost_text(read(baseline / 'content' / (name + '.json'))))['operations']
+        # Reward-point reductions are the only new economic exception. Card fees,
+        # passives, rank gates and all other historical gameplay remain exact.
+        if name == 'lineages':
+            for row in old:
+                for index, step in enumerate(row['fields']['steps']):
+                    step['price'] = prices['lineageSteps'][index]
+        elif name == 'fates':
+            for row in old:
+                row['fields']['purchasePrice'] = prices['fatePrice']
+        elif name == 'abilities':
+            for row in old:
+                fields = row['fields']
+                if fields['mode'] == 20:
+                    for rank in fields['ranks']:
+                        for value in rank['operation']['values']:
+                            if value['key'] == 'cardTablePackKey':
+                                pack = next(p for p in old_table['packs'] if p['key'] == value['stringValue'])
+                                fields['purchasePrice'] = pack['price']
         current = read(MOD / 'content' / (name + '.json'))['operations']
         assert len({row['id'] for row in current}) == len(current), f'duplicate {name} identity'
         assert len(current) >= len(old), f'missing sword {name}'
@@ -91,11 +134,13 @@ def main():
     original_assets = read(baseline / 'mod.json')['assets']
     referenced = set()
     for old_icon, icon in asset_references:
-        expected = dict(kind='icon', file=FATE_ICONS[icon]) if icon in FATE_ICONS else original_assets[old_icon]
+        expected = (dict(kind='icon', file=FATE_ICONS[icon]) if icon in FATE_ICONS else
+                    dict(kind='icon', file='icons/cards/' + icon.rsplit('.', 1)[-1] + '.png') if icon.rsplit('.', 1)[-1] in added_cards else original_assets[old_icon])
         assert manifest['assets'][icon] == expected, f'sword asset changed: {icon}'
         referenced.add(old_icon)
     for name, asset in original_assets.items():
-        if name not in referenced: assert manifest['assets'][name] == asset, f'unreferenced asset changed: {name}'
+        if name not in referenced and asset['file'] not in {'icons/cards/' + k + '.png' for k in RETIRED_KEYS}:
+            assert manifest['assets'][name] == asset, f'unreferenced asset changed: {name}'
     for name, file in FATE_ICONS.items():
         assert manifest['assets'].get(name) == dict(kind='icon', file=file), f'original fate icon missing: {name}'
     for asset in manifest['assets'].values(): assert (MOD / asset['file']).is_file(), asset
@@ -103,9 +148,13 @@ def main():
     assert all(p['index'] != 50 for p in table['packs']), 'deleted common-pack identity reused'
     by_key = {c['key']: c for c in table['cards']}
     assert len(by_key) == len(table['cards'])
+    assert not RETIRED_KEYS.intersection(by_key), 'deleted sword card returned'
+    assert not {card_id(k) for k in RETIRED_KEYS}.intersection(all_ids), 'deleted sword ability returned'
+    assert all(asset['file'] not in {'icons/cards/' + k + '.png' for k in RETIRED_KEYS} for asset in manifest['assets'].values()), 'deleted card icon declaration returned'
     memberships = []
     for pack in table['packs']:
-        assert len(pack['cards']) == len(set(pack['cards'])) == 4
+        expected_size = PACK_SIZES.get(pack['key'], 4)
+        assert len(pack['cards']) == len(set(pack['cards'])) == expected_size
         for key in pack['cards']:
             card = by_key[key]; memberships.append(key)
             assert card['rank'] == pack['rank'] and card.get('sect', SWORD) == pack.get('sect', SWORD)
@@ -123,6 +172,6 @@ def main():
             assert values['energyCost'] == cost * 4 and values['apCost'] == 0 and values['energyPool'] == 40, f'card payment declaration mismatch: {card["key"]}'
         fee_line = next(line for line in card['description'].splitlines() if line.startswith('消耗：'))
         assert fee_line == f'消耗：{cost * 4}斗气。', f'card displayed cost mismatch: {card["key"]}'
-    print(f'PASS contracts: namespaced identities; sword rules retained with four explicit area adaptations and approved fee/copy correction; original fate icons and other assets retained; {len(table["sects"])} schools, {len(by_key)} cards, {len(table["packs"])} complete packs; version {manifest["version"]}')
+    print(f'PASS contracts: namespaced identities; 45 retained sword rules, three explicit non-mad replacements and four explicit area adaptations and explicit sword attribute references, approved card-fee/copy plus reward-price correction; original fate icons and other assets retained; {len(table["sects"])} schools, {len(by_key)} cards, {len(table["packs"])} complete packs; version {manifest["version"]}')
 
 if __name__ == '__main__': main()

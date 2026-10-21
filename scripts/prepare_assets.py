@@ -21,7 +21,7 @@ def source_rows():
     for card in cards:
         if not card.get('sourceId'):continue
         sid=str(card['sourceId']);outputs=[{'path':'mod/yixian.sect/icons/cards/'+card['key']+'.png','format':'png'}]
-        if sid.startswith(('400','700')):outputs.append({'path':'data/sources/original-correction/card-images/'+sid+'.webp','format':'raw'})
+        if sid.startswith(('100','400','700')):outputs.append({'path':'data/sources/original-correction/card-images/'+sid+'.webp','format':'raw'})
         if sid.startswith('700'):outputs.append({'path':'data/sources/five-elements/images/'+sid+'.webp','format':'raw'})
         rows.append({'name':card['name'],'sourceId':sid,'url':base+'/assets/cards/'+sid+'_zh.webp','page':card.get('sourceUrl',base+'/zh/cards/'+sid+'.html'),'outputs':outputs})
     for number,name in [(16,'剑韵修炼'),(69,'云之道'),(57,'剑阵守护'),(14,'云海连绵')]:

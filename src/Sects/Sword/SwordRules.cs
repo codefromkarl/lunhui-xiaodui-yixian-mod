@@ -36,7 +36,7 @@ namespace YixianSect
             foreach (var p in packs)
             {
                 var keys = ((JArray)p["cards"]).Values<string>().ToList();
-                if (keys.Count != 4 || keys.Distinct().Count() != keys.Count || Int(p,"rank") < 1 || Int(p,"rank") > 5 || Int(p,"price") < 0)
+                if ((keys.Count != 3 && keys.Count != 4) || keys.Distinct().Count() != keys.Count || Int(p,"rank") < 1 || Int(p,"rank") > 5 || Int(p,"price") < 0)
                     throw new ArgumentException("卡组声明无效：" + p["key"]);
                 foreach (var key in keys)
                 {
@@ -113,6 +113,7 @@ namespace YixianSect
 
         private static void SyncView(Turn t)
         {
+            SectDecisionHints.Publish(t.P,t.Actor.RuntimeId,Lineage,t.Get);
             foreach(var name in new[]{"intent","cloud","power"})
             {
                 var id=new StableId("yixian.sect.status."+name);
@@ -162,7 +163,7 @@ namespace YixianSect
             var r=(JObject)card["rules"]; var name=Text(card,"name");
             int chain=t.Get("cloud"), intent=t.Get("intent"), power=t.Get("power");
             bool cloud=HasTag(card,"cloud"), linked=FateRules.Linked(t.Actor,chain);
-            bool mad=HasTag(card,"mad"), formation=HasTag(card,"formation");
+            bool formation=HasTag(card,"formation");
             var stats=t.Actor.Attributes.GetValueOrDefault();
             // Snapshot is after the engine charged this action's cost.
             int qiGain=Value(r,"qi",stats,4), remaining=t.PlannedEnergy, max=t.Actor.EnergyPools.GetMaximum(EnergyPoolKind.Fighting);
@@ -178,11 +179,9 @@ namespace YixianSect
             int baseDamage=Value(r,"damage",stats) + (linked?Value(r,"cloudDamage",stats):0) + Int(r,"damagePerQi")*qi*3;
             if(Int(r,"damagePerShield")>0) baseDamage+=Int(r,"damagePerShield")*((t.PlannedShield+shield)/3)*3;
             if(Int(r,"damagePerShieldDivisor")>0) baseDamage+=t.PlannedShield/(Int(r,"damagePerShieldDivisor")*3)*3;
-            if(mad) baseDamage+=Int(r,"madDamage")*t.Get("mad")*3;
             if(Int(r,"qiThreshold")>0) baseDamage=t.PlannedEnergy>Int(r,"qiThreshold")*4?Value(r,"conditionalDamage",stats):0;
             if(Int(r,"spendAllQiDamage")>0) {baseDamage+=qi*Int(r,"spendAllQiDamage")*3;t.Pay(remaining+gained);}
             int hits=Int(r,"hits",1);
-            if(Bool(r,"madHits")) hits=Math.Min(8,1+t.Get("mad"));
             if(Bool(r,"extraQiHit") && remaining>=4) {t.Pay(4);hits++;}
             bool attacks=baseDamage>0;
             bool sword=card["sourceId"]!=null;
@@ -220,7 +219,7 @@ namespace YixianSect
             if(Int(r,"intentAmplify")>0) t.Add("intent",(t.Get("intent")*Int(r,"intentAmplify")+99)/100);
             if(Bool(r,"intentToQi")) {t.Qi(t.Get("intent")*4);t.Set("intent",0);}
             if(Int(r,"pierceNext")>0 || linked&&Int(r,"cloudPierce")>0) t.Set("pierce",1);
-            t.Add("power",Int(r,"power")+(linked?Int(r,"cloudPower"):0)+(mad?Math.Min(t.Get("mad"),Int(r,"madPower")):0));
+            t.Add("power",Int(r,"power")+(linked?Int(r,"cloudPower"):0));
             if(t.Get("cloudHeal")>0 && cloud) t.Heal(t.Get("cloudHealAmount"));
             if(t.Get("energyGuard")>0 && !repeated)
             {
@@ -245,7 +244,6 @@ namespace YixianSect
                 }
                 else if(formation) t.Set("formation",CardPrefix+Text(card,"key"));
                 t.Set("cloud",cloud?chain+Int(r,"cloudCount",1):(FateRules.Has(t.Actor,FateRules.CloudSea)?chain:0));
-                if(mad)t.Add("mad",1);
             }
         }
 
@@ -275,16 +273,15 @@ namespace YixianSect
                                 p.Damage(u.RuntimeId,id,splash,DamageType.Physical);
                         break;
                     case "returnIntent":t.Add("intent",t.Get("spentIntent"));break;
-                    case "intent3":t.Add("intent",3);break;
+                    case "intent3":t.Add("intent",Int(r,"hitIntent",3));break;
                     case "shieldDamage":t.Shield(health);break;
-                    case "nextShield":t.Set("nextShield",21);break;
+                    case "nextShield":t.Add("nextShield",r["nextShield"] == null ? 21 : Value(r,"nextShield",u.Attributes.GetValueOrDefault()));break;
                     case "drainQi":
                         var target=Find(c,hits[0].Target);
                         if(target!=null){int pay=Math.Min(4,target.EnergyPools.Primary.Current);if(pay>0)p.EnergyPay(target.RuntimeId,pay);}break;
                     case "reAct":t.Again();break;
                     case "qiPerHit":t.Qi(hits.Count*4);break;
                 }
-                if(HasTag(card,"mad") && t.Get("madHeal")>0)t.Heal(health*3/10);
                 SyncView(t);
             }
         }

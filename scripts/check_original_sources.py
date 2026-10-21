@@ -4,6 +4,7 @@ import json
 import hashlib
 from pathlib import Path
 from PIL import Image
+from sword_retirement import RETIRED_SOURCES
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ROOT / 'data/sources/original-correction'
@@ -24,7 +25,7 @@ def check_face_costs(cards, costs, prefix, count=48):
     return selected
 
 def check_sword_costs(cards, costs):
-    return check_face_costs(cards, costs, '100')
+    return check_face_costs(cards, {sid: row for sid, row in costs.items() if sid not in RETIRED_SOURCES}, '100', 48)
 
 def main(only=None):
     costs = read(SOURCES / 'original-costs.json')['cards']

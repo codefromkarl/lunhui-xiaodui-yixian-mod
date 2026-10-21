@@ -1,0 +1,53 @@
+{
+  "reason": "用户明确要求删除狂剑支线；历史来源与费用图证据保留，活动卡池不再声明这些身份。",
+  "cards": [
+    {
+      "key": "yixian_sword_22",
+      "sourceId": "1000022",
+      "name": "狂剑·一式"
+    },
+    {
+      "key": "yixian_sword_102",
+      "sourceId": "1000102",
+      "name": "狂剑·赤霄"
+    },
+    {
+      "key": "yixian_sword_35",
+      "sourceId": "1000035",
+      "name": "狂剑·二式"
+    }
+  ],
+  "packSizes": {
+    "yixian_sword_intent2": 4,
+    "yixian_sword_intent3": 4,
+    "yixian_sword_intent4": 4
+  },
+  "packRoles": {
+    "yixian_sword_intent2": "形意击伤蓄剑意，凝意回气；灵犀剑阵与御灵心法维护攻守循环。",
+    "yixian_sword_intent3": "云舞铺垫，三峰兑现剑意；反身剑准备下回合护盾，镜花将护盾转为伤害。",
+    "yixian_sword_intent4": "聚灵续航，灵感积累剑意，流云乱剑多段兑现，水月剑阵补盾。"
+  },
+  "replacements": [
+    {
+      "retiredKey": "yixian_sword_22",
+      "key": "yixian_sword_11",
+      "sourceId": "1000011",
+      "packKey": "yixian_sword_intent2",
+      "slot": 1
+    },
+    {
+      "retiredKey": "yixian_sword_102",
+      "key": "yixian_sword_8",
+      "sourceId": "1000008",
+      "packKey": "yixian_sword_intent3",
+      "slot": 3
+    },
+    {
+      "retiredKey": "yixian_sword_35",
+      "key": "yixian_sword_37",
+      "sourceId": "1000037",
+      "packKey": "yixian_sword_intent4",
+      "slot": 1
+    }
+  ]
+}

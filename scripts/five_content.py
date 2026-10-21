@@ -4,7 +4,7 @@ from card_costs import printed_cost
 ELEMENTS = {1: '金', 2: '水', 3: '木', 4: '火', 5: '土'}
 
 
-def describe_effects(card):
+def describe_effects(card, formula):
     r = card['rules']; lines = []
     condition = ELEMENTS.get(card.get('element'), '元素') + ('灵条件：' if card.get('element') else '条件：')
     if r.get('activate'): lines.append('激活' + ELEMENTS[r['activate']] + '灵，本场持续生效。')
@@ -13,8 +13,7 @@ def describe_effects(card):
         conditional = 'conditional' + key.capitalize()
         if r.get(conditional): lines.append(condition + f'获得{r[conditional]}层{title}。')
     if r.get('conditionalHeal'):
-        base = str(r['conditionalHeal'])
-        if r.get('conditionalHealBp'): base += f'＋{r["conditionalHealBp"] / 100:g}%×体质'
+        base = formula(r, 'conditionalHeal')
         if r.get('healPerAttack'): base += f'＋{r["healPerAttack"] * 3}×加攻'
         lines.append(condition + f'恢复〔{base}〕生命。')
     if r.get('freeWhenElement'): lines.append(condition + '本牌不消耗斗气。')
@@ -68,9 +67,11 @@ def describe_card(card, formula):
     for key, label in [('damage', '造成物理伤害'), ('shield', '获得护盾'), ('heal', '恢复生命'), ('qi', '恢复斗气')]:
         if key == 'heal' and r.get('maxHealth'):
             lines.append(f'自身本场生命上限+{r["maxHealth"] * 3}。')
-        if r.get(key) or r.get(key + 'Bp'):
+        if r.get(key) or r.get(key + 'Bp') or r.get(key + 'Scaling'):
             lines.append(f'{label}〔{formula(r, key)}〕' + (f' ×{r["hits"]}段。' if key == 'damage' and r.get('hits', 1) > 1 else '。'))
-    lines.extend(describe_effects(card))
-    if r.get('specialDamageBp'): lines.append(f'每次条件追加攻击另加{r["specialDamageBp"] / 100:g}%×反应。')
+    lines.extend(describe_effects(card, formula))
+    if r.get('specialDamageScaling'): lines.append(f'每次条件追加攻击另加〔{formula(r, "specialDamage")}〕。')
+    if any(k.endswith('Scaling') for k in r):
+        lines.append('属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。')
     lines.append(f'消耗：{printed_cost(r)}斗气。')
     return '\n'.join(lines)

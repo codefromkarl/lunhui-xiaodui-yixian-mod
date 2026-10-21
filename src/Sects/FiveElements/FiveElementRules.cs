@@ -61,6 +61,7 @@ namespace YixianSect
         }
         private static void View(BattleTurn t)
         {
+            SectDecisionHints.Publish(t.Plan,t.Actor.RuntimeId,Lineage,t.Get);
             t.View("last", "nextActivate", "sharp", "attack", "waterForce", "metalArray", "waterArray", "woodArray", "fireArray", "earthArray", "activationArray", "shieldReturn", "agility");
             t.Plan.ClearStatus(t.Actor.RuntimeId, new StableId(StatusPrefix + "elements"));
             for (int i = 0; i < 5; i++)
@@ -96,6 +97,7 @@ namespace YixianSect
             foreach (var actor in context.Units.Where(u => !u.IsDowned && SectRegistry.Rank(u, Lineage) > 0))
             {
                 var t = new BattleTurn(context, plan, Lineage, actor);
+                FiveCultivation.Lock(t);
                 foreach (var key in new[] { "dive", "iron" }) plan.ClearStatus(actor.RuntimeId, new StableId(StatusPrefix + key));
                 t.Set("deckElements", deckMasks[actor.RuntimeId]);
                 FiveFateRules.Start(t); View(t);

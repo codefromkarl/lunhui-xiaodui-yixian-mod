@@ -5,7 +5,17 @@
     "code": "yixian_five",
     "statePrefix": "five",
     "summary": "固定八张卡包；突破解锁两张，战斗中从本局牌库免费组牌。灵印激活、同系衔接与五行相生，锋锐、加攻、水势与五灵阵各有分工。",
-    "originalRestoration": true
+    "originalRestoration": true,
+    "cultivation": {
+      "fallbackBp": 7000,
+      "growth": [
+        3,
+        5,
+        8,
+        12,
+        16
+      ]
+    }
   },
   "cards": [
     {
@@ -25,17 +35,29 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row1-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 18,
         "activate": 1,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 1,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 7000
+          },
+          {
+            "attribute": 40,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "炼气"
+      "realm": "炼气",
+      "scalingAttributes": [
+        20,
+        40
+      ]
     },
     {
       "key": "yixian_five_water",
@@ -54,20 +76,41 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row1-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 4,
         "heal": 12,
         "activate": 3,
-        "healAttr": 30,
-        "healBp": 5000,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 3,
-        "cost": 0
+        "cost": 0,
+        "healScaling": [
+          {
+            "attribute": 20,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ],
+        "qiScaling": [
+          {
+            "attribute": 20,
+            "bp": 1400
+          },
+          {
+            "attribute": 40,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "炼气"
+      "realm": "炼气",
+      "scalingAttributes": [
+        20,
+        30,
+        40
+      ]
     },
     {
       "key": "yixian_five_wood",
@@ -86,17 +129,29 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row1-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "activate": 2,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 6,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 40,
+            "bp": 1400
+          },
+          {
+            "attribute": 20,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "炼气"
+      "realm": "炼气",
+      "scalingAttributes": [
+        40,
+        20
+      ]
     },
     {
       "key": "yixian_five_fire",
@@ -115,18 +170,30 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row1-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 4,
         "lifeLoss": 3,
         "activate": 4,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 9,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 40,
+            "bp": 1400
+          },
+          {
+            "attribute": 20,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "炼气"
+      "realm": "炼气",
+      "scalingAttributes": [
+        40,
+        20
+      ]
     },
     {
       "key": "yixian_five_earth",
@@ -145,20 +212,41 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row2-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 9,
         "shield": 12,
         "activate": 5,
-        "damageAttr": 40,
-        "damageBp": 10000,
-        "shieldAttr": 40,
-        "shieldBp": 7000,
         "originalRule": 11,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 30,
+            "bp": 7000
+          },
+          {
+            "attribute": 20,
+            "bp": 3000
+          }
+        ],
+        "shieldScaling": [
+          {
+            "attribute": 30,
+            "bp": 4900
+          },
+          {
+            "attribute": 40,
+            "bp": 2100
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "炼气"
+      "realm": "炼气",
+      "scalingAttributes": [
+        30,
+        20,
+        40
+      ]
     },
     {
       "key": "yixian_five_qi",
@@ -177,17 +265,29 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row2-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 18,
         "conditionalSharp": 2,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 2,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 7000
+          },
+          {
+            "attribute": 40,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "炼气"
+      "realm": "炼气",
+      "scalingAttributes": [
+        20,
+        40
+      ]
     },
     {
       "key": "yixian_five_link",
@@ -206,20 +306,41 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row2-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 9,
         "hits": 2,
         "conditionalHeal": 15,
-        "damageAttr": 20,
-        "damageBp": 4000,
-        "conditionalHealAttr": 30,
-        "conditionalHealBp": 5000,
         "originalRule": 4,
-        "cost": 1
+        "cost": 1,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 2800
+          },
+          {
+            "attribute": 40,
+            "bp": 1200
+          }
+        ],
+        "conditionalHealScaling": [
+          {
+            "attribute": 20,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "炼气"
+      "realm": "炼气",
+      "scalingAttributes": [
+        20,
+        30,
+        40
+      ]
     },
     {
       "key": "yixian_five_return",
@@ -238,17 +359,29 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row2-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 30,
         "conditionalWater": 1,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 7,
-        "cost": 2
+        "cost": 2,
+        "damageScaling": [
+          {
+            "attribute": 40,
+            "bp": 7000
+          },
+          {
+            "attribute": 20,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "炼气"
+      "realm": "炼气",
+      "scalingAttributes": [
+        40,
+        20
+      ]
     },
     {
       "key": "yixian_five_metal_edge",
@@ -267,17 +400,29 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row3-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 无视防御适配为下一次本派攻击的首段真实伤害；同时跳过原生物理防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 21,
         "conditionalPierceNext": true,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 15,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 7000
+          },
+          {
+            "attribute": 40,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "筑基"
+      "realm": "筑基",
+      "scalingAttributes": [
+        20,
+        40
+      ]
     },
     {
       "key": "yixian_five_metal_pierce",
@@ -296,7 +441,7 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row3-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "sharp": 4,
         "array": 1,
@@ -305,7 +450,8 @@
         "cost": 0
       },
       "targetEnemy": false,
-      "realm": "筑基"
+      "realm": "筑基",
+      "scalingAttributes": []
     },
     {
       "key": "yixian_five_fire_ember",
@@ -324,18 +470,30 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row3-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 9,
         "hits": 2,
         "conditionalAttack": 1,
-        "damageAttr": 20,
-        "damageBp": 4000,
         "originalRule": 17,
-        "cost": 1
+        "cost": 1,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 2800
+          },
+          {
+            "attribute": 40,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "筑基"
+      "realm": "筑基",
+      "scalingAttributes": [
+        20,
+        40
+      ]
     },
     {
       "key": "yixian_five_water_spring",
@@ -354,20 +512,41 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row3-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "conditionalHeal": 9,
         "healPerAttack": 1,
-        "conditionalHealAttr": 30,
-        "conditionalHealBp": 5000,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 18,
-        "cost": 0
+        "cost": 0,
+        "conditionalHealScaling": [
+          {
+            "attribute": 20,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ],
+        "qiScaling": [
+          {
+            "attribute": 20,
+            "bp": 1400
+          },
+          {
+            "attribute": 40,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "筑基"
+      "realm": "筑基",
+      "scalingAttributes": [
+        20,
+        30,
+        40
+      ]
     },
     {
       "key": "yixian_five_wood_root",
@@ -386,7 +565,7 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row1-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "water": 2,
         "cost": 2,
@@ -394,7 +573,8 @@
         "originalRule": 19
       },
       "targetEnemy": false,
-      "realm": "筑基"
+      "realm": "筑基",
+      "scalingAttributes": []
     },
     {
       "key": "yixian_five_earth_ridge",
@@ -413,17 +593,29 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row1-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "conditionalLifeLoss": 3,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 21,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 40,
+            "bp": 1400
+          },
+          {
+            "attribute": 20,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "筑基"
+      "realm": "筑基",
+      "scalingAttributes": [
+        40,
+        20
+      ]
     },
     {
       "key": "yixian_five_cycle_breath",
@@ -442,18 +634,30 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row1-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "shield": 12,
         "array": 5,
         "arrayGain": 2,
-        "shieldAttr": 40,
-        "shieldBp": 7000,
         "originalRule": 23,
-        "cost": 0
+        "cost": 0,
+        "shieldScaling": [
+          {
+            "attribute": 30,
+            "bp": 4900
+          },
+          {
+            "attribute": 40,
+            "bp": 2100
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "筑基"
+      "realm": "筑基",
+      "scalingAttributes": [
+        30,
+        40
+      ]
     },
     {
       "key": "yixian_five_fire_burst",
@@ -472,7 +676,7 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row1-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "directDamage": 18,
         "activationArray": 2,
@@ -480,7 +684,8 @@
         "cost": 0
       },
       "targetEnemy": true,
-      "realm": "筑基"
+      "realm": "筑基",
+      "scalingAttributes": []
     },
     {
       "key": "yixian_five_metal_ring",
@@ -499,18 +704,30 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row2-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "shield": 12,
         "sharp": 4,
         "conditionalSharpPerShield": 4,
-        "shieldAttr": 40,
-        "shieldBp": 7000,
         "originalRule": 25,
-        "cost": 0
+        "cost": 0,
+        "shieldScaling": [
+          {
+            "attribute": 20,
+            "bp": 4900
+          },
+          {
+            "attribute": 30,
+            "bp": 2100
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "金丹"
+      "realm": "金丹",
+      "scalingAttributes": [
+        20,
+        30
+      ]
     },
     {
       "key": "yixian_five_metal_break",
@@ -529,17 +746,29 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row2-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 18,
         "sharpPerHealth": 2,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 26,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 7000
+          },
+          {
+            "attribute": 40,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "金丹"
+      "realm": "金丹",
+      "scalingAttributes": [
+        20,
+        40
+      ]
     },
     {
       "key": "yixian_five_fire_furnace",
@@ -558,19 +787,31 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row2-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 碎防适配为每次真实击中后追加扣减等量护盾；只扣剩余护盾，不把差额转为额外生命伤害，不预扣未命中的护盾。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 3,
         "hits": 2,
         "breakShield": true,
         "conditionalAgainIfHealed": true,
-        "damageAttr": 20,
-        "damageBp": 4000,
         "originalRule": 28,
-        "cost": 1
+        "cost": 1,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 2800
+          },
+          {
+            "attribute": 40,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "金丹"
+      "realm": "金丹",
+      "scalingAttributes": [
+        20,
+        40
+      ]
     },
     {
       "key": "yixian_five_water_mirror",
@@ -589,18 +830,30 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row2-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "array": 2,
         "arrayGain": 1,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 29,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 40,
+            "bp": 1400
+          },
+          {
+            "attribute": 20,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "金丹"
+      "realm": "金丹",
+      "scalingAttributes": [
+        40,
+        20
+      ]
     },
     {
       "key": "yixian_five_wood_bloom",
@@ -619,7 +872,7 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row3-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "lifeLoss": 2,
         "array": 4,
@@ -628,7 +881,8 @@
         "cost": 0
       },
       "targetEnemy": true,
-      "realm": "金丹"
+      "realm": "金丹",
+      "scalingAttributes": []
     },
     {
       "key": "yixian_five_earth_vessel",
@@ -647,7 +901,7 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row3-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "attack": 1,
         "conditionalLifeLoss": 7,
@@ -656,7 +910,8 @@
         "cost": 1
       },
       "targetEnemy": true,
-      "realm": "金丹"
+      "realm": "金丹",
+      "scalingAttributes": []
     },
     {
       "key": "yixian_five_fire_chain",
@@ -675,7 +930,7 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row3-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "maxHealth": 10,
         "array": 3,
@@ -684,7 +939,8 @@
         "cost": 0
       },
       "targetEnemy": false,
-      "realm": "金丹"
+      "realm": "金丹",
+      "scalingAttributes": []
     },
     {
       "key": "yixian_five_return_seed",
@@ -703,17 +959,29 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row3-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "conditionalNextWaterPerHealth": 5,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 59,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 40,
+            "bp": 1400
+          },
+          {
+            "attribute": 20,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "金丹"
+      "realm": "金丹",
+      "scalingAttributes": [
+        40,
+        20
+      ]
     },
     {
       "key": "yixian_five_water_sea",
@@ -732,19 +1000,31 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row1-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 SDK伤害查询不区分攻击/状态伤害；40%减攻适配为40%减非真实物理/法术伤害，持续本回合及下一回合。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "maxHealth": 2,
         "heal": 6,
         "conditionalReductionBp": 4000,
         "duration": 2,
-        "healAttr": 30,
-        "healBp": 5000,
         "originalRule": 20,
-        "cost": 1
+        "cost": 1,
+        "healScaling": [
+          {
+            "attribute": 40,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "元婴"
+      "realm": "元婴",
+      "scalingAttributes": [
+        40,
+        30
+      ]
     },
     {
       "key": "yixian_five_wood_forest",
@@ -763,18 +1043,30 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row1-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 12,
         "hits": 3,
         "healPerHealth": 3,
-        "damageAttr": 20,
-        "damageBp": 4000,
         "originalRule": 27,
-        "cost": 1
+        "cost": 1,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 2800
+          },
+          {
+            "attribute": 40,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "元婴"
+      "realm": "元婴",
+      "scalingAttributes": [
+        20,
+        40
+      ]
     },
     {
       "key": "yixian_five_wood_spirit",
@@ -793,21 +1085,42 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row1-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "maxHealth": 2,
         "heal": 6,
         "conditionalWaterPerQi": 2,
-        "healAttr": 30,
-        "healBp": 5000,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 30,
-        "cost": 0
+        "cost": 0,
+        "healScaling": [
+          {
+            "attribute": 40,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ],
+        "qiScaling": [
+          {
+            "attribute": 40,
+            "bp": 1400
+          },
+          {
+            "attribute": 20,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "元婴"
+      "realm": "元婴",
+      "scalingAttributes": [
+        40,
+        20,
+        30
+      ]
     },
     {
       "key": "yixian_five_metal_cycle",
@@ -826,17 +1139,29 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row1-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 盾减少统计以真实击中事件为准，覆盖攻击消耗的护盾；支付/自然衰减未进入击中事件，不计入此适配。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 27,
         "damagePerLostShield": 6,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 33,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 30,
+            "bp": 7000
+          },
+          {
+            "attribute": 20,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "元婴"
+      "realm": "元婴",
+      "scalingAttributes": [
+        30,
+        20
+      ]
     },
     {
       "key": "yixian_five_metal_storm",
@@ -855,18 +1180,30 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row2-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 12,
         "noSharp": true,
         "conditionalAgain": true,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 34,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 7000
+          },
+          {
+            "attribute": 40,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "元婴"
+      "realm": "元婴",
+      "scalingAttributes": [
+        20,
+        40
+      ]
     },
     {
       "key": "yixian_five_metal_sunder",
@@ -885,7 +1222,7 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row2-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 固定减伤原5×3=15，最低为1；持续本回合及下一回合。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "conditionalReductionFlat": 5,
         "duration": 2,
@@ -893,7 +1230,8 @@
         "cost": 0
       },
       "targetEnemy": false,
-      "realm": "元婴"
+      "realm": "元婴",
+      "scalingAttributes": []
     },
     {
       "key": "yixian_five_fire_sun",
@@ -912,7 +1250,7 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row2-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "enemyMaxLoss": 4,
         "conditionalAgain": true,
@@ -920,7 +1258,8 @@
         "cost": 0
       },
       "targetEnemy": true,
-      "realm": "元婴"
+      "realm": "元婴",
+      "scalingAttributes": []
     },
     {
       "key": "yixian_five_fire_inferno",
@@ -939,19 +1278,31 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row2-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 12,
         "hits": 2,
         "maxLossPerHealth": 1,
         "maxLossMultiplier": 2,
-        "damageAttr": 20,
-        "damageBp": 4000,
         "originalRule": 39,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 40,
+            "bp": 2800
+          },
+          {
+            "attribute": 20,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "元婴"
+      "realm": "元婴",
+      "scalingAttributes": [
+        40,
+        20
+      ]
     },
     {
       "key": "yixian_five_fire_cycle",
@@ -970,17 +1321,29 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row3-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 盾减少统计以真实击中事件为准，覆盖攻击消耗的护盾；支付/自然衰减未进入击中事件，不计入此适配。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "shield": 36,
         "shieldPerLostShield": 6,
-        "shieldAttr": 40,
-        "shieldBp": 7000,
         "originalRule": 40,
-        "cost": 0
+        "cost": 0,
+        "shieldScaling": [
+          {
+            "attribute": 30,
+            "bp": 4900
+          },
+          {
+            "attribute": 40,
+            "bp": 2100
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "元婴"
+      "realm": "元婴",
+      "scalingAttributes": [
+        30,
+        40
+      ]
     },
     {
       "key": "yixian_five_earth_mountain",
@@ -999,20 +1362,41 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row3-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "heal": 6,
         "conditionalAttackPerQi": 3,
-        "healAttr": 30,
-        "healBp": 5000,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 61,
-        "cost": 0
+        "cost": 0,
+        "healScaling": [
+          {
+            "attribute": 20,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ],
+        "qiScaling": [
+          {
+            "attribute": 20,
+            "bp": 1400
+          },
+          {
+            "attribute": 40,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "元婴"
+      "realm": "元婴",
+      "scalingAttributes": [
+        20,
+        30,
+        40
+      ]
     },
     {
       "key": "yixian_five_earth_cycle",
@@ -1031,18 +1415,30 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row3-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 无原作八格卡组：按开战启用卡包中不同五行统计；由公共桥注入deckElements位掩码。 碎防适配为每次真实击中后追加扣减等量护盾；只扣剩余护盾，不把差额转为额外生命伤害，不预扣未命中的护盾。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 12,
         "breakShield": true,
         "damagePerDeckElement": 4,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 66,
-        "cost": 1
+        "cost": 1,
+        "damageScaling": [
+          {
+            "attribute": 40,
+            "bp": 7000
+          },
+          {
+            "attribute": 20,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "元婴"
+      "realm": "元婴",
+      "scalingAttributes": [
+        40,
+        20
+      ]
     },
     {
       "key": "yixian_five_return_circle",
@@ -1061,17 +1457,29 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row3-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "shield": 12,
         "conditionalAgain": true,
-        "shieldAttr": 40,
-        "shieldBp": 7000,
         "originalRule": 96,
-        "cost": 0
+        "cost": 0,
+        "shieldScaling": [
+          {
+            "attribute": 30,
+            "bp": 4900
+          },
+          {
+            "attribute": 40,
+            "bp": 2100
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "元婴"
+      "realm": "元婴",
+      "scalingAttributes": [
+        30,
+        40
+      ]
     },
     {
       "key": "yixian_five_metal_divine",
@@ -1090,17 +1498,29 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row1-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 21,
         "doubleHealth": true,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 42,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 7000
+          },
+          {
+            "attribute": 40,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "化神"
+      "realm": "化神",
+      "scalingAttributes": [
+        20,
+        40
+      ]
     },
     {
       "key": "yixian_five_water_divine",
@@ -1119,18 +1539,30 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row1-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "attack": 1,
         "heal": 9,
         "conditionalAgain": true,
-        "healAttr": 30,
-        "healBp": 5000,
         "originalRule": 43,
-        "cost": 1
+        "cost": 1,
+        "healScaling": [
+          {
+            "attribute": 20,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "化神"
+      "realm": "化神",
+      "scalingAttributes": [
+        20,
+        30
+      ]
     },
     {
       "key": "yixian_five_water_origin",
@@ -1149,17 +1581,29 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row1-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 盾减少统计以真实击中事件为准，覆盖攻击消耗的护盾；支付/自然衰减未进入击中事件，不计入此适配。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "shield": 36,
         "conditionalShieldReturn": 2,
-        "shieldAttr": 40,
-        "shieldBp": 7000,
         "originalRule": 53,
-        "cost": 0
+        "cost": 0,
+        "shieldScaling": [
+          {
+            "attribute": 30,
+            "bp": 4900
+          },
+          {
+            "attribute": 40,
+            "bp": 2100
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "化神"
+      "realm": "化神",
+      "scalingAttributes": [
+        30,
+        40
+      ]
     },
     {
       "key": "yixian_five_metal_heaven",
@@ -1178,18 +1622,30 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row1-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 18,
         "hits": 3,
         "capAtHealthMinus": 2,
-        "damageAttr": 20,
-        "damageBp": 4000,
         "originalRule": 56,
-        "cost": 2
+        "cost": 2,
+        "damageScaling": [
+          {
+            "attribute": 40,
+            "bp": 2800
+          },
+          {
+            "attribute": 20,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "化神"
+      "realm": "化神",
+      "scalingAttributes": [
+        40,
+        20
+      ]
     },
     {
       "key": "yixian_five_wood_divine",
@@ -1208,7 +1664,7 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row2-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "water": 3,
         "conditionalMaxHealth": 6,
@@ -1217,7 +1673,8 @@
         "cost": 2
       },
       "targetEnemy": false,
-      "realm": "化神"
+      "realm": "化神",
+      "scalingAttributes": []
     },
     {
       "key": "yixian_five_wood_origin",
@@ -1236,22 +1693,42 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row2-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 春风养护按每次实际击中触发，未命中/闪避时不触发养护。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "damage": 6,
         "hits": 2,
         "conditionalSpring": 2,
         "duration": 4,
-        "damageAttr": 20,
-        "damageBp": 4000,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 97,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 2800
+          },
+          {
+            "attribute": 40,
+            "bp": 1200
+          }
+        ],
+        "qiScaling": [
+          {
+            "attribute": 20,
+            "bp": 1400
+          },
+          {
+            "attribute": 40,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "化神"
+      "realm": "化神",
+      "scalingAttributes": [
+        20,
+        40
+      ]
     },
     {
       "key": "yixian_five_cycle_divine",
@@ -1270,18 +1747,30 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row2-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 18,
         "hits": 2,
         "sharpReturnBp": 6000,
-        "damageAttr": 20,
-        "damageBp": 4000,
         "originalRule": 99,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 2800
+          },
+          {
+            "attribute": 40,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "化神"
+      "realm": "化神",
+      "scalingAttributes": [
+        20,
+        40
+      ]
     },
     {
       "key": "yixian_five_earth_divine",
@@ -1300,20 +1789,32 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row2-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 保留每10身法再动的累计机制；每累计10身法额外摸1张，余数留存本场。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "water": 1,
         "maxHealth": 4,
         "heal": 12,
         "conditionalAgilityPerResource": 2,
         "agilityCap": 12,
-        "healAttr": 30,
-        "healBp": 5000,
         "originalRule": 100,
-        "cost": 0
+        "cost": 0,
+        "healScaling": [
+          {
+            "attribute": 40,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "化神"
+      "realm": "化神",
+      "scalingAttributes": [
+        40,
+        30
+      ]
     },
     {
       "key": "yixian_five_fire_divine",
@@ -1332,19 +1833,31 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row3-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 12,
         "conditionalDrainPlays": 3,
         "drainBase": 1,
         "drainPerAttack": 1,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 112,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 20,
+            "bp": 1400
+          },
+          {
+            "attribute": 40,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "化神"
+      "realm": "化神",
+      "scalingAttributes": [
+        20,
+        40
+      ]
     },
     {
       "key": "yixian_five_fire_heaven",
@@ -1363,7 +1876,7 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row3-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "lifeLoss": 9,
         "conditionalLifeLossPerAttack": 2,
@@ -1373,7 +1886,8 @@
         "cost": 0
       },
       "targetEnemy": true,
-      "realm": "化神"
+      "realm": "化神",
+      "scalingAttributes": []
     },
     {
       "key": "yixian_five_earth_origin",
@@ -1392,7 +1906,7 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row3-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "water": 1,
         "maxHealth": 10,
@@ -1401,15 +1915,36 @@
         "waterDamagePerWater": 1,
         "woodAttack": 1,
         "woodDamagePerQi": 1,
-        "healAttr": 30,
-        "healBp": 5000,
         "originalRule": 115,
         "cost": 1,
-        "specialDamageAttr": 20,
-        "specialDamageBp": 4000
+        "healScaling": [
+          {
+            "attribute": 40,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ],
+        "specialDamageScaling": [
+          {
+            "attribute": 40,
+            "bp": 2800
+          },
+          {
+            "attribute": 20,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
-      "realm": "化神"
+      "realm": "化神",
+      "scalingAttributes": [
+        40,
+        20,
+        30
+      ]
     },
     {
       "key": "yixian_five_return_origin",
@@ -1428,18 +1963,30 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row3-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 4,
         "sharp": 2,
         "conditionalAgainEither": 3,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 116,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 20,
+            "bp": 1400
+          },
+          {
+            "attribute": 40,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
-      "realm": "化神"
+      "realm": "化神",
+      "scalingAttributes": [
+        20,
+        40
+      ]
     }
   ],
   "packs": [
@@ -1476,7 +2023,7 @@
       "name": "筑基·金木炼形",
       "rank": 2,
       "index": 80,
-      "price": 40,
+      "price": 0,
       "role": "收录4张筑基原作五行道盟牌；卡名、境界和核心效果逐牌对照来源。",
       "cards": [
         "yixian_five_metal_edge",
@@ -1490,7 +2037,7 @@
       "name": "筑基·水火镇印",
       "rank": 2,
       "index": 81,
-      "price": 45,
+      "price": 0,
       "role": "收录4张筑基原作五行道盟牌；卡名、境界和核心效果逐牌对照来源。",
       "cards": [
         "yixian_five_water_spring",
@@ -1504,7 +2051,7 @@
       "name": "金丹·锋锐流转",
       "rank": 3,
       "index": 82,
-      "price": 70,
+      "price": 0,
       "role": "收录4张金丹原作五行道盟牌；卡名、境界和核心效果逐牌对照来源。",
       "cards": [
         "yixian_five_metal_ring",
@@ -1518,7 +2065,7 @@
       "name": "金丹·五灵成阵",
       "rank": 3,
       "index": 83,
-      "price": 65,
+      "price": 0,
       "role": "收录4张金丹原作五行道盟牌；卡名、境界和核心效果逐牌对照来源。",
       "cards": [
         "yixian_five_water_mirror",
@@ -1532,7 +2079,7 @@
       "name": "元婴·金火破限",
       "rank": 4,
       "index": 84,
-      "price": 105,
+      "price": 0,
       "role": "收录4张元婴原作五行道盟牌；卡名、境界和核心效果逐牌对照来源。",
       "cards": [
         "yixian_five_metal_storm",
@@ -1546,7 +2093,7 @@
       "name": "元婴·水木潜行",
       "rank": 4,
       "index": 85,
-      "price": 105,
+      "price": 0,
       "role": "收录4张元婴原作五行道盟牌；卡名、境界和核心效果逐牌对照来源。",
       "cards": [
         "yixian_five_water_sea",
@@ -1560,7 +2107,7 @@
       "name": "元婴·厚土混元",
       "rank": 4,
       "index": 86,
-      "price": 105,
+      "price": 0,
       "role": "收录4张元婴原作五行道盟牌；卡名、境界和核心效果逐牌对照来源。",
       "cards": [
         "yixian_five_metal_cycle",
@@ -1574,7 +2121,7 @@
       "name": "化神·五灵真法",
       "rank": 5,
       "index": 87,
-      "price": 150,
+      "price": 0,
       "role": "收录4张化神原作五行道盟牌；卡名、境界和核心效果逐牌对照来源。",
       "cards": [
         "yixian_five_metal_divine",
@@ -1588,7 +2135,7 @@
       "name": "化神·生生流转",
       "rank": 5,
       "index": 88,
-      "price": 150,
+      "price": 0,
       "role": "收录4张化神原作五行道盟牌；卡名、境界和核心效果逐牌对照来源。",
       "cards": [
         "yixian_five_water_divine",
@@ -1602,7 +2149,7 @@
       "name": "化神·百川归宗",
       "rank": 5,
       "index": 89,
-      "price": 150,
+      "price": 0,
       "role": "收录4张化神原作五行道盟牌；卡名、境界和核心效果逐牌对照来源。",
       "cards": [
         "yixian_five_water_origin",
@@ -1721,7 +2268,7 @@
       "key": "gentle_rain",
       "name": "五行印记",
       "rank": 2,
-      "price": 40,
+      "price": 20,
       "description": "战斗开始时获得效果：下1次使用五行牌时，先激活其所属五行。\n轮回适配：保留原义，不占手牌。\n本局购买一次，无需主动释放，不占手牌。",
       "sourceId": "3000001:五行印记",
       "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000001.html",
@@ -1733,7 +2280,7 @@
       "key": "forged_edge",
       "name": "百草生息",
       "rank": 2,
-      "price": 40,
+      "price": 20,
       "description": "战斗中每次使用不含五行的牌时激活木灵；战斗中每次激活木灵时加2生命上限。\n轮回适配：每次主动激活木灵增加6点本场上限；不直接治疗。\n本局购买一次，无需主动释放，不占手牌。",
       "sourceId": "3000006:百草生息",
       "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000006.html",
@@ -1745,7 +2292,7 @@
       "key": "heaven_cycle",
       "name": "水灵印记",
       "rank": 3,
-      "price": 40,
+      "price": 20,
       "description": "战斗开始时激活水灵并加1灵气。\n轮回适配：1灵气适配4斗气；固定资源回报不额外叠属性。\n本局购买一次，无需主动释放，不占手牌。",
       "sourceId": "3000003:水灵印记",
       "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000003.html",
@@ -1757,7 +2304,7 @@
       "key": "endless_cycle",
       "name": "五行爆炎",
       "rank": 3,
-      "price": 40,
+      "price": 20,
       "description": "生命上限减4；战斗中每次激活任意五行时，减对方3生命及上限。\n轮回适配：局外扣4上限适配为每场开战自身扣12点本场上限；每次激活使对方减9生命及上限，不省略代价。\n本局购买一次，无需主动释放，不占手牌。",
       "sourceId": "3000005:五行爆炎",
       "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000005.html",

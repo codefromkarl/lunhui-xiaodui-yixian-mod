@@ -10,6 +10,15 @@ def main():
     count=0
     import build_prototype_art
     build_prototype_art.main()
+    # All active Sword cards use the exact cached originals, not old low-res PNGs.
+    sword=json.loads((ROOT/'data/sword/cardtable.json').read_text())
+    for card in sword['cards']:
+        source = SOURCES / 'card-images' / (str(card['sourceId']) + '.webp')
+        target = MOD / 'icons/cards' / (card['key'] + '.png')
+        target.parent.mkdir(parents=True, exist_ok=True)
+        with Image.open(source) as image:
+            image.save(target)
+        count += 1
     for path in sorted((ROOT/'data').glob('*/school.json')):
         school=json.loads(path.read_text());code=school['definition']['code']
         for card in school['cards']:

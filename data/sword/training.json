@@ -1,0 +1,111 @@
+{
+  "operations": [
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.training.sword.spirit_conversion",
+      "fields": {
+        "displayName": "灵剑转化",
+        "iconKey": "icon.yixian.sect.training.sword.spirit_conversion",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 20,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          },
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 1
+                }
+              ]
+            }
+          },
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

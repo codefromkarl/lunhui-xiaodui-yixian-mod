@@ -1,0 +1,268 @@
+{
+  "spiritCards": [
+    "yixian_sword_103",
+    "yixian_sword_107",
+    "yixian_sword_29",
+    "yixian_sword_36",
+    "yixian_sword_43",
+    "yixian_sword_45",
+    "yixian_sword_59",
+    "yixian_sword_65",
+    "yixian_sword_94"
+  ],
+  "attributeChanges": {
+    "yixian_sword_1": {
+      "damageAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_2": {
+      "damageAttr": {
+        "before": 40,
+        "after": 10
+      },
+      "cloudDamageAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_3": {
+      "damageAttr": {
+        "before": 40,
+        "after": 10
+      },
+      "cloudShieldAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_5": {
+      "qiAttr": {
+        "before": 40,
+        "after": 10
+      },
+      "shieldAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_9": {
+      "damageAttr": {
+        "before": 40,
+        "after": 10
+      },
+      "hitDamageAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_10": {
+      "damageAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_12": {
+      "shieldAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_21": {
+      "damageAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_14": {
+      "cloudDamageAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_15": {
+      "damageAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_16": {
+      "shieldAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_17": {
+      "qiAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_slash": {
+      "qiAttr": {
+        "before": 40,
+        "after": 10
+      },
+      "conditionalDamageAttr": {
+        "before": 40,
+        "after": 20
+      }
+    },
+    "yixian_sword_33": {
+      "shieldAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_27": {
+      "qiAttr": {
+        "before": 40,
+        "after": 10
+      },
+      "damageAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_31": {
+      "qiAttr": {
+        "before": 40,
+        "after": 10
+      },
+      "shieldAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_46": {
+      "shieldAttr": {
+        "before": 40,
+        "after": 10
+      },
+      "damageAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_63": {
+      "damageAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_34": {
+      "qiAttr": {
+        "before": 40,
+        "after": 10
+      },
+      "tickQiAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_38": {
+      "damageAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_39": {
+      "damageAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_moon": {
+      "shieldAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_41": {
+      "shieldAttr": {
+        "before": 40,
+        "after": 10
+      },
+      "tickShieldAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_91": {
+      "damageAttr": {
+        "before": 40,
+        "after": 20
+      }
+    },
+    "yixian_sword_104": {
+      "damageAttr": {
+        "before": 40,
+        "after": 10
+      },
+      "qiAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_25": {
+      "shieldAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_42": {
+      "cloudShieldAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_43": {
+      "damageAttr": {
+        "before": 20,
+        "after": 40
+      }
+    },
+    "yixian_sword_60": {
+      "damageAttr": {
+        "before": 40,
+        "after": 20
+      },
+      "shieldAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_64": {
+      "shieldAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_94": {
+      "damageAttr": {
+        "before": 20,
+        "after": 40
+      }
+    },
+    "yixian_sword_98": {
+      "shieldAttr": {
+        "before": 40,
+        "after": 10
+      }
+    },
+    "yixian_sword_108": {
+      "damageAttr": {
+        "before": 40,
+        "after": 20
+      }
+    }
+  },
+  "conversion": {
+    "id": "yixian.sect.training.sword.spirit_conversion",
+    "price": 20,
+    "rateBp": 6000,
+    "rank": 1,
+    "deductSourceAttributes": true
+  }
+}

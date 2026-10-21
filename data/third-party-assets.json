@@ -10,6 +10,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_1.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000001.webp",
+          "format": "raw"
         }
       ]
     },
@@ -22,6 +26,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_2.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000002.webp",
+          "format": "raw"
         }
       ]
     },
@@ -34,6 +42,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_3.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000003.webp",
+          "format": "raw"
         }
       ]
     },
@@ -46,6 +58,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_5.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000005.webp",
+          "format": "raw"
         }
       ]
     },
@@ -58,6 +74,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_9.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000009.webp",
+          "format": "raw"
         }
       ]
     },
@@ -70,6 +90,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_10.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000010.webp",
+          "format": "raw"
         }
       ]
     },
@@ -82,6 +106,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_12.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000012.webp",
+          "format": "raw"
         }
       ]
     },
@@ -94,6 +122,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_21.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000021.webp",
+          "format": "raw"
         }
       ]
     },
@@ -106,6 +138,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_14.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000014.webp",
+          "format": "raw"
         }
       ]
     },
@@ -118,6 +154,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_15.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000015.webp",
+          "format": "raw"
         }
       ]
     },
@@ -130,6 +170,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_16.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000016.webp",
+          "format": "raw"
         }
       ]
     },
@@ -142,18 +186,26 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_17.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000017.webp",
+          "format": "raw"
         }
       ]
     },
     {
-      "name": "狂剑·一式",
-      "sourceId": "1000022",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000022_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000022.html",
+      "name": "形意剑",
+      "sourceId": "1000011",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000011_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000011.html",
       "outputs": [
         {
-          "path": "mod/yixian.sect/icons/cards/yixian_sword_22.png",
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_11.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000011.webp",
+          "format": "raw"
         }
       ]
     },
@@ -166,6 +218,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_slash.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000024.webp",
+          "format": "raw"
         }
       ]
     },
@@ -178,6 +234,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_33.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000033.webp",
+          "format": "raw"
         }
       ]
     },
@@ -190,6 +250,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_88.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000088.webp",
+          "format": "raw"
         }
       ]
     },
@@ -202,6 +266,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_26.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000026.webp",
+          "format": "raw"
         }
       ]
     },
@@ -214,6 +282,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_27.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000027.webp",
+          "format": "raw"
         }
       ]
     },
@@ -226,6 +298,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_29.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000029.webp",
+          "format": "raw"
         }
       ]
     },
@@ -238,6 +314,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_31.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000031.webp",
+          "format": "raw"
         }
       ]
     },
@@ -250,6 +330,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_32.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000032.webp",
+          "format": "raw"
         }
       ]
     },
@@ -262,6 +346,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_46.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000046.webp",
+          "format": "raw"
         }
       ]
     },
@@ -274,18 +362,26 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_63.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000063.webp",
+          "format": "raw"
         }
       ]
     },
     {
-      "name": "狂剑·赤霄",
-      "sourceId": "1000102",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000102_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000102.html",
+      "name": "反身剑",
+      "sourceId": "1000008",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000008_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000008.html",
       "outputs": [
         {
-          "path": "mod/yixian.sect/icons/cards/yixian_sword_102.png",
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_8.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000008.webp",
+          "format": "raw"
         }
       ]
     },
@@ -298,18 +394,26 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_34.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000034.webp",
+          "format": "raw"
         }
       ]
     },
     {
-      "name": "狂剑·二式",
-      "sourceId": "1000035",
-      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000035_zh.webp",
-      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000035.html",
+      "name": "流云乱剑",
+      "sourceId": "1000037",
+      "url": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000037_zh.webp",
+      "page": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000037.html",
       "outputs": [
         {
-          "path": "mod/yixian.sect/icons/cards/yixian_sword_35.png",
+          "path": "mod/yixian.sect/icons/cards/yixian_sword_37.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000037.webp",
+          "format": "raw"
         }
       ]
     },
@@ -322,6 +426,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_36.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000036.webp",
+          "format": "raw"
         }
       ]
     },
@@ -334,6 +442,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_38.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000038.webp",
+          "format": "raw"
         }
       ]
     },
@@ -346,6 +458,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_39.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000039.webp",
+          "format": "raw"
         }
       ]
     },
@@ -358,6 +474,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_moon.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000040.webp",
+          "format": "raw"
         }
       ]
     },
@@ -370,6 +490,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_41.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000041.webp",
+          "format": "raw"
         }
       ]
     },
@@ -382,6 +506,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_59.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000059.webp",
+          "format": "raw"
         }
       ]
     },
@@ -394,6 +522,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_65.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000065.webp",
+          "format": "raw"
         }
       ]
     },
@@ -406,6 +538,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_91.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000091.webp",
+          "format": "raw"
         }
       ]
     },
@@ -418,6 +554,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_103.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000103.webp",
+          "format": "raw"
         }
       ]
     },
@@ -430,6 +570,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_104.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000104.webp",
+          "format": "raw"
         }
       ]
     },
@@ -442,6 +586,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_25.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000025.webp",
+          "format": "raw"
         }
       ]
     },
@@ -454,6 +602,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_42.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000042.webp",
+          "format": "raw"
         }
       ]
     },
@@ -466,6 +618,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_43.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000043.webp",
+          "format": "raw"
         }
       ]
     },
@@ -478,6 +634,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_44.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000044.webp",
+          "format": "raw"
         }
       ]
     },
@@ -490,6 +650,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_45.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000045.webp",
+          "format": "raw"
         }
       ]
     },
@@ -502,6 +666,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_60.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000060.webp",
+          "format": "raw"
         }
       ]
     },
@@ -514,6 +682,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_64.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000064.webp",
+          "format": "raw"
         }
       ]
     },
@@ -526,6 +698,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_94.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000094.webp",
+          "format": "raw"
         }
       ]
     },
@@ -538,6 +714,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_98.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000098.webp",
+          "format": "raw"
         }
       ]
     },
@@ -550,6 +730,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_106.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000106.webp",
+          "format": "raw"
         }
       ]
     },
@@ -562,6 +746,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_107.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000107.webp",
+          "format": "raw"
         }
       ]
     },
@@ -574,6 +762,10 @@
         {
           "path": "mod/yixian.sect/icons/cards/yixian_sword_108.png",
           "format": "png"
+        },
+        {
+          "path": "data/sources/original-correction/card-images/1000108.webp",
+          "format": "raw"
         }
       ]
     },

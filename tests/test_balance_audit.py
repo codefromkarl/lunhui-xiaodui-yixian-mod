@@ -46,8 +46,8 @@ class BalanceAuditTests(unittest.TestCase):
             self.assertGreaterEqual(set(row['historical_route_packs']),set(row['packs']))
             self.assertTrue(all(h>=c for h,c in zip(row['historical_route_cost_by_foundation'],row['purchase_cost_by_foundation'])))
         cloud=next(r for r in routes if r['school']=='sword' and r['rank']==5 and r['route']=='cloud')
-        self.assertEqual(cloud['purchase_cost_by_foundation'],[325,325])
-        self.assertEqual(cloud['historical_route_cost_by_foundation'],[325,365])
+        self.assertEqual(cloud['purchase_cost_by_foundation'],[160,160])
+        self.assertEqual(cloud['historical_route_cost_by_foundation'],[160,180])
 
     def test_gift_aware_selection_is_free_for_both_actual_foundation_choices(self):
         root=Path(__file__).resolve().parents[1]

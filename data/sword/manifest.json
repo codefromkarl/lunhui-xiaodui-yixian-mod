@@ -1,10 +1,10 @@
 {
   "id": "yixian.sect",
-  "version": "0.3.2",
+  "version": "0.7.1",
   "apiVersion": 1,
   "name": "弈仙门派·云灵剑宗",
   "author": "你",
-  "description": "云灵剑宗：五境界、12 个四张卡包，共 48 张宗门牌。元婴起每境界分云剑、剑意剑阵、灵剑三包。入宗赠送两个炼气包；筑基二选一赠送，后续只购买。\n\n攻击、护盾、治疗和回气按有效属性成长；卡包详情含每张牌的公式、费用和条件。\n首回合起手 3 张，主动摸牌耗 1 行动力；出牌仅按单卡灵气费用消耗斗气，无额外基础费，再次行动改为额外摸牌。\n\n更新须退出游戏重进并确认代码许可。单机验收；联机须所有人使用完全相同版本。\n\n【仙命能力】筑基可购剑韵修炼（40点）、云之道（40点）；金丹可购剑阵守护（40点）、云海连绵（40点）。剑意每回合+境界×2，云剑每张+境界×3护盾；首张牌后本轮保盾，全部云剑解锁连云。均为独立被动，不占手牌。",
+  "description": "云灵剑宗：五境界、12 个四张卡包，共 48 张宗门牌。元婴起每境界分云剑、剑意剑阵、灵剑三包。入宗赠送两个炼气包；筑基二选一赠送，后续只购买。\n\n攻击、护盾、治疗和回气按有效属性成长；卡包详情含每张牌的公式、费用和条件。\n首回合起手 3 张，主动摸牌耗 1 行动力；出牌仅按单卡灵气费用消耗斗气，无额外基础费，再次行动改为额外摸牌。\n\n更新须退出游戏重进并确认代码许可。单机验收；联机须所有人使用完全相同版本。\n\n【仙命能力】筑基可购剑韵修炼（20点）、云之道（20点）；金丹可购剑阵守护（20点）、云海连绵（20点）。剑意每回合+境界×2，云剑每张+境界×3护盾；首张牌后本轮保盾，全部云剑解锁连云。均为独立被动，不占手牌。",
   "content": [
     "content/lineages.json",
     "content/abilities.json",
@@ -65,10 +65,6 @@
       "kind": "icon",
       "file": "icons/cards/yixian_sword_17.png"
     },
-    "icon.yixian.sect.card.yixian_sword_22": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_sword_22.png"
-    },
     "icon.yixian.sect.card.yixian_slash": {
       "kind": "icon",
       "file": "icons/cards/yixian_slash.png"
@@ -109,17 +105,9 @@
       "kind": "icon",
       "file": "icons/cards/yixian_sword_63.png"
     },
-    "icon.yixian.sect.card.yixian_sword_102": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_sword_102.png"
-    },
     "icon.yixian.sect.card.yixian_sword_34": {
       "kind": "icon",
       "file": "icons/cards/yixian_sword_34.png"
-    },
-    "icon.yixian.sect.card.yixian_sword_35": {
-      "kind": "icon",
-      "file": "icons/cards/yixian_sword_35.png"
     },
     "icon.yixian.sect.card.yixian_sword_36": {
       "kind": "icon",
@@ -288,6 +276,18 @@
     "icon.yixian.sect.status.fate_guard": {
       "kind": "icon",
       "file": "icons/fates/Icon_Talent_57.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_11": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_11.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_8": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_8.png"
+    },
+    "icon.yixian.sect.card.yixian_sword_37": {
+      "kind": "icon",
+      "file": "icons/cards/yixian_sword_37.png"
     }
   },
   "tables": {

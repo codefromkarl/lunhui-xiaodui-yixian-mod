@@ -77,7 +77,10 @@ namespace YixianSect
                 view.Text[i].text="<size=26><color=#FFF0CC>"+proposal.Route.Name+"</color></size>\n"+
                     "<color=#B3ADA1>"+(proposal.IsTransition?"当前为过渡配置":"当前境界配置")+"</color>\n\n"+
                     proposal.Route.Play+"\n\n<size=20><color=#FFF0CC>已购包推荐</color></size>\n"+SwordBuilds.Names(proposal.Selected)+
-                    "\n\n"+pool+"\n\n<color=#B3ADA1>"+missing+(proposal.Missing.Count==0?"\n\n"+proposal.Route.Milestone:"")+"</color>";
+                    "\n\n"+pool+"\n"+SwordBuilds.Diagnostics(proposal,model.Packs.Where(p=>p.IsActive).Select(p=>new StableId(p.Id)))+"\n\n<color=#B3ADA1>"+missing+(proposal.Missing.Count==0?"\n\n"+proposal.Route.Milestone:"")+"</color>";
+                var viewport=view.Text[i].transform.parent as RectTransform;
+                float height=Math.Max(viewport.rect.height,view.Text[i].GetPreferredValues(view.Text[i].text,Math.Max(100,viewport.rect.width),0).y+8);
+                view.Text[i].rectTransform.sizeDelta=new Vector2(0,height);
                 var button=view.Buttons[i];button.onClick=new Button.ButtonClickedEvent();
                 button.interactable=model.CanManage&&!Read<bool>(__instance,"waiting")&&proposal.Selected.Count>=Math.Min(3,owned.Length);
                 button.onClick.AddListener(()=>{
@@ -96,10 +99,13 @@ namespace YixianSect
             for(int i=0;i<3;i++)
             {
                 var card=new GameObject("Route"+i,typeof(RectTransform),typeof(Image));var c=(RectTransform)card.transform;c.SetParent(rect,false);
-                c.anchorMin=new Vector2(i/3f,0.07f);c.anchorMax=new Vector2((i+1)/3f,1);c.offsetMin=new Vector2(i==0?0:10,0);c.offsetMax=new Vector2(i==2?0:-10,0);
-                card.GetComponent<Image>().color=new Color(.12f,.13f,.15f,.98f);
-                var text=UnityEngine.Object.Instantiate(template,c,false);text.name="RouteDetails";text.fontSize=20;text.enableAutoSizing=false;text.alignment=TextAlignmentOptions.TopLeft;text.color=new Color(.84f,.82f,.77f);text.overflowMode=TextOverflowModes.Overflow;text.raycastTarget=false;
-                text.rectTransform.anchorMin=new Vector2(0,0);text.rectTransform.anchorMax=new Vector2(1,1);text.rectTransform.offsetMin=new Vector2(18,72);text.rectTransform.offsetMax=new Vector2(-18,-18);view.Text[i]=text;
+                c.anchorMin=new Vector2(i/3f,0.07f);c.anchorMax=new Vector2((i+1)/3f,.88f);c.offsetMin=new Vector2(i==0?0:10,0);c.offsetMax=new Vector2(i==2?0:-10,0);
+                card.GetComponent<Image>().color=new Color(.12f,.13f,.15f,1f);
+                var viewport=new GameObject("RouteViewport",typeof(RectTransform),typeof(Image),typeof(RectMask2D),typeof(ScrollRect));var v=(RectTransform)viewport.transform;v.SetParent(c,false);
+                v.anchorMin=Vector2.zero;v.anchorMax=Vector2.one;v.offsetMin=new Vector2(18,72);v.offsetMax=new Vector2(-18,-18);viewport.GetComponent<Image>().color=Color.clear;
+                var text=UnityEngine.Object.Instantiate(template,v,false);text.name="RouteDetails";text.fontSize=20;text.enableAutoSizing=false;text.alignment=TextAlignmentOptions.TopLeft;text.color=new Color(.84f,.82f,.77f);text.overflowMode=TextOverflowModes.Overflow;text.raycastTarget=false;
+                text.rectTransform.anchorMin=new Vector2(0,1);text.rectTransform.anchorMax=Vector2.one;text.rectTransform.pivot=new Vector2(.5f,1);text.rectTransform.anchoredPosition=Vector2.zero;text.rectTransform.sizeDelta=Vector2.zero;view.Text[i]=text;
+                var scroll=viewport.GetComponent<ScrollRect>();scroll.viewport=v;scroll.content=text.rectTransform;scroll.horizontal=false;scroll.movementType=ScrollRect.MovementType.Clamped;scroll.scrollSensitivity=35;
                 var button=UnityEngine.Object.Instantiate(Read<Button>(panel,"confirm"),c,false);button.name="Use"+SwordBuilds.RoutesFor(school)[i].Key;button.gameObject.SetActive(true);
                 var b=(RectTransform)button.transform;b.anchorMin=new Vector2(0,0);b.anchorMax=new Vector2(1,0);b.pivot=new Vector2(.5f,0);b.offsetMin=new Vector2(18,16);b.offsetMax=new Vector2(-18,64);
                 var label=button.GetComponentInChildren<TMP_Text>(true);label.text="套用到待选";label.fontSize=20;label.color=Gold;view.Buttons[i]=button;

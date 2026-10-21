@@ -17,11 +17,11 @@
       ],
       "rules": {
         "damage": 6,
-        "damageAttr": 40,
+        "damageAttr": 10,
         "damageBp": 8000,
         "cost": 0
       },
-      "description": "造成〔18＋80%×能量〕点物理伤害。\n消耗：0斗气。",
+      "description": "造成〔18＋80%×筋肉〕点物理伤害。\n消耗：0斗气。",
       "summary": "基础攻击，衔接连云。"
     },
     {
@@ -35,14 +35,14 @@
       ],
       "rules": {
         "damage": 5,
-        "damageAttr": 40,
+        "damageAttr": 10,
         "damageBp": 7000,
         "cloudDamage": 3,
-        "cloudDamageAttr": 40,
+        "cloudDamageAttr": 10,
         "cloudDamageBp": 4000,
         "cost": 0
       },
-      "description": "造成〔15＋70%×能量〕点物理伤害。\n连云：每段追加物理伤害〔9＋40%×能量〕。\n连云：沿施法者朝主目标方向贯穿后方至多1名敌人，每段造成本段伤害的50%。\n消耗：0斗气。",
+      "description": "造成〔15＋70%×筋肉〕点物理伤害。\n连云：每段追加物理伤害〔9＋40%×筋肉〕。\n连云：沿施法者朝主目标方向贯穿后方至多1名敌人，每段造成本段伤害的50%。\n消耗：0斗气。",
       "area": {
         "shape": "line",
         "linked": true,
@@ -62,14 +62,14 @@
       ],
       "rules": {
         "damage": 4,
-        "damageAttr": 40,
+        "damageAttr": 10,
         "damageBp": 6000,
         "cloudShield": 4,
-        "cloudShieldAttr": 40,
+        "cloudShieldAttr": 10,
         "cloudShieldBp": 5000,
         "cost": 0
       },
-      "description": "造成〔12＋60%×能量〕点物理伤害。\n连云：获得护盾〔12＋50%×能量〕。\n消耗：0斗气。",
+      "description": "造成〔12＋60%×筋肉〕点物理伤害。\n连云：获得护盾〔12＋50%×筋肉〕。\n消耗：0斗气。",
       "summary": "攻击；连云获得护盾。"
     },
     {
@@ -81,14 +81,14 @@
       "tags": [],
       "rules": {
         "qi": 1,
-        "qiAttr": 40,
+        "qiAttr": 10,
         "qiBp": 1500,
         "shield": 5,
-        "shieldAttr": 40,
+        "shieldAttr": 10,
         "shieldBp": 6000,
         "cost": 0
       },
-      "description": "获得护盾〔15＋60%×能量〕。\n恢复斗气〔4＋15%×能量〕。\n消耗：0斗气。",
+      "description": "获得护盾〔15＋60%×筋肉〕。\n恢复斗气〔4＋15%×筋肉〕。\n消耗：0斗气。",
       "summary": "回气并获得护盾。"
     },
     {
@@ -100,15 +100,15 @@
       "tags": [],
       "rules": {
         "damage": 5,
-        "damageAttr": 40,
+        "damageAttr": 10,
         "damageBp": 8000,
         "onHit": "thunder",
         "hitDamage": 6,
-        "hitDamageAttr": 40,
+        "hitDamageAttr": 10,
         "hitDamageBp": 6000,
         "cost": 1
       },
-      "description": "造成〔15＋80%×能量〕点物理伤害。\n击伤：追加〔18＋60%×能量〕物理伤害，每次出牌只触发一次，不递归。\n主目标击伤追加时：向其1格邻近至多2名敌人各造成追加伤害的40%；不再触发击伤。\n消耗：4斗气。",
+      "description": "造成〔15＋80%×筋肉〕点物理伤害。\n击伤：追加〔18＋60%×筋肉〕物理伤害，每次出牌只触发一次，不递归。\n主目标击伤追加时：向其1格邻近至多2名敌人各造成追加伤害的40%；不再触发击伤。\n消耗：4斗气。",
       "area": {
         "shape": "splash",
         "secondaryBp": 4000,
@@ -125,12 +125,12 @@
       "tags": [],
       "rules": {
         "damage": 4,
-        "damageAttr": 40,
+        "damageAttr": 10,
         "damageBp": 7000,
         "intent": 2,
         "cost": 0
       },
-      "description": "造成〔12＋70%×能量〕点物理伤害。\n获得 2 点剑意。\n消耗：0斗气。",
+      "description": "造成〔12＋70%×筋肉〕点物理伤害。\n获得 2 点剑意。\n消耗：0斗气。",
       "summary": "攻击并获得剑意。"
     },
     {
@@ -142,12 +142,12 @@
       "tags": [],
       "rules": {
         "shield": 4,
-        "shieldAttr": 40,
+        "shieldAttr": 10,
         "shieldBp": 6000,
         "intent": 2,
         "cost": 0
       },
-      "description": "获得护盾〔12＋60%×能量〕。\n获得 2 点剑意。\n消耗：0斗气。",
+      "description": "获得护盾〔12＋60%×筋肉〕。\n获得 2 点剑意。\n消耗：0斗气。",
       "summary": "获得护盾与剑意。"
     },
     {
@@ -159,12 +159,12 @@
       "tags": [],
       "rules": {
         "damage": 8,
-        "damageAttr": 40,
+        "damageAttr": 10,
         "damageBp": 8000,
         "onHit": "returnIntent",
         "cost": 1
       },
-      "description": "造成〔24＋80%×能量〕点物理伤害。\n击伤：返还本牌攻击消耗的全部剑意；每次出牌只返还一次，仅损伤护盾不触发。\n消耗：4斗气。",
+      "description": "造成〔24＋80%×筋肉〕点物理伤害。\n击伤：返还本牌攻击消耗的全部剑意；每次出牌只返还一次，仅损伤护盾不触发。\n消耗：4斗气。",
       "summary": "攻击；击伤返还消耗的剑意。"
     },
     {
@@ -178,11 +178,11 @@
       ],
       "rules": {
         "cloudDamage": 9,
-        "cloudDamageAttr": 40,
+        "cloudDamageAttr": 10,
         "cloudDamageBp": 11000,
         "cost": 0
       },
-      "description": "连云：造成〔27＋110%×能量〕点物理伤害。\n未连云时不攻击，仍消耗出牌费用。\n连云：横扫主目标同阵位其他敌人，每段造成本段伤害的50%。\n消耗：0斗气。",
+      "description": "连云：造成〔27＋110%×筋肉〕点物理伤害。\n未连云时不攻击，仍消耗出牌费用。\n连云：横扫主目标同阵位其他敌人，每段造成本段伤害的50%。\n消耗：0斗气。",
       "area": {
         "shape": "row",
         "linked": true,
@@ -201,12 +201,12 @@
       ],
       "rules": {
         "damage": 6,
-        "damageAttr": 40,
+        "damageAttr": 10,
         "damageBp": 9000,
         "cloudIntent": 2,
         "cost": 0
       },
-      "description": "造成〔18＋90%×能量〕点物理伤害。\n连云：获得 2 点剑意。\n消耗：0斗气。",
+      "description": "造成〔18＋90%×筋肉〕点物理伤害。\n连云：获得 2 点剑意。\n消耗：0斗气。",
       "summary": "攻击；连云获得剑意。"
     },
     {
@@ -220,14 +220,14 @@
       ],
       "rules": {
         "shield": 8,
-        "shieldAttr": 40,
+        "shieldAttr": 10,
         "shieldBp": 8000,
         "cloudHeal": 3,
         "cloudHealAttr": 30,
         "cloudHealBp": 4000,
         "cost": 0
       },
-      "description": "获得护盾〔24＋80%×能量〕。\n连云：恢复生命〔9＋40%×体质〕。\n消耗：0斗气。",
+      "description": "获得护盾〔24＋80%×筋肉〕。\n连云：恢复生命〔9＋40%×体质〕。\n消耗：0斗气。",
       "summary": "获得护盾；连云恢复生命。"
     },
     {
@@ -239,32 +239,42 @@
       "tags": [],
       "rules": {
         "qi": 1,
-        "qiAttr": 40,
+        "qiAttr": 10,
         "qiBp": 2000,
         "intent": 3,
         "cost": 0
       },
-      "description": "恢复斗气〔4＋20%×能量〕。\n获得 3 点剑意。\n消耗：0斗气。",
+      "description": "恢复斗气〔4＋20%×筋肉〕。\n获得 3 点剑意。\n消耗：0斗气。",
       "summary": "回气并获得剑意。"
     },
     {
-      "key": "yixian_sword_22",
-      "name": "狂剑·一式",
+      "key": "yixian_sword_11",
+      "name": "形意剑",
       "rank": 2,
       "kind": 0,
-      "sourceId": "1000022",
-      "tags": [
-        "mad"
-      ],
+      "sourceId": "1000011",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000011.html",
+      "sourceLevel": 1,
+      "realm": "筑基",
+      "originalText": "8\n攻\n击伤\n：\n剑意\n+3",
+      "tags": [],
       "rules": {
-        "damage": 5,
+        "damage": 8,
         "damageAttr": 10,
-        "damageBp": 10000,
-        "madDamage": 2,
-        "cost": 0
+        "damageBp": 8000,
+        "onHit": "intent3",
+        "hitIntent": 3,
+        "cost": 1
       },
-      "description": "造成〔15＋100%×筋肉〕点物理伤害。\n此前每用过一次狂剑，此牌伤害增加 6。\n消耗：0斗气。",
-      "summary": "攻击，随此前狂剑次数增伤。"
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000011_zh.webp",
+        "cost": 1,
+        "evidence": "logs/sword-replacements/research/three-original-faces.png",
+        "grid": "row1-col1"
+      },
+      "adaptation": "保留归档原作1级基础攻、击伤与段数机制；攻击／防御固定量×3，1灵气×4斗气。属性成长是Mod适配：形意与反身攻击取筋肉，反身延迟盾取体质，流云多段取反应；不属于原作牌面数值。",
+      "description": "造成〔24＋80%×筋肉〕点物理伤害。\n主目标直接击伤后，获得3点剑意；每次出牌最多一次。\n消耗：4斗气。",
+      "summary": "击伤蓄剑意，为后续剑招铺垫。"
     },
     {
       "key": "yixian_slash",
@@ -275,16 +285,16 @@
       "tags": [],
       "rules": {
         "qi": 2,
-        "qiAttr": 40,
+        "qiAttr": 10,
         "qiBp": 2500,
         "qiThreshold": 2,
         "conditionalDamage": 3,
-        "conditionalDamageAttr": 40,
+        "conditionalDamageAttr": 20,
         "conditionalDamageBp": 5000,
         "hits": 2,
         "cost": 0
       },
-      "description": "恢复斗气〔8＋25%×能量〕。\n恢复斗气后，斗气大于 8 时攻击：每段〔9＋50%×能量〕×2；否则不攻击。\n消耗：0斗气。",
+      "description": "恢复斗气〔8＋25%×筋肉〕。\n恢复斗气后，斗气大于 8 时攻击：每段〔9＋50%×反应〕×2；否则不攻击。\n消耗：0斗气。",
       "summary": "回气；斗气充足时连击。"
     },
     {
@@ -298,12 +308,12 @@
       ],
       "rules": {
         "shield": 9,
-        "shieldAttr": 40,
+        "shieldAttr": 10,
         "shieldBp": 8000,
         "intentToQi": true,
         "cost": 0
       },
-      "description": "获得护盾〔27＋80%×能量〕。\n耗尽剑意，每点恢复 4 斗气。\n消耗：0斗气。",
+      "description": "获得护盾〔27＋80%×筋肉〕。\n耗尽剑意，每点恢复 4 斗气。\n消耗：0斗气。",
       "summary": "获得护盾，耗尽剑意回气。"
     },
     {
@@ -350,14 +360,14 @@
       ],
       "rules": {
         "qi": 2,
-        "qiAttr": 40,
+        "qiAttr": 10,
         "qiBp": 2000,
         "damagePerQi": 1,
-        "damageAttr": 40,
+        "damageAttr": 10,
         "damageBp": 10000,
         "cost": 0
       },
-      "description": "攻击部分另加 100%×能量，逐段计算。\n恢复斗气〔8＋20%×能量〕。\n恢复斗气后每剩余 1 灵气，每段伤害增加 3。\n消耗：0斗气。",
+      "description": "攻击部分另加 100%×筋肉，逐段计算。\n恢复斗气〔8＋20%×筋肉〕。\n恢复斗气后每剩余 1 灵气，每段伤害增加 3。\n消耗：0斗气。",
       "summary": "回气，按剩余斗气提高伤害。"
     },
     {
@@ -388,15 +398,15 @@
       "tags": [],
       "rules": {
         "qi": 2,
-        "qiAttr": 40,
+        "qiAttr": 10,
         "qiBp": 2000,
         "shield": 2,
-        "shieldAttr": 40,
+        "shieldAttr": 10,
         "shieldBp": 7000,
         "intent": 2,
         "cost": 0
       },
-      "description": "获得护盾〔6＋70%×能量〕。\n恢复斗气〔8＋20%×能量〕。\n获得 2 点剑意。\n消耗：0斗气。",
+      "description": "获得护盾〔6＋70%×筋肉〕。\n恢复斗气〔8＋20%×筋肉〕。\n获得 2 点剑意。\n消耗：0斗气。",
       "summary": "获得护盾、斗气与剑意。"
     },
     {
@@ -427,14 +437,14 @@
       ],
       "rules": {
         "shield": 3,
-        "shieldAttr": 40,
+        "shieldAttr": 10,
         "shieldBp": 8000,
         "damagePerShield": 1,
-        "damageAttr": 40,
+        "damageAttr": 10,
         "damageBp": 12000,
         "cost": 0
       },
-      "description": "攻击部分另加 120%×能量，逐段计算。\n获得护盾〔9＋80%×能量〕。\n本牌护盾生效后，每有 3 护盾，伤害增加 3。\n范围：主目标1格邻接的其他敌人，各承受本段伤害的30%，独立判定命中。\n消耗：0斗气。",
+      "description": "攻击部分另加 120%×筋肉，逐段计算。\n获得护盾〔9＋80%×筋肉〕。\n本牌护盾生效后，每有 3 护盾，伤害增加 3。\n范围：主目标1格邻接的其他敌人，各承受本段伤害的30%，独立判定命中。\n消耗：0斗气。",
       "area": {
         "shape": "radius",
         "secondaryBp": 3000
@@ -452,32 +462,44 @@
       ],
       "rules": {
         "damage": 7,
-        "damageAttr": 40,
+        "damageAttr": 10,
         "damageBp": 10000,
         "cloudQiPerChain": 1,
         "cost": 0
       },
-      "description": "造成〔21＋100%×能量〕点物理伤害。\n连云：此前每连续用过一次云剑，恢复 4 斗气。\n消耗：0斗气。",
+      "description": "造成〔21＋100%×筋肉〕点物理伤害。\n连云：此前每连续用过一次云剑，恢复 4 斗气。\n消耗：0斗气。",
       "summary": "攻击；连云按连续云剑次数回气。"
     },
     {
-      "key": "yixian_sword_102",
-      "name": "狂剑·赤霄",
+      "key": "yixian_sword_8",
+      "name": "反身剑",
       "rank": 3,
       "kind": 0,
-      "sourceId": "1000102",
-      "tags": [
-        "mad"
-      ],
+      "sourceId": "1000008",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000008.html",
+      "sourceLevel": 1,
+      "realm": "金丹",
+      "originalText": "11\n攻\n击伤\n：下回合加7\n防",
+      "tags": [],
       "rules": {
-        "damage": 5,
+        "damage": 11,
         "damageAttr": 10,
-        "damageBp": 13000,
-        "madPower": 2,
-        "cost": 0
+        "damageBp": 10000,
+        "onHit": "nextShield",
+        "nextShield": 7,
+        "nextShieldAttr": 30,
+        "nextShieldBp": 5000,
+        "cost": 1
       },
-      "description": "造成〔15＋130%×筋肉〕点物理伤害。\n此前每用过一次狂剑，本次获得 1 点本场加攻，最多 2 点；在本牌伤害后获得。\n消耗：0斗气。",
-      "summary": "攻击；按此前狂剑次数获得加攻。"
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000008_zh.webp",
+        "cost": 1,
+        "evidence": "logs/sword-replacements/research/three-original-faces.png",
+        "grid": "row1-col2"
+      },
+      "adaptation": "保留归档原作1级基础攻、击伤与段数机制；攻击／防御固定量×3，1灵气×4斗气。属性成长是Mod适配：形意与反身攻击取筋肉，反身延迟盾取体质，流云多段取反应；不属于原作牌面数值。",
+      "description": "造成〔33＋100%×筋肉〕点物理伤害。\n主目标直接击伤后，下回合开始获得护盾〔21＋50%×体质〕；每次出牌最多一次。多次施放分别累积。\n消耗：4斗气。",
+      "summary": "攻击并在击伤后蓄下回合护盾。"
     },
     {
       "key": "yixian_sword_34",
@@ -488,35 +510,44 @@
       "tags": [],
       "rules": {
         "qi": 1,
-        "qiAttr": 40,
+        "qiAttr": 10,
         "qiBp": 2500,
         "persist": "gatherQi",
         "tickQi": 1,
-        "tickQiAttr": 40,
+        "tickQiAttr": 10,
         "tickQiBp": 1500,
         "cost": 0
       },
-      "description": "恢复斗气〔4＋25%×能量〕。\n持续：从下一回合起，每两个自己的回合恢复斗气〔4＋15%×能量〕。\n消耗：0斗气。",
+      "description": "恢复斗气〔4＋25%×筋肉〕。\n持续：从下一回合起，每两个自己的回合恢复斗气〔4＋15%×筋肉〕。\n消耗：0斗气。",
       "summary": "回气，之后间隔回合持续回气。"
     },
     {
-      "key": "yixian_sword_35",
-      "name": "狂剑·二式",
+      "key": "yixian_sword_37",
+      "name": "流云乱剑",
       "rank": 4,
       "kind": 0,
-      "sourceId": "1000035",
-      "tags": [
-        "mad"
-      ],
+      "sourceId": "1000037",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000037.html",
+      "sourceLevel": 1,
+      "realm": "元婴",
+      "originalText": "2\n攻×4",
+      "tags": [],
       "rules": {
-        "damage": 4,
-        "damageAttr": 10,
+        "damage": 2,
+        "damageAttr": 20,
         "damageBp": 4000,
-        "madHits": true,
-        "cost": 0
+        "hits": 4,
+        "cost": 1
       },
-      "description": "造成〔12＋40%×筋肉〕点物理伤害。\n此前每用过一次狂剑，此牌追加一段同伤害攻击，最多合计 8 段。\n消耗：0斗气。",
-      "summary": "攻击，随此前狂剑次数增加段数。"
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000037_zh.webp",
+        "cost": 1,
+        "evidence": "logs/sword-replacements/research/three-original-faces.png",
+        "grid": "row1-col3"
+      },
+      "adaptation": "保留归档原作1级基础攻、击伤与段数机制；攻击／防御固定量×3，1灵气×4斗气。属性成长是Mod适配：形意与反身攻击取筋肉，反身延迟盾取体质，流云多段取反应；不属于原作牌面数值。",
+      "description": "造成〔6＋40%×反应〕点物理伤害，攻击4段。\n剑意整张只消费一次，每段享受同一份剑意与加攻收益。\n消耗：4斗气。",
+      "summary": "四段攻击，逐段兑现整张消费的剑意。"
     },
     {
       "key": "yixian_sword_36",
@@ -549,14 +580,14 @@
       "tags": [],
       "rules": {
         "damage": 8,
-        "damageAttr": 40,
+        "damageAttr": 10,
         "damageBp": 13000,
         "intentPerQi": 1,
         "intentPerQiCap": 4,
         "adaptation": "击伤提高剑意上限的分支简化，统一最多获得 4 点剑意。",
         "cost": 0
       },
-      "description": "造成〔24＋130%×能量〕点物理伤害。\n恢复斗气后，每剩余 1 灵气获得 1 剑意，最多 4 点。\n消耗：0斗气。",
+      "description": "造成〔24＋130%×筋肉〕点物理伤害。\n恢复斗气后，每剩余 1 灵气获得 1 剑意，最多 4 点。\n消耗：0斗气。",
       "summary": "攻击，按剩余斗气获得剑意。"
     },
     {
@@ -570,12 +601,12 @@
       ],
       "rules": {
         "damage": 4,
-        "damageAttr": 40,
+        "damageAttr": 10,
         "damageBp": 12000,
         "cloudReAct": true,
         "cost": 0
       },
-      "description": "造成〔12＋120%×能量〕点物理伤害。\n连云：额外摸 1 张。\n消耗：0斗气。",
+      "description": "造成〔12＋120%×筋肉〕点物理伤害。\n连云：额外摸 1 张。\n消耗：0斗气。",
       "summary": "攻击；连云额外摸牌。"
     },
     {
@@ -589,12 +620,12 @@
       ],
       "rules": {
         "shield": 1,
-        "shieldAttr": 40,
+        "shieldAttr": 10,
         "shieldBp": 9000,
         "cloudPower": 2,
         "cost": 0
       },
-      "description": "获得护盾〔3＋90%×能量〕。\n连云：本场加攻 +2。\n消耗：0斗气。",
+      "description": "获得护盾〔3＋90%×筋肉〕。\n连云：本场加攻 +2。\n消耗：0斗气。",
       "summary": "获得护盾；连云获得本场加攻。"
     },
     {
@@ -608,16 +639,16 @@
       ],
       "rules": {
         "shield": 10,
-        "shieldAttr": 40,
+        "shieldAttr": 10,
         "shieldBp": 11000,
         "persist": "waterMoon",
         "tickShield": 10,
-        "tickShieldAttr": 40,
+        "tickShieldAttr": 10,
         "tickShieldBp": 3500,
         "cost": 0,
         "adaptation": "原作防御保留改为下 3 回合定量补盾。"
       },
-      "description": "获得护盾〔30＋110%×能量〕。\n持续：下 3 个自己的回合开始，各获得护盾〔10＋35%×能量〕。\n消耗：0斗气。",
+      "description": "获得护盾〔30＋110%×筋肉〕。\n持续：下 3 个自己的回合开始，各获得护盾〔10＋35%×筋肉〕。\n消耗：0斗气。",
       "summary": "获得护盾，之后三个回合补盾。"
     },
     {
@@ -670,7 +701,7 @@
       "rules": {
         "damage": 3,
         "hits": 2,
-        "damageAttr": 40,
+        "damageAttr": 20,
         "damageBp": 7000,
         "doubleIntent": true,
         "cloudDamage": 1,
@@ -678,7 +709,7 @@
         "cost": 0,
         "adaptation": "碎防改为令下张攻击剑招无视物理防御，不穿透护盾。"
       },
-      "description": "造成〔9＋70%×能量〕点物理伤害 ×2 段。\n连云：每段追加物理伤害〔3〕。\n本牌每段享受双倍剑意与本场加攻。\n连云：令下张攻击剑招无视物理防御，不穿透护盾。\n消耗：0斗气。",
+      "description": "造成〔9＋70%×反应〕点物理伤害 ×2 段。\n连云：每段追加物理伤害〔3〕。\n本牌每段享受双倍剑意与本场加攻。\n连云：令下张攻击剑招无视物理防御，不穿透护盾。\n消耗：0斗气。",
       "summary": "双段攻击，双倍剑意与加攻；连云强化下张攻击。"
     },
     {
@@ -712,16 +743,16 @@
       ],
       "rules": {
         "damage": 1,
-        "damageAttr": 40,
+        "damageAttr": 10,
         "damageBp": 12000,
         "qi": 3,
-        "qiAttr": 40,
+        "qiAttr": 10,
         "qiBp": 2500,
         "cloudCount": 2,
         "adaptation": "云海删除，改为本牌按 2 次云剑计数。",
         "cost": 0
       },
-      "description": "造成〔3＋120%×能量〕点物理伤害。\n恢复斗气〔12＋25%×能量〕。\n此牌按 2 次云剑计数。\n消耗：0斗气。",
+      "description": "造成〔3＋120%×筋肉〕点物理伤害。\n恢复斗气〔12＋25%×筋肉〕。\n此牌按 2 次云剑计数。\n消耗：0斗气。",
       "summary": "攻击并回气，按两次云剑计数。"
     },
     {
@@ -735,13 +766,13 @@
       ],
       "rules": {
         "shield": 8,
-        "shieldAttr": 40,
+        "shieldAttr": 10,
         "shieldBp": 12000,
         "reAct": true,
         "cost": 1,
         "shieldFree": true
       },
-      "description": "获得护盾〔24＋120%×能量〕。\n额外摸1张。\n出牌前有护盾时，本牌不消耗斗气。\n消耗：4斗气。",
+      "description": "获得护盾〔24＋120%×筋肉〕。\n额外摸1张。\n出牌前有护盾时，本牌不消耗斗气。\n消耗：4斗气。",
       "summary": "获得护盾并摸牌；出牌前有盾则免费。"
     },
     {
@@ -759,12 +790,12 @@
         "damageAttr": 20,
         "damageBp": 6500,
         "cloudShield": 3,
-        "cloudShieldAttr": 40,
+        "cloudShieldAttr": 10,
         "cloudShieldBp": 8000,
         "onHit": "reAct",
         "cost": 0
       },
-      "description": "造成〔6＋65%×反应〕点物理伤害 ×2 段。\n连云：获得护盾〔9＋80%×能量〕。\n击伤：额外摸 1 张，每次出牌至多一次。\n消耗：0斗气。",
+      "description": "造成〔6＋65%×反应〕点物理伤害 ×2 段。\n连云：获得护盾〔9＋80%×筋肉〕。\n击伤：额外摸 1 张，每次出牌至多一次。\n消耗：0斗气。",
       "summary": "双段攻击；连云加盾，击伤摸牌。"
     },
     {
@@ -777,12 +808,12 @@
       "rules": {
         "damage": 1,
         "hits": 4,
-        "damageAttr": 20,
+        "damageAttr": 40,
         "damageBp": 4000,
         "onHit": "qiPerHit",
         "cost": 0
       },
-      "description": "造成〔3＋40%×反应〕点物理伤害 ×4 段。\n每一段造成实际生命伤害时恢复 4 斗气。\n消耗：0斗气。",
+      "description": "造成〔3＋40%×能量〕点物理伤害 ×4 段。\n每一段造成实际生命伤害时恢复 4 斗气。\n消耗：0斗气。",
       "summary": "四段攻击，每段击伤回气。"
     },
     {
@@ -830,15 +861,15 @@
       "rules": {
         "damage": 3,
         "hits": 2,
-        "damageAttr": 40,
+        "damageAttr": 20,
         "damageBp": 7000,
         "shield": 3,
-        "shieldAttr": 40,
+        "shieldAttr": 10,
         "shieldBp": 8000,
         "cloudShieldPerChain": 3,
         "cost": 0
       },
-      "description": "造成〔9＋70%×能量〕点物理伤害 ×2 段。\n获得护盾〔9＋80%×能量〕。\n连云：此前每连续用过一次云剑，额外获得 9 护盾。\n消耗：0斗气。",
+      "description": "造成〔9＋70%×反应〕点物理伤害 ×2 段。\n获得护盾〔9＋80%×筋肉〕。\n连云：此前每连续用过一次云剑，额外获得 9 护盾。\n消耗：0斗气。",
       "summary": "双段攻击并加盾；连云按连续云剑次数额外加盾。"
     },
     {
@@ -852,13 +883,13 @@
       ],
       "rules": {
         "shield": 1,
-        "shieldAttr": 40,
+        "shieldAttr": 10,
         "shieldBp": 6000,
         "repeatFormation": true,
         "cost": 0,
         "adaptation": "固定牌位改为重复自己上一次打出的其它剑阵；不重复触发额外摸牌。"
       },
-      "description": "获得护盾〔3＋60%×能量〕。\n重复自己上一次打出的其它剑阵的效果，无额外费用，不重复触发额外摸牌。\n消耗：0斗气。",
+      "description": "获得护盾〔3＋60%×筋肉〕。\n重复自己上一次打出的其它剑阵的效果，无额外费用，不重复触发额外摸牌。\n消耗：0斗气。",
       "summary": "获得护盾，重施上次其它剑阵，不额外摸牌。"
     },
     {
@@ -870,7 +901,7 @@
       "tags": [],
       "rules": {
         "damage": 4,
-        "damageAttr": 20,
+        "damageAttr": 40,
         "damageBp": 16000,
         "noIntent": true,
         "intent": 1,
@@ -878,7 +909,7 @@
         "cost": 0,
         "adaptation": "先机改为使用时获得剑意，不依赖固定牌位。"
       },
-      "description": "造成〔12＋160%×反应〕点物理伤害。\n获得 1 点剑意。\n此牌不消耗、不享受剑意；仍享受本场加攻。\n本牌获得剑意后若剑意大于 0，额外摸 1 张。\n消耗：0斗气。",
+      "description": "造成〔12＋160%×能量〕点物理伤害。\n获得 1 点剑意。\n此牌不消耗、不享受剑意；仍享受本场加攻。\n本牌获得剑意后若剑意大于 0，额外摸 1 张。\n消耗：0斗气。",
       "summary": "攻击、获得剑意并条件摸牌；不消耗剑意。"
     },
     {
@@ -892,7 +923,7 @@
       ],
       "rules": {
         "shield": 2,
-        "shieldAttr": 40,
+        "shieldAttr": 10,
         "shieldBp": 10000,
         "cloudCount": 2,
         "reAct": true,
@@ -900,7 +931,7 @@
         "cloudFree": true,
         "adaptation": "云海删除；按 2 次云剑计数。连云时本牌不消耗斗气。"
       },
-      "description": "获得护盾〔6＋100%×能量〕。\n此牌按 2 次云剑计数。\n额外摸1张。\n连云时，本牌不消耗斗气。\n消耗：4斗气。",
+      "description": "获得护盾〔6＋100%×筋肉〕。\n此牌按 2 次云剑计数。\n额外摸1张。\n连云时，本牌不消耗斗气。\n消耗：4斗气。",
       "summary": "获得护盾并摸牌，按两次云剑计数；连云免费。"
     },
     {
@@ -955,12 +986,12 @@
       "rules": {
         "damage": 1,
         "hits": 4,
-        "damageAttr": 40,
+        "damageAttr": 20,
         "damageBp": 5000,
         "damagePerShieldDivisor": 5,
         "cost": 0
       },
-      "description": "造成〔3＋50%×能量〕点物理伤害 ×4 段。\n出牌时每有 15 护盾，每段伤害增加 3。\n消耗：0斗气。",
+      "description": "造成〔3＋50%×反应〕点物理伤害 ×4 段。\n出牌时每有 15 护盾，每段伤害增加 3。\n消耗：0斗气。",
       "summary": "四段攻击，按出牌时护盾增伤。"
     },
     {
@@ -980,19 +1011,31 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row1-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 18,
         "activate": 1,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 1,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 7000
+          },
+          {
+            "attribute": 40,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "炼气",
+      "scalingAttributes": [
+        20,
+        40
+      ],
       "school": "five",
-      "description": "造成物理伤害〔18＋100%×能量〕。\n激活金灵，本场持续生效。\n消耗：0斗气。",
+      "description": "造成物理伤害〔18＋70%×反应＋30%×能量〕。\n激活金灵，本场持续生效。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "攻击并激活金灵。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1013,22 +1056,43 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row1-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 4,
         "heal": 12,
         "activate": 3,
-        "healAttr": 30,
-        "healBp": 5000,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 3,
-        "cost": 0
+        "cost": 0,
+        "healScaling": [
+          {
+            "attribute": 20,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ],
+        "qiScaling": [
+          {
+            "attribute": 20,
+            "bp": 1400
+          },
+          {
+            "attribute": 40,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "炼气",
+      "scalingAttributes": [
+        20,
+        30,
+        40
+      ],
       "school": "five",
-      "description": "恢复生命〔12＋50%×体质〕。\n恢复斗气〔4＋20%×能量〕。\n激活木灵，本场持续生效。\n消耗：0斗气。",
+      "description": "恢复生命〔12＋35%×反应＋15%×体质〕。\n恢复斗气〔4＋14%×反应＋6%×能量〕。\n激活木灵，本场持续生效。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "回气并恢复生命，激活木灵。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1049,19 +1113,31 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row1-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "activate": 2,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 6,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 40,
+            "bp": 1400
+          },
+          {
+            "attribute": 20,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "炼气",
+      "scalingAttributes": [
+        40,
+        20
+      ],
       "school": "five",
-      "description": "恢复斗气〔8＋20%×能量〕。\n激活水灵，本场持续生效。\n消耗：0斗气。",
+      "description": "恢复斗气〔8＋14%×能量＋6%×反应〕。\n激活水灵，本场持续生效。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "回气并激活水灵。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1082,20 +1158,32 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row1-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 4,
         "lifeLoss": 3,
         "activate": 4,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 9,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 40,
+            "bp": 1400
+          },
+          {
+            "attribute": 20,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "炼气",
+      "scalingAttributes": [
+        40,
+        20
+      ],
       "school": "five",
-      "description": "恢复斗气〔4＋20%×能量〕。\n激活火灵，本场持续生效。\n对方直接失去9生命及本场上限。\n消耗：0斗气。",
+      "description": "恢复斗气〔4＋14%×能量＋6%×反应〕。\n激活火灵，本场持续生效。\n对方直接失去9生命及本场上限。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "激活火灵，削减对方生命与上限。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1116,22 +1204,43 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row2-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 9,
         "shield": 12,
         "activate": 5,
-        "damageAttr": 40,
-        "damageBp": 10000,
-        "shieldAttr": 40,
-        "shieldBp": 7000,
         "originalRule": 11,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 30,
+            "bp": 7000
+          },
+          {
+            "attribute": 20,
+            "bp": 3000
+          }
+        ],
+        "shieldScaling": [
+          {
+            "attribute": 30,
+            "bp": 4900
+          },
+          {
+            "attribute": 40,
+            "bp": 2100
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "炼气",
+      "scalingAttributes": [
+        30,
+        20,
+        40
+      ],
       "school": "five",
-      "description": "造成物理伤害〔9＋100%×能量〕。\n获得护盾〔12＋70%×能量〕。\n激活土灵，本场持续生效。\n消耗：0斗气。",
+      "description": "造成物理伤害〔9＋70%×体质＋30%×反应〕。\n获得护盾〔12＋49%×体质＋21%×能量〕。\n激活土灵，本场持续生效。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "攻击、获得护盾并激活土灵。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1152,19 +1261,31 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row2-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 18,
         "conditionalSharp": 2,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 2,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 7000
+          },
+          {
+            "attribute": 40,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "炼气",
+      "scalingAttributes": [
+        20,
+        40
+      ],
       "school": "five",
-      "description": "造成物理伤害〔18＋100%×能量〕。\n金灵条件：获得2层锋锐。\n消耗：0斗气。",
+      "description": "造成物理伤害〔18＋70%×反应＋30%×能量〕。\n金灵条件：获得2层锋锐。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "攻击；金灵条件获得锋锐。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1185,22 +1306,43 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row2-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 9,
         "hits": 2,
         "conditionalHeal": 15,
-        "damageAttr": 20,
-        "damageBp": 4000,
-        "conditionalHealAttr": 30,
-        "conditionalHealBp": 5000,
         "originalRule": 4,
-        "cost": 1
+        "cost": 1,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 2800
+          },
+          {
+            "attribute": 40,
+            "bp": 1200
+          }
+        ],
+        "conditionalHealScaling": [
+          {
+            "attribute": 20,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "炼气",
+      "scalingAttributes": [
+        20,
+        30,
+        40
+      ],
       "school": "five",
-      "description": "造成物理伤害〔9＋40%×反应〕 ×2段。\n木灵条件：恢复〔15＋50%×体质〕生命。\n消耗：4斗气。",
+      "description": "造成物理伤害〔9＋28%×反应＋12%×能量〕 ×2段。\n木灵条件：恢复〔15＋35%×反应＋15%×体质〕生命。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。",
       "summary": "双段攻击；木灵条件恢复生命。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1221,19 +1363,31 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row2-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 30,
         "conditionalWater": 1,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 7,
-        "cost": 2
+        "cost": 2,
+        "damageScaling": [
+          {
+            "attribute": 40,
+            "bp": 7000
+          },
+          {
+            "attribute": 20,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "炼气",
+      "scalingAttributes": [
+        40,
+        20
+      ],
       "school": "five",
-      "description": "造成物理伤害〔30＋100%×能量〕。\n水灵条件：获得1层水势。\n消耗：8斗气。",
+      "description": "造成物理伤害〔30＋70%×能量＋30%×反应〕。\n水灵条件：获得1层水势。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：8斗气。",
       "summary": "攻击；水灵条件获得水势。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1254,19 +1408,31 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row3-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 无视防御适配为下一次本派攻击的首段真实伤害；同时跳过原生物理防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 21,
         "conditionalPierceNext": true,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 15,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 7000
+          },
+          {
+            "attribute": 40,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "筑基",
+      "scalingAttributes": [
+        20,
+        40
+      ],
       "school": "five",
-      "description": "造成物理伤害〔21＋100%×能量〕。\n金灵条件：下一次本派攻击首段无视护盾与物理防御，保留至触发。\n消耗：0斗气。",
+      "description": "造成物理伤害〔21＋70%×反应＋30%×能量〕。\n金灵条件：下一次本派攻击首段无视护盾与物理防御，保留至触发。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "攻击；金灵条件强化下一次攻击穿透。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1287,7 +1453,7 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row3-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "sharp": 4,
         "array": 1,
@@ -1297,6 +1463,7 @@
       },
       "targetEnemy": false,
       "realm": "筑基",
+      "scalingAttributes": [],
       "school": "five",
       "description": "获得4层锋锐。\n持续：之后每次使用金灵牌后，锋锐+1；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n消耗：0斗气。",
       "summary": "获得锋锐；持续使用金灵牌后获得锋锐。",
@@ -1319,20 +1486,32 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row3-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 9,
         "hits": 2,
         "conditionalAttack": 1,
-        "damageAttr": 20,
-        "damageBp": 4000,
         "originalRule": 17,
-        "cost": 1
+        "cost": 1,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 2800
+          },
+          {
+            "attribute": 40,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "筑基",
+      "scalingAttributes": [
+        20,
+        40
+      ],
       "school": "five",
-      "description": "造成物理伤害〔9＋40%×反应〕 ×2段。\n木灵条件：获得1层加攻。\n消耗：4斗气。",
+      "description": "造成物理伤害〔9＋28%×反应＋12%×能量〕 ×2段。\n木灵条件：获得1层加攻。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。",
       "summary": "双段攻击；木灵条件获得加攻。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1353,22 +1532,43 @@
         "evidence": "logs/original-correction/five-selection-art-0.png",
         "grid": "row3-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "conditionalHeal": 9,
         "healPerAttack": 1,
-        "conditionalHealAttr": 30,
-        "conditionalHealBp": 5000,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 18,
-        "cost": 0
+        "cost": 0,
+        "conditionalHealScaling": [
+          {
+            "attribute": 20,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ],
+        "qiScaling": [
+          {
+            "attribute": 20,
+            "bp": 1400
+          },
+          {
+            "attribute": 40,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "筑基",
+      "scalingAttributes": [
+        20,
+        30,
+        40
+      ],
       "school": "five",
-      "description": "恢复斗气〔8＋20%×能量〕。\n木灵条件：恢复〔9＋50%×体质＋3×加攻〕生命。\n消耗：0斗气。",
+      "description": "恢复斗气〔8＋14%×反应＋6%×能量〕。\n木灵条件：恢复〔9＋35%×反应＋15%×体质＋3×加攻〕生命。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "回气；木灵条件按加攻恢复生命。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1389,7 +1589,7 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row1-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "water": 2,
         "cost": 2,
@@ -1398,6 +1598,7 @@
       },
       "targetEnemy": false,
       "realm": "筑基",
+      "scalingAttributes": [],
       "school": "five",
       "description": "获得2层水势。\n水灵条件：本牌不消耗斗气。\n消耗：8斗气。",
       "summary": "获得水势；水灵条件免费。",
@@ -1420,19 +1621,31 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row1-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "conditionalLifeLoss": 3,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 21,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 40,
+            "bp": 1400
+          },
+          {
+            "attribute": 20,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "筑基",
+      "scalingAttributes": [
+        40,
+        20
+      ],
       "school": "five",
-      "description": "恢复斗气〔8＋20%×能量〕。\n火灵条件：对方直接失去〔9〕生命及本场上限。\n消耗：0斗气。",
+      "description": "恢复斗气〔8＋14%×能量＋6%×反应〕。\n火灵条件：对方直接失去〔9〕生命及本场上限。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "回气；火灵条件削减对方生命与上限。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1453,20 +1666,32 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row1-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "shield": 12,
         "array": 5,
         "arrayGain": 2,
-        "shieldAttr": 40,
-        "shieldBp": 7000,
         "originalRule": 23,
-        "cost": 0
+        "cost": 0,
+        "shieldScaling": [
+          {
+            "attribute": 30,
+            "bp": 4900
+          },
+          {
+            "attribute": 40,
+            "bp": 2100
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "筑基",
+      "scalingAttributes": [
+        30,
+        40
+      ],
       "school": "five",
-      "description": "获得护盾〔12＋70%×能量〕。\n持续：之后每次使用土灵牌后，护盾+6；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n消耗：0斗气。",
+      "description": "获得护盾〔12＋49%×体质＋21%×能量〕。\n持续：之后每次使用土灵牌后，护盾+6；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "获得护盾；持续使用土灵牌后加盾。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1487,7 +1712,7 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row1-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "directDamage": 18,
         "activationArray": 2,
@@ -1496,6 +1721,7 @@
       },
       "targetEnemy": true,
       "realm": "筑基",
+      "scalingAttributes": [],
       "school": "five",
       "description": "本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n持续：每次主动激活五行，对方受到6非攻击伤害；重复激活也触发。\n造成18非攻击物理伤害，可被护盾抵消。\n消耗：0斗气。",
       "summary": "非攻击伤害；持续在主动激活五行时造成伤害。",
@@ -1518,20 +1744,32 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row2-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "shield": 12,
         "sharp": 4,
         "conditionalSharpPerShield": 4,
-        "shieldAttr": 40,
-        "shieldBp": 7000,
         "originalRule": 25,
-        "cost": 0
+        "cost": 0,
+        "shieldScaling": [
+          {
+            "attribute": 20,
+            "bp": 4900
+          },
+          {
+            "attribute": 30,
+            "bp": 2100
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "金丹",
+      "scalingAttributes": [
+        20,
+        30
+      ],
       "school": "five",
-      "description": "获得护盾〔12＋70%×能量〕。\n获得4层锋锐。\n金灵条件：结算时每有12护盾，额外获得1锋锐。\n消耗：0斗气。",
+      "description": "获得护盾〔12＋49%×反应＋21%×体质〕。\n获得4层锋锐。\n金灵条件：结算时每有12护盾，额外获得1锋锐。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "获得护盾与锋锐；金灵条件按护盾追加锋锐。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1552,19 +1790,31 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row2-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 18,
         "sharpPerHealth": 2,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 26,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 7000
+          },
+          {
+            "attribute": 40,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "金丹",
+      "scalingAttributes": [
+        20,
+        40
+      ],
       "school": "five",
-      "description": "造成物理伤害〔18＋100%×能量〕。\n金灵条件：每次攻击每击伤6生命，获得1锋锐。\n消耗：0斗气。",
+      "description": "造成物理伤害〔18＋70%×反应＋30%×能量〕。\n金灵条件：每次攻击每击伤6生命，获得1锋锐。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "攻击；金灵条件按击伤获得锋锐。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1585,21 +1835,33 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row2-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 碎防适配为每次真实击中后追加扣减等量护盾；只扣剩余护盾，不把差额转为额外生命伤害，不预扣未命中的护盾。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 3,
         "hits": 2,
         "breakShield": true,
         "conditionalAgainIfHealed": true,
-        "damageAttr": 20,
-        "damageBp": 4000,
         "originalRule": 28,
-        "cost": 1
+        "cost": 1,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 2800
+          },
+          {
+            "attribute": 40,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "金丹",
+      "scalingAttributes": [
+        20,
+        40
+      ],
       "school": "five",
-      "description": "造成物理伤害〔3＋40%×反应〕 ×2段。\n每段击中护盾后，额外扣减等量剩余护盾，不溢出扣生命。\n木灵条件：本场已恢复过生命时，额外摸1张。\n消耗：4斗气。",
+      "description": "造成物理伤害〔3＋28%×反应＋12%×能量〕 ×2段。\n每段击中护盾后，额外扣减等量剩余护盾，不溢出扣生命。\n木灵条件：本场已恢复过生命时，额外摸1张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。",
       "summary": "双段碎盾；木灵条件且本场已治疗时摸牌。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1620,20 +1882,32 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row2-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "array": 2,
         "arrayGain": 1,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 29,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 40,
+            "bp": 1400
+          },
+          {
+            "attribute": 20,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "金丹",
+      "scalingAttributes": [
+        40,
+        20
+      ],
       "school": "five",
-      "description": "恢复斗气〔8＋20%×能量〕。\n持续：之后每次使用水灵牌后，斗气+4；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n消耗：0斗气。",
+      "description": "恢复斗气〔8＋14%×能量＋6%×反应〕。\n持续：之后每次使用水灵牌后，斗气+4；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "回气；持续使用水灵牌后回气。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1654,7 +1928,7 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row3-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "lifeLoss": 2,
         "array": 4,
@@ -1664,6 +1938,7 @@
       },
       "targetEnemy": true,
       "realm": "金丹",
+      "scalingAttributes": [],
       "school": "five",
       "description": "持续：之后每次使用火灵牌后，对方生命及本场上限−6；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n对方直接失去6生命及本场上限。\n消耗：0斗气。",
       "summary": "削减对方生命与上限；持续使用火灵牌后再削减。",
@@ -1686,7 +1961,7 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row3-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "attack": 1,
         "conditionalLifeLoss": 7,
@@ -1696,6 +1971,7 @@
       },
       "targetEnemy": true,
       "realm": "金丹",
+      "scalingAttributes": [],
       "school": "five",
       "description": "获得1层加攻。\n火灵条件：对方直接失去〔21＋3×加攻〕生命及本场上限。\n消耗：4斗气。",
       "summary": "获得加攻；火灵条件按加攻削减生命与上限。",
@@ -1718,7 +1994,7 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row3-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。 持续牌使用后本场从抽牌池移除，持续/消耗牌合计限2张；不再无限叠阵。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "maxHealth": 10,
         "array": 3,
@@ -1728,6 +2004,7 @@
       },
       "targetEnemy": false,
       "realm": "金丹",
+      "scalingAttributes": [],
       "school": "five",
       "description": "自身本场生命上限+30。\n持续：之后每次使用木灵牌后，生命+6；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n消耗：0斗气。",
       "summary": "增加本场生命上限；持续使用木灵牌后治疗。",
@@ -1750,19 +2027,31 @@
         "evidence": "logs/original-correction/five-selection-art-1.png",
         "grid": "row3-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "conditionalNextWaterPerHealth": 5,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 59,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 40,
+            "bp": 1400
+          },
+          {
+            "attribute": 20,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "金丹",
+      "scalingAttributes": [
+        40,
+        20
+      ],
       "school": "five",
-      "description": "恢复斗气〔8＋20%×能量〕。\n水灵条件：下一次本派攻击首段每击伤15生命，获得1水势。\n消耗：0斗气。",
+      "description": "恢复斗气〔8＋14%×能量＋6%×反应〕。\n水灵条件：下一次本派攻击首段每击伤15生命，获得1水势。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "回气；水灵条件使下一次攻击击伤获得水势。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1783,21 +2072,33 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row1-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 SDK伤害查询不区分攻击/状态伤害；40%减攻适配为40%减非真实物理/法术伤害，持续本回合及下一回合。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "maxHealth": 2,
         "heal": 6,
         "conditionalReductionBp": 4000,
         "duration": 2,
-        "healAttr": 30,
-        "healBp": 5000,
         "originalRule": 20,
-        "cost": 1
+        "cost": 1,
+        "healScaling": [
+          {
+            "attribute": 40,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "元婴",
+      "scalingAttributes": [
+        40,
+        30
+      ],
       "school": "five",
-      "description": "自身本场生命上限+6。\n恢复生命〔6＋50%×体质〕。\n水灵条件：物理／法术伤害减少40%，最低减至1，持续本回合及下回合。\n消耗：4斗气。",
+      "description": "自身本场生命上限+6。\n恢复生命〔6＋35%×能量＋15%×体质〕。\n水灵条件：物理／法术伤害减少40%，最低减至1，持续本回合及下回合。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。",
       "summary": "恢复生命、增加上限；水灵条件获得两回合减伤。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1818,20 +2119,32 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row1-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 12,
         "hits": 3,
         "healPerHealth": 3,
-        "damageAttr": 20,
-        "damageBp": 4000,
         "originalRule": 27,
-        "cost": 1
+        "cost": 1,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 2800
+          },
+          {
+            "attribute": 40,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "元婴",
+      "scalingAttributes": [
+        20,
+        40
+      ],
       "school": "five",
-      "description": "造成物理伤害〔12＋40%×反应〕 ×3段。\n木灵条件：每次攻击每击伤9生命，恢复3生命。\n消耗：4斗气。",
+      "description": "造成物理伤害〔12＋28%×反应＋12%×能量〕 ×3段。\n木灵条件：每次攻击每击伤9生命，恢复3生命。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。",
       "summary": "三段攻击；木灵条件按击伤恢复生命。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1852,23 +2165,44 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row1-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "maxHealth": 2,
         "heal": 6,
         "conditionalWaterPerQi": 2,
-        "healAttr": 30,
-        "healBp": 5000,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 30,
-        "cost": 0
+        "cost": 0,
+        "healScaling": [
+          {
+            "attribute": 40,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ],
+        "qiScaling": [
+          {
+            "attribute": 40,
+            "bp": 1400
+          },
+          {
+            "attribute": 20,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "元婴",
+      "scalingAttributes": [
+        40,
+        20,
+        30
+      ],
       "school": "five",
-      "description": "自身本场生命上限+6。\n恢复生命〔6＋50%×体质〕。\n恢复斗气〔8＋20%×能量〕。\n水灵条件：本牌回气后，每有8斗气，获得1水势。\n消耗：0斗气。",
+      "description": "自身本场生命上限+6。\n恢复生命〔6＋35%×能量＋15%×体质〕。\n恢复斗气〔8＋14%×能量＋6%×反应〕。\n水灵条件：本牌回气后，每有8斗气，获得1水势。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "回气、治疗、增加上限；水灵条件按斗气获得水势。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1889,19 +2223,31 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row1-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 盾减少统计以真实击中事件为准，覆盖攻击消耗的护盾；支付/自然衰减未进入击中事件，不计入此适配。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 27,
         "damagePerLostShield": 6,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 33,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 30,
+            "bp": 7000
+          },
+          {
+            "attribute": 20,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "元婴",
+      "scalingAttributes": [
+        30,
+        20
+      ],
       "school": "five",
-      "description": "造成物理伤害〔27＋100%×能量〕。\n土灵条件：本场每因攻击损失18护盾，本牌伤害+3。\n消耗：0斗气。",
+      "description": "造成物理伤害〔27＋70%×体质＋30%×反应〕。\n土灵条件：本场每因攻击损失18护盾，本牌伤害+3。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "攻击；土灵条件按本场攻击损失的护盾增伤。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1922,20 +2268,32 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row2-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 12,
         "noSharp": true,
         "conditionalAgain": true,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 34,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 7000
+          },
+          {
+            "attribute": 40,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "元婴",
+      "scalingAttributes": [
+        20,
+        40
+      ],
       "school": "five",
-      "description": "造成物理伤害〔12＋100%×能量〕。\n本牌不触发、不消耗锋锐。\n金灵条件：额外摸1张。\n消耗：0斗气。",
+      "description": "造成物理伤害〔12＋70%×反应＋30%×能量〕。\n本牌不触发、不消耗锋锐。\n金灵条件：额外摸1张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "攻击但不触发锋锐；金灵条件摸牌。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -1956,7 +2314,7 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row2-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 固定减伤原5×3=15，最低为1；持续本回合及下一回合。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "conditionalReductionFlat": 5,
         "duration": 2,
@@ -1965,6 +2323,7 @@
       },
       "targetEnemy": false,
       "realm": "元婴",
+      "scalingAttributes": [],
       "school": "five",
       "description": "金灵条件：受到伤害−15，最低减至1，持续本回合及下回合。\n消耗：0斗气。",
       "summary": "金灵条件获得两回合固定减伤。",
@@ -1987,7 +2346,7 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row2-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "enemyMaxLoss": 4,
         "conditionalAgain": true,
@@ -1996,6 +2355,7 @@
       },
       "targetEnemy": true,
       "realm": "元婴",
+      "scalingAttributes": [],
       "school": "five",
       "description": "对方本场生命上限−12。\n火灵条件：额外摸1张。\n消耗：0斗气。",
       "summary": "降低对方生命上限；火灵条件摸牌。",
@@ -2018,21 +2378,33 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row2-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 12,
         "hits": 2,
         "maxLossPerHealth": 1,
         "maxLossMultiplier": 2,
-        "damageAttr": 20,
-        "damageBp": 4000,
         "originalRule": 39,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 40,
+            "bp": 2800
+          },
+          {
+            "attribute": 20,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "元婴",
+      "scalingAttributes": [
+        40,
+        20
+      ],
       "school": "five",
-      "description": "造成物理伤害〔12＋40%×反应〕 ×2段。\n火灵条件：每次攻击每击伤3生命，对方本场上限−6。\n消耗：0斗气。",
+      "description": "造成物理伤害〔12＋28%×能量＋12%×反应〕 ×2段。\n火灵条件：每次攻击每击伤3生命，对方本场上限−6。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "双段攻击；火灵条件按击伤降低对方上限。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2053,19 +2425,31 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row3-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 盾减少统计以真实击中事件为准，覆盖攻击消耗的护盾；支付/自然衰减未进入击中事件，不计入此适配。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "shield": 36,
         "shieldPerLostShield": 6,
-        "shieldAttr": 40,
-        "shieldBp": 7000,
         "originalRule": 40,
-        "cost": 0
+        "cost": 0,
+        "shieldScaling": [
+          {
+            "attribute": 30,
+            "bp": 4900
+          },
+          {
+            "attribute": 40,
+            "bp": 2100
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "元婴",
+      "scalingAttributes": [
+        30,
+        40
+      ],
       "school": "five",
-      "description": "获得护盾〔36＋70%×能量〕。\n土灵条件：本场每因攻击损失18护盾，本牌护盾+3。\n消耗：0斗气。",
+      "description": "获得护盾〔36＋49%×体质＋21%×能量〕。\n土灵条件：本场每因攻击损失18护盾，本牌护盾+3。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "获得护盾；土灵条件按本场攻击损失的护盾追加护盾。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2086,22 +2470,43 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row3-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "heal": 6,
         "conditionalAttackPerQi": 3,
-        "healAttr": 30,
-        "healBp": 5000,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 61,
-        "cost": 0
+        "cost": 0,
+        "healScaling": [
+          {
+            "attribute": 20,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ],
+        "qiScaling": [
+          {
+            "attribute": 20,
+            "bp": 1400
+          },
+          {
+            "attribute": 40,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "元婴",
+      "scalingAttributes": [
+        20,
+        30,
+        40
+      ],
       "school": "five",
-      "description": "恢复生命〔6＋50%×体质〕。\n恢复斗气〔8＋20%×能量〕。\n木灵条件：本牌回气后，每有12斗气，获得1加攻。\n消耗：0斗气。",
+      "description": "恢复生命〔6＋35%×反应＋15%×体质〕。\n恢复斗气〔8＋14%×反应＋6%×能量〕。\n木灵条件：本牌回气后，每有12斗气，获得1加攻。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "回气并治疗；木灵条件按斗气获得加攻。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2122,20 +2527,32 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row3-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 无原作八格卡组：按开战启用卡包中不同五行统计；由公共桥注入deckElements位掩码。 碎防适配为每次真实击中后追加扣减等量护盾；只扣剩余护盾，不把差额转为额外生命伤害，不预扣未命中的护盾。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 12,
         "breakShield": true,
         "damagePerDeckElement": 4,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 66,
-        "cost": 1
+        "cost": 1,
+        "damageScaling": [
+          {
+            "attribute": 40,
+            "bp": 7000
+          },
+          {
+            "attribute": 20,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "元婴",
+      "scalingAttributes": [
+        40,
+        20
+      ],
       "school": "five",
-      "description": "造成物理伤害〔12＋100%×能量〕。\n每段击中护盾后，额外扣减等量剩余护盾，不溢出扣生命。\n开战启用卡包中每有一种不同五行，本牌伤害+12。\n消耗：4斗气。",
+      "description": "造成物理伤害〔12＋70%×能量＋30%×反应〕。\n每段击中护盾后，额外扣减等量剩余护盾，不溢出扣生命。\n开战启用卡包中每有一种不同五行，本牌伤害+12。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。",
       "summary": "碎盾攻击，按开战启用卡包的五行种数增伤。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2156,19 +2573,31 @@
         "evidence": "logs/original-correction/five-selection-art-2.png",
         "grid": "row3-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "shield": 12,
         "conditionalAgain": true,
-        "shieldAttr": 40,
-        "shieldBp": 7000,
         "originalRule": 96,
-        "cost": 0
+        "cost": 0,
+        "shieldScaling": [
+          {
+            "attribute": 30,
+            "bp": 4900
+          },
+          {
+            "attribute": 40,
+            "bp": 2100
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "元婴",
+      "scalingAttributes": [
+        30,
+        40
+      ],
       "school": "five",
-      "description": "获得护盾〔12＋70%×能量〕。\n土灵条件：额外摸1张。\n消耗：0斗气。",
+      "description": "获得护盾〔12＋49%×体质＋21%×能量〕。\n土灵条件：额外摸1张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "获得护盾；土灵条件摸牌。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2189,19 +2618,31 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row1-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 21,
         "doubleHealth": true,
-        "damageAttr": 40,
-        "damageBp": 10000,
         "originalRule": 42,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 7000
+          },
+          {
+            "attribute": 40,
+            "bp": 3000
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "化神",
+      "scalingAttributes": [
+        20,
+        40
+      ],
       "school": "five",
-      "description": "造成物理伤害〔21＋100%×能量〕。\n金灵条件：每次攻击实际扣生命加倍，包含锋锐收益。\n消耗：0斗气。",
+      "description": "造成物理伤害〔21＋70%×反应＋30%×能量〕。\n金灵条件：每次攻击实际扣生命加倍，包含锋锐收益。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "攻击；金灵条件使实际扣生命加倍。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2222,20 +2663,32 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row1-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "attack": 1,
         "heal": 9,
         "conditionalAgain": true,
-        "healAttr": 30,
-        "healBp": 5000,
         "originalRule": 43,
-        "cost": 1
+        "cost": 1,
+        "healScaling": [
+          {
+            "attribute": 20,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "化神",
+      "scalingAttributes": [
+        20,
+        30
+      ],
       "school": "five",
-      "description": "恢复生命〔9＋50%×体质〕。\n获得1层加攻。\n木灵条件：额外摸1张。\n消耗：4斗气。",
+      "description": "恢复生命〔9＋35%×反应＋15%×体质〕。\n获得1层加攻。\n木灵条件：额外摸1张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。",
       "summary": "获得加攻并治疗；木灵条件摸牌。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2256,19 +2709,31 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row1-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 盾减少统计以真实击中事件为准，覆盖攻击消耗的护盾；支付/自然衰减未进入击中事件，不计入此适配。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "shield": 36,
         "conditionalShieldReturn": 2,
-        "shieldAttr": 40,
-        "shieldBp": 7000,
         "originalRule": 53,
-        "cost": 0
+        "cost": 0,
+        "shieldScaling": [
+          {
+            "attribute": 30,
+            "bp": 4900
+          },
+          {
+            "attribute": 40,
+            "bp": 2100
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "化神",
+      "scalingAttributes": [
+        30,
+        40
+      ],
       "school": "five",
-      "description": "获得护盾〔36＋70%×能量〕。\n土灵条件：之后2次因攻击损失护盾时，返还损失值。\n消耗：0斗气。",
+      "description": "获得护盾〔36＋49%×体质＋21%×能量〕。\n土灵条件：之后2次因攻击损失护盾时，返还损失值。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "获得护盾；土灵条件返还之后两次攻击损失的护盾。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2289,20 +2754,32 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row1-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 18,
         "hits": 3,
         "capAtHealthMinus": 2,
-        "damageAttr": 20,
-        "damageBp": 4000,
         "originalRule": 56,
-        "cost": 2
+        "cost": 2,
+        "damageScaling": [
+          {
+            "attribute": 40,
+            "bp": 2800
+          },
+          {
+            "attribute": 20,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "化神",
+      "scalingAttributes": [
+        40,
+        20
+      ],
       "school": "five",
-      "description": "造成物理伤害〔18＋40%×反应〕 ×3段。\n火灵条件：攻击后将对方本场上限降至其当时生命−6，仅降低不提高。\n消耗：8斗气。",
+      "description": "造成物理伤害〔18＋28%×能量＋12%×反应〕 ×3段。\n火灵条件：攻击后将对方本场上限降至其当时生命−6，仅降低不提高。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：8斗气。",
       "summary": "三段攻击；火灵条件将对方上限压至当前生命以下。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2323,7 +2800,7 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row2-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "water": 3,
         "conditionalMaxHealth": 6,
@@ -2333,6 +2810,7 @@
       },
       "targetEnemy": false,
       "realm": "化神",
+      "scalingAttributes": [],
       "school": "five",
       "description": "获得3层水势。\n水灵条件：自身生命及本场上限增加〔18＋3×水势〕。\n消耗：8斗气。",
       "summary": "获得水势；水灵条件按水势增加生命与上限。",
@@ -2355,24 +2833,44 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row2-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 春风养护按每次实际击中触发，未命中/闪避时不触发养护。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 8,
         "damage": 6,
         "hits": 2,
         "conditionalSpring": 2,
         "duration": 4,
-        "damageAttr": 20,
-        "damageBp": 4000,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 97,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 2800
+          },
+          {
+            "attribute": 40,
+            "bp": 1200
+          }
+        ],
+        "qiScaling": [
+          {
+            "attribute": 20,
+            "bp": 1400
+          },
+          {
+            "attribute": 40,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "化神",
+      "scalingAttributes": [
+        20,
+        40
+      ],
       "school": "five",
-      "description": "造成物理伤害〔6＋40%×反应〕 ×2段。\n恢复斗气〔8＋20%×能量〕。\n木灵条件：自身每次攻击击中后，生命及本场上限+6，持续4回合；本张也触发。\n消耗：0斗气。",
+      "description": "造成物理伤害〔6＋28%×反应＋12%×能量〕 ×2段。\n恢复斗气〔8＋14%×反应＋6%×能量〕。\n木灵条件：自身每次攻击击中后，生命及本场上限+6，持续4回合；本张也触发。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "回气并双段攻击；木灵条件持续攻击时增加生命与上限。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2393,20 +2891,32 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row2-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 击伤收益在原生本张牌的实际hit列表上按次结算；附加直接减生命在击伤钩子提交，不额外生成攻击，不受护盾/防御。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "damage": 18,
         "hits": 2,
         "sharpReturnBp": 6000,
-        "damageAttr": 20,
-        "damageBp": 4000,
         "originalRule": 99,
-        "cost": 0
+        "cost": 0,
+        "damageScaling": [
+          {
+            "attribute": 20,
+            "bp": 2800
+          },
+          {
+            "attribute": 40,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "化神",
+      "scalingAttributes": [
+        20,
+        40
+      ],
       "school": "five",
-      "description": "造成物理伤害〔18＋40%×反应〕 ×2段。\n金灵条件：每次攻击消耗锋锐后返还60%，向上取整，可用于下一段。\n消耗：0斗气。",
+      "description": "造成物理伤害〔18＋28%×反应＋12%×能量〕 ×2段。\n金灵条件：每次攻击消耗锋锐后返还60%，向上取整，可用于下一段。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "双段攻击；金灵条件返还锋锐。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2427,22 +2937,34 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row2-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 保留每10身法再动的累计机制；每累计10身法额外摸1张，余数留存本场。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "water": 1,
         "maxHealth": 4,
         "heal": 12,
         "conditionalAgilityPerResource": 2,
         "agilityCap": 12,
-        "healAttr": 30,
-        "healBp": 5000,
         "originalRule": 100,
-        "cost": 0
+        "cost": 0,
+        "healScaling": [
+          {
+            "attribute": 40,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "化神",
+      "scalingAttributes": [
+        40,
+        30
+      ],
       "school": "five",
-      "description": "自身本场生命上限+12。\n恢复生命〔12＋50%×体质〕。\n获得1层水势。\n水灵条件：每1水势或4斗气获得2身法，本牌最多12点。\n消耗：0斗气。",
+      "description": "自身本场生命上限+12。\n恢复生命〔12＋35%×能量＋15%×体质〕。\n获得1层水势。\n水灵条件：每1水势或4斗气获得2身法，本牌最多12点。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "获得水势、治疗、增加上限；水灵条件积累身法摸牌。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2463,21 +2985,33 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row3-col1"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 12,
         "conditionalDrainPlays": 3,
         "drainBase": 1,
         "drainPerAttack": 1,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 112,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 20,
+            "bp": 1400
+          },
+          {
+            "attribute": 40,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "化神",
+      "scalingAttributes": [
+        20,
+        40
+      ],
       "school": "five",
-      "description": "恢复斗气〔12＋20%×能量〕。\n木灵条件：之后3次使用任意卡牌后，吸取〔3＋3×加攻〕生命；不含本张。\n消耗：0斗气。",
+      "description": "恢复斗气〔12＋14%×反应＋6%×能量〕。\n木灵条件：之后3次使用任意卡牌后，吸取〔3＋3×加攻〕生命；不含本张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "回气；木灵条件使后续出牌吸取生命。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2498,7 +3032,7 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row3-col2"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "lifeLoss": 9,
         "conditionalLifeLossPerAttack": 2,
@@ -2509,6 +3043,7 @@
       },
       "targetEnemy": true,
       "realm": "化神",
+      "scalingAttributes": [],
       "school": "five",
       "description": "对方直接失去27生命及本场上限。\n火灵条件：每层加攻多减6生命及上限。\n土灵条件：每9护盾多减3。\n金灵条件：每2锋锐多减3。三项独立判断。\n消耗：0斗气。",
       "summary": "削减生命与上限；火、土、金灵条件分别增强。",
@@ -2531,7 +3066,7 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row3-col3"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "water": 1,
         "maxHealth": 10,
@@ -2540,17 +3075,38 @@
         "waterDamagePerWater": 1,
         "woodAttack": 1,
         "woodDamagePerQi": 1,
-        "healAttr": 30,
-        "healBp": 5000,
         "originalRule": 115,
         "cost": 1,
-        "specialDamageAttr": 20,
-        "specialDamageBp": 4000
+        "healScaling": [
+          {
+            "attribute": 40,
+            "bp": 3500
+          },
+          {
+            "attribute": 30,
+            "bp": 1500
+          }
+        ],
+        "specialDamageScaling": [
+          {
+            "attribute": 40,
+            "bp": 2800
+          },
+          {
+            "attribute": 20,
+            "bp": 1200
+          }
+        ]
       },
       "targetEnemy": true,
       "realm": "化神",
+      "scalingAttributes": [
+        40,
+        20,
+        30
+      ],
       "school": "five",
-      "description": "自身本场生命上限+30。\n恢复生命〔30＋50%×体质〕。\n获得1层水势。\n水灵条件：追加〔3＋3×水势〕攻击。\n木灵条件：追加〔3＋3×灵气〕攻击。两项独立判断，均受加攻。\n每次条件追加攻击另加40%×反应。\n消耗：4斗气。",
+      "description": "自身本场生命上限+30。\n恢复生命〔30＋35%×能量＋15%×体质〕。\n获得1层水势。\n水灵条件：追加〔3＋3×水势〕攻击。\n木灵条件：追加〔3＋3×灵气〕攻击。两项独立判断，均受加攻。\n每次条件追加攻击另加〔0＋28%×能量＋12%×反应〕。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。",
       "summary": "获得水势、治疗、增加上限；水灵与木灵条件分别追加攻击。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -2571,20 +3127,32 @@
         "evidence": "logs/original-correction/five-selection-art-3.png",
         "grid": "row3-col4"
       },
-      "adaptation": "采用原作1级效果；攻/防/生命类固定量×3、灵气×4；单段能量100%、多段反应40%、护盾能量70%、治疗体质50%、回气能量20%；固定层数收益不叠属性。 原作再次行动适配为额外摸1张，仍受10张手牌上限。 加攻、锋锐及下一次攻击增益仅接管本派攻击牌；不全局改写普攻与原生血统技能。",
+      "adaptation": "保留归档原作1级基础量、费用、条件与层数；已有属性成长改为本系主属性70%与功能副属性30%的双属性预算，合并后取整。水火主能量、金木主反应、土主体质；自动识别能量／反应／体质最高项承接血统成长，开战锁定；逐项属性加成取牌面多属性与主属性×总系数×70%的较大值，不按混系数量折损。固定量与状态层数不重复叠属性。",
       "rules": {
         "qi": 4,
         "sharp": 2,
         "conditionalAgainEither": 3,
-        "qiAttr": 40,
-        "qiBp": 2000,
         "originalRule": 116,
-        "cost": 0
+        "cost": 0,
+        "qiScaling": [
+          {
+            "attribute": 20,
+            "bp": 1400
+          },
+          {
+            "attribute": 40,
+            "bp": 600
+          }
+        ]
       },
       "targetEnemy": false,
       "realm": "化神",
+      "scalingAttributes": [
+        20,
+        40
+      ],
       "school": "five",
-      "description": "恢复斗气〔4＋20%×能量〕。\n获得2层锋锐。\n出牌前满足金灵或水灵条件：额外摸1张。\n消耗：0斗气。",
+      "description": "恢复斗气〔4＋14%×反应＋6%×能量〕。\n获得2层锋锐。\n出牌前满足金灵或水灵条件：额外摸1张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "summary": "回气并获得锋锐；金灵或水灵条件摸牌。",
       "sect": "yixian.sect.lineage.five"
     },
@@ -3905,7 +4473,7 @@
       "price": 0,
       "role": "三张云剑建立连云，护身灵气负责回气和防守。",
       "acquisition": "获得云灵剑宗时自动赠送。",
-      "description": "三张云剑建立连云，护身灵气负责回气和防守。\n获得云灵剑宗时自动赠送。\n\n【云剑·探云】\n造成〔18＋80%×能量〕点物理伤害。\n消耗：0斗气。\n\n【云剑·飞刺】\n造成〔15＋70%×能量〕点物理伤害。\n连云：每段追加物理伤害〔9＋40%×能量〕。\n连云：沿施法者朝主目标方向贯穿后方至多1名敌人，每段造成本段伤害的50%。\n消耗：0斗气。\n\n【云剑·厚土】\n造成〔12＋60%×能量〕点物理伤害。\n连云：获得护盾〔12＋50%×能量〕。\n消耗：0斗气。\n\n【护身灵气】\n获得护盾〔15＋60%×能量〕。\n恢复斗气〔4＋15%×能量〕。\n消耗：0斗气。",
+      "description": "三张云剑建立连云，护身灵气负责回气和防守。\n获得云灵剑宗时自动赠送。\n\n【云剑·探云】\n造成〔18＋80%×筋肉〕点物理伤害。\n消耗：0斗气。\n\n【云剑·飞刺】\n造成〔15＋70%×筋肉〕点物理伤害。\n连云：每段追加物理伤害〔9＋40%×筋肉〕。\n连云：沿施法者朝主目标方向贯穿后方至多1名敌人，每段造成本段伤害的50%。\n消耗：0斗气。\n\n【云剑·厚土】\n造成〔12＋60%×筋肉〕点物理伤害。\n连云：获得护盾〔12＋50%×筋肉〕。\n消耗：0斗气。\n\n【护身灵气】\n获得护盾〔15＋60%×筋肉〕。\n恢复斗气〔4＋15%×筋肉〕。\n消耗：0斗气。",
       "cards": [
         "yixian_sword_1",
         "yixian_sword_2",
@@ -3921,7 +4489,7 @@
       "price": 0,
       "role": "剑劈／剑挡积累剑意，飞牙剑击伤返还消耗的剑意，震雷剑奖励实际击伤。",
       "acquisition": "获得云灵剑宗时自动赠送。",
-      "description": "剑劈／剑挡积累剑意，飞牙剑击伤返还消耗的剑意，震雷剑奖励实际击伤。\n获得云灵剑宗时自动赠送。\n\n【震雷剑】\n造成〔15＋80%×能量〕点物理伤害。\n击伤：追加〔18＋60%×能量〕物理伤害，每次出牌只触发一次，不递归。\n主目标击伤追加时：向其1格邻近至多2名敌人各造成追加伤害的40%；不再触发击伤。\n消耗：4斗气。\n\n【剑劈】\n造成〔12＋70%×能量〕点物理伤害。\n获得 2 点剑意。\n消耗：0斗气。\n\n【剑挡】\n获得护盾〔12＋60%×能量〕。\n获得 2 点剑意。\n消耗：0斗气。\n\n【飞牙剑】\n造成〔24＋80%×能量〕点物理伤害。\n击伤：返还本牌攻击消耗的全部剑意；每次出牌只返还一次，仅损伤护盾不触发。\n消耗：4斗气。",
+      "description": "剑劈／剑挡积累剑意，飞牙剑击伤返还消耗的剑意，震雷剑奖励实际击伤。\n获得云灵剑宗时自动赠送。\n\n【震雷剑】\n造成〔15＋80%×筋肉〕点物理伤害。\n击伤：追加〔18＋60%×筋肉〕物理伤害，每次出牌只触发一次，不递归。\n主目标击伤追加时：向其1格邻近至多2名敌人各造成追加伤害的40%；不再触发击伤。\n消耗：4斗气。\n\n【剑劈】\n造成〔12＋70%×筋肉〕点物理伤害。\n获得 2 点剑意。\n消耗：0斗气。\n\n【剑挡】\n获得护盾〔12＋60%×筋肉〕。\n获得 2 点剑意。\n消耗：0斗气。\n\n【飞牙剑】\n造成〔24＋80%×筋肉〕点物理伤害。\n击伤：返还本牌攻击消耗的全部剑意；每次出牌只返还一次，仅损伤护盾不触发。\n消耗：4斗气。",
       "cards": [
         "yixian_sword_9",
         "yixian_sword_10",
@@ -3934,10 +4502,10 @@
       "name": "筑基·云剑灵气",
       "rank": 2,
       "index": 42,
-      "price": 40,
+      "price": 20,
       "role": "连云获得攻击、剑意与治疗，引气剑补足资源并提供条件多段。",
       "acquisition": "突破筑基时可从两个筑基包中免费选一；另一包可购买。",
-      "description": "连云获得攻击、剑意与治疗，引气剑补足资源并提供条件多段。\n突破筑基时可从两个筑基包中免费选一；另一包可购买。\n\n【云剑·无锋】\n连云：造成〔27＋110%×能量〕点物理伤害。\n未连云时不攻击，仍消耗出牌费用。\n连云：横扫主目标同阵位其他敌人，每段造成本段伤害的50%。\n消耗：0斗气。\n\n【云剑·极意】\n造成〔18＋90%×能量〕点物理伤害。\n连云：获得 2 点剑意。\n消耗：0斗气。\n\n【云剑·回守】\n获得护盾〔24＋80%×能量〕。\n连云：恢复生命〔9＋40%×体质〕。\n消耗：0斗气。\n\n【引气剑】\n恢复斗气〔8＋25%×能量〕。\n恢复斗气后，斗气大于 8 时攻击：每段〔9＋50%×能量〕×2；否则不攻击。\n消耗：0斗气。",
+      "description": "连云获得攻击、剑意与治疗，引气剑补足资源并提供条件多段。\n突破筑基时可从两个筑基包中免费选一；另一包可购买。\n\n【云剑·无锋】\n连云：造成〔27＋110%×筋肉〕点物理伤害。\n未连云时不攻击，仍消耗出牌费用。\n连云：横扫主目标同阵位其他敌人，每段造成本段伤害的50%。\n消耗：0斗气。\n\n【云剑·极意】\n造成〔18＋90%×筋肉〕点物理伤害。\n连云：获得 2 点剑意。\n消耗：0斗气。\n\n【云剑·回守】\n获得护盾〔24＋80%×筋肉〕。\n连云：恢复生命〔9＋40%×体质〕。\n消耗：0斗气。\n\n【引气剑】\n恢复斗气〔8＋25%×筋肉〕。\n恢复斗气后，斗气大于 8 时攻击：每段〔9＋50%×反应〕×2；否则不攻击。\n消耗：0斗气。",
       "cards": [
         "yixian_sword_14",
         "yixian_sword_15",
@@ -3950,13 +4518,13 @@
       "name": "筑基·蓄意剑阵",
       "rank": 2,
       "index": 43,
-      "price": 45,
-      "role": "蓄剑意，转化斗气，以御灵心法把资源周转变为护盾。",
+      "price": 20,
+      "role": "形意击伤蓄剑意，凝意回气；灵犀剑阵与御灵心法维护攻守循环。",
       "acquisition": "突破筑基时可从两个筑基包中免费选一；另一包可购买。",
-      "description": "蓄剑意，转化斗气，以御灵心法把资源周转变为护盾。\n突破筑基时可从两个筑基包中免费选一；另一包可购买。\n\n【凝意诀】\n恢复斗气〔4＋20%×能量〕。\n获得 3 点剑意。\n消耗：0斗气。\n\n【狂剑·一式】\n造成〔15＋100%×筋肉〕点物理伤害。\n此前每用过一次狂剑，此牌伤害增加 6。\n消耗：0斗气。\n\n【灵犀剑阵】\n获得护盾〔27＋80%×能量〕。\n耗尽剑意，每点恢复 4 斗气。\n消耗：0斗气。\n\n【御灵心法】\n持续：以后剑招每实际消耗或恢复 1 斗气，获得 1 护盾；恢复量按气池空余计算。\n消耗：0斗气。",
+      "description": "形意击伤蓄剑意，凝意回气；灵犀剑阵与御灵心法维护攻守循环。\n突破筑基时可从两个筑基包中免费选一；另一包可购买。\n\n【凝意诀】\n恢复斗气〔4＋20%×筋肉〕。\n获得 3 点剑意。\n消耗：0斗气。\n\n【形意剑】\n造成〔24＋80%×筋肉〕点物理伤害。\n主目标直接击伤后，获得3点剑意；每次出牌最多一次。\n消耗：4斗气。\n\n【灵犀剑阵】\n获得护盾〔27＋80%×筋肉〕。\n耗尽剑意，每点恢复 4 斗气。\n消耗：0斗气。\n\n【御灵心法】\n持续：以后剑招每实际消耗或恢复 1 斗气，获得 1 护盾；恢复量按气池空余计算。\n消耗：0斗气。",
       "cards": [
         "yixian_sword_17",
-        "yixian_sword_22",
+        "yixian_sword_11",
         "yixian_sword_33",
         "yixian_sword_88"
       ]
@@ -3966,10 +4534,10 @@
       "name": "金丹·云剑续势",
       "rank": 3,
       "index": 44,
-      "price": 70,
+      "price": 35,
       "role": "持续云剑回血，连云回气；保留灵气提高伤害并触发额外摸牌。",
       "acquisition": "达到金丹后购买；本境界不赠送。",
-      "description": "持续云剑回血，连云回气；保留灵气提高伤害并触发额外摸牌。\n达到金丹后购买；本境界不赠送。\n\n【云剑·柔心】\n持续：以后每打出一张云剑，恢复生命〔6＋30%×体质〕。\n消耗：0斗气。\n\n【云剑·点星】\n攻击部分另加 100%×能量，逐段计算。\n恢复斗气〔8＋20%×能量〕。\n恢复斗气后每剩余 1 灵气，每段伤害增加 3。\n消耗：0斗气。\n\n【巨鹏灵剑】\n造成〔27＋130%×能量〕点物理伤害。\n付费且恢复斗气后仍有至少 4 斗气：额外摸 1 张。\n消耗：8斗气。\n\n【云剑·汇灵】\n造成〔21＋100%×能量〕点物理伤害。\n连云：此前每连续用过一次云剑，恢复 4 斗气。\n消耗：0斗气。",
+      "description": "持续云剑回血，连云回气；保留灵气提高伤害并触发额外摸牌。\n达到金丹后购买；本境界不赠送。\n\n【云剑·柔心】\n持续：以后每打出一张云剑，恢复生命〔6＋30%×体质〕。\n消耗：0斗气。\n\n【云剑·点星】\n攻击部分另加 100%×筋肉，逐段计算。\n恢复斗气〔8＋20%×筋肉〕。\n恢复斗气后每剩余 1 灵气，每段伤害增加 3。\n消耗：0斗气。\n\n【巨鹏灵剑】\n造成〔27＋130%×能量〕点物理伤害。\n付费且恢复斗气后仍有至少 4 斗气：额外摸 1 张。\n消耗：8斗气。\n\n【云剑·汇灵】\n造成〔21＋100%×筋肉〕点物理伤害。\n连云：此前每连续用过一次云剑，恢复 4 斗气。\n消耗：0斗气。",
       "cards": [
         "yixian_sword_26",
         "yixian_sword_27",
@@ -3982,15 +4550,15 @@
       "name": "金丹·多段攻守",
       "rank": 3,
       "index": 45,
-      "price": 65,
-      "role": "云舞诀铺垫，三峰剑兑现剑意，镜花剑阵将护盾转为伤害。",
+      "price": 35,
+      "role": "云舞铺垫，三峰兑现剑意；反身剑准备下回合护盾，镜花将护盾转为伤害。",
       "acquisition": "达到金丹后购买；本境界不赠送。",
-      "description": "云舞诀铺垫，三峰剑兑现剑意，镜花剑阵将护盾转为伤害。\n达到金丹后购买；本境界不赠送。\n\n【云舞诀】\n获得护盾〔6＋70%×能量〕。\n恢复斗气〔8＋20%×能量〕。\n获得 2 点剑意。\n消耗：0斗气。\n\n【三峰剑】\n造成〔9＋50%×反应〕点物理伤害 ×3 段。\n消耗：0斗气。\n\n【镜花剑阵】\n攻击部分另加 120%×能量，逐段计算。\n获得护盾〔9＋80%×能量〕。\n本牌护盾生效后，每有 3 护盾，伤害增加 3。\n范围：主目标1格邻接的其他敌人，各承受本段伤害的30%，独立判定命中。\n消耗：0斗气。\n\n【狂剑·赤霄】\n造成〔15＋130%×筋肉〕点物理伤害。\n此前每用过一次狂剑，本次获得 1 点本场加攻，最多 2 点；在本牌伤害后获得。\n消耗：0斗气。",
+      "description": "云舞铺垫，三峰兑现剑意；反身剑准备下回合护盾，镜花将护盾转为伤害。\n达到金丹后购买；本境界不赠送。\n\n【云舞诀】\n获得护盾〔6＋70%×筋肉〕。\n恢复斗气〔8＋20%×筋肉〕。\n获得 2 点剑意。\n消耗：0斗气。\n\n【三峰剑】\n造成〔9＋50%×反应〕点物理伤害 ×3 段。\n消耗：0斗气。\n\n【镜花剑阵】\n攻击部分另加 120%×筋肉，逐段计算。\n获得护盾〔9＋80%×筋肉〕。\n本牌护盾生效后，每有 3 护盾，伤害增加 3。\n范围：主目标1格邻接的其他敌人，各承受本段伤害的30%，独立判定命中。\n消耗：0斗气。\n\n【反身剑】\n造成〔33＋100%×筋肉〕点物理伤害。\n主目标直接击伤后，下回合开始获得护盾〔21＋50%×体质〕；每次出牌最多一次。多次施放分别累积。\n消耗：4斗气。",
       "cards": [
         "yixian_sword_31",
         "yixian_sword_32",
         "yixian_sword_46",
-        "yixian_sword_102"
+        "yixian_sword_8"
       ]
     },
     {
@@ -3998,10 +4566,10 @@
       "name": "元婴·云剑",
       "rank": 4,
       "index": 46,
-      "price": 105,
+      "price": 50,
       "role": "四张云剑衔接：闪风摸牌、月影加攻、裂空爆发、灵海回气续连。",
       "acquisition": "达到元婴后购买；本境界不赠送。",
-      "description": "四张云剑衔接：闪风摸牌、月影加攻、裂空爆发、灵海回气续连。\n达到元婴后购买；本境界不赠送。\n\n【云剑·闪风】\n造成〔12＋120%×能量〕点物理伤害。\n连云：额外摸 1 张。\n消耗：0斗气。\n\n【云剑·月影】\n获得护盾〔3＋90%×能量〕。\n连云：本场加攻 +2。\n消耗：0斗气。\n\n【云剑·裂空】\n造成〔9＋70%×能量〕点物理伤害 ×2 段。\n连云：每段追加物理伤害〔3〕。\n本牌每段享受双倍剑意与本场加攻。\n连云：令下张攻击剑招无视物理防御，不穿透护盾。\n消耗：0斗气。\n\n【云剑·灵海】\n造成〔3＋120%×能量〕点物理伤害。\n恢复斗气〔12＋25%×能量〕。\n此牌按 2 次云剑计数。\n消耗：0斗气。",
+      "description": "四张云剑衔接：闪风摸牌、月影加攻、裂空爆发、灵海回气续连。\n达到元婴后购买；本境界不赠送。\n\n【云剑·闪风】\n造成〔12＋120%×筋肉〕点物理伤害。\n连云：额外摸 1 张。\n消耗：0斗气。\n\n【云剑·月影】\n获得护盾〔3＋90%×筋肉〕。\n连云：本场加攻 +2。\n消耗：0斗气。\n\n【云剑·裂空】\n造成〔9＋70%×反应〕点物理伤害 ×2 段。\n连云：每段追加物理伤害〔3〕。\n本牌每段享受双倍剑意与本场加攻。\n连云：令下张攻击剑招无视物理防御，不穿透护盾。\n消耗：0斗气。\n\n【云剑·灵海】\n造成〔3＋120%×筋肉〕点物理伤害。\n恢复斗气〔12＋25%×筋肉〕。\n此牌按 2 次云剑计数。\n消耗：0斗气。",
       "cards": [
         "yixian_sword_39",
         "yixian_moon",
@@ -4014,13 +4582,13 @@
       "name": "元婴·剑意剑阵",
       "rank": 4,
       "index": 47,
-      "price": 105,
-      "role": "聚灵续航，灵感积累剑意，狂剑叠段兑现，水月剑阵补盾。",
+      "price": 50,
+      "role": "聚灵续航，灵感积累剑意，流云乱剑多段兑现，水月剑阵补盾。",
       "acquisition": "达到元婴后购买；本境界不赠送。",
-      "description": "聚灵续航，灵感积累剑意，狂剑叠段兑现，水月剑阵补盾。\n达到元婴后购买；本境界不赠送。\n\n【聚灵心法】\n恢复斗气〔4＋25%×能量〕。\n持续：从下一回合起，每两个自己的回合恢复斗气〔4＋15%×能量〕。\n消耗：0斗气。\n\n【狂剑·二式】\n造成〔12＋40%×筋肉〕点物理伤害。\n此前每用过一次狂剑，此牌追加一段同伤害攻击，最多合计 8 段。\n消耗：0斗气。\n\n【灵感剑】\n造成〔24＋130%×能量〕点物理伤害。\n恢复斗气后，每剩余 1 灵气获得 1 剑意，最多 4 点。\n消耗：0斗气。\n\n【水月剑阵】\n获得护盾〔30＋110%×能量〕。\n持续：下 3 个自己的回合开始，各获得护盾〔10＋35%×能量〕。\n消耗：0斗气。",
+      "description": "聚灵续航，灵感积累剑意，流云乱剑多段兑现，水月剑阵补盾。\n达到元婴后购买；本境界不赠送。\n\n【聚灵心法】\n恢复斗气〔4＋25%×筋肉〕。\n持续：从下一回合起，每两个自己的回合恢复斗气〔4＋15%×筋肉〕。\n消耗：0斗气。\n\n【流云乱剑】\n造成〔6＋40%×反应〕点物理伤害，攻击4段。\n剑意整张只消费一次，每段享受同一份剑意与加攻收益。\n消耗：4斗气。\n\n【灵感剑】\n造成〔24＋130%×筋肉〕点物理伤害。\n恢复斗气后，每剩余 1 灵气获得 1 剑意，最多 4 点。\n消耗：0斗气。\n\n【水月剑阵】\n获得护盾〔30＋110%×筋肉〕。\n持续：下 3 个自己的回合开始，各获得护盾〔10＋35%×筋肉〕。\n消耗：0斗气。",
       "cards": [
         "yixian_sword_34",
-        "yixian_sword_35",
+        "yixian_sword_37",
         "yixian_sword_38",
         "yixian_sword_41"
       ]
@@ -4030,7 +4598,7 @@
       "name": "元婴·灵剑",
       "rank": 4,
       "index": 51,
-      "price": 105,
+      "price": 50,
       "role": "百鸟降低灵剑附加费；巨鲲攻守摸牌、白鹭按灵气输出、巨象多段加攻。",
       "acquisition": "达到元婴后购买；本境界不赠送。",
       "description": "百鸟降低灵剑附加费；巨鲲攻守摸牌、白鹭按灵气输出、巨象多段加攻。\n达到元婴后购买；本境界不赠送。\n\n【巨鲲灵剑】\n造成〔30＋150%×能量〕点物理伤害。\n获得护盾〔30＋120%×能量〕。\n额外摸1张。\n消耗：12斗气。\n\n【白鹭灵剑】\n造成〔15＋160%×能量〕点物理伤害。\n恢复斗气后每剩余 1 灵气，每段伤害增加 6。\n消耗：4斗气。\n\n【百鸟灵剑诀】\n恢复斗气〔4＋25%×能量〕。\n持续：灵剑牌的斗气费用减少 4，最低 0。\n消耗：0斗气。\n\n【巨象灵剑】\n造成〔9＋60%×能量〕点物理伤害 ×3 段。\n本牌攻击后，本场加攻 +2。\n消耗：8斗气。",
@@ -4046,10 +4614,10 @@
       "name": "化神·云剑",
       "rank": 5,
       "index": 48,
-      "price": 150,
+      "price": 75,
       "role": "四张云剑衔接：游龙击伤摸牌、凌波叠盾、追风续连、月华治疗。",
       "acquisition": "达到化神后购买；本境界不赠送。",
-      "description": "四张云剑衔接：游龙击伤摸牌、凌波叠盾、追风续连、月华治疗。\n达到化神后购买；本境界不赠送。\n\n【云剑·游龙】\n造成〔6＋65%×反应〕点物理伤害 ×2 段。\n连云：获得护盾〔9＋80%×能量〕。\n击伤：额外摸 1 张，每次出牌至多一次。\n消耗：0斗气。\n\n【云剑·凌波】\n造成〔9＋70%×能量〕点物理伤害 ×2 段。\n获得护盾〔9＋80%×能量〕。\n连云：此前每连续用过一次云剑，额外获得 9 护盾。\n消耗：0斗气。\n\n【云剑·追风】\n获得护盾〔6＋100%×能量〕。\n此牌按 2 次云剑计数。\n额外摸1张。\n连云时，本牌不消耗斗气。\n消耗：4斗气。\n\n【云剑·月华】\n恢复生命〔24＋100%×体质〕。\n连云：造成〔3〕点物理伤害 ×3 段。\n未连云时不攻击，仍消耗出牌费用。\n每有 1 剑意或 1 本场加攻，多恢复 6 生命；包含属性加成在内，总治疗最多 300。\n消耗：0斗气。",
+      "description": "四张云剑衔接：游龙击伤摸牌、凌波叠盾、追风续连、月华治疗。\n达到化神后购买；本境界不赠送。\n\n【云剑·游龙】\n造成〔6＋65%×反应〕点物理伤害 ×2 段。\n连云：获得护盾〔9＋80%×筋肉〕。\n击伤：额外摸 1 张，每次出牌至多一次。\n消耗：0斗气。\n\n【云剑·凌波】\n造成〔9＋70%×反应〕点物理伤害 ×2 段。\n获得护盾〔9＋80%×筋肉〕。\n连云：此前每连续用过一次云剑，额外获得 9 护盾。\n消耗：0斗气。\n\n【云剑·追风】\n获得护盾〔6＋100%×筋肉〕。\n此牌按 2 次云剑计数。\n额外摸1张。\n连云时，本牌不消耗斗气。\n消耗：4斗气。\n\n【云剑·月华】\n恢复生命〔24＋100%×体质〕。\n连云：造成〔3〕点物理伤害 ×3 段。\n未连云时不攻击，仍消耗出牌费用。\n每有 1 剑意或 1 本场加攻，多恢复 6 生命；包含属性加成在内，总治疗最多 300。\n消耗：0斗气。",
       "cards": [
         "yixian_sword_42",
         "yixian_sword_60",
@@ -4062,10 +4630,10 @@
       "name": "化神·剑意剑阵",
       "rank": 5,
       "index": 49,
-      "price": 150,
+      "price": 75,
       "role": "放大剑意，御空建盾，连环重施剑阵，千刃以护盾放大多段。",
       "acquisition": "达到化神后购买；本境界不赠送。",
-      "description": "放大剑意，御空建盾，连环重施剑阵，千刃以护盾放大多段。\n达到化神后购买；本境界不赠送。\n\n【御空剑阵】\n获得护盾〔24＋120%×能量〕。\n额外摸1张。\n出牌前有护盾时，本牌不消耗斗气。\n消耗：4斗气。\n\n【剑意激荡】\n现有剑意增加 80%，增加量向上取整。\n消耗：0斗气。\n\n【连环剑阵】\n获得护盾〔3＋60%×能量〕。\n重复自己上一次打出的其它剑阵的效果，无额外费用，不重复触发额外摸牌。\n消耗：0斗气。\n\n【千刃剑阵】\n造成〔3＋50%×能量〕点物理伤害 ×4 段。\n出牌时每有 15 护盾，每段伤害增加 3。\n消耗：0斗气。",
+      "description": "放大剑意，御空建盾，连环重施剑阵，千刃以护盾放大多段。\n达到化神后购买；本境界不赠送。\n\n【御空剑阵】\n获得护盾〔24＋120%×筋肉〕。\n额外摸1张。\n出牌前有护盾时，本牌不消耗斗气。\n消耗：4斗气。\n\n【剑意激荡】\n现有剑意增加 80%，增加量向上取整。\n消耗：0斗气。\n\n【连环剑阵】\n获得护盾〔3＋60%×筋肉〕。\n重复自己上一次打出的其它剑阵的效果，无额外费用，不重复触发额外摸牌。\n消耗：0斗气。\n\n【千刃剑阵】\n造成〔3＋50%×反应〕点物理伤害 ×4 段。\n出牌时每有 15 护盾，每段伤害增加 3。\n消耗：0斗气。",
       "cards": [
         "yixian_sword_25",
         "yixian_sword_44",
@@ -4078,10 +4646,10 @@
       "name": "化神·灵剑",
       "rank": 5,
       "index": 52,
-      "price": 150,
+      "price": 75,
       "role": "灵剑与飞剑支援：飞灵逐段回气，迅影／流光蓄意摸牌，万法耗尽灵气爆发。",
       "acquisition": "达到化神后购买；本境界不赠送。",
-      "description": "灵剑与飞剑支援：飞灵逐段回气，迅影／流光蓄意摸牌，万法耗尽灵气爆发。\n达到化神后购买；本境界不赠送。\n\n【飞灵闪影剑】\n造成〔3＋40%×反应〕点物理伤害 ×4 段。\n每一段造成实际生命伤害时恢复 4 斗气。\n消耗：0斗气。\n\n【万法归灵剑】\n造成〔15＋200%×能量〕点物理伤害。\n付出牌费用后耗尽剩余斗气，每完整消耗 4 斗气，伤害增加 15。\n消耗：0斗气。\n\n【迅影飞剑】\n造成〔12＋160%×反应〕点物理伤害。\n获得 1 点剑意。\n此牌不消耗、不享受剑意；仍享受本场加攻。\n本牌获得剑意后若剑意大于 0，额外摸 1 张。\n消耗：0斗气。\n\n【剑影流光】\n获得 1 点剑意。\n本牌获得剑意后，每剩余 1 灵气或 1 剑意获得 3 护盾，最多 24。\n额外摸1张。\n消耗：4斗气。",
+      "description": "灵剑与飞剑支援：飞灵逐段回气，迅影／流光蓄意摸牌，万法耗尽灵气爆发。\n达到化神后购买；本境界不赠送。\n\n【飞灵闪影剑】\n造成〔3＋40%×能量〕点物理伤害 ×4 段。\n每一段造成实际生命伤害时恢复 4 斗气。\n消耗：0斗气。\n\n【万法归灵剑】\n造成〔15＋200%×能量〕点物理伤害。\n付出牌费用后耗尽剩余斗气，每完整消耗 4 斗气，伤害增加 15。\n消耗：0斗气。\n\n【迅影飞剑】\n造成〔12＋160%×能量〕点物理伤害。\n获得 1 点剑意。\n此牌不消耗、不享受剑意；仍享受本场加攻。\n本牌获得剑意后若剑意大于 0，额外摸 1 张。\n消耗：0斗气。\n\n【剑影流光】\n获得 1 点剑意。\n本牌获得剑意后，每剩余 1 灵气或 1 剑意获得 3 护盾，最多 24。\n额外摸1张。\n消耗：4斗气。",
       "cards": [
         "yixian_sword_43",
         "yixian_sword_45",
@@ -4103,7 +4671,7 @@
         "yixian_five_fire"
       ],
       "acquisition": "原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。",
-      "description": "灵印激活，铺开五行。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【金灵印】\n造成物理伤害〔18＋100%×能量〕。\n激活金灵，本场持续生效。\n消耗：0斗气。\n\n【木灵印】\n恢复生命〔12＋50%×体质〕。\n恢复斗气〔4＋20%×能量〕。\n激活木灵，本场持续生效。\n消耗：0斗气。\n\n【水灵印】\n恢复斗气〔8＋20%×能量〕。\n激活水灵，本场持续生效。\n消耗：0斗气。\n\n【火灵印】\n恢复斗气〔4＋20%×能量〕。\n激活火灵，本场持续生效。\n对方直接失去9生命及本场上限。\n消耗：0斗气。",
+      "description": "灵印激活，铺开五行。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【金灵印】\n造成物理伤害〔18＋70%×反应＋30%×能量〕。\n激活金灵，本场持续生效。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【木灵印】\n恢复生命〔12＋35%×反应＋15%×体质〕。\n恢复斗气〔4＋14%×反应＋6%×能量〕。\n激活木灵，本场持续生效。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【水灵印】\n恢复斗气〔8＋14%×能量＋6%×反应〕。\n激活水灵，本场持续生效。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【火灵印】\n恢复斗气〔4＋14%×能量＋6%×反应〕。\n激活火灵，本场持续生效。\n对方直接失去9生命及本场上限。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "sect": "yixian.sect.lineage.five"
     },
     {
@@ -4120,7 +4688,7 @@
         "yixian_five_return"
       ],
       "acquisition": "原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。",
-      "description": "护盾起手，衔接金木水。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【土灵印】\n造成物理伤害〔9＋100%×能量〕。\n获得护盾〔12＋70%×能量〕。\n激活土灵，本场持续生效。\n消耗：0斗气。\n\n【金灵·针】\n造成物理伤害〔18＋100%×能量〕。\n金灵条件：获得2层锋锐。\n消耗：0斗气。\n\n【木灵·芽】\n造成物理伤害〔9＋40%×反应〕 ×2段。\n木灵条件：恢复〔15＋50%×体质〕生命。\n消耗：4斗气。\n\n【水灵·涛】\n造成物理伤害〔30＋100%×能量〕。\n水灵条件：获得1层水势。\n消耗：8斗气。",
+      "description": "护盾起手，衔接金木水。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【土灵印】\n造成物理伤害〔9＋70%×体质＋30%×反应〕。\n获得护盾〔12＋49%×体质＋21%×能量〕。\n激活土灵，本场持续生效。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【金灵·针】\n造成物理伤害〔18＋70%×反应＋30%×能量〕。\n金灵条件：获得2层锋锐。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【木灵·芽】\n造成物理伤害〔9＋28%×反应＋12%×能量〕 ×2段。\n木灵条件：恢复〔15＋35%×反应＋15%×体质〕生命。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。\n\n【水灵·涛】\n造成物理伤害〔30＋70%×能量＋30%×反应〕。\n水灵条件：获得1层水势。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：8斗气。",
       "sect": "yixian.sect.lineage.five"
     },
     {
@@ -4128,7 +4696,7 @@
       "name": "筑基·金木炼形",
       "rank": 2,
       "index": 80,
-      "price": 40,
+      "price": 0,
       "role": "金灵穿透与锋锐，主动激活触发伤害。",
       "cards": [
         "yixian_five_metal_edge",
@@ -4137,7 +4705,7 @@
         "yixian_five_fire_burst"
       ],
       "acquisition": "原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。",
-      "description": "金灵穿透与锋锐，主动激活触发伤害。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【金灵·穿心】\n造成物理伤害〔21＋100%×能量〕。\n金灵条件：下一次本派攻击首段无视护盾与物理防御，保留至触发。\n消耗：0斗气。\n\n【金灵阵】\n获得4层锋锐。\n持续：之后每次使用金灵牌后，锋锐+1；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n消耗：0斗气。\n\n【木灵·疏影】\n造成物理伤害〔9＋40%×反应〕 ×2段。\n木灵条件：获得1层加攻。\n消耗：4斗气。\n\n【镇印心法】\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n持续：每次主动激活五行，对方受到6非攻击伤害；重复激活也触发。\n造成18非攻击物理伤害，可被护盾抵消。\n消耗：0斗气。",
+      "description": "金灵穿透与锋锐，主动激活触发伤害。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【金灵·穿心】\n造成物理伤害〔21＋70%×反应＋30%×能量〕。\n金灵条件：下一次本派攻击首段无视护盾与物理防御，保留至触发。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【金灵阵】\n获得4层锋锐。\n持续：之后每次使用金灵牌后，锋锐+1；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n消耗：0斗气。\n\n【木灵·疏影】\n造成物理伤害〔9＋28%×反应＋12%×能量〕 ×2段。\n木灵条件：获得1层加攻。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。\n\n【镇印心法】\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n持续：每次主动激活五行，对方受到6非攻击伤害；重复激活也触发。\n造成18非攻击物理伤害，可被护盾抵消。\n消耗：0斗气。",
       "sect": "yixian.sect.lineage.five"
     },
     {
@@ -4145,7 +4713,7 @@
       "name": "筑基·水火镇印",
       "rank": 2,
       "index": 81,
-      "price": 45,
+      "price": 0,
       "role": "水木养息，火土攻守。",
       "cards": [
         "yixian_five_water_spring",
@@ -4154,7 +4722,7 @@
         "yixian_five_cycle_breath"
       ],
       "acquisition": "原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。",
-      "description": "水木养息，火土攻守。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【木灵·复苏】\n恢复斗气〔8＋20%×能量〕。\n木灵条件：恢复〔9＋50%×体质＋3×加攻〕生命。\n消耗：0斗气。\n\n【水灵·波澜】\n获得2层水势。\n水灵条件：本牌不消耗斗气。\n消耗：8斗气。\n\n【火灵·聚炎】\n恢复斗气〔8＋20%×能量〕。\n火灵条件：对方直接失去〔9〕生命及本场上限。\n消耗：0斗气。\n\n【土灵阵】\n获得护盾〔12＋70%×能量〕。\n持续：之后每次使用土灵牌后，护盾+6；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n消耗：0斗气。",
+      "description": "水木养息，火土攻守。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【木灵·复苏】\n恢复斗气〔8＋14%×反应＋6%×能量〕。\n木灵条件：恢复〔9＋35%×反应＋15%×体质＋3×加攻〕生命。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【水灵·波澜】\n获得2层水势。\n水灵条件：本牌不消耗斗气。\n消耗：8斗气。\n\n【火灵·聚炎】\n恢复斗气〔8＋14%×能量＋6%×反应〕。\n火灵条件：对方直接失去〔9〕生命及本场上限。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【土灵阵】\n获得护盾〔12＋49%×体质＋21%×能量〕。\n持续：之后每次使用土灵牌后，护盾+6；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "sect": "yixian.sect.lineage.five"
     },
     {
@@ -4162,7 +4730,7 @@
       "name": "金丹·锋锐流转",
       "rank": 3,
       "index": 82,
-      "price": 70,
+      "price": 0,
       "role": "锋锐循环，木灵续航。",
       "cards": [
         "yixian_five_metal_ring",
@@ -4171,7 +4739,7 @@
         "yixian_five_fire_chain"
       ],
       "acquisition": "原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。",
-      "description": "锋锐循环，木灵续航。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【金灵·蓄锐】\n获得护盾〔12＋70%×能量〕。\n获得4层锋锐。\n金灵条件：结算时每有12护盾，额外获得1锋锐。\n消耗：0斗气。\n\n【金灵·锋芒】\n造成物理伤害〔18＋100%×能量〕。\n金灵条件：每次攻击每击伤6生命，获得1锋锐。\n消耗：0斗气。\n\n【木灵·巡林】\n造成物理伤害〔3＋40%×反应〕 ×2段。\n每段击中护盾后，额外扣减等量剩余护盾，不溢出扣生命。\n木灵条件：本场已恢复过生命时，额外摸1张。\n消耗：4斗气。\n\n【木灵阵】\n自身本场生命上限+30。\n持续：之后每次使用木灵牌后，生命+6；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n消耗：0斗气。",
+      "description": "锋锐循环，木灵续航。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【金灵·蓄锐】\n获得护盾〔12＋49%×反应＋21%×体质〕。\n获得4层锋锐。\n金灵条件：结算时每有12护盾，额外获得1锋锐。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【金灵·锋芒】\n造成物理伤害〔18＋70%×反应＋30%×能量〕。\n金灵条件：每次攻击每击伤6生命，获得1锋锐。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【木灵·巡林】\n造成物理伤害〔3＋28%×反应＋12%×能量〕 ×2段。\n每段击中护盾后，额外扣减等量剩余护盾，不溢出扣生命。\n木灵条件：本场已恢复过生命时，额外摸1张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。\n\n【木灵阵】\n自身本场生命上限+30。\n持续：之后每次使用木灵牌后，生命+6；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n消耗：0斗气。",
       "sect": "yixian.sect.lineage.five"
     },
     {
@@ -4179,7 +4747,7 @@
       "name": "金丹·五灵成阵",
       "rank": 3,
       "index": 83,
-      "price": 65,
+      "price": 0,
       "role": "水火灵阵，回气蓄势。",
       "cards": [
         "yixian_five_water_mirror",
@@ -4188,7 +4756,7 @@
         "yixian_five_return_seed"
       ],
       "acquisition": "原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。",
-      "description": "水火灵阵，回气蓄势。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【水灵阵】\n恢复斗气〔8＋20%×能量〕。\n持续：之后每次使用水灵牌后，斗气+4；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n消耗：0斗气。\n\n【火灵阵】\n持续：之后每次使用火灵牌后，对方生命及本场上限−6；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n对方直接失去6生命及本场上限。\n消耗：0斗气。\n\n【火灵·轰爆】\n获得1层加攻。\n火灵条件：对方直接失去〔21＋3×加攻〕生命及本场上限。\n消耗：4斗气。\n\n【水灵·泉涌】\n恢复斗气〔8＋20%×能量〕。\n水灵条件：下一次本派攻击首段每击伤15生命，获得1水势。\n消耗：0斗气。",
+      "description": "水火灵阵，回气蓄势。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【水灵阵】\n恢复斗气〔8＋14%×能量＋6%×反应〕。\n持续：之后每次使用水灵牌后，斗气+4；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【火灵阵】\n持续：之后每次使用火灵牌后，对方生命及本场上限−6；本张不触发新建灵阵。\n本场限用一次，用后不再抽到；本场持续牌最多使用2张。\n对方直接失去6生命及本场上限。\n消耗：0斗气。\n\n【火灵·轰爆】\n获得1层加攻。\n火灵条件：对方直接失去〔21＋3×加攻〕生命及本场上限。\n消耗：4斗气。\n\n【水灵·泉涌】\n恢复斗气〔8＋14%×能量＋6%×反应〕。\n水灵条件：下一次本派攻击首段每击伤15生命，获得1水势。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "sect": "yixian.sect.lineage.five"
     },
     {
@@ -4196,7 +4764,7 @@
       "name": "元婴·金火破限",
       "rank": 4,
       "index": 84,
-      "price": 105,
+      "price": 0,
       "role": "金火快攻，飞梭摸牌、铁骨减伤与火灵削限。",
       "cards": [
         "yixian_five_metal_storm",
@@ -4205,7 +4773,7 @@
         "yixian_five_fire_inferno"
       ],
       "acquisition": "原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。",
-      "description": "金火快攻，飞梭摸牌、铁骨减伤与火灵削限。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【金灵·飞梭】\n造成物理伤害〔12＋100%×能量〕。\n本牌不触发、不消耗锋锐。\n金灵条件：额外摸1张。\n消耗：0斗气。\n\n【金灵·铁骨】\n金灵条件：受到伤害−15，最低减至1，持续本回合及下回合。\n消耗：0斗气。\n\n【火灵·瞬燃】\n对方本场生命上限−12。\n火灵条件：额外摸1张。\n消耗：0斗气。\n\n【火灵·灼心】\n造成物理伤害〔12＋40%×反应〕 ×2段。\n火灵条件：每次攻击每击伤3生命，对方本场上限−6。\n消耗：0斗气。",
+      "description": "金火快攻，飞梭摸牌、铁骨减伤与火灵削限。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【金灵·飞梭】\n造成物理伤害〔12＋70%×反应＋30%×能量〕。\n本牌不触发、不消耗锋锐。\n金灵条件：额外摸1张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【金灵·铁骨】\n金灵条件：受到伤害−15，最低减至1，持续本回合及下回合。\n消耗：0斗气。\n\n【火灵·瞬燃】\n对方本场生命上限−12。\n火灵条件：额外摸1张。\n消耗：0斗气。\n\n【火灵·灼心】\n造成物理伤害〔12＋28%×能量＋12%×反应〕 ×2段。\n火灵条件：每次攻击每击伤3生命，对方本场上限−6。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "sect": "yixian.sect.lineage.five"
     },
     {
@@ -4213,7 +4781,7 @@
       "name": "元婴·水木潜行",
       "rank": 4,
       "index": 85,
-      "price": 105,
+      "price": 0,
       "role": "水木续航，潜遁减伤、玫刺治疗、腾浪养势与暗香加攻。",
       "cards": [
         "yixian_five_water_sea",
@@ -4222,7 +4790,7 @@
         "yixian_five_earth_mountain"
       ],
       "acquisition": "原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。",
-      "description": "水木续航，潜遁减伤、玫刺治疗、腾浪养势与暗香加攻。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【水灵·潜遁】\n自身本场生命上限+6。\n恢复生命〔6＋50%×体质〕。\n水灵条件：物理／法术伤害减少40%，最低减至1，持续本回合及下回合。\n消耗：4斗气。\n\n【木灵·玫刺】\n造成物理伤害〔12＋40%×反应〕 ×3段。\n木灵条件：每次攻击每击伤9生命，恢复3生命。\n消耗：4斗气。\n\n【水灵·腾浪】\n自身本场生命上限+6。\n恢复生命〔6＋50%×体质〕。\n恢复斗气〔8＋20%×能量〕。\n水灵条件：本牌回气后，每有8斗气，获得1水势。\n消耗：0斗气。\n\n【木灵·暗香】\n恢复生命〔6＋50%×体质〕。\n恢复斗气〔8＋20%×能量〕。\n木灵条件：本牌回气后，每有12斗气，获得1加攻。\n消耗：0斗气。",
+      "description": "水木续航，潜遁减伤、玫刺治疗、腾浪养势与暗香加攻。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【水灵·潜遁】\n自身本场生命上限+6。\n恢复生命〔6＋35%×能量＋15%×体质〕。\n水灵条件：物理／法术伤害减少40%，最低减至1，持续本回合及下回合。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。\n\n【木灵·玫刺】\n造成物理伤害〔12＋28%×反应＋12%×能量〕 ×3段。\n木灵条件：每次攻击每击伤9生命，恢复3生命。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。\n\n【水灵·腾浪】\n自身本场生命上限+6。\n恢复生命〔6＋35%×能量＋15%×体质〕。\n恢复斗气〔8＋14%×能量＋6%×反应〕。\n水灵条件：本牌回气后，每有8斗气，获得1水势。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【木灵·暗香】\n恢复生命〔6＋35%×反应＋15%×体质〕。\n恢复斗气〔8＋14%×反应＋6%×能量〕。\n木灵条件：本牌回气后，每有12斗气，获得1加攻。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "sect": "yixian.sect.lineage.five"
     },
     {
@@ -4230,7 +4798,7 @@
       "name": "元婴·厚土混元",
       "rank": 4,
       "index": 86,
-      "price": 105,
+      "price": 0,
       "role": "厚土叠盾，护盾损失转收益。",
       "cards": [
         "yixian_five_metal_cycle",
@@ -4239,7 +4807,7 @@
         "yixian_five_return_circle"
       ],
       "acquisition": "原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。",
-      "description": "厚土叠盾，护盾损失转收益。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【土灵·流沙】\n造成物理伤害〔27＋100%×能量〕。\n土灵条件：本场每因攻击损失18护盾，本牌伤害+3。\n消耗：0斗气。\n\n【土灵·绝壁】\n获得护盾〔36＋70%×能量〕。\n土灵条件：本场每因攻击损失18护盾，本牌护盾+3。\n消耗：0斗气。\n\n【混元碎击】\n造成物理伤害〔12＋100%×能量〕。\n每段击中护盾后，额外扣减等量剩余护盾，不溢出扣生命。\n开战启用卡包中每有一种不同五行，本牌伤害+12。\n消耗：4斗气。\n\n【土灵·遁地】\n获得护盾〔12＋70%×能量〕。\n土灵条件：额外摸1张。\n消耗：0斗气。",
+      "description": "厚土叠盾，护盾损失转收益。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【土灵·流沙】\n造成物理伤害〔27＋70%×体质＋30%×反应〕。\n土灵条件：本场每因攻击损失18护盾，本牌伤害+3。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【土灵·绝壁】\n获得护盾〔36＋49%×体质＋21%×能量〕。\n土灵条件：本场每因攻击损失18护盾，本牌护盾+3。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【混元碎击】\n造成物理伤害〔12＋70%×能量＋30%×反应〕。\n每段击中护盾后，额外扣减等量剩余护盾，不溢出扣生命。\n开战启用卡包中每有一种不同五行，本牌伤害+12。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。\n\n【土灵·遁地】\n获得护盾〔12＋49%×体质＋21%×能量〕。\n土灵条件：额外摸1张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "sect": "yixian.sect.lineage.five"
     },
     {
@@ -4247,7 +4815,7 @@
       "name": "化神·五灵真法",
       "rank": 5,
       "index": 87,
-      "price": 150,
+      "price": 0,
       "role": "多段压限，出牌吸血。",
       "cards": [
         "yixian_five_metal_divine",
@@ -4256,7 +4824,7 @@
         "yixian_five_fire_heaven"
       ],
       "acquisition": "原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。",
-      "description": "多段压限，出牌吸血。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【金灵·巨鼎落】\n造成物理伤害〔21＋100%×能量〕。\n金灵条件：每次攻击实际扣生命加倍，包含锋锐收益。\n消耗：0斗气。\n\n【火灵·烈燎原】\n造成物理伤害〔18＋40%×反应〕 ×3段。\n火灵条件：攻击后将对方本场上限降至其当时生命−6，仅降低不提高。\n消耗：8斗气。\n\n【木灵·散枝叶】\n恢复斗气〔12＋20%×能量〕。\n木灵条件：之后3次使用任意卡牌后，吸取〔3＋3×加攻〕生命；不含本张。\n消耗：0斗气。\n\n【火灵·燃烬灭】\n对方直接失去27生命及本场上限。\n火灵条件：每层加攻多减6生命及上限。\n土灵条件：每9护盾多减3。\n金灵条件：每2锋锐多减3。三项独立判断。\n消耗：0斗气。",
+      "description": "多段压限，出牌吸血。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【金灵·巨鼎落】\n造成物理伤害〔21＋70%×反应＋30%×能量〕。\n金灵条件：每次攻击实际扣生命加倍，包含锋锐收益。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【火灵·烈燎原】\n造成物理伤害〔18＋28%×能量＋12%×反应〕 ×3段。\n火灵条件：攻击后将对方本场上限降至其当时生命−6，仅降低不提高。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：8斗气。\n\n【木灵·散枝叶】\n恢复斗气〔12＋14%×反应＋6%×能量〕。\n木灵条件：之后3次使用任意卡牌后，吸取〔3＋3×加攻〕生命；不含本张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【火灵·燃烬灭】\n对方直接失去27生命及本场上限。\n火灵条件：每层加攻多减6生命及上限。\n土灵条件：每9护盾多减3。\n金灵条件：每2锋锐多减3。三项独立判断。\n消耗：0斗气。",
       "sect": "yixian.sect.lineage.five"
     },
     {
@@ -4264,7 +4832,7 @@
       "name": "化神·生生流转",
       "rank": 5,
       "index": 88,
-      "price": 150,
+      "price": 0,
       "role": "加攻养势，锋锐循环。",
       "cards": [
         "yixian_five_water_divine",
@@ -4273,7 +4841,7 @@
         "yixian_five_cycle_divine"
       ],
       "acquisition": "原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。",
-      "description": "加攻养势，锋锐循环。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【木灵·柳纷飞】\n恢复生命〔9＋50%×体质〕。\n获得1层加攻。\n木灵条件：额外摸1张。\n消耗：4斗气。\n\n【水灵·纳百川】\n获得3层水势。\n水灵条件：自身生命及本场上限增加〔18＋3×水势〕。\n消耗：8斗气。\n\n【水灵·乘风浪】\n自身本场生命上限+12。\n恢复生命〔12＋50%×体质〕。\n获得1层水势。\n水灵条件：每1水势或4斗气获得2身法，本牌最多12点。\n消耗：0斗气。\n\n【金灵·回锋刃】\n造成物理伤害〔18＋40%×反应〕 ×2段。\n金灵条件：每次攻击消耗锋锐后返还60%，向上取整，可用于下一段。\n消耗：0斗气。",
+      "description": "加攻养势，锋锐循环。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【木灵·柳纷飞】\n恢复生命〔9＋35%×反应＋15%×体质〕。\n获得1层加攻。\n木灵条件：额外摸1张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。\n\n【水灵·纳百川】\n获得3层水势。\n水灵条件：自身生命及本场上限增加〔18＋3×水势〕。\n消耗：8斗气。\n\n【水灵·乘风浪】\n自身本场生命上限+12。\n恢复生命〔12＋35%×能量＋15%×体质〕。\n获得1层水势。\n水灵条件：每1水势或4斗气获得2身法，本牌最多12点。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【金灵·回锋刃】\n造成物理伤害〔18＋28%×反应＋12%×能量〕 ×2段。\n金灵条件：每次攻击消耗锋锐后返还60%，向上取整，可用于下一段。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "sect": "yixian.sect.lineage.five"
     },
     {
@@ -4281,7 +4849,7 @@
       "name": "化神·百川归宗",
       "rank": 5,
       "index": 89,
-      "price": 150,
+      "price": 0,
       "role": "护盾返还，水木连击。",
       "cards": [
         "yixian_five_water_origin",
@@ -4290,7 +4858,7 @@
         "yixian_five_return_origin"
       ],
       "acquisition": "原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。",
-      "description": "护盾返还，水木连击。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【土灵·合八荒】\n获得护盾〔36＋70%×能量〕。\n土灵条件：之后2次因攻击损失护盾时，返还损失值。\n消耗：0斗气。\n\n【木灵·春风拂】\n造成物理伤害〔6＋40%×反应〕 ×2段。\n恢复斗气〔8＋20%×能量〕。\n木灵条件：自身每次攻击击中后，生命及本场上限+6，持续4回合；本张也触发。\n消耗：0斗气。\n\n【水灵·雨纷纷】\n自身本场生命上限+30。\n恢复生命〔30＋50%×体质〕。\n获得1层水势。\n水灵条件：追加〔3＋3×水势〕攻击。\n木灵条件：追加〔3＋3×灵气〕攻击。两项独立判断，均受加攻。\n每次条件追加攻击另加40%×反应。\n消耗：4斗气。\n\n【金灵·浪淘沙】\n恢复斗气〔4＋20%×能量〕。\n获得2层锋锐。\n出牌前满足金灵或水灵条件：额外摸1张。\n消耗：0斗气。",
+      "description": "护盾返还，水木连击。\n原卡资料分类；突破解锁两张新牌；战斗中从已解锁牌库选八张组成卡包。\n\n【土灵·合八荒】\n获得护盾〔36＋49%×体质＋21%×能量〕。\n土灵条件：之后2次因攻击损失护盾时，返还损失值。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【木灵·春风拂】\n造成物理伤害〔6＋28%×反应＋12%×能量〕 ×2段。\n恢复斗气〔8＋14%×反应＋6%×能量〕。\n木灵条件：自身每次攻击击中后，生命及本场上限+6，持续4回合；本张也触发。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。\n\n【水灵·雨纷纷】\n自身本场生命上限+30。\n恢复生命〔30＋35%×能量＋15%×体质〕。\n获得1层水势。\n水灵条件：追加〔3＋3×水势〕攻击。\n木灵条件：追加〔3＋3×灵气〕攻击。两项独立判断，均受加攻。\n每次条件追加攻击另加〔0＋28%×能量＋12%×反应〕。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：4斗气。\n\n【金灵·浪淘沙】\n恢复斗气〔4＋14%×反应＋6%×能量〕。\n获得2层锋锐。\n出牌前满足金灵或水灵条件：额外摸1张。\n属性加成取牌面公式与主属性×总系数×70%的较大值；主属性开战锁定。\n消耗：0斗气。",
       "sect": "yixian.sect.lineage.five"
     },
     {
@@ -4334,7 +4902,7 @@
       "name": "筑基·卦雷周转",
       "rank": 2,
       "index": 90,
-      "price": 40,
+      "price": 20,
       "role": "卦雷输出，实际回气转为治疗。",
       "cards": [
         "yixian_star_curtain",
@@ -4352,7 +4920,7 @@
       "name": "筑基·星位生息",
       "rank": 2,
       "index": 91,
-      "price": 45,
+      "price": 20,
       "role": "产星、布位与后招治疗。",
       "cards": [
         "yixian_star_spring",
@@ -4370,7 +4938,7 @@
       "name": "金丹·后招生息",
       "rank": 3,
       "index": 92,
-      "price": 70,
+      "price": 35,
       "role": "后招攻辅，治疗量积累转为枯木伤害。",
       "cards": [
         "yixian_star_shelter",
@@ -4388,7 +4956,7 @@
       "name": "金丹·两仪星雷",
       "rank": 3,
       "index": 93,
-      "price": 65,
+      "price": 35,
       "role": "群体两仪、御雷返卦与星位多段的共用桥。",
       "cards": [
         "yixian_star_compass",
@@ -4406,7 +4974,7 @@
       "name": "元婴·卦雷攻守",
       "rank": 4,
       "index": 94,
-      "price": 105,
+      "price": 50,
       "role": "得卦伤害、分段雷击与卦象转化攻守。",
       "cards": [
         "yixian_star_comet",
@@ -4424,7 +4992,7 @@
       "name": "元婴·星弈攻守",
       "rank": 4,
       "index": 95,
-      "price": 105,
+      "price": 50,
       "role": "星位多段、摸牌与成长治疗。",
       "cards": [
         "yixian_star_mirror",
@@ -4442,7 +5010,7 @@
       "name": "化神·天元星断",
       "rank": 5,
       "index": 97,
-      "price": 150,
+      "price": 75,
       "role": "全局星位、多段攻守与行动控制。",
       "cards": [
         "yixian_star_forge",
@@ -4460,7 +5028,7 @@
       "name": "化神·五雷后招",
       "rank": 5,
       "index": 98,
-      "price": 150,
+      "price": 75,
       "role": "按卦雷爆发、重施及大额后招治疗收尾。",
       "cards": [
         "yixian_star_nova",
@@ -4481,7 +5049,7 @@
       "code": "yixian_sword",
       "statePrefix": "sword",
       "summary": "云剑连云、剑意爆发、灵剑回气",
-      "rulesDescription": "首回合起手3张，之后每回合开始自动摸2张，保留原手牌，满10张不再摸牌。主动摸牌消耗1行动力，出牌不耗行动力；最多启用8包。\n费用以斗气显示；涉及灵气的效果按4斗气＝1灵气计算。恢复不超过上限，属性倍率向下取整。再次行动＝额外摸1张。\n连云：上一张打出的牌为云剑时生效。剑意：攻击剑招整张消耗一次，每点使每段伤害+3；本场加攻每层使每段伤害+3。\n持续效果同名不叠加，数值取施放时属性。\n定向群攻：横排选同阵位，贯穿沿施法者朝目标方向向后延伸；邻接范围为1格。普通战斗使用原生槽位投影，行军／塔防使用地图坐标。次目标不复制击伤奖励，剑意仅消费一次；伤害比例逐段向下取整。震雷扩散须主目标实际击伤。"
+      "rulesDescription": "首回合起手3张，之后每回合开始自动摸2张，保留原手牌，满10张不再摸牌。主动摸牌消耗1行动力，出牌不耗行动力；最多启用8包。\n费用以斗气显示；涉及灵气的效果按4斗气＝1灵气计算。恢复不超过上限，属性倍率向下取整。再次行动＝额外摸1张。\n连云：上一张打出的牌为云剑时生效。剑意：攻击剑招整张消耗一次，每点使每段伤害+3；本场加攻每层使每段伤害+3。\n持续效果同名不叠加，数值取施放时属性。\n定向群攻：横排选同阵位，贯穿沿施法者朝目标方向向后延伸；邻接范围为1格。普通战斗使用原生槽位投影，行军／塔防使用地图坐标。次目标不复制击伤奖励，剑意仅消费一次；伤害比例逐段向下取整。震雷扩散须主目标实际击伤。\n属性：非灵剑单段攻击取筋肉、多段取反应；普通护盾与通用回气取筋肉，治疗与延迟护盾取体质。灵剑路线九张牌的属性成长统一取能量。炼气开放独立被动「灵剑转化」（20奖励点）：扣除筋肉／反应／体质各60%，转为能量；各项向下取整。"
     },
     {
       "id": "yixian.sect.lineage.five",
@@ -4490,7 +5058,17 @@
       "statePrefix": "five",
       "summary": "固定八张卡包；突破解锁两张，战斗中从本局牌库免费组牌。灵印激活、同系衔接与五行相生，锋锐、加攻、水势与五灵阵各有分工。",
       "originalRestoration": true,
-      "rulesDescription": "首回合起手3张，之后每回合开始自动摸2张，保留原手牌，满10张不再摸牌。主动摸牌消耗1行动力，出牌不耗行动力；五行固定一个八张卡包；突破解锁两张新牌，战斗中从已解锁牌库免费调整八张。\n费用以斗气显示；涉及灵气的效果按4斗气＝1灵气计算。恢复不超过上限，属性倍率向下取整。再次行动＝额外摸1张。\n元素条件：该行已激活，或上一张牌同属性／按金→水→木→火→土→金相生。普通五行牌不自动激活；中性牌打断衔接，不清除激活。\n锋锐：本派攻击击伤时清空，每层额外扣3生命。加攻：本派每次攻击每层+3伤害。水势：自身回合结束时每层造成3点非攻击伤害。\n身法每累计10点摸1张，余数本场保留。持续牌用后本场不再抽到，本场持续牌最多使用2张。"
+      "cultivation": {
+        "fallbackBp": 7000,
+        "growth": [
+          3,
+          5,
+          8,
+          12,
+          16
+        ]
+      },
+      "rulesDescription": "首回合起手3张，之后每回合开始自动摸2张，保留原手牌，满10张不再摸牌。主动摸牌消耗1行动力，出牌不耗行动力；五行固定一个八张卡包；突破解锁两张新牌，战斗中从已解锁牌库免费调整八张。\n费用以斗气显示；涉及灵气的效果按4斗气＝1灵气计算。恢复不超过上限，属性倍率向下取整。再次行动＝额外摸1张。\n元素条件：该行已激活，或上一张牌同属性／按金→水→木→火→土→金相生。普通五行牌不自动激活；中性牌打断衔接，不清除激活。\n锋锐：本派攻击击伤时清空，每层额外扣3生命。加攻：本派每次攻击每层+3伤害。水势：自身回合结束时每层造成3点非攻击伤害。\n身法每累计10点摸1张，余数本场保留。持续牌用后本场不再抽到，本场持续牌最多使用2张。\n属性：水火主能量，金木主反应，土主体质；已有成长效果采用双属性。自动以能量／反应／体质最高项承接血统成长，开战锁定。每项属性加成取牌面多属性与主属性×总系数×70%的较大值，不相加；混搭不降低其他牌效率。固定量、费用和层数不变，无须选择修行方案。"
     },
     {
       "id": "yixian.sect.lineage.star",
@@ -4506,7 +5084,7 @@
       "key": "gentle_rain",
       "name": "五行印记",
       "rank": 2,
-      "price": 40,
+      "price": 20,
       "description": "战斗开始时，下一张五行牌先激活其所属五行。",
       "sourceId": "3000001:五行印记",
       "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000001.html",
@@ -4519,7 +5097,7 @@
       "key": "forged_edge",
       "name": "百草生息",
       "rank": 2,
-      "price": 40,
+      "price": 20,
       "description": "使用中性牌时激活木灵；每次主动激活木灵，本场生命上限+6，不治疗。",
       "sourceId": "3000006:百草生息",
       "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000006.html",
@@ -4532,7 +5110,7 @@
       "key": "heaven_cycle",
       "name": "水灵印记",
       "rank": 3,
-      "price": 40,
+      "price": 20,
       "description": "战斗开始时激活水灵，并恢复4斗气。",
       "sourceId": "3000003:水灵印记",
       "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000003.html",
@@ -4545,7 +5123,7 @@
       "key": "endless_cycle",
       "name": "五行爆炎",
       "rank": 3,
-      "price": 40,
+      "price": 20,
       "description": "战斗开始时，自身本场生命上限−12；每次主动激活五行，对方生命及本场上限−9。",
       "sourceId": "3000005:五行爆炎",
       "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/characters/3000005.html",
@@ -4558,7 +5136,7 @@
       "key": "astral_practice",
       "name": "卜卦",
       "rank": 2,
-      "price": 40,
+      "price": 20,
       "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/fates/divination-30.html",
       "originalText": "筑基：战斗开始时加1卦象；金丹：命元+4；战斗开始时加1卦象；元婴：战斗开始时加2卦象；化神：战斗开始时加3卦象",
       "description": "战斗开始获得卦象：筑基1／金丹1／元婴2／化神3。",
@@ -4571,7 +5149,7 @@
       "key": "observatory",
       "name": "观星",
       "rank": 2,
-      "price": 40,
+      "price": 20,
       "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/fates/stargaze-31.html",
       "originalText": "筑基：命元减6；战斗开始时加1星力；金丹：战斗开始时加1星力；元婴：命元+6；战斗开始时加1星力；化神：命元+12；战斗开始时加1星力",
       "description": "战斗开始获得1星力。",
@@ -4584,7 +5162,7 @@
       "key": "seven_pivots",
       "name": "后发制人",
       "rank": 3,
-      "price": 40,
+      "price": 20,
       "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/fates/post-strike-71.html",
       "originalText": "筑基：含后招效果的牌在首次使用时加2防和2生命及上限；金丹：含后招效果的牌在首次使用时加3防和3生命及上限；元婴：含后招效果的牌在首次使用时加4防和4生命及上限；化神：含后招效果的牌在首次使用时加5防和5生命及上限",
       "description": "含后招的本门牌本场首次使用时，自身获得护盾并增加本场生命上限，另为随机一名存活己方角色（优先未满血）恢复等量生命：金丹9／元婴12／化神15。",
@@ -4597,7 +5175,7 @@
       "key": "destiny_cycle",
       "name": "妙手回春",
       "rank": 3,
-      "price": 40,
+      "price": 20,
       "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/fates/rejuvenation-120.html",
       "originalText": "筑基：生命上限+3；战斗中每次加生命时先加3临时生命上限；金丹：生命上限+4；战斗中每次加生命时先加4临时生命上限；元婴：生命上限+5；战斗中每次加生命时先加5临时生命上限；化神：生命上限+6；战斗中每次加生命时先加6临时生命上限",
       "description": "开战时及每次本门治疗前，增加自身本场生命上限：金丹12／元婴15／化神18。",

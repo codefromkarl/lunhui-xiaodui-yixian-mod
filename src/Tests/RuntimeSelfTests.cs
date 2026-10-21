@@ -56,7 +56,41 @@ namespace YixianSect
             {
                 Require(RunAuthorityCatalogFactory.TryCreate(data,out worlds,out var worldError),"world catalog: "+worldError);
                 Require(BattleAuthorityCatalogFactory.TryCreate(data,out battles,out var battleError),"battle catalog: "+battleError);
-                if(Environment.GetCommandLineArgs().Contains("-yixian-visual-selftest"))
+                if(Environment.GetCommandLineArgs().Contains("-yixian-spirit-selftest"))
+                {
+                    report["scope"]="sword-spirit-conversion";
+                    Case("sword_spirit_conversion_native",SpiritConversionCommands);
+                }
+                else if(Environment.GetCommandLineArgs().Contains("-yixian-economy-selftest"))
+                {
+                    report["scope"]="reward-economy";
+                    Case("reward_prices_native_wallet_and_render",RewardEconomy);
+                }
+                else if(Environment.GetCommandLineArgs().Contains("-yixian-depth-selftest"))
+                {
+                    report["scope"]="sect-depth-effects";
+                    Case("decision_routes_and_native_segments",SectDepth);
+                    StartCoroutine(DepthPlayback(observe,()=>ReferenceEquals(live,game.Run?.Authority)&&(!liveRevision.HasValue||live.Run.Revision==liveRevision.Value),saves));
+                    return;
+                }
+                else if(Environment.GetCommandLineArgs().Contains("-yixian-sword-replacements-selftest"))
+                {
+                    report["scope"]="sword-replacements";
+                    Case("sword_three_replacement_mechanics",SwordReplacements);
+                    Case("actual_prefab_visuals",Visual);
+                }
+                else if(Environment.GetCommandLineArgs().Contains("-yixian-star-healing-selftest"))
+                {
+                    report["scope"]="star-selected-healing";
+                    Case("star_qi_therapy_selected_healing",()=>SevenStarSelectedHealingNetwork(4000017));
+                    Case("star_mountains_selected_healing",()=>SevenStarSelectedHealingNetwork(4000060));
+                }
+                else if(Environment.GetCommandLineArgs().Contains("-yixian-cultivation-selftest"))
+                {
+                    report["scope"]="five-cultivation";
+                    Case("five_automatic_attributes_and_render",FiveCultivationCommands);
+                }
+                else if(Environment.GetCommandLineArgs().Contains("-yixian-visual-selftest"))
                 {
                     report["scope"]="hand-layout-and-cost";
                     Case("opening_hand_hud_card_tab",OpeningHandHud);
@@ -81,6 +115,7 @@ namespace YixianSect
                 if(!schoolsOnly)
                 {
                 Case("catalog_and_descriptions",Catalog);
+                Case("reward_prices_native_wallet_and_render",RewardEconomy);
                 Case("progression_real_commands",Progression);
                 Case("sword_build_selection_and_save",SwordBuildSelection);
                 Case("sword_route_benchmarks",SwordRouteBenchmarks);
@@ -101,6 +136,8 @@ namespace YixianSect
                 Case("real_health_hit_vs_shield",HealthHit);
                 Case("sword_four_targeted_areas",SwordAreas);
                 Case("all_cards_native_execution",AllCards);
+                Case("sword_three_replacement_mechanics",SwordReplacements);
+                Case("sword_spirit_conversion_native",SpiritConversionCommands);
                 }
                 Case("network_same_school_sword",()=>SameSchoolNetwork(SwordRules.Lineage));
                 Case("network_same_school_five",()=>SameSchoolNetwork(FiveElementRules.Lineage));
@@ -122,9 +159,12 @@ namespace YixianSect
                 }
             }
             catch(Exception ex){cases.Add(new JObject{["name"]="suite_setup",["status"]="failed",["error"]=ex.ToString()});}
+            CompleteDepthOrSuite(observe,ReferenceEquals(live,game.Run?.Authority)&&(!liveRevision.HasValue||live.Run.Revision==liveRevision.Value),saves);
+        }
+        private void CompleteDepthOrSuite(Action<string> observe,bool same,JObject saves)
+        {
             ModLog.LineWritten-=observe;
             cases.Add(new JObject{["name"]="runtime_diagnostics_clean",["status"]=diagnostics.Count==0?"passed":"failed",["warnings_and_errors"]=diagnostics});
-            bool same=ReferenceEquals(live,game.Run?.Authority)&&(!liveRevision.HasValue||live.Run.Revision==liveRevision.Value);
             bool unchanged=JToken.DeepEquals(saves,SaveInventory());
             cases.Add(new JObject{["name"]="user_state_isolation",["status"]=same&&unchanged?"passed":"failed",["live_authority_unchanged"]=same,["save_inventory_unchanged"]=unchanged});
             report["completedUtc"]=DateTime.UtcNow.ToString("O");
@@ -252,6 +292,11 @@ namespace YixianSect
             foreach(int index in Enumerable.Range(40,10))Require(CardTableCatalog.Packs[12+index-40].ShelfIndex==index,"legacy cp ordinal changed: "+index);
             Require(data.ModBattlePlanner!=null,"mod planner unavailable");
             foreach(var id in SectRegistry.Cards.Keys)Require(data.ModBattlePlanner.HasActionScript(id),"handler missing "+id);
+            foreach(var key in new[]{"yixian_sword_22","yixian_sword_35","yixian_sword_102"})
+            {
+                var retired=new StableId(SectRegistry.CardPrefix+key);
+                Require(!data.TryGetAbility(retired,out _)&&!data.ModBattlePlanner.HasActionScript(retired.Value)&&!CardTableCatalog.Cards.Any(c=>c.AbilityId==retired),"deleted mad sword is still active: "+key);
+            }
             foreach(var rank in Enumerable.Range(1,5))
             {
                 Require(data.TryGetLineage(Sect,out var lineage),"lineage content missing");
@@ -485,13 +530,13 @@ namespace YixianSect
             var rows=new JArray();
             foreach(int amount in new[]{10,50,150})
             {
-                var f=New(seed:73061);f.System(RunDeveloperCommand.SetAttribute,(int)ExchangeAttribute.Energy,amount);
+                var f=New(seed:73061);f.System(RunDeveloperCommand.SetAttribute,(int)ExchangeAttribute.Muscle,amount);
                 f.StartBattle();f.Prepare(Card(1));f.System(RunDeveloperCommand.SetVitals,int.MinValue,int.MinValue,3);
                 Require(f.Enemy.SetVitals(f.Enemy.CurrentHealth,10000).IsSuccess,"growth shield fixture");
                 var receipt=f.Play(Card(1));int actual=receipt.Targets.Sum(t=>t.ResolvedDamage);
-                rows.Add(new JObject{["requested_energy"]=amount,["effective_energy"]=f.P.DerivedStats.EffectiveAttributes.Energy,["resolved_damage"]=actual});
+                rows.Add(new JObject{["requested_muscle"]=amount,["effective_muscle"]=f.P.DerivedStats.EffectiveAttributes.Muscle,["resolved_damage"]=actual});
             }
-            Require((int)rows[0]["resolved_damage"]<(int)rows[1]["resolved_damage"]&&(int)rows[1]["resolved_damage"]<(int)rows[2]["resolved_damage"],"damage not growing with effective energy");
+            Require((int)rows[0]["resolved_damage"]<(int)rows[1]["resolved_damage"]&&(int)rows[1]["resolved_damage"]<(int)rows[2]["resolved_damage"],"damage not growing with effective muscle");
             return new JObject{["series"]=rows};
         }
         private JObject Details()
@@ -524,7 +569,17 @@ namespace YixianSect
             var f=New(buyCurrent:false);var snapshot=RunAuthoritySnapshotProjector.Create(f.A,Slot);
             f.StartBattle();var battleSnapshot=RunAuthoritySnapshotProjector.Create(f.A,Slot);
             var model=BattleUIPresentationMapper.BuildCardTable(battleSnapshot,battleSnapshot.Players.First(p=>p.Slot==Slot),data,battles);
-            return VisualSelfTests.Run(Path.Combine(Path.GetDirectoryName(path),Path.GetFileNameWithoutExtension(path)),model,snapshot.Players.First(p=>p.Slot==Slot),snapshot,data,battles);
+            string directory=Path.Combine(Path.GetDirectoryName(path),Path.GetFileNameWithoutExtension(path));
+            var visual=VisualSelfTests.Run(directory,model,snapshot.Players.First(p=>p.Slot==Slot),snapshot,data,battles);
+            var reduced=new JArray();
+            foreach(string key in new[]{"yixian_sword_intent2","yixian_sword_intent3","yixian_sword_intent4"})
+            {
+                var preview=model.Packs.Single(p=>p.Id==SectIds.Pack(key));
+                Require(preview.Cards.Count==4&&!preview.Cards.Any(c=>c.Title.Contains("狂剑")),"replacement preview count or deleted card");
+                reduced.Add(VisualSelfTests.Run(Path.Combine(directory,key),model,snapshot.Players.First(p=>p.Slot==Slot),snapshot,data,battles,SectIds.Pack(key),false));
+            }
+            visual["replacement_packs"]=reduced;
+            return visual;
         }
         private static void ToughEnemy(CombatantState target)
         {

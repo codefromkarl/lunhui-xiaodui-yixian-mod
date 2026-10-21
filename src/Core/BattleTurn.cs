@@ -27,7 +27,9 @@ namespace YixianSect
         public void Set(string key, int value) => Plan.SetState(Key(key), Math.Max(0, value));
         public void Add(string key, int amount) => Set(key, Get(key) + amount);
         public int Value(JObject rules, string key)
-            => ((int?)rules[key] ?? 0) + FixedPointMath.ScaleByBasisPointsFloor(AttributeScaling.Read((CombatScalingAttribute)((int?)rules[key + "Attr"] ?? 40), Actor.Attributes.GetValueOrDefault()), (int?)rules[key + "Bp"] ?? 0);
+            => Sect == FiveElementRules.Lineage && rules[key + "Scaling"] is JArray
+                ? FiveCultivation.Value(this, rules, key)
+                : ((int?)rules[key] ?? 0) + FixedPointMath.ScaleByBasisPointsFloor(AttributeScaling.Read((CombatScalingAttribute)((int?)rules[key + "Attr"] ?? 40), Actor.Attributes.GetValueOrDefault()), (int?)rules[key + "Bp"] ?? 0);
         public void Damage(int amount, int hits = 1, StableId target = default)
         {
             var targets = target.IsEmpty ? Context.Action?.Targets ?? Array.Empty<StableId>() : new[] { target };

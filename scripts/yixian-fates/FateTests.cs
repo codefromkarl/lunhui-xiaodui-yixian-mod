@@ -56,7 +56,7 @@ class FateTests
    var rt=(RuntimeAbilityDefinition)Private(typeof(RuntimeAbilityDefinition),def);runtimes.Add(rt);
    Check(ContentVocabulary.Check("abilities",f).Count()==0,"vocabulary "+o["id"]);
    var shelf=new ShelfAbilityDefinition(rt.StableId,new StableId(SwordRules.Lineage),DKind.Lineage,FateRules.Required(rt.StableId.Value),(int)f["purchasePrice"]);shelves.Add(shelf);
-   Check(shelf.Price==40,"approved fate price "+rt.StableId);
+   Check(shelf.Price==20,"approved fate price "+rt.StableId);
    foreach(var ar in rt.Ranks)
    {
     int rank=RuntimeAbilityDefinition.RequiredRank(ar);

@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using Reincarnation.Domain;
 using YixianSect;
 
@@ -24,7 +25,7 @@ partial class Program
                 var proposal=SwordBuilds.Recommend(route,rank,owned);
                 Check(proposal.Selected.Count==Math.Min(3,owned.Length)&&proposal.Selected.Distinct().Count()==proposal.Selected.Count,"route valid size "+rank);
                 Check(proposal.Selected.All(owned.Contains)&&proposal.Missing.Count==0,"route ownership and realm "+rank);
-                var stats=SwordBuilds.Inspect(proposal.Selected);Check(stats.Cards==4*proposal.Selected.Count&&stats.Cloud<=stats.Cards&&stats.Qi<=stats.Cards&&stats.Draw<=stats.Cards,"pool exact size");
+                var stats=SwordBuilds.Inspect(proposal.Selected);Check(stats.Cards==proposal.Selected.Sum(id=>((JArray)SwordRules.FindPack(id)["cards"]).Count)&&stats.Cloud<=stats.Cards&&stats.Qi<=stats.Cards&&stats.Draw<=stats.Cards,"pool exact size");
                 Check(proposal.IsTransition==(route.Key=="spirit"&&rank<4),"spirit maturity marked");
             }
         }

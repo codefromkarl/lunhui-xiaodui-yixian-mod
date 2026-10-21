@@ -103,6 +103,7 @@ namespace YixianSect
             }
             public void View()
             {
+                SectDecisionHints.Publish(P,U.RuntimeId,Lineage,Get);
                 T.View(Views);
                 for (int i = 1; i <= 8; i++)
                 {

@@ -14,7 +14,7 @@ namespace YixianSect
 {
     internal static class FiveDeckPanel
     {
-        private sealed class Context { internal bool Native;internal IReadOnlyList<StableId> Cards,Unlocked; }
+        private sealed class Context { internal bool Native;internal int Rank;internal IReadOnlyList<StableId> Cards,Unlocked; }
         private sealed class View { internal Button Edit;internal Vector2[][] Original; }
         private static readonly ConditionalWeakTable<CardTableViewModel,Context> Contexts=new ConditionalWeakTable<CardTableViewModel,Context>();
         private static readonly ConditionalWeakTable<CardTablePackPanel,View> Views=new ConditionalWeakTable<CardTablePackPanel,View>();
@@ -22,7 +22,9 @@ namespace YixianSect
         internal static void ConfigureModel(RunPlayerSnapshot player,CardTableViewModel model)
         {
             if(!player.Lineages.Any(l=>l.LineageId.Value==FiveElementRules.Lineage&&l.Rank>0))return;
-            Contexts.Remove(model);Contexts.Add(model,new Context{Native=player.Lineages.Any(l=>l.LineageId==CardTableCatalog.LineageId),Cards=FiveDeckRules.Cards(player.PurchasedShelfAbilityIds),Unlocked=FiveDeckRules.Unlocked(player.PurchasedShelfAbilityIds)});
+            foreach (var pack in model.Packs.Where(p => p.Id == FiveDeckRules.PackId.Value))
+                pack.RecipeLine += "\n自动主属性，开战锁定；牌面多属性与主属性70%折算取大。";
+            Contexts.Remove(model);Contexts.Add(model,new Context{Rank=player.Lineages.First(l=>l.LineageId.Value==FiveElementRules.Lineage).Rank,Native=player.Lineages.Any(l=>l.LineageId==CardTableCatalog.LineageId),Cards=FiveDeckRules.Cards(player.PurchasedShelfAbilityIds),Unlocked=FiveDeckRules.Unlocked(player.PurchasedShelfAbilityIds)});
         }
         internal static bool PureFive(CardTableViewModel model)=>model!=null&&Contexts.TryGetValue(model,out var context)&&!context.Native;
         internal static void OpenEditor(CardTablePackPanel panel)
@@ -30,7 +32,7 @@ namespace YixianSect
             var model=Read<CardTableViewModel>(panel,"model");
             if(model==null||!Contexts.TryGetValue(model,out var context)||!model.CanManage||Read<bool>(panel,"waiting")||Read<bool>(panel,"fate"))return;
             var draft=new FiveDeckDraft(context.Unlocked,context.Cards,FiveDeckRules.Size);
-            FiveCardPicker.Open(panel.transform,"FiveDeckEditor","调整五行卡组","从已解锁的 "+context.Unlocked.Count+" 张中选择八张。免费保存，保留手牌；下次抽牌使用新卡组。","保存八张卡组",draft,Read<TMP_Text>(panel,"title").font,cards=>Save(panel,cards));
+            FiveCardPicker.Open(panel.transform,"FiveDeckEditor","调整五行卡组","从已解锁的 "+context.Unlocked.Count+" 张中选择八张。免费保存，保留手牌；下次抽牌使用新卡组。","保存八张卡组",draft,Read<TMP_Text>(panel,"title").font,cards=>Save(panel,cards),context.Rank);
         }
         internal static void Save(CardTablePackPanel panel,IReadOnlyList<StableId> cards)
         {

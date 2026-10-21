@@ -145,6 +145,7 @@ partial class Program
         StarFateExpansionTests();
         StarHealingTests();
         StarRouteTests();
+        StarSelectedHealingTests();
         Console.WriteLine("PASS original seven-star: 40 real cards / 10 packs / source realms and costs / constant position power / independent omen RNG / second-use post / virtual slots / four sourced fates");
     }
     static void StarFateExpansionTests()

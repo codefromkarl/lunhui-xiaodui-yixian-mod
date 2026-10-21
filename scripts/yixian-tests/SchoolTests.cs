@@ -68,7 +68,7 @@ partial class Program
     static void ProjectSchoolLineages()
     {
         var lineages=new List<RuntimeLineageDefinition>();
-        foreach(var op in JObject.Parse(File.ReadAllText(Mod+"/content/lineages.json"))["operations"].OfType<JObject>())
+        foreach(var op in JObject.Parse(File.ReadAllText(Mod+"/content/lineages.json"))["operations"].OfType<JObject>().Where(o=>SectRegistry.IsSect((string)o["id"])))
         {
             var fields=(JObject)op["fields"];
             var steps=fields["steps"].OfType<JObject>().Select(step=>new ContentProgressionStepDefinition((string)step["rank"],(int)step["price"],Operation((JObject)step["passive"]),Operation((JObject)step["active"]))).ToArray();

@@ -12,6 +12,8 @@ using Reincarnation.UI.Windows;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 namespace YixianSect
 {
@@ -40,8 +42,9 @@ namespace YixianSect
                 var original=new[]{rect.anchorMin,rect.anchorMax,rect.pivot,rect.anchoredPosition,rect.sizeDelta};
                 var layoutRects=new[]{"cardDrawButton","cardPackButton","cardFateButton"}.Select(n=>(RectTransform)Field<Button>(hud,n).transform)
                     .Concat(new[]{"cardDrawButton","cardPackButton","cardFateButton"}.Select(n=>Field<Button>(hud,n).GetComponentInChildren<TMP_Text>(true).rectTransform))
-                    .Concat(new[]{Field<RectTransform>(hud,"cardHandContent")}).ToArray();
-                var layoutOriginal=layoutRects.Select(RectValues).ToArray();int count=model.Hand.Count;
+                    .Concat(new[]{Field<RectTransform>(hud,"cardHandContent"),(RectTransform)Field<Button>(hud,"endTurnButton").transform.parent}).ToArray();
+                var layoutOriginal=layoutRects.Select(RectValues).ToArray();
+                var nativeControls=layoutRects.Take(3).Select(r=>new UiRectSnapshot(r)).ToArray();int count=model.Hand.Count;
                 float font=summary.fontSize;var alignment=summary.alignment;var overflow=summary.overflowMode;
                 hud.SetBattleActive(true);hud.SetCardTable(model);hud.SetActions(actions);
                 var abilities=Field<System.Collections.Generic.List<ActionCardViewModel>>(hud,"abilityActions");
@@ -51,7 +54,7 @@ namespace YixianSect
                 var expected=actions.Where(a=>a.ActionKind==CombatActionKind.UseAbility&&!BattleUIPresentationMapper.IsCardTableCommand(a)&&a.CommandActionId!=BattleAuthorityService.GeneLockActionId.Value);
                 Require(abilities.Select(a=>a.StableId).SequenceEqual(expected.Select(a=>a.StableId)),"HUD lost unrelated abilities");
                 var result=new JObject{["school"]=school,["cards_in_card_tab"]=count,["sect_cards_in_abilities"]=0,["actual_hud_prefab"]=true};
-                CaptureOpeningHud(root,hud,hand,directory,result);
+                CaptureOpeningHud(root,hud,hand,directory,result,nativeControls);
                 var held=hand[0];var heldModel=held.Model;string sectId=heldModel.CardId;
                 try
                 {
@@ -63,6 +66,7 @@ namespace YixianSect
                 finally{heldModel.CardId=sectId;}
                 hud.SetCardTable(new CardTableViewModel());
                 Require(original.SequenceEqual(new[]{rect.anchorMin,rect.anchorMax,rect.pivot,rect.anchoredPosition,rect.sizeDelta})&&summary.fontSize==font&&summary.alignment==alignment&&summary.overflowMode==overflow,"sect header layout leaked into non-sect HUD");
+                Require(hud.GetComponentsInChildren<SectHandHoverFilter>(true).All(f=>!f.Active),"hand hover exclusion leaked into native HUD");
                 result["native_layout_restored"]=true;
                 for(int i=0;i<layoutRects.Length;i++)Require(RectValues(layoutRects[i]).SequenceEqual(layoutOriginal[i]),"card control/hand layout leaked into native HUD");
                 result["native_card_art_restored"]=true;
@@ -70,50 +74,64 @@ namespace YixianSect
             }
             finally{UnityEngine.Object.DestroyImmediate(root);}
         }
-        private static void CaptureOpeningHud(GameObject root,GameHUDWindow hud,System.Collections.Generic.List<CardTableHandCard> hand,string directory,JObject result)
+        private static void CaptureOpeningHud(GameObject root,GameHUDWindow hud,System.Collections.Generic.List<CardTableHandCard> hand,string directory,JObject result,UiRectSnapshot[] nativeControls)
         {
             // Render the shipped HUD without opening a live window or binding an
             // intent sink. Disabled HUD and raycasters keep this synchronous
             // capture isolated from the player's input and run.
             hud.enabled=false;
+            var nativeScaler=UnityEngine.Object.FindObjectsOfType<CanvasScaler>().FirstOrDefault(c=>c.gameObject.scene.IsValid()&&c.isActiveAndEnabled&&c.GetComponent<Canvas>()?.isRootCanvas==true);
+            Require(nativeScaler!=null,"native root CanvasScaler missing");
+            var referenceResolution=nativeScaler.referenceResolution;
             var canvas=root.AddComponent<Canvas>();var scaler=root.AddComponent<CanvasScaler>();
+            result["native_canvas_reference"]=new JObject{["name"]=nativeScaler.name,["x"]=referenceResolution.x,["y"]=referenceResolution.y};
             var cameraObject=new GameObject("YixianOpeningHudCamera");var camera=cameraObject.AddComponent<Camera>();
             camera.enabled=false;camera.cullingMask=1<<30;camera.clearFlags=CameraClearFlags.SolidColor;camera.backgroundColor=new Color(.08f,.07f,.06f);
-            var texture=new RenderTexture(1600,900,24);camera.targetTexture=texture;
+            var texture=new RenderTexture(1600,900,24);camera.targetTexture=texture;camera.aspect=1600f/900;
             canvas.renderMode=RenderMode.ScreenSpaceCamera;canvas.worldCamera=camera;canvas.planeDistance=1;
-            scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize;scaler.referenceResolution=new Vector2(1600,900);scaler.matchWidthOrHeight=.5f;
+            scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize;scaler.referenceResolution=referenceResolution;scaler.matchWidthOrHeight=nativeScaler.matchWidthOrHeight;
             try
             {
                 foreach(var raycaster in root.GetComponentsInChildren<GraphicRaycaster>(true))raycaster.enabled=false;
-                hud.SetBattleActive(true);hud.SetBattleContext(1,1,1);hud.SelectTab(GameHudTab.Cards);
+                hud.SetBattleActive(true);hud.SetBattleContext(1,1,1);hud.SetInteractionAvailability(true,true,false,"");hud.SelectTab(GameHudTab.Cards);
                 Layer(root.transform);root.SetActive(true);
                 Require(Field<Button>(hud,"cardTabButton").gameObject.activeInHierarchy,"Cards tab button not visible in battle HUD");
                 Require(Field<GameObject>(hud,"cardPage").activeInHierarchy&&hand.Count(c=>c.gameObject.activeInHierarchy)==(int)result["cards_in_card_tab"],"hand cards not visible in rendered Cards tab");
                 Require(!Field<GameObject>(hud,"abilityPage").activeInHierarchy,"ability page overlaps card page");
                 Capture(camera,texture,root,Path.Combine(directory,"opening-cards.png"));
-                CheckHandHeader(root,hud,directory,result);
+                result["native_controls"]=JArray.FromObject(nativeControls.Select(r=>RectEvidence(r.BoundsIn((RectTransform)root.transform))));
+                File.WriteAllText(Path.Combine(directory,"native-controls.json"),result["native_controls"].ToString());
+                CheckHandHeader(root,hud,directory,result,nativeControls:nativeControls);
                 var viewports=new JArray();float originalScale=canvas.scaleFactor;scaler.enabled=false;
                 foreach(var resolution in new[]{new Vector2Int(1280,720),new Vector2Int(1280,960),new Vector2Int(2560,1080)})
                 {
                     var alternate=new RenderTexture(resolution.x,resolution.y,24);
                     try
                     {
-                        camera.targetTexture=alternate;
-                        canvas.scaleFactor=Mathf.Sqrt(resolution.x/1600f*resolution.y/900f);
+                        camera.targetTexture=alternate;camera.aspect=resolution.x/(float)resolution.y;
+                        canvas.scaleFactor=Mathf.Pow(resolution.x/referenceResolution.x,1-scaler.matchWidthOrHeight)*Mathf.Pow(resolution.y/referenceResolution.y,scaler.matchWidthOrHeight);
+                        camera.Render();
                         string suffix=resolution.x+"x"+resolution.y;
                         Capture(camera,alternate,root,Path.Combine(directory,"opening-cards-"+suffix+".png"));
+                        Require(Mathf.Abs(((RectTransform)root.transform).rect.width/((RectTransform)root.transform).rect.height-resolution.x/(float)resolution.y)<.01f,"HUD canvas aspect did not follow camera viewport");
                         Require(Mathf.Abs(canvas.pixelRect.width-resolution.x)<1&&Mathf.Abs(canvas.pixelRect.height-resolution.y)<1,"viewport fixture did not resize its actual canvas");
                         var check=new JObject{["pixels"]=suffix};
-                        CheckHandHeader(root,hud,directory,check,"header-layout-"+suffix+".json");viewports.Add(check);
+                        CheckHandHeader(root,hud,directory,check,"header-layout-"+suffix+".json",nativeControls);viewports.Add(check);
+                        if(resolution.x==1280&&resolution.y==960){
+                            hud.SetInteractionAvailability(true,false,false,"",true);
+                            Capture(camera,alternate,root,Path.Combine(directory,"cancel-turn-"+suffix+".png"));
+                            CheckHandHeader(root,hud,directory,new JObject(),"cancel-turn-"+suffix+".json",nativeControls);
+                            hud.SetInteractionAvailability(true,true,false,"");
+                        }
                     }
-                    finally{camera.targetTexture=texture;alternate.Release();UnityEngine.Object.DestroyImmediate(alternate);}
+                    finally{camera.targetTexture=texture;camera.aspect=1600f/900;alternate.Release();UnityEngine.Object.DestroyImmediate(alternate);}
                 }
                 canvas.scaleFactor=originalScale;scaler.enabled=true;result["additional_viewports"]=viewports;
                 hud.SelectTab(GameHudTab.Ability);
                 Require(Field<GameObject>(hud,"abilityPage").activeInHierarchy&&!Field<GameObject>(hud,"cardPage").activeInHierarchy,"ability tab did not hide card page");
                 Capture(camera,texture,root,Path.Combine(directory,"opening-abilities.png"));
                 result["rendered_cards"]="opening-cards.png";result["rendered_abilities"]="opening-abilities.png";
-                result["scope"]="shipped HUD rendered through isolated camera; no physical mouse test";
+                result["scope"]="shipped HUD, native canvas reference, full turn bar, native geometry, scoped GraphicRaycaster and PointerClick; isolated camera, no live intent sink or campaign";
             }
             finally
             {
@@ -135,7 +153,7 @@ namespace YixianSect
             var b=root.InverseTransformPoint(text.transform.TransformPoint(bounds.max));
             return Rect.MinMaxRect(Mathf.Min(a.x,b.x),Mathf.Min(a.y,b.y),Mathf.Max(a.x,b.x),Mathf.Max(a.y,b.y));
         }
-        private static void CheckHandHeader(GameObject root,GameHUDWindow hud,string directory,JObject result,string filename="header-layout.json")
+        private static void CheckHandHeader(GameObject root,GameHUDWindow hud,string directory,JObject result,string filename="header-layout.json",UiRectSnapshot[] nativeControls=null)
         {
             var canvasRect=(RectTransform)root.transform;var summary=Field<TMP_Text>(hud,"cardTableSummary");
             var header=HudRect(canvasRect,summary.rectTransform);
@@ -184,11 +202,33 @@ namespace YixianSect
                 bool visible=canvasRect.rect.Contains(bounds.min)&&canvasRect.rect.Contains(bounds.max);
                 clippedControl|=!visible;controlOverHand|=held.Any(c=>bounds.Overlaps(HudRect(canvasRect,(RectTransform)c.transform)));
                 var label=button.GetComponentInChildren<TMP_Text>(true);
-                Require(!label.isTextOverflowing,"card control label clipped: "+name);
+                Require(!label.isTextOverflowing,"card control label clipped: "+name+"; label="+label.rectTransform.rect+"; button="+((RectTransform)button.transform).rect+"; preferred="+label.GetPreferredValues(label.text,label.rectTransform.rect.width,0)+"; font="+label.fontSize+"; margin="+label.margin+"; parentLayout="+string.Join(",",button.GetComponents<Component>().Select(c=>c.GetType().Name)));
                 var table=Field<CardTableViewModel>(hud,"cardTable");
                 if(name=="cardDrawButton")Require(button.IsInteractable()==table.DrawAction.IsAvailable,"draw control availability differs from its formal command");
                 controls.Add(new JObject{["name"]=name,["bounds"]=RectEvidence(bounds),["visible"]=visible,["text"]=label.text,["interactable"]=button.IsInteractable(),["text_overflow"]=label.isTextOverflowing});
             }
+            var endTurn=Field<Button>(hud,"endTurnButton");Require(endTurn.gameObject.activeInHierarchy,"end turn missing from HUD fixture");
+            var turnBounds=HudRect(canvasRect,(RectTransform)endTurn.transform);
+            evidence["end_turn"]=RectEvidence(turnBounds);
+            Require(canvasRect.rect.Contains(turnBounds.min)&&canvasRect.rect.Contains(turnBounds.max),"end turn control clipped by viewport");
+            bool turnOverlap=controls.OfType<JObject>().Any(c=>{var b=c["bounds"];return turnBounds.Overlaps(new Rect((float)b["x"],(float)b["y"],(float)b["width"],(float)b["height"]));});
+            evidence["controls_overlap_end_turn"]=turnOverlap;
+            if(nativeControls!=null){
+                var original=nativeControls.Select(r=>r.BoundsIn(canvasRect)).ToArray();
+                evidence["native_controls"]=new JArray(original.Select(RectEvidence));
+                bool nativeSafe=original.All(r=>canvasRect.rect.Contains(r.min)&&canvasRect.rect.Contains(r.max)&&!r.Overlaps(turnBounds));
+                // When the original controls fit, normal viewports must retain their positions/sizes.
+                if(nativeSafe)for(int i=0;i<original.Length;i++){
+                    var actual=HudRect(canvasRect,nativeControls[i].Rect);
+                    Require(Mathf.Abs(original[i].x-actual.x)<.1f&&Mathf.Abs(original[i].width-actual.width)<.1f,"safe native card-control horizontal placement was changed; expected="+original[i]+" actual="+actual+" canvas="+canvasRect.rect+" turn="+turnBounds);
+                    Require(actual.yMax<=original[i].yMax+.1f&&actual.height>=original[i].height-.1f,"native control row moved upward or shrank");
+                    if(i==0)Require(Mathf.Abs(original[i].yMax-actual.yMax)<.1f,"safe native control column top changed");
+                }
+                evidence["safe_native_layout_preserved"]=nativeSafe;
+            }
+            evidence["turn_hierarchy"]=new JArray(endTurn.GetComponentsInParent<RectTransform>().Select(t=>new JObject{["name"]=t.name,["rect"]=t.rect.ToString(),["anchorMin"]=t.anchorMin.ToString(),["anchorMax"]=t.anchorMax.ToString(),["size"]=t.sizeDelta.ToString(),["position"]=t.anchoredPosition.ToString(),["scale"]=t.localScale.ToString()}));
+            Directory.CreateDirectory(directory);File.WriteAllText(Path.Combine(directory,"geometry-"+filename),evidence.ToString());
+            evidence["pointer_hits"]=CheckCardControlPointers(root,hud);
             evidence["controls"]=controls;evidence["clipped_controls"]=clippedControl;evidence["controls_overlap_hand"]=controlOverHand;
             result["header_layout"]=evidence;Directory.CreateDirectory(directory);
             File.WriteAllText(Path.Combine(directory,filename),evidence.ToString());
@@ -197,7 +237,30 @@ namespace YixianSect
             Require(!guideOverlap,"hand summary overlaps formation text");
             Require(canvasRect.rect.Contains(header.min)&&canvasRect.rect.Contains(header.max),"hand summary outside canvas");
             Require(!clippedControl&&!controlOverHand,"draw/pack controls clipped or overlapping hand");
+            Require(!turnOverlap,"draw/pack controls overlap end turn");
             Require(held.All(c=>{var r=HudRect(canvasRect,(RectTransform)c.transform);return canvasRect.rect.Contains(r.min)&&canvasRect.rect.Contains(r.max);}),"hand card clipped by viewport");
+        }
+        private static JArray CheckCardControlPointers(GameObject root,GameHUDWindow hud)
+        {
+            var canvas=root.GetComponent<Canvas>();var raycaster=root.GetComponent<GraphicRaycaster>()??root.AddComponent<GraphicRaycaster>();raycaster.enabled=false;
+            var result=new JArray();
+            var hand=Field<RectTransform>(hud,"cardHandContent");var handCenter=RectTransformUtility.WorldToScreenPoint(canvas.worldCamera,hand.TransformPoint(hand.rect.center));
+            foreach(var filter in root.GetComponentsInChildren<SectHandHoverFilter>(true))Require(filter.IsRaycastLocationValid(handCenter,canvas.worldCamera),"hand hover no longer accepts the fan center");
+            foreach(string name in new[]{"cardDrawButton","cardPackButton","cardFateButton","endTurnButton"}){
+                var button=Field<Button>(hud,name);var rect=(RectTransform)button.transform;
+                var point=RectTransformUtility.WorldToScreenPoint(canvas.worldCamera,rect.TransformPoint(rect.rect.center));
+                var pointer=new PointerEventData(EventSystem.current){position=point,button=PointerEventData.InputButton.Left};
+                var hits=new List<RaycastResult>();raycaster.Raycast(pointer,hits);
+                var top=hits.OrderByDescending(h=>h.sortingOrder).ThenByDescending(h=>h.depth).FirstOrDefault();
+                Require(top.gameObject!=null&&top.gameObject.GetComponentInParent<Button>()==button,"HUD control covered at pointer: "+name+"; top="+top.gameObject?.name+" point="+point+" rect="+HudRect((RectTransform)root.transform,rect)+" camera="+canvas.worldCamera.pixelRect+" screen="+Screen.width+"x"+Screen.height);
+                bool clicked=false;
+                UnityEngine.Events.UnityAction receive=()=>clicked=true;
+                button.onClick.AddListener(receive);var scale=button.transform.localScale;
+                try{if(button.IsInteractable()){ExecuteEvents.Execute(button.gameObject,pointer,ExecuteEvents.pointerClickHandler);Require(clicked,"HUD pointer click not received: "+name);}}
+                finally{button.onClick.RemoveListener(receive);button.transform.localScale=scale;}
+                result.Add(new JObject{["control"]=name,["top_hit"]=top.gameObject.name,["click_received"]=clicked,["interactable"]=button.IsInteractable()});
+            }
+            return result;
         }
         internal static JObject Run(string directory,CardTableViewModel model,RunPlayerSnapshot player,RunAuthoritySnapshot snapshot,Reincarnation.Runtime.Managers.DataManager data,BattleAuthorityCatalog battles,string packId="yixian.sect.pack.yixian_sword_cloud2",bool foundation=true)
         {
@@ -217,9 +280,10 @@ namespace YixianSect
                 var wanted=model.Packs.First(p=>p.Id==packId);
                 AccessTools.Method(typeof(CardTablePackPanel),"Preview").Invoke(panel,new object[]{wanted});
                 var entries=Field<CardTableListEntry[]>(panel,"previewCards");
-                Require(entries.Count(e=>e.gameObject.activeSelf)==4,"actual panel not showing exactly 4 cards");
+                int visibleCards=Math.Min(4,wanted.Cards.Count);
+                Require(entries.Count(e=>e.gameObject.activeSelf)==visibleCards,"actual panel card count differs from selected pack");
                 var label=Field<TMP_Text>(panel,"detail");
-                for(int i=0;i<4;i++)
+                for(int i=0;i<visibleCards;i++)
                 {
                     entries[i].Clicked();
                     Require(label.text==wanted.Cards[i].Detail&&label.text.Contains("消耗"),"actual preview click lost full description");
@@ -246,7 +310,7 @@ namespace YixianSect
                 Layer(root.transform);
                 var labels=Field<TMP_Text[]>(shop,"freePickDescriptions");var options=Field<GameObject[]>(shop,"freePickOptionRoots");
                 Require(options.Count(o=>o.activeSelf)==2,"foundation dialog does not have 2 options");
-                for(int i=0;i<2;i++)Require(labels[i].text.Contains("消耗")&&labels[i].text.Contains("×能量"),"choice dialog has no cost/formula");
+                for(int i=0;i<2;i++)Require(labels[i].text.Contains("消耗")&&labels[i].text.Contains("×筋肉"),"Sword foundation choice dialog has no cost/muscle formula");
                 Capture(camera,texture,root,Path.Combine(directory,"foundation-choice.png"));
                 result["foundation_choice"]="foundation-choice.png";result["choice_options_checked"]=2;
                 result["scope"]="actual shipped prefabs, isolated camera; preview callbacks, not physical mouse hit testing";
@@ -261,7 +325,7 @@ namespace YixianSect
         }
         private static void Capture(Camera camera,RenderTexture texture,GameObject root,string path)
         {
-            Canvas.ForceUpdateCanvases();
+            Canvas.ForceUpdateCanvases();camera.Render();Canvas.ForceUpdateCanvases();
             // This synchronous camera capture occurs inside Update; run the
             // production layout pass that normally follows in LateUpdate.
             foreach(var layout in root.GetComponentsInChildren<SectHandHeaderLayout>(true))layout.Apply();

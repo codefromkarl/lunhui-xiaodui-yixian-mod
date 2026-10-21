@@ -117,8 +117,8 @@ namespace YixianSect
     {
         private static void Postfix(int rank, ref string __result)
         {
-            if (rank == 2) __result += "\n本境界开放仙命：剑韵修炼（40点）、云之道（40点）；随当前境界成长。";
-            if (rank == 3) __result += "\n本境界开放仙命：剑阵守护（40点）、云海连绵（40点）；购买后完整生效。";
+            if (rank == 2) __result += "\n本境界开放仙命：剑韵修炼（20点）、云之道（20点）；随当前境界成长。";
+            if (rank == 3) __result += "\n本境界开放仙命：剑阵守护（20点）、云海连绵（20点）；购买后完整生效。";
         }
     }
 }

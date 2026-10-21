@@ -26,7 +26,16 @@ namespace YixianSect
             public CardTableSnapshot Table(byte slot)=>B(slot).CaptureCardTable(new PlayerSlotId(slot));
             public SessionCommandContext Next(byte slot)=>new SessionCommandContext(slot,Session.SessionEpoch,++Sequences[slot]);
             public void System(byte slot,RunDeveloperCommand kind,params int[] numbers)
-            {var r=A.Ledger.ExecuteSystem(RunSystemAction.Developer(kind,new PlayerSlotId(slot),default,numbers));Require(r.IsSuccess,"multiplayer fixture system "+kind+": "+r.ErrorCode);}
+            {
+                if(kind==RunDeveloperCommand.SetVitals&&numbers.Length==3)
+                {
+                    var actor=Actor(slot);
+                    if((numbers[0]==int.MinValue||numbers[0]==actor.CurrentHealth)&&
+                       (numbers[1]==int.MinValue||numbers[1]==actor.CurrentMagic)&&
+                       (numbers[2]==int.MinValue||numbers[2]==actor.ActionPoints))return;
+                }
+                var r=A.Ledger.ExecuteSystem(RunSystemAction.Developer(kind,new PlayerSlotId(slot),default,numbers));Require(r.IsSuccess,"multiplayer fixture system "+kind+": "+r.ErrorCode);
+            }
             public RunCommandDispatchResult Send(byte slot,RunCommand command,bool replay=false)
             {
                 var battle=A.TryGetPlayerBattle(new PlayerSlotId(slot),out var b)?b.Battle:null;

@@ -17,6 +17,7 @@ namespace YixianSect
             {
                 var table=context.Tables?["cardtable"] as JObject ?? throw new ArgumentException("缺少 tables.cardtable。");
                 SwordRules.Configure(table);
+                FiveCultivation.Validate();
                 CardTableBridge.InjectCatalog();
                 new Harmony(context.PackageId).PatchAll(typeof(Entry).Assembly);
                 OriginalHealthRules.Register(context);

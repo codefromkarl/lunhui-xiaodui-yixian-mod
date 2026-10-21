@@ -1,0 +1,221 @@
+{
+  "cards": [
+    {
+      "key": "yixian_sword_11",
+      "name": "形意剑",
+      "rank": 2,
+      "kind": 0,
+      "sourceId": "1000011",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000011.html",
+      "sourceLevel": 1,
+      "realm": "筑基",
+      "originalText": "8\n攻\n击伤\n：\n剑意\n+3",
+      "tags": [],
+      "rules": {
+        "damage": 8,
+        "damageAttr": 10,
+        "damageBp": 8000,
+        "onHit": "intent3",
+        "hitIntent": 3,
+        "cost": 1
+      },
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000011_zh.webp",
+        "cost": 1,
+        "evidence": "logs/sword-replacements/research/three-original-faces.png",
+        "grid": "row1-col1"
+      },
+      "adaptation": "保留归档原作1级基础攻、击伤与段数机制；攻击／防御固定量×3，1灵气×4斗气。属性成长是Mod适配：形意与反身攻击取筋肉，反身延迟盾取体质，流云多段取反应；不属于原作牌面数值。",
+      "description": "造成〔24＋80%×筋肉〕点物理伤害。\n主目标直接击伤后，获得3点剑意；每次出牌最多一次。\n消耗：0 行动力，4 斗气（灵气费用 1×4；无基础费）。"
+    },
+    {
+      "key": "yixian_sword_8",
+      "name": "反身剑",
+      "rank": 3,
+      "kind": 0,
+      "sourceId": "1000008",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000008.html",
+      "sourceLevel": 1,
+      "realm": "金丹",
+      "originalText": "11\n攻\n击伤\n：下回合加7\n防",
+      "tags": [],
+      "rules": {
+        "damage": 11,
+        "damageAttr": 10,
+        "damageBp": 10000,
+        "onHit": "nextShield",
+        "nextShield": 7,
+        "nextShieldAttr": 30,
+        "nextShieldBp": 5000,
+        "cost": 1
+      },
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000008_zh.webp",
+        "cost": 1,
+        "evidence": "logs/sword-replacements/research/three-original-faces.png",
+        "grid": "row1-col2"
+      },
+      "adaptation": "保留归档原作1级基础攻、击伤与段数机制；攻击／防御固定量×3，1灵气×4斗气。属性成长是Mod适配：形意与反身攻击取筋肉，反身延迟盾取体质，流云多段取反应；不属于原作牌面数值。",
+      "description": "造成〔33＋100%×筋肉〕点物理伤害。\n主目标直接击伤后，下回合开始获得护盾〔21＋50%×体质〕；每次出牌最多一次。多次施放分别累积。\n消耗：0 行动力，4 斗气（灵气费用 1×4；无基础费）。"
+    },
+    {
+      "key": "yixian_sword_37",
+      "name": "流云乱剑",
+      "rank": 4,
+      "kind": 0,
+      "sourceId": "1000037",
+      "sourceUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000037.html",
+      "sourceLevel": 1,
+      "realm": "元婴",
+      "originalText": "2\n攻×4",
+      "tags": [],
+      "rules": {
+        "damage": 2,
+        "damageAttr": 20,
+        "damageBp": 4000,
+        "hits": 4,
+        "cost": 1
+      },
+      "costSource": {
+        "sourceUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000037_zh.webp",
+        "cost": 1,
+        "evidence": "logs/sword-replacements/research/three-original-faces.png",
+        "grid": "row1-col3"
+      },
+      "adaptation": "保留归档原作1级基础攻、击伤与段数机制；攻击／防御固定量×3，1灵气×4斗气。属性成长是Mod适配：形意与反身攻击取筋肉，反身延迟盾取体质，流云多段取反应；不属于原作牌面数值。",
+      "description": "造成〔6＋40%×反应〕点物理伤害，攻击4段。\n剑意整张只消费一次，每段享受同一份剑意与加攻收益。\n消耗：0 行动力，4 斗气（灵气费用 1×4；无基础费）。"
+    }
+  ],
+  "abilities": [
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_11",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_11",
+        "displayName": "形意剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_8",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_8",
+        "displayName": "反身剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.card.yixian_sword_37",
+      "fields": {
+        "iconKey": "icon.yixian.sect.card.yixian_sword_37",
+        "displayName": "流云乱剑",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 10,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "effect.script",
+              "targetKind": 50,
+              "values": [
+                {
+                  "key": "apCost",
+                  "intValue": 0
+                },
+                {
+                  "key": "energyCost",
+                  "intValue": 4
+                },
+                {
+                  "key": "energyPool",
+                  "intValue": 40
+                },
+                {
+                  "key": "range",
+                  "intValue": 5
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "purpose": "独立锁定三张已选补位牌的身份、基础规则、原卡费用和声明；其他45张仍按历史夹具精确保留。"
+}

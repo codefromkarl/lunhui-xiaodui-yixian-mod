@@ -39,5 +39,23 @@
     "selectedCards": 96,
     "mismatches": 0,
     "basis": "48五行＋48七星原卡卡面角标逐张复核，结果与费用账本和源数据均一致；全部卡面补充RGBA像素哈希。"
+  },
+  "swordReplacementSources": {
+    "retrievedAt": "2026-10-21T15:43:48.086700+08:00",
+    "cards": [
+      "1000011",
+      "1000008",
+      "1000037"
+    ],
+    "pages": [
+      "https://sharpobject.github.io/yxp_wiki/zh/cards/1000011.html",
+      "https://sharpobject.github.io/yxp_wiki/zh/cards/1000008.html",
+      "https://sharpobject.github.io/yxp_wiki/zh/cards/1000037.html"
+    ],
+    "originalImages": "card-images/<sourceId>.webp",
+    "activeCards": 48,
+    "archivedSwordCosts": 51,
+    "costEvidence": "logs/sword-replacements/research/three-original-faces.png",
+    "note": "Three non-mad replacements; all three original faces show one lingqi. Archive retains three removed mad-sword records. Original attack/defense and stat scaling adaptation are separate."
   }
 }

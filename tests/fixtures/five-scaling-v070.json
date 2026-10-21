@@ -1,0 +1,622 @@
+{
+  "description": "Pre-cultivation Five rules. Fixed values, conditions, costs and total scaling budgets are preserved by the user-authorized multi-attribute adaptation.",
+  "cards": [
+    {
+      "key": "yixian_five_metal",
+      "sourceId": "7000001",
+      "rules": {
+        "damage": 18,
+        "activate": 1,
+        "damageAttr": 40,
+        "damageBp": 10000,
+        "originalRule": 1,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_water",
+      "sourceId": "7000003",
+      "rules": {
+        "qi": 4,
+        "heal": 12,
+        "activate": 3,
+        "healAttr": 30,
+        "healBp": 5000,
+        "qiAttr": 40,
+        "qiBp": 2000,
+        "originalRule": 3,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_wood",
+      "sourceId": "7000006",
+      "rules": {
+        "qi": 8,
+        "activate": 2,
+        "qiAttr": 40,
+        "qiBp": 2000,
+        "originalRule": 6,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_fire",
+      "sourceId": "7000009",
+      "rules": {
+        "qi": 4,
+        "lifeLoss": 3,
+        "activate": 4,
+        "qiAttr": 40,
+        "qiBp": 2000,
+        "originalRule": 9,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_earth",
+      "sourceId": "7000011",
+      "rules": {
+        "damage": 9,
+        "shield": 12,
+        "activate": 5,
+        "damageAttr": 40,
+        "damageBp": 10000,
+        "shieldAttr": 40,
+        "shieldBp": 7000,
+        "originalRule": 11,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_qi",
+      "sourceId": "7000002",
+      "rules": {
+        "damage": 18,
+        "conditionalSharp": 2,
+        "damageAttr": 40,
+        "damageBp": 10000,
+        "originalRule": 2,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_link",
+      "sourceId": "7000004",
+      "rules": {
+        "damage": 9,
+        "hits": 2,
+        "conditionalHeal": 15,
+        "damageAttr": 20,
+        "damageBp": 4000,
+        "conditionalHealAttr": 30,
+        "conditionalHealBp": 5000,
+        "originalRule": 4,
+        "cost": 1
+      }
+    },
+    {
+      "key": "yixian_five_return",
+      "sourceId": "7000007",
+      "rules": {
+        "damage": 30,
+        "conditionalWater": 1,
+        "damageAttr": 40,
+        "damageBp": 10000,
+        "originalRule": 7,
+        "cost": 2
+      }
+    },
+    {
+      "key": "yixian_five_metal_edge",
+      "sourceId": "7000015",
+      "rules": {
+        "damage": 21,
+        "conditionalPierceNext": true,
+        "damageAttr": 40,
+        "damageBp": 10000,
+        "originalRule": 15,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_metal_pierce",
+      "sourceId": "7000016",
+      "rules": {
+        "sharp": 4,
+        "array": 1,
+        "arrayGain": 1,
+        "originalRule": 16,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_fire_ember",
+      "sourceId": "7000017",
+      "rules": {
+        "damage": 9,
+        "hits": 2,
+        "conditionalAttack": 1,
+        "damageAttr": 20,
+        "damageBp": 4000,
+        "originalRule": 17,
+        "cost": 1
+      }
+    },
+    {
+      "key": "yixian_five_water_spring",
+      "sourceId": "7000018",
+      "rules": {
+        "qi": 8,
+        "conditionalHeal": 9,
+        "healPerAttack": 1,
+        "conditionalHealAttr": 30,
+        "conditionalHealBp": 5000,
+        "qiAttr": 40,
+        "qiBp": 2000,
+        "originalRule": 18,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_wood_root",
+      "sourceId": "7000019",
+      "rules": {
+        "water": 2,
+        "cost": 2,
+        "freeWhenElement": true,
+        "originalRule": 19
+      }
+    },
+    {
+      "key": "yixian_five_earth_ridge",
+      "sourceId": "7000021",
+      "rules": {
+        "qi": 8,
+        "conditionalLifeLoss": 3,
+        "qiAttr": 40,
+        "qiBp": 2000,
+        "originalRule": 21,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_cycle_breath",
+      "sourceId": "7000023",
+      "rules": {
+        "shield": 12,
+        "array": 5,
+        "arrayGain": 2,
+        "shieldAttr": 40,
+        "shieldBp": 7000,
+        "originalRule": 23,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_fire_burst",
+      "sourceId": "7000094",
+      "rules": {
+        "directDamage": 18,
+        "activationArray": 2,
+        "originalRule": 94,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_metal_ring",
+      "sourceId": "7000025",
+      "rules": {
+        "shield": 12,
+        "sharp": 4,
+        "conditionalSharpPerShield": 4,
+        "shieldAttr": 40,
+        "shieldBp": 7000,
+        "originalRule": 25,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_metal_break",
+      "sourceId": "7000026",
+      "rules": {
+        "damage": 18,
+        "sharpPerHealth": 2,
+        "damageAttr": 40,
+        "damageBp": 10000,
+        "originalRule": 26,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_fire_furnace",
+      "sourceId": "7000028",
+      "rules": {
+        "damage": 3,
+        "hits": 2,
+        "breakShield": true,
+        "conditionalAgainIfHealed": true,
+        "damageAttr": 20,
+        "damageBp": 4000,
+        "originalRule": 28,
+        "cost": 1
+      }
+    },
+    {
+      "key": "yixian_five_water_mirror",
+      "sourceId": "7000029",
+      "rules": {
+        "qi": 8,
+        "array": 2,
+        "arrayGain": 1,
+        "qiAttr": 40,
+        "qiBp": 2000,
+        "originalRule": 29,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_wood_bloom",
+      "sourceId": "7000031",
+      "rules": {
+        "lifeLoss": 2,
+        "array": 4,
+        "arrayGain": 2,
+        "originalRule": 31,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_earth_vessel",
+      "sourceId": "7000032",
+      "rules": {
+        "attack": 1,
+        "conditionalLifeLoss": 7,
+        "lifeLossPerAttack": 1,
+        "originalRule": 32,
+        "cost": 1
+      }
+    },
+    {
+      "key": "yixian_five_fire_chain",
+      "sourceId": "7000036",
+      "rules": {
+        "maxHealth": 10,
+        "array": 3,
+        "arrayGain": 2,
+        "originalRule": 36,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_return_seed",
+      "sourceId": "7000059",
+      "rules": {
+        "qi": 8,
+        "conditionalNextWaterPerHealth": 5,
+        "qiAttr": 40,
+        "qiBp": 2000,
+        "originalRule": 59,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_water_sea",
+      "sourceId": "7000020",
+      "rules": {
+        "maxHealth": 2,
+        "heal": 6,
+        "conditionalReductionBp": 4000,
+        "duration": 2,
+        "healAttr": 30,
+        "healBp": 5000,
+        "originalRule": 20,
+        "cost": 1
+      }
+    },
+    {
+      "key": "yixian_five_wood_forest",
+      "sourceId": "7000027",
+      "rules": {
+        "damage": 12,
+        "hits": 3,
+        "healPerHealth": 3,
+        "damageAttr": 20,
+        "damageBp": 4000,
+        "originalRule": 27,
+        "cost": 1
+      }
+    },
+    {
+      "key": "yixian_five_wood_spirit",
+      "sourceId": "7000030",
+      "rules": {
+        "qi": 8,
+        "maxHealth": 2,
+        "heal": 6,
+        "conditionalWaterPerQi": 2,
+        "healAttr": 30,
+        "healBp": 5000,
+        "qiAttr": 40,
+        "qiBp": 2000,
+        "originalRule": 30,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_metal_cycle",
+      "sourceId": "7000033",
+      "rules": {
+        "damage": 27,
+        "damagePerLostShield": 6,
+        "damageAttr": 40,
+        "damageBp": 10000,
+        "originalRule": 33,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_metal_storm",
+      "sourceId": "7000034",
+      "rules": {
+        "damage": 12,
+        "noSharp": true,
+        "conditionalAgain": true,
+        "damageAttr": 40,
+        "damageBp": 10000,
+        "originalRule": 34,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_metal_sunder",
+      "sourceId": "7000035",
+      "rules": {
+        "conditionalReductionFlat": 5,
+        "duration": 2,
+        "originalRule": 35,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_fire_sun",
+      "sourceId": "7000038",
+      "rules": {
+        "enemyMaxLoss": 4,
+        "conditionalAgain": true,
+        "originalRule": 38,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_fire_inferno",
+      "sourceId": "7000039",
+      "rules": {
+        "damage": 12,
+        "hits": 2,
+        "maxLossPerHealth": 1,
+        "maxLossMultiplier": 2,
+        "damageAttr": 20,
+        "damageBp": 4000,
+        "originalRule": 39,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_fire_cycle",
+      "sourceId": "7000040",
+      "rules": {
+        "shield": 36,
+        "shieldPerLostShield": 6,
+        "shieldAttr": 40,
+        "shieldBp": 7000,
+        "originalRule": 40,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_earth_mountain",
+      "sourceId": "7000061",
+      "rules": {
+        "qi": 8,
+        "heal": 6,
+        "conditionalAttackPerQi": 3,
+        "healAttr": 30,
+        "healBp": 5000,
+        "qiAttr": 40,
+        "qiBp": 2000,
+        "originalRule": 61,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_earth_cycle",
+      "sourceId": "7000066",
+      "rules": {
+        "damage": 12,
+        "breakShield": true,
+        "damagePerDeckElement": 4,
+        "damageAttr": 40,
+        "damageBp": 10000,
+        "originalRule": 66,
+        "cost": 1
+      }
+    },
+    {
+      "key": "yixian_five_return_circle",
+      "sourceId": "7000096",
+      "rules": {
+        "shield": 12,
+        "conditionalAgain": true,
+        "shieldAttr": 40,
+        "shieldBp": 7000,
+        "originalRule": 96,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_metal_divine",
+      "sourceId": "7000042",
+      "rules": {
+        "damage": 21,
+        "doubleHealth": true,
+        "damageAttr": 40,
+        "damageBp": 10000,
+        "originalRule": 42,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_water_divine",
+      "sourceId": "7000043",
+      "rules": {
+        "attack": 1,
+        "heal": 9,
+        "conditionalAgain": true,
+        "healAttr": 30,
+        "healBp": 5000,
+        "originalRule": 43,
+        "cost": 1
+      }
+    },
+    {
+      "key": "yixian_five_water_origin",
+      "sourceId": "7000053",
+      "rules": {
+        "shield": 36,
+        "conditionalShieldReturn": 2,
+        "shieldAttr": 40,
+        "shieldBp": 7000,
+        "originalRule": 53,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_metal_heaven",
+      "sourceId": "7000056",
+      "rules": {
+        "damage": 18,
+        "hits": 3,
+        "capAtHealthMinus": 2,
+        "damageAttr": 20,
+        "damageBp": 4000,
+        "originalRule": 56,
+        "cost": 2
+      }
+    },
+    {
+      "key": "yixian_five_wood_divine",
+      "sourceId": "7000057",
+      "rules": {
+        "water": 3,
+        "conditionalMaxHealth": 6,
+        "maxHealthPerWater": 1,
+        "originalRule": 57,
+        "cost": 2
+      }
+    },
+    {
+      "key": "yixian_five_wood_origin",
+      "sourceId": "7000097",
+      "rules": {
+        "qi": 8,
+        "damage": 6,
+        "hits": 2,
+        "conditionalSpring": 2,
+        "duration": 4,
+        "damageAttr": 20,
+        "damageBp": 4000,
+        "qiAttr": 40,
+        "qiBp": 2000,
+        "originalRule": 97,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_cycle_divine",
+      "sourceId": "7000099",
+      "rules": {
+        "damage": 18,
+        "hits": 2,
+        "sharpReturnBp": 6000,
+        "damageAttr": 20,
+        "damageBp": 4000,
+        "originalRule": 99,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_earth_divine",
+      "sourceId": "7000100",
+      "rules": {
+        "water": 1,
+        "maxHealth": 4,
+        "heal": 12,
+        "conditionalAgilityPerResource": 2,
+        "agilityCap": 12,
+        "healAttr": 30,
+        "healBp": 5000,
+        "originalRule": 100,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_fire_divine",
+      "sourceId": "7000112",
+      "rules": {
+        "qi": 12,
+        "conditionalDrainPlays": 3,
+        "drainBase": 1,
+        "drainPerAttack": 1,
+        "qiAttr": 40,
+        "qiBp": 2000,
+        "originalRule": 112,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_fire_heaven",
+      "sourceId": "7000113",
+      "rules": {
+        "lifeLoss": 9,
+        "conditionalLifeLossPerAttack": 2,
+        "earthLossPerShield": 3,
+        "metalLossPerSharp": 2,
+        "originalRule": 113,
+        "cost": 0
+      }
+    },
+    {
+      "key": "yixian_five_earth_origin",
+      "sourceId": "7000115",
+      "rules": {
+        "water": 1,
+        "maxHealth": 10,
+        "heal": 30,
+        "waterAttack": 1,
+        "waterDamagePerWater": 1,
+        "woodAttack": 1,
+        "woodDamagePerQi": 1,
+        "healAttr": 30,
+        "healBp": 5000,
+        "originalRule": 115,
+        "cost": 1,
+        "specialDamageAttr": 20,
+        "specialDamageBp": 4000
+      }
+    },
+    {
+      "key": "yixian_five_return_origin",
+      "sourceId": "7000116",
+      "rules": {
+        "qi": 4,
+        "sharp": 2,
+        "conditionalAgainEither": 3,
+        "qiAttr": 40,
+        "qiBp": 2000,
+        "originalRule": 116,
+        "cost": 0
+      }
+    }
+  ]
+}

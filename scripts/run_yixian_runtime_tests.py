@@ -72,7 +72,7 @@ def wine_environment(wine, prefix):
     return env
 
 
-def wait_for_reports(results, suites, prior, out, timeout=120, launch_process=None, quit_after_tests=False, game=None, wine_prefix=None, is_running=None):
+def wait_for_reports(results, suites, prior, out, timeout=120, launch_process=None, quit_after_tests=False, game=None, wine_prefix=None, is_running=None, expected_scope=None):
     """A disappearing observed game is an early exit, not proof of a native crash."""
     reports = {}; report_files = {}; progress = {}; observed_game = False
     running_probe = is_running or (lambda: game_running(game, wine_prefix))
@@ -171,9 +171,13 @@ def wait_for_reports(results, suites, prior, out, timeout=120, launch_process=No
         fresh = {p.name for p in set(results.glob('runtime-*.json')) - prior.get('runtime', set())}
         if active.get('report') in fresh:
             shutil.copy2(cursor, out / 'balance-active.json')
+    actual_scope = reports.get('runtime', {}).get('scope')
+    if expected_scope and 'runtime' in reports and actual_scope != expected_scope and code in (0, 1):
+        print(f'报告范围不符：需要 {expected_scope}，实际 {actual_scope}；已安装 DLL 可能不支持本专项。', file=sys.stderr)
+        outcome = 'scope_mismatch'; code = 5
     watchdog = dict(outcome=outcome, elapsed_seconds=round(time.monotonic() - started, 2),
                     game_observed=observed_game, game_running_at_finish=running_probe(),
-                    completed_suites=list(reports),
+                    completed_suites=list(reports), expected_scope=expected_scope, actual_scope=actual_scope,
                     active_cases={suite: report.get('activeCase') for suite, report in progress.items()})
     (out / 'watchdog.json').write_text(json.dumps(watchdog, ensure_ascii=False, indent=2) + '\n')
     return code
@@ -196,10 +200,14 @@ def main():
     group = parser.add_mutually_exclusive_group()
     group.add_argument('--include-fates', action='store_true', help='run independent fate suite in the same launch')
     group.add_argument('--schools-only', action='store_true', help='run only new-school loops and isolation checks')
-    group.add_argument('--costs-only', action='store_true', help='verify all 96 five/star original-face costs, HUD models, payments and atomic rejections')
+    group.add_argument('--costs-only', action='store_true', help='verify all 88 five/star original-face costs, HUD models, payments and atomic rejections')
+    group.add_argument('--star-healing-only', action='store_true', help='verify two selected-ally heals through native multiplayer commands, without the full suite')
+    group.add_argument('--sword-scaling-only', action='store_true', help='verify Sword scaling, actual 60-percent attribute debits, purchase/save/network and rendered ability')
+    group.add_argument('--depth-effects-only', action='store_true', help='verify read-only decisions, reachable builds and multi-hit presentation')
+    group.add_argument('--cultivation-only', action='store_true', help='verify Five Elements cultivation commands, battle locking and rendered UI')
     args = parser.parse_args()
-    if args.balance and (args.include_fates or args.schools_only or args.costs_only):
-        parser.error('--balance cannot be combined with --include-fates, --schools-only or --costs-only')
+    if args.balance and (args.include_fates or args.schools_only or args.costs_only or args.star_healing_only or args.cultivation_only or args.depth_effects_only or args.sword_scaling_only):
+        parser.error('--balance cannot be combined with a focused or fate suite')
     if (args.direct_game or args.headless) and not (args.direct_game and args.headless and (args.balance or args.costs_only) and sys.platform == 'darwin'):
         parser.error('direct/headless mode requires macOS, --direct-game --headless and either --balance or --costs-only')
     if args.timeout <= 0:
@@ -243,6 +251,14 @@ def main():
         flags.append('-yixian-balance-selftest')
     if args.costs_only:
         flags.append('-yixian-costs-selftest')
+    if args.star_healing_only:
+        flags.append('-yixian-star-healing-selftest')
+    if args.depth_effects_only:
+        flags.append('-yixian-depth-selftest')
+    if args.sword_scaling_only:
+        flags.append('-yixian-spirit-selftest')
+    if args.cultivation_only:
+        flags.append('-yixian-cultivation-selftest')
     if args.headless:
         flags += ['-batchmode', '-nographics']
     try:
@@ -259,7 +275,7 @@ def main():
                 subprocess.run([str(STEAM / 'ubuntu12_32/steam'), '-applaunch', '5241190', *flags],
                                env={**os.environ, 'DISPLAY': os.environ.get('DISPLAY', ':0')},
                                stdout=log, stderr=subprocess.STDOUT, check=True)
-        return wait_for_reports(results, suites, prior, out, timeout=args.timeout, launch_process=launch_process, quit_after_tests=args.quit_after_tests, game=args.game, wine_prefix=args.wine_prefix)
+        return wait_for_reports(results, suites, prior, out, timeout=args.timeout, launch_process=launch_process, quit_after_tests=args.quit_after_tests, game=args.game, wine_prefix=args.wine_prefix, expected_scope='sword-spirit-conversion' if args.sword_scaling_only else 'sect-depth-effects' if args.depth_effects_only else 'star-selected-healing' if args.star_healing_only else 'five-cultivation' if args.cultivation_only else None)
     finally:
         # Headless Unity writes its own log to launch.log. Shared profile logs may
         # belong to a separate normal game and must not be attributed to this probe.

@@ -82,7 +82,7 @@ partial class Program
         {
             var p=Play(sample.Item1,StarExpansionState(("plays",2),("used4000060",1)));
             var h=StarHeals(p).Single();
-            Check(new[]{ActorId.Value,injured.RuntimeId.Value}.Contains((string)h["target"]) && (int)h["amount"]==sample.Item2,"maximum/heal combo retains caster-only cap and randomly heals an eligible character: "+sample.Item1);
+            Check(new[]{ActorId.Value,injured.RuntimeId.Value}.Contains((string)h["target"]) && (int)h["amount"]==sample.Item2,"maximum/heal combo retains caster-only cap and heals an eligible character: "+sample.Item1);
             Check(StarHealth(p).OfType<JObject>().Where(r=>(string)r["kind"]=="maximum").All(r=>(string)r["target"]==ActorId.Value),"random healing never redirects existing caster maximum bonus");
         }
         var connect=Play(4000104);var linked=Play(4000010,connect.State);

@@ -51,19 +51,27 @@ def main():
         manifest['assets'].update(school.get('assets', {}))
     from five_deck_content import compile_deck
     compile_deck(table, content, manifest)
+    from five_cultivation_content import compile_cultivation
+    compile_cultivation(table, content, manifest)
     retired = MOD / 'content/five-water-pilot.json'
     if retired.exists():
         retired.unlink()  # Generated configuration for the removed runtime feature.
+    from decision_content import compile_decisions
+    compile_decisions(table, content)
+    # Training is a separate optional purchase, not a thirteenth original fate.
+    training = read(sword / 'training.json')
+    content['abilities']['operations'].extend(training['operations'])
+    for row in training['operations']:
+        manifest['assets'][row['fields']['iconKey']] = dict(kind='icon', file='icons/fates/Icon_Talent_16.png')
     # Existing sword order is not sorted/rebuilt: cp~ native ordinals must stay stable.
     table['sectLineages'] = [s['id'] for s in table['sects']]
-    for name, value in content.items():
-        write(MOD / 'content' / (name + '.json'), value)
     write(MOD / 'content/cardtable.json', table)
     if len(table['sects']) > 1:
-        manifest['version'] = '0.7.0'
         manifest['name'] = '弈仙门派'
-        manifest['description'] = '云灵剑宗、五行道盟、七星阁三大门派，涵盖五个境界，共136张卡牌与12项仙命；五行突破解锁两张，战斗中从本局牌库自选八张。每名角色可加入一个弈仙门派，并搭配原生血统。'
+        manifest['description'] = f'云灵剑宗、五行道盟、七星阁三大门派，涵盖五个境界，共{len(table["cards"])}张卡牌与12项仙命；五行突破解锁两张，战斗中从本局牌库自选八张。每名角色可加入一个弈仙门派，并搭配原生血统。'
     manifest['economy'] = dict(shop=[dict(id=s['id'], conditions=dict(forbids=[other['id'] for other in table['sects'] if other['id'] != s['id']])) for s in table['sects']])
+    for name, value in content.items():
+        write(MOD / 'content' / (name + '.json'), value)
     write(MOD / 'mod.json', manifest)
     lines = ['# 弈仙门派当前卡包与规则', '', '三派各五境界、4个独立仙命；剑宗48张／12个四张包，七星40张／10个四张包，五行48张／一个固定八张卡包。', '']
     lines.extend(['五行入宗解锁八张炼气牌；突破从当前境界解锁两张，保留旧牌。战斗中从已解锁牌库免费选八张，保存保留手牌。原12组仅作资料分类，不出售或启用。详见 [五行道盟](five-elements.md)。', ''])

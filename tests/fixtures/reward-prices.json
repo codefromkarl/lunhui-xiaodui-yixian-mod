@@ -1,0 +1,27 @@
+{
+  "lineageSteps": [
+    15,
+    55,
+    130,
+    240,
+    380
+  ],
+  "packByRank": [
+    0,
+    20,
+    35,
+    50,
+    75
+  ],
+  "fatePrice": 20,
+  "fivePackPrice": 0,
+  "oldLineageSteps": [
+    15,
+    55,
+    130,
+    240,
+    380
+  ],
+  "oldFatePrice": 40,
+  "scope": "Yixian lineage progression matches native lineage prices (15/55/130/240/380). Keep discounted packs/fates, free gifts, purchase/selection gates, all card qi/AP costs and existing ownership. No refund or save rewrite."
+}

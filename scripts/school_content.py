@@ -9,6 +9,8 @@ ATTRS = {10: '筋肉', 20: '反应', 30: '体质', 40: '能量'}
 
 def formula(rules, key):
     value = str(rules.get(key, 0))
+    if rules.get(key + 'Scaling'):
+        return value + ''.join(f'＋{term["bp"] / 100:g}%×{ATTRS[term["attribute"]]}' for term in rules[key + 'Scaling'])
     if rules.get(key + 'Bp'):
         value += f'＋{rules[key + "Bp"] / 100:g}%×{ATTRS[rules.get(key + "Attr", 40)]}'
     return value
@@ -65,6 +67,10 @@ def compile_school(school, sword):
     lineage = copy.deepcopy(sword['lineages']['operations'][0]); lineage['id'] = d['id']; f = lineage['fields']
     f.update(displayName=d['name'], iconKey=f'icon.lineage.{d["code"]}', lineageCode=d['code'], rankTitles=['炼气','筑基','金丹','元婴','化神'], flavour=f'{d["summary"]}\n每人最多一个弈仙门派，可搭配原生血统。\n' + d['rulesDescription'])
     for step in f['steps']:
+        if d['statePrefix'] == 'five':
+            # Five owns its attribute budget. Future Sword muscle/reaction changes
+            # must not leak through the shared structural lineage template.
+            step['passive']['values'] = [v for v in step['passive']['values'] if v['key'] not in ('energyFlat', 'muscleFlat', 'reactionFlat', 'constitutionFlat')]
         for value in step['passive']['values']:
             if value['key'] == 'lineageCode': value['stringValue'] = d['code']
     result['lineages'] = dict(operations=[lineage])

@@ -10,7 +10,7 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "每回合开始获得剑意：筑基4／金丹6／元婴8／化神10，首回合生效。\n独立被动，本局限购一次，不占手牌。",
         "referencedStatusIds": [],
         "ranks": [
@@ -99,7 +99,7 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "每主动打出一张云剑获得护盾：筑基6／金丹9／元婴12／化神15；重施不触发。\n独立被动，本局限购一次，不占手牌。",
         "referencedStatusIds": [],
         "ranks": [
@@ -188,7 +188,7 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "每回合首张牌成功打出后，本回合护盾不自然衰减；伤害与技能支付仍消耗护盾。\n独立被动，本局限购一次，不占手牌。",
         "referencedStatusIds": [
           "yixian.sect.status.fate_guard"
@@ -261,7 +261,7 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "所有云剑无前置触发连云；其他牌不打断云剑计数，不额外增加计数。\n独立被动，本局限购一次，不占手牌。",
         "referencedStatusIds": [],
         "ranks": [
@@ -332,7 +332,7 @@
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "战斗开始时，下一张五行牌先激活其所属五行。\n独立被动，本局限购一次，不占手牌。",
         "referencedStatusIds": [],
         "ranks": [
@@ -421,7 +421,7 @@
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "使用中性牌时激活木灵；每次主动激活木灵，本场生命上限+6，不治疗。\n独立被动，本局限购一次，不占手牌。",
         "referencedStatusIds": [],
         "ranks": [
@@ -510,7 +510,7 @@
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "战斗开始时激活水灵，并恢复4斗气。\n独立被动，本局限购一次，不占手牌。",
         "referencedStatusIds": [],
         "ranks": [
@@ -581,7 +581,7 @@
         "sourceContentId": "yixian.sect.lineage.five",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "战斗开始时，自身本场生命上限−12；每次主动激活五行，对方生命及本场上限−9。\n独立被动，本局限购一次，不占手牌。",
         "referencedStatusIds": [],
         "ranks": [
@@ -652,7 +652,7 @@
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "战斗开始获得卦象：筑基1／金丹1／元婴2／化神3。\n独立被动，本局限购一次，不占手牌。",
         "referencedStatusIds": [],
         "ranks": [
@@ -741,7 +741,7 @@
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "战斗开始获得1星力。\n独立被动，本局限购一次，不占手牌。",
         "referencedStatusIds": [],
         "ranks": [
@@ -830,7 +830,7 @@
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "含后招的本门牌本场首次使用时，自身获得护盾并增加本场生命上限，另为随机一名存活己方角色（优先未满血）恢复等量生命：金丹9／元婴12／化神15。\n独立被动，本局限购一次，不占手牌。",
         "referencedStatusIds": [],
         "ranks": [
@@ -901,7 +901,7 @@
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "开战时及每次本门治疗前，增加自身本场生命上限：金丹12／元婴15／化神18。\n独立被动，本局限购一次，不占手牌。",
         "referencedStatusIds": [],
         "ranks": [

@@ -33,7 +33,7 @@ partial class Program
         var shelves=new List<ShelfAbilityDefinition>();
         Method(projection,"ProjectShelfAbilities").Invoke(null,new object[]{abilities,progressions,shelves});
         Check(progressions.Count==3&&progressions.All(p=>p.MaximumRank==5),"three full five-rank native lineages");
-        Check(shelves.Count==30,"eighteen sword/star paid packs and twelve independent fates projected");
+        Check(shelves.Count==31,"eighteen sword/star paid packs, twelve independent fates and one training projected");
         var economy=new EconomyCatalog(Array.Empty<EconomyCatalogEntry>(),progressions,shelves);
         var hub=new HubState(HubAccessKind.Full,1,new[]{new PlayerSlotId(1)});var service=new HubService(economy);
         foreach(var school in SectRegistry.Sects.Keys)
@@ -65,7 +65,7 @@ partial class Program
         }
         var fates=JObject.Parse(File.ReadAllText(Mod+"/content/fates.json"))["operations"].OfType<JObject>().ToList();
         Check(fates.Count==12&&fates.GroupBy(f=>(string)f["fields"]["sourceContentId"]).All(g=>g.Count()==4),"four independent fates per school");
-        foreach(var fate in fates)Check((int)fate["fields"]["purchasePrice"]==40,"aligned fate price");
+        foreach(var fate in fates)Check((int)fate["fields"]["purchasePrice"]==20,"aligned fate price");
         CardTableBridge.BuildCatalog(out var _,out var combinedPacks);
         foreach(var pair in new[]{(60,24),(61,25),(70,26),(71,27)})Check(combinedPacks[pair.Item2].ShelfIndex==pair.Item1,"legacy new-school cp ordinal preserved "+pair.Item1);
         Console.WriteLine("PASS expansion integration: 136 cards/34 packs/12 fates; native projection, five-rank purchase/ownership, atomic duplicates and legacy directory order");

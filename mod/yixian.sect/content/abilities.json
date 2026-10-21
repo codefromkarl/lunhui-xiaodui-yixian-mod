@@ -54,7 +54,7 @@
         "mode": 10,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "造成〔15＋70%×能量〕点物理伤害。\n连云：每段追加物理伤害〔9＋40%×能量〕。\n连云：沿施法者朝主目标方向贯穿后方至多1名敌人，每段造成本段伤害的50%。\n消耗：0斗气。",
+        "flavour": "造成〔15＋70%×筋肉〕点物理伤害。\n连云：每段追加物理伤害〔9＋40%×筋肉〕。\n连云：沿施法者朝主目标方向贯穿后方至多1名敌人，每段造成本段伤害的50%。\n消耗：0斗气。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -183,7 +183,7 @@
         "mode": 10,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "造成〔15＋80%×能量〕点物理伤害。\n击伤：追加〔18＋60%×能量〕物理伤害，每次出牌只触发一次，不递归。\n主目标击伤追加时：向其1格邻近至多2名敌人各造成追加伤害的40%；不再触发击伤。\n消耗：4斗气。",
+        "flavour": "造成〔15＋80%×筋肉〕点物理伤害。\n击伤：追加〔18＋60%×筋肉〕物理伤害，每次出牌只触发一次，不递归。\n主目标击伤追加时：向其1格邻近至多2名敌人各造成追加伤害的40%；不再触发击伤。\n消耗：4斗气。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -355,7 +355,7 @@
         "mode": 10,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "连云：造成〔27＋110%×能量〕点物理伤害。\n未连云时不攻击，仍消耗出牌费用。\n连云：横扫主目标同阵位其他敌人，每段造成本段伤害的50%。\n消耗：0斗气。",
+        "flavour": "连云：造成〔27＋110%×筋肉〕点物理伤害。\n未连云时不攻击，仍消耗出牌费用。\n连云：横扫主目标同阵位其他敌人，每段造成本段伤害的50%。\n消耗：0斗气。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -519,10 +519,10 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.card.yixian_sword_22",
+      "id": "yixian.sect.card.yixian_sword_11",
       "fields": {
-        "iconKey": "icon.yixian.sect.card.yixian_sword_22",
-        "displayName": "狂剑·一式",
+        "iconKey": "icon.yixian.sect.card.yixian_sword_11",
+        "displayName": "形意剑",
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 10,
         "acquisition": 20,
@@ -543,7 +543,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 0
+                  "intValue": 4
                 },
                 {
                   "key": "energyPool",
@@ -914,7 +914,7 @@
         "mode": 10,
         "acquisition": 20,
         "purchasePrice": 0,
-        "flavour": "攻击部分另加 120%×能量，逐段计算。\n获得护盾〔9＋80%×能量〕。\n本牌护盾生效后，每有 3 护盾，伤害增加 3。\n范围：主目标1格邻接的其他敌人，各承受本段伤害的30%，独立判定命中。\n消耗：0斗气。",
+        "flavour": "攻击部分另加 120%×筋肉，逐段计算。\n获得护盾〔9＋80%×筋肉〕。\n本牌护盾生效后，每有 3 护盾，伤害增加 3。\n范围：主目标1格邻接的其他敌人，各承受本段伤害的30%，独立判定命中。\n消耗：0斗气。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -992,10 +992,10 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.card.yixian_sword_102",
+      "id": "yixian.sect.card.yixian_sword_8",
       "fields": {
-        "iconKey": "icon.yixian.sect.card.yixian_sword_102",
-        "displayName": "狂剑·赤霄",
+        "iconKey": "icon.yixian.sect.card.yixian_sword_8",
+        "displayName": "反身剑",
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 10,
         "acquisition": 20,
@@ -1016,7 +1016,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 0
+                  "intValue": 4
                 },
                 {
                   "key": "energyPool",
@@ -1078,10 +1078,10 @@
     {
       "op": "add",
       "kind": "abilities",
-      "id": "yixian.sect.card.yixian_sword_35",
+      "id": "yixian.sect.card.yixian_sword_37",
       "fields": {
-        "iconKey": "icon.yixian.sect.card.yixian_sword_35",
-        "displayName": "狂剑·二式",
+        "iconKey": "icon.yixian.sect.card.yixian_sword_37",
+        "displayName": "流云乱剑",
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 10,
         "acquisition": 20,
@@ -1102,7 +1102,7 @@
                 },
                 {
                   "key": "energyCost",
-                  "intValue": 0
+                  "intValue": 4
                 },
                 {
                   "key": "energyPool",
@@ -2152,7 +2152,7 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "突破筑基时可从两个筑基包中免费选一；另一包可购买。",
         "referencedStatusIds": [],
         "ranks": [
@@ -2191,8 +2191,8 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 45,
-        "flavour": "突破筑基时可从两个筑基包中免费选一；另一包可购买。",
+        "purchasePrice": 20,
+        "flavour": "形意击伤蓄剑意，凝意回气；灵犀剑阵与御灵心法维护攻守循环。\n突破筑基时可从两个筑基包中免费选一；另一包可购买。\n每包 4 张；启用后整包进入抽牌池。\n\n【凝意诀】\n恢复斗气〔4＋20%×能量〕，不超过气池上限。\n获得 3 点剑意。\n消耗：0 行动力，0 斗气（灵气费用 0×4；无基础费）。\n属性采用当前有效属性，倍率部分向下取整。\n\n【形意剑】\n造成〔24＋80%×筋肉〕点物理伤害。\n主目标直接击伤后，获得3点剑意；每次出牌最多一次。\n消耗：0 行动力，4 斗气（灵气费用 1×4；无基础费）。\n\n【灵犀剑阵】\n获得护盾〔27＋80%×能量〕。\n耗尽剑意，每点恢复 4 斗气，不超过气池上限。\n消耗：0 行动力，0 斗气（灵气费用 0×4；无基础费）。\n属性采用当前有效属性，倍率部分向下取整。\n\n【御灵心法】\n持续：以后剑招每实际消耗或恢复 1 斗气，获得 1 护盾；恢复量按气池空余计算。 同种持续不叠加；持续数值取施放时属性。\n消耗：0 行动力，0 斗气（灵气费用 0×4；无基础费）。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -2230,7 +2230,7 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 70,
+        "purchasePrice": 35,
         "flavour": "达到金丹后购买；本境界不赠送。",
         "referencedStatusIds": [],
         "ranks": [
@@ -2269,8 +2269,8 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 65,
-        "flavour": "达到金丹后购买；本境界不赠送。",
+        "purchasePrice": 35,
+        "flavour": "云舞铺垫，三峰兑现剑意；反身剑准备下回合护盾，镜花将护盾转为伤害。\n达到金丹后购买；本境界不赠送。\n每包 4 张；启用后整包进入抽牌池。\n\n【云舞诀】\n获得护盾〔6＋70%×能量〕。\n恢复斗气〔8＋20%×能量〕，不超过气池上限。\n获得 2 点剑意。\n消耗：0 行动力，0 斗气（灵气费用 0×4；无基础费）。\n属性采用当前有效属性，倍率部分向下取整。\n\n【三峰剑】\n造成〔9＋50%×反应〕点物理伤害 ×3 段。\n剑意整张消费一次、每段 +3／点；本场加攻每段 +3／层。伤害还受原生防御、护盾等结算影响。\n消耗：0 行动力，0 斗气（灵气费用 0×4；无基础费）。\n属性采用当前有效属性，倍率部分向下取整。\n\n【镜花剑阵】\n攻击部分另加 120%×能量，逐段计算。\n获得护盾〔9＋80%×能量〕。\n本牌护盾生效后，每有 3 护盾，伤害增加 3。\n剑意整张消费一次、每段 +3／点；本场加攻每段 +3／层。伤害还受原生防御、护盾等结算影响。\n消耗：0 行动力，0 斗气（灵气费用 0×4；无基础费）。\n属性采用当前有效属性，倍率部分向下取整。\n\n【反身剑】\n造成〔33＋100%×筋肉〕点物理伤害。\n主目标直接击伤后，下回合开始获得护盾〔21＋50%×体质〕；每次出牌最多一次。多次施放分别累积。\n消耗：0 行动力，4 斗气（灵气费用 1×4；无基础费）。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -2308,7 +2308,7 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 105,
+        "purchasePrice": 50,
         "flavour": "达到元婴后购买；本境界不赠送。",
         "referencedStatusIds": [],
         "ranks": [
@@ -2347,8 +2347,8 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 105,
-        "flavour": "达到元婴后购买；本境界不赠送。",
+        "purchasePrice": 50,
+        "flavour": "聚灵续航，灵感积累剑意，流云乱剑多段兑现，水月剑阵补盾。\n达到元婴后购买；本境界不赠送。\n每包 4 张；启用后整包进入抽牌池。\n\n【聚灵心法】\n恢复斗气〔4＋25%×能量〕，不超过气池上限。\n持续：从下一回合起，每两个自己的回合恢复斗气〔4＋15%×能量〕。 同种持续不叠加；持续数值取施放时属性。\n消耗：0 行动力，0 斗气（灵气费用 0×4；无基础费）。\n属性采用当前有效属性，倍率部分向下取整。\n\n【流云乱剑】\n造成〔6＋40%×反应〕点物理伤害，攻击4段。\n剑意整张只消费一次，每段享受同一份剑意与加攻收益。\n消耗：0 行动力，4 斗气（灵气费用 1×4；无基础费）。\n\n【灵感剑】\n造成〔24＋130%×能量〕点物理伤害。\n恢复斗气后，每剩余 1 灵气获得 1 剑意，最多 4 点。\n剑意整张消费一次、每段 +3／点；本场加攻每段 +3／层。伤害还受原生防御、护盾等结算影响。\n适配：击伤提高剑意上限的分支简化，统一最多获得 4 点剑意。\n消耗：0 行动力，0 斗气（灵气费用 0×4；无基础费）。\n属性采用当前有效属性，倍率部分向下取整。\n\n【水月剑阵】\n获得护盾〔30＋110%×能量〕。\n持续：下 3 个自己的回合开始，各获得护盾〔10＋35%×能量〕。 同种持续不叠加；持续数值取施放时属性。\n适配：原作防御保留改为下 3 回合定量补盾。\n消耗：0 行动力，0 斗气（灵气费用 0×4；无基础费）。\n属性采用当前有效属性，倍率部分向下取整。",
         "referencedStatusIds": [],
         "ranks": [
           {
@@ -2386,7 +2386,7 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 105,
+        "purchasePrice": 50,
         "flavour": "达到元婴后购买；本境界不赠送。",
         "referencedStatusIds": [],
         "ranks": [
@@ -2425,7 +2425,7 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 150,
+        "purchasePrice": 75,
         "flavour": "达到化神后购买；本境界不赠送。",
         "referencedStatusIds": [],
         "ranks": [
@@ -2464,7 +2464,7 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 150,
+        "purchasePrice": 75,
         "flavour": "达到化神后购买；本境界不赠送。",
         "referencedStatusIds": [],
         "ranks": [
@@ -2503,7 +2503,7 @@
         "sourceContentId": "yixian.sect.lineage.sword",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 150,
+        "purchasePrice": 75,
         "flavour": "达到化神后购买；本境界不赠送。",
         "referencedStatusIds": [],
         "ranks": [
@@ -6872,7 +6872,7 @@
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 40,
+        "purchasePrice": 20,
         "flavour": "突破筑基时从两个筑基包中免费选一；另一包可购买。",
         "referencedStatusIds": [],
         "ranks": [
@@ -6911,7 +6911,7 @@
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 45,
+        "purchasePrice": 20,
         "flavour": "突破筑基时从两个筑基包中免费选一；另一包可购买。",
         "referencedStatusIds": [],
         "ranks": [
@@ -6950,7 +6950,7 @@
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 70,
+        "purchasePrice": 35,
         "flavour": "达到金丹后购买，不赠送；低阶未拥有包持续出售。",
         "referencedStatusIds": [],
         "ranks": [
@@ -6989,7 +6989,7 @@
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 65,
+        "purchasePrice": 35,
         "flavour": "达到金丹后购买，不赠送；低阶未拥有包持续出售。",
         "referencedStatusIds": [],
         "ranks": [
@@ -7028,7 +7028,7 @@
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 105,
+        "purchasePrice": 50,
         "flavour": "达到元婴后购买，不赠送；低阶未拥有包持续出售。",
         "referencedStatusIds": [],
         "ranks": [
@@ -7067,7 +7067,7 @@
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 105,
+        "purchasePrice": 50,
         "flavour": "达到元婴后购买，不赠送；低阶未拥有包持续出售。",
         "referencedStatusIds": [],
         "ranks": [
@@ -7106,7 +7106,7 @@
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 150,
+        "purchasePrice": 75,
         "flavour": "达到化神后购买，不赠送；低阶未拥有包持续出售。",
         "referencedStatusIds": [],
         "ranks": [
@@ -7145,7 +7145,7 @@
         "sourceContentId": "yixian.sect.lineage.star",
         "mode": 20,
         "acquisition": 10,
-        "purchasePrice": 150,
+        "purchasePrice": 75,
         "flavour": "达到化神后购买，不赠送；低阶未拥有包持续出售。",
         "referencedStatusIds": [],
         "ranks": [
@@ -10566,6 +10566,533 @@
                 {
                   "key": "step",
                   "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.practice.five.40.1",
+      "fields": {
+        "displayName": "旧修行记录（已停用）",
+        "iconKey": "icon.lineage.yixian_five",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "仅保留旧存档身份，不提供修行效果。当前自动识别主属性，无须手动选择；原生多属性与主属性70%折算取大。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.practice.five.40.3",
+      "fields": {
+        "displayName": "旧修行记录（已停用）",
+        "iconKey": "icon.lineage.yixian_five",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "仅保留旧存档身份，不提供修行效果。当前自动识别主属性，无须手动选择；原生多属性与主属性70%折算取大。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.practice.five.40.5",
+      "fields": {
+        "displayName": "旧修行记录（已停用）",
+        "iconKey": "icon.lineage.yixian_five",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "仅保留旧存档身份，不提供修行效果。当前自动识别主属性，无须手动选择；原生多属性与主属性70%折算取大。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.practice.five.40.7",
+      "fields": {
+        "displayName": "旧修行记录（已停用）",
+        "iconKey": "icon.lineage.yixian_five",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "仅保留旧存档身份，不提供修行效果。当前自动识别主属性，无须手动选择；原生多属性与主属性70%折算取大。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.practice.five.20.2",
+      "fields": {
+        "displayName": "旧修行记录（已停用）",
+        "iconKey": "icon.lineage.yixian_five",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "仅保留旧存档身份，不提供修行效果。当前自动识别主属性，无须手动选择；原生多属性与主属性70%折算取大。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.practice.five.20.3",
+      "fields": {
+        "displayName": "旧修行记录（已停用）",
+        "iconKey": "icon.lineage.yixian_five",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "仅保留旧存档身份，不提供修行效果。当前自动识别主属性，无须手动选择；原生多属性与主属性70%折算取大。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.practice.five.20.6",
+      "fields": {
+        "displayName": "旧修行记录（已停用）",
+        "iconKey": "icon.lineage.yixian_five",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "仅保留旧存档身份，不提供修行效果。当前自动识别主属性，无须手动选择；原生多属性与主属性70%折算取大。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.practice.five.20.7",
+      "fields": {
+        "displayName": "旧修行记录（已停用）",
+        "iconKey": "icon.lineage.yixian_five",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "仅保留旧存档身份，不提供修行效果。当前自动识别主属性，无须手动选择；原生多属性与主属性70%折算取大。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.practice.five.30.4",
+      "fields": {
+        "displayName": "旧修行记录（已停用）",
+        "iconKey": "icon.lineage.yixian_five",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "仅保留旧存档身份，不提供修行效果。当前自动识别主属性，无须手动选择；原生多属性与主属性70%折算取大。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.practice.five.30.5",
+      "fields": {
+        "displayName": "旧修行记录（已停用）",
+        "iconKey": "icon.lineage.yixian_five",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "仅保留旧存档身份，不提供修行效果。当前自动识别主属性，无须手动选择；原生多属性与主属性70%折算取大。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.practice.five.30.6",
+      "fields": {
+        "displayName": "旧修行记录（已停用）",
+        "iconKey": "icon.lineage.yixian_five",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "仅保留旧存档身份，不提供修行效果。当前自动识别主属性，无须手动选择；原生多属性与主属性70%折算取大。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.practice.five.30.7",
+      "fields": {
+        "displayName": "旧修行记录（已停用）",
+        "iconKey": "icon.lineage.yixian_five",
+        "sourceContentId": "yixian.sect.lineage.five",
+        "mode": 20,
+        "acquisition": 20,
+        "purchasePrice": 0,
+        "flavour": "仅保留旧存档身份，不提供修行效果。当前自动识别主属性，无须手动选择；原生多属性与主属性70%折算取大。",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_five"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "op": "add",
+      "kind": "abilities",
+      "id": "yixian.sect.training.sword.spirit_conversion",
+      "fields": {
+        "displayName": "灵剑转化",
+        "iconKey": "icon.yixian.sect.training.sword.spirit_conversion",
+        "sourceContentId": "yixian.sect.lineage.sword",
+        "mode": 20,
+        "acquisition": 10,
+        "purchasePrice": 20,
+        "flavour": "",
+        "referencedStatusIds": [],
+        "ranks": [
+          {
+            "rank": "D",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 0
+                }
+              ]
+            }
+          },
+          {
+            "rank": "C",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 1
+                }
+              ]
+            }
+          },
+          {
+            "rank": "B",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 2
+                }
+              ]
+            }
+          },
+          {
+            "rank": "A",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 3
+                }
+              ]
+            }
+          },
+          {
+            "rank": "S",
+            "tier": 1,
+            "operation": {
+              "handlerKey": "passive.lineage",
+              "targetKind": 110,
+              "values": [
+                {
+                  "key": "lineageCode",
+                  "stringValue": "yixian_sword"
+                },
+                {
+                  "key": "step",
+                  "intValue": 4
                 }
               ]
             }

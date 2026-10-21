@@ -25,8 +25,10 @@ namespace YixianSect
             Require(ally.SetVitals(0,0).IsSuccess,"down isolated ally");
             f.Prepare(card);f.Play(card);
             Require(ally.IsDowned && ally.CurrentHealth==0 && f.Actor.CurrentHealth==casterHealth,"random healing revived a downed ally or healed a full caster");
-            return new JObject { ["injured_ally_healed"]=true,["full_caster_skipped"]=true,["full_party_overheal_counted"]=true,["downed_ally_not_revived"]=true,["group"]=SevenStarGroupHealing() };
+            return new JObject { ["injured_ally_healed"]=true,["full_caster_skipped"]=true,["full_party_overheal_counted"]=true,["downed_ally_not_revived"]=true,["group"]=SevenStarGroupHealing(),["selected_healing"]=SevenStarSelectedHealing() };
         }
+        private JObject SevenStarSelectedHealing()
+            => new JObject { ["cards"]=new JArray(SevenStarSelectedHealingNetwork(4000017),SevenStarSelectedHealingNetwork(4000060)) };
         private JObject SevenStarGroupHealing()
         {
             var school=SevenStarRules.Lineage;var f=SchoolFixture(school,rank:3);

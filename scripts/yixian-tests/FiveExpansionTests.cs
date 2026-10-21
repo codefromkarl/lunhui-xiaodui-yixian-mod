@@ -138,7 +138,7 @@ partial class Program
         Check(Read(waterArray, "waterArray") == 1 && Qi(Resolve(7, Play(7, waterArray.State))) == 4, "five water array restores one original qi");
         var woodArray = Cycle(36);
         Check(Requested(woodArray, "maximum", ActorId) == 30 && Read(woodArray, "woodArray") == 2, "five wood array increases real maximum and installs healing");
-        Check(Effect(Cycle(4, woodArray.State), ModBattleEffectKind.Heal) == 15 + 5 + 6, "five wood array heals after wood condition without invented regeneration");
+        Check(Effect(Cycle(4, woodArray.State), ModBattleEffectKind.Heal) == 15 + 7 + 6, "five wood array heals after wood condition without invented regeneration");
         var fireArray = Cycle(31);
         Check(Read(fireArray, "fireArray") == 2 && Requested(Cycle(21, fireArray.State), "maximum", EnemyId) == -15, "five fire array reduces enemy life and cap per fire card");
         var earthArray = Cycle(23);
@@ -169,7 +169,7 @@ partial class Program
         Check(Requested(burnEarth, "maximum", EnemyId) == -36, "five burn-out earth clause independent of fire condition");
         Check(Requested(Play(113, Saved(("active", 1), ("sharp", 6))), "maximum", EnemyId) == -36, "five burn-out metal clause independent of fire condition");
         Check(Requested(Play(113, Saved(("active", 31), ("sharp", 6), ("attack", 2)), Unit(school: school, rank: 5, shield: 27)), "maximum", EnemyId) == -57, "five burn-out all three independent elemental clauses");
-        Check(Damage(Play(115)) == 0 && Damage(Play(115, Saved(("active", 6), ("waterForce", 2), ("attack", 2)), Unit(school: school, rank: 5, energy: 8))) == 41, "five rain independently executes water and wood attacks with reaction scaling");
+        Check(Damage(Play(115)) == 0 && Damage(Play(115, Saved(("active", 6), ("waterForce", 2), ("attack", 2)), Unit(school: school, rank: 5, energy: 8))) == 45, "five rain independently executes water and wood attacks with multi-attribute/main cultivation scaling");
         Check(Draw(Cycle(116)) == 0 && Draw(Cycle(116, Saved(("last", 2)))) == 1, "five sands does not self-prime its metal/water conditions");
         var drain = Cycle(112, Saved(("active", 4), ("attack", 2)));
         Check(Read(drain, "drainPlays") == 3 && Requested(drain, "loss", EnemyId) == 0, "five branches starts next-three-cards drain without consuming itself");

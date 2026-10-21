@@ -23,7 +23,7 @@ namespace YixianSect
                 var card=Read<LineageStyleCardViewModel>(window,"currentProgressionCard");
                 var intent=new ProjectUIIntent(ProjectUIIntentKind.UpgradeLineage,FiveElementRules.Lineage,FiveDeckRules.EncodeUnlock(rank,selected).Value,0,false,"",0,0,-1L,-1L);
                 AccessTools.Method(typeof(ShopWindow),"RequestExchangeConfirmation").Invoke(window,new object[]{"确认五行突破","解锁："+names+"\n原有牌库保留，当前八张不变。\n消耗 "+step.Price+" 奖励点，不另收购牌费。","突破并解锁","五行道盟 · "+step.RankName,step.Price,card.Icon,intent});
-            });
+            },rank);
         }
     }
     [HarmonyPatch(typeof(ShopWindow),"TryOpenFreePick")]

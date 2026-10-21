@@ -23,7 +23,7 @@ python3 scripts/prepare_assets.py --download
 
 ## 代码与发布包
 
-当前[完整整合包](https://github.com/codefromkarl/lunhui-xiaodui-yixian-mod/releases/tag/appearance-v0.7.1)包含运行所需的 Mod DLL、图标与角色素材，来源与清单随包保留；不含游戏本体或宿主程序集。GitHub 自动生成的 Source code 压缩包不含这些运行文件，不能代替整合包。
+当前[完整整合包](https://github.com/codefromkarl/lunhui-xiaodui-yixian-mod/releases/tag/sect-v0.7.1)包含运行所需的 Mod DLL、图标与角色素材，来源与清单随包保留；不含游戏本体或宿主程序集。GitHub 自动生成的 Source code 压缩包不含这些运行文件，不能代替整合包。
 
 门派部署更新包只包含本项目的 DLL、PDB 与配置，不包含第三方美术或游戏程序集；用于覆盖已有完整安装，不能作为首次安装包。使用该更新包前须已有包含合法资源的完整安装。
 

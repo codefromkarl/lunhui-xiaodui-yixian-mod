@@ -31,8 +31,8 @@ namespace YixianSect
                 {
                     var id=new StableId(pair.Key);int points=f.P.RewardPoints;long revision=f.A.Run.Revision;
                     var result=f.Send(RunCommand.PurchaseShelfAbility(Slot,id,revision));bool allowed=(int)pair.Value["rank"]<=rank;
-                    Require(result.IsSuccess==allowed&&f.P.RewardPoints==points-(allowed?40:0),"expanded fate rank/price "+pair.Key);
-                    if(allowed)Require(!f.Send(RunCommand.PurchaseShelfAbility(Slot,id,f.A.Run.Revision)).IsSuccess&&f.P.RewardPoints==points-40,"duplicate fate charged");
+                    Require(result.IsSuccess==allowed&&f.P.RewardPoints==points-(allowed?20:0),"expanded fate rank/price "+pair.Key);
+                    if(allowed)Require(!f.Send(RunCommand.PurchaseShelfAbility(Slot,id,f.A.Run.Revision)).IsSuccess&&f.P.RewardPoints==points-20,"duplicate fate charged");
                     else Require(f.A.Run.Revision==revision,"locked fate mutated run");
                 }
                 progress.Add(new JObject{["rank"]=rank,["owned_packs"]=own.Count,["fates"]=SectRegistry.Fates.Count(p=>SectRegistry.Owner(p.Value)==school&&(int)p.Value["rank"]<=rank)});

@@ -29,7 +29,7 @@ class SwordOriginalCostsTests(unittest.TestCase):
                 self.assertTrue(self.costs[sid]['imageUrl'].endswith(sid + '_zh.webp'))
                 self.assertEqual(len(self.costs[sid]['imagePixelSha256']), 64)
 
-    def test_source_and_generated_cover_all_48_original_costs(self):
+    def test_source_and_generated_cover_48_active_original_costs(self):
         check_sword_costs(self.cards, self.costs)
         check_sword_costs(json.loads((ROOT / 'data/sword/cardtable.json').read_text())['cards'], self.costs)
 

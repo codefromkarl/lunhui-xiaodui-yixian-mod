@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Version>0.7.0</Version>
+    <Version>0.7.1</Version>
     <AssemblyName>YixianSect</AssemblyName>
     <RootNamespace>YixianSect</RootNamespace>
     <LangVersion>9</LangVersion>
@@ -11,6 +11,8 @@
     <GenerateDependencyFile>false</GenerateDependencyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Reincarnation.Gameplay" HintPath="$(GameManaged)/Reincarnation.Gameplay.dll" Private="false" />
+    <Reference Include="Reincarnation.Presentation" HintPath="$(GameManaged)/Reincarnation.Presentation.dll" Private="false" />
     <Reference Include="Reincarnation.Network" HintPath="$(GameManaged)/Reincarnation.Network.dll" Private="false" />
     <Reference Include="Mirror" HintPath="$(GameManaged)/Mirror.dll" Private="false" />
     <Reference Include="Reincarnation.Domain" HintPath="$(GameManaged)\Reincarnation.Domain.dll" Private="false" />

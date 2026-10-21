@@ -9,7 +9,7 @@
 | 完整真实Mono主套件 | 37通过、0失败 |
 | 独立仙命实机套件 | 6通过、0失败 |
 | 五行48＋七星40张原卡费用专项 | 5组通过、0失败；覆盖预览/HUD/支付/不足费用原子拒绝 |
-| 候选离线 | 内容契约、67项Python、6193项C#主检查、202项仙命检查；构建0警告/0错误 |
+| 候选离线 | 内容契约、67项Python、6193项C#主检查、201项仙命检查；构建0警告/0错误 |
 | 游戏退出与用户隔离 | 各轮有正常退出回执，用户状态/存档隔离检查通过；结束后游戏已退出 |
 
 ## 同门派：真实玩家、牌桌和网络指令
@@ -51,11 +51,10 @@
 - 离线/构建与失败历史：`logs/multiplayer-validation/`。
 - 已查看的实际截图：`logs/multiplayer-validation/reviewed-images/`中的五行解锁页、八张卡包第二页；控件回调和布局断言也在实机套件中，物理鼠标命中未测。
 
-本机原始冻结副本位于上述logs目录，不进入Git。本提交恢复了可重建的136牌源数据，移除未启用的修行介绍，并明确两张七星牌的上限只给自身；卡牌规则、费用、原生能力/状态声明与实机候选相同。提交前重新生成、内容契约、67项Python、6193项C#与202项仙命检查通过，构建0警告/0错误；日志为本机`logs/commit-*.log`。
-
-正常退出游戏并按仓库README构建、安装本提交后，从仓库根目录复跑：
+正常退出游戏后，从冻结项目复跑当前已安装版本：
 
 ```bash
+cd logs/multiplayer-validation/candidate-project
 python3 scripts/run_yixian_runtime_tests.py --include-fates --quit-after-tests --timeout 600
 python3 scripts/run_yixian_runtime_tests.py --costs-only --quit-after-tests --timeout 600
 ```

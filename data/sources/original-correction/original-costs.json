@@ -1763,6 +1763,45 @@
         508
       ],
       "imagePixelSha256": "2f3452e54034279a95da696955471503e92eab6108cf037af6d01b751d54ba23"
+    },
+    "1000011": {
+      "name": "形意剑",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000011_zh.webp",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000011.html",
+      "imagePixelSha256": "587f5cc29eb71cdacb2d068f0830e7d77411ea0ea00218d1630577b9d8f14aa9",
+      "imageSize": [
+        308,
+        508
+      ],
+      "evidence": "logs/sword-replacements/research/three-original-faces.png",
+      "grid": "row1-col1"
+    },
+    "1000008": {
+      "name": "反身剑",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000008_zh.webp",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000008.html",
+      "imagePixelSha256": "459f4c1e15c765c393ea38da4e1e318d45631f93d3d929aa7a6f717eb6285901",
+      "imageSize": [
+        308,
+        508
+      ],
+      "evidence": "logs/sword-replacements/research/three-original-faces.png",
+      "grid": "row1-col2"
+    },
+    "1000037": {
+      "name": "流云乱剑",
+      "cost": 1,
+      "imageUrl": "https://sharpobject.github.io/yxp_wiki/assets/cards/1000037_zh.webp",
+      "pageUrl": "https://sharpobject.github.io/yxp_wiki/zh/cards/1000037.html",
+      "imagePixelSha256": "22f993fbc36464b4df6fb80b3d08be915a1d4a9f2a64e425de11716ade53ea40",
+      "imageSize": [
+        308,
+        508
+      ],
+      "evidence": "logs/sword-replacements/research/three-original-faces.png",
+      "grid": "row1-col3"
     }
   },
   "swordAudit": {
@@ -1967,5 +2006,16 @@
     "paidCards": 14,
     "freeCards": 26,
     "basis": "2026-10-21三路线选牌；3张新增卡面已目视核对费用，移出证据保存在retiredCards。"
+  },
+  "swordReplacementAudit": {
+    "count": 3,
+    "activeCount": 48,
+    "archiveCount": 51,
+    "basis": "三张原卡308×508卡面逐张目视核对：左上角均为1灵气；原文／境界由归档与对应原作资料页交叉核对。",
+    "cards": [
+      "1000011",
+      "1000008",
+      "1000037"
+    ]
   }
 }

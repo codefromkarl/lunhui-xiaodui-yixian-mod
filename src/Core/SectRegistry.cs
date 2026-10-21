@@ -47,7 +47,7 @@ namespace YixianSect
             foreach (var pack in packs)
             {
                 var keys = ((JArray)pack["cards"]).Values<string>().ToList();
-                if (!ids.Contains(Owner(pack)) || keys.Count != 4 || keys.Distinct().Count() != 4 || (int)pack["price"] < 0) throw new ArgumentException("卡包声明无效。");
+                if (!ids.Contains(Owner(pack)) || (Owner(pack) == SwordRules.Lineage ? keys.Count != 3 && keys.Count != 4 : keys.Count != 4) || keys.Distinct().Count() != keys.Count || (int)pack["price"] < 0) throw new ArgumentException("卡包声明无效。");
                 foreach (var key in keys)
                 {
                     var card = cards.SingleOrDefault(c => (string)c["key"] == key);
@@ -56,7 +56,7 @@ namespace YixianSect
             }
             var fates = (table["fates"] as JArray ?? new JArray()).OfType<JObject>().ToList();
             var fateIds = fates.Select(f => SectIds.Fate(Owner(f), (string)f["key"])).ToList();
-            if (fateIds.Distinct().Count() != fateIds.Count || fates.Any(f => !ids.Contains(Owner(f)) || ((int)f["rank"] != 2 && (int)f["rank"] != 3) || (int)f["price"] != 40))
+            if (fateIds.Distinct().Count() != fateIds.Count || fates.Any(f => !ids.Contains(Owner(f)) || ((int)f["rank"] != 2 && (int)f["rank"] != 3) || (int)f["price"] != 20))
                 throw new ArgumentException("独立仙命身份、境界或价格无效。");
             int cost = (int?)table["playBaseCost"] ?? 0;
             if (cost != 0) throw new ArgumentException("门派卡牌不收取基础斗气费用。");

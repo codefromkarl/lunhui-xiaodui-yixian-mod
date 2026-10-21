@@ -17,11 +17,11 @@ namespace YixianSect
             var lines=new List<string>();
             if(rank==1)lines.Add("入宗赠送两个炼气包，共8张牌。\n"+RulesFor(SwordRules.Lineage));
             if(rank==2)lines.Add("突破筑基时，从两个筑基卡组中免费选一个；另一包可购买。此后突破不再赠包。");
-            lines.Add(rank==1?"本境界自动获得的卡组（每包 4 张）：":"本境界新增可购卡组（每包 4 张；低阶未拥有包持续出售）：");
+            lines.Add(rank==1?"本境界自动获得的卡组（每包 4 张）：":"本境界新增可购卡组（实际张数见各包；低阶未拥有包持续出售）：");
             foreach(var pack in SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==SwordRules.Lineage && SwordRules.Int(p,"rank")==rank))
             {
                 var names=((JArray)pack["cards"]).Values<string>().Select(k=>SwordRules.Text(SectRegistry.Cards[SectRegistry.CardPrefix+k],"name"));
-                lines.Add("【"+pack["name"]+"】 "+(rank==1?"入宗赠送":pack["price"]+" 奖励点")+"\n"+string.Join("、",names));
+                lines.Add("【"+pack["name"]+"】 "+(rank==1?"入宗赠送":pack["price"]+" 奖励点")+" · "+((JArray)pack["cards"]).Count+"张\n"+string.Join("、",names));
             }
             return string.Join("\n",lines);
         }
@@ -30,9 +30,12 @@ namespace YixianSect
             if(sect==SwordRules.Lineage)return Rank(rank);
             if (sect == FiveElementRules.Lineage)
             {
-                var text = new List<string> { rank == 1 ? "入宗解锁八张炼气牌，并启用初始八张卡包。" : "突破时从本境界选两张不同新牌加入本局牌库；包含在突破费用内。当前八张不变，战斗中可免费调整。", RulesFor(sect) };
+                var text = new List<string> { rank == 1 ? "入宗解锁八张炼气牌，并启用初始八张卡包。" : "突破时从本境界选两张新牌加入牌库，当前八张不变；战斗中可免费调整。",
+                    "水火主能量，金木主反应，土主体质；卡牌数值采用多属性成长。灵印激活本场持续，同系或相生也可触发元素条件。" };
+                if (rank == 1) text.Add(RulesFor(sect));
                 text.Add((rank == 1 ? "初始八张：" : "本境界候选：") + string.Join("、", FiveDeckRules.Candidates(rank).Select(c => (string)c["name"])));
-                foreach (var fate in SectRegistry.Fates.Values.Where(f => SectRegistry.Owner(f) == sect && (int)f["rank"] == rank)) text.Add("开放仙命：【" + fate["name"] + "】40奖励点，独立被动，不占卡包。");
+                text.Add("本阶属性成长预算：" + FiveCultivation.Growth(rank) + "点，自动随能量／反应／体质中最高项成长；不计五行自身加成，开战锁定。");
+                foreach (var fate in SectRegistry.Fates.Values.Where(f => SectRegistry.Owner(f) == sect && (int)f["rank"] == rank)) text.Add("开放仙命：【" + fate["name"] + "】" + fate["price"] + "奖励点，独立被动，不占卡包。");
                 return string.Join("\n", text);
             }
             var packs=SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==sect && (int)p["rank"]==rank);
@@ -43,7 +46,7 @@ namespace YixianSect
             lines.Add(rank==1?"本境界赠送卡组（每包4张）：":"本境界新增可购卡组（每包4张）：");
             lines.AddRange(packs.Select(p=>"【"+p["name"]+"】 "+(rank==1?"赠送":p["price"]+"奖励点")+"\n"+string.Join("、",((JArray)p["cards"]).Values<string>().Select(k=>(string)SectRegistry.Cards[SectRegistry.CardPrefix+k]["name"]))));
             foreach(var fate in SectRegistry.Fates.Values.Where(f=>SectRegistry.Owner(f)==sect && (int)f["rank"]==rank))
-                lines.Add("本境界开放仙命：【"+fate["name"]+"】40奖励点；独立被动，不占手牌。");
+                lines.Add("本境界开放仙命：【"+fate["name"]+"】" + fate["price"] + "奖励点；独立被动，不占手牌。");
             return string.Join("\n",lines);
         }
         public static string SectForCode(string code)=>SectRegistry.Sects.Values.Where(s=>(string)s["code"]==code).Select(s=>(string)s["id"]).FirstOrDefault();
@@ -51,7 +54,7 @@ namespace YixianSect
         public static string CardSummary(JObject card)=>SwordRules.Text(card,"summary");
         public static string CardDetail(JObject card)=>SwordRules.Text(card,"description");
         public static string PackDetail(JObject pack) => SwordRules.Text(pack,"description");
-        public static string PackSummary(JObject pack) => "4 张 · "+SwordRules.Text(pack,"role");
+        public static string PackSummary(JObject pack) => ((JArray)pack["cards"]).Count+" 张 · "+SwordRules.Text(pack,"role");
     }
 
     [HarmonyPatch(typeof(ProgressionPassiveNarrator),"Describe",new[]{typeof(RuntimeContentOperation)})]
@@ -77,8 +80,14 @@ namespace YixianSect
     [HarmonyPatch(typeof(ProgressionPassiveNarrator),"DescribeUpgradeDetails")]
     internal static class SectUpgradeDescription
     {
+        private static bool Prefix(RuntimeContentOperation operation, ref string __result)
+        {
+            if (operation == null || !operation.TryGetValue("lineageCode", out var code) || SectDescriptions.SectForCode(code.StringValue) != FiveElementRules.Lineage || !operation.TryGetValue("step", out var step)) return true;
+            __result = SectDescriptions.RankFor(FiveElementRules.Lineage, step.IntValue + 1); return false;
+        }
         private static void Postfix(RuntimeContentOperation operation,ref string __result)
         {
+            if (operation != null && operation.TryGetValue("lineageCode", out var five) && SectDescriptions.SectForCode(five.StringValue) == FiveElementRules.Lineage) return;
             if(operation!=null && operation.TryGetValue("lineageCode",out var code) && SectDescriptions.SectForCode(code.StringValue)!=null && operation.TryGetValue("step",out var step))
                 __result=SectDescriptions.RankFor(SectDescriptions.SectForCode(code.StringValue),step.IntValue+1)+"\n"+__result;
         }
@@ -89,7 +98,7 @@ namespace YixianSect
         private static void Postfix(RuntimeContentOperation operation,ref string __result)
         {
             if(operation==null || !operation.TryGetValue("lineageCode",out var code) || SectDescriptions.SectForCode(code.StringValue)==null || !operation.TryGetValue("step",out var step))return;
-            if(SectDescriptions.SectForCode(code.StringValue)==FiveElementRules.Lineage){__result+="\n卡包：固定八张；突破解锁两张，战斗中自由组牌。";return;}
+            if(SectDescriptions.SectForCode(code.StringValue)==FiveElementRules.Lineage){__result+="\n主修成长＋" + FiveCultivation.Growth(step.IntValue + 1) + (step.IntValue == 0 ? " · 解锁8张" : " · 解锁2张");return;}
             __result+="\n卡组："+string.Join("、",SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==SectDescriptions.SectForCode(code.StringValue) && SwordRules.Int(p,"rank")==step.IntValue+1).Select(p=>SwordRules.Text(p,"name")));
         }
     }
@@ -98,6 +107,8 @@ namespace YixianSect
     {
         private static bool Prefix(StableId abilityId,ref string __result)
         {
+            if (abilityId.Value.StartsWith(FiveCultivation.Prefix, StringComparison.Ordinal))
+            { __result = "旧修行记录（已停用）。当前自动识别主属性，无须购买或选择。"; return false; }
             if(SectRegistry.Fates.TryGetValue(abilityId.Value,out var fate)){__result=(string)fate["description"]+"\n独立被动，本局限购一次，不占手牌。";return false;}
             if(SectRegistry.Cards.TryGetValue(abilityId.Value,out var card)){__result=SectDescriptions.CardDetail(card);return false;}
             var pack=SectRegistry.FindPack(abilityId);

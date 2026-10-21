@@ -59,7 +59,7 @@ partial class Program
    if(c["sourceId"]!=null){var s=source.OfType<JObject>().Single(x=>(string)x["id"]==(string)c["sourceId"]);Check((int)c["rank"]==Array.IndexOf(new[]{"炼气","筑基","金丹","元婴","化神"},(string)s["realm"])+1,"original rank: "+c["name"]);}
   }
   foreach(int rank in Enumerable.Range(1,5))Check(SwordRules.Packs.Count(p=>(int)p["rank"]==rank)==(rank>=4?3:2),"realm pack count "+rank);
-  Check(SwordRules.Packs.All(p=>((JArray)p["cards"]).Count==4),"four cards per pack");
+  Check(SwordRules.Packs.All(p=>((JArray)p["cards"]).Count==4),"twelve four-card packs");
   var paidKeys=SwordRules.Packs.SelectMany(p=>((JArray)p["cards"]).Values<string>()).ToList();
   Check(paidKeys.Count==48&&paidKeys.Distinct().Count()==48,"complete unique paid pool");
   var manifest=JObject.Parse(File.ReadAllText(Mod+"/mod.json"));
@@ -96,7 +96,7 @@ partial class Program
   Check(progressions.Single().PoolBases.SequenceEqual(new[]{16,24,32,40,48}),"actual lineage energy pool projection");
   var projectedShelves=new List<ShelfAbilityDefinition>();
   Method(projection,"ProjectShelfAbilities").Invoke(null,new object[]{runtimeAbilities,progressions,projectedShelves});
-  Check(projectedShelves.Count==10&&projectedShelves.All(x=>x.SourceId.Value==SwordRules.Lineage),"actual shop projection");
+  Check(projectedShelves.Count==11&&projectedShelves.All(x=>x.SourceId.Value==SwordRules.Lineage),"actual shop projection");
   ProjectedEconomy=new EconomyCatalog(Array.Empty<EconomyCatalogEntry>(),progressions,projectedShelves);
   foreach(var rank in Enumerable.Range(1,5))
   {
@@ -127,7 +127,7 @@ partial class Program
    Check(SectDescriptions.PackSummary(pack).Length<90,"compact list summary");
   }
   Check(!SwordRules.Cards.Keys.Any(k=>k.Contains("common"))&&!SwordRules.Packs.Any(p=>(string)p["key"]=="yixian_common"),"no generic pack/cards");
-  Console.WriteLine("PASS catalog: 48 source cards / 12 four-card packs / 10 paid shelves; complete generated details and source ranks");
+  Console.WriteLine("PASS catalog: 48 source cards / 12 four-card packs / 10 paid packs and one training; complete generated details and source ranks");
  }
  static PlayerRunState Player(int rank=1,bool native=false,bool sect=true)
  {
@@ -180,7 +180,7 @@ partial class Program
  {
   var a=Run(SwordRules.Play,Id(Card(1)));var b=Run(SwordRules.Play,Id(Card(2)),a.State);
   var standalone=Run(SwordRules.Play,Id(Card(2)));
-  Check(Damage(b)-Damage(standalone)==17,"scaled cloud conditional bonus");
+  Check(Damage(b)-Damage(standalone)==13,"scaled cloud conditional bonus");
   var block=Run(SwordRules.Play,Id(Card(10)),a.State);var after=Run(SwordRules.Play,Id(Card(2)),block.State);
   Check(S(after,"cloud")==1&&Damage(after)==Damage(standalone)+6,"non-cloud breaks but intent works");
   var charged=Run(SwordRules.Play,Id(Card(12)));Check(S(charged,"intent")==2,"intent accumulation");
@@ -188,7 +188,7 @@ partial class Program
   Check(multi.Operations.Count==3&&S(multi,"intent")==0&&Damage(multi)==60,"intent per segment consumed once");
   foreach(var op in multi.Operations)Check(AuthoredSkillRules.TryCreateEffects(new BattleEffectOperation(op.HandlerKey,CombatTargetKind.EnemySingle,default,op.Values),out var parsed,out var _)&&parsed.Count==1,"retained native effect");
   var tooth=Run(SwordRules.Play,Id(Card(21)),charged.State);
-  Check(Damage(tooth)==46&&S(tooth,"intent")==0,"flying fang consumes intent for its attack");
+  Check(Damage(tooth)==38&&S(tooth,"intent")==0,"flying fang consumes intent for its attack");
   var returned=Run(SwordRules.Hits,state:tooth.State,hits:new[]{new ModBattleHit(ActorId,EnemyId,5,0,DamageType.Physical,true,false)});
   Check(S(returned,"intent")==2,"flying fang real-health hit returns exactly spent intent");
   Check(S(Run(SwordRules.Hits,state:tooth.State,hits:new[]{new ModBattleHit(ActorId,EnemyId,0,5,DamageType.Physical,true,false)}),"intent")==0,"flying fang shield-only no return");
@@ -215,10 +215,10 @@ partial class Program
   Check(S(conversion,"intent")==0&&conversion.Effects.Any(e=>e.Kind==ModBattleEffectKind.Energy),"intent conversion");
   var last=Run(SwordRules.Play,Id(Card(46)),actor:Unit(shield:30));
   var replay=Run(SwordRules.Play,Id(Card(64)),last.State,actor:Unit(shield:30));
-  Check(replay.Operations.Count==1&&Effect(replay,ModBattleEffectKind.Shield)==40,"scaled formation replay");
+  Check(replay.Operations.Count==1&&Effect(replay,ModBattleEffectKind.Shield)==26,"scaled formation replay");
   var strike=Run(SwordRules.Play,Id(Card(9)));var onhit=Run(SwordRules.Hits,state:strike.State,hits:new[]{new ModBattleHit(ActorId,EnemyId,5,0,DamageType.Physical,true,false)});
   var payoff=onhit.Effects.Single(e=>e.Kind==ModBattleEffectKind.Damage);
-  Check(payoff.Amount==30&&payoff.Source==ActorId&&payoff.Target==EnemyId&&payoff.Option==(int)DamageType.Physical,"scaled physical health-hit payoff");
+  Check(payoff.Amount==24&&payoff.Source==ActorId&&payoff.Target==EnemyId&&payoff.Option==(int)DamageType.Physical,"scaled physical health-hit payoff");
   Check(onhit.Operations.Count==0,"payoff is not a second attack roll");
   Check(Effect(Run(SwordRules.Hits,state:onhit.State,hits:new[]{new ModBattleHit(ActorId,EnemyId,4,0,DamageType.Physical,true,false)}),ModBattleEffectKind.Damage)==0,"no recursive payoff");
   Check(Effect(Run(SwordRules.Hits,state:strike.State,hits:new[]{new ModBattleHit(ActorId,EnemyId,0,5,DamageType.Physical,true,false)}),ModBattleEffectKind.Damage)==0,"shield-only no payoff");
@@ -233,14 +233,14 @@ partial class Program
   foreach(int stat in new[]{0,10,50,200})
   {
    var attrs=new StatBlock(stat,stat,stat,stat);
-   Check(Damage(Run(SwordRules.Play,Id(Card(1)),actor:Unit(attributes:attrs)))==18+stat*8000/10000,"energy damage formula "+stat);
+   Check(Damage(Run(SwordRules.Play,Id(Card(1)),actor:Unit(attributes:attrs)))==18+stat*8000/10000,"muscle damage formula "+stat);
    Check(Damage(Run(SwordRules.Play,Id(Card(32)),actor:Unit(attributes:attrs)))==3*(9+stat*5000/10000),"reaction multihit formula "+stat);
-   Check(Damage(Run(SwordRules.Play,Id(Card(22)),actor:Unit(attributes:attrs)))==15+stat,"muscle formula "+stat);
+   Check(SwordRules.Value(new JObject { ["damage"]=5,["damageAttr"]=10,["damageBp"]=10000 },"damage",attrs)==15+stat,"generic muscle scaling helper "+stat);
    Check(Effect(Run(SwordRules.Play,Id(Card(5)),actor:Unit(energy:0,attributes:attrs)),ModBattleEffectKind.Shield)==15+stat*6000/10000,"shield scaling "+stat);
    var heal=Run(SwordRules.Play,Id(Card(16)),State(("cloud",1)),actor:Unit(attributes:attrs));
    Check(Effect(heal,ModBattleEffectKind.Heal)==9+stat*4000/10000,"constitution heal "+stat);
    var qi=Run(SwordRules.Play,Id(Card(5)),actor:Unit(energy:0,attributes:attrs));
-   Check(qi.Effects.Single(e=>e.Kind==ModBattleEffectKind.Energy).Energy.Amount==4+stat*1500/10000,"energy recovery scaling "+stat);
+   Check(qi.Effects.Single(e=>e.Kind==ModBattleEffectKind.Energy).Energy.Amount==4+stat*1500/10000,"muscle recovery scaling "+stat);
   }
   Check(Effect(Run(SwordRules.Play,Id(Card(14))),ModBattleEffectKind.Damage)==0&&Damage(Run(SwordRules.Play,Id(Card(14))))==0,"unlinked no-edge has no attribute-only damage");
   Console.WriteLine("PASS battle: 48 planners/native effects; scaled damage/shield/heal/qi; cloud, intent, queued draws, cost discounts and hit conditions");
@@ -255,7 +255,7 @@ partial class Program
  static int Main(string[] args)
  {
   AppDomain.CurrentDomain.AssemblyResolve+=(s,e)=>{var p=Managed+"/"+new AssemblyName(e.Name).Name+".dll";return File.Exists(p)?Assembly.LoadFrom(p):null;};
-  try{CatalogTests();if(args.Contains("--balance-plans")){BalancePlannerAudit();return 0;}if(args.Contains("--sword-areas")){PatchTargets();BattleTests();SwordAreaTests();CardCostTests();DescriptionTests();Console.WriteLine("PASS sword area checks "+checks+"; isolated planners and snapshot projection, not game Mono/render acceptance.");return 0;}PatchTargets();ProgressionTests();SwordBuildTests();BuildAdjustmentTests();FiveDeckTests();BattleTests();SwordAreaTests();RoundDrawTests();CardCostTests();DescriptionTests();SchoolTests();IdentityTests();FiveExpansionTests();StarExpansionTests();ExpansionIntegrationTests();OriginalPrimitivesTests();Console.WriteLine("PASS total checks "+checks+"; .NET 8 isolated tests, no Unity process/save changes.");return 0;}
+  try{CatalogTests();if(args.Contains("--balance-plans")){BalancePlannerAudit();return 0;}if(args.Contains("--sword-areas")){PatchTargets();BattleTests();SwordAreaTests();CardCostTests();DescriptionTests();DecisionTests();Console.WriteLine("PASS sword area checks "+checks+"; isolated planners and snapshot projection, not game Mono/render acceptance.");return 0;}PatchTargets();ProgressionTests();SwordBuildTests();BuildAdjustmentTests();FiveDeckTests();FiveCultivationTests();SpiritConversionTests();BattleTests();SwordReplacementTests();SwordAreaTests();RoundDrawTests();CardCostTests();DescriptionTests();DecisionTests();SchoolTests();IdentityTests();FiveExpansionTests();StarExpansionTests();ExpansionIntegrationTests();OriginalPrimitivesTests();Console.WriteLine("PASS total checks "+checks+"; .NET 8 isolated tests, no Unity process/save changes.");return 0;}
   catch(Exception e){Console.Error.WriteLine(e);return 1;}
  }
 }
