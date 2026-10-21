@@ -33,7 +33,7 @@ namespace MuyifengAppearance
                 MuyifengChoice.Register();
                 SkinCatalog.Load(config,context.PackageDirectory);
                 new Harmony(context.PackageId).PatchAll(typeof(Entry).Assembly);
-                context.Log("弈仙牌角色外观 0.7.1 已加载："+SkinCatalog.All.Count+"套角色创建可选造型，分角色独立图集与身份，造型持物不受实际装备覆盖；不修改角色数值。");
+                context.Log("弈仙牌角色外观 0.7.2 已加载："+SkinCatalog.All.Count+"套角色创建可选造型，分角色独立图集与身份，造型持物不受实际装备覆盖；不修改角色数值。");
                 RuntimeVerification.Install(context);
             }
             catch

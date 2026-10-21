@@ -1,7 +1,9 @@
 {
   "format": "source-atlas-v1",
   "sheets": {
-    "character": "art/characters/nangongsheng/atlas-v1.png"
+    "character": "art/characters/nangongsheng/atlas-v1.png",
+    "damaged": "art/motion-v2/damaged.png",
+    "downed": "art/motion-v2/downed.png"
   },
   "parts": {
     "Body/Head": {
@@ -295,8 +297,60 @@
         0.5,
         0.5
       ],
-      "pixelsPerUnit": 600,
+      "pixelsPerUnit": 850.0,
       "alphaThreshold": 24
+    },
+    "Face/damaged": {
+      "sheet": "damaged",
+      "rect": [
+        1233,
+        574,
+        264,
+        251
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 457.5916,
+      "alphaThreshold": 24,
+      "mirrorX": true,
+      "componentSeed": [
+        130.5,
+        218.5
+      ],
+      "landmarks": {
+        "neck": [
+          130.5,
+          218.5
+        ]
+      }
+    },
+    "Face/downed": {
+      "sheet": "downed",
+      "rect": [
+        1216,
+        570,
+        304,
+        258
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 470.1571,
+      "alphaThreshold": 24,
+      "mirrorX": true,
+      "componentSeed": [
+        149.5,
+        224.5
+      ],
+      "landmarks": {
+        "neck": [
+          149.5,
+          224.5
+        ]
+      }
     }
   },
   "rig": {
@@ -456,9 +510,13 @@
     "sword": {
       "grip": [
         116.5,
-        193.8
+        194.5
       ],
-      "angleDegrees": 0
+      "angleDegrees": 0,
+      "emitter": [
+        116.5,
+        102.5
+      ]
     },
     "motionScale": 1.0,
     "legLeft": {
@@ -517,6 +575,10 @@
         140.5
       ]
     },
-    "calibrated": true
+    "calibrated": true,
+    "presentation": {
+      "kind": "cast",
+      "hanging": false
+    }
   }
 }

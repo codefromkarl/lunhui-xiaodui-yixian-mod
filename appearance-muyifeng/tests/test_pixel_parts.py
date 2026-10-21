@@ -59,8 +59,8 @@ class PixelPartsTests(unittest.TestCase):
 
     def test_package_and_assembly_version_match_revision(self):
         manifest = json.loads((ROOT / 'mod/appearance.muyifeng/mod.json').read_text())
-        self.assertEqual(manifest['version'], '0.7.1')
-        self.assertIn('<Version>0.7.1</Version>', (ROOT / 'src/MuyifengAppearance.csproj').read_text())
+        self.assertEqual(manifest['version'], '0.7.2')
+        self.assertIn('<Version>0.7.2</Version>', (ROOT / 'src/MuyifengAppearance.csproj').read_text())
 
 
 if __name__ == '__main__':

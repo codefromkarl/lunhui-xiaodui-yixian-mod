@@ -57,7 +57,7 @@ namespace MuyifengAppearance
                             var binding=hero.GetComponent<SkinState>();var grip=binding.Joints.Single(x=>x.Name=="Left grip");
                             Require(Vector2.Distance(camera.WorldToScreenPoint(grip.Actual),camera.WorldToScreenPoint(grip.Target))<1,"sword detached from palm");
                             var sword=hero.GetComponentsInChildren<SpriteRenderer>(true).Single(x=>x.enabled&&x.gameObject.activeInHierarchy&&x.sprite==Art.Parts["Weapon/Sword"]);
-                            Require(Quaternion.Angle(sword.transform.localRotation,Quaternion.Euler(0,0,(float)Art.AtlasDefinition["rig"]["sword"]["angleDegrees"]))<.001f,"actual equipment rotated costume sword");
+                            Require(binding.GripFramesCoherent,"prop no longer follows hand grip orientation");
                         });
                         yield return new WaitForEndOfFrame();
                         Case("fixed_sword_capture_"+label+"_"+phase,()=>{

@@ -1,13 +1,25 @@
-# 弈仙牌 · 三门派角色外观 v0.7.1
+# 弈仙牌 · 三门派角色外观 v0.7.2（开发分支）
 
 在角色创建的「信息」页点击「造型」，按门派选择角色。本包提供18位默认造型，每个角色的选择独立保存和同步；启用Mod不会自动覆盖原生角色或所有玩家，也不改变门派玩法和角色数值。
 
-**[下载完整安装包及查看修复对照](https://github.com/codefromkarl/lunhui-xiaodui-yixian-mod/releases/tag/appearance-v0.7.1)**。下载附件 `appearance-yixian-three-sects-0.7.1-rig-and-head-portrait-tested.zip`，不是GitHub自动生成的Source code压缩包；后者不含编译DLL。
+**此前已发布的稳定版仍为0.7.1。** [下载稳定版及查看修复对照](https://github.com/codefromkarl/lunhui-xiaodui-yixian-mod/releases/tag/appearance-v0.7.1)。下载附件 `appearance-yixian-three-sects-0.7.1-rig-and-head-portrait-tested.zip`，不是GitHub自动生成的Source code压缩包；后者不含编译DLL。
+
+## 0.7.2：让动作与持物协调
+
+本分支在0.7.1基础上新增四类造型动作：单剑、双剑、持物施法、重型近战。炎雪双剑错开出手，慕虎等重型姿态延后发力；扇、书、灯、瓶按持物姿态举持，杜伶鸳的灯保持向下悬挂。持物同时跟随手掌握点和方向。
+
+- **关键形象**：杜伶鸳以红灯笼替换闭伞，花沁蕊补回金色面帘。吴策源图本已有紫色披毛，本轮缩小扇面并调整举持位置，让肩部轮廓重新可见，不重画其衣服。
+- **状态表情**：18位均有独立受击和闭眼倒地头图；结束后恢复正常头图。花沁蕊正常状态使用面帘补图；全部旧PNG保留。
+- **小尺寸可读性**：将非剑类施法持物收敛到0.28～0.38个骨架单位的高度，减少扇、书、瓶遮脸／遮衣，配合一致的状态头图。牧逸风原图和各角色服装保留，不把整套服装重画为另一种画风。
+- **特效发起位置**：原特效类型、目标、次数和时序不变，发起端移到本角色持物可见像素。自身治疗的目标位置不移动；嵌套回调和其他角色不串用来源。
+- **兼容**：不改装备、伤害、原生骨骼、身份或存档，保留HUD头肩取景。既有外观未配置新presentation字段时，继续使用旧绑定行为。
+
+本轮工作分支为`feat/appearance-coherence-v0.7.2`，只提交推送源码、生成素材和验证记录，不合并main、不创建Release、不更新主游戏。编译后的本地候选与实机对照见[本分支验收记录](release/0.7.2/)。
 
 ## 安装和选择
 
 1. 正常退出《轮回小队 Demo》。将旧 `Mods/appearance.muyifeng` 移到 `Mods/` 外备份，再把ZIP中的 `appearance.muyifeng` 目录放入游戏的 `Mods/`。不要同时保留两份同ID的旧包。
-2. 在游戏Mod管理中启用「弈仙牌 · 三门派角色外观」，确认版本 **0.7.1**，按游戏提示确认代码许可。
+2. 在游戏Mod管理中启用「弈仙牌 · 三门派角色外观」，确认版本与安装包一致（本分支构建为 **0.7.2**，上述已发布稳定包为 **0.7.1**），按游戏提示确认代码许可。
 3. 新建角色，在「信息」页点击「随机外观」右侧的 **「造型：原生自定义」**，选择门派和角色，右侧预览会更新。
 4. 选「原生自定义」恢复当前草稿此前的原生部件组合；「随机外观」仍回到原生随机。完整造型下，单部件按钮显示「随造型」并停用。
 
@@ -39,7 +51,7 @@
 
 完整造型隐藏原生装备图像，显示角色自带持物；空手、换刀、换枪或关闭原武器显示对象均不会移除它。切回原生后恢复实际装备显示。
 
-实际装备ID、属性、技能、攻击动作和弹道不改。例如拿扇的造型装备枪时，仍执行原有射击效果。
+实际装备ID、属性、技能和伤害结算不改。0.7.2增加造型手势和持物发起位置：例如拿扇造型装备枪时，保留原射击效果和结算，从持物发起，不显示隐藏枪械。
 
 ## 角色、存档与联机
 
@@ -56,6 +68,12 @@
 完整名单与身份见 [characters.json](characters.json)。未知／损坏身份不作为扩展外观放行；原生出生、装备、数值及保存修复检查保留。渲染时仅把传给原生SPUM的临时参数替换为合法基础造型，角色原始身份不改。
 
 ## 验证结果
+
+### 0.7.2
+
+见[本分支报告与视觉对照](release/0.7.2/)。本轮不仅检查关节距离，还采样四类动作、原生攻击／受击时钟、手掌相对方向、持物可见发起点和原生恢复。
+
+### 0.7.1历史基线
 
 2026-10-21，Linux／Proton、真实Unity Mono图形测试：**474项通过，0失败，正常退出**。
 
@@ -80,7 +98,7 @@ dotnet build appearance-muyifeng/src/MuyifengAppearance.csproj -c Release \
 
 DLL生成到 `appearance-muyifeng/mod/appearance.muyifeng/plugins/`；该Mod目录即完整运行包。游戏程序集和编译DLL不进入Git，已编译版本从Release下载。
 
-修改拆件数据后，用 `python3 appearance-muyifeng/scripts/build_character_atlases.py --complete` 重建元数据。逐角色 `atlasOverrides` 与冻结的 `atlas-layout-v1.json` 保证重建不覆盖手工标定；生成器不修改源PNG。
+修改拆件数据后，依次运行 `python3 appearance-muyifeng/scripts/build_character_atlases.py --complete` 和 `python3 appearance-muyifeng/scripts/build_motion_metadata.py` 重建元数据。逐角色 `atlasOverrides` 与冻结的 `atlas-layout-v1.json` 保证重建不覆盖手工标定；生成器不修改源PNG。
 
 需要复跑实际图形检查时，只使用已授权、已启用本Mod并登记作者许可的独立游戏副本：
 
@@ -97,6 +115,8 @@ python3 appearance-muyifeng/scripts/verify.py --game "/独立副本"
 
 - `SkinCatalog.cs`、`ArtAtlas.cs`：逐角色独立图集、源点变换、裁切和遮罩。
 - `RigBinding.cs`：关节、持物、肩背与对象复用绑定。
+- `CostumeMotion.cs`、`motion-art.json`：仅外观的动作分型、状态头图、手掌方向与持物特效起点。
+- `art/motion-v2/provenance.json`：内置image_gen新增素材、原始参考和完整提示词。
 - `AppearanceChoices.cs`、`CreationPicker.cs`：开放注册、身份、原生保存修复与创建控件。
 - `HudPortraitFraming.cs`：只调整HUD专用镜头。
 - `*Verification.cs`：仅显式测试参数启用的游戏内验证。

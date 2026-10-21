@@ -28,3 +28,5 @@ python3 scripts/prepare_assets.py --download
 ## 独立角色外观包
 
 `appearance-muyifeng`发布18位角色的生成像素拆件、代码和元数据，完整安装包在`appearance-v0.7.1` Release提供。其素材不是下载的原角色立绘；逐角色参考网页、原图链接及生成提示词保存在各自的`provenance.json`和`prompt-v1.txt`。这些参考链接不表示取得原角色设计或原图的再分发授权，相关权利仍归原权利人。该Release不含《轮回小队》DLL／可执行文件，也不含本仓库门派玩法包使用的原卡图、徽章或仙命原图。
+
+外观0.7.2新增的红灯笼、花沁蕊面帘补图及18位受击／闭眼状态头图由内置`image_gen`制作。保留旧PNG，新增源文件与完整提示词见`appearance-muyifeng/mod/appearance.muyifeng/art/motion-v2/provenance.json`，仅以元数据裁切和绑定，不把参考立绘打入安装包。0.7.2分支推送不等于发布新Release。

@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "different_json": [],
+  "scope": "fresh frozen-layout rebuild plus motion metadata, comparing effective runtime metadata"
+}

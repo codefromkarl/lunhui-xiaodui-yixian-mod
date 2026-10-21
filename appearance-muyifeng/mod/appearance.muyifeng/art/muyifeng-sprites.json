@@ -3,7 +3,9 @@
   "sheets": {
     "reference": "art/muyifeng-atlas.png",
     "support": "art/muyifeng-support-v4.png",
-    "hands": "art/muyifeng-hands-v5.png"
+    "hands": "art/muyifeng-hands-v5.png",
+    "damaged": "art/motion-v2/damaged.png",
+    "downed": "art/motion-v2/downed.png"
   },
   "faceIdentityRegion": [
     185,
@@ -533,6 +535,58 @@
           380
         ]
       ]
+    },
+    "Face/damaged": {
+      "sheet": "damaged",
+      "rect": [
+        27,
+        18,
+        242,
+        259
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 355.8429,
+      "alphaThreshold": 24,
+      "mirrorX": true,
+      "componentSeed": [
+        121.5,
+        218.5
+      ],
+      "landmarks": {
+        "neck": [
+          121.5,
+          218.5
+        ]
+      }
+    },
+    "Face/downed": {
+      "sheet": "downed",
+      "rect": [
+        27,
+        17,
+        238,
+        261
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 359.1,
+      "alphaThreshold": 24,
+      "mirrorX": true,
+      "componentSeed": [
+        119.5,
+        220.5
+      ],
+      "landmarks": {
+        "neck": [
+          119.5,
+          220.5
+        ]
+      }
     }
   },
   "rig": {
@@ -679,10 +733,14 @@
     },
     "sword": {
       "grip": [
-        80,
-        475
+        80.5,
+        475.5
       ],
-      "angleDegrees": 146
+      "angleDegrees": 146,
+      "emitter": [
+        80.5,
+        37.5
+      ]
     },
     "motionScale": 1.0,
     "legLeft": {
@@ -724,6 +782,10 @@
         140,
         330
       ]
+    },
+    "presentation": {
+      "kind": "sword",
+      "hanging": false
     }
   }
 }

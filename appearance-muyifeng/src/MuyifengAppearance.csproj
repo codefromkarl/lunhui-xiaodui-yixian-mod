@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>9</LangVersion>
     <AssemblyName>MuyifengAppearance</AssemblyName>
-    <Version>0.7.1</Version>
+    <Version>0.7.2</Version>
     <OutputPath>../mod/appearance.muyifeng/plugins/</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <GenerateDependencyFile>false</GenerateDependencyFile>
@@ -17,6 +17,7 @@
     <Reference Include="Mirror" HintPath="$(GameManaged)/Mirror.dll" Private="false" />
     <Reference Include="UnityEngine.InputLegacyModule" HintPath="$(GameManaged)/UnityEngine.InputLegacyModule.dll" Private="false" />
     <Reference Include="Reincarnation.UI" HintPath="$(GameManaged)/Reincarnation.UI.dll" Private="false" />
+    <Reference Include="Reincarnation.Presentation" HintPath="$(GameManaged)/Reincarnation.Presentation.dll" Private="false" />
     <Reference Include="Reincarnation.Gameplay" HintPath="$(GameManaged)/Reincarnation.Gameplay.dll" Private="false" />
     <Reference Include="UnityEngine.CoreModule" HintPath="$(GameManaged)/UnityEngine.CoreModule.dll" Private="false" />
     <Reference Include="UnityEngine.ImageConversionModule" HintPath="$(GameManaged)/UnityEngine.ImageConversionModule.dll" Private="false" />

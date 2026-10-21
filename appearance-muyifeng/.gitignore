@@ -5,3 +5,8 @@
 !mod/appearance.muyifeng/art/muyifeng-hands-v5.png
 
 !mod/appearance.muyifeng/art/characters/*/atlas-v1.png
+
+!mod/appearance.muyifeng/art/motion-v2/*.png
+!mod/appearance.muyifeng/art/characters/*/*-v2.png
+
+!release/0.7.2/*.jpg

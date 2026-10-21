@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "stateSheets": {
+    "damaged": "art/motion-v2/damaged.png",
+    "downed": "art/motion-v2/downed.png"
+  },
+  "rowFractions": [
+    0,
+    0.33,
+    0.65,
+    1
+  ],
+  "characters": {
+    "muyifeng": {
+      "kind": "sword"
+    },
+    "yanxue": {
+      "kind": "dual"
+    },
+    "longyao": {
+      "kind": "sword"
+    },
+    "linxiaoyue": {
+      "kind": "sword"
+    },
+    "lujianxin": {
+      "kind": "sword"
+    },
+    "lichengyun": {
+      "kind": "heavy"
+    },
+    "tanshuyan": {
+      "kind": "cast",
+      "propHeight": 0.34
+    },
+    "yanchen": {
+      "kind": "cast",
+      "propHeight": 0.3
+    },
+    "yaoling": {
+      "kind": "cast",
+      "propHeight": 0.3
+    },
+    "jiangximing": {
+      "kind": "cast",
+      "propHeight": 0.38
+    },
+    "wuce": {
+      "kind": "cast",
+      "propHeight": 0.34
+    },
+    "fengxu": {
+      "kind": "cast",
+      "propHeight": 0.3
+    },
+    "wuxingzhi": {
+      "kind": "heavy"
+    },
+    "dulingyuan": {
+      "kind": "cast",
+      "propSource": "art/characters/dulingyuan/lantern-v2.png",
+      "hanging": true,
+      "propHeight": 0.3
+    },
+    "huaqinrui": {
+      "kind": "cast",
+      "headSource": "art/characters/huaqinrui/veil-v2.png",
+      "propHeight": 0.36
+    },
+    "muhu": {
+      "kind": "heavy"
+    },
+    "nangongsheng": {
+      "kind": "cast",
+      "propHeight": 0.3
+    },
+    "qiwangyou": {
+      "kind": "cast",
+      "propHeight": 0.28
+    }
+  }
+}

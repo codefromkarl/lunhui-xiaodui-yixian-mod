@@ -1,7 +1,9 @@
 {
   "format": "source-atlas-v1",
   "sheets": {
-    "character": "art/characters/linxiaoyue/atlas-v1.png"
+    "character": "art/characters/linxiaoyue/atlas-v1.png",
+    "damaged": "art/motion-v2/damaged.png",
+    "downed": "art/motion-v2/downed.png"
   },
   "parts": {
     "Body/Head": {
@@ -297,6 +299,58 @@
       ],
       "pixelsPerUnit": 475,
       "alphaThreshold": 24
+    },
+    "Face/damaged": {
+      "sheet": "damaged",
+      "rect": [
+        930,
+        58,
+        237,
+        223
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 423.4592,
+      "alphaThreshold": 24,
+      "mirrorX": true,
+      "componentSeed": [
+        131.5,
+        177.5
+      ],
+      "landmarks": {
+        "neck": [
+          131.5,
+          177.5
+        ]
+      }
+    },
+    "Face/downed": {
+      "sheet": "downed",
+      "rect": [
+        914,
+        56,
+        237,
+        226
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 430.6163,
+      "alphaThreshold": 24,
+      "mirrorX": true,
+      "componentSeed": [
+        131.5,
+        180.5
+      ],
+      "landmarks": {
+        "neck": [
+          131.5,
+          180.5
+        ]
+      }
     }
   },
   "rig": {
@@ -455,10 +509,14 @@
     },
     "sword": {
       "grip": [
-        51.5,
-        220.4
+        53.5,
+        218.5
       ],
-      "angleDegrees": 115
+      "angleDegrees": 115,
+      "emitter": [
+        39.5,
+        24.5
+      ]
     },
     "motionScale": 1.0,
     "legLeft": {
@@ -517,6 +575,10 @@
         109.5
       ]
     },
-    "calibrated": true
+    "calibrated": true,
+    "presentation": {
+      "kind": "sword",
+      "hanging": false
+    }
   }
 }

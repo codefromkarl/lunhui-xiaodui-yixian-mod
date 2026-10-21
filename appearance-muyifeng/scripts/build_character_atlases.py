@@ -6,6 +6,7 @@ import copy
 import json
 from pathlib import Path
 from PIL import Image
+from build_motion_metadata import enrich
 
 ROOT = Path(__file__).resolve().parents[1]
 MOD = ROOT / 'mod/appearance.muyifeng'
@@ -145,6 +146,7 @@ def main():
                     if isinstance(value,dict) and isinstance(target.get(key),dict):merge(target[key],value)
                     else:target[key]=copy.deepcopy(value)
             merge(atlas,character.get('atlasOverrides',{}))
+            enrich(atlas,character,characters)
             (directory/'atlas.json').write_text(json.dumps(atlas,ensure_ascii=False,indent=2)+'\n')
             prompt=ROOT/'output/three-sects-prompts'/(slug+'-v1.txt')
             if prompt.is_file():(directory/'prompt-v1.txt').write_text(prompt.read_text())

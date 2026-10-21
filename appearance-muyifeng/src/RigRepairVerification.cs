@@ -29,7 +29,8 @@ namespace MuyifengAppearance
             var rig=art.AtlasDefinition["rig"];if((bool?)rig["calibrated"]!=true)return;
             var renderers=actor.GetComponentsInChildren<SpriteRenderer>(true).Where(r=>r.enabled&&r.gameObject.activeInHierarchy).ToArray();
             SpriteRenderer Part(string key)=>renderers.Single(r=>r.sprite==art.Parts[key]);
-            var head=Part("Body/Head");var torso=Part("Cloth/Body");
+            var face=actor.GetComponent<SkinState>().FaceState;
+            var head=Part(face=="normal"?"Body/Head":"Face/"+face);var torso=Part("Cloth/Body");
             var state=actor.GetComponent<SkinState>();var neck=state.Joints.Single(j=>j.Name=="neck").Target;
             int overlap=VisibleOverlap(head,torso,neck);
             Require(overlap>=4,"head/collar visible pixels do not overlap: "+art.Prefix+" / "+phase+" / "+overlap);
