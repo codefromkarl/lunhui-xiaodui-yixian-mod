@@ -14,6 +14,9 @@
 
 冻结包`logs/sword-scaling/final-candidate/yixian.sect/`，回执`logs/sword-scaling/verification.json`；README在实机后仅同步交付说明，其余运行文件与受测包一致。远程版本为`sect-v0.7.1`，同时提供完整整合包和无图覆盖更新包。完整包采用本版门派与已发布受测外观v0.7.1，外观源码固定到`appearance-v0.7.1`，不混入共享外观WIP。无图覆盖更新包仅含门派DLL／PDB与配置，保留旧图片，不作首次安装包。首次安装和原图修复按[开发指南](development.md)准备本地合法资源。源码与发行链接见主README。
 
+
+**远程交付完成：** 实现源码与对应Tag`873a210`／`sect-v0.7.1`已推送。完整整合包`lunhui-yixian-full-mod-0.7.1.zip`为63,884,586字节、396文件（其中389个Mod组件文件），无图覆盖更新包305,134字节、12文件；两个附件均从GitHub重新下载，与上传文件逐字节一致，清单与源码提交核对通过。主README的完整下载入口已更新到本版，旧发行包保留。实际回执`logs/releases/sect-v0.7.1-publication.json`。
+
 ---
 
 ## 2026-10-21 剑宗属性关联与扣属性转灵剑：完整实机40／40，尚未安装

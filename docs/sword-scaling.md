@@ -40,8 +40,8 @@
 - 卡牌权威源：`data/sword/cardtable.json`；独立引用变更表：`tests/fixtures/sword-scaling.json`。
 - 原生购买声明：`data/sword/training.json`，身份`yixian.sect.training.sword.spirit_conversion`。
 - 转化：`src/Sects/Sword/SpiritConversion.cs`。原生第一次计算完成后，按有效持久属性扣除；重算派生值时保留全部非属性修饰，不再次乘属性百分比。能力说明由同一规则类输出，避免商店重复堆叠描述。
-- 本轮不改三派血统成长分配、突破价格或卡包价格；不改存档，不自动安装。验证状态和冻结包位置见[测试状态](testing-status.md)。
+- 本轮不改三派血统成长分配、突破价格或卡包价格；不改用户存档；完整版本已按本次追加授权安装。验证状态和冻结包位置见[测试状态](testing-status.md)。
 
-验证通过：原图来源136张、98项Python、7990项C#、217项仙命检查；持续加点专项及完整Mono40／40、仙命6／6，正常退出。安装输入为`logs/sword-scaling/final-candidate/yixian.sect/`，不是之后可能重建的共享Mod目录。
+验证通过：原图来源136张、100项Python、7990项C#、217项仙命检查；持续加点专项及完整Mono40／40、仙命6／6，正常退出。安装输入为`logs/sword-scaling/final-candidate/yixian.sect/`，不是之后可能重建的共享Mod目录。
 
 正常退出测试目标后，可用既有入口复跑专项：`python3 scripts/run_yixian_runtime_tests.py --sword-scaling-only --quit-after-tests`。需要目标中已安装包含本专项的候选；实机证据来自项目私有副本，相同运行文件已安装正式游戏，295文件回读一致。
