@@ -1,11 +1,14 @@
 {
   "format": "source-atlas-v1",
   "sheets": {
-    "character": "art/characters/huaqinrui/atlas-v1.png"
+    "character": "art/characters/huaqinrui/atlas-v1.png",
+    "veil": "art/characters/huaqinrui/veil-v2.png",
+    "damaged": "art/motion-v2/damaged.png",
+    "downed": "art/motion-v2/downed.png"
   },
   "parts": {
     "Body/Head": {
-      "sheet": "character",
+      "sheet": "veil",
       "rect": [
         30,
         33,
@@ -295,8 +298,60 @@
         0.5,
         0.5
       ],
-      "pixelsPerUnit": 600,
+      "pixelsPerUnit": 822.2222,
       "alphaThreshold": 24
+    },
+    "Face/damaged": {
+      "sheet": "damaged",
+      "rect": [
+        626,
+        562,
+        248,
+        272
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 418.4087,
+      "alphaThreshold": 24,
+      "mirrorX": true,
+      "componentSeed": [
+        117.5,
+        223.5
+      ],
+      "landmarks": {
+        "neck": [
+          117.5,
+          223.5
+        ]
+      }
+    },
+    "Face/downed": {
+      "sheet": "downed",
+      "rect": [
+        615,
+        561,
+        249,
+        273
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 420.2808,
+      "alphaThreshold": 24,
+      "mirrorX": true,
+      "componentSeed": [
+        118.5,
+        224.5
+      ],
+      "landmarks": {
+        "neck": [
+          118.5,
+          224.5
+        ]
+      }
     }
   },
   "rig": {
@@ -455,10 +510,14 @@
     },
     "sword": {
       "grip": [
-        66.5,
-        224.96
+        67.5,
+        226.5
       ],
-      "angleDegrees": 0
+      "angleDegrees": 0,
+      "emitter": [
+        61.5,
+        119.5
+      ]
     },
     "motionScale": 1.0,
     "legLeft": {
@@ -517,6 +576,10 @@
         142.5
       ]
     },
-    "calibrated": true
+    "calibrated": true,
+    "presentation": {
+      "kind": "cast",
+      "hanging": false
+    }
   }
 }

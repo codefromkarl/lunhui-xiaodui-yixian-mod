@@ -1,0 +1,18 @@
+{
+  "results": "appearance-muyifeng/output/run-20261021-183451/results",
+  "source_report": "results.json",
+  "detail_crop": [
+    565,
+    465,
+    895,
+    770
+  ],
+  "standard_crop": [
+    650,
+    240,
+    820,
+    375
+  ],
+  "resized": false,
+  "production_images_edited": false
+}

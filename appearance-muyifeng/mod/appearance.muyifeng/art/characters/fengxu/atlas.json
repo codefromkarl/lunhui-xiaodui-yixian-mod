@@ -1,7 +1,9 @@
 {
   "format": "source-atlas-v1",
   "sheets": {
-    "character": "art/characters/fengxu/atlas-v1.png"
+    "character": "art/characters/fengxu/atlas-v1.png",
+    "damaged": "art/motion-v2/damaged.png",
+    "downed": "art/motion-v2/downed.png"
   },
   "parts": {
     "Body/Head": {
@@ -295,8 +297,60 @@
         0.5,
         0.5
       ],
-      "pixelsPerUnit": 600,
+      "pixelsPerUnit": 890.0,
       "alphaThreshold": 24
+    },
+    "Face/damaged": {
+      "sheet": "damaged",
+      "rect": [
+        1550,
+        315,
+        249,
+        239
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 428.9308,
+      "alphaThreshold": 24,
+      "mirrorX": true,
+      "componentSeed": [
+        138.5,
+        170.5
+      ],
+      "landmarks": {
+        "neck": [
+          138.5,
+          170.5
+        ]
+      }
+    },
+    "Face/downed": {
+      "sheet": "downed",
+      "rect": [
+        1525,
+        313,
+        251,
+        241
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 433.9623,
+      "alphaThreshold": 24,
+      "mirrorX": true,
+      "componentSeed": [
+        139.5,
+        172.5
+      ],
+      "landmarks": {
+        "neck": [
+          139.5,
+          172.5
+        ]
+      }
     }
   },
   "rig": {
@@ -455,10 +509,14 @@
     },
     "sword": {
       "grip": [
-        106.0,
-        202.92000000000002
+        106.5,
+        176.5
       ],
-      "angleDegrees": 0
+      "angleDegrees": 0,
+      "emitter": [
+        106.5,
+        107.5
+      ]
     },
     "motionScale": 1.0,
     "legLeft": {
@@ -517,6 +575,10 @@
         135.5
       ]
     },
-    "calibrated": true
+    "calibrated": true,
+    "presentation": {
+      "kind": "cast",
+      "hanging": false
+    }
   }
 }

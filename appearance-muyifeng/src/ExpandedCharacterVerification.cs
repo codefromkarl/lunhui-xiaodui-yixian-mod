@@ -26,7 +26,7 @@ namespace MuyifengAppearance
                         Require(Rows(hero).Where(x=>x.PartType=="Weapons").All(x=>x.renderer.sprite==null),"native equipment leaked into character");
                         Require(!HasSkin(hero)&&!HasSkin(native),"Muyifeng or selected art leaked");
                         Require(hero.WeaponEquipmentId=="EQ-RFL-01","cosmetic changed actual weapon ID");
-                        Require(hero.GetComponentsInChildren<SpriteRenderer>(true).Any(r=>r.enabled&&r.gameObject.activeInHierarchy&&r.sprite==art.Parts["Body/Head"]),"new character head not rendered");
+                        Require(hero.GetComponentsInChildren<SpriteRenderer>(true).Any(r=>r.enabled&&r.gameObject.activeInHierarchy&&(r.sprite==art.Parts["Body/Head"]||r.sprite==art.Parts["Face/damaged"]||r.sprite==art.Parts["Face/downed"])),"new character head not rendered");
                         Require(hero.GetComponentsInChildren<SpriteRenderer>(true).Count(r=>r.enabled&&r.gameObject.activeInHierarchy&&r.sprite==art.Parts["Weapon/Sword"])==1,"primary prop missing or duplicated");
                         hero.ApplyLook(choice.Token,"");Require(hero.WeaponEquipmentId=="","unarmed identity changed");
                         Require(hero.GetComponentsInChildren<SpriteRenderer>(true).Any(r=>r.enabled&&r.gameObject.activeInHierarchy&&r.sprite==art.Parts["Weapon/Sword"]),"unarmed refresh hid character prop");
@@ -56,6 +56,7 @@ namespace MuyifengAppearance
                             {
                                 foreach(var actor in Actors)foreach(var animator in actor.GetComponentsInChildren<Animator>(true))
                                     activeClip.SampleAnimation(animator.gameObject,activeClip.length*sample/8f);
+                                PreviewCostumePhase(phase,sample/8f);
                                 foreach(var actor in Actors)actor.GetComponent<SkinState>()?.SyncRigPose();
                                 var binding=hero.GetComponent<SkinState>();Require(binding.Joints.Count>=10,"character lacks anatomical/prop bindings");
                                 Require(binding.NativePartsHidden,"animation reintroduced native body/clothes/equipment sprites");
@@ -64,6 +65,7 @@ namespace MuyifengAppearance
                             }
                             foreach(var actor in Actors)foreach(var animator in actor.GetComponentsInChildren<Animator>(true))
                                 activeClip.SampleAnimation(animator.gameObject,Mathf.Min(.32f,activeClip.length-.001f));
+                            PreviewCostumePhase(phase,.38f);
                             foreach(var actor in Actors){actor.GetComponent<SkinState>()?.SyncRigPose();PrepareDisplay(actor);actor.GetComponent<SkinState>()?.SyncRigPose();}
                             var state=hero.GetComponent<SkinState>();Require(ReferenceEquals(state.SkinArt,art),"pose changed character identity");
                             foreach(var joint in state.Joints)Require(Vector2.Distance(camera.WorldToScreenPoint(joint.Actual),camera.WorldToScreenPoint(joint.Target))<1,"anatomical joint gap: "+joint.Name);
@@ -94,6 +96,6 @@ namespace MuyifengAppearance
             }
         }
         private static bool HasArtHead(Component root,AppearanceArt art)=>root.GetComponentsInChildren<SpriteRenderer>(true)
-            .Any(r=>r.enabled&&r.gameObject.activeInHierarchy&&r.sprite==art.Parts["Body/Head"]);
+            .Any(r=>r.enabled&&r.gameObject.activeInHierarchy&&(r.sprite==art.Parts["Body/Head"]||r.sprite==art.Parts["Face/damaged"]||r.sprite==art.Parts["Face/downed"]));
     }
 }

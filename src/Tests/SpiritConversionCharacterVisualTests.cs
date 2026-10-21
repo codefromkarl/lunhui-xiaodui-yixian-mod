@@ -57,6 +57,7 @@ namespace YixianSect
                     var current=snapshot();var player=current.Players.First(p=>p.Slot==current.ViewerSlot);
                     window.Setup(RunUIPresentationMapper.BuildCharacterCenter(current,player,data),Array.Empty<InventorySlotViewModel>(),Array.Empty<InventorySlotViewModel>(),false,false,false);
                     AccessTools.Field(typeof(InventoryWindow),"modChoiceGateway").SetValue(window,gateway);
+                    AccessTools.Method(typeof(InventoryWindow),"HandleProgressionTab").Invoke(window,null);
                     AccessTools.Method(typeof(InventoryWindow),"HandleAbilitiesTab").Invoke(window,null);
                     var icons=(List<string>)AccessTools.Field(typeof(InventoryWindow),"abilityIconKeys").GetValue(window);
                     int selected=icons.IndexOf("icon."+SpiritConversion.Ability);Require(selected>=0,"conversion missing from real ability list");

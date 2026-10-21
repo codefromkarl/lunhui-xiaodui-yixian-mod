@@ -1,0 +1,14 @@
+{
+  "generationTool": "built-in image_gen",
+  "date": "2026-10-21",
+  "originalSourcesPreserved": true,
+  "outputs": {
+    "damaged.png": "damaged-prompt.txt",
+    "downed.png": "downed-prompt.txt",
+    "../characters/huaqinrui/veil-v2.png": "huaqinrui-veil-prompt.txt",
+    "../characters/dulingyuan/lantern-v2.png": "dulingyuan-lantern-prompt.txt"
+  },
+  "reference": "v0.7.1 rendered 18-character idle roster; stored default portraits for Hua Qinrui and Du Lingyuan",
+  "pixelEdits": false,
+  "usage": "runtime atlas crop metadata; original normal head remains for all except Hua Qinrui veil-only patch"
+}

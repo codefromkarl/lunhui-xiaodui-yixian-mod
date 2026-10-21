@@ -169,7 +169,7 @@ namespace MuyifengAppearance
         internal bool SyncRigPose()
         {
             if(!Selected||!RigEnabled)return false;
-            bool changed=false;jointLinks.Clear();var rig=Art.AtlasDefinition["rig"];var body=rig["body"];var native=rig["native"];
+            bool changed=false;jointLinks.Clear();ReadCostumePose();var rig=Art.AtlasDefinition["rig"];var body=rig["body"];var native=rig["native"];
             float spine=(V(native["neck"])-V(native["waist"])).magnitude;var figure=rig["referenceFigure"];
             var soleA=V(native["waist"])+ReferenceVector(figure,figure["waist"],figure["soleLeft"],spine);
             var soleB=V(native["waist"])+ReferenceVector(figure,figure["waist"],figure["soleRight"],spine);
@@ -181,8 +181,9 @@ namespace MuyifengAppearance
                 changed|=Fit(g.Torso,body["frameNeck"]??body["neck"],body["waist"],g.Body.transform.TransformPoint(V(native["neck"])+shift),g.Body.transform.TransformPoint(V(native["waist"])+shift));
                 changed|=Style(g.Torso,g.Cloth);
                 var neck=Point(g.Torso,body["neck"]);
-                changed|=Anchor(g.Face,rig["head"]["neck"],neck);changed|=Style(g.Face,g.Head);
-                if(g.Body.gameObject.activeInHierarchy)Link("neck",Point(g.Face,rig["head"]["neck"]),neck);
+                g.Face.Key=FaceKey;g.Face.View.sprite=Art.Parts[FaceKey];
+                changed|=Anchor(g.Face,FaceNeck,neck);changed|=Style(g.Face,g.Head);
+                if(g.Body.gameObject.activeInHierarchy)Link("neck",Point(g.Face,FaceNeck),neck);
                 var back=rig["back"] as JObject;var rearParent=back!=null?g.Body.transform:g.Face.View.transform;
                 if(g.Hair.View.transform.parent!=rearParent){g.Hair.View.transform.SetParent(rearParent,false);changed=true;}
                 if(back!=null){changed|=Fit(g.Hair,back["shoulderLeft"],back["shoulderRight"],Point(g.Torso,body["shoulderLeft"]),Point(g.Torso,body["shoulderRight"]));changed|=Style(g.Hair,g.Cloth,order:g.Cloth.sortingOrder-1);}
@@ -192,10 +193,9 @@ namespace MuyifengAppearance
                     arm.Shoulder=Point(g.Torso,body["shoulder"+arm.Side]);
                     var nativePalm=arm.Source.transform.TransformPoint(V(native["palmInArm"]));
                     var delta=g.Body.transform.InverseTransformPoint(nativePalm)-V(native["restPalm"+arm.Side]);delta.z=0;
-                    arm.Palm=g.Body.transform.TransformPoint(g.Body.transform.InverseTransformPoint(arm.Shoulder)+ReferenceVector(figure,figure["shoulder"+arm.Side],figure["palm"+arm.Side],spine)+delta*((float?)rig["motionScale"]??1));
+                    var reference=arm.Shoulder+g.Body.transform.TransformVector(ReferenceVector(figure,figure["shoulder"+arm.Side],figure["palm"+arm.Side],spine));
+                    arm.Palm=CostumePalm(g,arm,reference,delta*((float?)rig["motionScale"]??1),spine);
                     bool holding=arm==g.Left||rig["offhand"]!=null;
-                    // Atlas L/R identifies the drawn pair, whose thumb anatomy is opposite
-                    // the native Arm_L/Arm_R slots. Swap sprites, never bones or weapon arms.
                     string key="Hand/"+(holding?"Grip_":"Open_")+(arm.Side=="Left"?"R":"L");arm.Hand.Key=key;arm.Hand.View.sprite=Art.Parts[key];
                     var handMarks=Art.AtlasDefinition["parts"][key]["landmarks"];
                     var shoulderLocal=g.Body.transform.InverseTransformPoint(arm.Shoulder);
@@ -205,10 +205,10 @@ namespace MuyifengAppearance
                     var elbow=g.Body.transform.TransformPoint(SolveElbow(shoulderLocal,palmLocal,upper,lower,arm.Side=="Left"?1:-1));
                     var direction=arm.Hand.View.transform.parent.InverseTransformVector(arm.Palm-elbow);direction.z=0;
                     var sourceDirection=Art.SourcePoint(key,handMarks["grip"])-Art.SourcePoint(key,handMarks["wrist"]);
-                    var rotation=Quaternion.Euler(0,0,Vector2.SignedAngle(sourceDirection,direction));
+                    var rotation=CostumeWrist(g,arm,sourceDirection,direction);
                     var palm=arm.Hand.View.transform.parent.InverseTransformPoint(arm.Palm);palm.z=0;
                     changed|=SetPose(arm.Hand,palm-rotation*Art.SourcePoint(key,handMarks["grip"]),rotation,Vector3.one);
-                    // Keep native front/back arm order; reserve sublayers for cuff, prop, fingers.
+                    // Atlas hand anatomy is opposite the native slot names; bones stay unchanged.
                     changed|=Style(arm.Hand,arm.Cloth,color:g.Head.color,order:arm.Cloth.sortingOrder+3);
                     arm.Wrist=Point(arm.Hand,handMarks["wrist"]);
                     var sleeve=rig["sleeve"+arm.Side];
@@ -228,18 +228,14 @@ namespace MuyifengAppearance
                     if(g.Body.gameObject.activeInHierarchy)Link(leg.Side+" ankle",Point(leg.Cloth,data["pantAnkle"]),ankle);
                 }
                 var sword=g.Sword;var swordData=rig["sword"];
-                var swordRotation=Quaternion.Euler(0,0,(float)swordData["angleDegrees"]);
-                var grip=sword.View.transform.parent.InverseTransformPoint(g.Left.Palm);grip.z=0;
-                changed|=SetPose(sword,grip-swordRotation*Art.SourcePoint(sword.Key,swordData["grip"]),swordRotation,Vector3.one);
+                changed|=PoseProp(sword,g.Left,swordData);
                 // Hand covers the hilt; body normalization still excludes the sword.
                 changed|=Style(sword,g.Left.Source,order:g.Left.Cloth.sortingOrder+2);
                 if(g.Body.gameObject.activeInHierarchy)Link("Left grip",Point(sword,swordData["grip"]),g.Left.Palm);
                 if(rig["offhand"] is JObject offhand&&Art.Parts.ContainsKey("Weapon/Offhand"))
                 {
                     if(g.Offhand==null)g.Offhand=PieceFor(g.Right.Source,"offhand","Weapon/Offhand",equipment:true);
-                    var offRotation=Quaternion.Euler(0,0,(float)offhand["angleDegrees"]);
-                    var offGrip=g.Offhand.View.transform.parent.InverseTransformPoint(g.Right.Palm);offGrip.z=0;
-                    changed|=SetPose(g.Offhand,offGrip-offRotation*Art.SourcePoint(g.Offhand.Key,offhand["grip"]),offRotation,Vector3.one);
+                    changed|=PoseProp(g.Offhand,g.Right,offhand);
                     changed|=Style(g.Offhand,g.Right.Source,order:g.Right.Cloth.sortingOrder+2);
                     if(g.Body.gameObject.activeInHierarchy)Link("Right grip",Point(g.Offhand,offhand["grip"]),g.Right.Palm);
                 }
@@ -249,7 +245,7 @@ namespace MuyifengAppearance
         }
         private bool DisableRig()
         {
-            bool changed=false;
+            bool changed=false;ClearCostumeMotion();
             foreach(var piece in rigPieces.Values)if(piece.View!=null){changed|=piece.View.enabled;piece.View.enabled=false;}
             jointLinks.Clear();return changed;
         }

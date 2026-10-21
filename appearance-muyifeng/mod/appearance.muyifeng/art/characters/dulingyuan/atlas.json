@@ -1,7 +1,10 @@
 {
   "format": "source-atlas-v1",
   "sheets": {
-    "character": "art/characters/dulingyuan/atlas-v1.png"
+    "character": "art/characters/dulingyuan/atlas-v1.png",
+    "damaged": "art/motion-v2/damaged.png",
+    "downed": "art/motion-v2/downed.png",
+    "prop-v2": "art/characters/dulingyuan/lantern-v2.png"
   },
   "parts": {
     "Body/Head": {
@@ -284,19 +287,71 @@
       "mirrorX": true
     },
     "Weapon/Sword": {
-      "sheet": "character",
+      "sheet": "prop-v2",
       "rect": [
-        1067,
-        932,
-        132,
-        306
+        121,
+        303,
+        645,
+        1349
       ],
       "pivot": [
         0.5,
         0.5
       ],
-      "pixelsPerUnit": 600,
+      "pixelsPerUnit": 4496.6667,
       "alphaThreshold": 24
+    },
+    "Face/damaged": {
+      "sheet": "damaged",
+      "rect": [
+        327,
+        562,
+        224,
+        262
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 406.0222,
+      "alphaThreshold": 24,
+      "mirrorX": true,
+      "componentSeed": [
+        104.5,
+        213.5
+      ],
+      "landmarks": {
+        "neck": [
+          104.5,
+          213.5
+        ]
+      }
+    },
+    "Face/downed": {
+      "sheet": "downed",
+      "rect": [
+        318,
+        561,
+        225,
+        267
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 413.6292,
+      "alphaThreshold": 24,
+      "mirrorX": true,
+      "componentSeed": [
+        105.5,
+        217.5
+      ],
+      "landmarks": {
+        "neck": [
+          105.5,
+          217.5
+        ]
+      }
     }
   },
   "rig": {
@@ -455,10 +510,14 @@
     },
     "sword": {
       "grip": [
-        66.0,
-        275.40000000000003
+        322.5,
+        34.5
       ],
-      "angleDegrees": 0
+      "angleDegrees": 0,
+      "emitter": [
+        322.5,
+        647.52
+      ]
     },
     "motionScale": 1.0,
     "legLeft": {
@@ -517,6 +576,10 @@
         145.5
       ]
     },
-    "calibrated": true
+    "calibrated": true,
+    "presentation": {
+      "kind": "cast",
+      "hanging": true
+    }
   }
 }

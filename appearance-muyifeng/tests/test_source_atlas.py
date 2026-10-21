@@ -17,7 +17,7 @@ class SourceAtlasTests(unittest.TestCase):
         self.assertNotIn('pixelSource', self.config)
         self.assertEqual(self.atlas['format'], 'source-atlas-v1')
         self.assertEqual(self.atlas['sheets']['reference'], 'art/muyifeng-atlas.png')
-        self.assertEqual(len(self.atlas['parts']), 16)
+        self.assertEqual(len(self.atlas['parts']), 18)
 
     def test_selection_is_per_character_not_a_local_override(self):
         self.assertEqual(self.config['target'], 'character-selection')
