@@ -16,6 +16,10 @@ mod/*/TestResults/
 *.jpg
 *.jpeg
 *.html
+# Curated README screenshots; other artwork and test captures stay local.
+!/docs/images/characters.jpg
+!/docs/images/card-packs.png
+!/docs/images/appearance-picker.png
 **/preview-catalog.json
 **/cards-zh-catalog.json
 # Machine-local configuration
