@@ -14,7 +14,7 @@
 
 ## 检查结果
 
-- **548项Unity／Mono图形检查通过，0失败，正常退出**：[完整报告](runtime-results.json)、[退出回执](watchdog.json)。本机Linux／Proton、Unity 2022.3.62f2c1、llvmpipe。
+- **548项Unity／Mono图形检查通过，0失败，正常退出**：[完整报告](runtime-results.json)、[退出回执](watchdog.json)。本机Linux／Proton、Unity 2022.3.62f2c1、Intel(R) UHD Graphics 730 (ADL-S GT1)。
 - 18位各25点新动作采样，验证手掌／持物的相对方向与关节连接，确认原生骨骼和实际步枪装备不变；每位保存6个动作时刻，共108张原截图。
 - 每位实际调用原生`PlayAttackMotion`、读取原生攻击时钟、受击和倒地状态；实际经过`CombatFeedbackPresenter.PlayAtSource → IVfxPlayer → PooledVfxPlayer.Play`，检查该角色持物起点。该项用无资源加载的测试接收器观察请求，不等同完整战役的特效观感验收。
 - 自身治疗目标位置、特效类型／目标／时长等字段不变；嵌套来源恢复、后续原生效果不串用角色、未配置presentation的旧外观维持旧绑定通过。
