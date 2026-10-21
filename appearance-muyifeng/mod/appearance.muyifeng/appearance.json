@@ -1,7 +1,303 @@
 {
   "enabled": true,
-  "target": "local-player",
-  "pixelSource": "art/muyifeng-pixels.json",
-  "rendering": "one palette-grid cell per source texel; no image resizing",
-  "suppressNativeParts": ["Eye", "FaceHair", "Hair"]
+  "target": "character-selection",
+  "rendering": "original-art face/clothes cutouts; shared neck/shoulder/elbow/wrist/palm rig; supplementary hands, inner legs, boots and straight jian",
+  "suppressNativeParts": [
+    "Eye",
+    "FaceHair",
+    "Hair"
+  ],
+  "atlasSource": "art/muyifeng-sprites.json",
+  "choiceId": "appearance.muyifeng",
+  "characters": [
+    {
+      "id": "appearance.yixian.yanxue",
+      "name": "炎雪",
+      "group": "云灵剑宗",
+      "sourceId": "1000002",
+      "token": [
+        255,
+        89,
+        88,
+        1,
+        2,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/yanxue",
+      "atlasSource": "art/characters/yanxue/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.longyao",
+      "name": "龙瑶",
+      "group": "云灵剑宗",
+      "sourceId": "1000003",
+      "token": [
+        255,
+        89,
+        88,
+        1,
+        3,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/longyao",
+      "atlasSource": "art/characters/longyao/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.linxiaoyue",
+      "name": "林小月",
+      "group": "云灵剑宗",
+      "sourceId": "1000004",
+      "token": [
+        255,
+        89,
+        88,
+        1,
+        4,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/linxiaoyue",
+      "atlasSource": "art/characters/linxiaoyue/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.lujianxin",
+      "name": "陆剑心",
+      "group": "云灵剑宗",
+      "sourceId": "1000005",
+      "token": [
+        255,
+        89,
+        88,
+        1,
+        5,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/lujianxin",
+      "atlasSource": "art/characters/lujianxin/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.lichengyun",
+      "name": "黎承云",
+      "group": "云灵剑宗",
+      "sourceId": "1000006",
+      "token": [
+        255,
+        89,
+        88,
+        1,
+        6,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/lichengyun",
+      "atlasSource": "art/characters/lichengyun/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.tanshuyan",
+      "name": "谭舒雁",
+      "group": "七星阁",
+      "sourceId": "2000001",
+      "token": [
+        255,
+        89,
+        88,
+        2,
+        1,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/tanshuyan",
+      "atlasSource": "art/characters/tanshuyan/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.yanchen",
+      "name": "炎尘",
+      "group": "七星阁",
+      "sourceId": "2000002",
+      "token": [
+        255,
+        89,
+        88,
+        2,
+        2,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/yanchen",
+      "atlasSource": "art/characters/yanchen/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.yaoling",
+      "name": "曜灵",
+      "group": "七星阁",
+      "sourceId": "2000003",
+      "token": [
+        255,
+        89,
+        88,
+        2,
+        3,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/yaoling",
+      "atlasSource": "art/characters/yaoling/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.jiangximing",
+      "name": "姜袭明",
+      "group": "七星阁",
+      "sourceId": "2000004",
+      "token": [
+        255,
+        89,
+        88,
+        2,
+        4,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/jiangximing",
+      "atlasSource": "art/characters/jiangximing/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.wuce",
+      "name": "吴策",
+      "group": "七星阁",
+      "sourceId": "2000005",
+      "token": [
+        255,
+        89,
+        88,
+        2,
+        5,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/wuce",
+      "atlasSource": "art/characters/wuce/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.fengxu",
+      "name": "风绪",
+      "group": "七星阁",
+      "sourceId": "2000006",
+      "token": [
+        255,
+        89,
+        88,
+        2,
+        6,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/fengxu",
+      "atlasSource": "art/characters/fengxu/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.wuxingzhi",
+      "name": "吾行之",
+      "group": "五行道盟",
+      "sourceId": "3000001",
+      "token": [
+        255,
+        89,
+        88,
+        3,
+        1,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/wuxingzhi",
+      "atlasSource": "art/characters/wuxingzhi/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.dulingyuan",
+      "name": "杜伶鸳",
+      "group": "五行道盟",
+      "sourceId": "3000002",
+      "token": [
+        255,
+        89,
+        88,
+        3,
+        2,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/dulingyuan",
+      "atlasSource": "art/characters/dulingyuan/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.huaqinrui",
+      "name": "花沁蕊",
+      "group": "五行道盟",
+      "sourceId": "3000003",
+      "token": [
+        255,
+        89,
+        88,
+        3,
+        3,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/huaqinrui",
+      "atlasSource": "art/characters/huaqinrui/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.muhu",
+      "name": "慕虎",
+      "group": "五行道盟",
+      "sourceId": "3000004",
+      "token": [
+        255,
+        89,
+        88,
+        3,
+        4,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/muhu",
+      "atlasSource": "art/characters/muhu/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.nangongsheng",
+      "name": "南宫生",
+      "group": "五行道盟",
+      "sourceId": "3000005",
+      "token": [
+        255,
+        89,
+        88,
+        3,
+        5,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/nangongsheng",
+      "atlasSource": "art/characters/nangongsheng/atlas.json"
+    },
+    {
+      "id": "appearance.yixian.qiwangyou",
+      "name": "祁忘忧",
+      "group": "五行道盟",
+      "sourceId": "3000006",
+      "token": [
+        255,
+        89,
+        88,
+        3,
+        6,
+        1,
+        0
+      ],
+      "spritePrefix": "Yixian/qiwangyou",
+      "atlasSource": "art/characters/qiwangyou/atlas.json"
+    }
+  ]
 }

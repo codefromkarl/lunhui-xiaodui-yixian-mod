@@ -1,0 +1,513 @@
+{
+  "format": "source-atlas-v1",
+  "sheets": {
+    "character": "art/characters/yanxue/atlas-v1.png"
+  },
+  "parts": {
+    "Body/Head": {
+      "sheet": "character",
+      "rect": [
+        0,
+        0,
+        320,
+        440
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 600,
+      "alphaThreshold": 24
+    },
+    "HairBack": {
+      "sheet": "character",
+      "rect": [
+        320,
+        0,
+        330,
+        440
+      ],
+      "pivot": [
+        0.5,
+        0.8
+      ],
+      "pixelsPerUnit": 650,
+      "offset": [
+        0.06,
+        0.15
+      ],
+      "alphaThreshold": 24
+    },
+    "Cloth/Body": {
+      "sheet": "character",
+      "rect": [
+        650,
+        0,
+        340,
+        450
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 600,
+      "alphaThreshold": 24
+    },
+    "Cloth/Left": {
+      "sheet": "character",
+      "rect": [
+        1000,
+        55,
+        254,
+        385
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 600,
+      "alphaThreshold": 24
+    },
+    "Cloth/LeftLower": {
+      "sheet": "character",
+      "rect": [
+        55,
+        450,
+        240,
+        295
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 600,
+      "alphaThreshold": 24
+    },
+    "Cloth/Right": {
+      "sheet": "character",
+      "rect": [
+        340,
+        440,
+        260,
+        300
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 600,
+      "alphaThreshold": 24
+    },
+    "Cloth/RightLower": {
+      "sheet": "character",
+      "rect": [
+        660,
+        440,
+        250,
+        300
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 600,
+      "alphaThreshold": 24
+    },
+    "Hand/Grip_L": {
+      "sheet": "character",
+      "rect": [
+        1000,
+        470,
+        220,
+        205
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 2000,
+      "landmarks": {
+        "grip": [
+          85,
+          115
+        ],
+        "wrist": [
+          130,
+          55
+        ]
+      },
+      "alphaThreshold": 24
+    },
+    "Hand/Grip_R": {
+      "sheet": "character",
+      "rect": [
+        65,
+        755,
+        190,
+        185
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 2000,
+      "landmarks": {
+        "grip": [
+          115,
+          125
+        ],
+        "wrist": [
+          55,
+          65
+        ]
+      },
+      "alphaThreshold": 24
+    },
+    "Hand/Open_L": {
+      "sheet": "character",
+      "rect": [
+        350,
+        755,
+        230,
+        185
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 2000,
+      "landmarks": {
+        "grip": [
+          105,
+          120
+        ],
+        "wrist": [
+          145,
+          55
+        ]
+      },
+      "alphaThreshold": 24
+    },
+    "Hand/Open_R": {
+      "sheet": "character",
+      "rect": [
+        690,
+        755,
+        230,
+        185
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 2000,
+      "landmarks": {
+        "grip": [
+          110,
+          120
+        ],
+        "wrist": [
+          55,
+          55
+        ]
+      },
+      "alphaThreshold": 24
+    },
+    "Pant/Left": {
+      "sheet": "character",
+      "rect": [
+        1010,
+        700,
+        210,
+        255
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 850,
+      "alphaThreshold": 24
+    },
+    "Pant/Right": {
+      "sheet": "character",
+      "rect": [
+        60,
+        940,
+        220,
+        310
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 850,
+      "alphaThreshold": 24
+    },
+    "Body/Foot_R": {
+      "sheet": "character",
+      "rect": [
+        365,
+        1000,
+        230,
+        240
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 850,
+      "alphaThreshold": 24
+    },
+    "Body/Foot_L": {
+      "sheet": "character",
+      "rect": [
+        685,
+        1000,
+        230,
+        240
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 850,
+      "alphaThreshold": 24
+    },
+    "Weapon/Sword": {
+      "sheet": "character",
+      "rect": [
+        990,
+        940,
+        120,
+        314
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 475,
+      "alphaThreshold": 24
+    },
+    "Weapon/Offhand": {
+      "sheet": "character",
+      "rect": [
+        1110,
+        940,
+        144,
+        314
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 475,
+      "alphaThreshold": 24
+    }
+  },
+  "rig": {
+    "referenceFigure": {
+      "neck": [
+        280,
+        400
+      ],
+      "waist": [
+        294,
+        520
+      ],
+      "shoulderLeft": [
+        348,
+        432
+      ],
+      "palmLeft": [
+        390,
+        556
+      ],
+      "shoulderRight": [
+        204,
+        442
+      ],
+      "palmRight": [
+        166,
+        548
+      ],
+      "soleLeft": [
+        331,
+        704
+      ],
+      "soleRight": [
+        215,
+        704
+      ],
+      "hipLeft": [
+        309,
+        561
+      ],
+      "hipRight": [
+        255,
+        561
+      ],
+      "elbowLeft": [
+        372,
+        492
+      ],
+      "elbowRight": [
+        182,
+        492
+      ]
+    },
+    "native": {
+      "neck": [
+        0,
+        0.15625
+      ],
+      "waist": [
+        0,
+        -0.09375
+      ],
+      "shoulderLeft": [
+        0.125,
+        0.09375
+      ],
+      "shoulderRight": [
+        -0.125,
+        0.09375
+      ],
+      "restPalmLeft": [
+        0.21875,
+        -0.015625
+      ],
+      "restPalmRight": [
+        -0.15625,
+        -0.015625
+      ],
+      "palmInArm": [
+        0.03125,
+        -0.03125
+      ],
+      "restFootLeft": [
+        0.125,
+        -0.140625
+      ],
+      "restFootRight": [
+        -0.125,
+        -0.140625
+      ],
+      "groundY": -0.25
+    },
+    "body": {
+      "neck": [
+        150,
+        90
+      ],
+      "waist": [
+        160,
+        250
+      ],
+      "shoulderLeft": [
+        240,
+        135
+      ],
+      "shoulderRight": [
+        90,
+        135
+      ]
+    },
+    "head": {
+      "neck": [
+        195,
+        355
+      ]
+    },
+    "sleeveLeft": {
+      "shoulder": [
+        80,
+        65
+      ],
+      "elbow": [
+        150,
+        290
+      ],
+      "lowerElbow": [
+        125,
+        35
+      ],
+      "cuff": [
+        95,
+        215
+      ]
+    },
+    "sleeveRight": {
+      "shoulder": [
+        185,
+        45
+      ],
+      "elbow": [
+        85,
+        230
+      ],
+      "lowerElbow": [
+        90,
+        45
+      ],
+      "cuff": [
+        175,
+        230
+      ]
+    },
+    "sword": {
+      "grip": [
+        60,
+        220
+      ],
+      "angleDegrees": 115
+    },
+    "motionScale": 1.0,
+    "legLeft": {
+      "foot": "Body/Foot_R",
+      "pant": "Pant/Left",
+      "hip": [
+        110,
+        25
+      ],
+      "pantAnkle": [
+        110,
+        230
+      ],
+      "ankle": [
+        140,
+        45
+      ],
+      "sole": [
+        120,
+        210
+      ]
+    },
+    "legRight": {
+      "foot": "Body/Foot_L",
+      "pant": "Pant/Right",
+      "hip": [
+        100,
+        25
+      ],
+      "pantAnkle": [
+        100,
+        270
+      ],
+      "ankle": [
+        110,
+        45
+      ],
+      "sole": [
+        120,
+        210
+      ]
+    },
+    "offhand": {
+      "grip": [
+        65,
+        220
+      ],
+      "angleDegrees": -25
+    }
+  }
+}

@@ -49,25 +49,39 @@ class Grid:
         result.rows = [row[::-1] for row in self.rows]
         return result
 
-    def source(self, pivot):
+    def source(self, pivot, mirror=True):
         # SPUM's canonical art faces left; the player battle mount mirrors it.
         # Reflect the discrete grid and pivot together, without resampling.
-        return {'pixelsPerUnit': 56, 'pivot': [1 - pivot[0], pivot[1]], 'rows': [''.join(row[::-1]) for row in self.rows]}
+        return {'pixelsPerUnit': 56, 'pivot': [1 - pivot[0] if mirror else pivot[0], pivot[1]], 'rows': [''.join(row[::-1] if mirror else row) for row in self.rows]}
 
 
 def head():
+    """Compact three-quarter youth face; draw features as intentional texel clusters."""
     c = Grid(32, 40)
-    c.poly([(7, 12), (12, 8), (23, 9), (29, 15), (30, 23), (28, 26), (29, 28), (27, 30), (27, 33), (23, 36), (17, 36), (12, 32), (9, 27), (5, 21)], 'o')
-    c.poly([(13, 14), (25, 15), (27, 21), (27, 25), (29, 27), (26, 29), (26, 32), (23, 35), (18, 34), (12, 30), (10, 24), (11, 17)], 'f')
-    c.poly([(12, 17), (16, 17), (15, 25), (17, 31), (23, 34), (18, 34), (12, 30), (10, 24)], 't')
-    c.poly([(17, 17), (24, 17), (26, 21), (26, 25), (25, 29), (21, 32), (17, 30), (15, 25)], 'F')
-    c.poly([(17, 32), (23, 34), (26, 31), (25, 34), (23, 35), (19, 35)], 's')
-    c.box(10, 25, 3, 5, 't').box(11, 26, 2, 2, 'f').pixel(11, 28, 's')
-    # Hair is composed around the face, rather than placed over a vanilla head.
-    c.poly([(6, 12), (10, 8), (19, 6), (25, 8), (28, 12), (29, 19), (26, 21), (23, 17), (19, 15), (15, 17), (12, 22), (11, 29), (8, 33), (7, 28), (4, 23), (4, 17)], 'd')
+    # Short rounded jaw. The old y=35 chin is replaced by a y=30 chin and a small neck.
+    face = {
+        14: (12, 23), 15: (11, 25), 16: (10, 26), 17: (10, 27),
+        18: (10, 27), 19: (10, 27), 20: (10, 27), 21: (10, 27),
+        22: (10, 27), 23: (11, 27), 24: (11, 27), 25: (12, 27),
+        26: (12, 26), 27: (13, 26), 28: (14, 25), 29: (15, 24), 30: (17, 22),
+    }
+    for y, (left, right) in face.items():
+        c.box(left, y, right - left + 1, 1, 't' if y >= 26 else 'o')
+        if right - left > 1:
+            c.box(left + 1, y, right - left - 1, 1, 'f')
+    c.box(14, 17, 11, 10, 'F')
+    c.box(18, 30, 3, 2, 'f')
+    # Small rear ear and restrained side shading, not a continuous brown beard/jaw band.
+    c.box(10, 22, 3, 4, 'f').pixel(10, 23, 't').pixel(11, 25, 't')
+    c.box(12, 21, 1, 4, 'f').pixel(13, 25, 'f').pixel(14, 26, 'f')
+    c.pixel(15, 28, 'f').box(17, 29, 5, 1, 'f')
+    # Hair frames the cheeks; the bun/jade silhouette and native head pivot are retained.
+    c.poly([(6, 12), (10, 8), (19, 6), (25, 8), (28, 12), (29, 19),
+            (27, 24), (24, 27), (25, 22), (25, 18), (20, 14), (16, 16),
+            (13, 20), (12, 26), (10, 31), (8, 33), (7, 28), (4, 23), (4, 17)], 'd')
     c.poly([(6, 16), (10, 11), (17, 9), (23, 10), (19, 12), (12, 14), (8, 20), (7, 25), (5, 23)], 'h')
     c.poly([(10, 12), (16, 9), (21, 9), (18, 11), (13, 12)], 'H')
-    c.poly([(20, 12), (25, 11), (27, 14), (27, 18), (25, 18), (22, 15)], 'h')
+    c.poly([(20, 12), (25, 11), (27, 14), (27, 18), (26, 21), (25, 18), (22, 15)], 'h')
     c.poly([(9, 22), (12, 18), (11, 27), (9, 30), (8, 28)], 'h')
     c.poly([(17, 1), (22, 1), (25, 4), (24, 8), (20, 10), (15, 7), (15, 4)], 'o')
     c.poly([(18, 2), (22, 2), (24, 4), (22, 7), (18, 7), (16, 5)], 'h')
@@ -76,13 +90,35 @@ def head():
     c.poly([(17, 7), (21, 7), (23, 8), (21, 10), (18, 11), (16, 9)], 'J')
     c.box(18, 8, 3, 2, 'd').pixel(17, 8, 'K').pixel(21, 7, 'K')
     c.poly([(22, 10), (27, 11), (28, 13), (24, 12)], 'J')
-    # Explicit eyebrow, sclera, pupil and mouth clusters at native resolution.
-    c.box(14, 20, 3, 1, 'o').pixel(14, 21, 'o')
-    c.box(21, 20, 4, 1, 'o').box(24, 19, 2, 1, 'o')
-    c.box(14, 23, 3, 2, 'e').box(15, 23, 2, 2, 'p').box(14, 22, 3, 1, 'o')
-    c.box(21, 23, 5, 2, 'e').box(24, 23, 2, 2, 'p').box(21, 22, 5, 1, 'o').pixel(25, 21, 'o')
-    c.pixel(22, 24, 'f').pixel(26, 25, 't').pixel(27, 27, 's')
-    c.box(23, 30, 3, 1, 'p').pixel(23, 31, 'F')
+    # The NEAR eye sits on the broad rear cheek, the FAR eye close to the nose.
+    # Reversing these sizes made the previous face look twisted/flat.
+    c.box(14, 19, 5, 1, 'p').pixel(19, 20, 'p')
+    c.box(14, 21, 6, 1, 'p').pixel(13, 22, 'p')
+    c.box(14, 22, 6, 3, 'e').box(17, 22, 3, 3, 'p')
+    c.pixel(17, 23, 'a').pixel(14, 24, 'F').pixel(19, 24, 'f')
+    c.box(23, 20, 3, 1, 'p')
+    c.box(23, 22, 3, 1, 'p').box(24, 23, 2, 2, 'e').box(25, 23, 1, 2, 'p')
+    c.pixel(26, 25, 't')
+    c.pixel(24, 27, 't')
+    return c
+
+
+def straight_sword():
+    """A narrow symmetric jian using the native blade's upright-right axis and grip."""
+    c = Grid(48, 48)
+    # Full canvas/pivot match the native asset, but the visible blade occupies only
+    # its trimmed 18x34 region. Grip (24, 36); tip (36, 10), in top-down rows.
+    c.poly([(36, 10), (36, 16), (30, 29), (28, 31), (26, 28), (32, 15)], 'G')
+    c.poly([(35, 13), (35, 16), (29, 29), (28, 29), (28, 27), (33, 16)], 'w')
+    c.poly([(35, 14), (35, 16), (29, 28), (28, 28)], 'W')
+    c.poly([(33, 17), (34, 17), (29, 28), (28, 28)], 'g')
+    c.poly([(22, 27), (34, 31), (33, 33), (22, 29)], 'n')
+    c.poly([(23, 27), (33, 31), (32, 32), (23, 29)], 'j')
+    c.poly([(26, 31), (29, 32), (24, 41), (21, 40)], 'n')
+    c.poly([(27, 33), (28, 33), (24, 40), (23, 40)], 'b')
+    c.box(24, 35, 2, 1, 'g').box(23, 38, 2, 1, 'g')
+    c.poly([(21, 40), (24, 41), (24, 43), (21, 44), (20, 42)], 'j')
+    c.pixel(22, 41, 'J')
     return c
 
 
@@ -152,9 +188,12 @@ def boot():
 def main():
     arm = sleeve()
     lower = leg()
+    sword = straight_sword().source([.5, .25], mirror=False)
+    sword['pixelsPerUnit'] = 32
     parts = {
-        'Body/Head': head().source([.5625, .35]),
+        'Body/Head': head().source([.5625, .425]),
         'HairBack': ponytail().source([.75, .70]),
+        'Weapon/Sword': sword,
         'Cloth/Body': torso().source([.5, .58]),
         'Cloth/Left': arm.source([.39, .72]),
         'Cloth/Right': arm.mirrored().source([.61, .72]),
@@ -163,7 +202,7 @@ def main():
         'Body/Foot_L': boot().source([.5, .5]),
         'Body/Foot_R': boot().source([.5, .5]),
     }
-    result = {'format': 'palette-grid-v1', 'facing': 'left, matching canonical SPUM art; native player mount mirrors to face right', 'method': 'authored directly at final texel resolution; no raster input, resize, crop, interpolation or automatic tracing', 'palette': PALETTE, 'parts': parts}
+    result = {'format': 'palette-grid-v1', 'facing': 'body faces left, matching canonical SPUM art; weapon uses its native upright-right diagonal and grip; native player mount mirrors both', 'method': 'authored directly at final texel resolution; no raster input, resize, crop, interpolation or automatic tracing', 'palette': PALETTE, 'parts': parts}
     target = ROOT / 'mod/appearance.muyifeng/art/muyifeng-pixels.json'
     target.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
     print('Authored', len(parts), 'native pixel parts:', target)

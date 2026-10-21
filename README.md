@@ -1,5 +1,7 @@
 # 轮回小队 · 弈仙门派 Mod
 
+独立外观Mod：**[弈仙牌三门派18角色外观 v0.7.1](appearance-muyifeng/README.md)**，含模型接缝／足向修复及头肩头像。[下载完整安装包](https://github.com/codefromkarl/lunhui-xiaodui-yixian-mod/releases/tag/appearance-v0.7.1)。此包不修改下述门派玩法。
+
 一个发布包 `yixian.sect`，三个内部门派模块。开发源已从反编译分析目录迁入本项目；本仓库是唯一开发入口，生成、构建和测试不读取旧目录。
 
 公开仓库：`codefromkarl/lunhui-xiaodui-yixian-mod`。当前 v0.7.0 已完成 Linux／Proton 和 Mac／Sikarugir Wine 下的离线与真实 Mono 验证；本仓库发布源码，不自动分发带第三方原图的安装包。覆盖范围、崩溃排查和未覆盖项见[测试状态](docs/testing-status.md)。

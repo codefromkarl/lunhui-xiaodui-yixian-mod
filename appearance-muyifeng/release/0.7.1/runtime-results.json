@@ -1,0 +1,6589 @@
+{
+  "modVersion": "0.7.1.0",
+  "unity": "2022.3.62f2c1",
+  "graphics": "llvmpipe (LLVM 21.1.8, 256 bits)",
+  "runtime": "Mono",
+  "status": "passed",
+  "cases": [
+    {
+      "name": "registered_identity_only",
+      "status": "passed"
+    },
+    {
+      "name": "only_selected_character",
+      "status": "passed"
+    },
+    {
+      "name": "folded_arm_keeps_elbow",
+      "status": "passed"
+    },
+    {
+      "name": "extended_arm_reaches_palm",
+      "status": "passed"
+    },
+    {
+      "name": "rig_parts_bound",
+      "status": "passed"
+    },
+    {
+      "name": "full_face_replaced",
+      "status": "passed"
+    },
+    {
+      "name": "vanilla_eyes_and_beard_suppressed",
+      "status": "passed"
+    },
+    {
+      "name": "native_texel_dimensions",
+      "status": "passed"
+    },
+    {
+      "name": "native_reapply_retains_skin",
+      "status": "passed"
+    },
+    {
+      "name": "hair_color_preserves_authored_palette",
+      "status": "passed"
+    },
+    {
+      "name": "portrait_character_choice",
+      "status": "passed"
+    },
+    {
+      "name": "portrait_cache_invalidated",
+      "status": "passed"
+    },
+    {
+      "name": "pooled_player_becomes_remote",
+      "status": "passed"
+    },
+    {
+      "name": "summon_not_replaced",
+      "status": "passed"
+    },
+    {
+      "name": "portrait_reuse_restores_remote",
+      "status": "passed"
+    },
+    {
+      "name": "straight_sword_selected_only",
+      "status": "passed"
+    },
+    {
+      "name": "source_face_pixels_unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "source_clothing_pixels_unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "sword_mapping_preserves_bone_transform",
+      "status": "passed"
+    },
+    {
+      "name": "binding_preserves_native_skeleton",
+      "status": "passed"
+    },
+    {
+      "name": "sword_excluded_from_body_normalization",
+      "status": "passed"
+    },
+    {
+      "name": "standalone_weapon_refresh",
+      "status": "passed"
+    },
+    {
+      "name": "unarmed_keeps_costume_sword",
+      "status": "passed"
+    },
+    {
+      "name": "pooled_weapon_restores_native",
+      "status": "passed"
+    },
+    {
+      "name": "hud_head_framing_1600x900",
+      "status": "passed"
+    },
+    {
+      "name": "hud_repeat_no_zoom_drift_1600",
+      "status": "passed"
+    },
+    {
+      "name": "hud_native_camera_restored_1600",
+      "status": "passed"
+    },
+    {
+      "name": "hud_empty_restores_1600",
+      "status": "passed"
+    },
+    {
+      "name": "hud_head_framing_1280x960",
+      "status": "passed"
+    },
+    {
+      "name": "hud_repeat_no_zoom_drift_1280",
+      "status": "passed"
+    },
+    {
+      "name": "hud_native_camera_restored_1280",
+      "status": "passed"
+    },
+    {
+      "name": "hud_empty_restores_1280",
+      "status": "passed"
+    },
+    {
+      "name": "hud_head_framing_2560x1080",
+      "status": "passed"
+    },
+    {
+      "name": "hud_repeat_no_zoom_drift_2560",
+      "status": "passed"
+    },
+    {
+      "name": "hud_native_camera_restored_2560",
+      "status": "passed"
+    },
+    {
+      "name": "hud_empty_restores_2560",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.muyifeng",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.dulingyuan",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.fengxu",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.huaqinrui",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.jiangximing",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.lichengyun",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.linxiaoyue",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.longyao",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.lujianxin",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.muhu",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.nangongsheng",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.qiwangyou",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.tanshuyan",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.wuce",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.wuxingzhi",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.yanchen",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.yanxue",
+      "status": "passed"
+    },
+    {
+      "name": "hud_character_head_appearance.yixian.yaoling",
+      "status": "passed"
+    },
+    {
+      "name": "hud_world_model_unaffected",
+      "status": "passed"
+    },
+    {
+      "name": "unselected_local_stays_native",
+      "status": "passed"
+    },
+    {
+      "name": "remote_selected_skin_and_choice_swap",
+      "status": "passed"
+    },
+    {
+      "name": "remote_portrait_uses_character_choice",
+      "status": "passed"
+    },
+    {
+      "name": "second_registered_choice_is_not_muyifeng",
+      "status": "passed"
+    },
+    {
+      "name": "network_birth_wire_roundtrip",
+      "status": "passed"
+    },
+    {
+      "name": "two_player_native_birth_authority_and_run_save",
+      "status": "passed"
+    },
+    {
+      "name": "native_save_fields_and_repair_roundtrip",
+      "status": "passed"
+    },
+    {
+      "name": "all_character_wire_and_save_roundtrips",
+      "status": "passed"
+    },
+    {
+      "name": "setup_complete",
+      "status": "passed"
+    },
+    {
+      "name": "creation_window",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_unarmed",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_unarmed_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_unarmed_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_unarmed_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_unarmed_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_EQ-BLD-01",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-BLD-01_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-BLD-01_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-BLD-01_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-BLD-01_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_EQ-BLD-02",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-BLD-02_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-BLD-02_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-BLD-02_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-BLD-02_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_EQ-BLD-10",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-BLD-10_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-BLD-10_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-BLD-10_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-BLD-10_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_EQ-HVR-06",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-HVR-06_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-HVR-06_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-HVR-06_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-HVR-06_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_EQ-BOW-01",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-BOW-01_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-BOW-01_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-BOW-01_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-BOW-01_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_EQ-PST-01",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-PST-01_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-PST-01_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-PST-01_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-PST-01_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_EQ-RFL-01",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-RFL-01_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-RFL-01_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-RFL-01_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-RFL-01_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_EQ-PLM-01",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-PLM-01_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-PLM-01_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-PLM-01_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-PLM-01_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_EQ-FOC-01",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-FOC-01_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-FOC-01_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_pose_EQ-FOC-01_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_capture_EQ-FOC-01_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_independent_of_native_weapon_objects",
+      "status": "passed"
+    },
+    {
+      "name": "fixed_sword_repeated_choice_and_equipment_cycles",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.yanxue",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.yanxue",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.yanxue",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanxue_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanxue_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanxue_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanxue_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanxue_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanxue_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanxue_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanxue_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanxue_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanxue_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanxue_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanxue_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanxue_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanxue_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.yanxue",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.longyao",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.longyao",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.longyao",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.longyao_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.longyao_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.longyao_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.longyao_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.longyao_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.longyao_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.longyao_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.longyao_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.longyao_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.longyao_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.longyao_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.longyao_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.longyao_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.longyao_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.longyao",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.linxiaoyue",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.linxiaoyue",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.linxiaoyue",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.linxiaoyue_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.linxiaoyue_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.linxiaoyue_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.linxiaoyue_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.linxiaoyue_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.linxiaoyue_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.linxiaoyue_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.linxiaoyue_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.linxiaoyue_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.linxiaoyue_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.linxiaoyue_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.linxiaoyue_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.linxiaoyue_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.linxiaoyue_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.linxiaoyue",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.lujianxin",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.lujianxin",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.lujianxin",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lujianxin_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lujianxin_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lujianxin_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lujianxin_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lujianxin_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lujianxin_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lujianxin_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lujianxin_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lujianxin_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lujianxin_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lujianxin_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lujianxin_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lujianxin_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lujianxin_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.lujianxin",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.lichengyun",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.lichengyun",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.lichengyun",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lichengyun_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lichengyun_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lichengyun_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lichengyun_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lichengyun_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lichengyun_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lichengyun_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lichengyun_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lichengyun_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lichengyun_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lichengyun_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lichengyun_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.lichengyun_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.lichengyun_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.lichengyun",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.tanshuyan",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.tanshuyan",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.tanshuyan",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.tanshuyan_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.tanshuyan_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.tanshuyan_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.tanshuyan_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.tanshuyan_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.tanshuyan_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.tanshuyan_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.tanshuyan_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.tanshuyan_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.tanshuyan_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.tanshuyan_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.tanshuyan_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.tanshuyan_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.tanshuyan_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.tanshuyan",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.yanchen",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.yanchen",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.yanchen",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanchen_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanchen_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanchen_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanchen_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanchen_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanchen_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanchen_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanchen_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanchen_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanchen_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanchen_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanchen_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yanchen_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yanchen_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.yanchen",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.yaoling",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.yaoling",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.yaoling",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yaoling_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yaoling_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yaoling_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yaoling_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yaoling_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yaoling_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yaoling_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yaoling_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yaoling_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yaoling_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yaoling_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yaoling_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.yaoling_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.yaoling_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.yaoling",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.jiangximing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.jiangximing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.jiangximing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.jiangximing_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.jiangximing_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.jiangximing_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.jiangximing_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.jiangximing_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.jiangximing_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.jiangximing_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.jiangximing_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.jiangximing_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.jiangximing_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.jiangximing_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.jiangximing_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.jiangximing_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.jiangximing_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.jiangximing",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.wuce",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.wuce",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.wuce",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuce_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuce_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuce_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuce_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuce_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuce_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuce_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuce_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuce_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuce_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuce_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuce_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuce_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuce_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.wuce",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.fengxu",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.fengxu",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.fengxu",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.fengxu_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.fengxu_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.fengxu_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.fengxu_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.fengxu_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.fengxu_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.fengxu_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.fengxu_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.fengxu_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.fengxu_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.fengxu_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.fengxu_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.fengxu_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.fengxu_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.fengxu",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.wuxingzhi",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.wuxingzhi",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.wuxingzhi",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuxingzhi_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuxingzhi_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuxingzhi_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuxingzhi_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuxingzhi_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuxingzhi_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuxingzhi_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuxingzhi_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuxingzhi_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuxingzhi_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuxingzhi_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuxingzhi_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.wuxingzhi_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.wuxingzhi_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.wuxingzhi",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.dulingyuan",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.dulingyuan",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.dulingyuan",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.dulingyuan_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.dulingyuan_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.dulingyuan_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.dulingyuan_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.dulingyuan_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.dulingyuan_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.dulingyuan_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.dulingyuan_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.dulingyuan_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.dulingyuan_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.dulingyuan_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.dulingyuan_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.dulingyuan_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.dulingyuan_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.dulingyuan",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.huaqinrui",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.huaqinrui",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.huaqinrui",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.huaqinrui_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.huaqinrui_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.huaqinrui_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.huaqinrui_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.huaqinrui_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.huaqinrui_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.huaqinrui_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.huaqinrui_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.huaqinrui_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.huaqinrui_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.huaqinrui_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.huaqinrui_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.huaqinrui_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.huaqinrui_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.huaqinrui",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.muhu",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.muhu",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.muhu",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.muhu_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.muhu_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.muhu_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.muhu_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.muhu_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.muhu_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.muhu_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.muhu_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.muhu_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.muhu_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.muhu_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.muhu_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.muhu_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.muhu_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.muhu",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.nangongsheng",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.nangongsheng",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.nangongsheng",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.nangongsheng_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.nangongsheng_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.nangongsheng_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.nangongsheng_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.nangongsheng_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.nangongsheng_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.nangongsheng_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.nangongsheng_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.nangongsheng_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.nangongsheng_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.nangongsheng_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.nangongsheng_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.nangongsheng_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.nangongsheng_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.nangongsheng",
+      "status": "passed"
+    },
+    {
+      "name": "character_identity_appearance.yixian.qiwangyou",
+      "status": "passed"
+    },
+    {
+      "name": "character_pair_and_portraits_appearance.yixian.qiwangyou",
+      "status": "passed"
+    },
+    {
+      "name": "character_pool_and_summon_appearance.yixian.qiwangyou",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.qiwangyou_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.qiwangyou_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.qiwangyou_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.qiwangyou_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.qiwangyou_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.qiwangyou_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.qiwangyou_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.qiwangyou_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.qiwangyou_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.qiwangyou_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.qiwangyou_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.qiwangyou_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "character_pose_appearance.yixian.qiwangyou_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_capture_appearance.yixian.qiwangyou_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "character_restore_appearance.yixian.qiwangyou",
+      "status": "passed"
+    },
+    {
+      "name": "joint_alignment_IDLE",
+      "status": "passed"
+    },
+    {
+      "name": "animation_IDLE",
+      "status": "passed",
+      "distinct_transform_poses": 48
+    },
+    {
+      "name": "joint_alignment_MOVE",
+      "status": "passed"
+    },
+    {
+      "name": "animation_MOVE",
+      "status": "passed",
+      "distinct_transform_poses": 48
+    },
+    {
+      "name": "joint_alignment_ATTACK",
+      "status": "passed"
+    },
+    {
+      "name": "animation_ATTACK",
+      "status": "passed",
+      "distinct_transform_poses": 48
+    },
+    {
+      "name": "joint_alignment_DAMAGED",
+      "status": "passed"
+    },
+    {
+      "name": "animation_DAMAGED",
+      "status": "passed",
+      "distinct_transform_poses": 48
+    },
+    {
+      "name": "joint_alignment_DEATH",
+      "status": "passed"
+    },
+    {
+      "name": "animation_DEATH",
+      "status": "passed",
+      "distinct_transform_poses": 15
+    },
+    {
+      "name": "actual_mirror_changes_facing",
+      "status": "passed"
+    },
+    {
+      "name": "joint_alignment_MIRROR",
+      "status": "passed"
+    },
+    {
+      "name": "animation_MIRROR",
+      "status": "passed",
+      "distinct_transform_poses": 48
+    },
+    {
+      "name": "actual_restore_original_facing",
+      "status": "passed"
+    },
+    {
+      "name": "joint_alignment_RESTORE",
+      "status": "passed"
+    },
+    {
+      "name": "animation_RESTORE",
+      "status": "passed",
+      "distinct_transform_poses": 48
+    },
+    {
+      "name": "user_state_isolation",
+      "status": "passed"
+    }
+  ],
+  "combatantViews": [],
+  "spawnCoordinators": [],
+  "portraits": [
+    "PartyPortraitTemplate"
+  ],
+  "spum": [
+    "Doll"
+  ],
+  "windows": [
+    "PF_UI_LoginWindow",
+    "PF_UI_MenuWindow",
+    "PF_UI_LobbyWindow",
+    "PF_UI_BirthWindow",
+    "PF_UI_HubWindow",
+    "PF_UI_GameHUDWindow",
+    "PF_UI_InventoryWindow",
+    "PF_UI_ShopWindow",
+    "PF_UI_NodeVoteWindow",
+    "PF_UI_EventWindow",
+    "PF_UI_RewardWindow",
+    "PF_UI_SettingsWindow",
+    "PF_UI_LoadingWindow",
+    "PF_UI_ErrorPopupWindow",
+    "PF_UI_ConfirmPopupWindow",
+    "PF_UI_InformationPopupWindow",
+    "PF_UI_ResultWindow"
+  ],
+  "player_prefab": "PF_PlayerCombatant",
+  "static_only": false,
+  "face_pixels_compared": 21700,
+  "clothing_unique_pixels_compared": 118455,
+  "cloth_geometry": [
+    {
+      "part": "Left",
+      "active": true,
+      "enabled": true,
+      "position": "(9999.9740, -1.6182, 0.0000)",
+      "angle": 1.65816319,
+      "scale": "(-1.2707, 1.2707, 1.5884)",
+      "width": null,
+      "height": null
+    },
+    {
+      "part": "Right",
+      "active": true,
+      "enabled": true,
+      "position": "(10000.4300, -1.6113, 0.0000)",
+      "angle": 1.65816367,
+      "scale": "(-1.2707, 1.2707, 1.5884)",
+      "width": null,
+      "height": null
+    },
+    {
+      "part": "Body",
+      "active": true,
+      "enabled": true,
+      "position": "(10000.2000, -1.6706, 0.0000)",
+      "angle": 1.65816319,
+      "scale": "(-1.2707, 1.2707, 1.5884)",
+      "width": null,
+      "height": null
+    },
+    {
+      "part": "Left",
+      "active": false,
+      "enabled": true,
+      "position": "(9999.9390, -1.1160, 0.0004)",
+      "angle": 13.1311808,
+      "scale": "(-1.2707, 1.2707, 1.5884)",
+      "width": null,
+      "height": null
+    },
+    {
+      "part": "Right",
+      "active": false,
+      "enabled": true,
+      "position": "(10000.3500, -1.0770, 0.0004)",
+      "angle": 0.156018421,
+      "scale": "(-1.2707, 1.2707, 1.5884)",
+      "width": null,
+      "height": null
+    },
+    {
+      "part": "Body",
+      "active": false,
+      "enabled": true,
+      "position": "(10000.1400, -1.1426, 0.0004)",
+      "angle": 2.43796444,
+      "scale": "(-1.2707, 1.2707, 1.5884)",
+      "width": null,
+      "height": null
+    }
+  ],
+  "native_weapon_geometry": [
+    {
+      "sprite": "EQ-BLD-01",
+      "width": 48.0,
+      "height": 48.0,
+      "pivotX": 24.0,
+      "pivotY": 12.0,
+      "trimX": 18.0335,
+      "trimY": 3.07612038,
+      "trimWidth": 19.9235916,
+      "trimHeight": 33.8477554,
+      "ppu": 32.0,
+      "angle": 87.65816
+    }
+  ],
+  "matching_rows": [
+    {
+      "type": "Eye",
+      "structure": "Back",
+      "sprite": null,
+      "order": 6
+    },
+    {
+      "type": "Eye",
+      "structure": "Front",
+      "sprite": null,
+      "order": 7
+    },
+    {
+      "type": "Eye",
+      "structure": "Back",
+      "sprite": null,
+      "order": 6
+    },
+    {
+      "type": "Eye",
+      "structure": "Front",
+      "sprite": null,
+      "order": 6
+    },
+    {
+      "type": "Body",
+      "structure": "Head",
+      "sprite": null,
+      "order": 5
+    },
+    {
+      "type": "Body",
+      "structure": "Body",
+      "sprite": null,
+      "order": 0
+    },
+    {
+      "type": "Body",
+      "structure": "Arm_L",
+      "sprite": null,
+      "order": 20
+    },
+    {
+      "type": "Body",
+      "structure": "Arm_R",
+      "sprite": null,
+      "order": -20
+    },
+    {
+      "type": "Body",
+      "structure": "Foot_L",
+      "sprite": null,
+      "order": -12
+    },
+    {
+      "type": "Body",
+      "structure": "Foot_R",
+      "sprite": null,
+      "order": -3
+    },
+    {
+      "type": "Hair",
+      "structure": "Hair",
+      "sprite": null,
+      "order": 6
+    },
+    {
+      "type": "FaceHair",
+      "structure": "FaceHair",
+      "sprite": null,
+      "order": 5
+    },
+    {
+      "type": "Cloth",
+      "structure": "Left",
+      "sprite": null,
+      "order": 21
+    },
+    {
+      "type": "Cloth",
+      "structure": "Right",
+      "sprite": null,
+      "order": -19
+    },
+    {
+      "type": "Cloth",
+      "structure": "Body",
+      "sprite": null,
+      "order": 1
+    },
+    {
+      "type": "Pant",
+      "structure": "Right",
+      "sprite": null,
+      "order": -11
+    },
+    {
+      "type": "Pant",
+      "structure": "Left",
+      "sprite": null,
+      "order": -2
+    },
+    {
+      "type": "Helmet",
+      "structure": "Helmet",
+      "sprite": null,
+      "order": 11
+    },
+    {
+      "type": "Helmet",
+      "structure": "Helmet",
+      "sprite": null,
+      "order": 12
+    },
+    {
+      "type": "Armor",
+      "structure": "Body",
+      "sprite": null,
+      "order": 2
+    },
+    {
+      "type": "Armor",
+      "structure": "Left",
+      "sprite": null,
+      "order": 25
+    },
+    {
+      "type": "Armor",
+      "structure": "Right",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Back",
+      "structure": "Back",
+      "sprite": null,
+      "order": -100
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 25
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -21
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Eye",
+      "structure": "Back",
+      "sprite": null,
+      "order": 6
+    },
+    {
+      "type": "Eye",
+      "structure": "Front",
+      "sprite": null,
+      "order": 7
+    },
+    {
+      "type": "Eye",
+      "structure": "Back",
+      "sprite": null,
+      "order": 6
+    },
+    {
+      "type": "Eye",
+      "structure": "Front",
+      "sprite": null,
+      "order": 6
+    },
+    {
+      "type": "Body",
+      "structure": "Head",
+      "sprite": null,
+      "order": 5
+    },
+    {
+      "type": "Body",
+      "structure": "Body",
+      "sprite": null,
+      "order": 0
+    },
+    {
+      "type": "Body",
+      "structure": "Arm_L",
+      "sprite": null,
+      "order": 20
+    },
+    {
+      "type": "Body",
+      "structure": "Arm_R",
+      "sprite": null,
+      "order": -20
+    },
+    {
+      "type": "Body",
+      "structure": "Foot_L",
+      "sprite": null,
+      "order": -12
+    },
+    {
+      "type": "Body",
+      "structure": "Foot_R",
+      "sprite": null,
+      "order": -3
+    },
+    {
+      "type": "Hair",
+      "structure": "Hair",
+      "sprite": null,
+      "order": 6
+    },
+    {
+      "type": "FaceHair",
+      "structure": "FaceHair",
+      "sprite": null,
+      "order": 5
+    },
+    {
+      "type": "Cloth",
+      "structure": "Left",
+      "sprite": null,
+      "order": 21
+    },
+    {
+      "type": "Cloth",
+      "structure": "Right",
+      "sprite": null,
+      "order": -19
+    },
+    {
+      "type": "Cloth",
+      "structure": "Body",
+      "sprite": null,
+      "order": 1
+    },
+    {
+      "type": "Pant",
+      "structure": "Right",
+      "sprite": null,
+      "order": -11
+    },
+    {
+      "type": "Pant",
+      "structure": "Left",
+      "sprite": null,
+      "order": -2
+    },
+    {
+      "type": "Helmet",
+      "structure": "Helmet",
+      "sprite": null,
+      "order": 11
+    },
+    {
+      "type": "Helmet",
+      "structure": "Helmet",
+      "sprite": null,
+      "order": 12
+    },
+    {
+      "type": "Armor",
+      "structure": "Body",
+      "sprite": null,
+      "order": 2
+    },
+    {
+      "type": "Armor",
+      "structure": "Left",
+      "sprite": null,
+      "order": 25
+    },
+    {
+      "type": "Armor",
+      "structure": "Right",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Back",
+      "structure": "Back",
+      "sprite": null,
+      "order": -100
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 25
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -21
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": 19
+    },
+    {
+      "type": "Weapons",
+      "structure": "Weapons",
+      "sprite": null,
+      "order": -15
+    }
+  ],
+  "animations": [
+    "IDLE",
+    "MOVE",
+    "ATTACK",
+    "DAMAGED",
+    "DEBUFF",
+    "DEATH",
+    "OTHER"
+  ],
+  "birth_payload_wire_bytes": 70,
+  "two_player_saved_appearances": [
+    {
+      "slot": 1,
+      "birth": {
+        "ModBonuses": {
+          "Muscle": 0,
+          "Reaction": 0,
+          "Constitution": 0,
+          "Energy": 0,
+          "ActionPoints": 0,
+          "RewardMultiplierBasisPoints": 10000,
+          "EndBattleHealBasisPoints": 0
+        },
+        "AppearanceBody": 255,
+        "AppearanceEye": 77,
+        "AppearanceHair": 89,
+        "AppearanceFacialHair": 70,
+        "AppearanceCloth": 1,
+        "AppearancePant": 0,
+        "AppearanceHairColor": 0,
+        "OriginId": "origin.orphanage",
+        "ExperienceId": "experience.police",
+        "EntryReasonId": "entryreason.betrayal"
+      }
+    },
+    {
+      "slot": 2,
+      "birth": {
+        "ModBonuses": {
+          "Muscle": 0,
+          "Reaction": 0,
+          "Constitution": 0,
+          "Energy": 0,
+          "ActionPoints": 0,
+          "RewardMultiplierBasisPoints": 10000,
+          "EndBattleHealBasisPoints": 0
+        },
+        "AppearanceBody": 0,
+        "AppearanceEye": 0,
+        "AppearanceHair": 1,
+        "AppearanceFacialHair": 0,
+        "AppearanceCloth": 6,
+        "AppearancePant": 0,
+        "AppearanceHairColor": 0,
+        "OriginId": "origin.orphanage",
+        "ExperienceId": "experience.police",
+        "EntryReasonId": "entryreason.betrayal"
+      }
+    }
+  ],
+  "selected_birth_save_fields": {
+    "ModBonuses": null,
+    "AppearanceBody": 255,
+    "AppearanceEye": 77,
+    "AppearanceHair": 89,
+    "AppearanceFacialHair": 70,
+    "AppearanceCloth": 1,
+    "AppearancePant": 0,
+    "AppearanceHairColor": 0,
+    "OriginId": "",
+    "ExperienceId": "",
+    "EntryReasonId": ""
+  },
+  "all_character_wire_and_save_ids": [
+    "appearance.muyifeng",
+    "appearance.yixian.dulingyuan",
+    "appearance.yixian.fengxu",
+    "appearance.yixian.huaqinrui",
+    "appearance.yixian.jiangximing",
+    "appearance.yixian.lichengyun",
+    "appearance.yixian.linxiaoyue",
+    "appearance.yixian.longyao",
+    "appearance.yixian.lujianxin",
+    "appearance.yixian.muhu",
+    "appearance.yixian.nangongsheng",
+    "appearance.yixian.qiwangyou",
+    "appearance.yixian.tanshuyan",
+    "appearance.yixian.wuce",
+    "appearance.yixian.wuxingzhi",
+    "appearance.yixian.yanchen",
+    "appearance.yixian.yanxue",
+    "appearance.yixian.yaoling"
+  ],
+  "creation_character_choices": [
+    "appearance.muyifeng",
+    "appearance.yixian.dulingyuan",
+    "appearance.yixian.fengxu",
+    "appearance.yixian.huaqinrui",
+    "appearance.yixian.jiangximing",
+    "appearance.yixian.lichengyun",
+    "appearance.yixian.linxiaoyue",
+    "appearance.yixian.longyao",
+    "appearance.yixian.lujianxin",
+    "appearance.yixian.muhu",
+    "appearance.yixian.nangongsheng",
+    "appearance.yixian.qiwangyou",
+    "appearance.yixian.tanshuyan",
+    "appearance.yixian.wuce",
+    "appearance.yixian.wuxingzhi",
+    "appearance.yixian.yanchen",
+    "appearance.yixian.yanxue",
+    "appearance.yixian.yaoling"
+  ],
+  "creation_raycast_clicks": true,
+  "creation_layout": [
+    {
+      "name": "InfoPage",
+      "parent": "DetailPanel",
+      "rect": "(x:-586.00, y:-302.00, width:1172.00, height:604.00)",
+      "pos": "(0.00, -18.00)",
+      "components": [
+        "RectTransform"
+      ]
+    },
+    {
+      "name": "AppearanceLabel",
+      "parent": "InfoPage",
+      "rect": "(x:-586.00, y:-20.00, width:1172.00, height:20.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI",
+        "LocalizedLabel"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Regular Material]",
+      "parent": "AppearanceLabel",
+      "rect": "(x:-586.00, y:-20.00, width:1172.00, height:20.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "AppearanceParts",
+      "parent": "InfoPage",
+      "rect": "(x:-586.00, y:-190.00, width:1172.00, height:190.00)",
+      "pos": "(0.00, -32.00)",
+      "components": [
+        "RectTransform",
+        "GridLayoutGroup"
+      ]
+    },
+    {
+      "name": "Part0Row",
+      "parent": "AppearanceParts",
+      "rect": "(x:-280.00, y:-20.00, width:560.00, height:40.00)",
+      "pos": "(280.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "HorizontalLayoutGroup"
+      ]
+    },
+    {
+      "name": "PartLabel",
+      "parent": "Part0Row",
+      "rect": "(x:-30.00, y:-13.04, width:60.00, height:26.07)",
+      "pos": "(30.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI",
+        "LayoutElement",
+        "LocalizedLabel"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Regular Material]",
+      "parent": "PartLabel",
+      "rect": "(x:-30.00, y:-13.04, width:60.00, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "PreviousButton",
+      "parent": "Part0Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(94.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "PreviousButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "ValueBox",
+      "parent": "Part0Row",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(316.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "LayoutElement"
+      ]
+    },
+    {
+      "name": "PartValueLabel",
+      "parent": "ValueBox",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Regular Material]",
+      "parent": "PartValueLabel",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "NextButton",
+      "parent": "Part0Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(538.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "NextButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "Part1Row",
+      "parent": "AppearanceParts",
+      "rect": "(x:-280.00, y:-20.00, width:560.00, height:40.00)",
+      "pos": "(866.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "HorizontalLayoutGroup"
+      ]
+    },
+    {
+      "name": "PartLabel",
+      "parent": "Part1Row",
+      "rect": "(x:-30.00, y:-13.04, width:60.00, height:26.07)",
+      "pos": "(30.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI",
+        "LayoutElement",
+        "LocalizedLabel"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Regular Material]",
+      "parent": "PartLabel",
+      "rect": "(x:-30.00, y:-13.04, width:60.00, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "PreviousButton",
+      "parent": "Part1Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(94.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "PreviousButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "ValueBox",
+      "parent": "Part1Row",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(316.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "LayoutElement"
+      ]
+    },
+    {
+      "name": "PartValueLabel",
+      "parent": "ValueBox",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Regular Material]",
+      "parent": "PartValueLabel",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "NextButton",
+      "parent": "Part1Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(538.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "NextButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "Part2Row",
+      "parent": "AppearanceParts",
+      "rect": "(x:-280.00, y:-20.00, width:560.00, height:40.00)",
+      "pos": "(280.00, -70.00)",
+      "components": [
+        "RectTransform",
+        "HorizontalLayoutGroup"
+      ]
+    },
+    {
+      "name": "PartLabel",
+      "parent": "Part2Row",
+      "rect": "(x:-30.00, y:-13.04, width:60.00, height:26.07)",
+      "pos": "(30.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI",
+        "LayoutElement",
+        "LocalizedLabel"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Regular Material]",
+      "parent": "PartLabel",
+      "rect": "(x:-30.00, y:-13.04, width:60.00, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "PreviousButton",
+      "parent": "Part2Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(94.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "PreviousButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "ValueBox",
+      "parent": "Part2Row",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(316.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "LayoutElement"
+      ]
+    },
+    {
+      "name": "PartValueLabel",
+      "parent": "ValueBox",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Regular Material]",
+      "parent": "PartValueLabel",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "NextButton",
+      "parent": "Part2Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(538.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "NextButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "Part3Row",
+      "parent": "AppearanceParts",
+      "rect": "(x:-280.00, y:-20.00, width:560.00, height:40.00)",
+      "pos": "(866.00, -70.00)",
+      "components": [
+        "RectTransform",
+        "HorizontalLayoutGroup"
+      ]
+    },
+    {
+      "name": "PartLabel",
+      "parent": "Part3Row",
+      "rect": "(x:-30.00, y:-13.04, width:60.00, height:26.07)",
+      "pos": "(30.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI",
+        "LayoutElement",
+        "LocalizedLabel"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Regular Material]",
+      "parent": "PartLabel",
+      "rect": "(x:-30.00, y:-13.04, width:60.00, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "PreviousButton",
+      "parent": "Part3Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(94.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "PreviousButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "ValueBox",
+      "parent": "Part3Row",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(316.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "LayoutElement"
+      ]
+    },
+    {
+      "name": "PartValueLabel",
+      "parent": "ValueBox",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Regular Material]",
+      "parent": "PartValueLabel",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "NextButton",
+      "parent": "Part3Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(538.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "NextButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "Part4Row",
+      "parent": "AppearanceParts",
+      "rect": "(x:-280.00, y:-20.00, width:560.00, height:40.00)",
+      "pos": "(280.00, -120.00)",
+      "components": [
+        "RectTransform",
+        "HorizontalLayoutGroup"
+      ]
+    },
+    {
+      "name": "PartLabel",
+      "parent": "Part4Row",
+      "rect": "(x:-30.00, y:-13.04, width:60.00, height:26.07)",
+      "pos": "(30.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI",
+        "LayoutElement",
+        "LocalizedLabel"
+      ]
+    },
+    {
+      "name": "PreviousButton",
+      "parent": "Part4Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(94.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "PreviousButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "ValueBox",
+      "parent": "Part4Row",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(316.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "LayoutElement"
+      ]
+    },
+    {
+      "name": "PartValueLabel",
+      "parent": "ValueBox",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Regular Material]",
+      "parent": "PartValueLabel",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "NextButton",
+      "parent": "Part4Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(538.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "NextButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "Part5Row",
+      "parent": "AppearanceParts",
+      "rect": "(x:-280.00, y:-20.00, width:560.00, height:40.00)",
+      "pos": "(866.00, -120.00)",
+      "components": [
+        "RectTransform",
+        "HorizontalLayoutGroup"
+      ]
+    },
+    {
+      "name": "PartLabel",
+      "parent": "Part5Row",
+      "rect": "(x:-30.00, y:-13.04, width:60.00, height:26.07)",
+      "pos": "(30.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI",
+        "LayoutElement",
+        "LocalizedLabel"
+      ]
+    },
+    {
+      "name": "PreviousButton",
+      "parent": "Part5Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(94.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "PreviousButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "ValueBox",
+      "parent": "Part5Row",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(316.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "LayoutElement"
+      ]
+    },
+    {
+      "name": "PartValueLabel",
+      "parent": "ValueBox",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Regular Material]",
+      "parent": "PartValueLabel",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "NextButton",
+      "parent": "Part5Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(538.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "NextButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "Part6Row",
+      "parent": "AppearanceParts",
+      "rect": "(x:-280.00, y:-20.00, width:560.00, height:40.00)",
+      "pos": "(280.00, -170.00)",
+      "components": [
+        "RectTransform",
+        "HorizontalLayoutGroup"
+      ]
+    },
+    {
+      "name": "PartLabel",
+      "parent": "Part6Row",
+      "rect": "(x:-30.00, y:-13.04, width:60.00, height:26.07)",
+      "pos": "(30.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI",
+        "LayoutElement",
+        "LocalizedLabel"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Regular Material]",
+      "parent": "PartLabel",
+      "rect": "(x:-30.00, y:-13.04, width:60.00, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "PreviousButton",
+      "parent": "Part6Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(94.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "PreviousButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "ValueBox",
+      "parent": "Part6Row",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(316.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "LayoutElement"
+      ]
+    },
+    {
+      "name": "PartValueLabel",
+      "parent": "ValueBox",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Regular Material]",
+      "parent": "PartValueLabel",
+      "rect": "(x:-188.00, y:-20.00, width:376.00, height:40.00)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "NextButton",
+      "parent": "Part6Row",
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "pos": "(538.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "NextButton",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(22.00, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-2.92, y:-13.04, width:5.84, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "RandomAppearanceButton",
+      "parent": "InfoPage",
+      "rect": "(x:0.00, y:-40.00, width:104.01, height:40.00)",
+      "pos": "(0.00, -246.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect",
+        "ContentSizeFitter"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "RandomAppearanceButton",
+      "rect": "(x:-36.01, y:-13.04, width:72.01, height:26.07)",
+      "pos": "(52.01, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI",
+        "LocalizedLabel"
+      ]
+    },
+    {
+      "name": "AppearanceChoiceOpen",
+      "parent": "InfoPage",
+      "rect": "(x:0.00, y:-40.00, width:176.01, height:40.00)",
+      "pos": "(120.01, -246.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "Image",
+        "Button",
+        "LayoutElement",
+        "HorizontalLayoutGroup",
+        "UiFeedbackTrigger",
+        "UIEffect",
+        "ContentSizeFitter"
+      ]
+    },
+    {
+      "name": "Label",
+      "parent": "AppearanceChoiceOpen",
+      "rect": "(x:-72.01, y:-13.04, width:144.01, height:26.07)",
+      "pos": "(88.01, -20.00)",
+      "components": [
+        "RectTransform",
+        "CanvasRenderer",
+        "TextMeshProUGUI",
+        "LocalizedLabel"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-72.01, y:-13.04, width:144.01, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    },
+    {
+      "name": "TMP UI SubObject [NotoSansCJKsc-Bold Material]",
+      "parent": "Label",
+      "rect": "(x:-72.01, y:-13.04, width:144.01, height:26.07)",
+      "pos": "(0.00, 0.00)",
+      "components": [
+        "RectTransform",
+        "LayoutElement",
+        "CanvasRenderer",
+        "TMP_SubMeshUI"
+      ]
+    }
+  ],
+  "creation_controls": [
+    {
+      "name": "ReturnToMenuButton",
+      "interactable": true,
+      "rect": "(x:0.00, y:-40.00, width:206.81, height:40.00)",
+      "world": "(9992.60, 4.25, -10.00)"
+    },
+    {
+      "name": "Tab0Button",
+      "interactable": true,
+      "rect": "(x:-133.75, y:-24.00, width:267.50, height:48.00)",
+      "world": "(9996.61, 3.53, -10.00)"
+    },
+    {
+      "name": "Tab1Button",
+      "interactable": true,
+      "rect": "(x:-133.75, y:-24.00, width:267.50, height:48.00)",
+      "world": "(9998.93, 3.53, -10.00)"
+    },
+    {
+      "name": "Tab2Button",
+      "interactable": true,
+      "rect": "(x:-133.75, y:-24.00, width:267.50, height:48.00)",
+      "world": "(10001.24, 3.53, -10.00)"
+    },
+    {
+      "name": "Tab3Button",
+      "interactable": true,
+      "rect": "(x:-133.75, y:-24.00, width:267.50, height:48.00)",
+      "world": "(10003.55, 3.53, -10.00)"
+    },
+    {
+      "name": "PreviousButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(9993.58, 1.60, -10.00)"
+    },
+    {
+      "name": "NextButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(9997.28, 1.60, -10.00)"
+    },
+    {
+      "name": "PreviousButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(9998.47, 1.60, -10.00)"
+    },
+    {
+      "name": "NextButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(10002.17, 1.60, -10.00)"
+    },
+    {
+      "name": "PreviousButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(9993.58, 1.18, -10.00)"
+    },
+    {
+      "name": "NextButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(9997.28, 1.18, -10.00)"
+    },
+    {
+      "name": "PreviousButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(9998.47, 1.18, -10.00)"
+    },
+    {
+      "name": "NextButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(10002.17, 1.18, -10.00)"
+    },
+    {
+      "name": "PreviousButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(9993.58, 0.77, -10.00)"
+    },
+    {
+      "name": "NextButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(9997.28, 0.77, -10.00)"
+    },
+    {
+      "name": "PreviousButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(9998.47, 0.77, -10.00)"
+    },
+    {
+      "name": "NextButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(10002.17, 0.77, -10.00)"
+    },
+    {
+      "name": "PreviousButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(9993.58, 0.35, -10.00)"
+    },
+    {
+      "name": "NextButton",
+      "interactable": true,
+      "rect": "(x:-22.00, y:-20.00, width:44.00, height:40.00)",
+      "world": "(9997.28, 0.35, -10.00)"
+    },
+    {
+      "name": "RandomAppearanceButton",
+      "interactable": true,
+      "rect": "(x:0.00, y:-40.00, width:104.01, height:40.00)",
+      "world": "(9992.80, -0.02, -10.00)"
+    },
+    {
+      "name": "AppearanceChoiceOpen",
+      "interactable": true,
+      "rect": "(x:0.00, y:-40.00, width:176.01, height:40.00)",
+      "world": "(9993.80, -0.02, -10.00)"
+    },
+    {
+      "name": "ConfirmButton",
+      "interactable": true,
+      "rect": "(x:-110.00, y:-26.00, width:220.00, height:52.00)",
+      "world": "(10006.48, -4.08, -10.00)"
+    },
+    {
+      "name": "DifficultyChip",
+      "interactable": true,
+      "rect": "(x:-97.28, y:-26.00, width:194.56, height:52.00)",
+      "world": "(9993.86, -4.08, -10.00)"
+    },
+    {
+      "name": "DifficultyModifyButton",
+      "interactable": true,
+      "rect": "(x:-50.01, y:-20.00, width:100.01, height:40.00)",
+      "world": "(9995.21, -4.08, -10.00)"
+    }
+  ],
+  "fixed_sword_equipment": [
+    {
+      "equipmentId": "",
+      "nativeResource": "",
+      "nativeOffhandResource": "",
+      "swords": 1
+    },
+    {
+      "equipmentId": "EQ-BLD-01",
+      "nativeResource": "Addons/Reincarnation/0_Unit/0_Sprite/6_Weapons/Generated/PerEquipment/V1/EQ-BLD-01",
+      "nativeOffhandResource": "",
+      "swords": 1
+    },
+    {
+      "equipmentId": "EQ-BLD-02",
+      "nativeResource": "Addons/Legacy/0_Unit/0_Sprite/6_Weapons/0_Sword/Sword_1",
+      "nativeOffhandResource": "",
+      "swords": 1
+    },
+    {
+      "equipmentId": "EQ-BLD-10",
+      "nativeResource": "Addons/Reincarnation/0_Unit/0_Sprite/6_Weapons/Generated/PerEquipment/V1/EQ-BLD-10-Primary",
+      "nativeOffhandResource": "Addons/Reincarnation/0_Unit/0_Sprite/6_Weapons/Generated/PerEquipment/V1/EQ-BLD-10-Offhand",
+      "swords": 1
+    },
+    {
+      "equipmentId": "EQ-HVR-06",
+      "nativeResource": "Addons/Reincarnation/0_Unit/0_Sprite/6_Weapons/Generated/PerEquipment/V1/EQ-HVR-06",
+      "nativeOffhandResource": "",
+      "swords": 1
+    },
+    {
+      "equipmentId": "EQ-BOW-01",
+      "nativeResource": "Addons/Legacy/0_Unit/0_Sprite/6_Weapons/2_Bow/Bow_1",
+      "nativeOffhandResource": "",
+      "swords": 1
+    },
+    {
+      "equipmentId": "EQ-PST-01",
+      "nativeResource": "Addons/Reincarnation/0_Unit/0_Sprite/6_Weapons/Generated/PerEquipment/V1/EQ-PST-01",
+      "nativeOffhandResource": "",
+      "swords": 1
+    },
+    {
+      "equipmentId": "EQ-RFL-01",
+      "nativeResource": "Addons/Reincarnation/0_Unit/0_Sprite/6_Weapons/Generated/PerEquipment/V1/EQ-RFL-01",
+      "nativeOffhandResource": "",
+      "swords": 1
+    },
+    {
+      "equipmentId": "EQ-PLM-01",
+      "nativeResource": "Addons/Reincarnation/0_Unit/0_Sprite/6_Weapons/Generated/PerEquipment/V1/EQ-PLM-01",
+      "nativeOffhandResource": "",
+      "swords": 1
+    },
+    {
+      "equipmentId": "EQ-FOC-01",
+      "nativeResource": "Addons/Legacy/0_Unit/0_Sprite/6_Weapons/0_Sword/Sword_1",
+      "nativeOffhandResource": "",
+      "swords": 1
+    }
+  ],
+  "clip_IDLE": "0_idle",
+  "clip_ATTACK": "0_Attack_Normal",
+  "expanded_characters": [
+    {
+      "id": "appearance.yixian.yanxue",
+      "name": "炎雪",
+      "group": "云灵剑宗",
+      "parts": 17
+    },
+    {
+      "id": "appearance.yixian.longyao",
+      "name": "龙瑶",
+      "group": "云灵剑宗",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.linxiaoyue",
+      "name": "林小月",
+      "group": "云灵剑宗",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.lujianxin",
+      "name": "陆剑心",
+      "group": "云灵剑宗",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.lichengyun",
+      "name": "黎承云",
+      "group": "云灵剑宗",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.tanshuyan",
+      "name": "谭舒雁",
+      "group": "七星阁",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.yanchen",
+      "name": "炎尘",
+      "group": "七星阁",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.yaoling",
+      "name": "曜灵",
+      "group": "七星阁",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.jiangximing",
+      "name": "姜袭明",
+      "group": "七星阁",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.wuce",
+      "name": "吴策",
+      "group": "七星阁",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.fengxu",
+      "name": "风绪",
+      "group": "七星阁",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.wuxingzhi",
+      "name": "吾行之",
+      "group": "五行道盟",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.dulingyuan",
+      "name": "杜伶鸳",
+      "group": "五行道盟",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.huaqinrui",
+      "name": "花沁蕊",
+      "group": "五行道盟",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.muhu",
+      "name": "慕虎",
+      "group": "五行道盟",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.nangongsheng",
+      "name": "南宫生",
+      "group": "五行道盟",
+      "parts": 16
+    },
+    {
+      "id": "appearance.yixian.qiwangyou",
+      "name": "祁忘忧",
+      "group": "五行道盟",
+      "parts": 16
+    }
+  ],
+  "expanded_animation_samples_per_phase": 8,
+  "rig_visible_overlap_checks": 952,
+  "rig_min_visible_neck_overlap_samples": 25,
+  "clip_MOVE": "0_move",
+  "clip_DAMAGED": "0_Damaged",
+  "clip_DEATH": "0_Die",
+  "clip_MIRROR": "0_idle",
+  "clip_RESTORE": "0_idle",
+  "body_height_pixels_at_900p": {
+    "NativeControl": 102.4328,
+    "MuyifengLocalPlayer": 102.8952,
+    "NativeDetail": 256.343872,
+    "MuyifengDetail": 259.0962
+  },
+  "size_policy": "native NormalizePerceivedHeight(camera), 1x scale for upper comparison; lower comparison is explicit 2.4x inspection only",
+  "binding_IDLE": [
+    {
+      "name": "neck",
+      "actual": [
+        733.3008,
+        590.115356
+      ],
+      "target": [
+        733.3008,
+        590.115356
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left shoulder",
+      "actual": [
+        721.09375,
+        584.4828
+      ],
+      "target": [
+        721.09375,
+        584.4828
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left elbow",
+      "actual": [
+        717.480469,
+        574.8709
+      ],
+      "target": [
+        717.480469,
+        574.8709
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left wrist",
+      "actual": [
+        715.8203,
+        568.317444
+      ],
+      "target": [
+        715.8203,
+        568.317444
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right shoulder",
+      "actual": [
+        746.4844,
+        585.17926
+      ],
+      "target": [
+        746.4844,
+        585.17926
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right elbow",
+      "actual": [
+        750.3906,
+        577.3907
+      ],
+      "target": [
+        750.3906,
+        577.3907
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right wrist",
+      "actual": [
+        752.0508,
+        571.9077
+      ],
+      "target": [
+        752.0508,
+        571.9077
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left ankle",
+      "actual": [
+        725.292969,
+        552.2074
+      ],
+      "target": [
+        725.292969,
+        552.2074
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right ankle",
+      "actual": [
+        744.042969,
+        552.1855
+      ],
+      "target": [
+        744.042969,
+        552.1855
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left grip",
+      "actual": [
+        714.9414,
+        564.615845
+      ],
+      "target": [
+        714.9414,
+        564.615845
+      ],
+      "errorPixels": 0.0
+    }
+  ],
+  "anatomy_IDLE": [
+    {
+      "key": "Body/Head",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/HeadSet/P_Head/P_Head/5_Head",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.85300, 1.47131, 0.00049)",
+      "screen": [
+        285.2539,
+        597.1312
+      ],
+      "angle": 1.64599645,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 17.0,
+      "height": 15.0,
+      "pivotX": 8.5,
+      "pivotY": 7.5,
+      "ppu": 32.0,
+      "min": "(-0.26563, -0.23438, -0.10000)",
+      "max": "(0.26563, 0.23438, 0.10000)"
+    },
+    {
+      "key": "Body/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body",
+      "local": "(0.00000, -0.01563, 0.00000)",
+      "world": "(9994.84700, 1.16563, -0.00002)",
+      "screen": [
+        284.667969,
+        566.563232
+      ],
+      "angle": 1.64599645,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_L",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm",
+      "local": "(0.00000, 0.00000, -0.00003)",
+      "world": "(9994.67000, 1.17516, -0.00005)",
+      "screen": [
+        266.9922,
+        567.5156
+      ],
+      "angle": 1.64599645,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_R",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9995.02300, 1.18518, 0.00000)",
+      "screen": [
+        302.34375,
+        568.5181
+      ],
+      "angle": 1.64599645,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_L",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/_12R_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9994.96500, 1.03475, 0.00000)",
+      "screen": [
+        296.484375,
+        553.474548
+      ],
+      "angle": 0.0,
+      "scale": "(-0.94411, 0.93071, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_R",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/_3L_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9994.72900, 1.03475, 0.00000)",
+      "screen": [
+        272.851563,
+        553.474548
+      ],
+      "angle": 0.0,
+      "scale": "(-0.94411, 0.93071, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Cloth/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm/P_LCArm/21_LCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.68400, 1.20465, 0.00000)",
+      "screen": [
+        268.359375,
+        570.464661
+      ],
+      "angle": 1.64599645,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm/P_RCArm/-19_RCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9995.00800, 1.21384, 0.00005)",
+      "screen": [
+        300.78125,
+        571.383667
+      ],
+      "angle": 1.64599681,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body/P_ClothBody/ClothBody",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.84700, 1.16563, -0.00002)",
+      "screen": [
+        284.667969,
+        566.563232
+      ],
+      "angle": 1.64599645,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Pant/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/P_RCloth/_11R_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.96500, 1.03475, 0.00000)",
+      "screen": [
+        296.484375,
+        553.474548
+      ],
+      "angle": 0.0,
+      "scale": "(-0.94411, 0.93071, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Pant/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/P_LCloth/_2L_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.72900, 1.03475, 0.00000)",
+      "screen": [
+        272.851563,
+        553.474548
+      ],
+      "angle": 0.0,
+      "scale": "(-0.94411, 0.93071, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Weapons/Weapons",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Weapon/L_Weapon",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.64100, 1.14525, -0.00005)",
+      "screen": [
+        264.0625,
+        564.5248
+      ],
+      "angle": 87.6459961,
+      "scale": "(-0.93073, -0.94409, 1.58839)",
+      "width": 48.0,
+      "height": 48.0,
+      "pivotX": 24.0,
+      "pivotY": 12.0,
+      "ppu": 32.0,
+      "min": "(-0.75000, -0.37500, -0.10000)",
+      "max": "(0.75000, 1.12500, 0.10000)"
+    }
+  ],
+  "binding_MOVE": [
+    {
+      "name": "neck",
+      "actual": [
+        733.0078,
+        597.817
+      ],
+      "target": [
+        733.0078,
+        597.817
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left shoulder",
+      "actual": [
+        720.019531,
+        593.4911
+      ],
+      "target": [
+        720.019531,
+        593.4911
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left elbow",
+      "actual": [
+        729.1992,
+        580.738831
+      ],
+      "target": [
+        729.1992,
+        580.738831
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left wrist",
+      "actual": [
+        736.4258,
+        570.7963
+      ],
+      "target": [
+        736.4258,
+        570.7963
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right shoulder",
+      "actual": [
+        745.7031,
+        591.2621
+      ],
+      "target": [
+        745.7031,
+        591.2621
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right elbow",
+      "actual": [
+        735.839844,
+        583.268433
+      ],
+      "target": [
+        735.839844,
+        583.268433
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right wrist",
+      "actual": [
+        728.222656,
+        577.027466
+      ],
+      "target": [
+        728.222656,
+        577.027466
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left ankle",
+      "actual": [
+        727.832031,
+        554.734863
+      ],
+      "target": [
+        727.832031,
+        554.734863
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right ankle",
+      "actual": [
+        732.226563,
+        546.777466
+      ],
+      "target": [
+        732.226563,
+        546.777466
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left grip",
+      "actual": [
+        738.6719,
+        567.6266
+      ],
+      "target": [
+        738.6719,
+        567.6266
+      ],
+      "errorPixels": 0.0
+    }
+  ],
+  "anatomy_MOVE": [
+    {
+      "key": "Body/Head",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/HeadSet/P_Head/P_Head/5_Head",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.85700, 1.49484, 0.00000)",
+      "screen": [
+        285.7422,
+        599.484
+      ],
+      "angle": 357.402985,
+      "scale": "(-0.95265, 0.94675, 1.58839)",
+      "width": 17.0,
+      "height": 15.0,
+      "pivotX": 8.5,
+      "pivotY": 7.5,
+      "ppu": 32.0,
+      "min": "(-0.26563, -0.23438, -0.10000)",
+      "max": "(0.26563, 0.23438, 0.10000)"
+    },
+    {
+      "key": "Body/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body",
+      "local": "(0.00000, -0.01563, 0.00000)",
+      "world": "(9994.79200, 1.18238, 0.00000)",
+      "screen": [
+        279.199219,
+        568.238342
+      ],
+      "angle": 355.19,
+      "scale": "(-0.95262, 0.94678, 1.58839)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_L",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm",
+      "local": "(0.00000, 0.00000, -0.00003)",
+      "world": "(9994.89500, 1.14730, -0.00005)",
+      "screen": [
+        289.453125,
+        564.7298
+      ],
+      "angle": 68.921,
+      "scale": "(-0.94750, 0.95189, 1.58839)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_R",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.67600, 1.18577, 0.00000)",
+      "screen": [
+        267.578125,
+        568.576538
+      ],
+      "angle": 337.526,
+      "scale": "(-0.95179, 0.94760, 1.58839)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_L",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/_12R_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9994.91400, 1.00210, 0.00000)",
+      "screen": [
+        291.40625,
+        550.2102
+      ],
+      "angle": 59.71203,
+      "scale": "(-0.94824, 0.95115, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_R",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/_3L_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9994.63300, 1.03078, 0.00000)",
+      "screen": [
+        263.28125,
+        553.0784
+      ],
+      "angle": 301.835,
+      "scale": "(-0.94839, 0.95101, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Cloth/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm/P_LCArm/21_LCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.87200, 1.17174, -0.00005)",
+      "screen": [
+        287.207031,
+        567.174133
+      ],
+      "angle": 68.921,
+      "scale": "(-0.94750, 0.95189, 1.58839)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm/P_RCArm/-19_RCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.67400, 1.21876, 0.00000)",
+      "screen": [
+        267.3828,
+        571.875854
+      ],
+      "angle": 337.526,
+      "scale": "(-0.95179, 0.94760, 1.58839)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body/P_ClothBody/ClothBody",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.79200, 1.18238, 0.00000)",
+      "screen": [
+        279.199219,
+        568.238342
+      ],
+      "angle": 355.19,
+      "scale": "(-0.95262, 0.94678, 1.58839)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Pant/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/P_RCloth/_11R_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.91400, 1.00210, 0.00000)",
+      "screen": [
+        291.40625,
+        550.2102
+      ],
+      "angle": 59.71203,
+      "scale": "(-0.94824, 0.95115, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Pant/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/P_LCloth/_2L_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.63300, 1.03078, 0.00000)",
+      "screen": [
+        263.28125,
+        553.0784
+      ],
+      "angle": 301.835,
+      "scale": "(-0.94839, 0.95101, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Weapons/Weapons",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Weapon/L_Weapon",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.91200, 1.10905, 0.00000)",
+      "screen": [
+        291.210938,
+        560.905151
+      ],
+      "angle": 154.921,
+      "scale": "(-0.95160, -0.94780, 1.58839)",
+      "width": 48.0,
+      "height": 48.0,
+      "pivotX": 24.0,
+      "pivotY": 12.0,
+      "ppu": 32.0,
+      "min": "(-0.75000, -0.37500, -0.10000)",
+      "max": "(0.75000, 1.12500, 0.10000)"
+    }
+  ],
+  "binding_ATTACK": [
+    {
+      "name": "neck",
+      "actual": [
+        723.339844,
+        595.196533
+      ],
+      "target": [
+        723.339844,
+        595.196838
+      ],
+      "errorPixels": 0.000305175781
+    },
+    {
+      "name": "Left shoulder",
+      "actual": [
+        711.4258,
+        587.9981
+      ],
+      "target": [
+        711.4258,
+        587.998047
+      ],
+      "errorPixels": 6.10351563E-05
+    },
+    {
+      "name": "Left elbow",
+      "actual": [
+        720.605469,
+        576.744934
+      ],
+      "target": [
+        720.605469,
+        576.744934
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left wrist",
+      "actual": [
+        727.4414,
+        568.2727
+      ],
+      "target": [
+        727.4414,
+        568.2727
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right shoulder",
+      "actual": [
+        737.3047,
+        591.418762
+      ],
+      "target": [
+        737.3047,
+        591.421448
+      ],
+      "errorPixels": 0.00268554688
+    },
+    {
+      "name": "Right elbow",
+      "actual": [
+        740.8203,
+        599.8391
+      ],
+      "target": [
+        740.8203,
+        599.8391
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right wrist",
+      "actual": [
+        740.527344,
+        593.8135
+      ],
+      "target": [
+        740.527344,
+        593.8135
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left ankle",
+      "actual": [
+        719.6289,
+        552.077759
+      ],
+      "target": [
+        719.6289,
+        552.077759
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right ankle",
+      "actual": [
+        736.4258,
+        554.80304
+      ],
+      "target": [
+        736.4258,
+        554.80304
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left grip",
+      "actual": [
+        729.980469,
+        565.1677
+      ],
+      "target": [
+        729.980469,
+        565.1677
+      ],
+      "errorPixels": 0.0
+    }
+  ],
+  "anatomy_ATTACK": [
+    {
+      "key": "Body/Head",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/HeadSet/P_Head/P_Head/5_Head",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.85300, 1.52631, 0.00252)",
+      "screen": [
+        285.2539,
+        602.6308
+      ],
+      "angle": 1.508148,
+      "scale": "(-0.96799, 0.97547, 1.58837)",
+      "width": 17.0,
+      "height": 15.0,
+      "pivotX": 8.5,
+      "pivotY": 7.5,
+      "ppu": 32.0,
+      "min": "(-0.26563, -0.23438, -0.10000)",
+      "max": "(0.26563, 0.23438, 0.10000)"
+    },
+    {
+      "key": "Body/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body",
+      "local": "(0.00000, -0.01563, 0.00000)",
+      "world": "(9994.87800, 1.20315, 0.00046)",
+      "screen": [
+        287.792969,
+        570.314636
+      ],
+      "angle": 7.57900953,
+      "scale": "(-0.96811, 0.97533, 1.58839)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_L",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm",
+      "local": "(0.00000, 0.00000, -0.00003)",
+      "world": "(9994.92600, 1.18148, 0.00072)",
+      "screen": [
+        292.578125,
+        568.147766
+      ],
+      "angle": 73.44501,
+      "scale": "(-0.97485, 0.96858, 1.58839)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_R",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.92800, 1.41707, -0.00228)",
+      "screen": [
+        292.773438,
+        591.7069
+      ],
+      "angle": 103.222466,
+      "scale": "(-0.97509, 0.96853, 1.58821)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_L",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/_12R_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9995.00300, 1.06432, -0.00002)",
+      "screen": [
+        300.292969,
+        556.4322
+      ],
+      "angle": 12.4707127,
+      "scale": "(-0.96832, 0.97511, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_R",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/_3L_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9994.74300, 1.01444, 0.00051)",
+      "screen": [
+        274.3164,
+        551.4441
+      ],
+      "angle": 351.957031,
+      "scale": "(-0.96812, 0.97531, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Cloth/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm/P_LCArm/21_LCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.90100, 1.20477, 0.00073)",
+      "screen": [
+        290.136719,
+        570.4773
+      ],
+      "angle": 73.44501,
+      "scale": "(-0.97485, 0.96858, 1.58839)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm/P_RCArm/-19_RCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.90100, 1.39526, -0.00133)",
+      "screen": [
+        290.136719,
+        589.52594
+      ],
+      "angle": 103.222466,
+      "scale": "(-0.97509, 0.96853, 1.58821)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body/P_ClothBody/ClothBody",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.87800, 1.20315, 0.00046)",
+      "screen": [
+        287.792969,
+        570.314636
+      ],
+      "angle": 7.57900953,
+      "scale": "(-0.96811, 0.97533, 1.58839)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Pant/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/P_RCloth/_11R_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9995.00300, 1.06432, -0.00002)",
+      "screen": [
+        300.292969,
+        556.4322
+      ],
+      "angle": 12.4707127,
+      "scale": "(-0.96832, 0.97511, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Pant/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/P_LCloth/_2L_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.74300, 1.01444, 0.00051)",
+      "screen": [
+        274.3164,
+        551.4441
+      ],
+      "angle": 351.957031,
+      "scale": "(-0.96812, 0.97531, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Weapons/Weapons",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Weapon/L_Weapon",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.94600, 1.14357, 0.00075)",
+      "screen": [
+        294.6289,
+        564.357239
+      ],
+      "angle": 159.445,
+      "scale": "(-0.96890, -0.97453, 1.58839)",
+      "width": 48.0,
+      "height": 48.0,
+      "pivotX": 24.0,
+      "pivotY": 12.0,
+      "ppu": 32.0,
+      "min": "(-0.75000, -0.37500, -0.10000)",
+      "max": "(0.75000, 1.12500, 0.10000)"
+    }
+  ],
+  "binding_DAMAGED": [
+    {
+      "name": "neck",
+      "actual": [
+        729.589844,
+        600.2934
+      ],
+      "target": [
+        729.589844,
+        600.2964
+      ],
+      "errorPixels": 0.00299072266
+    },
+    {
+      "name": "Left shoulder",
+      "actual": [
+        716.0156,
+        597.372253
+      ],
+      "target": [
+        716.0156,
+        597.372253
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left elbow",
+      "actual": [
+        707.8125,
+        589.9662
+      ],
+      "target": [
+        707.8125,
+        589.9662
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left wrist",
+      "actual": [
+        702.34375,
+        585.0229
+      ],
+      "target": [
+        702.34375,
+        585.0229
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right shoulder",
+      "actual": [
+        741.601563,
+        592.1427
+      ],
+      "target": [
+        741.601563,
+        592.143555
+      ],
+      "errorPixels": 0.0008544922
+    },
+    {
+      "name": "Right elbow",
+      "actual": [
+        737.0117,
+        581.512146
+      ],
+      "target": [
+        737.0117,
+        581.512146
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right wrist",
+      "actual": [
+        733.59375,
+        573.582642
+      ],
+      "target": [
+        733.59375,
+        573.582642
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left ankle",
+      "actual": [
+        706.835938,
+        551.7646
+      ],
+      "target": [
+        706.835938,
+        551.7646
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right ankle",
+      "actual": [
+        724.3164,
+        548.1732
+      ],
+      "target": [
+        724.3164,
+        548.1732
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left grip",
+      "actual": [
+        699.414063,
+        582.339
+      ],
+      "target": [
+        699.414063,
+        582.3385
+      ],
+      "errorPixels": 0.00048828125
+    }
+  ],
+  "anatomy_DAMAGED": [
+    {
+      "key": "Body/Head",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/HeadSet/P_Head/P_Head/5_Head",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.85200, 1.45826, -0.00280)",
+      "screen": [
+        285.15625,
+        595.8255
+      ],
+      "angle": 310.12735,
+      "scale": "(-0.98260, 0.98042, 1.58826)",
+      "width": 17.0,
+      "height": 15.0,
+      "pivotX": 8.5,
+      "pivotY": 7.5,
+      "ppu": 32.0,
+      "min": "(-0.26563, -0.23438, -0.10000)",
+      "max": "(0.26563, 0.23438, 0.10000)"
+    },
+    {
+      "key": "Body/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body",
+      "local": "(0.00000, -0.01563, 0.00000)",
+      "world": "(9994.65500, 1.25433, 0.00167)",
+      "screen": [
+        265.527344,
+        575.4331
+      ],
+      "angle": 348.626,
+      "scale": "(-0.97526, 0.98763, 1.58839)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_L",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm",
+      "local": "(0.00000, 0.00000, -0.00003)",
+      "world": "(9994.41300, 1.34616, 0.00289)",
+      "screen": [
+        241.3086,
+        584.6162
+      ],
+      "angle": 336.930725,
+      "scale": "(-0.97680, 0.98611, 1.58836)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_R",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.69500, 1.17519, 0.00495)",
+      "screen": [
+        269.53125,
+        567.5189
+      ],
+      "angle": 324.02417,
+      "scale": "(-0.97937, 0.98358, 1.58832)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_L",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/_12R_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9994.77100, 1.03590, 0.00193)",
+      "screen": [
+        277.050781,
+        553.5897
+      ],
+      "angle": 46.051,
+      "scale": "(-0.98171, 0.98129, 1.58828)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_R",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/_3L_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9994.53000, 1.05424, 0.00225)",
+      "screen": [
+        253.027344,
+        555.423462
+      ],
+      "angle": 32.32,
+      "scale": "(-0.97858, 0.98437, 1.58834)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Cloth/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm/P_LCArm/21_LCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.43900, 1.36852, 0.00258)",
+      "screen": [
+        243.945313,
+        586.8522
+      ],
+      "angle": 336.930725,
+      "scale": "(-0.97680, 0.98611, 1.58836)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm/P_RCArm/-19_RCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.70100, 1.20925, 0.00436)",
+      "screen": [
+        270.1172,
+        570.9247
+      ],
+      "angle": 324.02417,
+      "scale": "(-0.97937, 0.98358, 1.58832)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body/P_ClothBody/ClothBody",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.65500, 1.25433, 0.00167)",
+      "screen": [
+        265.527344,
+        575.4331
+      ],
+      "angle": 348.626,
+      "scale": "(-0.97526, 0.98763, 1.58839)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Pant/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/P_RCloth/_11R_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.77100, 1.03590, 0.00193)",
+      "screen": [
+        277.050781,
+        553.5897
+      ],
+      "angle": 46.051,
+      "scale": "(-0.98171, 0.98129, 1.58828)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Pant/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/P_LCloth/_2L_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.53000, 1.05424, 0.00225)",
+      "screen": [
+        253.027344,
+        555.423462
+      ],
+      "angle": 32.32,
+      "scale": "(-0.97858, 0.98437, 1.58834)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Weapons/Weapons",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Weapon/L_Weapon",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.37300, 1.32985, 0.00321)",
+      "screen": [
+        237.304688,
+        582.9852
+      ],
+      "angle": 62.93072,
+      "scale": "(-0.98540, -0.97752, 1.58836)",
+      "width": 48.0,
+      "height": 48.0,
+      "pivotX": 24.0,
+      "pivotY": 12.0,
+      "ppu": 32.0,
+      "min": "(-0.75000, -0.37500, -0.10000)",
+      "max": "(0.75000, 1.12500, 0.10000)"
+    }
+  ],
+  "binding_DEATH": [
+    {
+      "name": "neck",
+      "actual": [
+        723.9258,
+        581.9005
+      ],
+      "target": [
+        723.9258,
+        581.899536
+      ],
+      "errorPixels": 0.0009765625
+    },
+    {
+      "name": "Left shoulder",
+      "actual": [
+        725.3906,
+        568.2835
+      ],
+      "target": [
+        725.3906,
+        568.284363
+      ],
+      "errorPixels": 0.0008544922
+    },
+    {
+      "name": "Left elbow",
+      "actual": [
+        734.8633,
+        562.5353
+      ],
+      "target": [
+        734.8633,
+        562.5353
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left wrist",
+      "actual": [
+        741.3086,
+        558.649048
+      ],
+      "target": [
+        741.3086,
+        558.649048
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right shoulder",
+      "actual": [
+        733.105469,
+        592.8841
+      ],
+      "target": [
+        733.105469,
+        592.898
+      ],
+      "errorPixels": 0.0139160156
+    },
+    {
+      "name": "Right elbow",
+      "actual": [
+        741.9922,
+        592.356567
+      ],
+      "target": [
+        741.9922,
+        592.356567
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right wrist",
+      "actual": [
+        744.2383,
+        586.9164
+      ],
+      "target": [
+        744.2383,
+        586.9164
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left ankle",
+      "actual": [
+        765.722656,
+        564.1467
+      ],
+      "target": [
+        765.722656,
+        564.1467
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right ankle",
+      "actual": [
+        765.527344,
+        568.01886
+      ],
+      "target": [
+        765.527344,
+        568.01886
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left grip",
+      "actual": [
+        744.6289,
+        556.6216
+      ],
+      "target": [
+        744.6289,
+        556.6212
+      ],
+      "errorPixels": 0.000366210938
+    }
+  ],
+  "anatomy_DEATH": [
+    {
+      "key": "Body/Head",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/HeadSet/P_Head/P_Head/5_Head",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.71500, 1.24534, 0.00821)",
+      "screen": [
+        271.484375,
+        574.5337
+      ],
+      "angle": 83.47219,
+      "scale": "(-0.95944, 0.95945, 1.58835)",
+      "width": 17.0,
+      "height": 15.0,
+      "pivotX": 8.5,
+      "pivotY": 7.5,
+      "ppu": 32.0,
+      "min": "(-0.26563, -0.23438, -0.10000)",
+      "max": "(0.26563, 0.23438, 0.10000)"
+    },
+    {
+      "key": "Body/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body",
+      "local": "(0.00000, -0.01563, 0.00000)",
+      "world": "(9995.02800, 1.17519, 0.00261)",
+      "screen": [
+        302.832031,
+        567.519165
+      ],
+      "angle": 72.81299,
+      "scale": "(-0.95944, 0.95953, 1.58827)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_L",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm",
+      "local": "(0.00000, 0.00000, -0.00003)",
+      "world": "(9994.97600, 1.01184, 0.00031)",
+      "screen": [
+        297.5586,
+        551.1835
+      ],
+      "angle": 87.72172,
+      "scale": "(-0.95947, 0.95958, 1.58819)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_R",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9995.05600, 1.20454, -0.00830)",
+      "screen": [
+        305.5664,
+        570.454346
+      ],
+      "angle": 333.948944,
+      "scale": "(-0.95946, 0.95957, 1.58821)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_L",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/_12R_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9995.20700, 1.08314, 0.00015)",
+      "screen": [
+        320.703125,
+        558.3138
+      ],
+      "angle": 62.07382,
+      "scale": "(-0.95943, 0.95950, 1.58831)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_R",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/_3L_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9995.19600, 0.99496, -0.00002)",
+      "screen": [
+        319.6289,
+        549.4959
+      ],
+      "angle": 47.76035,
+      "scale": "(-0.95943, 0.95946, 1.58836)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Cloth/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm/P_LCArm/21_LCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.94600, 1.02800, 0.00140)",
+      "screen": [
+        294.6289,
+        552.8004
+      ],
+      "angle": 87.72172,
+      "scale": "(-0.95947, 0.95958, 1.58819)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm/P_RCArm/-19_RCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9995.05600, 1.23806, -0.00914)",
+      "screen": [
+        305.5664,
+        573.8061
+      ],
+      "angle": 333.948944,
+      "scale": "(-0.95946, 0.95957, 1.58821)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body/P_ClothBody/ClothBody",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9995.02800, 1.17519, 0.00261)",
+      "screen": [
+        302.832031,
+        567.519165
+      ],
+      "angle": 72.81299,
+      "scale": "(-0.95944, 0.95953, 1.58827)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Pant/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/P_RCloth/_11R_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9995.20700, 1.08314, 0.00015)",
+      "screen": [
+        320.703125,
+        558.3138
+      ],
+      "angle": 62.07382,
+      "scale": "(-0.95943, 0.95950, 1.58831)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Pant/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/P_LCloth/_2L_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9995.19600, 0.99496, -0.00002)",
+      "screen": [
+        319.6289,
+        549.4959
+      ],
+      "angle": 47.76035,
+      "scale": "(-0.95943, 0.95946, 1.58836)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Weapons/Weapons",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Weapon/L_Weapon",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9995.00400, 0.98069, -0.00096)",
+      "screen": [
+        300.390625,
+        548.0687
+      ],
+      "angle": 173.72171,
+      "scale": "(-0.95960, -0.95946, 1.58819)",
+      "width": 48.0,
+      "height": 48.0,
+      "pivotX": 24.0,
+      "pivotY": 12.0,
+      "ppu": 32.0,
+      "min": "(-0.75000, -0.37500, -0.10000)",
+      "max": "(0.75000, 1.12500, 0.10000)"
+    }
+  ],
+  "binding_MIRROR": [
+    {
+      "name": "neck",
+      "actual": [
+        726.1719,
+        590.1919
+      ],
+      "target": [
+        726.1719,
+        590.1919
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left shoulder",
+      "actual": [
+        738.3789,
+        584.6132
+      ],
+      "target": [
+        738.3789,
+        584.6132
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left elbow",
+      "actual": [
+        741.9922,
+        574.991
+      ],
+      "target": [
+        741.9922,
+        574.991
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left wrist",
+      "actual": [
+        743.652344,
+        568.4256
+      ],
+      "target": [
+        743.652344,
+        568.4256
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right shoulder",
+      "actual": [
+        712.9883,
+        585.1841
+      ],
+      "target": [
+        712.9883,
+        585.1841
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right elbow",
+      "actual": [
+        709.277344,
+        577.2981
+      ],
+      "target": [
+        709.277344,
+        577.2981
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right wrist",
+      "actual": [
+        707.4219,
+        571.860046
+      ],
+      "target": [
+        707.4219,
+        571.860046
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left ankle",
+      "actual": [
+        734.277344,
+        552.2313
+      ],
+      "target": [
+        734.277344,
+        552.2313
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right ankle",
+      "actual": [
+        715.527344,
+        552.209351
+      ],
+      "target": [
+        715.527344,
+        552.209351
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left grip",
+      "actual": [
+        744.53125,
+        564.7187
+      ],
+      "target": [
+        744.53125,
+        564.7187
+      ],
+      "errorPixels": 0.0
+    }
+  ],
+  "anatomy_MIRROR": [
+    {
+      "key": "Body/Head",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/HeadSet/P_Head/P_Head/5_Head",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.84700, 1.47978, 0.00049)",
+      "screen": [
+        284.667969,
+        597.978333
+      ],
+      "angle": 358.354,
+      "scale": "(0.95087, 0.94340, 1.58839)",
+      "width": 17.0,
+      "height": 15.0,
+      "pivotX": 8.5,
+      "pivotY": 7.5,
+      "ppu": 32.0,
+      "min": "(-0.26563, -0.23438, -0.10000)",
+      "max": "(0.26563, 0.23438, 0.10000)"
+    },
+    {
+      "key": "Body/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body",
+      "local": "(0.00000, -0.01563, 0.00000)",
+      "world": "(9994.85300, 1.16994, -0.00002)",
+      "screen": [
+        285.2539,
+        566.9935
+      ],
+      "angle": 358.354,
+      "scale": "(0.95087, 0.94340, 1.58839)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_L",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm",
+      "local": "(0.00000, 0.00000, -0.00003)",
+      "world": "(9995.03100, 1.17959, -0.00005)",
+      "screen": [
+        303.125,
+        567.9589
+      ],
+      "angle": 358.354,
+      "scale": "(0.95087, 0.94340, 1.58839)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_R",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.67500, 1.18975, 0.00000)",
+      "screen": [
+        267.480469,
+        568.9751
+      ],
+      "angle": 358.354,
+      "scale": "(0.95087, 0.94340, 1.58839)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_L",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/_12R_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9994.73400, 1.03726, 0.00000)",
+      "screen": [
+        273.4375,
+        553.72644
+      ],
+      "angle": 0.0,
+      "scale": "(0.95088, 0.94340, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_R",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/_3L_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9994.97300, 1.03726, 0.00000)",
+      "screen": [
+        297.265625,
+        553.72644
+      ],
+      "angle": 0.0,
+      "scale": "(0.95088, 0.94340, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Cloth/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm/P_LCArm/21_LCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9995.01800, 1.20948, 0.00000)",
+      "screen": [
+        301.7578,
+        570.9482
+      ],
+      "angle": 358.354,
+      "scale": "(0.95087, 0.94340, 1.58839)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm/P_RCArm/-19_RCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.69000, 1.21880, 0.00005)",
+      "screen": [
+        269.042969,
+        571.879639
+      ],
+      "angle": 358.354,
+      "scale": "(0.95087, 0.94340, 1.58839)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body/P_ClothBody/ClothBody",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.85300, 1.16994, -0.00002)",
+      "screen": [
+        285.2539,
+        566.9935
+      ],
+      "angle": 358.354,
+      "scale": "(0.95087, 0.94340, 1.58839)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Pant/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/P_RCloth/_11R_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.73400, 1.03726, 0.00000)",
+      "screen": [
+        273.4375,
+        553.72644
+      ],
+      "angle": 0.0,
+      "scale": "(0.95088, 0.94340, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Pant/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/P_LCloth/_2L_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.97300, 1.03726, 0.00000)",
+      "screen": [
+        297.265625,
+        553.72644
+      ],
+      "angle": 0.0,
+      "scale": "(0.95088, 0.94340, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Weapons/Weapons",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Weapon/L_Weapon",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9995.06100, 1.14927, -0.00005)",
+      "screen": [
+        306.0547,
+        564.927368
+      ],
+      "angle": 144.354019,
+      "scale": "(0.94834, 0.94594, 1.58839)",
+      "width": 48.0,
+      "height": 48.0,
+      "pivotX": 24.0,
+      "pivotY": 12.0,
+      "ppu": 32.0,
+      "min": "(-0.75000, -0.37500, -0.10000)",
+      "max": "(0.75000, 1.12500, 0.10000)"
+    }
+  ],
+  "binding_RESTORE": [
+    {
+      "name": "neck",
+      "actual": [
+        733.3008,
+        590.115356
+      ],
+      "target": [
+        733.3008,
+        590.115356
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left shoulder",
+      "actual": [
+        721.09375,
+        584.482849
+      ],
+      "target": [
+        721.09375,
+        584.4828
+      ],
+      "errorPixels": 6.10351563E-05
+    },
+    {
+      "name": "Left elbow",
+      "actual": [
+        717.480469,
+        574.87085
+      ],
+      "target": [
+        717.480469,
+        574.87085
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left wrist",
+      "actual": [
+        715.8203,
+        568.3174
+      ],
+      "target": [
+        715.8203,
+        568.3174
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right shoulder",
+      "actual": [
+        746.4844,
+        585.17926
+      ],
+      "target": [
+        746.4844,
+        585.17926
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right elbow",
+      "actual": [
+        750.3906,
+        577.3907
+      ],
+      "target": [
+        750.3906,
+        577.3907
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right wrist",
+      "actual": [
+        752.0508,
+        571.9077
+      ],
+      "target": [
+        752.0508,
+        571.9077
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left ankle",
+      "actual": [
+        725.292969,
+        552.2074
+      ],
+      "target": [
+        725.292969,
+        552.2074
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Right ankle",
+      "actual": [
+        744.042969,
+        552.1855
+      ],
+      "target": [
+        744.042969,
+        552.1855
+      ],
+      "errorPixels": 0.0
+    },
+    {
+      "name": "Left grip",
+      "actual": [
+        714.9414,
+        564.615845
+      ],
+      "target": [
+        714.9414,
+        564.615845
+      ],
+      "errorPixels": 0.0
+    }
+  ],
+  "anatomy_RESTORE": [
+    {
+      "key": "Body/Head",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/HeadSet/P_Head/P_Head/5_Head",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.85300, 1.47131, 0.00049)",
+      "screen": [
+        285.2539,
+        597.1312
+      ],
+      "angle": 1.64599645,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 17.0,
+      "height": 15.0,
+      "pivotX": 8.5,
+      "pivotY": 7.5,
+      "ppu": 32.0,
+      "min": "(-0.26563, -0.23438, -0.10000)",
+      "max": "(0.26563, 0.23438, 0.10000)"
+    },
+    {
+      "key": "Body/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body",
+      "local": "(0.00000, -0.01563, 0.00000)",
+      "world": "(9994.84700, 1.16563, -0.00002)",
+      "screen": [
+        284.667969,
+        566.563232
+      ],
+      "angle": 1.64599645,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_L",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm",
+      "local": "(0.00000, 0.00000, -0.00003)",
+      "world": "(9994.67000, 1.17516, -0.00005)",
+      "screen": [
+        266.9922,
+        567.5156
+      ],
+      "angle": 1.64599645,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Arm_R",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9995.02300, 1.18518, 0.00000)",
+      "screen": [
+        302.34375,
+        568.5181
+      ],
+      "angle": 1.64599645,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 6.0,
+      "height": 7.0,
+      "pivotX": 3.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.09375, -0.10938, -0.10000)",
+      "max": "(0.09375, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_L",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/_12R_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9994.96500, 1.03475, 0.00000)",
+      "screen": [
+        296.484375,
+        553.474548
+      ],
+      "angle": 0.0,
+      "scale": "(-0.94411, 0.93071, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Body/Foot_R",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/_3L_Foot",
+      "local": "(0.00000, -0.06250, 0.00000)",
+      "world": "(9994.72900, 1.03475, 0.00000)",
+      "screen": [
+        272.851563,
+        553.474548
+      ],
+      "angle": 0.0,
+      "scale": "(-0.94411, 0.93071, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Cloth/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Arm/20_L_Arm/P_LCArm/21_LCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.68400, 1.20465, 0.00000)",
+      "screen": [
+        268.359375,
+        570.464661
+      ],
+      "angle": 1.64599645,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmR/P_RArm/P_Arm/-20_R_Arm/P_RCArm/-19_RCArm",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9995.00800, 1.21384, 0.00005)",
+      "screen": [
+        300.78125,
+        571.383667
+      ],
+      "angle": 1.64599681,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 5.0,
+      "height": 5.0,
+      "pivotX": 2.5,
+      "pivotY": 2.5,
+      "ppu": 32.0,
+      "min": "(-0.07813, -0.07813, -0.10000)",
+      "max": "(0.07813, 0.07813, 0.10000)"
+    },
+    {
+      "key": "Cloth/Body",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/Body/P_ClothBody/ClothBody",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.84700, 1.16563, -0.00002)",
+      "screen": [
+        284.667969,
+        566.563232
+      ],
+      "angle": 1.64599645,
+      "scale": "(-0.94410, 0.93072, 1.58839)",
+      "width": 12.0,
+      "height": 10.0,
+      "pivotX": 6.0,
+      "pivotY": 5.0,
+      "ppu": 32.0,
+      "min": "(-0.18750, -0.15625, -0.10000)",
+      "max": "(0.18750, 0.15625, 0.10000)"
+    },
+    {
+      "key": "Pant/Right",
+      "path": "Visual/SPUM/UnitRoot/Root/P_RFoot/P_RCloth/_11R_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.96500, 1.03475, 0.00000)",
+      "screen": [
+        296.484375,
+        553.474548
+      ],
+      "angle": 0.0,
+      "scale": "(-0.94411, 0.93071, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Pant/Left",
+      "path": "Visual/SPUM/UnitRoot/Root/P_LFoot/P_LCloth/_2L_Cloth",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.72900, 1.03475, 0.00000)",
+      "screen": [
+        272.851563,
+        553.474548
+      ],
+      "angle": 0.0,
+      "scale": "(-0.94411, 0.93071, 1.58839)",
+      "width": 4.0,
+      "height": 7.0,
+      "pivotX": 2.0,
+      "pivotY": 3.5,
+      "ppu": 32.0,
+      "min": "(-0.06250, -0.10938, -0.10000)",
+      "max": "(0.06250, 0.10938, 0.10000)"
+    },
+    {
+      "key": "Weapons/Weapons",
+      "path": "Visual/SPUM/UnitRoot/Root/BodySet/P_Body/ArmSet/ArmL/P_LArm/P_Weapon/L_Weapon",
+      "local": "(0.00000, 0.00000, 0.00000)",
+      "world": "(9994.64100, 1.14525, -0.00005)",
+      "screen": [
+        264.0625,
+        564.5248
+      ],
+      "angle": 87.6459961,
+      "scale": "(-0.93073, -0.94409, 1.58839)",
+      "width": 48.0,
+      "height": 48.0,
+      "pivotX": 24.0,
+      "pivotY": 12.0,
+      "ppu": 32.0,
+      "min": "(-0.75000, -0.37500, -0.10000)",
+      "max": "(0.75000, 1.12500, 0.10000)"
+    }
+  ],
+  "frames": 336,
+  "fps": 24,
+  "passed": 474,
+  "failed": 0,
+  "scope": "Original-art cutouts and supplementary support, source face/clothing pixel comparisons, native size normalization, SPUM clips and NodePartyPortrait; isolated Unity graphics verification; no campaign/save host."
+}
