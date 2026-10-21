@@ -101,14 +101,18 @@ namespace YixianSect
                 FiveFateRules.Start(t); View(t);
             }
         }
-        private static void Attack(BattleTurn t, int damage, int hits, bool pierce)
+        private static void Attack(BattleTurn t, int damage, int hits, bool pierce, JObject groupCard = null, bool groupEnabled = false)
         {
             var enemy = Enemy(t); if (enemy == null || damage <= 0) return;
+            var targets = groupCard?["groupAttack"] == null ? new[] { enemy.RuntimeId } : SchoolGroupAttack.Targets(t, groupCard, groupEnabled);
             // A true authored attack preserves direct-hit records while bypassing native shield.
             for (int hit = 0; hit < hits; hit++)
             {
-                bool bypass = pierce && hit == 0;
-                t.Plan.Use("effect.skill", new[] { enemy.RuntimeId }, new Dictionary<string, object> { ["effects"] = 1, ["e0.primitive"] = 10, ["e0.target"] = 10, ["e0.flat"] = damage, ["e0.damage"] = bypass ? 40 : 10, ["e0.shape"] = 10 }, caster: t.Actor.RuntimeId);
+                foreach (var target in targets)
+                {
+                    bool bypass = pierce && hit == 0 && target == enemy.RuntimeId;
+                    t.Plan.Use("effect.skill", new[] { target }, new Dictionary<string, object> { ["effects"] = 1, ["e0.primitive"] = 10, ["e0.target"] = 10, ["e0.flat"] = damage, ["e0.damage"] = bypass ? 40 : 10, ["e0.shape"] = 10 }, caster: t.Actor.RuntimeId);
+                }
             }
         }
         public static void Play(ModBattleContext context, CodeBattlePlan plan)
@@ -123,6 +127,7 @@ namespace YixianSect
             t.Set("pendingMetalReady", ElementReady(t, 1) ? 1 : 0); t.Set("pendingWaterReady", ElementReady(t, 2) ? 1 : 0);
             // Post-attack gains are committed at ActionResolved, after actual health-hit processing.
             plan.SetState(t.Key("pendingCard"), (string)card["key"]); t.Set("pendingReady", ready ? 1 : 0); t.Set("hitHandled", 0);
+            plan.SetState(t.Key("groupPrimary"), card["groupAttack"] == null ? "" : SchoolGroupAttack.Primary(t).Value);
             t.Set("pendingArray", element > 0 ? t.Get(Arrays[element]) : 0);
             int qiGain = t.Value(r, "qi"); t.Qi(qiGain);
             int qi = Math.Min(t.Actor.EnergyPools.GetMaximum(EnergyPoolKind.Fighting), t.Actor.EnergyPools.GetCurrent(EnergyPoolKind.Fighting) + qiGain) / 4;
@@ -172,11 +177,11 @@ namespace YixianSect
                 if (t.Get("nextWaterCharges") == 0) t.Set("nextWaterPerHealth", 0);
             }
             else t.Set("pendingWaterPerHealth", 0);
-            Attack(t, damage, I(r, "hits") > 0 ? I(r, "hits") : 1, pierce && damage > 0);
+            Attack(t, damage, I(r, "hits") > 0 ? I(r, "hits") : 1, pierce && damage > 0, card, ready);
             bool firstSpecial = damage <= 0;
             if (waterAttack)
             {
-                Attack(t, (I(r, "waterAttack") + t.Get("waterForce") * I(r, "waterDamagePerWater") + t.Get("attack")) * 3 + t.Value(r, "specialDamage"), 1, pierce && firstSpecial);
+                Attack(t, (I(r, "waterAttack") + t.Get("waterForce") * I(r, "waterDamagePerWater") + t.Get("attack")) * 3 + t.Value(r, "specialDamage"), 1, pierce && firstSpecial, card, true);
                 firstSpecial = false;
             }
             if (woodAttack) Attack(t, (I(r, "woodAttack") + qi * I(r, "woodDamagePerQi") + t.Get("attack")) * 3 + t.Value(r, "specialDamage"), 1, pierce && firstSpecial);
@@ -195,7 +200,10 @@ namespace YixianSect
                 string key = plan.GetText(t.Key("pendingCard"));
                 if (key.Length == 0 || t.Get("hitHandled") > 0 || !SectRegistry.Cards.TryGetValue(SectRegistry.CardPrefix + key, out var card)) { View(t); continue; }
                 var r = (JObject)card["rules"]; bool ready = t.Get("pendingReady") > 0;
-                var hits = context.Hits.Where(h => h.Source == actor.RuntimeId && h.Direct && context.Units.FirstOrDefault(u => u.RuntimeId == h.Target)?.Side != actor.Side).ToList();
+                string primary = plan.GetText(t.Key("groupPrimary"));
+                var hits = context.Hits.Where(h => h.Source == actor.RuntimeId && h.Direct
+                    && (primary.Length == 0 || h.Target.Value == primary)
+                    && context.Units.FirstOrDefault(u => u.RuntimeId == h.Target)?.Side != actor.Side).ToList();
                 if (hits.Count == 0) { View(t); continue; }
                 t.Set("hitHandled", 1);
                 int sharp = t.Get("sharp"); int index = 0;
@@ -252,7 +260,9 @@ namespace YixianSect
                     if (B(r, "conditionalAgain") || B(r, "conditionalAgainIfHealed") && t.Get("healed") > 0) t.Draw();
                     if (I(r, "capAtHealthMinus") > 0)
                     {
-                        var enemy = Enemy(t); if (enemy != null) t.AdjustMaximumHealth(enemy.RuntimeId, Math.Min(0, enemy.CurrentHealth - I(r, "capAtHealthMinus") * 3 - enemy.CurrentMaximumHealth), false);
+                        string primary = plan.GetText(t.Key("groupPrimary"));
+                        var enemy = primary.Length == 0 ? Enemy(t) : context.Units.FirstOrDefault(u => u.RuntimeId.Value == primary);
+                        if (enemy != null) t.AdjustMaximumHealth(enemy.RuntimeId, Math.Min(0, enemy.CurrentHealth - I(r, "capAtHealthMinus") * 3 - enemy.CurrentMaximumHealth), false);
                     }
                 }
                 if (I(r, "conditionalAgainEither") > 0 && (t.Get("pendingMetalReady") > 0 || t.Get("pendingWaterReady") > 0)) t.Draw();
@@ -262,6 +272,7 @@ namespace YixianSect
                 if (I(r, "array") > 0) Add(t, Arrays[I(r, "array")], I(r, "arrayGain"));
                 if (I(r, "activationArray") > 0) Add(t, "activationArray", I(r, "activationArray"));
                 plan.SetState(t.Key("pendingCard"), "");
+                plan.SetState(t.Key("groupPrimary"), "");
             }
             t.Set("elements", ActiveCount(t.Get("active"))); View(t);
         }

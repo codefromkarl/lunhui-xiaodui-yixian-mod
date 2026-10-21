@@ -1,5 +1,6 @@
 """Five Elements player copy, generated from actual rules rather than source citations."""
 from card_costs import printed_cost
+from group_attack_copy import describe_group
 
 ELEMENTS = {1: '金', 2: '水', 3: '木', 4: '火', 5: '土'}
 
@@ -71,6 +72,7 @@ def describe_card(card, formula):
         if r.get(key) or r.get(key + 'Bp'):
             lines.append(f'{label}〔{formula(r, key)}〕' + (f' ×{r["hits"]}段。' if key == 'damage' and r.get('hits', 1) > 1 else '。'))
     lines.extend(describe_effects(card))
+    lines.extend(describe_group(card))
     if r.get('specialDamageBp'): lines.append(f'每次条件追加攻击另加{r["specialDamageBp"] / 100:g}%×反应。')
     lines.append(f'消耗：{printed_cost(r)}斗气。')
     return '\n'.join(lines)
