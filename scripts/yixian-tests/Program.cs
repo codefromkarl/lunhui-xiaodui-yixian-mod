@@ -51,6 +51,7 @@ partial class Program
  static void CatalogTests()
  {
   var table=JObject.Parse(File.ReadAllText(Mod+"/content/cardtable.json"));SwordRules.Configure(table);
+  FiveCardSelection.Configure(JObject.Parse(File.ReadAllText(Mod+"/content/five-water-pilot.json")));
   Check(SwordRules.Cards.Count==48 && SwordRules.Packs.Count==12,"inventory");
   var source=JArray.Parse(File.ReadAllText("data/sources/sword-original-cards.json"));
   foreach(JObject c in table["cards"].Where(c=>SectRegistry.Owner((JObject)c)==SwordRules.Lineage))
@@ -251,10 +252,10 @@ partial class Program
     Check(HarmonyLib.AccessTools.Method(patch.info.declaringType,patch.info.methodName,patch.info.argumentTypes)!=null,"patch target: "+t.Name);
   Console.WriteLine("PASS all Harmony target methods resolve; detour execution requires game Mono (bundled MonoMod uses a removed CoreCLR ILGenerator API).");
  }
- static int Main()
+ static int Main(string[] args)
  {
   AppDomain.CurrentDomain.AssemblyResolve+=(s,e)=>{var p=Managed+"/"+new AssemblyName(e.Name).Name+".dll";return File.Exists(p)?Assembly.LoadFrom(p):null;};
-  try{CatalogTests();PatchTargets();ProgressionTests();SwordBuildTests();BattleTests();CardCostTests();DescriptionTests();SchoolTests();IdentityTests();FiveExpansionTests();StarExpansionTests();ExpansionIntegrationTests();OriginalPrimitivesTests();Console.WriteLine("PASS total checks "+checks+"; .NET 8 isolated tests, no Unity process/save changes.");return 0;}
+  try{CatalogTests();if(args.Contains("--balance-plans")){BalancePlannerAudit();return 0;}PatchTargets();ProgressionTests();SwordBuildTests();BuildAdjustmentTests();FiveSelectionTests();BattleTests();CardCostTests();DescriptionTests();SchoolTests();IdentityTests();FiveExpansionTests();StarExpansionTests();ExpansionIntegrationTests();OriginalPrimitivesTests();Console.WriteLine("PASS total checks "+checks+"; .NET 8 isolated tests, no Unity process/save changes.");return 0;}
   catch(Exception e){Console.Error.WriteLine(e);return 1;}
  }
 }

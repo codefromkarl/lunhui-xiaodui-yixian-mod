@@ -23,6 +23,14 @@ namespace YixianSect
             var purchased = (List<StableId>)Purchased.GetValue(player);
             foreach (var gift in SectRegistry.Packs.Where(p => (int)p["rank"] == 1 && SectRegistry.Rank(player, SectRegistry.Owner(p)) > 0).Select(SectRegistry.PackId))
                 if (!purchased.Contains(gift)) purchased.Add(gift);
+            if (player.ActiveCardPackIds.Any(FiveCardSelection.Is))
+            {
+                var selected=(List<StableId>)AccessTools.Field(typeof(PlayerRunState),"activeCardPackIds").GetValue(player);
+                var valid=new HashSet<StableId>(FiveCardSelection.Owned(player));
+                selected.RemoveAll(id=>!valid.Contains(id));
+                var knownCards=(HashSet<StableId>)Known.GetValue(player);foreach(var id in valid)knownCards.Add(id);
+                if(selected.Count>0)return false;
+            }
             if (Native(player)) return true;
             var owned = Owned(player);
             var active = (List<StableId>)AccessTools.Field(typeof(PlayerRunState), "activeCardPackIds").GetValue(player);
@@ -41,11 +49,14 @@ namespace YixianSect
         public static RuleResult SetActive(PlayerRunState player, IReadOnlyList<StableId> packIds)
         {
             var owned = Owned(player);
-            if (packIds == null || packIds.Count > 8 || packIds.Count < System.Math.Min(3, owned.Count) || packIds.Distinct().Count() != packIds.Count || packIds.Any(id => !owned.Contains(id)))
+            bool cards=packIds?.Any(FiveCardSelection.Is)??false;
+            if (cards?!FiveCardSelection.Valid(player,packIds):
+                packIds == null || packIds.Count > 8 || packIds.Count < System.Math.Min(3, owned.Count) || packIds.Distinct().Count() != packIds.Count || packIds.Any(id => !owned.Contains(id)))
                 return RuleResult.Failure(SessionErrorCode.InvalidRequest, player.Revision);
             var active = (List<StableId>)AccessTools.Field(typeof(PlayerRunState), "activeCardPackIds").GetValue(player);
             if (active.SequenceEqual(packIds)) return RuleResult.Success(player.Revision);
             AccessTools.Method(typeof(RevisionedState), "EnsureRevisionCanAdvance").Invoke(player, null);
+            var known=(HashSet<StableId>)Known.GetValue(player);foreach(var id in packIds)known.Add(id);
             active.Clear(); active.AddRange(packIds);
             return RuleResult.Success((long)AccessTools.Method(typeof(RevisionedState), "CommitRevision").Invoke(player, null));
         }

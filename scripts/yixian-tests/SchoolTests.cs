@@ -17,7 +17,7 @@ partial class Program
         {
             CardTableBridge.BuildCatalog(out var catalogCards,out var catalogPacks);
             Check(catalogCards.Count==nativeCards.Count+SectRegistry.Cards.Count,"combined card catalog");
-            Check(catalogPacks.Count==nativePacks.Count+SectRegistry.Packs.Count,"combined pack catalog");
+            Check(catalogPacks.Count==nativePacks.Count+SectRegistry.Packs.Count+FiveCardSelection.Entries.Count,"combined pack catalog");
             foreach(int index in Enumerable.Range(40,10))Check(catalogPacks[12+index-40].ShelfIndex==index,"legacy cp ordinal "+index);
             Check(catalogPacks[22].ShelfIndex==51&&catalogPacks[23].ShelfIndex==52,"v032 new ordinals preserved");
             Check(ReferenceEquals(CardTableCatalog.Cards,nativeCards)&&ReferenceEquals(CardTableCatalog.Packs,nativePacks),"catalog planning does not mutate native statics");

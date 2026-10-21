@@ -107,6 +107,9 @@ def wait_for_reports(results, suites, prior, out, timeout=120, launch_process=No
             visual = results / files[-1].stem
             if visual.is_dir():
                 shutil.copytree(visual, out / ('visual' if suite == 'runtime' else 'fate-visual'), dirs_exist_ok=True)
+            balance = results / ('balance-' + files[-1].name)
+            if balance.is_file():
+                shutil.copy2(balance, out / 'balance-results.json')
             print(suite, report.get('runtime'), report.get('modVersion'), f'{report.get("passed")} passed / {report.get("failed")} failed')
             for case in report.get('cases', []):
                 print(case['status'].upper(), case['name'])
@@ -148,6 +151,26 @@ def wait_for_reports(results, suites, prior, out, timeout=120, launch_process=No
     else:
         code = 3
         print(f'{timeout}秒内未取得全部报告；检查最后用例、日志或游戏内代码许可。', file=sys.stderr)
+    # A native exit may leave a valid matrix checkpoint but no final suite report.
+    # Retain it with an explicit progress label; never upgrade partial rows to a pass.
+    for suite in progress:
+        files = sorted(set(results.glob(suite + '-*.json')) - prior[suite])
+        if not files:
+            continue
+        try:
+            checkpoint = json.loads((results / ('balance-' + files[-1].name)).read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+        (out / 'balance-progress.json').write_text(json.dumps(checkpoint, ensure_ascii=False, indent=2) + '\n')
+    cursor = results / 'balance-active.json'
+    if progress.get('runtime', {}).get('scope') == 'balance' and cursor.is_file():
+        try:
+            active = json.loads(cursor.read_text())
+        except (OSError, json.JSONDecodeError):
+            active = {}
+        fresh = {p.name for p in set(results.glob('runtime-*.json')) - prior.get('runtime', set())}
+        if active.get('report') in fresh:
+            shutil.copy2(cursor, out / 'balance-active.json')
     watchdog = dict(outcome=outcome, elapsed_seconds=round(time.monotonic() - started, 2),
                     game_observed=observed_game, game_running_at_finish=running_probe(),
                     completed_suites=list(reports),
@@ -165,16 +188,20 @@ def main():
     parser.add_argument('--wine-prefix', type=Path, default=os.environ.get('WINEPREFIX'), help='macOS Wine prefix containing Windows Steam')
     parser.add_argument('--persistent-data', type=Path, default=os.environ.get('YIXIAN_PERSISTENT_DATA'), help='game persistent-data directory containing Player.log')
     parser.add_argument('--timeout', type=int, default=120, help='seconds to wait for fresh reports (default: 120)')
-    parser.add_argument('--direct-game', action='store_true', help='macOS: launch a prepared independent copy for headless cost probes')
-    parser.add_argument('--headless', action='store_true', help='cost probes: Unity batch mode without rendering')
+    parser.add_argument('--balance', action='store_true', help='run bounded three-school resource probes instead of the regular suite')
+    parser.add_argument('--balance-config', type=Path, default=ROOT / 'data/balance-refined-scenarios.json')
+    parser.add_argument('--direct-game', action='store_true', help='macOS: launch a prepared independent copy for headless balance or cost probes')
+    parser.add_argument('--headless', action='store_true', help='balance or cost probes: Unity batch mode without rendering')
     parser.add_argument('--quit-after-tests', action='store_true', help='request normal Unity shutdown after all suite reports; verify exit receipt and process exit')
     group = parser.add_mutually_exclusive_group()
     group.add_argument('--include-fates', action='store_true', help='run independent fate suite in the same launch')
     group.add_argument('--schools-only', action='store_true', help='run only new-school loops and isolation checks')
     group.add_argument('--costs-only', action='store_true', help='verify all 96 five/star original-face costs, HUD models, payments and atomic rejections')
     args = parser.parse_args()
-    if (args.direct_game or args.headless) and not (args.direct_game and args.headless and args.costs_only and sys.platform == 'darwin'):
-        parser.error('direct/headless mode requires macOS, --direct-game --headless and --costs-only')
+    if args.balance and (args.include_fates or args.schools_only or args.costs_only):
+        parser.error('--balance cannot be combined with --include-fates, --schools-only or --costs-only')
+    if (args.direct_game or args.headless) and not (args.direct_game and args.headless and (args.balance or args.costs_only) and sys.platform == 'darwin'):
+        parser.error('direct/headless mode requires macOS, --direct-game --headless and either --balance or --costs-only')
     if args.timeout <= 0:
         parser.error('--timeout must be positive')
     if sys.platform == 'darwin':
@@ -202,6 +229,9 @@ def main():
     if args.costs_only:
         results.mkdir(parents=True, exist_ok=True)
         shutil.copy2(ROOT / 'data/sources/original-correction/original-costs.json', results / 'original-costs-fixture.json')
+    if args.balance:
+        results.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(args.balance_config, results / 'balance-config.json')
     suites = ['runtime', 'fates'] if args.include_fates else ['runtime']
     prior = {suite: set(results.glob(suite + '-*.json')) for suite in suites}
     out = ROOT / 'logs/yixian-runtime-tests' / ('run-' + time.strftime('%Y%m%d-%H%M%S'))
@@ -209,6 +239,8 @@ def main():
     flags = ['-yixian-schools-selftest' if args.schools_only else '-yixian-selftest', '-modverbose'] + (['-yixian-fates-selftest'] if args.include_fates else [])
     if args.quit_after_tests:
         flags.append('-yixian-selftest-quit')
+    if args.balance:
+        flags.append('-yixian-balance-selftest')
     if args.costs_only:
         flags.append('-yixian-costs-selftest')
     if args.headless:

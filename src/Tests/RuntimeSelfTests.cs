@@ -69,6 +69,11 @@ namespace YixianSect
                     Case("star_original_face_costs",()=>SchoolFaceCosts(SevenStarRules.Lineage));
                     Case("water_wave_conditional_free",WaterWaveConditionalFree);
                 }
+                else if(Environment.GetCommandLineArgs().Contains("-yixian-balance-selftest"))
+                {
+                    report["scope"]="balance";
+                    Case("balance_matrix",BalanceMatrix);
+                }
                 else
                 {
                 bool schoolsOnly=Environment.GetCommandLineArgs().Contains("-yixian-schools-selftest");
@@ -234,7 +239,7 @@ namespace YixianSect
         private static StableId Card(int n)=>new StableId(SwordRules.Cards.Single(c=>SwordRules.Text(c.Value,"sourceId")=="100"+n.ToString("D4")).Key);
         private JObject Catalog()
         {
-            Require(CardTableCatalog.Cards.Count==66+SectRegistry.Cards.Count&&CardTableCatalog.Packs.Count==12+SectRegistry.Packs.Count,"catalog counts");
+            Require(CardTableCatalog.Cards.Count==66+SectRegistry.Cards.Count&&CardTableCatalog.Packs.Count==12+SectRegistry.Packs.Count+FiveCardSelection.Entries.Count,"catalog counts");
             foreach(int index in Enumerable.Range(40,10))Require(CardTableCatalog.Packs[12+index-40].ShelfIndex==index,"legacy cp ordinal changed: "+index);
             Require(data.ModBattlePlanner!=null,"mod planner unavailable");
             foreach(var id in SectRegistry.Cards.Keys)Require(data.ModBattlePlanner.HasActionScript(id),"handler missing "+id);

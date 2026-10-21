@@ -49,6 +49,10 @@ def main():
         for name in content:
             content[name]['operations'].extend(school.get(name, {}).get('operations', []))
         manifest['assets'].update(school.get('assets', {}))
+    from water_pilot_content import compile_pilot
+    pilot=read(ROOT / 'data/five-water-pilot.json')
+    compile_pilot(table,content,manifest,pilot)
+    write(MOD / 'content/five-water-pilot.json',pilot)
     # Existing sword order is not sorted/rebuilt: cp~ native ordinals must stay stable.
     table['sectLineages'] = [s['id'] for s in table['sects']]
     for name, value in content.items():
@@ -61,6 +65,7 @@ def main():
     manifest['economy'] = dict(shop=[dict(id=s['id'], conditions=dict(forbids=[other['id'] for other in table['sects'] if other['id'] != s['id']])) for s in table['sects']])
     write(MOD / 'mod.json', manifest)
     lines = ['# 弈仙门派当前卡包与规则', '', '三个门派各五境界48张牌、12个四张包、4个独立仙命。', '']
+    lines.extend(['五行纯水试点新增8项水系单卡购买，原混系卡包保留；已购五行牌可自由选入抽牌池。详见 [纯水试点](pure-water-pilot-results.md)。', ''])
     for sect in table['sects']:
         lines.extend(['## ' + sect['name'], '', sect['summary'], '', sect['rulesDescription'], ''])
         for fate in table['fates']:

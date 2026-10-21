@@ -31,7 +31,7 @@ namespace YixianSect
             Require(fixture.Table.Hand.All(h => SectRegistry.Cards.TryGetValue(h.CardId.Value, out var card) && SectRegistry.Owner(card) == school), "foreign card drawn");
             var snapshot = RunAuthoritySnapshotProjector.Create(fixture.A,Slot); var player = snapshot.Players.First(p => p.Slot == Slot);
             var model = BattleUIPresentationMapper.BuildCardTable(snapshot, player, data, battles);
-            Require(model.Packs.Count == 12 && model.Packs.All(p => p.Cards.Count == 4 && p.CardDetails.Contains("消耗")), "school actual pack projection/details");
+            Require(model.Packs.Count(p=>!FiveCardSelection.Is(new StableId(p.Id))) == 12 && model.Packs.Where(p=>!FiveCardSelection.Is(new StableId(p.Id))).All(p => p.Cards.Count == 4 && p.CardDetails.Contains("消耗")), "school actual pack projection/details");
             if (visual) VisualSelfTests.Run(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(path), System.IO.Path.GetFileNameWithoutExtension(path), school), model, player, snapshot, data, battles, model.Packs[0].Id, false);
             ToughEnemy(fixture.Enemy);
             return fixture;

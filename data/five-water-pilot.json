@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "minimumCardsByRank": [
+    2,
+    3,
+    4,
+    6,
+    8
+  ],
+  "maximumCards": 16,
+  "waterPriceByRank": [
+    0,
+    15,
+    15,
+    25,
+    25
+  ],
+  "selectionIndexStart": 200,
+  "waterMasteryMinimumRank": 2,
+  "waterMasteryMultiplier": 2
+}

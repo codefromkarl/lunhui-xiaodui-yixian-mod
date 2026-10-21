@@ -61,6 +61,6 @@ partial class Program
             Check(pack.UnlockAbilityId.Value == SectIds.Pack(pack.Key) && ids.Contains(pack.UnlockAbilityId.Value), "native pack unlock uses canonical key");
             Check(pack.CardIds.Count == 4 && pack.CardIds.All(id => SectRegistry.Cards.ContainsKey(id.Value)), "native pack members use canonical IDs");
         }
-        Console.WriteLine("PASS canonical identities: native catalog/card/pack references, original objects retained; no legacy mapping or save-restore patches");
+        Console.WriteLine("PASS canonical identities: native catalog/card/pack references, original objects retained; no legacy mapping or run/profile mapper migration patches");
     }
 }

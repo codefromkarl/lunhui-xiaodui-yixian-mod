@@ -33,7 +33,7 @@ partial class Program
         var shelves=new List<ShelfAbilityDefinition>();
         Method(projection,"ProjectShelfAbilities").Invoke(null,new object[]{abilities,progressions,shelves});
         Check(progressions.Count==3&&progressions.All(p=>p.MaximumRank==5),"three full five-rank native lineages");
-        Check(shelves.Count==42,"thirty paid packs plus twelve independent fates projected");
+        Check(shelves.Count==50,"thirty paid packs, eight water singles and twelve independent fates projected");
         var economy=new EconomyCatalog(Array.Empty<EconomyCatalogEntry>(),progressions,shelves);
         var hub=new HubState(HubAccessKind.Full,1,new[]{new PlayerSlotId(1)});var service=new HubService(economy);
         foreach(var school in SectRegistry.Sects.Keys)

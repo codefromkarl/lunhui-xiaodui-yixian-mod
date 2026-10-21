@@ -141,3 +141,9 @@ python3 scripts/run_yixian_runtime_tests.py --include-fates
 ## 门派设计与验收
 
 五行的具体规则见[五行道盟](docs/five-elements.md)，七星的具体规则见[七星阁](docs/seven-stars.md)。新增境界牌、资源状态与仙命均有可执行结算和专项测试；实际Mono、存档与界面的最新结果以[实施清单](docs/implementation-plan.md)为准。
+
+三派成长、选包和资源循环的[验证方案](docs/balance-validation-plan.md)与[首轮结果](docs/balance-findings.md)已整理。目录审计用 `python3 scripts/balance_audit.py`，真实资源矩阵用 `--balance`；Mac 独立副本的无图形复跑、低属性请求和基础包对照见方案。沙袋探针不等同战役通关或胜率验证。
+
+后续[最小调整方案](docs/balance-adjustment-plan.md)与[同种子前后对照](docs/balance-adjustment-results.md)说明五行印记／成长过渡和剑宗灵气续航建议。当前 `--balance` 默认验证生产推荐；原始构筑可通过 `--balance-config data/balance-scenarios.json` 重放。原卡数值保留，新增建议有输出和购包成本的取舍。
+
+五行纯水试点已加入：五行商店可逐张购买水牌，卡包管理可切换“自由选牌”，并保留原混系卡包。纯水全程单卡费最多170点，水火赠包路径155点；筑基起开战纯水获得水势结算×2，混系保持原规则。操作、存档规则、各境界结果与未解决问题见 [纯水试点说明](docs/pure-water-pilot-results.md)。

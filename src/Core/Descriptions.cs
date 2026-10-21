@@ -33,6 +33,11 @@ namespace YixianSect
             if(rank==1)lines.Add("入宗赠送两个炼气包，共8张牌。\n"+RulesFor(sect));
             else if(rank==2)lines.Add("突破筑基从两个筑基包中免费选一，另一包可购买；后续境界不再赠包。");
             lines.Add(SectRegistry.Summary(sect));
+            if(sect==FiveElementRules.Lineage)
+            {
+                lines.Add("纯水试点：商店可逐张购买水牌，原包已拥有则免于重复购买；卡包管理可切换自由选牌。筑基起开战仅启用水牌时，回合末水势伤害×"+FiveCardSelection.WaterMasteryMultiplier+"；改成混池或使用其他五行牌后本场失效，混系仍按原规则。");
+                foreach(var entry in FiveCardSelection.Entries.Where(e=>(int)e["rank"]==rank&&(int)e["price"]>0))lines.Add("水系单卡：【"+entry["name"]+"】"+entry["price"]+"奖励点。");
+            }
             lines.Add(rank==1?"本境界赠送卡组（每包4张）：":"本境界新增可购卡组（每包4张）：");
             lines.AddRange(packs.Select(p=>"【"+p["name"]+"】 "+(rank==1?"赠送":p["price"]+"奖励点")+"\n"+string.Join("、",((JArray)p["cards"]).Values<string>().Select(k=>(string)SectRegistry.Cards[SectRegistry.CardPrefix+k]["name"]))));
             foreach(var fate in SectRegistry.Fates.Values.Where(f=>SectRegistry.Owner(f)==sect && (int)f["rank"]==rank))
@@ -54,7 +59,12 @@ namespace YixianSect
         {
             if(__0==null||!__0.TryGetValue("lineageCode",out var code)||SectDescriptions.SectForCode(code.StringValue)==null||!__0.TryGetValue("cardTablePackKey",out var key))return true;
             var pack=SectRegistry.Packs.SingleOrDefault(p=>SwordRules.Text(p,"key")==key.StringValue);
-            if(pack==null)return true;
+            if(pack==null)
+            {
+                var entry=FiveCardSelection.Entries.FirstOrDefault(e=>(string)e["key"]==key.StringValue);
+                if(entry==null)return true;
+                __result=SectDescriptions.CardDetail(SectRegistry.Cards[SectRegistry.CardPrefix+(string)entry["cardKey"]])+"\n单卡解锁；购买后可在自由选牌中选入，不自动改变当前卡池。";return false;
+            }
             __result=SectDescriptions.PackDetail(pack);return false;
         }
         private static void Postfix(RuntimeContentOperation __0,ref string __result)
@@ -89,7 +99,12 @@ namespace YixianSect
             if(SectRegistry.Fates.TryGetValue(abilityId.Value,out var fate)){__result=(string)fate["description"]+"\n独立被动，本局限购一次，不占手牌。";return false;}
             if(SectRegistry.Cards.TryGetValue(abilityId.Value,out var card)){__result=SectDescriptions.CardDetail(card);return false;}
             var pack=SectRegistry.FindPack(abilityId);
-            if(pack==null)return true;
+            if(pack==null)
+            {
+                var entry=FiveCardSelection.Find(abilityId);
+                if(entry==null)return true;
+                __result=SectDescriptions.CardDetail(SectRegistry.Cards[SectRegistry.CardPrefix+(string)entry["cardKey"]])+"\n单卡解锁；购买后可在自由选牌中选入，不自动改变当前卡池。";return false;
+            }
             __result=SectDescriptions.PackDetail(pack);return false;
         }
     }
@@ -132,18 +147,19 @@ namespace YixianSect
             bool native=player.Lineages.Any(l=>l.LineageId==CardTableRules.LineageId);
             var all=new HashSet<string>(SectRegistry.Packs.Select(p=>SectRegistry.PackId(p).Value));
             var own=new HashSet<string>(SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==sect).Select(p=>SectRegistry.PackId(p).Value));
+            foreach(var e in FiveCardSelection.Entries){all.Add(FiveCardSelection.Id(e).Value);if(sect==FiveElementRules.Lineage)own.Add(FiveCardSelection.Id(e).Value);}
             if(rank==0){__result.Packs=__result.Packs.Where(p=>!all.Contains(p.Id)).ToArray();return;}
             __result.Packs=__result.Packs.Where(p=>!all.Contains(p.Id)||own.Contains(p.Id)).ToArray();
             if(!native)
             {
                 __result.Packs=__result.Packs.Where(p=>own.Contains(p.Id))
-                    .OrderBy(p=>SwordRules.Int(SectRegistry.FindPack(new StableId(p.Id)),"rank"))
-                    .ThenBy(p=>SwordRules.Int(SectRegistry.FindPack(new StableId(p.Id)),"index")).ToArray();
+                    .OrderBy(p=>SwordRules.Int((SectRegistry.FindPack(new StableId(p.Id))??FiveCardSelection.Find(new StableId(p.Id))),"rank"))
+                    .ThenBy(p=>SwordRules.Int((SectRegistry.FindPack(new StableId(p.Id))??FiveCardSelection.Find(new StableId(p.Id))),"index")).ToArray();
                 __result.Recipes=Array.Empty<Reincarnation.UI.ViewModels.CardTableRecipeViewModel>();
                 __result.Summary="手牌 "+__result.Hand.Count+"/10 · 4斗气＝1灵气 · "+SectRegistry.Summary(sect);
             }
             var names=new[]{"炼气","筑基","金丹","元婴","化神"};
-            foreach(var pack in __result.Packs.Where(p=>own.Contains(p.Id)))
+            foreach(var pack in __result.Packs.Where(p=>own.Contains(p.Id)&&!FiveCardSelection.Is(new StableId(p.Id))))
             {
                 var row=SectRegistry.Packs.Single(p=>SectRegistry.PackId(p).Value==pack.Id);
                 int required=SwordRules.Int(row,"rank");
@@ -155,6 +171,7 @@ namespace YixianSect
                     if(SectRegistry.Cards.TryGetValue(card.CardId,out var c))card.Detail=card.Title+"\n"+SectDescriptions.CardDetail(c);
                 pack.CardDetails=SectDescriptions.PackDetail(row);
             }
+            FiveDeckPanel.ConfigureModel(player,__result);
         }
     }
 }

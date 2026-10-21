@@ -68,14 +68,15 @@ namespace YixianSect
                 if(SectRegistry.Rank(owner,FiveElementRules.Lineage)==0)continue;
                 var actor=(CombatantState)AccessTools.Property(player.GetType(),"Combatant").GetValue(player);
                 int mask=0;
-                foreach(var pack in SectRegistry.Packs.Where(p=>owner.ActiveCardPackIds.Contains(SectRegistry.PackId(p))))
-                    foreach(var key in pack["cards"].Values<string>())
-                        if(SectRegistry.Cards.TryGetValue(SectRegistry.CardPrefix+key,out var card))
-                        {
-                            int element=(int?)card["element"]??0;
-                            if(element>=1&&element<=5)mask|=1<<(element-1);
-                        }
+                foreach(var id in FiveCardSelection.ActiveCards(owner))
+                    if(SectRegistry.Cards.TryGetValue(id.Value,out var card))
+                    {
+                        int element=(int?)card["element"]??0;
+                        if(element>=1&&element<=5)mask|=1<<(element-1);
+                    }
                 state=state.Apply(SectRegistry.Package,new[]{new ModStateEntry(SectRegistry.Package,SectRegistry.StateKey(FiveElementRules.Lineage,actor.RuntimeId,"deckElements"),ModValueKind.Integer,mask)});
+                if(FiveCardSelection.WaterMasteryMultiplier>1&&SectRegistry.Rank(owner,FiveElementRules.Lineage)>=FiveCardSelection.WaterMasteryMinimumRank&&FiveCardSelection.IsPureWater(owner))
+                    state=state.Apply(SectRegistry.Package,new[]{new ModStateEntry(SectRegistry.Package,SectRegistry.StateKey(FiveElementRules.Lineage,actor.RuntimeId,"waterMastery"),ModValueKind.Integer,1)});
             }
             field.SetValue(__instance,state);
         }
