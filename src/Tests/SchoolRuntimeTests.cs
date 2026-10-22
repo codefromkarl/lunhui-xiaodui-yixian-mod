@@ -24,6 +24,11 @@ namespace YixianSect
         private Fixture SchoolFixture(string school, bool visual = false,int rank=1,StableId required=default)
         {
             var fixture = New(rank,school: school, buyCurrent: true);
+            if (!required.IsEmpty && school != FiveElementRules.Lineage)
+            {
+                var pack = SectRegistry.Packs.Single(p => SectRegistry.Owner(p) == school && p["cards"].Values<string>().Contains(required.Value.Substring(SectRegistry.CardPrefix.Length)));
+                if (!fixture.P.HasPurchasedShelfAbility(PackId(pack))) fixture.Buy(PackId(pack));
+            }
             Require(fixture.P.ActiveCardPackIds.Count >= (school==FiveElementRules.Lineage?1:2) && SectProgression.Owned(fixture.P).All(id => (id==FiveDeckRules.PackId?FiveElementRules.Lineage:SectRegistry.Owner(SectRegistry.FindPack(id))) == school), "wrong starter pool");
             Require(fixture.P.SetActiveCardPacks(fixture.P.ActiveCardPackIds.Reverse().ToArray()).IsSuccess, "school active selection failed");
             if(!required.IsEmpty)Require(fixture.P.SetActiveCardPacks(TestCardPool.ForCards(fixture.P,new[]{required})).IsSuccess,"source card pack enabled before battle");

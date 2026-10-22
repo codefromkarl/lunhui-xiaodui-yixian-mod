@@ -35,12 +35,16 @@
                   "intValue": 0
                 },
                 {
-                  "key": "energyFlat",
-                  "intValue": 3
+                  "key": "muscleFlat",
+                  "intValue": 6
+                },
+                {
+                  "key": "constitutionFlat",
+                  "intValue": 2
                 },
                 {
                   "key": "maximumMagic",
-                  "intValue": 16
+                  "intValue": 12
                 },
                 {
                   "key": "maximumHealthBp",
@@ -69,12 +73,20 @@
                   "intValue": 1
                 },
                 {
-                  "key": "energyFlat",
-                  "intValue": 5
+                  "key": "muscleFlat",
+                  "intValue": 9
+                },
+                {
+                  "key": "reactionFlat",
+                  "intValue": 3
+                },
+                {
+                  "key": "constitutionFlat",
+                  "intValue": 6
                 },
                 {
                   "key": "maximumMagic",
-                  "intValue": 24
+                  "intValue": 22
                 },
                 {
                   "key": "maximumHealthBp",
@@ -103,12 +115,20 @@
                   "intValue": 2
                 },
                 {
-                  "key": "energyFlat",
-                  "intValue": 8
+                  "key": "muscleFlat",
+                  "intValue": 22
+                },
+                {
+                  "key": "reactionFlat",
+                  "intValue": 6
+                },
+                {
+                  "key": "constitutionFlat",
+                  "intValue": 16
                 },
                 {
                   "key": "maximumMagic",
-                  "intValue": 32
+                  "intValue": 36
                 },
                 {
                   "key": "maximumHealthBp",
@@ -137,12 +157,20 @@
                   "intValue": 3
                 },
                 {
-                  "key": "energyFlat",
+                  "key": "muscleFlat",
+                  "intValue": 42
+                },
+                {
+                  "key": "reactionFlat",
                   "intValue": 12
                 },
                 {
+                  "key": "constitutionFlat",
+                  "intValue": 30
+                },
+                {
                   "key": "maximumMagic",
-                  "intValue": 40
+                  "intValue": 54
                 },
                 {
                   "key": "maximumHealthBp",
@@ -171,12 +199,20 @@
                   "intValue": 4
                 },
                 {
-                  "key": "energyFlat",
-                  "intValue": 16
+                  "key": "muscleFlat",
+                  "intValue": 66
+                },
+                {
+                  "key": "reactionFlat",
+                  "intValue": 18
+                },
+                {
+                  "key": "constitutionFlat",
+                  "intValue": 48
                 },
                 {
                   "key": "maximumMagic",
-                  "intValue": 48
+                  "intValue": 78
                 },
                 {
                   "key": "maximumHealthBp",

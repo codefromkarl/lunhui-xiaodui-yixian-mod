@@ -66,13 +66,11 @@ def compile_school(school, sword):
         result['assets'][icon] = result['assets']['icon.' + card_id(pack['cards'][0])]
     lineage = copy.deepcopy(sword['lineages']['operations'][0]); lineage['id'] = d['id']; f = lineage['fields']
     f.update(displayName=d['name'], iconKey=f'icon.lineage.{d["code"]}', lineageCode=d['code'], rankTitles=['炼气','筑基','金丹','元婴','化神'], flavour=f'{d["summary"]}\n每人最多一个弈仙门派，可搭配原生血统。\n' + d['rulesDescription'])
-    for step in f['steps']:
-        if d['statePrefix'] == 'five':
-            # Five owns its attribute budget. Future Sword muscle/reaction changes
-            # must not leak through the shared structural lineage template.
-            step['passive']['values'] = [v for v in step['passive']['values'] if v['key'] not in ('energyFlat', 'muscleFlat', 'reactionFlat', 'constitutionFlat')]
-        for value in step['passive']['values']:
-            if value['key'] == 'lineageCode': value['stringValue'] = d['code']
+    # Only the native declaration structure is shared. Each school owns ALL its
+    # numeric passive terms; Sword specialization must never leak into Star/Five.
+    for index, step in enumerate(f['steps']):
+        step['passive']['values'] = [dict(key='lineageCode', stringValue=d['code']), dict(key='step', intValue=index)]
+        step['passive']['values'].extend(dict(key=key, intValue=value) for key, value in d['lineageStats'][index].items())
     result['lineages'] = dict(operations=[lineage])
     for fate in fate_definitions:
         aid = fate_id(d['id'], fate['key']); icon = 'icon.' + aid

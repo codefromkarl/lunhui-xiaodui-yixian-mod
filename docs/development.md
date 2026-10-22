@@ -127,3 +127,7 @@ python3 scripts/run_yixian_runtime_tests.py --include-fates
 剑宗持续转化专项：`python3 scripts/run_yixian_runtime_tests.py --sword-scaling-only --quit-after-tests`，覆盖先购买能力、再正式加点、升级及保存恢复。
 
 完整整合包使用`python3 scripts/build_full_release.py --sect-source <受测门派包> --appearance-source <已发布受测外观包> --output <完整包.zip> --source-commit <门派提交> --appearance-commit <外观提交>`，包含两个完整运行包和来源索引，不包含游戏本体、用户配置或存档；外观只取已发布受测版本，不取共享开发目录。
+
+## 三派血统属性预算
+
+源数据、原生气池公式及逐阶分配见[血统属性](lineage-stats.md)。修改后运行上述完整离线门禁，再在隔离测试副本执行主套件；`lineage_stats_native_projection_and_render`覆盖三派五阶实际属性／气池和五行三个主项，`five_automatic_primary_native`覆盖自动切换、战斗锁定和保存恢复。不得用这套数据直接覆盖正在使用的正式安装。

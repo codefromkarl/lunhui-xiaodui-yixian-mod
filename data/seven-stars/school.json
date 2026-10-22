@@ -4,7 +4,43 @@
     "name": "七星阁",
     "code": "yixian_star",
     "statePrefix": "star",
-    "summary": "卦雷经营卦象、星位多段持续输出、后招治疗积累施放量；两仪群体攻守，枯木以含溢出的累计治疗量增伤。"
+    "summary": "卦雷经营卦象、星位多段持续输出、后招治疗积累施放量；两仪群体攻守，枯木以含溢出的累计治疗量增伤。",
+    "lineageStats": [
+      {
+        "reactionFlat": 2,
+        "energyFlat": 6,
+        "maximumMagic": 9,
+        "maximumHealthBp": 0
+      },
+      {
+        "reactionFlat": 4,
+        "constitutionFlat": 3,
+        "energyFlat": 11,
+        "maximumMagic": 18,
+        "maximumHealthBp": 0
+      },
+      {
+        "reactionFlat": 9,
+        "constitutionFlat": 7,
+        "energyFlat": 28,
+        "maximumMagic": 28,
+        "maximumHealthBp": 0
+      },
+      {
+        "reactionFlat": 17,
+        "constitutionFlat": 13,
+        "energyFlat": 54,
+        "maximumMagic": 40,
+        "maximumHealthBp": 0
+      },
+      {
+        "reactionFlat": 27,
+        "constitutionFlat": 21,
+        "energyFlat": 84,
+        "maximumMagic": 54,
+        "maximumHealthBp": 0
+      }
+    ]
   },
   "cards": [
     {

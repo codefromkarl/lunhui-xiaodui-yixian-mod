@@ -36,7 +36,7 @@ class FiveCultivationContentTests(unittest.TestCase):
     def test_automatic_config_and_retired_save_ids_not_shop_items(self):
         table = read('mod/yixian.sect/content/cardtable.json')
         five = next(s for s in table['sects'] if s['statePrefix'] == 'five')
-        self.assertEqual(five['cultivation'], dict(fallbackBp=7000, growth=[3, 5, 8, 12, 16]))
+        self.assertEqual(five['cultivation'], dict(fallbackBp=7000, growth=[8, 18, 44, 84, 132], primaryGrowth=[6, 12, 30, 58, 92]))
         ops = read('mod/yixian.sect/content/abilities.json')['operations']
         profiles = [o for o in ops if o['id'].startswith('yixian.sect.practice.five.')]
         expected = {f'yixian.sect.practice.five.{attribute}.{mask}' for attribute, group in ((40, 1), (20, 2), (30, 4)) for mask in range(1, 8) if mask & group}

@@ -74,13 +74,23 @@ partial class Program
             var steps=fields["steps"].OfType<JObject>().Select(step=>new ContentProgressionStepDefinition((string)step["rank"],(int)step["price"],Operation((JObject)step["passive"]),Operation((JObject)step["active"]))).ToArray();
             var definition=new ContentLineageDefinition((string)op["id"],1,(string)fields["displayName"],(string)fields["lineageCode"],(int)fields["energyPoolKind"],steps,(string)fields["flavour"],fields["rankTitles"].Values<string>().ToArray());
             var runtime=(RuntimeLineageDefinition)PrivateCtor(typeof(RuntimeLineageDefinition),definition);lineages.Add(runtime);
-            foreach(var rank in Enumerable.Range(1,steps.Length))Check(M6ProgressionContentResolver.TryCreateLineagePlan(runtime,rank,ProgressionEffectMode.Passive,out var _,out var error),"school native lineage plan "+error);
+            var expectations=JObject.Parse(File.ReadAllText("tests/fixtures/lineage-stats.json"));
+            var expected=expectations["schools"][((string)op["id"]).Split('.').Last()];
+            foreach(var rank in Enumerable.Range(1,steps.Length))
+            {
+                Check(M6ProgressionContentResolver.TryCreateLineagePlan(runtime,rank,ProgressionEffectMode.Passive,out var plan,out var error),"school native lineage plan "+error);
+                Check(ProgressionPassiveBattleRules.TryCreateProfile(new[]{ProgressionPassivePlanSlot.Primary(plan,EnergyPoolKind.Fighting)},out var profile,out error),"native stat profile "+error);
+                var modifier=ProgressionPassiveBattleRules.CreateStatModifier(profile,new StableId("test.aligned.profile"));
+                var attrs=expected["attributes"]?[rank-1]?.Values<int>().ToArray()??new[]{0,0,0,0};
+                Check(modifier.Attributes==new StatBlock(attrs[0],attrs[1],attrs[2],attrs[3]),"native exact non-cumulative lineage attributes "+op["id"]+"/"+rank);
+                Check(modifier.MaximumMagicFlat==(int)expected["poolBase"][rank-1]&&modifier.MaximumHealthBasisPoints==(int)expected["healthBp"][rank-1],"native exact capacity/health projection");
+            }
             if((string)op["id"]!=SwordRules.Lineage)Check(steps.Length==5,"school exposes all five realms");
         }
         var projection=typeof(RuntimeLineageDefinition).Assembly.GetType("Reincarnation.Runtime.Content.RuntimeDomainCatalogProjection");
         var progressions=new List<ProgressionDefinition>();
         Method(projection,"ProjectProgressions").MakeGenericMethod(typeof(RuntimeLineageDefinition)).Invoke(null,new object[]{lineages,Reincarnation.Domain.CatalogContentKind.Lineage,progressions});
         Check(progressions.Count==SectRegistry.Sects.Count,"native projection includes all schools");
-        foreach(var p in progressions)Check(p.PoolBases[0]==16,"prototype/native sword opening qi base preserved");
+        foreach(var p in progressions)Check(p.PoolBases[0]==(p.ContentId.Value==SwordRules.Lineage?12:p.ContentId.Value==FiveElementRules.Lineage?8:9),"school-specific native opening qi base");
     }
 }

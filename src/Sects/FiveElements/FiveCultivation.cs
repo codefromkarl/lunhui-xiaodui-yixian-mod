@@ -20,6 +20,8 @@ namespace YixianSect
         private static JObject Config => (JObject)SectRegistry.Sects[FiveElementRules.Lineage]["cultivation"];
         public static int Rate => (int)Config["fallbackBp"];
         public static int Growth(int rank) => rank >= 1 && rank <= 5 ? (int)Config["growth"][rank - 1] : 0;
+        public static int PrimaryGrowth(int rank) => rank >= 1 && rank <= 5 ? (int)Config["primaryGrowth"][rank - 1] : 0;
+        public static int SupportGrowth(int rank) => Growth(rank) - PrimaryGrowth(rank);
         public static string AttributeName(int attribute) => attribute == 40 ? "能量" : attribute == 20 ? "反应" : attribute == 30 ? "体质" : "未知";
         private static int Attribute(int id, StatBlock stats) => AttributeScaling.Read((CombatScalingAttribute)id, stats);
         public static int SelectPrimary(StatBlock stats, int previous = 40)
@@ -30,7 +32,9 @@ namespace YixianSect
         public static void Validate()
         {
             var growth = Config["growth"]?.Values<int>().ToArray();
-            if (Rate < 1 || Rate > 10000 || growth == null || growth.Length != 5 || growth.Any(g => g < 0))
+            var primary = Config["primaryGrowth"]?.Values<int>().ToArray();
+            if (Rate < 1 || Rate > 10000 || growth == null || growth.Length != 5 || growth.Any(g => g < 0)
+                || primary == null || primary.Length != 5 || primary.Where((g, i) => g <= growth[i] / 2 || g > growth[i]).Any())
                 throw new ArgumentException("五行自动成长或折算率无效。");
             foreach (var card in SectRegistry.Cards.Values.Where(c => SectRegistry.Owner(c) == FiveElementRules.Lineage))
                 foreach (var rule in ((JObject)card["rules"]).Properties().Where(p => p.Name.EndsWith("Scaling", StringComparison.Ordinal)))
@@ -82,8 +86,10 @@ namespace YixianSect
             if (index < 0) throw new ArgumentException("五行成长需要五行血统。");
             var lineage = player.Lineages[index];
             string attribute = primary == 40 ? "energyFlat" : primary == 20 ? "reactionFlat" : "constitutionFlat";
+            string support = primary == 40 ? "constitutionFlat" : "energyFlat";
             var spec = new ProgressionAbilitySpec(ProgressionSourceKind.Lineage, ProgressionEffectMode.Passive, lineage.LineageId, "yixian_five", lineage.Rank - 1,
-                ProgressionTargetKind.Self, new[] { new ProgressionEffectValue(attribute, Growth(lineage.Rank), "") });
+                ProgressionTargetKind.Self, new[] { new ProgressionEffectValue(attribute, PrimaryGrowth(lineage.Rank), ""),
+                    new ProgressionEffectValue(support, SupportGrowth(lineage.Rank), "") });
             var plan = (ProgressionAbilityPlan)Activator.CreateInstance(typeof(ProgressionAbilityPlan), BindingFlags.Instance | BindingFlags.NonPublic, null, new object[] { spec }, null);
             var slot = index == 0 ? ProgressionPassiveSlot.Primary : player.EnergyPools.Secondary.IsAbsent ? ProgressionPassiveSlot.OffhandSharedPool : ProgressionPassiveSlot.OffhandOwnPool;
             var sourcePool = index == 0 || player.EnergyPools.Secondary.IsAbsent ? player.EnergyPools.Primary.Kind : player.EnergyPools.Secondary.Kind;

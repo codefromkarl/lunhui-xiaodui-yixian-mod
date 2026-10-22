@@ -33,13 +33,13 @@
 
 三派境界价格与15种原生血统相同，为15／55／130／240／380，总计820；剑宗／七星卡包为0／20／35／50／75，12仙命各20，五行资料包与固定包均0且不出售。仍按原生SourceId／RequiredRank／Acquisition处理资格，入宗赠包／筑基二选一／五行突破解锁不额外计价。只调整Mod静态声明价格，不修改宿主全局计费方法或用户存档，不追缴既往差价。当前价格与预算详见[奖励点价格](reward-economy.md)。
 
-`tests/fixtures/reward-prices.json`明确价格政策。历史保留契约只正规化境界`price`、包`price`／对应`purchasePrice`和仙命`purchasePrice`，其他能力／被动／卡牌规则／费用与身份依旧精确比较。原生购买的钱包差额与商店实际渲染都必须覆盖，不能只检查JSON或显示文案。
+`tests/fixtures/reward-prices.json`明确价格政策。历史保留契约只正规化境界`price`、包`price`／对应`purchasePrice`和仙命`purchasePrice`，血统六项数值另按[属性预算](lineage-stats.md)的独立夹具精确比较，其余能力／被动／卡牌规则／费用与身份依旧精确比较。原生购买的钱包差额与商店实际渲染都必须覆盖，不能只检查JSON或显示文案。
 
 ## 五行自动主属性与逐卡多属性折算
 
-配置`data/five-elements/school.json.definition.cultivation`只有`fallbackBp:7000`与五阶`growth:[3,5,8,12,16]`。不再有主修／覆盖组选择或单／双／三修效率。`five_cultivation_content.py`保留12个旧`yixian.sect.practice.five.<attribute>.<mask>`Learned声明用于原生保存恢复，名称明确已停用，不出售、不赋予配置或卡位；旧命令统一拒绝，不写迁移令牌。其他原生购买规则不变。
+配置`data/five-elements/school.json.definition.cultivation`包含`fallbackBp:7000`、五阶总预算`growth:[8,18,44,84,132]`与主项`primaryGrowth:[6,12,30,58,92]`；辅助预算为差值2／6／14／26／40。主能量辅体质，主反应／体质辅能量；三派完整表见[属性预算](lineage-stats.md)。不再有主修／覆盖组选择或单／双／三修效率。`five_cultivation_content.py`保留12个旧`yixian.sect.practice.five.<attribute>.<mask>`Learned声明用于原生保存恢复，名称明确已停用，不出售、不赋予配置或卡位；旧命令统一拒绝，不写迁移令牌。其他原生购买规则不变。
 
-`FiveCultivationGrowth`在原生`CreatePersistentStatModifiers`返回后执行。输入包含出生、成长、购买属性、原生进阶／持久事件等原方法已纳入的修饰，不含五行属性预算（生成血统已剥离四种静态属性项）。以原生`DerivedStatCalculator`计算未加五行的有效属性，取能量40／反应20／体质30中最高项；相同最高时优先保留玩家上一派生属性的最高项，无有效偏好按40／20／30稳定顺序。再用仅含本阶成长预算的独立原生进阶plan与原生主／副槽、资源池规则生成一个StatModifier追加，不修改目录plan／持有列表／属性点／修订／当前资源。每次原生调用返回新列表，成长不累加。选择不读取五行已加点后的结果，故外部其他属性高出1点即可改主项。
+`FiveCultivationGrowth`在原生`CreatePersistentStatModifiers`返回后执行。输入包含出生、成长、购买属性、原生进阶／持久事件等原方法已纳入的修饰，不含五行属性预算（生成血统已剥离四种静态属性项）。以原生`DerivedStatCalculator`计算未加五行的有效属性，取能量40／反应20／体质30中最高项；相同最高时优先保留玩家上一派生属性的最高项，无有效偏好按40／20／30稳定顺序。再用包含本阶主项和辅助预算的独立原生进阶plan与原生主／副槽、资源池规则生成一个StatModifier追加，不修改目录plan／持有列表／属性点／修订／当前资源。每次原生调用返回新列表，成长不累加。选择不读取五行已加点后的结果，故外部其他属性高出1点即可改主项。
 
 `FiveElementRules.Start`写入`five.<actor>.cultivation.primary`，值为40／20／30；临时属性增益及八张组牌不更改它。`ResolveBattleDerivedStats`将玩家弱绑定到当前权威战斗，仅用于查同一Run、未完成战斗的权威ModState；战斗中的持久属性刷新也沿用锁定主项，不搬点。绑定不保存任何游戏效果或计数，结束／新战斗后不沿用旧锁。权威快照保存可复现的派生属性和原有卡库；恢复后重算自动主项，不依赖退役选择令牌。
 

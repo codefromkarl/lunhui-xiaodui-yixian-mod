@@ -50,20 +50,24 @@ partial class Program
         var owner = SchoolPlayer(FiveElementRules.Lineage, 3);
         var baseMods = new List<StatModifier> { new(new StableId("test.external"), new StatBlock(0, 89, 0, 90)) };
         var current = baseMods.ToList(); FiveCultivation.AppendGrowth(null, owner, current);
-        Check(current.Count == 2 && current.Last().Attributes.Energy == 8 && current.Last().Attributes.Reaction == 0, "single eight-point budget follows external energy");
+        Check(current.Count == 2 && current.Last().Attributes.Energy == 30 && current.Last().Attributes.Constitution == 14 && current.Last().Attributes.Reaction == 0, "44-point budget splits 30 energy / 14 body");
         owner.RecalculateDerivedStats(DerivedStatCalculator.Calculate(owner.Birth.FinalBirthStats, current, owner.EnergyPools.Primary.Kind));
         var switched = new List<StatModifier> { new(new StableId("test.external"), new StatBlock(0, 91, 0, 90)) };
         FiveCultivation.AppendGrowth(null, owner, switched);
-        Check(switched.Last().Attributes.Reaction == 8 && switched.Last().Attributes.Energy == 0, "reaction exceeds external energy by ONE: old eight-point growth cannot self-lock energy");
+        Check(switched.Last().Attributes.Reaction == 30 && switched.Last().Attributes.Energy == 14 && switched.Last().Attributes.Constitution == 0, "reaction exceeds external energy by ONE: old primary/support growth cannot self-lock energy");
         int points = owner.RewardPoints; long revision = owner.Revision;
         var again = new List<StatModifier> { switched.First() }; FiveCultivation.AppendGrowth(null, owner, again);
-        Check(again.Last().Attributes.Reaction == 8 && owner.Revision == revision && owner.RewardPoints == points, "repeated projection is pure and non-cumulative");
+        Check(again.Last().Attributes.Reaction == 30 && owner.Revision == revision && owner.RewardPoints == points, "repeated projection is pure and non-cumulative");
         Check(!owner.PurchasedShelfAbilityIds.Any(id => id.Value.StartsWith(FiveCultivation.Prefix)), "automatic growth creates no purchase tokens");
         for (int rank = 1; rank <= 5; rank++)
         foreach (int primary in new[] { 40, 20, 30 })
         {
             var p = SchoolPlayer(FiveElementRules.Lineage, rank); var m = FiveCultivation.GrowthModifier(p, primary);
-            Check(m.Attributes.Energy + m.Attributes.Reaction + m.Attributes.Constitution == FiveCultivation.Growth(rank) && m.Attributes.Muscle == 0, "exact isolated native growth budget " + rank + "/" + primary);
+            int[] main = {6,12,30,58,92}, support = {2,6,14,26,40};
+            var expected = new StatBlock(0, primary == 20 ? main[rank-1] : 0, primary == 30 ? main[rank-1] : primary == 40 ? support[rank-1] : 0, primary == 40 ? main[rank-1] : support[rank-1]);
+            Check(m.Attributes == expected, "exact primary/support native growth budget " + rank + "/" + primary);
+            var derived = DerivedStatCalculator.Calculate(new StatBlock(5,5,5,5), new[] {m}, EnergyPoolKind.Fighting);
+            Check(derived.MaximumMagic == 2 * (5 + expected.Energy) + 5, "native Five attribute capacity without duplicate base " + rank + "/" + primary);
         }
         var offhand = Player(native: true, sect: false);
         Check(offhand.AddLineage(new StableId(FiveElementRules.Lineage)).IsSuccess, "native primary plus Five offhand");
@@ -72,7 +76,7 @@ partial class Program
         {
             if (separatePool) offhand.SetEnergyPools(new EnergyPoolSet(offhand.EnergyPools.Primary, new EnergyPoolState(EnergyPoolKind.Fighting, 1, 30), offhand.EnergyPools.Style));
             var modifier = FiveCultivation.GrowthModifier(offhand, 20);
-            Check(modifier.Attributes.Reaction == 8 && modifier.Attributes.Energy == 0 && modifier.MaximumMagicFlat == 0, "native offhand attribute budget and no duplicate pools " + separatePool);
+            Check(modifier.Attributes.Reaction == 30 && modifier.Attributes.Energy == 14 && modifier.MaximumMagicFlat == 0, "native offhand attribute budget and no duplicate pools " + separatePool);
         }
         var other = SchoolPlayer(SevenStarRules.Lineage, 3); var foreignMods = new List<StatModifier>();
         FiveCultivation.AppendGrowth(null, other, foreignMods); Check(foreignMods.Count == 0, "non-Five receives no projection");

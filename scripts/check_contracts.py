@@ -39,6 +39,7 @@ def main():
     baseline = ROOT / 'tests/fixtures/sword-v032'
     table = read(MOD / 'content/cardtable.json')
     prices = read(ROOT / 'tests/fixtures/reward-prices.json')
+    growth = read(ROOT / 'tests/fixtures/lineage-stats.json')
     old_table = cost_text(read(baseline / 'content/cardtable.json'))
     old_abilities = cost_text(read(baseline / 'content/abilities.json'))
     # Historical fixtures check gameplay, not save compatibility. Associate their active
@@ -96,6 +97,13 @@ def main():
             for row in old:
                 for index, step in enumerate(row['fields']['steps']):
                     step['price'] = prices['lineageSteps'][index]
+                    # Only the six explicit native stat terms may change. Retain
+                    # handler/target/active/identity and every other old term.
+                    profile = growth['schools']['sword']
+                    numeric = dict(zip(('muscleFlat', 'reactionFlat', 'constitutionFlat', 'energyFlat'), profile['attributes'][index]))
+                    numeric.update(maximumMagic=profile['poolBase'][index], maximumHealthBp=profile['healthBp'][index])
+                    step['passive']['values'] = [v for v in step['passive']['values'] if v['key'] not in numeric]
+                    step['passive']['values'].extend(dict(key=k, intValue=v) for k, v in numeric.items() if v or k in ('maximumMagic', 'maximumHealthBp'))
         elif name == 'fates':
             for row in old:
                 row['fields']['purchasePrice'] = prices['fatePrice']
@@ -116,6 +124,19 @@ def main():
             assert gameplay(row) == gameplay(previous), f'sword gameplay changed: {previous["fields"]["displayName"]}'
             if 'iconKey' in previous['fields']:
                 asset_references.append((previous['fields']['iconKey'], row['fields']['iconKey']))
+    for row in read(MOD / 'content/lineages.json')['operations']:
+        school = row['id'].rsplit('.', 1)[-1]
+        expected = growth['schools'][school]
+        for i, step in enumerate(row['fields']['steps']):
+            values = {v['key']: v.get('intValue', v.get('stringValue')) for v in step['passive']['values']}
+            attrs = expected.get('attributes', [[0, 0, 0, 0]] * 5)[i]
+            stats = {k: v for k, v in zip(('muscleFlat', 'reactionFlat', 'constitutionFlat', 'energyFlat'), attrs) if v}
+            stats.update(lineageCode='yixian_' + school, step=i, maximumMagic=expected['poolBase'][i], maximumHealthBp=expected['healthBp'][i])
+            assert values == stats, f'lineage stat contract drift: {school}/{i+1}'
+            assert step['price'] == growth['prices'][i]
+        if school == 'five':
+            config = next(s['cultivation'] for s in table['sects'] if s['id'] == row['id'])
+            assert config == dict(fallbackBp=7000, growth=growth['attributeBudget'], primaryGrowth=expected['primary']), 'Five automatic growth drift'
     manifest = read(MOD / 'mod.json')
     assert manifest['id'] == 'yixian.sect'
     declarations = [row for name in ('abilities', 'lineages', 'statuses', 'fates', 'fate-statuses')
@@ -172,6 +193,6 @@ def main():
             assert values['energyCost'] == cost * 4 and values['apCost'] == 0 and values['energyPool'] == 40, f'card payment declaration mismatch: {card["key"]}'
         fee_line = next(line for line in card['description'].splitlines() if line.startswith('消耗：'))
         assert fee_line == f'消耗：{cost * 4}斗气。', f'card displayed cost mismatch: {card["key"]}'
-    print(f'PASS contracts: namespaced identities; 45 retained sword rules, three explicit non-mad replacements and four explicit area adaptations and explicit sword attribute references, approved card-fee/copy plus reward-price correction; original fate icons and other assets retained; {len(table["sects"])} schools, {len(by_key)} cards, {len(table["packs"])} complete packs; version {manifest["version"]}')
+    print(f'PASS contracts: namespaced identities; 45 retained sword rules, three explicit non-mad replacements and four explicit area adaptations and explicit sword attribute references, approved card-fee/copy, reward-price and explicit lineage-stat correction; original fate icons and other assets retained; {len(table["sects"])} schools, {len(by_key)} cards, {len(table["packs"])} complete packs; version {manifest["version"]}')
 
 if __name__ == '__main__': main()

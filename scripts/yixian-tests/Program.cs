@@ -93,7 +93,7 @@ partial class Program
   var projection=typeof(RuntimeLineageDefinition).Assembly.GetType("Reincarnation.Runtime.Content.RuntimeDomainCatalogProjection");
   var progressions=new List<ProgressionDefinition>();
   Method(projection,"ProjectProgressions").MakeGenericMethod(typeof(RuntimeLineageDefinition)).Invoke(null,new object[]{new[]{rl},DKind.Lineage,progressions});
-  Check(progressions.Single().PoolBases.SequenceEqual(new[]{16,24,32,40,48}),"actual lineage energy pool projection");
+  Check(progressions.Single().PoolBases.SequenceEqual(new[]{12,22,36,54,78}),"actual lineage energy pool projection");
   var projectedShelves=new List<ShelfAbilityDefinition>();
   Method(projection,"ProjectShelfAbilities").Invoke(null,new object[]{runtimeAbilities,progressions,projectedShelves});
   Check(projectedShelves.Count==11&&projectedShelves.All(x=>x.SourceId.Value==SwordRules.Lineage),"actual shop projection");

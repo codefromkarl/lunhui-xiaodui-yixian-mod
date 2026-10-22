@@ -19,11 +19,11 @@ namespace YixianSect
             Require(f.P.SetEnergyPools(new EnergyPoolSet(new EnergyPoolState(pools.Primary.Kind, 1, pools.Primary.Maximum), pools.Secondary, pools.Style)).IsSuccess, "low-energy hub fixture");
             Require(f.Send(RunCommand.PurchaseAttributePoint(Slot, ExchangeAttribute.Energy, 60, f.A.Run.Revision)).IsSuccess, "ordinary energy purchase");
             var original = AutoPresentation(f); Require(FiveCultivation.SelectPrimary(original) == 40, "energy should become automatic primary");
-            int reactionPoints = original.Energy - original.Reaction - FiveCultivation.Growth(3) + 1;
+            int reactionPoints = original.Energy - original.Reaction - FiveCultivation.PrimaryGrowth(3) + 1;
             Require(reactionPoints > 0 && f.Send(RunCommand.PurchaseAttributePoint(Slot, ExchangeAttribute.Reaction, reactionPoints, f.A.Run.Revision)).IsSuccess, "ordinary reaction purchase");
             var after = AutoPresentation(f);
-            Require(after.Reaction == original.Reaction + reactionPoints + 8 && after.Energy == original.Energy - 8 && after.Constitution == original.Constitution,
-                "one external point must switch all eight growth points without self-lock/copy: " + original + " -> " + after);
+            Require(after.Reaction == original.Reaction + reactionPoints + 30 && after.Energy == original.Energy - 16 && after.Constitution == original.Constitution - 14,
+                "one external point must reallocate the 30+14 budget without self-lock/copy: " + original + " -> " + after);
             Require(f.P.EnergyPools.Primary.Current == 1, "automatic switch refilled resources");
             Require(f.Send(RunCommand.PurchaseAttributePoint(Slot, ExchangeAttribute.Energy, 1, f.A.Run.Revision)).IsSuccess, "ordinary energy point to make external tie");
             var tied = AutoPresentation(f);

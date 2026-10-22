@@ -131,6 +131,8 @@ namespace YixianSect
                 Case("react_draws_each_trigger",Again);
                 Case("foundation_choice_atomicity",FoundationChoice);
                 Case("effective_attribute_growth",AttributeGrowth);
+                Case("lineage_stats_native_projection_and_render",LineageStats);
+                Case("five_automatic_primary_native",FiveCultivationCommands);
                 Case("shop_choice_and_pack_detail_consumption",Details);
                 Case("actual_prefab_visuals",Visual);
                 Case("real_health_hit_vs_shield",HealthHit);

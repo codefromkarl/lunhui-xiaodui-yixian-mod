@@ -34,7 +34,7 @@ namespace YixianSect
                     "水火主能量，金木主反应，土主体质；卡牌数值采用多属性成长。灵印激活本场持续，同系或相生也可触发元素条件。" };
                 if (rank == 1) text.Add(RulesFor(sect));
                 text.Add((rank == 1 ? "初始八张：" : "本境界候选：") + string.Join("、", FiveDeckRules.Candidates(rank).Select(c => (string)c["name"])));
-                text.Add("本阶属性成长预算：" + FiveCultivation.Growth(rank) + "点，自动随能量／反应／体质中最高项成长；不计五行自身加成，开战锁定。");
+                text.Add("本阶属性成长预算：" + FiveCultivation.Growth(rank) + "点：主属性＋" + FiveCultivation.PrimaryGrowth(rank) + "，辅助属性＋" + FiveCultivation.SupportGrowth(rank) + "。主能量时辅体质，主反应／体质时辅能量；按未加五行成长的最高项自动选择，开战锁定。");
                 foreach (var fate in SectRegistry.Fates.Values.Where(f => SectRegistry.Owner(f) == sect && (int)f["rank"] == rank)) text.Add("开放仙命：【" + fate["name"] + "】" + fate["price"] + "奖励点，独立被动，不占卡包。");
                 return string.Join("\n", text);
             }
@@ -98,7 +98,7 @@ namespace YixianSect
         private static void Postfix(RuntimeContentOperation operation,ref string __result)
         {
             if(operation==null || !operation.TryGetValue("lineageCode",out var code) || SectDescriptions.SectForCode(code.StringValue)==null || !operation.TryGetValue("step",out var step))return;
-            if(SectDescriptions.SectForCode(code.StringValue)==FiveElementRules.Lineage){__result+="\n主修成长＋" + FiveCultivation.Growth(step.IntValue + 1) + (step.IntValue == 0 ? " · 解锁8张" : " · 解锁2张");return;}
+            if(SectDescriptions.SectForCode(code.StringValue)==FiveElementRules.Lineage){__result+="\n成长：主＋" + FiveCultivation.PrimaryGrowth(step.IntValue + 1) + "／辅＋" + FiveCultivation.SupportGrowth(step.IntValue + 1) + (step.IntValue == 0 ? " · 解锁8张" : " · 解锁2张");return;}
             __result+="\n卡组："+string.Join("、",SectRegistry.Packs.Where(p=>SectRegistry.Owner(p)==SectDescriptions.SectForCode(code.StringValue) && SwordRules.Int(p,"rank")==step.IntValue+1).Select(p=>SwordRules.Text(p,"name")));
         }
     }

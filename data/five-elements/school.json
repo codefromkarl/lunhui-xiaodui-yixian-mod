@@ -9,13 +9,42 @@
     "cultivation": {
       "fallbackBp": 7000,
       "growth": [
-        3,
-        5,
         8,
+        18,
+        44,
+        84,
+        132
+      ],
+      "primaryGrowth": [
+        6,
         12,
-        16
+        30,
+        58,
+        92
       ]
-    }
+    },
+    "lineageStats": [
+      {
+        "maximumMagic": 8,
+        "maximumHealthBp": 0
+      },
+      {
+        "maximumMagic": 15,
+        "maximumHealthBp": 0
+      },
+      {
+        "maximumMagic": 24,
+        "maximumHealthBp": 0
+      },
+      {
+        "maximumMagic": 34,
+        "maximumHealthBp": 0
+      },
+      {
+        "maximumMagic": 46,
+        "maximumHealthBp": 0
+      }
+    ]
   },
   "cards": [
     {
