@@ -1073,6 +1073,33 @@
     "assembly": "plugins/YixianSect.dll",
     "entry": "YixianSect.Entry"
   },
+  "choices": [
+    {
+      "id": "yixian.sect.training.sword.spirit_conversion",
+      "label": "灵剑转化开关",
+      "description": "购买灵剑转化后，回到主神空间可免费开启或关闭。默认关闭，不自动改变属性。",
+      "scope": "run",
+      "when": "hub",
+      "conditions": {
+        "holds": [
+          "yixian.sect.lineage.sword",
+          "yixian.sect.training.sword.spirit_conversion"
+        ]
+      },
+      "options": [
+        {
+          "id": "on",
+          "label": "开启转化",
+          "description": "筋肉、反应、体质各60%转为能量；后续持久加点持续参与。"
+        },
+        {
+          "id": "off",
+          "label": "关闭转化",
+          "description": "恢复未转化持久属性；不返还购买费用，不补满生命或气池。"
+        }
+      ]
+    }
+  ],
   "economy": {
     "shop": [
       {
