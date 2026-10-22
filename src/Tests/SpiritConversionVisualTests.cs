@@ -4,6 +4,7 @@ using System.Linq;
 using HarmonyLib;
 using Newtonsoft.Json.Linq;
 using Reincarnation.Domain;
+using Reincarnation.UI.Flow;
 using Reincarnation.Runtime.Managers;
 using Reincarnation.UI.Windows;
 using TMPro;
@@ -14,7 +15,12 @@ namespace YixianSect
 {
     internal static partial class VisualSelfTests
     {
-        internal static JObject SpiritConversionShelf(string directory,RunPlayerSnapshot player,RunAuthoritySnapshot snapshot,DataManager data,BattleAuthorityCatalog battles)
+        private sealed class SpiritToggleSink : IProjectUIIntentSink
+        {
+            internal Action<ProjectUIIntent> Submit;
+            public bool TrySubmit(ProjectUIIntent intent,out string error) { error="";Submit(intent);return true; }
+        }
+        internal static JObject SpiritConversionShelf(string directory,RunPlayerSnapshot player,RunAuthoritySnapshot snapshot,DataManager data,BattleAuthorityCatalog battles,Func<bool,RunAuthoritySnapshot> toggle)
         {
             Require(!Application.isBatchMode,"spirit-conversion visuals require a rendered Unity process");Directory.CreateDirectory(directory);
             var root=new GameObject("SpiritConversionVisual",typeof(RectTransform),typeof(Canvas),typeof(CanvasScaler));root.SetActive(false);
@@ -45,7 +51,29 @@ namespace YixianSect
                 var corners=new Vector3[4];body.rectTransform.GetWorldCorners(corners);
                 Require(corners.All(p=>{var screen=camera.WorldToScreenPoint(p);return screen.x>=0&&screen.x<=1600&&screen.y>=0&&screen.y<=900;}),"ability detail extends outside native safe canvas");
                 Capture(camera,texture,root,Path.Combine(directory,"spirit-conversion.png"));
-                return new JObject{["debit_and_transfer_description_visible"]=true,["twenty_point_price_visible"]=true,["screenshot"]="spirit-conversion.png"};
+                var next=toggle(false);int clicks=0;
+                shop.SetIntentSink(new SpiritToggleSink { Submit=intent=>{
+                    Require(intent.Kind==ProjectUIIntentKind.PurchaseShelfAbility
+                        && (intent.PrimaryValue==SpiritConversion.ToggleOn||intent.PrimaryValue==SpiritConversion.ToggleOff),"toggle UI submitted wrong command");
+                    clicks++;next=toggle(intent.PrimaryValue==SpiritConversion.ToggleOn);
+                    shop.NotifySubmissionSettled(SessionErrorCode.None);
+                }});
+                AccessTools.Method(typeof(ShopWindow),"BindListeners").Invoke(shop,null);
+                foreach(bool enabled in new[]{false,true,false})
+                {
+                    shop.SetContext(next.Players.First(p=>p.Slot==player.Slot),next,data,battles);
+                    AccessTools.Field(typeof(ShopWindow),"selectedProgressionId").SetValue(shop,SwordRules.Lineage);
+                    AccessTools.Method(typeof(ShopWindow),"HandleProgressionAbilityTab").Invoke(shop,null);
+                    AccessTools.Method(typeof(ShopWindow),"HandleShelfSelected").Invoke(shop,new object[]{SpiritConversion.Ability});
+                    var button=(Button)AccessTools.Field(typeof(ShopWindow),"shelfRequestButton").GetValue(shop);
+                    var label=(TMP_Text)AccessTools.Field(typeof(ShopWindow),"shelfRequestButtonLabel").GetValue(shop);
+                    Require(button.interactable&&label.text==(enabled?"关闭转化":"开启转化"),"owned native ability button does not offer opposite action");
+                    Require(Text().Contains(enabled?"当前状态：已开启":"当前状态：已关闭"),"ability toggle status missing");
+                    Layer(root.transform);Canvas.ForceUpdateCanvases();
+                    Capture(camera,texture,root,Path.Combine(directory,enabled?"spirit-enabled.png":"spirit-disabled.png"));
+                    if(clicks<2){button.onClick.Invoke();Require(clicks==(enabled?2:1),"native toggle button did not submit once");}
+                }
+                return new JObject{["owned_toggle_states_visible"]=true,["native_button_clicks"]=clicks,["debit_and_transfer_description_visible"]=true,["twenty_point_price_visible"]=true,["screenshot"]="spirit-conversion.png"};
             }
             finally{UnityEngine.Object.DestroyImmediate(root);camera.targetTexture=null;UnityEngine.Object.DestroyImmediate(texture);UnityEngine.Object.DestroyImmediate(cameraObject);}
         }

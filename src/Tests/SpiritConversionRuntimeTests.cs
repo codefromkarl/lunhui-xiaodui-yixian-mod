@@ -18,6 +18,11 @@ namespace YixianSect
         private JObject SpiritConversionCommands()
         {
             var id=new StableId(SpiritConversion.Ability);var f=New(5,buyCurrent:false);
+            void Toggle(Fixture fixture,bool enabled)
+                => Require(fixture.Send(RunCommand.PurchaseShelfAbility(Slot,new StableId(enabled?SpiritConversion.ToggleOn:SpiritConversion.ToggleOff),fixture.A.Run.Revision)).IsSuccess,"native shop toggle rejected");
+            long unownedRevision=f.A.Run.Revision;var unownedStats=AutoPresentation(f);
+            Require(!f.Send(RunCommand.PurchaseShelfAbility(Slot,new StableId(SpiritConversion.ToggleOn),unownedRevision)).IsSuccess
+                && f.A.Run.Revision==unownedRevision && AutoPresentation(f)==unownedStats,"unowned toggle changed state");
             foreach(var pair in new[]{Tuple.Create(ExchangeAttribute.Muscle,50),Tuple.Create(ExchangeAttribute.Reaction,30),Tuple.Create(ExchangeAttribute.Constitution,20)})
                 Require(f.Send(RunCommand.PurchaseAttributePoint(Slot,pair.Item1,pair.Item2,f.A.Run.Revision)).IsSuccess,"prepare ordinary source attribute purchases");
             var beforeSnapshot=RunAuthoritySnapshotProjector.Create(f.A,Slot).Players.First(p=>p.Slot==Slot);
@@ -27,6 +32,11 @@ namespace YixianSect
             Require(f.P.SetEnergyPools(new EnergyPoolSet(new EnergyPoolState(pools.Primary.Kind,1,pools.Primary.Maximum),pools.Secondary,pools.Style)).IsSuccess,"low pool before conversion");
             int points=f.P.RewardPoints;f.Buy(id);
             Require(points-f.P.RewardPoints==20,"training must cost exactly twenty");
+            Require(AutoPresentation(f)==before&&!SpiritConversion.Enabled(f.A.Run.ModState,f.P),"purchase must remain disabled");
+            Toggle(f,true);
+            int toggleWallet=f.P.RewardPoints;long toggleRevision=f.A.Run.Revision;
+            Toggle(f,true);
+            Require(f.A.Run.Revision==toggleRevision&&f.P.RewardPoints==toggleWallet,"repeated enable is not idempotent/free");
             Require(AutoPresentation(f)==expected&&f.P.DerivedStats.EffectiveAttributes==expected,"source attributes not actually debited / energy not actually transferred: "+before+" -> "+AutoPresentation(f)+" expected "+expected);
             Require(f.P.DerivedStats.MaximumHealth<beforeSnapshot.DerivedStats.MaximumHealth&&f.P.DerivedStats.CriticalChanceBasisPoints<beforeSnapshot.DerivedStats.CriticalChanceBasisPoints,"source debits did not reduce native health/critical stats");
             Require(f.P.Birth.FinalBirthStats==sourceBirth&&f.P.PurchasedAttributes==purchased,"conversion permanently rewrote birth/purchased stat sources");
@@ -38,7 +48,7 @@ namespace YixianSect
             var poor=New(1,buyCurrent:false);Require(poor.P.SpendRewardPoints(poor.P.RewardPoints-19).IsSuccess,"prepare nineteen-point boundary");
             var poorStats=AutoPresentation(poor);long poorRevision=poor.A.Run.Revision;
             Require(!poor.Send(RunCommand.PurchaseShelfAbility(Slot,id,poorRevision)).IsSuccess&&poor.P.RewardPoints==19&&poor.A.Run.Revision==poorRevision&&AutoPresentation(poor)==poorStats&&!poor.P.HasPurchasedShelfAbility(id),"nineteen-point failure changed attributes or money");
-            poor.System(RunDeveloperCommand.AddRewardPoints,1);poor.Buy(id);Require(poor.P.RewardPoints==0&&AutoPresentation(poor)==ExpectedSpiritAttributes(poorStats),"twenty-point D-rank purchase did not debit correctly");
+            poor.System(RunDeveloperCommand.AddRewardPoints,1);poor.Buy(id);Require(AutoPresentation(poor)==poorStats,"purchase auto-enabled poor player");Toggle(poor,true);Require(poor.P.RewardPoints==0&&AutoPresentation(poor)==ExpectedSpiritAttributes(poorStats),"twenty-point D-rank purchase did not debit correctly");
             // Purchase FIRST, then spend ordinary reward points on each attribute.
             // Rebuild from full original sources, never from already converted stats.
             var convertedOnPurchase=expected;var persistentSource=before;var continuous=new JArray();
@@ -70,7 +80,7 @@ namespace YixianSect
             foreach(string primary in new[]{"lineage.BL06","lineage.BL09"})
             {
                 var off=New(0,buyCurrent:false);off.Upgrade(new StableId(primary));off.Upgrade(new StableId(SwordRules.Lineage));
-                var original=AutoPresentation(off);off.Buy(id);
+                var original=AutoPresentation(off);off.Buy(id);Toggle(off,true);
                 Require(AutoPresentation(off)==ExpectedSpiritAttributes(original),"offhand conversion differs for "+primary);
                 offhandRows.Add(new JObject{["primary"]=primary,["before"]=original.ToString(),["after"]=AutoPresentation(off).ToString()});
             }
@@ -78,6 +88,8 @@ namespace YixianSect
             StatBlock Peer(byte slot)=>RunAuthoritySnapshotProjector.Create(peers.A,new PlayerSlotId(slot)).Players.First(p=>p.Slot.Value==slot).DerivedStats.EffectiveAttributes;
             var hostBefore=Peer(1);var clientBefore=Peer(2);int clientPoints=peers.P(2).RewardPoints;
             Require(peers.Send(2,RunCommand.PurchaseShelfAbility(new PlayerSlotId(2),id,peers.A.Run.Revision)).IsSuccess,"network client training purchase rejected");
+            Require(Peer(1)==hostBefore&&Peer(2)==clientBefore,"client purchase auto-enabled conversion");
+            Require(peers.Send(2,RunCommand.PurchaseShelfAbility(new PlayerSlotId(2),new StableId(SpiritConversion.ToggleOn),peers.A.Run.Revision)).IsSuccess,"network toggle rejected");
             Require(Peer(1)==hostBefore&&Peer(2)==ExpectedSpiritAttributes(clientBefore)&&peers.P(2).RewardPoints==clientPoints-20,"network training leaked to host or failed on client");
             Require(peers.Send(2,RunCommand.PurchaseAttributePoint(new PlayerSlotId(2),ExchangeAttribute.Constitution,5,peers.A.Run.Revision)).IsSuccess,"client attribute purchase after training rejected");
             var clientGrown=new StatBlock(clientBefore.Muscle,clientBefore.Reaction,clientBefore.Constitution+5,clientBefore.Energy);
@@ -91,16 +103,40 @@ namespace YixianSect
             var spirit=Card(43);var pack=CardTableCatalog.Packs.Single(p=>p.CardIds.Contains(spirit));
             if(!f.P.HasPurchasedShelfAbility(pack.UnlockAbilityId))f.Buy(pack.UnlockAbilityId);
             Require(f.P.SetActiveCardPacks(f.P.ActiveCardPackIds.Concat(new[]{pack.UnlockAbilityId}).Distinct().ToArray()).IsSuccess,"activate late spirit pack");
+            // Disable, save and restore: original full sources are recovered, with
+            // no fee, health/qi gain or mutation of the underlying attribute points.
+            int toggleHealth=f.P.CurrentHealth,toggleQi=f.P.CurrentMagic;
+            Toggle(f,false);
+            Require(AutoPresentation(f)==persistentSource&&f.P.DerivedStats.EffectiveAttributes==persistentSource,"off failed to restore source attributes");
+            Require(f.P.CurrentHealth<=toggleHealth&&f.P.CurrentMagic<=toggleQi,"off refilled health/qi");
+            Require(mapper.TryCapture(f.A.Run,out var disabledSave,out error),"disabled save capture: "+error);
+            Require(mapper.TryRestore(disabledSave,out var disabledRun,out error),"disabled save restore: "+error);
+            Require(!SpiritConversion.Enabled(disabledRun.ModState,disabledRun.Players[0]),"saved off was lost");
+            Require(f.Send(RunCommand.PurchaseAttributePoint(Slot,ExchangeAttribute.Muscle,5,f.A.Run.Revision)).IsSuccess,"off-mode growth failed");
+            persistentSource=new StatBlock(persistentSource.Muscle+5,persistentSource.Reaction,persistentSource.Constitution,persistentSource.Energy);
+            Require(AutoPresentation(f)==persistentSource&&f.P.DerivedStats.EffectiveAttributes==persistentSource,"off-mode growth was converted");
+            expected=ExpectedSpiritAttributes(persistentSource);toggleWallet=f.P.RewardPoints;
+            for(int i=0;i<3;i++){Toggle(f,true);Require(AutoPresentation(f)==expected,"re-enable accumulated source debits");Toggle(f,false);}
+            Toggle(f,true);
+            Require(f.P.RewardPoints==toggleWallet&&f.P.PurchasedShelfAbilityIds.Count(a=>a==id)==1,"switching charged or duplicated ability");
             var visualFixture=New(1,buyCurrent:false);
             var snapshot=RunAuthoritySnapshotProjector.Create(visualFixture.A,Slot);
-            var visual=VisualSelfTests.SpiritConversionShelf(Path.Combine(Path.GetDirectoryName(path),Path.GetFileNameWithoutExtension(path),"spirit-conversion"),snapshot.Players.First(p=>p.Slot==Slot),snapshot,data,battles);
-            f.StartBattle();ToughEnemy(f.Enemy);Require(f.P.DerivedStats.EffectiveAttributes==expected,"battle starts with different/double-transferred stats");
+            var visual=VisualSelfTests.SpiritConversionShelf(Path.Combine(Path.GetDirectoryName(path),Path.GetFileNameWithoutExtension(path),"spirit-conversion"),snapshot.Players.First(p=>p.Slot==Slot),snapshot,data,battles,enabled=>{
+                if(!visualFixture.P.HasPurchasedShelfAbility(id))visualFixture.Buy(id);
+                Toggle(visualFixture,enabled);
+                return RunAuthoritySnapshotProjector.Create(visualFixture.A,Slot);
+            });
+            f.StartBattle();ToughEnemy(f.Enemy);
+            var battleRevision=f.A.Run.Revision;int battleWallet=f.P.RewardPoints;
+            Require(!f.Send(RunCommand.PurchaseShelfAbility(Slot,new StableId(SpiritConversion.ToggleOff),battleRevision)).IsSuccess
+                && f.A.Run.Revision==battleRevision&&f.P.RewardPoints==battleWallet&&SpiritConversion.Enabled(f.A.Run.ModState,f.P),"battle toggle was not atomically rejected");
+            Require(f.P.DerivedStats.EffectiveAttributes==expected,"battle starts with different/double-transferred stats");
             f.Prepare(spirit);var current=RunAuthoritySnapshotProjector.Create(f.A,Slot);var model=BattleUIPresentationMapper.BuildCardTable(current,current.Players.First(p=>p.Slot==Slot),data,battles);
             Require(model.Hand.First(c=>c.CardId==spirit.Value).Detail.Contains("40%×能量"),"actual spirit hand detail still claims reaction");
             int hp=f.Enemy.CurrentHealth,qi=f.Actor.CurrentMagic,ap=f.Actor.ActionPoints;var receipt=f.Play(spirit);
             Require(f.Enemy.CurrentHealth<hp&&receipt.PresentationSteps.Count==4&&f.Actor.ActionPoints==ap,"converted spirit failed real four-hit execution or charged AP");
             Require(f.P.DerivedStats.EffectiveAttributes==expected,"spell execution re-converted source stats");
-            return new JObject{["before"]=before.ToString(),["after"]=convertedOnPurchase.ToString(),["price"]=20,["post_purchase_attribute_growth"]=continuous,["after_later_growth"]=expected.ToString(),["actual_source_debit"]=true,["nineteen_twenty_atomic"]=true,["preview_no_accumulation_or_refill"]=true,["native_memory_restore"]=true,["offhand"]=offhandRows,["network_client_isolation"]=true,["network_client_later_growth"]=true,["later_lineage_growth"]=true,["spirit_native_segments"]=receipt.PresentationSteps.Count,["health_damage"]=hp-f.Enemy.CurrentHealth,["visual"]=visual};
+            return new JObject{["manual_free_toggle"]=true,["default_disabled"]=true,["off_save_restore"]=true,["battle_toggle_rejected"]=true,["before"]=before.ToString(),["after"]=convertedOnPurchase.ToString(),["price"]=20,["post_purchase_attribute_growth"]=continuous,["after_later_growth"]=expected.ToString(),["actual_source_debit"]=true,["nineteen_twenty_atomic"]=true,["preview_no_accumulation_or_refill"]=true,["native_memory_restore"]=true,["offhand"]=offhandRows,["network_client_isolation"]=true,["network_client_later_growth"]=true,["later_lineage_growth"]=true,["spirit_native_segments"]=receipt.PresentationSteps.Count,["health_damage"]=hp-f.Enemy.CurrentHealth,["visual"]=visual};
         }
     }
 }
