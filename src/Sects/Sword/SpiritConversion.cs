@@ -20,7 +20,7 @@ namespace YixianSect
                 && e.Key == StateKey(player.Slot) && e.Kind == ModValueKind.Text && e.Text == "on") == true;
         public const int RateBp = 6000;
         private const string MarkerPrefix = "yixian.sect.spirit-conversion.";
-        public const string Description = "可切换持续被动：将筋肉、反应、体质各扣除60%，各项向下取整；实际扣除量合计转为能量，原有能量保留。开启期间持续按未转化的持久属性重算，后续加点、成长与装备属性同样参与转化，不重复扣减；不转换战斗临时属性。生命、气池、防御与暴击随转化后属性重算。自选购买20点，本局限购一次，不占手牌。购买后默认关闭；在主神空间可免费开启／关闭，关闭恢复未转化属性。切换不补满生命或气池。";
+        public const string Description = "可切换持续被动：将筋肉、反应、体质各扣除60%，各项向下取整；实际扣除量合计转为能量，原有能量保留。开启期间持续按未转化的持久属性重算，后续加点、成长与装备属性同样参与转化，不重复扣减；不转换战斗临时属性。生命、气池、防御与暴击随转化后属性重算。自选购买20点，本局限购一次，不占手牌。购买后默认关闭；在主神空间打开角色→能力→灵剑转化，可免费开启／关闭，关闭恢复未转化属性。切换不补满生命或气池。";
         public static bool Has(PlayerRunState player) => player != null
             && SectRegistry.Rank(player, SwordRules.Lineage) > 0
             && player.HasPurchasedShelfAbility(new StableId(Ability));

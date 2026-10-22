@@ -145,3 +145,5 @@ python3 scripts/build_full_release.py     # dist/lunhui-yixian-full-mod-0.7.3.zi
 `--game` 可指定游戏目录；默认从 `GAME_MANAGED` 推导。旧的外观安装脚本仅转发到同一实现。安装器拒绝运行中的游戏，不自动启用包或改写作者代码许可。开发安装回执位于 `logs/installation/`；Windows 完整包安装器备份到游戏根目录 `ModBackups/`。两个包替换任一失败都会回滚。
 
 `runtime_package.py` 是安装与完整打包的文件清单来源：玩法读取 manifest 的内容、表格、资源和 DLL；外观继续追踪 `appearance.json`、各角色 atlas JSON 与实际引用的 PNG／像素源。未引用的旧图片、TestResults、src、PDB、提示词与布局草稿留在源码／备份中。原有 `build_release.py` 保留用于重现历史无图更新包，不作为玩家当前入口。
+
+0.7.3完整包保留已发布外观0.7.2的动作／表情素材。18位外观审阅和真实Mono结果见[全角色检查](appearance-audit-0.7.3.md)。灵剑开关可直接从角色档案的已掌握能力列表操作，原生Mod选择命令负责保存、网络同步及主神空间限制。

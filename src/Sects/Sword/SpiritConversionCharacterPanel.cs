@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.CompilerServices;
 using HarmonyLib;
 using Reincarnation.Domain;
@@ -32,6 +31,8 @@ namespace YixianSect
             var meta=Read<TMP_Text>(window,"abilityDetailMetaLabel");
             var controls=Views.GetValue(window,w=>{
                 var button=FiveCardPicker.Button("SpiritConversionToggle",meta.transform.parent,meta.font,"",new Vector2(.55f,.08f),new Vector2(.98f,.92f),()=>Click(w));
+                button.GetComponent<Image>().color=new Color(.25f,.19f,.10f);
+                var outline=button.gameObject.AddComponent<Outline>();outline.effectColor=new Color(.72f,.55f,.27f);outline.effectDistance=new Vector2(1,-1);
                 return new Controls{Button=button};
             });
             controls.Button.gameObject.SetActive(true);
@@ -58,14 +59,16 @@ namespace YixianSect
             Render(window);
         }
     }
-    [HarmonyPatch]
-    internal static class SpiritConversionCharacterRefresh
+    [HarmonyPatch(typeof(InventoryWindow),"RefreshAbilitySelection")]
+    internal static class SpiritConversionCharacterSelection
+    { private static void Postfix(InventoryWindow __instance)=>SpiritConversionCharacterPanel.Render(__instance); }
+    [HarmonyPatch(typeof(InventoryWindow),"RefreshModChoicesFromCurrentSnapshot")]
+    internal static class SpiritConversionCharacterSnapshot
+    { private static void Postfix(InventoryWindow __instance)=>SpiritConversionCharacterPanel.Render(__instance); }
+    [HarmonyPatch(typeof(InventoryWindow),"OnModChoiceSnapshot")]
+    internal static class SpiritConversionCharacterStats
     {
-        private static IEnumerable<MethodBase> TargetMethods()
-        {
-            foreach(string name in new[]{"RefreshAbilitySelection","RefreshModChoicesFromCurrentSnapshot"})
-                yield return AccessTools.Method(typeof(InventoryWindow),name);
-        }
-        private static void Postfix(InventoryWindow __instance)=>SpiritConversionCharacterPanel.Render(__instance);
+        private static void Postfix(InventoryWindow __instance)
+            =>AccessTools.Method(typeof(InventoryWindow),"RefreshCharacterFromCurrentSnapshot").Invoke(__instance,null);
     }
 }

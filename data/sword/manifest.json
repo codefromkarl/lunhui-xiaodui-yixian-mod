@@ -301,7 +301,7 @@
     {
       "id": "yixian.sect.training.sword.spirit_conversion",
       "label": "灵剑转化开关",
-      "description": "购买灵剑转化后，回到主神空间可免费开启或关闭。默认关闭，不自动改变属性。",
+      "description": "购买后默认关闭。在主神空间打开角色档案→能力与血统→已掌握能力→灵剑转化，可免费开启／关闭；专属能力商店也保留开关。",
       "scope": "run",
       "when": "hub",
       "conditions": {

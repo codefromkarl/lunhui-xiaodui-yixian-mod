@@ -2,11 +2,11 @@
 
 在《轮回小队 Demo》中体验《弈仙牌》的三门派构筑，搭配 18 位角色造型。
 
-**当前源码与本地完整包：v0.7.3** · [公开发行下载](https://github.com/codefromkarl/lunhui-xiaodui-yixian-mod/releases) · [安装位置](#安装位置) · [如何使用](#如何使用)
+**[下载完整 Mod v0.7.3](https://github.com/codefromkarl/lunhui-xiaodui-yixian-mod/releases/download/full-v0.7.3/lunhui-yixian-full-mod-0.7.3.zip)** · [全部发行](https://github.com/codefromkarl/lunhui-xiaodui-yixian-mod/releases) · [安装位置](#安装位置) · [如何使用](#如何使用)
 
 v0.7.3 修复左右手手型与拇指方向、陆剑心靴子比例、能力详情重复；合入灵剑转化的免费开关。首次安装与更新统一使用一个完整包。
 
-![三门派18位角色的游戏内待机造型汇总](docs/images/characters.jpg)
+![v0.7.3三门派18位角色的游戏内外观逐一核对](docs/images/all-characters-0.7.3.jpg)
 
 ## 门派 Mod
 
@@ -14,7 +14,9 @@ v0.7.3 修复左右手手型与拇指方向、陆剑心靴子比例、能力详�
 
 从炼气到化神，解锁卡牌与仙命，在战斗中手动出牌、调整构筑。首回合发 3 张，之后每回合自动补 2 张；需要额外补牌时，可消耗 1 行动力主动摸牌。
 
-**v0.7.1 剑宗更新**：普通单段剑招取筋肉、多段取反应，灵剑路线取能量。20点可选被动「灵剑转化」购买后默认关闭；主神空间的能力页可以免费开启／关闭，开启后实际扣除筋肉／反应／体质各60%转为能量，后续加点同样生效。[完整说明](docs/sword-scaling.md)。
+**v0.7.1 剑宗更新**：普通单段剑招取筋肉、多段取反应，灵剑路线取能量。20点可选被动「灵剑转化」购买后默认关闭；主神空间打开 **角色档案 → 能力与血统 → 已掌握能力 → 灵剑转化**，可以直接免费开启／关闭，开启后实际扣除筋肉／反应／体质各60%转为能量，后续加点同样生效。[完整说明](docs/sword-scaling.md)。
+
+![角色能力列表中直接开启或关闭灵剑转化](docs/images/spirit-character-toggle.png)
 
 各派的路线与机制：[云灵剑宗](docs/sword-builds.md) · [五行道盟](docs/five-elements.md) · [七星阁](docs/seven-stars.md)
 

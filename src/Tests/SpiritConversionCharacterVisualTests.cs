@@ -44,7 +44,7 @@ namespace YixianSect
             camera.clearFlags=CameraClearFlags.SolidColor;camera.backgroundColor=new Color(.025f,.03f,.04f);camera.orthographic=true;camera.orthographicSize=4.5f;
             var texture=new RenderTexture(1600,900,24);texture.Create();camera.targetTexture=texture;
             var canvas=root.GetComponent<Canvas>();canvas.renderMode=RenderMode.ScreenSpaceCamera;canvas.worldCamera=camera;canvas.planeDistance=1;
-            var scaler=root.GetComponent<CanvasScaler>();scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize;scaler.referenceResolution=new Vector2(1600,900);
+            var scaler=root.GetComponent<CanvasScaler>();scaler.uiScaleMode=CanvasScaler.ScaleMode.ScaleWithScreenSize;scaler.referenceResolution=new Vector2(1920,1080);
             try
             {
                 var prefab=Prefab<InventoryWindow>();Require(prefab!=null,"native character window missing");
@@ -66,8 +66,9 @@ namespace YixianSect
                     var button=window.GetComponentsInChildren<Button>(true).Single(b=>b.name=="SpiritConversionToggle");
                     Require(button.gameObject.activeInHierarchy&&button.interactable,"character ability toggle unavailable");
                     Require(button.GetComponentInChildren<TMP_Text>().text==(enabled?"关闭转化":"开启转化"),"character toggle state wrong");
+                    Capture(camera,texture,root,Path.Combine(directory,enabled?"character-spirit-on.png":"character-spirit-off.png"));
                     var corners=new Vector3[4];((RectTransform)button.transform).GetWorldCorners(corners);
-                    Require(corners.All(p=>{var s=camera.WorldToScreenPoint(p);return s.x>=0&&s.x<=1600&&s.y>=0&&s.y<=900;}),"character toggle outside viewport");
+                    Require(corners.All(p=>{var s=camera.WorldToScreenPoint(p);return s.x>=0&&s.x<=1600&&s.y>=0&&s.y<=900;}),"character toggle outside viewport: "+string.Join(";",corners.Select(p=>camera.WorldToScreenPoint(p).ToString())));
                     Capture(camera,texture,root,Path.Combine(directory,enabled?"character-spirit-on.png":"character-spirit-off.png"));
                     if(gateway.Commands<2){button.onClick.Invoke();Require(gateway.Commands==(enabled?2:1),"character click did not submit one native command");}
                 }
