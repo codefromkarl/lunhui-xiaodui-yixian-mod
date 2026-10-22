@@ -728,10 +728,12 @@
           ]
         },
         "Body/Foot_R": {
-          "mirrorX": false
+          "mirrorX": false,
+          "pixelsPerUnit": 1100
         },
         "Body/Foot_L": {
-          "mirrorX": true
+          "mirrorX": true,
+          "pixelsPerUnit": 1100
         },
         "Hand/Grip_L": {
           "landmarks": {

@@ -1,4 +1,6 @@
 using Newtonsoft.Json.Linq;
+using Reincarnation.Config;
+using Reincarnation.Runtime.Content;
 using Reincarnation.Domain;
 using Reincarnation.UI.Flow;
 using Reincarnation.UI.ViewModels;
@@ -15,6 +17,21 @@ partial class Program
         }
         foreach (var card in SectRegistry.Cards.Values)
             Check(SectDescriptions.CardDetail(card) == (string)card["description"], "runtime detail stays concise instead of appending source metadata: " + card["name"]);
+        var operationDetailPatch = typeof(Entry).Assembly.GetType("YixianSect.SectAbilityOperationDetail");
+        foreach(var file in new[]{"abilities","fates"})
+            foreach(var row in JObject.Parse(File.ReadAllText(Mod+"/content/"+file+".json"))["operations"].OfType<JObject>())
+            {
+                string id=(string)row["id"];var pack=SectRegistry.FindPack(new StableId(id));
+                if(!SectRegistry.Cards.ContainsKey(id)&&!SectRegistry.Fates.ContainsKey(id)&&pack==null)continue;
+                var f=(JObject)row["fields"];var rank=(JObject)f["ranks"][0];
+                var definition=new ContentAbilityDefinition(id,1,(string)f["displayName"],(string)f["sourceContentId"],(ContentAbilityMode)(int)f["mode"],new[]{new ContentAbilityRankDefinition((string)rank["rank"],1,Operation((JObject)rank["operation"]))},null,(string)f["flavour"],(int)f["purchasePrice"],(ContentAbilityAcquisition)(int)f["acquisition"]);
+                var ability=(RuntimeAbilityDefinition)PrivateCtor(typeof(RuntimeAbilityDefinition),definition);
+                string nativeText=RunUIPresentationMapper.BuildAbilityOperationDetail(ability,ability.Ranks[0].Operation,null);
+                var actual=new object[]{ability,nativeText};
+                Check(!(bool)Method(operationDetailPatch,"Prefix").Invoke(null,actual),"owned ability uses one authored description: "+id);
+                string expected=SectRegistry.Cards.TryGetValue(id,out var c)?SectDescriptions.CardDetail(c):SectRegistry.Fates.TryGetValue(id,out var fate)?(string)fate["description"]+"\n独立被动，本局限购一次，不占手牌。":SectDescriptions.PackDetail(pack);
+                Check((string)actual[1]==expected,"no duplicated flavour, cost or acquisition: "+id);
+            }
         var refuge = SectRegistry.Cards.Values.Single(c => (string)c["name"] == "金蝉脱壳");
         Check(SectDescriptions.CardSummary(refuge).Contains("护盾") && SectDescriptions.CardSummary(refuge).Contains("生命") && SectDescriptions.CardSummary(refuge).Contains("后招"), "summary retains support and conditional effects, not just first line");
         var blade = SectRegistry.Cards.Values.Single(c => (string)c["name"] == "金灵·回锋刃");

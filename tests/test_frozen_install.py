@@ -32,6 +32,8 @@ class FrozenInstallTests(unittest.TestCase):
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_bytes(b'retired feature')
             (target / 'content/local-notes.json').write_text('{}')
+            game.mkdir(parents=True, exist_ok=True)
+            (game / 'ReincarnationSquad.exe').touch()
             argv = ['install', '--game', str(game), '--source', str(source), '--apply']
             with patch.object(sys, 'argv', argv), patch.object(install, 'ROOT', root), \
                     patch.object(install, 'game_running', return_value=False), \
@@ -40,13 +42,14 @@ class FrozenInstallTests(unittest.TestCase):
             self.assertEqual(check.call_args.args[0][-2:], ['--mod-root', str(source)])
             self.assertEqual((target / 'plugins/YixianSect.dll').read_bytes(), b'accepted binary')
             receipt = json.loads(next((root / 'logs/installation').glob('*/receipt.json')).read_text())
-            self.assertEqual((Path(receipt['backup']) / 'plugins/YixianSect.dll').read_bytes(), b'previous binary')
-            self.assertTrue((target / 'TestResults/retained.json').is_file())
-            self.assertTrue((target / 'content/local-notes.json').is_file())
-            self.assertEqual(receipt['removed_retired_files'], sorted(retired))
+            self.assertEqual((Path(receipt['backup']) / 'yixian.sect/plugins/YixianSect.dll').read_bytes(), b'previous binary')
+            self.assertFalse((target / 'TestResults/retained.json').exists())
+            self.assertFalse((target / 'content/local-notes.json').exists())
+            self.assertTrue((Path(receipt['backup']) / 'yixian.sect/TestResults/retained.json').is_file())
+            self.assertEqual(receipt['packages'][0]['removed_files'], sorted(retired+['TestResults/retained.json','content/local-notes.json']))
             for relative in retired:
                 self.assertFalse((target / relative).exists())
-                self.assertEqual((Path(receipt['backup']) / relative).read_bytes(), b'retired feature')
+                self.assertEqual((Path(receipt['backup']) / 'yixian.sect' / relative).read_bytes(), b'retired feature')
 
     def test_selected_source_files_are_not_pruned(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -55,7 +58,9 @@ class FrozenInstallTests(unittest.TestCase):
             (source / 'plugins/YixianSect.dll').write_bytes(b'accepted binary')
             (source / 'content').mkdir()
             (source / 'content/professions.json').write_text('{}')
-            (source / 'mod.json').write_text(json.dumps(dict(id='yixian.sect', version='test', assets={})))
+            (source / 'mod.json').write_text(json.dumps(dict(id='yixian.sect', version='test', assets={}, content=['content/professions.json'])))
+            game.mkdir(parents=True, exist_ok=True)
+            (game / 'ReincarnationSquad.exe').touch()
             argv = ['install', '--game', str(game), '--source', str(source), '--apply']
             with patch.object(sys, 'argv', argv), patch.object(install, 'ROOT', root), \
                     patch.object(install, 'game_running', return_value=False), \
@@ -83,3 +88,56 @@ class FrozenInstallTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+class CleanInstallTransactionTests(unittest.TestCase):
+    def fixture(self, root):
+        from runtime_package import PLUGINS
+        game = root / 'game'; game.mkdir(); (game / 'ReincarnationSquad.exe').touch()
+        sources = {}
+        for slug, dll in PLUGINS.items():
+            p = root / slug; (p / 'plugins').mkdir(parents=True)
+            (p / dll).write_bytes(b'new')
+            (p / 'mod.json').write_text(json.dumps(dict(id=slug, version='test', assets={})))
+            if slug == 'appearance.muyifeng': (p / 'appearance.json').write_text('{}')
+            target = game / 'Mods' / slug; target.mkdir(parents=True)
+            (target / 'old.txt').write_bytes(b'old')
+            sources[slug] = p
+        (game / 'Mods/enabled.json').write_bytes(b'keep enabled')
+        (game / 'mod-code-consent.json').write_bytes(b'keep consent')
+        return game, sources
+
+    def test_two_package_update_cleans_old_files_and_keeps_activation(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); game, sources = self.fixture(root)
+            with patch.object(install, 'game_running', return_value=False):
+                result = install.install_packages(game, sources, root / 'backups')
+            self.assertTrue(result['installed'])
+            for slug in sources:
+                self.assertFalse((game / 'Mods' / slug / 'old.txt').exists())
+                self.assertEqual((Path(result['backup']) / slug / 'old.txt').read_bytes(), b'old')
+            self.assertEqual((game / 'Mods/enabled.json').read_bytes(), b'keep enabled')
+            self.assertEqual((game / 'mod-code-consent.json').read_bytes(), b'keep consent')
+
+    def test_second_switch_failure_rolls_back_both_packages(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); game, sources = self.fixture(root)
+            replace = install.os.replace
+            def fail_second(source, target):
+                if Path(source).name == 'appearance.muyifeng' and '.yixian-install-' in str(source):
+                    raise OSError('simulated second-package switch failure')
+                return replace(source, target)
+            with patch.object(install, 'game_running', return_value=False), patch.object(install.os, 'replace', side_effect=fail_second):
+                with self.assertRaisesRegex(OSError, 'simulated'):
+                    install.install_packages(game, sources, root / 'backups')
+            for slug in sources:
+                self.assertEqual([p.name for p in (game / 'Mods' / slug).iterdir()], ['old.txt'])
+                self.assertEqual((game / 'Mods' / slug / 'old.txt').read_bytes(), b'old')
+            self.assertFalse(list(game.glob('.yixian-install-*')))
+
+    def test_game_started_during_staging_cancels_without_replacing(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); game, sources = self.fixture(root)
+            with patch.object(install, 'game_running', side_effect=[False, True]):
+                with self.assertRaisesRegex(ValueError, '准备期间'):
+                    install.install_packages(game, sources, root / 'backups')
+            for slug in sources: self.assertTrue((game / 'Mods' / slug / 'old.txt').exists())

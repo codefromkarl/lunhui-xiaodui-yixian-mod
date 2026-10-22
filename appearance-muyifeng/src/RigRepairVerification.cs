@@ -26,7 +26,16 @@ namespace MuyifengAppearance
         }
         private void AssertVisibleRig(BattleCombatantView actor,AppearanceArt art,string phase)
         {
-            var rig=art.AtlasDefinition["rig"];if((bool?)rig["calibrated"]!=true)return;
+            var rig=art.AtlasDefinition["rig"];
+            // Check anatomy on the real animated native slots, independently of
+            // the binding lookup; facing changes must not exchange the arm bones.
+            foreach(string side in new[]{"L","R"})
+            {
+                string hand="Hand/"+((side=="L"||rig["offhand"]!=null)?"Grip_":"Open_")+(side=="L"?"R":"L");
+                foreach(var arm in Rows(actor).Where(r=>r.PartType=="Body"&&r.Structure=="Arm_"+side&&r.renderer.gameObject.activeInHierarchy))
+                    Require(arm.renderer.GetComponentsInChildren<SpriteRenderer>(true).Count(r=>r.enabled&&r.sprite==art.Parts[hand])==1,"wrong thumb anatomy on native arm "+side+": "+art.Prefix+" / "+phase);
+            }
+            if((bool?)rig["calibrated"]!=true)return;
             var renderers=actor.GetComponentsInChildren<SpriteRenderer>(true).Where(r=>r.enabled&&r.gameObject.activeInHierarchy).ToArray();
             SpriteRenderer Part(string key)=>renderers.Single(r=>r.sprite==art.Parts[key]);
             var head=Part("Body/Head");var torso=Part("Cloth/Body");
@@ -38,9 +47,15 @@ namespace MuyifengAppearance
             foreach(string side in new[]{"Left","Right"}){
                 var leg=rig["leg"+side];var ankle=state.Joints.Single(j=>j.Name==side+" ankle").Target;
                 Require(VisibleOverlap(Part((string)leg["foot"]),Part((string)leg["pant"]),ankle)>=4,"visible trouser/boot gap: "+art.Prefix+" / "+side+" / "+phase);
-                string handKey="Hand/"+((side=="Left"||rig["offhand"]!=null)?"Grip_":"Open_")+(side=="Left"?"L":"R");
+                string handKey="Hand/"+((side=="Left"||rig["offhand"]!=null)?"Grip_":"Open_")+(side=="Left"?"R":"L");
                 var wrist=state.Joints.Single(j=>j.Name==side+" wrist").Target;
                 Require(VisibleOverlap(Part(handKey),Part("Cloth/"+side+"Lower"),wrist)>=4,"visible sleeve/hand gap: "+art.Prefix+" / "+side+" / "+phase);
+                var hand=Part(handKey);var upper=Part("Cloth/"+side);var lower=Part("Cloth/"+side+"Lower");
+                Require(hand.sortingLayerID==lower.sortingLayerID&&hand.sortingOrder>lower.sortingOrder&&lower.sortingOrder>upper.sortingOrder,"hand must cover its cuff, lower sleeve must cover upper sleeve: "+art.Prefix+" / "+side+" / "+phase);
+                if(side=="Left"||rig["offhand"]!=null){
+                    var prop=Part(side=="Left"?"Weapon/Sword":"Weapon/Offhand");
+                    Require(prop.sortingOrder>lower.sortingOrder&&prop.sortingOrder<hand.sortingOrder,"hilt must be between cuff and fingers: "+art.Prefix+" / "+phase);
+                }
             }
             if(phase!="DEATH")foreach(string side in new[]{"Left","Right"}){
                 var leg=rig["leg"+side];string key=(string)leg["foot"];var foot=Part(key);

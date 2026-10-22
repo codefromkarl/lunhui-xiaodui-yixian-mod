@@ -12,7 +12,8 @@ class FullReleaseTests(unittest.TestCase):
         p=root/slug;p.mkdir()
         m={'id':slug,'version':'0.7.1','code':{'assembly':PLUGINS[slug]},'content':['content/test.json'],'assets':{'test':{'file':'icons/card.png'}}}
         (p/'mod.json').write_text(json.dumps(m))
-        for name in [PLUGINS[slug],'content/test.json','icons/card.png','TestResults/private.json','plugins/debug.pdb']:
+        if slug=='appearance.muyifeng': (p/'appearance.json').write_text('{}')
+        for name in [PLUGINS[slug],'content/test.json','icons/card.png','TestResults/private.json','plugins/debug.pdb','art/unused-concept.png','src/private.cs','private.txt']:
             f=p/name;f.parent.mkdir(parents=True,exist_ok=True);f.write_bytes(b'test')
         return p
 
@@ -24,6 +25,9 @@ class FullReleaseTests(unittest.TestCase):
                 self.assertIsNone(z.testzip())
                 self.assertIn('Mods/yixian.sect/icons/card.png',z.namelist())
                 self.assertIn('Mods/appearance.muyifeng/plugins/MuyifengAppearance.dll',z.namelist())
+                self.assertIn('安装.bat', z.namelist())
+                self.assertIn('安装.command', z.namelist())
+                self.assertFalse(any('unused-concept' in n or 'private' in n for n in z.namelist()))
                 self.assertFalse(any('TestResults' in n or n.endswith('.pdb') for n in z.namelist()))
                 self.assertEqual(json.loads(z.read('BUNDLE.json')),info)
             self.assertEqual(info['components'][1]['sourceCommit'],'published-appearance-commit')

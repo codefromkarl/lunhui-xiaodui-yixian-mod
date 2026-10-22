@@ -31,7 +31,7 @@ namespace MuyifengAppearance
                         Require(actual.ResourcePath==expected.ResourcePath&&actual.OffhandResourcePath==expected.OffhandResourcePath&&
                             actual.PartSubType==expected.PartSubType&&actual.DrawnAxisDegrees==expected.DrawnAxisDegrees,"native weapon presentation identity changed");
                         Require(Rows(hero).Where(x=>x.PartType=="Weapons").All(x=>x.renderer.sprite==null),"native weapon overlaps costume sword");
-                        Require(SwordCount(hero)==1&&VisiblePart(hero,"Hand/Grip_L")&&VisiblePart(hero,"Hand/Open_R"),"costume needs one sword, left grip and open right hand");
+                        Require(SwordCount(hero)==1&&VisiblePart(hero,"Hand/Grip_R")&&VisiblePart(hero,"Hand/Open_L"),"costume needs one sword, anatomical left grip and open right hand");
                         Require(!HasSword(native),"costume sword leaked to native control");
                         if(expected.IsArmed)Require(Rows(native).Any(x=>x.PartType=="Weapons"&&x.renderer.sprite!=null),"armed control has no native weapon");
                         else Require(Rows(native).Where(x=>x.PartType=="Weapons").All(x=>x.renderer.sprite==null),"unarmed control gained a weapon");

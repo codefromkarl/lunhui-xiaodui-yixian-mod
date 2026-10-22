@@ -120,6 +120,42 @@ namespace YixianSect
             __result=SectDescriptions.PackDetail(pack);return false;
         }
     }
+    // Native BuildAbilityOperationDetail concatenates flavour, cost and the
+    // operation narrator. Our authored detail already includes all three.
+    [HarmonyPatch(typeof(RunUIPresentationMapper),"BuildAbilityOperationDetail")]
+    internal static class SectAbilityOperationDetail
+    {
+        private static bool Prefix(RuntimeAbilityDefinition ability,ref string __result)
+        {
+            if(ability==null)return true;
+            if(SectRegistry.Cards.TryGetValue(ability.StableId.Value,out var card))
+                __result=SectDescriptions.CardDetail(card);
+            else if(SectRegistry.Fates.TryGetValue(ability.StableId.Value,out var fate))
+                __result=(string)fate["description"]+"\n独立被动，本局限购一次，不占手牌。";
+            else
+            {
+                var pack=SectRegistry.FindPack(ability.StableId);
+                if(pack==null)return true;
+                __result=SectDescriptions.PackDetail(pack);
+            }
+            return false;
+        }
+    }
+    [HarmonyPatch(typeof(Reincarnation.UI.Windows.ShopWindow),"RenderShelfRequest")]
+    internal static class SectShelfDuplicateFlavour
+    {
+        private static void Postfix(Reincarnation.UI.Windows.ShopWindow __instance)
+        {
+            var type=typeof(Reincarnation.UI.Windows.ShopWindow);
+            var entry=(Reincarnation.UI.ViewModels.ExchangeEntryViewModel)AccessTools.Field(type,"currentShelfRequest").GetValue(__instance);
+            if(entry==null||(!SectRegistry.Cards.ContainsKey(entry.StableId)&&!SectRegistry.Fates.ContainsKey(entry.StableId)&&SectRegistry.FindPack(new StableId(entry.StableId))==null))return;
+            // Native shop also renders flavour in a separate footer. Keep distinct
+            // lore, but hide acquisition/effects already present in the detail.
+            if(string.IsNullOrWhiteSpace(entry.Flavour)||!entry.Detail.Contains(entry.Flavour.Trim()))return;
+            var label=(TMPro.TMP_Text)AccessTools.Field(type,"shelfRequestFlavourLabel").GetValue(__instance);
+            if(label!=null){label.text="";label.gameObject.SetActive(false);}
+        }
+    }
     [HarmonyPatch(typeof(CardTableContentNarrator),"CardSummary")]
     internal static class SectCardSummary
     {

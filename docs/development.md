@@ -131,3 +131,17 @@ python3 scripts/run_yixian_runtime_tests.py --include-fates
 ## 三派血统属性预算
 
 源数据、原生气池公式及逐阶分配见[血统属性](lineage-stats.md)。修改后运行上述完整离线门禁，再在隔离测试副本执行主套件；`lineage_stats_native_projection_and_render`覆盖三派五阶实际属性／气池和五行三个主项，`five_automatic_primary_native`覆盖自动切换、战斗锁定和保存恢复。不得用这套数据直接覆盖正在使用的正式安装。
+
+## v0.7.3 统一安装与打包
+
+玩法与外观仍是可独立启用的两个包，但共用同一安装器与运行文件清单。构建后一次安装：
+
+```bash
+python3 scripts/install.py --all          # 只读预检
+python3 scripts/install.py --all --apply  # 全量备份、干净替换、逐文件回读
+python3 scripts/build_full_release.py     # dist/lunhui-yixian-full-mod-0.7.3.zip
+```
+
+`--game` 可指定游戏目录；默认从 `GAME_MANAGED` 推导。旧的外观安装脚本仅转发到同一实现。安装器拒绝运行中的游戏，不自动启用包或改写作者代码许可。开发安装回执位于 `logs/installation/`；Windows 完整包安装器备份到游戏根目录 `ModBackups/`。两个包替换任一失败都会回滚。
+
+`runtime_package.py` 是安装与完整打包的文件清单来源：玩法读取 manifest 的内容、表格、资源和 DLL；外观继续追踪 `appearance.json`、各角色 atlas JSON 与实际引用的 PNG／像素源。未引用的旧图片、TestResults、src、PDB、提示词与布局草稿留在源码／备份中。原有 `build_release.py` 保留用于重现历史无图更新包，不作为玩家当前入口。

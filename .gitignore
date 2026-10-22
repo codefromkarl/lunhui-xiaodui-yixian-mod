@@ -29,3 +29,6 @@ mod/*/TestResults/
 .DS_Store
 # Unused upstream website extraction scripts are local research caches
 /data/sources/**/*.js
+
+# Complete local release archives
+/dist/

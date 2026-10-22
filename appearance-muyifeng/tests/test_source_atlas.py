@@ -23,7 +23,7 @@ class SourceAtlasTests(unittest.TestCase):
         self.assertEqual(self.config['target'], 'character-selection')
         manifest = json.loads((MOD / 'mod.json').read_text())
         self.assertEqual(manifest['id'], 'appearance.muyifeng')
-        self.assertEqual(manifest['version'], '0.7.1')
+        self.assertEqual(manifest['version'], '0.7.3')
 
     def test_source_crops_are_valid_and_have_visible_pixels(self):
         for name, part in self.atlas['parts'].items():

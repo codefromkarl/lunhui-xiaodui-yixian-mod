@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>9</LangVersion>
     <AssemblyName>MuyifengAppearance</AssemblyName>
-    <Version>0.7.1</Version>
+    <Version>0.7.3</Version>
     <OutputPath>../mod/appearance.muyifeng/plugins/</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <GenerateDependencyFile>false</GenerateDependencyFile>

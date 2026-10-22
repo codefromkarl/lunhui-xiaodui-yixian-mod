@@ -17,6 +17,16 @@ namespace YixianSect
         }
         private JObject SpiritConversionCommands()
         {
+            // Exercise the actual patched native narrator in Mono, including pack
+            // acquisition/flavour and fates, which previously appeared twice.
+            var ids=SectRegistry.Cards.Keys.Concat(SectRegistry.Fates.Keys).Concat(SectRegistry.Packs.Select(p=>SectRegistry.PackId(p).Value));
+            foreach(string abilityId in ids)
+            {
+                Require(data.TryGetAbility(new StableId(abilityId),out var ability),"description ability missing: "+abilityId);
+                string actual=Reincarnation.UI.Flow.RunUIPresentationMapper.BuildAbilityOperationDetail(ability,ability.Ranks[0].Operation,data);
+                string descriptionExpected=SectRegistry.Cards.TryGetValue(abilityId,out var card)?SectDescriptions.CardDetail(card):SectRegistry.Fates.TryGetValue(abilityId,out var fate)?(string)fate["description"]+"\n独立被动，本局限购一次，不占手牌。":SectDescriptions.PackDetail(SectRegistry.FindPack(new StableId(abilityId)));
+                Require(actual==descriptionExpected,"native ability detail duplicated: "+abilityId);
+            }
             var id=new StableId(SpiritConversion.Ability);var f=New(5,buyCurrent:false);
             void Toggle(Fixture fixture,bool enabled)
                 => Require(fixture.Send(RunCommand.PurchaseShelfAbility(Slot,new StableId(enabled?SpiritConversion.ToggleOn:SpiritConversion.ToggleOff),fixture.A.Run.Revision)).IsSuccess,"native shop toggle rejected");
@@ -126,6 +136,8 @@ namespace YixianSect
                 Toggle(visualFixture,enabled);
                 return RunAuthoritySnapshotProjector.Create(visualFixture.A,Slot);
             });
+            var characterVisual=VisualSelfTests.SpiritConversionCharacter(Path.Combine(Path.GetDirectoryName(path),Path.GetFileNameWithoutExtension(path),"spirit-character"),data,
+                ()=>RunAuthoritySnapshotProjector.Create(visualFixture.A,Slot),command=>visualFixture.Send(command));
             f.StartBattle();ToughEnemy(f.Enemy);
             var battleRevision=f.A.Run.Revision;int battleWallet=f.P.RewardPoints;
             Require(!f.Send(RunCommand.PurchaseShelfAbility(Slot,new StableId(SpiritConversion.ToggleOff),battleRevision)).IsSuccess
@@ -136,7 +148,7 @@ namespace YixianSect
             int hp=f.Enemy.CurrentHealth,qi=f.Actor.CurrentMagic,ap=f.Actor.ActionPoints;var receipt=f.Play(spirit);
             Require(f.Enemy.CurrentHealth<hp&&receipt.PresentationSteps.Count==4&&f.Actor.ActionPoints==ap,"converted spirit failed real four-hit execution or charged AP");
             Require(f.P.DerivedStats.EffectiveAttributes==expected,"spell execution re-converted source stats");
-            return new JObject{["manual_free_toggle"]=true,["default_disabled"]=true,["off_save_restore"]=true,["battle_toggle_rejected"]=true,["before"]=before.ToString(),["after"]=convertedOnPurchase.ToString(),["price"]=20,["post_purchase_attribute_growth"]=continuous,["after_later_growth"]=expected.ToString(),["actual_source_debit"]=true,["nineteen_twenty_atomic"]=true,["preview_no_accumulation_or_refill"]=true,["native_memory_restore"]=true,["offhand"]=offhandRows,["network_client_isolation"]=true,["network_client_later_growth"]=true,["later_lineage_growth"]=true,["spirit_native_segments"]=receipt.PresentationSteps.Count,["health_damage"]=hp-f.Enemy.CurrentHealth,["visual"]=visual};
+            return new JObject{["manual_free_toggle"]=true,["default_disabled"]=true,["off_save_restore"]=true,["battle_toggle_rejected"]=true,["before"]=before.ToString(),["after"]=convertedOnPurchase.ToString(),["price"]=20,["post_purchase_attribute_growth"]=continuous,["after_later_growth"]=expected.ToString(),["actual_source_debit"]=true,["nineteen_twenty_atomic"]=true,["preview_no_accumulation_or_refill"]=true,["native_memory_restore"]=true,["offhand"]=offhandRows,["network_client_isolation"]=true,["network_client_later_growth"]=true,["later_lineage_growth"]=true,["spirit_native_segments"]=receipt.PresentationSteps.Count,["health_damage"]=hp-f.Enemy.CurrentHealth,["character_visual"]=characterVisual,["visual"]=visual};
         }
     }
 }

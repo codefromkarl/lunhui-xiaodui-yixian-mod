@@ -73,7 +73,20 @@ namespace YixianSect
                     Capture(camera,texture,root,Path.Combine(directory,enabled?"spirit-enabled.png":"spirit-disabled.png"));
                     if(clicks<2){button.onClick.Invoke();Require(clicks==(enabled?2:1),"native toggle button did not submit once");}
                 }
-                return new JObject{["owned_toggle_states_visible"]=true,["native_button_clicks"]=clicks,["debit_and_transfer_description_visible"]=true,["twenty_point_price_visible"]=true,["screenshot"]="spirit-conversion.png"};
+                var starShelf=RunUIPresentationMapper.BuildExchangeShelf(player,data,new StableId(SevenStarRules.Lineage),5);
+                Require(starShelf.Count>0,"seven-star shelf empty");
+                bool captured=false;
+                foreach(var item in starShelf)
+                {
+                    AccessTools.Field(typeof(ShopWindow),"selectedShelfAbilityId").SetValue(shop,item.StableId);
+                    AccessTools.Method(typeof(ShopWindow),"RenderShelfRequest").Invoke(shop,new object[]{starShelf,5});
+                    var footer=(TMP_Text)AccessTools.Field(typeof(ShopWindow),"shelfRequestFlavourLabel").GetValue(shop);
+                    Require(body.text.Contains(item.Detail),"seven-star detail missing");
+                    if(!string.IsNullOrWhiteSpace(item.Flavour)&&item.Detail.Contains(item.Flavour.Trim()))
+                        Require(!footer.gameObject.activeSelf&&footer.text=="","seven-star flavour footer duplicates acquisition/effect: "+item.StableId);
+                    if(!captured){Layer(root.transform);Canvas.ForceUpdateCanvases();Capture(camera,texture,root,Path.Combine(directory,"star-description.png"));captured=true;}
+                }
+                return new JObject{["seven_star_shelf_descriptions"]=starShelf.Count,["duplicate_flavour_footer_hidden"]=true,["owned_toggle_states_visible"]=true,["native_button_clicks"]=clicks,["debit_and_transfer_description_visible"]=true,["twenty_point_price_visible"]=true,["screenshot"]="spirit-conversion.png"};
             }
             finally{UnityEngine.Object.DestroyImmediate(root);camera.targetTexture=null;UnityEngine.Object.DestroyImmediate(texture);UnityEngine.Object.DestroyImmediate(cameraObject);}
         }

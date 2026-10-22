@@ -15,7 +15,10 @@ class VerificationLauncherTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
+        self.root = Path(self.temp.name).resolve()
+        platform = patch.object(verify.sys, "platform", "linux")
+        platform.start()
+        self.addCleanup(platform.stop)
         self.game = self.root / 'game'
         self.game.mkdir()
         (self.game / 'ReincarnationSquad.exe').touch()

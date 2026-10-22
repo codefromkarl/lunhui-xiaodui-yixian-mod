@@ -80,6 +80,20 @@ class RigCalibrationTests(unittest.TestCase):
                 self.assertTrue(visible(alpha_for(before, key), point))
                 self.assertFalse(visible(alpha_for(after, key), point))
 
+    def test_lujianxin_boots_match_each_other_and_the_costume_scale(self):
+        character = next(c for c in self.roster if c['slug'] == 'lujianxin')
+        atlas = self.atlas(character)
+        widths = []
+        for side in ('Left', 'Right'):
+            key = atlas['rig']['leg'+side]['foot']
+            part = atlas['parts'][key]
+            self.assertEqual(part['sheet'], atlas['parts']['Cloth/Body']['sheet'])
+            width = part['rect'][2] / part['pixelsPerUnit']
+            original = self.atlas(character, 'atlas-layout-v1.json')['parts'][key]
+            self.assertLess(width, .8 * original['rect'][2] / original['pixelsPerUnit'])
+            widths.append(width)
+        self.assertAlmostEqual(widths[0], widths[1], delta=.005)
+
     def test_tiger_mantle_has_explicit_shoulder_attachment(self):
         tiger = next(c for c in self.roster if c['slug'] == 'muhu')
         atlas = self.atlas(tiger)

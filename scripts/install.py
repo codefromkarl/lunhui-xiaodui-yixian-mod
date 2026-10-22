@@ -1,90 +1,140 @@
 #!/usr/bin/env python3
-"""Install the checked candidate after normal game exit, with backup and rollback."""
+"""Install complete packages into clean directories, retaining a full rollback copy."""
 import argparse
+import hashlib
 import json
 import os
 from pathlib import Path
 import shutil
 import subprocess
 import sys
-import time
-from run_yixian_runtime_tests import game_running
+import tempfile
+from datetime import datetime
+from runtime_package import PLUGINS, runtime_files
 
-ROOT = Path(__file__).resolve().parents[1]
-# Removed generated features must not survive the overlay from an older package.
-# Everything outside these owned paths (including TestResults) stays untouched.
-RETIRED_PACKAGE_PATHS = (
-    'content/professions.json', 'content/alchemy.json', 'content/cardlevels.json',
-    'icons/professions', 'icons/alchemy',
-)
-if os.environ.get('GAME_MANAGED'):
-    GAME = Path(os.environ['GAME_MANAGED']).parent.parent
-elif sys.platform == 'darwin':
-    GAME = Path.home() / 'Library/Application Support/Steam/steamapps/common/轮回小队 Demo'
-else:
-    GAME = Path.home() / '.local/share/Steam/steamapps/common/轮回小队 Demo'
+SCRIPT = Path(__file__).resolve().parent
+BUNDLED = (SCRIPT / 'BUNDLE.json').is_file()
+ROOT = SCRIPT if BUNDLED else SCRIPT.parent
+GAME = Path(os.environ['GAME_MANAGED']).parent.parent if os.environ.get('GAME_MANAGED') else (
+    Path.home() / 'Library/Application Support/Steam/steamapps/common/轮回小队 Demo' if sys.platform == 'darwin' else
+    Path(os.environ.get('PROGRAMFILES(X86)', 'C:/Program Files (x86)')) / 'Steam/steamapps/common/轮回小队 Demo' if sys.platform == 'win32' else
+    Path.home() / '.local/share/Steam/steamapps/common/轮回小队 Demo')
+
+
+def game_running(game):
+    if sys.platform == 'win32':
+        return 'reincarnationsquad.exe' in subprocess.check_output(['tasklist', '/FI', 'IMAGENAME eq ReincarnationSquad.exe', '/NH'], text=True).casefold()
+    expected = (Path(game) / 'ReincarnationSquad.exe').resolve()
+    def matches(value):
+        value = value.strip().replace('\\', '/')
+        if value.rsplit('/', 1)[-1].casefold() != 'reincarnationsquad.exe': return False
+        if len(value)>2 and value[1:3]==':/':
+            drive, relative = value[0].lower(), value[3:]
+            if drive == 'z': value = '/' + relative
+            elif os.environ.get('WINEPREFIX'):
+                prefix = Path(os.environ['WINEPREFIX']); device = prefix / 'dosdevices' / (drive + ':')
+                mapped = device if device.is_dir() else prefix / 'drive_c' if drive == 'c' else None
+                if mapped is None: return True
+                value = str(mapped / relative)
+            else: return True
+        candidate = Path(value)
+        return not candidate.is_absolute() or str(candidate.resolve()).casefold() == str(expected).casefold()
+    if sys.platform == 'darwin':
+        return any(matches(line) for line in subprocess.check_output(['ps', '-axo', 'comm='], text=True).splitlines())
+    for path in Path('/proc').glob('[0-9]*/cmdline'):
+        try:
+            if matches(path.read_bytes().split(b'\0')[0].decode(errors='replace')): return True
+        except OSError:
+            continue
+    return False
+
+
+def candidate(slug):
+    if BUNDLED: return ROOT / 'Mods' / slug
+    return ROOT / ('appearance-muyifeng/mod' if slug == 'appearance.muyifeng' else 'mod') / slug
+
+
+def install_packages(game, sources, backup_root):
+    game = Path(game).resolve()
+    if not (game / 'ReincarnationSquad.exe').is_file():
+        raise ValueError('请选择含 ReincarnationSquad.exe 的游戏目录。')
+    selected = []
+    for slug, source in sources.items():
+        source = Path(source).resolve(); target = game / 'Mods' / slug
+        if source == target.resolve() or target.is_symlink():
+            raise ValueError('安装源不能是目标目录，目标也不能是符号链接。')
+        manifest, files = runtime_files(source, slug)
+        selected.append((slug, source, target, manifest, files))
+    if game_running(game): raise ValueError('游戏仍在运行；请正常退出游戏后重试。')
+    backup = Path(backup_root) / datetime.now().strftime('%Y%m%d-%H%M%S-%f')
+    backup.mkdir(parents=True, exist_ok=False)
+    (game / 'Mods').mkdir(exist_ok=True)
+    stage_root = Path(tempfile.mkdtemp(prefix='.yixian-install-', dir=game))
+    switched = []
+    receipt = {'installed': False, 'game': str(game), 'backup': str(backup), 'packages': []}
+    try:
+        for slug, source, target, manifest, files in selected:
+            stage = stage_root / slug; stage.mkdir()
+            hashes = {}
+            for p, name in files:
+                relative = Path(name).relative_to('Mods/' + slug)
+                dest = stage / relative; dest.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(p, dest)
+                hashes[relative.as_posix()] = hashlib.sha256(dest.read_bytes()).hexdigest()
+            if target.exists(): shutil.copytree(target, backup / slug)
+            old_files = {p.relative_to(target).as_posix() for p in target.rglob('*') if p.is_file()} if target.exists() else set()
+            receipt['packages'].append(dict(id=slug, version=manifest['version'], target=str(target),
+                removed_files=sorted(old_files-set(hashes)), files_sha256=hashes))
+        if game_running(game): raise ValueError('游戏在准备期间启动；已取消安装，备份保留。')
+        for slug, source, target, manifest, files in selected:
+            displaced = stage_root / (slug + '.previous')
+            if target.exists(): os.replace(target, displaced)
+            switched.append((target, displaced))
+            os.replace(stage_root / slug, target)
+        for entry in receipt['packages']:
+            for name, digest in entry['files_sha256'].items():
+                if hashlib.sha256((Path(entry['target']) / name).read_bytes()).hexdigest() != digest:
+                    raise ValueError('安装后校验失败：' + name)
+        receipt.update(installed=True, requires_restart=True)
+        (backup / 'receipt.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+    except Exception:
+        for target, displaced in reversed(switched):
+            if target.exists(): shutil.rmtree(target)
+            if displaced.exists(): os.replace(displaced, target)
+        raise
+    finally:
+        shutil.rmtree(stage_root)
+    return receipt
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--game', type=Path, default=GAME)
-    parser.add_argument('--source', type=Path, default=ROOT / 'mod/yixian.sect', help='checked package to install, including a frozen accepted candidate')
-    parser.add_argument('--apply', action='store_true', help='install; default is read-only preflight')
+    parser.add_argument('--source', type=Path, help='完整候选包；仅用于单包安装')
+    parser.add_argument('--packages', nargs='+', choices=list(PLUGINS))
+    parser.add_argument('--all', action='store_true', help='一次安装玩法与外观')
+    parser.add_argument('--apply', action='store_true', help='执行安装；默认只读检查')
     args = parser.parse_args()
-    source = args.source.resolve(); target = args.game / 'Mods/yixian.sect'
-    if source == target.resolve():
-        parser.error('--source must not be the installed target')
-    manifest = json.loads((source / 'mod.json').read_text())
-    if manifest['id'] != 'yixian.sect' or not (source / 'plugins/YixianSect.dll').is_file():
-        raise RuntimeError('候选身份或 DLL 不完整。先运行 scripts/check.sh。')
-    for asset in manifest['assets'].values():
-        if not (source / asset['file']).is_file(): raise RuntimeError('缺少资源：' + asset['file'])
-    info = dict(version=manifest['version'], source=str(source), target=str(target), game_running=game_running(args.game), installed=False)
-    if not args.apply:
-        print(json.dumps(info, ensure_ascii=False, indent=2)); return 0
-    if info['game_running']:
-        print('游戏仍在运行；未安装。请正常退出游戏后重试。', file=sys.stderr); return 2
-    # Recheck the actual candidate instead of trusting an old report for a different build.
-    subprocess.run([sys.executable, str(ROOT / 'scripts/check_contracts.py'), '--mod-root', str(source)], cwd=ROOT, check=True)
-    stamp = time.strftime('%Y%m%d-%H%M%S')
-    backup = ROOT / 'logs/installation' / stamp
-    backup.mkdir(parents=True, exist_ok=False)
-    target.parent.mkdir(parents=True, exist_ok=True)
-    stage = target.parent / ('.yixian-stage-' + stamp)
-    if stage.exists(): raise RuntimeError('暂存目录已存在；未覆盖。')
-    # Preserve existing unknown files, TestResults, enabled-list and permission storage.
-    if target.exists():
-        shutil.copytree(target, backup / 'previous-package')
-        shutil.copytree(target, stage)
-    else:
-        stage.mkdir()
-    shutil.copytree(source, stage, dirs_exist_ok=True)
-    removed_files = []
-    for relative in RETIRED_PACKAGE_PATHS:
-        stale = stage / relative
-        if (source / relative).exists() or not stale.exists():
-            continue
-        if stale.is_dir() and not stale.is_symlink():
-            removed_files.extend(str(path.relative_to(stage)) for path in stale.rglob('*') if path.is_file())
-            shutil.rmtree(stale)
-        else:
-            removed_files.append(relative)
-            stale.unlink()
-    if game_running(args.game):
-        shutil.rmtree(stage)
-        print('游戏在准备期间启动；已取消安装，保留备份。', file=sys.stderr); return 2
-    displaced = target.parent / ('.yixian-previous-' + stamp)
+    slugs = list(PLUGINS) if args.all or BUNDLED and not args.packages else args.packages or ['yixian.sect']
+    if args.source and len(slugs) != 1: parser.error('--source 只支持单包安装')
+    sources = {slug: args.source or candidate(slug) for slug in slugs}
     try:
-        if target.exists(): os.replace(target, displaced)
-        os.replace(stage, target)
-    except Exception:
-        if displaced.exists() and not target.exists(): os.replace(displaced, target)
-        raise
-    if displaced.exists(): shutil.rmtree(displaced)  # this exact package is already backed up above
-    info.update(installed=True, backup=str(backup / 'previous-package'), requires_restart=True, runtime_verified=False,
-                removed_retired_files=sorted(removed_files))
-    (backup / 'receipt.json').write_text(json.dumps(info, ensure_ascii=False, indent=2) + '\n')
-    print(json.dumps(info, ensure_ascii=False, indent=2))
-    return 0
+        for slug, source in sources.items(): runtime_files(source, slug)
+        if not args.apply:
+            print(json.dumps(dict(sources={k:str(v) for k,v in sources.items()}, game=str(args.game), game_running=game_running(args.game), installed=False), ensure_ascii=False, indent=2)); return 0
+        # Source validation runs against the exact chosen gameplay candidate.
+        if not BUNDLED and 'yixian.sect' in sources:
+            subprocess.run([sys.executable, str(ROOT / 'scripts/check_contracts.py'), '--mod-root', str(sources['yixian.sect'])], cwd=ROOT, check=True)
+        if BUNDLED:
+            info = json.loads((ROOT / 'BUNDLE.json').read_text(encoding='utf-8'))
+            for row in info['inventory']:
+                p = ROOT / row['path']
+                if hashlib.sha256(p.read_bytes()).hexdigest() != row['sha256']:
+                    raise ValueError('安装包损坏，请重新解压：' + row['path'])
+        result = install_packages(args.game, sources, ROOT / 'logs/installation')
+        print(json.dumps(result, ensure_ascii=False, indent=2)); return 0
+    except (ValueError, OSError) as error:
+        print(str(error), file=sys.stderr); return 2
 
-if __name__ == '__main__':
-    raise SystemExit(main())
+
+if __name__ == '__main__': raise SystemExit(main())

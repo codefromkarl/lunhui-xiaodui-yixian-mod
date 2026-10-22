@@ -95,7 +95,7 @@ namespace MuyifengAppearance
                 Case("only_selected_character",()=>{Require(HasSkin(hero)&&!HasSkin(native),"target selection leaked or missed");});
                 Case("folded_arm_keeps_elbow",()=>{foreach(float side in new[]{-1f,1f}){var elbow=SkinState.SolveElbow(Vector3.zero,new Vector3(.0001f,0,0),.14f,.13f,side);Require(elbow.magnitude>.13f&&elbow.magnitude<.14f,"folded upper arm collapsed");Require(!float.IsNaN(elbow.x),"folded arm NaN");}});
                 Case("extended_arm_reaches_palm",()=>{var palm=new Vector3(.4f,.3f,0);var elbow=SkinState.SolveElbow(Vector3.zero,palm,.14f,.13f,1);Require(Mathf.Abs(elbow.magnitude+Vector3.Distance(elbow,palm)-palm.magnitude)<.0001f,"extended arm failed to reach");});
-                Case("rig_parts_bound",()=>{Require(Art.Parts.Count==16&&new[]{"Body/Head","HairBack","Cloth/Body","Cloth/Left","Cloth/Right","Cloth/LeftLower","Cloth/RightLower","Pant/Left","Pant/Right","Body/Foot_L","Body/Foot_R","Weapon/Sword"}.All(key=>VisiblePart(hero,key)),"bound costume part missing");Require(VisiblePart(hero,"Hand/Grip_L")&&VisiblePart(hero,"Hand/Open_R"),"independent hands missing");});
+                Case("rig_parts_bound",()=>{Require(Art.Parts.Count==16&&new[]{"Body/Head","HairBack","Cloth/Body","Cloth/Left","Cloth/Right","Cloth/LeftLower","Cloth/RightLower","Pant/Left","Pant/Right","Body/Foot_L","Body/Foot_R","Weapon/Sword"}.All(key=>VisiblePart(hero,key)),"bound costume part missing");Require(VisiblePart(hero,"Hand/Grip_R")&&VisiblePart(hero,"Hand/Open_L"),"independent hands missing");});
                 Case("full_face_replaced",()=>{Require(Rows(hero).Where(x=>x.PartType=="Body"&&x.Structure=="Head").All(x=>x.renderer.sprite==null)&&VisiblePart(hero,"Body/Head"),"vanilla face retained or bound head missing");});
                 Case("vanilla_eyes_and_beard_suppressed",()=>{Require(Rows(hero).Where(x=>x.PartType=="Eye"||x.PartType=="Hair"||x.PartType=="FaceHair").All(x=>x.renderer.sprite==null),"vanilla eyes/hair/beard overlay custom face");});
                 Case("native_texel_dimensions",()=>{foreach(var pair in Art.Parts){Require(pair.Value.texture.filterMode==FilterMode.Point,"blur filter");Require(pair.Value.rect.width==pair.Value.texture.width&&pair.Value.rect.height==pair.Value.texture.height,"sprite resampled");File.WriteAllBytes(Path.Combine(output,"source-"+pair.Key.Replace('/','-')+".png"),pair.Value.texture.EncodeToPNG());}});
@@ -281,7 +281,7 @@ namespace MuyifengAppearance
             var portraitPrefab=Resources.FindObjectsOfTypeAll<NodePartyPortrait>().FirstOrDefault(x=>x.gameObject.scene.name==null||!x.gameObject.scene.IsValid());
             if(portraitPrefab==null)portraitPrefab=Resources.FindObjectsOfTypeAll<NodePartyPortrait>().First();
             font=Entry.Read<TMP_Text>(portraitPrefab,"nameLabel").font;
-            Text("弈仙牌三门派  /  可选角色外观 0.7.1",70,820,1100,55,36,new Color(.87f,.94f,1));
+            Text("弈仙牌三门派  /  可选角色外观 0.7.3",70,820,1100,55,36,new Color(.87f,.94f,1));
             Text("按角色选择显示 · 原图脸部 · 独立身份随存档与联机传递",72,777,1300,40,18,new Color(.50f,.66f,.78f));
             Text("游戏标准尺寸 · 原生缩放规则",80,728,1000,40,24,new Color(.87f,.94f,1));
             Text("原生外观 · 队友对照",100,665,420,40,24,new Color(.58f,.68f,.77f));
