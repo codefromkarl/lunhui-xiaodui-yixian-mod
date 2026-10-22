@@ -135,6 +135,7 @@ namespace YixianSect
                 Case("actual_prefab_visuals",Visual);
                 Case("real_health_hit_vs_shield",HealthHit);
                 Case("sword_four_targeted_areas",SwordAreas);
+                Case("five_star_full_damage_groups",SchoolGroups);
                 Case("all_cards_native_execution",AllCards);
                 Case("sword_three_replacement_mechanics",SwordReplacements);
                 Case("sword_spirit_conversion_native",SpiritConversionCommands);

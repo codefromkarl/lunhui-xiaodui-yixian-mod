@@ -26,6 +26,7 @@ namespace YixianSect
             public ModCombatantSnapshot U => T.Actor;
             public int Energy;
             public int OmenUsed;
+            public StableId[] AttackTargets;
             private readonly HashSet<string> plannedGuards = new HashSet<string>();
             public Turn(ModBattleContext c, CodeBattlePlan p, ModCombatantSnapshot actor = null)
             {
@@ -83,7 +84,10 @@ namespace YixianSect
             }
             public void Attack(int amount, int hits = 1, StableId target = default)
             {
-                if (amount > 0) T.Damage(amount + StarBonus, hits, target);
+                if (amount <= 0) return;
+                if (AttackTargets == null) { T.Damage(amount + StarBonus, hits, target); return; }
+                for (int hit = 0; hit < hits; hit++)
+                    foreach (var recipient in AttackTargets) T.Damage(amount + StarBonus, target: recipient);
             }
             public void Debuff(string key, int n, int rounds = 0)
             {
@@ -146,17 +150,6 @@ namespace YixianSect
             if (repeat) Apply(t, card);
             t.View();
         }
-        private static StableId LightningTarget(Turn t, HashSet<StableId> used = null)
-        {
-            var enemies = t.T.Context.Units.Where(u => !u.IsDowned && u.Side != t.U.Side && u.Kind != CombatantKind.AuxiliaryTarget)
-                .OrderBy(u => u.RuntimeId.Value, StringComparer.Ordinal).Select(u => u.RuntimeId).ToArray();
-            if (enemies.Length == 0) return default;
-            if (used != null && used.Count == 0 && enemies.Contains(t.Target)) { used.Add(t.Target); return t.Target; }
-            var fresh = used == null ? enemies : enemies.Where(id => !used.Contains(id)).ToArray();
-            var pool = fresh.Length > 0 ? fresh : enemies;
-            var target = pool[pool.Length == 1 ? 0 : t.P.Random(0, pool.Length - 1)];
-            used?.Add(target); return target;
-        }
         private static void Apply(Turn t, JObject card)
         {
             var r = (JObject)card["rules"]; string id = (string)card["sourceId"];
@@ -174,30 +167,27 @@ namespace YixianSect
                 if (t.Position) t.Star(1);
                 else { t.Set("positions", t.Get("positions") | (1 << (t.Get("slot") - 1))); t.H(15); }
             }
+            t.AttackTargets = card["groupAttack"] == null ? null : SchoolGroupAttack.Targets(t.T, card,
+                (bool?)card["groupAttack"]?["position"] != true || t.Position);
             if (Number(r, "calmPerQi") > 0) t.Set("calm", Number(r, "calmPerQi"));
             int damage = checked(t.T.Value(r, "damage") + (Number(r, "healingStep") > 0 ? t.Get("healingTotal") / Number(r, "healingStep") * Number(r, "damagePerHealing") : 0));
             if (damage > 0) t.Attack(damage, Math.Max(1, Number(r, "hits")));
             if (Number(r, "randomMax") > 0)
             {
                 int repeats = Math.Max(1, Number(r, "randomRepeats"));
-                var targets = Flag(r, "distinctLightning") ? new HashSet<StableId>() : null;
                 for (int i = 0; i < repeats; i++)
                 {
                     int before = t.OmenUsed; int rolled = t.Random(Number(r, "randomMin"), Number(r, "randomMax"));
                     int attr = AttributeScaling.Read(repeats > 1 ? CombatScalingAttribute.Reaction : CombatScalingAttribute.Energy, t.U.Attributes.GetValueOrDefault());
                     if (repeats > 1) attr = attr * 4000 / 10000;
-                    var target = targets == null ? default : LightningTarget(t, targets);
-                    if (targets == null || !target.IsEmpty) t.Attack(rolled * 3 + attr, target: target);
+                    t.Attack(rolled * 3 + attr);
                     if (t.OmenUsed > before && Number(r, "qiOnOmen") > 0) t.Qi(Number(r, "qiOnOmen") * 4);
                 }
             }
             for (int i = 0; i < Number(r, "chanceRepeats"); i++)
             {
                 if (!t.Chance(Number(r, "attackChance"))) continue;
-                bool distributed = Flag(r, "distributedLightning");
-                var target = distributed ? LightningTarget(t) : default;
-                if (!distributed || !target.IsEmpty)
-                    t.Attack(Number(r, "chanceAttack") * 3 + AttributeScaling.Read(CombatScalingAttribute.Reaction, t.U.Attributes.GetValueOrDefault()) * 4000 / 10000, target: target);
+                t.Attack(Number(r, "chanceAttack") * 3 + AttributeScaling.Read(CombatScalingAttribute.Reaction, t.U.Attributes.GetValueOrDefault()) * 4000 / 10000);
             }
             t.S(t.T.Value(r, "shield")); t.Qi(t.T.Value(r, "qi"));
             if (Number(r, "maxHealth") > 0) t.Max(Number(r, "maxHealth") * 3);

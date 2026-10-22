@@ -73,15 +73,15 @@ partial class Program
         Check(StarHealth(cure).OfType<JObject>().First().Value<int>("amount")==24,"Qi Therapy keeps its independent caster maximum bonus");
         var extraEnemy=StarHealingUnit(7,health:300,sect:false,side:CombatSide.Enemy,kind:CombatantKind.Enemy);
         var thunder=Play(4000063,StarExpansionState(("omen",2)),full,new[]{extraEnemy});
-        Check(thunder.Operations.Count==2 && thunder.Operations.SelectMany(o=>o.Targets).Distinct().Count()==2 && Damage(thunder)==68,"two thunder segments prefer different enemies without copying damage");
+        Check(thunder.Operations.Count==4 && thunder.Operations.SelectMany(o=>o.Targets).Distinct().Count()==2 && Damage(thunder)==136,"two full thunder waves hit each enemy without splitting damage");
         var five=Play(4000046,StarExpansionState(("omen",5)),full,new[]{extraEnemy});
-        Check(five.Operations.Count==5 && Damage(five)==140 && five.Operations.SelectMany(o=>o.Targets).All(id=>id==EnemyId||id==extraEnemy.RuntimeId),"five lightning successes distribute only original five attacks among living enemies");
+        Check(five.Operations.Count==10 && Damage(five)==280 && five.Operations.SelectMany(o=>o.Targets).All(id=>id==EnemyId||id==extraEnemy.RuntimeId),"five lightning successes each cover all living enemies at full damage");
         var solo=Play(4000063,StarExpansionState(("omen",2)));
         Check(solo.Operations.All(o=>o.Targets.Single()==EnemyId),"single enemy receives both original thunder segments");
         var invalidEnemies=new[]{StarHealingUnit(6,health:0,sect:false,side:CombatSide.Enemy,kind:CombatantKind.Enemy),StarHealingUnit(7,health:100,sect:false,side:CombatSide.Enemy,kind:CombatantKind.AuxiliaryTarget),StarHealingUnit(8,health:100,sect:false)};
         var filteredThunder=Play(4000063,StarExpansionState(("omen",2)),full,invalidEnemies);
         Check(filteredThunder.Operations.All(o=>o.Targets.Single()==EnemyId),"lightning never redirects into downed enemies, auxiliary targets or allied characters");
         Check(!cards.Any(c=>new[]{"internal","triggerInternal","soulCharges","injuryRounds","oddInternal","evenExternal"}.Any(k=>c["rules"][k]!=null)),"no remaining card can produce or detonate injury");
-        Console.WriteLine("PASS star routes: group shields/healing, overheal growth, rank refund, Calm actual energy, Rebirth floors/save/isolation, distributed lightning and no injury");
+        Console.WriteLine("PASS star routes: group shields/healing, overheal growth, rank refund, Calm actual energy, Rebirth floors/save/isolation, full-damage group lightning and no injury");
     }
 }

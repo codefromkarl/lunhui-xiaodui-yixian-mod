@@ -1,4 +1,5 @@
 """Seven-star actual effects only; common keywords live in the school introduction."""
+from group_attack_copy import describe_group
 HEAL_TARGET = '随机一名存活己方角色（优先未满血）'
 
 def heal_text(value, selected=False):
@@ -62,6 +63,5 @@ def describe_effects(card):
     if r.get('calmPerQi'): lines.append(f'持续：本门牌每实际累计恢复4斗气，为{HEAL_TARGET}恢复{r["calmPerQi"]*3}生命；不足4的余数跨牌保留，满斗气不触发。')
     if r.get('randomHealMax'): lines.append(f'为' + ('指定的一名存活己方角色' if r.get('selectedAllyHeal') else HEAL_TARGET) + f'随机恢复〔（{r["randomHealMin"]*3}～{r["randomHealMax"]*3}）＋50%×体质〕生命；卦象可确保治疗量上限。')
     if r.get('healingStep'): lines.append(f'本场累计治疗量每满{r["healingStep"]}，本牌伤害+{r["damagePerHealing"]}；包含溢出，不消耗累计量。')
-    if r.get('distinctLightning'): lines.append('两段优先不同存活敌人，单敌时集中；选敌不消耗卦象。')
-    if r.get('distributedLightning'): lines.append('每次成功攻击随机选择一名存活敌人，单敌时集中；选敌不消耗卦象。')
+    lines.extend(describe_group(card))
     return lines
